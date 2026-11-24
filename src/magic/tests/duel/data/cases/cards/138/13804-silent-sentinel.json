@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Silent Sentinel",
+  "csvid": 13804,
+  "recipes": [
+    {
+      "family": "attack_trigger_zones_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 13804,
+        "cost": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "Flying\nWhenever this creature attacks, you may return target enchantment card from your graveyard to the battlefield.",
+      "variants": [
+        "enchantment_0",
+        "enchantment_1",
+        "decline_0",
+        "decline_1",
+        "shroud_0",
+        "shroud_1",
+        "wrong_owner_0",
+        "wrong_owner_1",
+        "flight_0",
+        "flight_1"
+      ]
+    }
+  ]
+}

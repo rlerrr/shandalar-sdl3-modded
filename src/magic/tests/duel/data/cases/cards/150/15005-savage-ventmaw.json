@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Savage Ventmaw",
+  "csvid": 15005,
+  "recipes": [
+    {
+      "family": "attack_trigger_costs_and_damage",
+      "version": 2,
+      "params": {
+        "csvid": 15005,
+        "printed_mana": "{4}{R}{G}",
+        "rules": "Flying\nWhenever this creature attacks, add {R}{R}{R}{G}{G}{G}. Until end of turn, you don't lose this mana as steps and phases end."
+      },
+      "oracle_text": "Flying\nWhenever this creature attacks, add {R}{R}{R}{G}{G}{G}. Until end of turn, you don't lose this mana as steps and phases end.",
+      "variants": [
+        "flying_producer_0",
+        "flying_producer_1",
+        "main_two_spend_0",
+        "main_two_spend_1",
+        "other_attacker_0",
+        "other_attacker_1",
+        "air_blocked_0",
+        "air_blocked_1",
+        "real_phase_drain_0",
+        "real_phase_drain_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Witness the End",
+  "csvid": 15721,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "devoid_zone_and_spell_choices",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\nTarget opponent exiles two cards from their hand and loses 2 life.",
+      "params": {
+        "model": "two",
+        "mana": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "kind": "sorcery"
+      },
+      "variants": [
+        "choose_two_0",
+        "choose_two_1",
+        "one_card_0",
+        "one_card_1",
+        "empty_hand_0",
+        "empty_hand_1",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

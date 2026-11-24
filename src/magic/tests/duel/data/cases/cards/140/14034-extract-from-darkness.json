@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Extract from Darkness",
+  "csvid": 14034,
+  "recipes": [
+    {
+      "family": "mill_recursion_and_zones",
+      "version": 2,
+      "params": {
+        "csvid": 14034,
+        "cost": [
+          3,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Each player mills two cards. Then you put a creature card from a graveyard onto the battlefield under your control.",
+      "variants": [
+        "own_milled_0",
+        "own_milled_1",
+        "foe_milled_0",
+        "foe_milled_1",
+        "old_0",
+        "old_1",
+        "short_no_creatures_0",
+        "short_no_creatures_1"
+      ]
+    }
+  ]
+}

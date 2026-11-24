@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "card": "Coralhelm Commander",
+  "csvid": 10894,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "level_resource_riders",
+      "version": 2,
+      "oracle_text": "Level up {1} ({1}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 2-3\n3/3\nFlying\nLEVEL 4+\n4/4\nFlying\nOther Merfolk creatures you control get +1/+1.",
+      "params": {
+        "price": [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "activation": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          2,
+          2
+        ],
+        "first": [
+          2,
+          3,
+          3
+        ],
+        "second": [
+          4,
+          4,
+          4
+        ],
+        "first_riders": [
+          "Flying"
+        ],
+        "second_riders": [
+          "Flying",
+          "Other Merfolk creatures you control get +1/+1."
+        ],
+        "rider": "merfolk_lord"
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "opponent_timing_0",
+        "opponent_timing_1",
+        "before_tier_0",
+        "before_tier_1",
+        "fly_0",
+        "fly_1",
+        "fly_blocked_0",
+        "fly_blocked_1",
+        "lord_removed_0",
+        "lord_removed_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

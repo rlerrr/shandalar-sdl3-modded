@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Zedruu the Greathearted",
+  "csvid": 11766,
+  "recipes": [
+    {
+      "family": "upkeep_draw_and_discard",
+      "version": 2,
+      "params": {
+        "csvid": 11766,
+        "printed_mana": "{1}{U}{R}{W}",
+        "rules": "At the beginning of your upkeep, you gain X life and draw X cards, where X is the number of permanents you own that your opponents control.\n{U}{R}{W}: Target opponent gains control of target permanent you control."
+      },
+      "oracle_text": "At the beginning of your upkeep, you gain X life and draw X cards, where X is the number of permanents you own that your opponents control.\n{U}{R}{W}: Target opponent gains control of target permanent you control.",
+      "variants": [
+        "donate_0",
+        "donate_1",
+        "ownership_0",
+        "ownership_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "sources": {
+    "Defender of the Order": {
+      "oracle": {
+        "oracle_id": "f9f4c574-ddbe-4ebc-bfda-29cf3e4b7c44",
+        "name": "Defender of the Order",
+        "oracle_text": "Morph {W}{W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, creatures you control get +0/+2 until end of turn.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lgn/11/defender-of-the-order?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6363,
+        "iid": 2390,
+        "name": "Defender of the Order",
+        "handler": "manalinkeh_card_defender_of_the_order",
+        "kind": "card"
+      }
+    },
+    "Master of Pearls": {
+      "oracle": {
+        "oracle_id": "aca9df28-2df6-477c-b5b8-8e1863c84356",
+        "name": "Master of Pearls",
+        "oracle_text": "Morph {3}{W}{W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, creatures you control get +2/+2 until end of turn.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Monk",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mkc/73/master-of-pearls?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14324,
+        "iid": 5962,
+        "name": "Master of Pearls",
+        "handler": "manalinkeh_card_master_of_pearls",
+        "kind": "card"
+      }
+    },
+    "Tribal Forcemage": {
+      "oracle": {
+        "oracle_id": "245934d9-c7b7-4a97-9c56-7760d934ef27",
+        "name": "Tribal Forcemage",
+        "oracle_text": "Morph {1}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, creatures of the creature type of your choice get +2/+2 and gain trample until end of turn.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Elf Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lgn/142/tribal-forcemage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6453,
+        "iid": 10205,
+        "name": "Tribal Forcemage",
+        "handler": "manalinkeh_card_tribal_forcemage",
+        "kind": "card"
+      }
+    },
+    "Bane of the Living": {
+      "oracle": {
+        "oracle_id": "c99e4768-192c-49bf-8f51-c204a2248326",
+        "name": "Bane of the Living",
+        "oracle_text": "Morph {X}{B}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, all creatures get -X/-X until end of turn.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Creature — Insect",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c19/104/bane-of-the-living?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6338,
+        "iid": 839,
+        "name": "Bane of the Living",
+        "handler": "manalinkeh_card_bane_of_the_living",
+        "kind": "card"
+      }
+    },
+    "Frontline Strategist": {
+      "oracle": {
+        "oracle_id": "6e202114-48f3-46d2-bc54-df766d149d9d",
+        "name": "Frontline Strategist",
+        "oracle_text": "Morph {W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, prevent all combat damage non-Soldier creatures would deal this turn.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/scg/15/frontline-strategist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6532,
+        "iid": 3655,
+        "name": "Frontline Strategist",
+        "handler": "manalinkeh_card_frontline_strategist",
+        "kind": "card"
+      }
+    },
+    "Pine Walker": {
+      "oracle": {
+        "oracle_id": "4c92b862-34c7-4195-bee3-bcc0cafad140",
+        "name": "Pine Walker",
+        "oracle_text": "Morph {4}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhenever this creature or another creature you control is turned face up, untap that creature.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Elemental",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/143/pine-walker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14341,
+        "iid": 7215,
+        "name": "Pine Walker",
+        "handler": "manalinkeh_card_pine_walker",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Mogg Fanatic": {
+      "oracle": {
+        "oracle_id": "7efd5d62-6da2-428a-98e3-5b842f668656",
+        "name": "Mogg Fanatic",
+        "oracle_text": "Sacrifice this creature: It deals 1 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/138/mogg-fanatic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1354,
+        "iid": 6244,
+        "name": "Mogg Fanatic",
+        "handler": "manalinkeh_card_mogg_fanatic",
+        "kind": "card"
+      }
+    },
+    "Catapult Squad": {
+      "oracle": {
+        "oracle_id": "f1ff7a67-1add-4de1-bc25-62f63626c43a",
+        "name": "Catapult Squad",
+        "oracle_text": "Tap two untapped Soldiers you control: This creature deals 2 damage to target attacking or blocking creature.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ons/11/catapult-squad?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6081,
+        "iid": 1540,
+        "name": "Catapult Squad",
+        "handler": "manalinkeh_card_catapult_squad",
+        "kind": "card"
+      }
+    },
+    "Serra Angel": {
+      "oracle": {
+        "oracle_id": "4b7ac066-e5c7-43e6-9e7e-2739b24a905d",
+        "name": "Serra Angel",
+        "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/740/serra-angel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 221,
+        "iid": 8519,
+        "name": "Serra Angel",
+        "handler": "manalinkeh_card_serra_angel",
+        "kind": "card"
+      }
+    },
+    "Canyon Lurkers": {
+      "oracle": {
+        "oracle_id": "a744c5d7-c903-446a-bb30-30788058d9db",
+        "name": "Canyon Lurkers",
+        "oracle_text": "Morph {3}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+        "mana_cost": "{4}{R}",
+        "type_line": "Creature — Human Rogue",
+        "power": "5",
+        "toughness": "2",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/105/canyon-lurkers?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14240,
+        "iid": 1477,
+        "name": "Canyon Lurkers",
+        "handler": "manalinkeh_card_canyon_lurker",
+        "kind": "card"
+      }
+    },
+    "Icy Manipulator": {
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 119,
+        "iid": 4775,
+        "name": "Icy Manipulator",
+        "handler": "manalinkeh_card_icy_manipulator",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    }
+  },
+  "hidden_observer": {
+    "csvid": 13252,
+    "iid": 3230,
+    "name": "Face-Down Creature",
+    "handler": "manalinkeh_card_face_down_creature",
+    "kind": "card"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Jeskai Ascendancy",
+  "csvid": 14295,
+  "recipes": [
+    {
+      "family": "cast_noncreature_riders",
+      "version": 2,
+      "params": {
+        "role": "ascendancy",
+        "mana": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          1
+        ]
+      },
+      "oracle_text": "Whenever you cast a noncreature spell, creatures you control get +1/+1 until end of turn. Untap those creatures.\nWhenever you cast a noncreature spell, you may draw a card. If you do, discard a card.",
+      "variants": [
+        "own_0",
+        "creature_0",
+        "opponent_0",
+        "countered_0",
+        "loot_0",
+        "expiry_0",
+        "replay_0",
+        "own_1",
+        "creature_1",
+        "opponent_1",
+        "countered_1",
+        "loot_1",
+        "expiry_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

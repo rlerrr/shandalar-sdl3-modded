@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Gruul Ragebeast",
+  "csvid": 12966,
+  "recipes": [
+    {
+      "family": "fight_triggered_sources",
+      "version": 2,
+      "params": {
+        "csvid": 12966,
+        "mana": [
+          5,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "rules": "Whenever this creature or another creature you control enters, that creature fights target creature an opponent controls."
+      },
+      "oracle_text": "Whenever this creature or another creature you control enters, that creature fights target creature an opponent controls.",
+      "variants": [
+        "self_entry_0",
+        "self_entry_1",
+        "other_entry_0",
+        "other_entry_1",
+        "no_target_0",
+        "no_target_1",
+        "mutual_death_0",
+        "mutual_death_1"
+      ]
+    }
+  ]
+}

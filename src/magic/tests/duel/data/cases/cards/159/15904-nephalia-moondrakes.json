@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Nephalia Moondrakes",
+  "csvid": 15904,
+  "recipes": [
+    {
+      "family": "remaining_entry_combat",
+      "version": 2,
+      "params": {
+        "csvid": 15904,
+        "cost": "{5}{U}{U}",
+        "choices": [
+          "own_0",
+          "own_1",
+          "source_flight_0",
+          "source_flight_1",
+          "grave_team_0",
+          "grave_team_1",
+          "grave_expire_0",
+          "grave_expire_1",
+          "grave_short_0",
+          "grave_short_1"
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, target creature gains flying until end of turn.\n{4}{U}{U}, Exile this card from your graveyard: Creatures you control gain flying until end of turn.",
+      "variants": [
+        "own_0",
+        "own_1",
+        "source_flight_0",
+        "source_flight_1",
+        "grave_team_0",
+        "grave_team_1",
+        "grave_expire_0",
+        "grave_expire_1",
+        "grave_short_0",
+        "grave_short_1"
+      ]
+    }
+  ]
+}

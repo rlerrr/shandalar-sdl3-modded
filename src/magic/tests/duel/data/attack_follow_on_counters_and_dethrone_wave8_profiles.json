@@ -1,0 +1,702 @@
+{
+  "sources": {
+    "Clockwork Beetle": {
+      "oracle": {
+        "oracle_id": "7b9ddff4-82f5-4068-8105-116b8a6180d5",
+        "name": "Clockwork Beetle",
+        "oracle_text": "This creature enters with two +1/+1 counters on it.\nWhenever this creature attacks or blocks, remove a +1/+1 counter from it at end of combat.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact Creature — Insect",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mrd/153/clockwork-beetle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6633,
+        "iid": 1805,
+        "name": "Clockwork Beetle",
+        "handler": "manalinkeh_card_clockwork_beetle",
+        "kind": "card"
+      }
+    },
+    "Dusk Urchins": {
+      "oracle": {
+        "oracle_id": "1c2cc166-dc59-44ce-86d5-ed6013b0bf67",
+        "name": "Dusk Urchins",
+        "oracle_text": "Whenever this creature attacks or blocks, put a -1/-1 counter on it.\nWhen this creature dies, draw a card for each -1/-1 counter on it.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Ouphe",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ecc/73/dusk-urchins?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9521,
+        "iid": 2816,
+        "name": "Dusk Urchins",
+        "handler": "manalinkeh_card_dusk_urchins",
+        "kind": "card"
+      }
+    },
+    "Enraged Revolutionary": {
+      "oracle": {
+        "oracle_id": "f4b8e856-17a9-44db-bce6-312a6bd2af32",
+        "name": "Enraged Revolutionary",
+        "oracle_text": "Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Human Warrior",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Dethrone"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/31/enraged-revolutionary?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14033,
+        "iid": 3064,
+        "name": "Enraged Revolutionary",
+        "handler": "manalinkeh_card_enraged_evolutionary",
+        "kind": "card"
+      }
+    },
+    "Marchesa, the Black Rose": {
+      "oracle": {
+        "oracle_id": "17a59d3d-9e01-48cd-bb4a-3eaaa077751c",
+        "name": "Marchesa, the Black Rose",
+        "oracle_text": "Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.)\nOther creatures you control have dethrone.\nWhenever a creature you control with a +1/+1 counter on it dies, return that card to the battlefield under your control at the beginning of the next end step.",
+        "mana_cost": "{1}{U}{B}{R}",
+        "type_line": "Legendary Creature — Human Wizard",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Dethrone"
+        ],
+        "colors": [
+          "B",
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "R",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/248/marchesa-the-black-rose?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14043,
+        "iid": 5882,
+        "name": "Marchesa, the Black Rose",
+        "handler": "manalinkeh_card_marchesa_the_black_rose",
+        "kind": "card"
+      }
+    },
+    "Embalmed Brawler": {
+      "oracle": {
+        "oracle_id": "42e95ad5-c10a-46fe-ab97-c7a734138586",
+        "name": "Embalmed Brawler",
+        "oracle_text": "Amplify 1 (As this creature enters, put a +1/+1 counter on it for each Zombie card you reveal in your hand.)\nWhenever this creature attacks or blocks, you lose 1 life for each +1/+1 counter on it.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Amplify"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lgn/69/embalmed-brawler?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6373,
+        "iid": 2995,
+        "name": "Embalmed Brawler",
+        "handler": "manalinkeh_card_embalmed_brawler",
+        "kind": "card"
+      }
+    },
+    "Grenzo's Cutthroat": {
+      "oracle": {
+        "oracle_id": "9a133991-8a7a-4bfd-b0ae-d76433450c03",
+        "name": "Grenzo's Cutthroat",
+        "oracle_text": "First strike\nDethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.)",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Dethrone",
+          "First strike"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/32/grenzos-cutthroat?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14037,
+        "iid": 4211,
+        "name": "Grenzo's Cutthroat",
+        "handler": "manalinkeh_card_enraged_evolutionary",
+        "kind": "card"
+      }
+    },
+    "Marchesa's Emissary": {
+      "oracle": {
+        "oracle_id": "7a67cb39-6b53-4f2b-a52c-3861119eba12",
+        "name": "Marchesa's Emissary",
+        "oracle_text": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)\nDethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.)",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Human Rogue",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Hexproof",
+          "Dethrone"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/21/marchesas-emissary?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14044,
+        "iid": 5883,
+        "name": "Marchesa's Emissary",
+        "handler": "manalinkeh_card_marchesas_emissary",
+        "kind": "card"
+      }
+    },
+    "Marchesa's Infiltrator": {
+      "oracle": {
+        "oracle_id": "9f05fab1-398a-4bd1-824d-6b1373dc9a94",
+        "name": "Marchesa's Infiltrator",
+        "oracle_text": "Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.)\nWhenever this creature deals combat damage to a player, draw a card.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Dethrone"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/22/marchesas-infiltrator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14045,
+        "iid": 5884,
+        "name": "Marchesa's Infiltrator",
+        "handler": "manalinkeh_card_marchesas_infiltrator",
+        "kind": "card"
+      }
+    },
+    "Treasonous Ogre": {
+      "oracle": {
+        "oracle_id": "826d4279-1576-4898-a1c2-26fd547fb0d0",
+        "name": "Treasonous Ogre",
+        "oracle_text": "Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.)\nPay 3 life: Add {R}.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Ogre Shaman",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Dethrone"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/36/treasonous-ogre?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14059,
+        "iid": 10172,
+        "name": "Treasonous Ogre",
+        "handler": "manalinkeh_card_treasonous_ogre",
+        "kind": "card"
+      }
+    },
+    "Aetherstorm Roc": {
+      "oracle": {
+        "oracle_id": "06f09e5a-5cfb-437f-9dd1-1682d71f4e7f",
+        "name": "Aetherstorm Roc",
+        "oracle_text": "Flying\nWhenever this creature or another creature you control enters, you get {E} (an energy counter).\nWhenever this creature attacks, you may pay {E}{E}. If you do, put a +1/+1 counter on it and tap up to one target creature defending player controls.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Creature — Bird",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/3/aetherstorm-roc?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16276,
+        "iid": 16365,
+        "name": "Aetherstorm Roc",
+        "handler": "manalinkeh_card_aetherstorm_roc",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Kobolds of Kher Keep": {
+      "oracle": {
+        "oracle_id": "badf0669-9f65-44e3-bf91-6c57ac2fecff",
+        "name": "Kobolds of Kher Keep",
+        "oracle_text": "",
+        "mana_cost": "{0}",
+        "type_line": "Creature — Kobold",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/107/kobolds-of-kher-keep?utm_source=api"
+      },
+      "registry": {
+        "csvid": 704,
+        "iid": 5341,
+        "name": "Kobolds of Kher Keep",
+        "handler": "card_crimson_kobolds",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Marchesa, the Black Rose": {
+      "oracle": {
+        "oracle_id": "17a59d3d-9e01-48cd-bb4a-3eaaa077751c",
+        "name": "Marchesa, the Black Rose",
+        "oracle_text": "Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.)\nOther creatures you control have dethrone.\nWhenever a creature you control with a +1/+1 counter on it dies, return that card to the battlefield under your control at the beginning of the next end step.",
+        "mana_cost": "{1}{U}{B}{R}",
+        "type_line": "Legendary Creature — Human Wizard",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Dethrone"
+        ],
+        "colors": [
+          "B",
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "R",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/248/marchesa-the-black-rose?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14043,
+        "iid": 5882,
+        "name": "Marchesa, the Black Rose",
+        "handler": "manalinkeh_card_marchesa_the_black_rose",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Rumbling Baloth": {
+      "oracle": {
+        "oracle_id": "3191c6ca-4d25-4ba3-bfe1-4aeab1295573",
+        "name": "Rumbling Baloth",
+        "oracle_text": "",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/426/rumbling-baloth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13328,
+        "iid": 8108,
+        "name": "Rumbling Baloth",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Spike Drone": {
+      "oracle": {
+        "oracle_id": "dd6d15c0-c294-42c9-a6cf-57b0b5d40823",
+        "name": "Spike Drone",
+        "oracle_text": "This creature enters with a +1/+1 counter on it.\n{2}, Remove a +1/+1 counter from this creature: Put a +1/+1 counter on target creature.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Spike Drone",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tmp/258/spike-drone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3294,
+        "iid": 9157,
+        "name": "Spike Drone",
+        "handler": "manalinkeh_card_spike_drone",
+        "kind": "card"
+      }
+    },
+    "Tormod's Crypt": {
+      "oracle": {
+        "oracle_id": "1573f7f9-672c-421a-b1ac-3d0d8aea59ca",
+        "name": "Tormod's Crypt",
+        "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/235/tormods-crypt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 368,
+        "iid": 10094,
+        "name": "Tormod's Crypt",
+        "handler": "manalinkeh_card_tormods_crypt",
+        "kind": "card"
+      }
+    },
+    "Scathe Zombies": {
+      "oracle": {
+        "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+        "name": "Scathe Zombies",
+        "oracle_text": "",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/175/scathe-zombies?utm_source=api"
+      },
+      "registry": {
+        "csvid": 214,
+        "iid": 8302,
+        "name": "Scathe Zombies",
+        "handler": "card_scathe_zombies",
+        "kind": "card"
+      }
+    },
+    "Walking Corpse": {
+      "oracle": {
+        "oracle_id": "fea95888-e16a-4209-9cd4-623f7f4d2f67",
+        "name": "Walking Corpse",
+        "oracle_text": "",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/128/walking-corpse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12124,
+        "iid": 10747,
+        "name": "Walking Corpse",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Fog": {
+      "oracle": {
+        "oracle_id": "27e9db49-7af7-4bef-ad4c-bf5dfb92030d",
+        "name": "Fog",
+        "oracle_text": "Prevent all combat damage that would be dealt this turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/167/fog?utm_source=api"
+      },
+      "registry": {
+        "csvid": 88,
+        "iid": 3563,
+        "name": "Fog",
+        "handler": "manalinkeh_card_fog",
+        "kind": "card"
+      }
+    }
+  }
+}

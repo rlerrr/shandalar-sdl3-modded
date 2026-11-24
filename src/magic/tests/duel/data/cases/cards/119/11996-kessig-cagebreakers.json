@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 11996,
+  "card": "Kessig Cagebreakers",
+  "recipes": [
+    {
+      "family": "attack_trigger_tokens_and_combat",
+      "version": 2,
+      "params": {
+        "csvid": 11996,
+        "printed_cost": "{4}{G}",
+        "keywords": []
+      },
+      "oracle_text": "Whenever this creature attacks, create a 2/2 green Wolf creature token that's tapped and attacking for each creature card in your graveyard.",
+      "variants": [
+        "empty_0",
+        "mixed_0",
+        "foe_grave_0",
+        "own_death_0",
+        "next_untap_0",
+        "empty_1",
+        "mixed_1",
+        "foe_grave_1",
+        "own_death_1",
+        "next_untap_1"
+      ]
+    }
+  ]
+}

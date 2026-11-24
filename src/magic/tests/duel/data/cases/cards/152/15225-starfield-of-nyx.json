@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Starfield of Nyx",
+  "csvid": 15225,
+  "recipes": [
+    {
+      "family": "graveyard_reanimation_permissions",
+      "version": 2,
+      "params": {
+        "model": "enchantment",
+        "cost": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "hybrid_symbols": []
+      },
+      "oracle_text": "At the beginning of your upkeep, you may return target enchantment card from your graveyard to the battlefield.\nAs long as you control five or more enchantments, each other non-Aura enchantment you control is a creature in addition to its other types and has base power and base toughness each equal to its mana value.",
+      "variants": [
+        "effect_0",
+        "opponent_upkeep_0",
+        "replay_0",
+        "repeat_0",
+        "underpaid_0",
+        "countered_0",
+        "decline_0",
+        "opp_only_0",
+        "wrong_type_0",
+        "wrong_zone_0",
+        "four_0",
+        "five_0",
+        "six_0",
+        "threshold_rise_0",
+        "threshold_fall_0",
+        "effect_1",
+        "opponent_upkeep_1",
+        "replay_1",
+        "repeat_1",
+        "underpaid_1",
+        "countered_1",
+        "decline_1",
+        "opp_only_1",
+        "wrong_type_1",
+        "wrong_zone_1",
+        "four_1",
+        "five_1",
+        "six_1",
+        "threshold_rise_1",
+        "threshold_fall_1"
+      ]
+    }
+  ]
+}

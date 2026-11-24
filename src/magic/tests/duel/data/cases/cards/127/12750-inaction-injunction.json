@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Inaction Injunction",
+  "csvid": 12750,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "detain_effects",
+      "version": 2,
+      "oracle_text": "Detain target creature an opponent controls. (Until your next turn, that creature can't attack or block and its activated abilities can't be activated.)\nDraw a card.",
+      "params": {
+        "etb": false,
+        "flying": false,
+        "draw": true,
+        "maximum": 1,
+        "nonland": false,
+        "mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "effect_0",
+        "effect_1",
+        "attack_lock_0",
+        "attack_lock_1",
+        "activation_lock_0",
+        "activation_lock_1",
+        "mana_lock_0",
+        "mana_lock_1",
+        "expiry_0",
+        "expiry_1",
+        "no_target_0",
+        "no_target_1",
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "target_lost_0",
+        "target_lost_1",
+        "one_card_0",
+        "one_card_1"
+      ]
+    }
+  ]
+}

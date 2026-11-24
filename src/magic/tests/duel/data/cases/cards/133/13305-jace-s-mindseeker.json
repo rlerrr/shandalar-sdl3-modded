@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "csvid": 13305,
+  "card": "Jace's Mindseeker",
+  "recipes": [
+    {
+      "family": "mill_remaining_entry_and_token_riders",
+      "version": 2,
+      "params": {
+        "csvid": 13305,
+        "mana": [
+          4,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          4,
+          4
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, target opponent mills five cards. You may cast an instant or sorcery spell from among them without paying its mana cost.",
+      "variants": [
+        "free_cast_0",
+        "free_cast_1",
+        "decline_cast_0",
+        "decline_cast_1",
+        "old_only_0",
+        "old_only_1",
+        "short_0",
+        "short_1",
+        "hexproof_0",
+        "hexproof_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

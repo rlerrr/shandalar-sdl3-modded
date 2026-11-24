@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "csvid": 15342,
+  "card": "Guardian of Tazeem",
+  "recipes": [
+    {
+      "family": "landfall_land_type_riders",
+      "version": 2,
+      "oracle_text": "Flying\nLandfall — Whenever a land you control enters, tap target creature an opponent controls. If that land is an Island, that creature doesn't untap during its controller's next untap step.",
+      "params": {
+        "effect": "freeze",
+        "subtype": "Island",
+        "dual": "Tropical Island",
+        "modes": [
+          "no_foe",
+          "source_left",
+          "already_tapped"
+        ],
+        "cast_price": [
+          3,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "power": 4,
+        "toughness": 5
+      },
+      "variants": [
+        "ordinary_0",
+        "ordinary_1",
+        "matched_0",
+        "matched_1",
+        "both_subtypes_0",
+        "both_subtypes_1",
+        "foreign_0",
+        "foreign_1",
+        "before_source_0",
+        "before_source_1",
+        "flying_ground_0",
+        "flying_ground_1",
+        "flying_reach_0",
+        "flying_reach_1",
+        "no_foe_0",
+        "no_foe_1",
+        "source_left_0",
+        "source_left_1",
+        "already_tapped_0",
+        "already_tapped_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 14855,
+  "card": "Aven Tactician",
+  "recipes": [
+    {
+      "family": "entry_interaction_counters",
+      "version": 2,
+      "params": {
+        "csvid": 14855,
+        "printed_cost": "{4}{W}"
+      },
+      "oracle_text": "Flying\nWhen this creature enters, bolster 1. (Choose a creature with the least toughness among creatures you control and put a +1/+1 counter on it.)",
+      "variants": [
+        "solo_0",
+        "weak_0",
+        "tie_0",
+        "flying_0",
+        "countered_0",
+        "solo_1",
+        "weak_1",
+        "tie_1",
+        "flying_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

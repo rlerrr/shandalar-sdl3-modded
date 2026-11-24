@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 16772,
+  "card": "Quicksmith Rebel",
+  "recipes": [
+    {
+      "family": "remaining_entry_turn_and_choices",
+      "version": 2,
+      "params": {
+        "csvid": 16772,
+        "printed_cost": "{3}{R}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, target artifact you control gains \"{T}: This artifact deals 2 damage to any target\" for as long as you control this creature.",
+      "variants": [
+        "own_host_0",
+        "foe_only_0",
+        "leaves_0",
+        "control_loss_0",
+        "own_host_1",
+        "foe_only_1",
+        "leaves_1",
+        "control_loss_1"
+      ]
+    }
+  ]
+}

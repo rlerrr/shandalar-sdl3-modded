@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Volley Veteran",
+  "csvid": 19049,
+  "recipes": [
+    {
+      "family": "entry_follow_on_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 19049,
+        "cost": "{3}{R}",
+        "choices": [
+          "self_count_0",
+          "self_count_1",
+          "three_goblins_0",
+          "three_goblins_1",
+          "lethal_0",
+          "lethal_1",
+          "no_legal_0",
+          "no_legal_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, it deals damage to target creature an opponent controls equal to the number of Goblins you control.",
+      "variants": [
+        "self_count_0",
+        "self_count_1",
+        "three_goblins_0",
+        "three_goblins_1",
+        "lethal_0",
+        "lethal_1",
+        "no_legal_0",
+        "no_legal_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Skithiryx, the Blight Dragon",
+  "csvid": 11361,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_grants_and_modes",
+      "version": 2,
+      "params": {
+        "csvid": 11361,
+        "mana": [
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flying\nInfect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\n{B}: Skithiryx gains haste until end of turn.\n{B}{B}: Regenerate Skithiryx.",
+      "variants": [
+        "fresh_denial_0",
+        "fresh_denial_1",
+        "haste_poison_0",
+        "haste_poison_1",
+        "infect_creature_0",
+        "infect_creature_1",
+        "regen_0",
+        "regen_1"
+      ]
+    }
+  ]
+}

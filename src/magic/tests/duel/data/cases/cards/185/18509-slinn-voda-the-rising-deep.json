@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Slinn Voda, the Rising Deep",
+  "csvid": 18509,
+  "recipes": [
+    {
+      "family": "kicker_card_flow",
+      "version": 2,
+      "oracle_text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nWhen Slinn Voda enters, if it was kicked, return all creatures to their owners' hands except for Merfolk, Krakens, Leviathans, Octopuses, and Serpents.",
+      "params": {
+        "effect": "mass_return",
+        "base_cost": [
+          6,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "kicker_cost": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "kicker_short_0",
+        "kicker_short_1",
+        "base_short_0",
+        "base_short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "stolen_creature_0",
+        "stolen_creature_1"
+      ]
+    }
+  ]
+}

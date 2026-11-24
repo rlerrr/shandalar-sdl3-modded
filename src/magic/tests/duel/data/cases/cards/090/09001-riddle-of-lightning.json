@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Riddle of Lightning",
+  "csvid": 9001,
+  "recipes": [
+    {
+      "family": "library_scry_before_draw",
+      "version": 2,
+      "params": {
+        "csvid": 9001,
+        "printed_cost": "{3}{R}{R}",
+        "choices": [
+          "player_0",
+          "player_1",
+          "creature_0",
+          "creature_1",
+          "planeswalker_0",
+          "planeswalker_1",
+          "lost_target_0",
+          "lost_target_1"
+        ]
+      },
+      "oracle_text": "Choose any target. Scry 3, then reveal the top card of your library. Riddle of Lightning deals damage equal to that card's mana value to that permanent or player.",
+      "variants": [
+        "player_0",
+        "player_1",
+        "creature_0",
+        "creature_1",
+        "planeswalker_0",
+        "planeswalker_1",
+        "lost_target_0",
+        "lost_target_1"
+      ]
+    }
+  ]
+}

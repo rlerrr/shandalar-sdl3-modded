@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Sewer Nemesis",
+  "csvid": 11734,
+  "recipes": [
+    {
+      "family": "mill_remaining_phase_and_mill_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 11734,
+        "printed_mana": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "rules": "As this creature enters, choose a player.\nSewer Nemesis's power and toughness are each equal to the number of cards in the chosen player's graveyard.\nWhenever the chosen player casts a spell, that player mills a card."
+      },
+      "oracle_text": "As this creature enters, choose a player.\nSewer Nemesis's power and toughness are each equal to the number of cards in the chosen player's graveyard.\nWhenever the chosen player casts a spell, that player mills a card.",
+      "variants": [
+        "choose_self_0",
+        "choose_self_1",
+        "choose_opponent_0",
+        "choose_opponent_1"
+      ]
+    }
+  ]
+}

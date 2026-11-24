@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Legion Warboss",
+  "csvid": 19424,
+  "recipes": [
+    {
+      "family": "attack_follow_on_attack_riders",
+      "version": 2,
+      "params": {
+        "csvid": 19424,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Mentor (Whenever this creature attacks, put a +1/+1 counter on target attacking creature with lesser power.)\nAt the beginning of combat on your turn, create a 1/1 red Goblin creature token. That token gains haste until end of turn and attacks this combat if able.",
+      "variants": [
+        "fresh_token_0",
+        "fresh_token_1",
+        "token_blocked_0",
+        "token_blocked_1",
+        "mentor_0",
+        "mentor_1",
+        "foe_turn_0",
+        "foe_turn_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "card": "Timely Hordemate",
+  "csvid": 14409,
+  "recipes": [
+    {
+      "family": "entry_reanimate_rewards",
+      "version": 2,
+      "params": {
+        "model": "raid",
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "from_opponent": false,
+        "choice_for_opponent": false,
+        "optional": false,
+        "maximum_mana_value": 2
+      },
+      "oracle_text": "Raid — When this creature enters, if you attacked this turn, return target creature card with mana value 2 or less from your graveyard to the battlefield.",
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "empty_0",
+        "wrong_side_0",
+        "wrong_type_0",
+        "shroud_0",
+        "underpaid_0",
+        "countered_0",
+        "replay_0",
+        "zero_0",
+        "no_attack_0",
+        "opponent_attack_0",
+        "prior_turn_0",
+        "damage_only_0",
+        "fogged_0",
+        "mana_boundary_0",
+        "effect_1",
+        "alternate_1",
+        "empty_1",
+        "wrong_side_1",
+        "wrong_type_1",
+        "shroud_1",
+        "underpaid_1",
+        "countered_1",
+        "replay_1",
+        "zero_1",
+        "no_attack_1",
+        "opponent_attack_1",
+        "prior_turn_1",
+        "damage_only_1",
+        "fogged_1",
+        "mana_boundary_1"
+      ]
+    }
+  ]
+}

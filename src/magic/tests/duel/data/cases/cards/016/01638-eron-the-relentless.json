@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 1638,
+  "card": "Eron the Relentless",
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_self_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 1638,
+        "printed_cost": "{3}{R}{R}"
+      },
+      "oracle_text": "Haste\n{R}{R}{R}: Regenerate Eron.",
+      "variants": [
+        "regenerate_0",
+        "short_0",
+        "terminate_0",
+        "proactive_0",
+        "haste_0",
+        "haste_blocked_0",
+        "regenerate_1",
+        "short_1",
+        "terminate_1",
+        "proactive_1",
+        "haste_1",
+        "haste_blocked_1"
+      ]
+    }
+  ]
+}

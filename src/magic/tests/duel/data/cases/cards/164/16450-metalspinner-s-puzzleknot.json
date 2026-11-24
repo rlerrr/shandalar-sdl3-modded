@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Metalspinner's Puzzleknot",
+  "csvid": 16450,
+  "recipes": [
+    {
+      "family": "entry_follow_on_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 16450,
+        "printed_mana": "{2}",
+        "rules": "When this artifact enters, you draw a card and you lose 1 life.\n{2}{B}, Sacrifice this artifact: You draw a card and you lose 1 life."
+      },
+      "oracle_text": "When this artifact enters, you draw a card and you lose 1 life.\n{2}{B}, Sacrifice this artifact: You draw a card and you lose 1 life.",
+      "variants": [
+        "paid_activation_0",
+        "paid_activation_1",
+        "wrong_color_0",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

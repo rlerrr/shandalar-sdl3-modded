@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Phytotitan",
+  "csvid": 14153,
+  "recipes": [
+    {
+      "family": "departure_graveyard_and_return",
+      "version": 2,
+      "params": {
+        "csvid": 14153,
+        "cost": [
+          4,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature dies, return it to the battlefield tapped under its owner's control at the beginning of their next upkeep.",
+      "variants": [
+        "next_upkeep_0",
+        "next_upkeep_1",
+        "grave_removed_0",
+        "grave_removed_1"
+      ]
+    }
+  ]
+}

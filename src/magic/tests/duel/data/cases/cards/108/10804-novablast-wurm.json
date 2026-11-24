@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Novablast Wurm",
+  "csvid": 10804,
+  "recipes": [
+    {
+      "family": "attack_follow_on_attack_riders",
+      "version": 2,
+      "params": {
+        "csvid": 10804,
+        "mana": [
+          3,
+          0,
+          0,
+          2,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks, destroy all other creatures.",
+      "variants": [
+        "sweep_0",
+        "sweep_1",
+        "indestructible_0",
+        "indestructible_1",
+        "idle_0",
+        "idle_1",
+        "late_0",
+        "late_1"
+      ]
+    }
+  ]
+}

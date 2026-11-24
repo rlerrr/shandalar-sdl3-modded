@@ -1,0 +1,389 @@
+{
+  "version": 1,
+  "sources": {
+    "Consume Strength": {
+      "oracle": {
+        "oracle_id": "53fd9fb1-c28f-4d73-bf98-94cdab418f21",
+        "name": "Consume Strength",
+        "oracle_text": "Target creature gets +2/+2 until end of turn. Another target creature gets -2/-2 until end of turn.",
+        "mana_cost": "{1}{B}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddm/74/consume-strength?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5348,
+        "iid": 1922,
+        "name": "Consume Strength",
+        "handler": "manalinkeh_card_consume_strength",
+        "kind": "card"
+      }
+    },
+    "Leeching Bite": {
+      "oracle": {
+        "oracle_id": "42e4a55b-12c8-4ad0-a27d-28bbdbb06940",
+        "name": "Leeching Bite",
+        "oracle_text": "Target creature gets +1/+1 until end of turn. Another target creature gets -1/-1 until end of turn.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/113/leeching-bite?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11628,
+        "iid": 5517,
+        "name": "Leeching Bite",
+        "handler": "manalinkeh_card_leeching_bite",
+        "kind": "card"
+      }
+    },
+    "Rites of Reaping": {
+      "oracle": {
+        "oracle_id": "ed1a1c04-1b2b-4616-abb2-8bd19c47b589",
+        "name": "Rites of Reaping",
+        "oracle_text": "Target creature gets +3/+3 until end of turn. Another target creature gets -3/-3 until end of turn.",
+        "mana_cost": "{4}{B}{G}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rtr/191/rites-of-reaping?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12804,
+        "iid": 8004,
+        "name": "Rites of Reaping",
+        "handler": "manalinkeh_card_rites_of_reaping",
+        "kind": "card"
+      }
+    },
+    "Schismotivate": {
+      "oracle": {
+        "oracle_id": "d7081ec5-0070-4bc1-97c4-544ac08581ee",
+        "name": "Schismotivate",
+        "oracle_text": "Target creature gets +4/+0 until end of turn. Another target creature gets -4/-0 until end of turn.",
+        "mana_cost": "{1}{U}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gpt/129/schismotivate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8121,
+        "iid": 8320,
+        "name": "Schismotivate",
+        "handler": "manalinkeh_card_schismotivate",
+        "kind": "card"
+      }
+    },
+    "Steal Strength": {
+      "oracle": {
+        "oracle_id": "e67434e6-5408-416a-be19-64291fca8e3e",
+        "name": "Steal Strength",
+        "oracle_text": "Target creature gets +1/+1 until end of turn. Another target creature gets -1/-1 until end of turn.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pcy/79/steal-strength?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4897,
+        "iid": 14862,
+        "name": "Steal Strength",
+        "handler": "manalinkeh_card_leeching_bite",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Krosan Tusker": {
+      "oracle": {
+        "oracle_id": "82406175-63b3-4972-be8b-db0e70c908cb",
+        "name": "Krosan Tusker",
+        "oracle_text": "Cycling {2}{G} ({2}{G}, Discard this card: Draw a card.)\nWhen you cycle this card, you may search your library for a basic land card, reveal that card, put it into your hand, then shuffle. (Do this before you draw.)",
+        "mana_cost": "{5}{G}{G}",
+        "type_line": "Creature — Boar Beast",
+        "power": "6",
+        "toughness": "5",
+        "keywords": [
+          "Cycling"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/302/krosan-tusker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6196,
+        "iid": 5405,
+        "name": "Krosan Tusker",
+        "handler": "manalinkeh_card_krosan_tusker",
+        "kind": "card"
+      }
+    },
+    "Ravenous Baloth": {
+      "oracle": {
+        "oracle_id": "ee771e66-72f8-480f-9920-92c68ab93c3b",
+        "name": "Ravenous Baloth",
+        "oracle_text": "Sacrifice a Beast: You gain 4 life.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/424/ravenous-baloth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1222,
+        "iid": 7692,
+        "name": "Ravenous Baloth",
+        "handler": "manalinkeh_card_ravenous_baloth",
+        "kind": "card"
+      }
+    },
+    "Sakura-Tribe Elder": {
+      "oracle": {
+        "oracle_id": "e3afc704-220f-498f-9eaa-0821b17dc24c",
+        "name": "Sakura-Tribe Elder",
+        "oracle_text": "Sacrifice this creature: Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Snake Shaman",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/285/sakura-tribe-elder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1469,
+        "iid": 8190,
+        "name": "Sakura-Tribe Elder",
+        "handler": "manalinkeh_card_sakura_tribe_elder",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Giant Scorpion": {
+      "oracle": {
+        "oracle_id": "557485d9-7537-4297-a589-c29d0f1ecd98",
+        "name": "Giant Scorpion",
+        "oracle_text": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Scorpion",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [
+          "Deathtouch"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddr/50/giant-scorpion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10544,
+        "iid": 3864,
+        "name": "Giant Scorpion",
+        "handler": "manalinkeh_card_deadly_recluse",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Cloudshift": {
+      "oracle": {
+        "oracle_id": "6879f5ce-7a1b-4606-bad1-885779b0d456",
+        "name": "Cloudshift",
+        "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tle/152/cloudshift?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12330,
+        "iid": 1828,
+        "name": "Cloudshift",
+        "handler": "manalinkeh_card_cloudshift",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    }
+  }
+}

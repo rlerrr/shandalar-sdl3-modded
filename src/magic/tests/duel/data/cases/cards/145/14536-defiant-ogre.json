@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 14536,
+  "card": "Defiant Ogre",
+  "recipes": [
+    {
+      "family": "entry_rider_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 14536,
+        "printed_cost": "{5}{R}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, choose one —\n• Put a +1/+1 counter on this creature.\n• Destroy target artifact.",
+      "variants": [
+        "counter_0",
+        "artifact_0",
+        "indestructible_0",
+        "own_0",
+        "counter_1",
+        "artifact_1",
+        "indestructible_1",
+        "own_1"
+      ]
+    }
+  ]
+}

@@ -5,6 +5,7 @@
 #include <utility>
 #include <vector>
 #include "manalink.h"
+#include "magic/src/duel_host.h"
 
 #ifndef SHANDALAR
 /* October 2022 named-card picker. Native dialog template and message contracts
@@ -112,6 +113,46 @@ static const DLGTEMPLATE *generate_choose_a_card_dlg_template()
   return reinterpret_cast<const DLGTEMPLATE *>(templ);
 }
 
+static void normalize_card_choice_filters(color_test_t& colors, type_t& types)
+{
+  types = static_cast<type_t>(types & (TYPE_LAND | TYPE_CREATURE | TYPE_ENCHANTMENT |
+                     TYPE_SORCERY | TYPE_INSTANT | TYPE_ARTIFACT | TARGET_TYPE_PLANESWALKER));
+  if (!types)
+    types = TYPE_NONEFFECT;
+  if (!colors)
+    colors = COLOR_TEST_COLORLESS;
+  else
+  {
+    colors = static_cast<color_test_t>(colors & COLOR_TEST_ANY);
+    if (!colors)
+      colors = COLOR_TEST_ANY;
+  }
+}
+
+static int eligible_card_iid(csvid_t csvid, color_test_t want_col, type_t want_type,
+                             test_definition_t *constraints)
+{
+  if (csvid.raw < 0 || csvid.raw >= available_slots || !is_valid_card(csvid.raw))
+    return -1;
+  int iid = get_internal_card_id_from_csv_id(csvid.raw);
+  type_t types = get_type(-1, iid);
+  if (!(want_type & types))
+    return -1;
+  color_test_t colors = static_cast<color_test_t>(
+      (types & TYPE_LAND) ? cards_ptr[csvid.raw]->mana_source_colors
+                         : get_color_by_internal_id_no_hack(iid));
+  if (colors & COLOR_TEST_ARTIFACT)
+    colors = static_cast<color_test_t>(colors | COLOR_TEST_COLORLESS);
+  colors = static_cast<color_test_t>(colors & COLOR_TEST_ANY);
+  if (!colors)
+    colors = COLOR_TEST_COLORLESS;
+  if (!(want_col & colors) ||
+      ((want_col & 0x100) && num_bits_set(colors & COLOR_TEST_ANY_COLORED) < 2) ||
+      (constraints && !new_make_test(0, iid, -1, constraints)))
+    return -1;
+  return iid;
+}
+
 static int dlgproc_choose_a_card_helper(HWND hwnd, color_test_t want_col,
                                         type_t want_type, test_definition_t *constraints)
 {
@@ -119,27 +160,9 @@ static int dlgproc_choose_a_card_helper(HWND hwnd, color_test_t want_col,
   SendMessageA(hwnd, LB_RESETCONTENT, 0, 0);
   for (csvid_t csvid(0); csvid.raw < available_slots; ++csvid.raw)
   {
-    if (!is_valid_card(csvid.raw))
-      continue;
-    iid_t iid = iid_t(get_internal_card_id_from_csv_id(csvid.raw));
-    type_t typs = get_type(-1, iid.raw);
-    if (!(want_type & typs))
-      continue;
-    color_test_t cols = static_cast<color_test_t>(
-        (typs & TYPE_LAND) ? cards_ptr[csvid.raw]->mana_source_colors
-                           : get_color_by_internal_id_no_hack(iid.raw));
-    if (cols & COLOR_TEST_ARTIFACT)
-      cols = static_cast<color_test_t>(cols | COLOR_TEST_COLORLESS);
-    cols = static_cast<color_test_t>(cols & COLOR_TEST_ANY);
-    if (!cols)
-      cols = COLOR_TEST_COLORLESS;
-    if (!(want_col & cols))
-      continue;
-    if ((want_col & 0x100) && num_bits_set(cols & COLOR_TEST_ANY_COLORED) < 2)
-      continue;
-    if (constraints && !new_make_test(0, iid.raw, -1, constraints))
-      continue;
-    choose_a_card_strcsvids.push_back(StrCsvid(cards_data[iid.raw].name, csvid));
+    int iid = eligible_card_iid(csvid, want_col, want_type, constraints);
+    if (iid >= 0)
+      choose_a_card_strcsvids.emplace_back(cards_data[iid].name, csvid);
   }
   std::sort(choose_a_card_strcsvids.begin(), choose_a_card_strcsvids.end(),
             [](const StrCsvid &a, const StrCsvid &b) {
@@ -190,18 +213,7 @@ static INT_PTR CALLBACK dlgproc_choose_a_card(HWND hwnd, UINT msg, WPARAM wparam
         SetWindowTextA(hwnd, args.prompt);
       SendDlgItemMessageA(hwnd, CTL_FULLCARD, WM_USER + 1, -1, 0);
       SetWindowLongA(GetDlgItem(hwnd, CTL_FULLCARD), 12, 1);
-      args.types = static_cast<type_t>(args.types & (TYPE_LAND | TYPE_CREATURE | TYPE_ENCHANTMENT |
-                        TYPE_SORCERY | TYPE_INSTANT | TYPE_ARTIFACT | TARGET_TYPE_PLANESWALKER));
-      if (!args.types)
-        args.types = TYPE_NONEFFECT;
-      if (!args.colors)
-        args.colors = COLOR_TEST_COLORLESS;
-      else
-      {
-        args.colors = static_cast<color_test_t>(args.colors & COLOR_TEST_ANY);
-        if (!args.colors)
-          args.colors = COLOR_TEST_ANY;
-      }
+      normalize_card_choice_filters(args.colors, args.types);
       origtypes = args.types;
       origcolors = args.colors;
       EnableWindow(GetDlgItem(hwnd, CTL_ALL_COLORS), TRUE);
@@ -411,11 +423,19 @@ static csvid_t choose_a_card_impl(int who_chooses, test_definition_t *constraint
                                   color_test_t colors, type_t types, bool allow_cancel,
                                   color_test_t initial_color, type_t initial_type)
 {
-  (void)who_chooses;
   if (trace_mode & 2)
     backtrace_and_abort("functions/choose_a_card.cpp:867\n!(trace_mode & 2) || !\"calling choose_a_card() directly doesn't work in multiplayer\"");
   if (!allow_cancel && ai_is_speculating == 1)
     backtrace_and_abort("functions/choose_a_card.cpp:877\nallow_cancel || ai_is_speculating != 1");
+  if (duel_host_scripted_input())
+  {
+    normalize_card_choice_filters(colors, types);
+    csvid_t choice(duel_host_choose(DUEL_CHOICE_CARD_NAME, who_chooses,
+                                  prompt ? prompt : "Choose a card name.", 0, nullptr, nullptr));
+    if (!(allow_cancel && choice.raw == -1) && eligible_card_iid(choice, colors, types, constraints) < 0)
+      duel_host_fail("illegal scripted card name");
+    return choice;
+  }
   choose_a_card_args_t args;
   args.colors = colors;
   args.types = types;

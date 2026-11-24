@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "csvid": 13039,
+  "card": "Rubblebelt Raiders",
+  "recipes": [
+    {
+      "family": "attack_trigger_stat_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 13039,
+        "printed_cost": "{1}{R/G}{R/G}{R/G}"
+      },
+      "oracle_text": "Whenever this creature attacks, put a +1/+1 counter on it for each attacking creature you control.",
+      "variants": [
+        "solo_0",
+        "team_0",
+        "repeat_0",
+        "removed_ally_0",
+        "other_attackers_0",
+        "blocks_0",
+        "hybrid_red_0",
+        "hybrid_green_0",
+        "wrong_mana_0",
+        "solo_1",
+        "team_1",
+        "repeat_1",
+        "removed_ally_1",
+        "other_attackers_1",
+        "blocks_1",
+        "hybrid_red_1",
+        "hybrid_green_1",
+        "wrong_mana_1"
+      ]
+    }
+  ]
+}

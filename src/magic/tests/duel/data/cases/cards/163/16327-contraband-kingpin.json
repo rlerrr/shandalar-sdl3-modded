@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "csvid": 16327,
+  "card": "Contraband Kingpin",
+  "recipes": [
+    {
+      "family": "library_scry_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 16327,
+        "mana": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          1,
+          4
+        ]
+      },
+      "oracle_text": "Lifelink\nWhenever an artifact you control enters, scry 1.",
+      "variants": [
+        "own_artifact_0",
+        "own_artifact_1",
+        "foe_artifact_0",
+        "foe_artifact_1",
+        "nonartifact_0",
+        "nonartifact_1",
+        "lifelink_0",
+        "lifelink_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "csvid": 4208,
+  "card": "Wall of Glare",
+  "recipes": [
+    {
+      "family": "additional_blocker",
+      "version": 2,
+      "params": {
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "power": 0,
+        "toughness": 5,
+        "reach": false,
+        "trample": false,
+        "additional": null,
+        "defender": true
+      },
+      "oracle_text": "Defender (This creature can't attack.)\nThis creature can block any number of creatures.",
+      "variants": [
+        "two_ground_0",
+        "reverse_0",
+        "duplicate_rejected_0",
+        "ordinary_limit_0",
+        "one_damage_0",
+        "tapped_0",
+        "leave_unblocked_0",
+        "flyer_second_0",
+        "after_blocks_replay_0",
+        "next_combat_0",
+        "cast_then_block_0",
+        "unfunded_0",
+        "wrong_color_0",
+        "three_ground_0",
+        "four_ground_0",
+        "unbounded_nine_0",
+        "defender_rejected_0",
+        "two_ground_1",
+        "reverse_1",
+        "duplicate_rejected_1",
+        "ordinary_limit_1",
+        "one_damage_1",
+        "tapped_1",
+        "leave_unblocked_1",
+        "flyer_second_1",
+        "after_blocks_replay_1",
+        "next_combat_1",
+        "cast_then_block_1",
+        "unfunded_1",
+        "wrong_color_1",
+        "three_ground_1",
+        "four_ground_1",
+        "unbounded_nine_1",
+        "defender_rejected_1"
+      ]
+    }
+  ]
+}

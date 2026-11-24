@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 15638,
+  "card": "Matter Reshaper",
+  "recipes": [
+    {
+      "family": "departure_counters_and_search",
+      "version": 2,
+      "params": {
+        "csvid": 15638,
+        "printed_cost": "{2}{C}"
+      },
+      "oracle_text": "({C} represents colorless mana.)\nWhen this creature dies, reveal the top card of your library. You may put that card onto the battlefield if it's a permanent card with mana value 3 or less. Otherwise, put that card into your hand.",
+      "variants": [
+        "accept_0",
+        "decline_0",
+        "land_0",
+        "large_0",
+        "spell_0",
+        "empty_0",
+        "accept_1",
+        "decline_1",
+        "land_1",
+        "large_1",
+        "spell_1",
+        "empty_1"
+      ]
+    }
+  ]
+}

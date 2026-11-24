@@ -1,0 +1,519 @@
+{
+  "version": 1,
+  "sources": {
+    "Aphetto Exterminator": {
+      "oracle": {
+        "oracle_id": "a3bf5d18-77d5-4881-916c-cc125e621b6e",
+        "name": "Aphetto Exterminator",
+        "oracle_text": "Morph {3}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, target creature gets -3/-3 until end of turn.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Human Wizard",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lgn/59/aphetto-exterminator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6334,
+        "iid": 499,
+        "name": "Aphetto Exterminator",
+        "handler": "manalinkeh_card_aphetto_exterminator",
+        "kind": "card"
+      }
+    },
+    "Coral Trickster": {
+      "oracle": {
+        "oracle_id": "11a163cc-ade3-4b55-b50e-3b3bf7e1962c",
+        "name": "Coral Trickster",
+        "oracle_text": "Morph {U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, you may tap or untap target permanent.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Merfolk Rogue",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/58/coral-trickster?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8509,
+        "iid": 1963,
+        "name": "Coral Trickster",
+        "handler": "manalinkeh_card_coral_trickster",
+        "kind": "card"
+      }
+    },
+    "Daru Sanctifier": {
+      "oracle": {
+        "oracle_id": "7e81539e-b790-41eb-bd5e-d1de130b46a1",
+        "name": "Daru Sanctifier",
+        "oracle_text": "Morph {1}{W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, destroy target enchantment.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lgn/9/daru-sanctifier?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6360,
+        "iid": 2264,
+        "name": "Daru Sanctifier",
+        "handler": "manalinkeh_card_daru_sanctifier",
+        "kind": "card"
+      }
+    },
+    "Echo Tracer": {
+      "oracle": {
+        "oracle_id": "34efa2fe-95ef-4a06-9a84-97f03ec68908",
+        "name": "Echo Tracer",
+        "oracle_text": "Morph {2}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, return target creature to its owner's hand.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddn/51/echo-tracer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6371,
+        "iid": 2884,
+        "name": "Echo Tracer",
+        "handler": "manalinkeh_card_echo_tracer",
+        "kind": "card"
+      }
+    },
+    "Chromeshell Crab": {
+      "oracle": {
+        "oracle_id": "8cbac2e8-5755-433b-9f42-7fd5c214aab3",
+        "name": "Chromeshell Crab",
+        "oracle_text": "Morph {4}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, you may exchange control of target creature you control and target creature an opponent controls.",
+        "mana_cost": "{4}{U}",
+        "type_line": "Creature — Crab Beast",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c19/81/chromeshell-crab?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6350,
+        "iid": 1731,
+        "name": "Chromeshell Crab",
+        "handler": "manalinkeh_card_chromeshell_crab",
+        "kind": "card"
+      }
+    },
+    "Efreet Weaponmaster": {
+      "oracle": {
+        "oracle_id": "882a9dc9-b1bb-4be8-850f-e28bad8f5840",
+        "name": "Efreet Weaponmaster",
+        "oracle_text": "First strike\nWhen this creature enters or is turned face up, another target creature you control gets +3/+0 until end of turn.\nMorph {2}{U}{R}{W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+        "mana_cost": "{3}{U}{R}{W}",
+        "type_line": "Creature — Efreet Monk",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [
+          "Morph",
+          "First strike"
+        ],
+        "colors": [
+          "R",
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "U",
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/175/efreet-weaponmaster?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14264,
+        "iid": 2895,
+        "name": "Efreet Weaponmaster",
+        "handler": "manalinkeh_card_efreet_weaponmaster",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Serra Angel": {
+      "oracle": {
+        "oracle_id": "4b7ac066-e5c7-43e6-9e7e-2739b24a905d",
+        "name": "Serra Angel",
+        "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/740/serra-angel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 221,
+        "iid": 8519,
+        "name": "Serra Angel",
+        "handler": "manalinkeh_card_serra_angel",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Bazaar Trader": {
+      "oracle": {
+        "oracle_id": "21ad7067-3210-42d6-9009-0784b2834227",
+        "name": "Bazaar Trader",
+        "oracle_text": "{T}: Target player gains control of target artifact, creature, or land you control.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/72/bazaar-trader?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10729,
+        "iid": 930,
+        "name": "Bazaar Trader",
+        "handler": "manalinkeh_card_bazaar_trader",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Bonesplitter": {
+      "oracle": {
+        "oracle_id": "452e3f5f-ce17-4682-966b-5cc100210aee",
+        "name": "Bonesplitter",
+        "oracle_text": "Equipped creature gets +2/+0.\nEquip {1}",
+        "mana_cost": "{1}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/458/bonesplitter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6627,
+        "iid": 1226,
+        "name": "Bonesplitter",
+        "handler": "manalinkeh_card_bonesplitter",
+        "kind": "card"
+      }
+    },
+    "Icy Manipulator": {
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 119,
+        "iid": 4775,
+        "name": "Icy Manipulator",
+        "handler": "manalinkeh_card_icy_manipulator",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Furnace of Rath": {
+      "oracle": {
+        "oracle_id": "68715465-6cf9-4006-87e9-31f227fe9ed3",
+        "name": "Furnace of Rath",
+        "oracle_text": "If a source would deal damage to a permanent or player, it deals double that damage to that permanent or player instead.",
+        "mana_cost": "{1}{R}{R}{R}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Double"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hop/55/furnace-of-rath?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1041,
+        "iid": 3686,
+        "name": "Furnace of Rath",
+        "handler": "manalinkeh_card_furnace_of_rath",
+        "kind": "card"
+      }
+    },
+      "Indomitable Archangel": {
+        "oracle": {
+          "oracle_id": "0f9269eb-6a6c-4b32-8b3d-73724c12ca6b",
+          "name": "Indomitable Archangel",
+          "oracle_text": "Flying\nMetalcraft — Artifacts you control have shroud as long as you control three or more artifacts. (An artifact with shroud can't be the target of spells or abilities.)",
+          "mana_cost": "{2}{W}{W}",
+          "type_line": "Creature — Angel",
+          "power": "4",
+          "toughness": "4",
+          "keywords": [
+            "Flying",
+            "Metalcraft"
+          ],
+          "colors": [
+            "W"
+          ],
+          "color_identity": [
+            "W"
+          ],
+          "cmc": 4.0,
+          "layout": "normal",
+          "scryfall_uri": "https://scryfall.com/card/nec/85/indomitable-archangel?utm_source=api"
+        },
+        "registry": {
+          "csvid": 11283,
+          "iid": 4846,
+          "name": "Indomitable Archangel",
+          "handler": "manalinkeh_card_indomitable_archangel",
+          "kind": "card"
+        }
+      },
+    "Propaganda": {
+      "oracle": {
+        "oracle_id": "ea9709b6-4c37-4d5a-b04d-cd4c42e4f9dd",
+        "name": "Propaganda",
+        "oracle_text": "Creatures can't attack you unless their controller pays {2} for each creature they control that's attacking you.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/151/propaganda?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3233,
+        "iid": 7415,
+        "name": "Propaganda",
+        "handler": "manalinkeh_card_propaganda",
+        "kind": "card"
+      }
+    }
+  },
+  "hidden_observer": {
+    "csvid": 13252,
+    "iid": 3230,
+    "name": "Face-Down Creature",
+    "handler": "manalinkeh_card_face_down_creature",
+    "kind": "card"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Lashknife Barrier",
+  "csvid": 5251,
+  "recipes": [
+    {
+      "family": "remaining_entry_attachments",
+      "version": 2,
+      "params": {
+        "csvid": 5251,
+        "mana_cost": "{2}{W}"
+      },
+      "oracle_text": "When this enchantment enters, draw a card.\nIf a source would deal damage to a creature you control, it deals that much damage minus 1 to that creature instead.",
+      "variants": [
+        "own_creature_0",
+        "own_creature_1",
+        "foreign_creature_0",
+        "foreign_creature_1",
+        "player_0",
+        "player_1"
+      ]
+    }
+  ]
+}

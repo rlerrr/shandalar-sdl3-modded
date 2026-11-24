@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Increasing Confusion",
+  "csvid": 12217,
+  "recipes": [
+    {
+      "family": "mill_library_spells",
+      "version": 2,
+      "params": {
+        "csvid": 12217,
+        "printed_cost": "{X}{U}",
+        "clauses": [
+          "Target player mills X cards. If this spell was cast from a graveyard, that player mills twice that many cards instead.",
+          "Flashback {X}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)"
+        ],
+        "modes": [
+          "normal_x2",
+          "zero_x",
+          "flashback_x2",
+          "flashback_short",
+          "flashback_offturn"
+        ],
+        "human_modes": []
+      },
+      "oracle_text": "Target player mills X cards. If this spell was cast from a graveyard, that player mills twice that many cards instead.\nFlashback {X}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "variants": [
+        "normal_x2_0",
+        "normal_x2_1",
+        "zero_x_0",
+        "zero_x_1",
+        "flashback_x2_0",
+        "flashback_x2_1",
+        "flashback_short_0",
+        "flashback_short_1",
+        "flashback_offturn_0",
+        "flashback_offturn_1"
+      ]
+    }
+  ]
+}

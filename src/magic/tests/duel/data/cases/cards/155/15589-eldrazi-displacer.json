@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Eldrazi Displacer",
+  "csvid": 15589,
+  "recipes": [
+    {
+      "family": "devoid_cast_payments_and_targets",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\n{2}{C}: Exile another target creature, then return it to the battlefield tapped under its owner's control. ({C} represents colorless mana.)",
+      "params": {
+        "effect": "blink",
+        "price": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "power": 3,
+        "toughness": 3
+      },
+      "variants": [
+        "wrong_base_0",
+        "ordinary_0",
+        "foreign_owner_0",
+        "own_target_0",
+        "only_self_0",
+        "colored_only_0",
+        "short_0",
+        "offturn_0",
+        "replay_0",
+        "wrong_base_1",
+        "ordinary_1",
+        "foreign_owner_1",
+        "own_target_1",
+        "only_self_1",
+        "colored_only_1",
+        "short_1",
+        "offturn_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

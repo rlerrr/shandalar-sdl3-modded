@@ -1,0 +1,661 @@
+{
+  "version": 1,
+  "oracle_sha256": "c11dcfedde2ed4ce99ff355f5cf30c187c2b3745c87a03319e715bbfec17cf50",
+  "sources": {
+    "Goblin Bombardment": {
+      "registry": {
+        "csvid": 3160,
+        "iid": 3984,
+        "name": "Goblin Bombardment",
+        "handler": "manalinkeh_card_goblin_bombardment",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "edad60c6-80de-4033-af1b-a703ac332983",
+        "name": "Goblin Bombardment",
+        "oracle_text": "Sacrifice a creature: This enchantment deals 1 damage to any target.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh2/279/goblin-bombardment?utm_source=api"
+      },
+      "sacrifice_first": true
+    },
+    "Barrage of Expendables": {
+      "registry": {
+        "csvid": 13262,
+        "iid": 873,
+        "name": "Barrage of Expendables",
+        "handler": "manalinkeh_card_barrage_of_expendables",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "da7600f6-5d4c-46bf-936a-9e0f0d508e19",
+        "name": "Barrage of Expendables",
+        "oracle_text": "{R}, Sacrifice a creature: This enchantment deals 1 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/292/barrage-of-expendables?utm_source=api"
+      },
+      "sacrifice_first": true
+    },
+    "Skirsdag Cultist": {
+      "registry": {
+        "csvid": 12075,
+        "iid": 8828,
+        "name": "Skirsdag Cultist",
+        "handler": "manalinkeh_card_skirsdag_cultist",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "a7fe5473-fae5-490e-8600-b7e497b9989e",
+        "name": "Skirsdag Cultist",
+        "oracle_text": "{R}, {T}, Sacrifice a creature: This creature deals 2 damage to any target.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Human Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm3/112/skirsdag-cultist?utm_source=api"
+      },
+      "sacrifice_first": true
+    },
+    "Skull Catapult": {
+      "registry": {
+        "csvid": 2096,
+        "iid": 8840,
+        "name": "Skull Catapult",
+        "handler": "manalinkeh_card_skull_catapult",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "eef931d8-4048-4c33-bd8c-0f67d1083ee6",
+        "name": "Skull Catapult",
+        "oracle_text": "{1}, {T}, Sacrifice a creature: This artifact deals 2 damage to any target.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/219/skull-catapult?utm_source=api"
+      },
+      "sacrifice_first": true
+    },
+    "Barrage Ogre": {
+      "registry": {
+        "csvid": 11207,
+        "iid": 874,
+        "name": "Barrage Ogre",
+        "handler": "manalinkeh_card_orcish_mechanic",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "d556c71e-ce16-4229-880b-744790f93797",
+        "name": "Barrage Ogre",
+        "oracle_text": "{T}, Sacrifice an artifact: This creature deals 2 damage to any target.",
+        "mana_cost": "{3}{R}{R}",
+        "type_line": "Creature — Ogre Warrior",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddu/44/barrage-ogre?utm_source=api"
+      },
+      "sacrifice_first": false
+    },
+    "Orcish Vandal": {
+      "registry": {
+        "csvid": 18476,
+        "iid": 18583,
+        "name": "Orcish Vandal",
+        "handler": "manalinkeh_card_orcish_mechanic",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "933a1811-7e1a-4173-b1c9-34b2c858ba68",
+        "name": "Orcish Vandal",
+        "oracle_text": "{T}, Sacrifice an artifact: This creature deals 2 damage to any target.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Orc Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/137/orcish-vandal?utm_source=api"
+      },
+      "sacrifice_first": false
+    },
+    "Orcish Mechanics": {
+      "registry": {
+        "csvid": 513,
+        "iid": 6875,
+        "name": "Orcish Mechanics",
+        "handler": "manalinkeh_card_orcish_mechanic",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "0ec58835-de2d-4064-89a9-f92db80bc276",
+        "name": "Orcish Mechanics",
+        "oracle_text": "{T}, Sacrifice an artifact: This creature deals 2 damage to any target.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Orc",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/129/orcish-mechanics?utm_source=api"
+      },
+      "sacrifice_first": false
+    }
+  },
+  "cards": {
+    "Chandra, Pyrogenius": {
+      "oracle_id": "ae2c89c2-66d6-484a-a176-9ea19e00f445",
+      "name": "Chandra, Pyrogenius",
+      "oracle_text": "+2: Chandra deals 2 damage to each opponent.\n−3: Chandra deals 4 damage to target creature.\n−10: Chandra deals 6 damage to target player or planeswalker and each creature that player or that planeswalker's controller controls.",
+      "mana_cost": "{4}{R}{R}",
+      "type_line": "Legendary Planeswalker — Chandra",
+      "loyalty": "5",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 6.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/kld/265/chandra-pyrogenius?utm_source=api"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Craw Wurm": {
+      "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+      "name": "Craw Wurm",
+      "oracle_text": "",
+      "mana_cost": "{4}{G}{G}",
+      "type_line": "Creature — Wurm",
+      "power": "6",
+      "toughness": "4",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 6.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m10/173/craw-wurm?utm_source=api"
+    },
+    "Darksteel Myr": {
+      "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+      "name": "Darksteel Myr",
+      "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature — Myr",
+      "power": "0",
+      "toughness": "1",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Howling Mine": {
+      "oracle_id": "d26b27db-a567-4631-b4b6-7294222fbdd1",
+      "name": "Howling Mine",
+      "oracle_text": "At the beginning of each player's draw step, if this artifact is untapped, that player draws an additional card.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/c16/257/howling-mine?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature — Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "scryfall_uri": "https://scryfall.com/card/ttsr/12/llanowar-elves?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Muck Rats": {
+      "oracle_id": "bca13a12-6723-4a5e-8f1b-21646a8b3e7e",
+      "name": "Muck Rats",
+      "oracle_text": "",
+      "mana_cost": "{B}",
+      "type_line": "Creature — Rat",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/s99/84/muck-rats?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Robe of Mirrors": {
+      "oracle_id": "093a20e5-ff14-41c7-b16c-1f745ddf6942",
+      "name": "Robe of Mirrors",
+      "oracle_text": "Enchant creature (Target a creature as you cast this. This card enters attached to that creature.)\nEnchanted creature has shroud. (It can't be the target of spells or abilities.)",
+      "mana_cost": "{U}",
+      "type_line": "Enchantment — Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/101/robe-of-mirrors?utm_source=api"
+    },
+    "Safe Passage": {
+      "oracle_id": "dfa459a1-b065-4488-88d3-4da388261b52",
+      "name": "Safe Passage",
+      "oracle_text": "Prevent all damage that would be dealt to you and creatures you control this turn.",
+      "mana_cost": "{2}{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m13/30/safe-passage?utm_source=api"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+    },
+    "Terror": {
+      "oracle_id": "b81f041d-98db-4408-9472-c483e4a502bc",
+      "name": "Terror",
+      "oracle_text": "Destroy target nonartifact, nonblack creature. It can't be regenerated.",
+      "mana_cost": "{1}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/103/terror?utm_source=api"
+    },
+    "Wall of Spears": {
+      "oracle_id": "ed836d84-ff1e-4af8-b4b8-314569b3faec",
+      "name": "Wall of Spears",
+      "oracle_text": "Defender (This creature can't attack.)\nFirst strike",
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature — Wall",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [
+        "First strike",
+        "Defender"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/8ed/320/wall-of-spears?utm_source=api"
+    }
+  },
+  "registry": {
+    "Chandra, Pyrogenius": {
+      "csvid": 16315,
+      "iid": 16404,
+      "name": "Chandra, Pyrogenius",
+      "handler": "manalinkeh_card_chandra_pyrogenius",
+      "kind": "card"
+    },
+    "Counterspell": {
+      "csvid": 48,
+      "iid": 1996,
+      "name": "Counterspell",
+      "handler": "manalinkeh_card_counterspell",
+      "kind": "card"
+    },
+    "Craw Wurm": {
+      "csvid": 49,
+      "iid": 2032,
+      "name": "Craw Wurm",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Darksteel Myr": {
+      "csvid": 11238,
+      "iid": 2255,
+      "name": "Darksteel Myr",
+      "handler": "manalinkeh_card_darksteel_myr",
+      "kind": "card"
+    },
+    "Forest": {
+      "csvid": 91,
+      "iid": 2,
+      "name": "Forest",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Giant Growth": {
+      "csvid": 97,
+      "iid": 3862,
+      "name": "Giant Growth",
+      "handler": "manalinkeh_card_giant_growth",
+      "kind": "card"
+    },
+    "Grizzly Bears": {
+      "csvid": 106,
+      "iid": 4259,
+      "name": "Grizzly Bears",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Howling Mine": {
+      "csvid": 114,
+      "iid": 4683,
+      "name": "Howling Mine",
+      "handler": "manalinkeh_card_howling_mine",
+      "kind": "card"
+    },
+    "Island": {
+      "csvid": 126,
+      "iid": 1,
+      "name": "Island",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Lightning Bolt": {
+      "csvid": 145,
+      "iid": 5596,
+      "name": "Lightning Bolt",
+      "handler": "manalinkeh_card_lightning_bolt",
+      "kind": "card"
+    },
+    "Llanowar Elves": {
+      "csvid": 149,
+      "iid": 5655,
+      "name": "Llanowar Elves",
+      "handler": "manalinkeh_card_elvish_mystic",
+      "kind": "card"
+    },
+    "Mountain": {
+      "csvid": 164,
+      "iid": 3,
+      "name": "Mountain",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Muck Rats": {
+      "csvid": 2829,
+      "iid": 13708,
+      "name": "Muck Rats",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Plains": {
+      "csvid": 188,
+      "iid": 4,
+      "name": "Plains",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Robe of Mirrors": {
+      "csvid": 3548,
+      "iid": 14283,
+      "name": "Robe of Mirrors",
+      "handler": "manalinkeh_card_diplomatic_immunity",
+      "kind": "card"
+    },
+    "Safe Passage": {
+      "csvid": 10462,
+      "iid": 8169,
+      "name": "Safe Passage",
+      "handler": "manalinkeh_card_safe_passage",
+      "kind": "card"
+    },
+    "Sol Ring": {
+      "csvid": 230,
+      "iid": 8968,
+      "name": "Sol Ring",
+      "handler": "manalinkeh_card_sol_ring",
+      "kind": "card"
+    },
+    "Terror": {
+      "csvid": 242,
+      "iid": 9822,
+      "name": "Terror",
+      "handler": "manalinkeh_card_terror",
+      "kind": "card"
+    },
+    "Wall of Spears": {
+      "csvid": 545,
+      "iid": 10782,
+      "name": "Wall of Spears",
+      "handler": "card_dummy",
+      "kind": "card"
+    }
+  },
+  "static_only": {
+    "Craw Wurm": "Printed static characteristics and base-engine behavior",
+    "Grizzly Bears": "Printed static characteristics and base-engine behavior",
+    "Muck Rats": "Printed static characteristics and base-engine behavior",
+    "Wall of Spears": "Printed static characteristics and base-engine behavior"
+  }
+}

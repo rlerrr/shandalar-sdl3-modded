@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 13809,
+  "card": "Snake of the Golden Grove",
+  "recipes": [
+    {
+      "family": "entry_trigger_life_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 13809,
+        "printed_cost": "{4}{G}"
+      },
+      "oracle_text": "Tribute 3 (As this creature enters, an opponent of your choice may put three +1/+1 counters on it.)\nWhen this creature enters, if tribute wasn't paid, you gain 4 life.",
+      "variants": [
+        "paid_0",
+        "decline_0",
+        "recast_0",
+        "countered_0",
+        "paid_1",
+        "decline_1",
+        "recast_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

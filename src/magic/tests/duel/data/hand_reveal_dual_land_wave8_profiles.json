@@ -1,0 +1,880 @@
+{
+  "version": 1,
+  "sources": {
+    "Ancient Amphitheater": {
+      "oracle": {
+        "oracle_id": "7211221d-d4d8-4bbe-9d2a-b82e005bfe8a",
+        "name": "Ancient Amphitheater",
+        "oracle_text": "As this land enters, you may reveal a Giant card from your hand. If you don't, this land enters tapped.\n{T}: Add {R} or {W}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cm2/232/ancient-amphitheater?utm_source=api"
+      },
+      "handler": "manalinkeh_card_ancient_amphitheater",
+      "choices": {
+        "positive": [
+          "Hill Giant",
+          "Woodland Changeling",
+          "Crush Underfoot"
+        ],
+        "negative": [
+          "Grizzly Bears",
+          "Wastes"
+        ]
+      }
+    },
+    "Auntie's Hovel": {
+      "oracle": {
+        "oracle_id": "245469ff-72b6-4846-8a82-a1d29f4d09bb",
+        "name": "Auntie's Hovel",
+        "oracle_text": "As this land enters, you may reveal a Goblin card from your hand. If you don't, this land enters tapped.\n{T}: Add {B} or {R}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/267/aunties-hovel?utm_source=api"
+      },
+      "handler": "manalinkeh_card_aunties_hovel",
+      "choices": {
+        "positive": [
+          "Goblin Piker",
+          "Woodland Changeling",
+          "Tarfire"
+        ],
+        "negative": [
+          "Grizzly Bears",
+          "Wastes"
+        ]
+      }
+    },
+    "Wanderwine Hub": {
+      "oracle": {
+        "oracle_id": "c3b46bd6-b3ef-452d-a916-995c44f1da07",
+        "name": "Wanderwine Hub",
+        "oracle_text": "As this land enters, you may reveal a Merfolk card from your hand. If you don't, this land enters tapped.\n{T}: Add {W} or {U}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/280/wanderwine-hub?utm_source=api"
+      },
+      "handler": "manalinkeh_card_wanderwine_hub",
+      "choices": {
+        "positive": [
+          "Coral Merfolk",
+          "Woodland Changeling",
+          "Aquitect's Will"
+        ],
+        "negative": [
+          "Grizzly Bears",
+          "Wastes"
+        ]
+      }
+    },
+    "Foreboding Ruins": {
+      "oracle": {
+        "oracle_id": "5c87e2fa-77f1-4978-b25f-f14d227301d1",
+        "name": "Foreboding Ruins",
+        "oracle_text": "As this land enters, you may reveal a Swamp or Mountain card from your hand. If you don't, this land enters tapped.\n{T}: Add {B} or {R}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/244/foreboding-ruins?utm_source=api"
+      },
+      "handler": "manalinkeh_card_foreboding_ruins",
+      "choices": {
+        "positive": [
+          "Swamp",
+          "Mountain",
+          "Blood Crypt"
+        ],
+        "negative": [
+          "Rakdos Guildgate",
+          "Wastes"
+        ]
+      }
+    },
+    "Fortified Village": {
+      "oracle": {
+        "oracle_id": "56f1a16a-9f41-41fb-b580-c200bca27cd6",
+        "name": "Fortified Village",
+        "oracle_text": "As this land enters, you may reveal a Forest or Plains card from your hand. If you don't, this land enters tapped.\n{T}: Add {G} or {W}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/245/fortified-village?utm_source=api"
+      },
+      "handler": "manalinkeh_card_fortified_village",
+      "choices": {
+        "positive": [
+          "Forest",
+          "Plains",
+          "Temple Garden"
+        ],
+        "negative": [
+          "Selesnya Guildgate",
+          "Wastes"
+        ]
+      }
+    },
+    "Port Town": {
+      "oracle": {
+        "oracle_id": "458d2b12-f578-4392-98d3-c3bc83f316c4",
+        "name": "Port Town",
+        "oracle_text": "As this land enters, you may reveal a Plains or Island card from your hand. If you don't, this land enters tapped.\n{T}: Add {W} or {U}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/256/port-town?utm_source=api"
+      },
+      "handler": "manalinkeh_card_port_town",
+      "choices": {
+        "positive": [
+          "Plains",
+          "Island",
+          "Hallowed Fountain"
+        ],
+        "negative": [
+          "Azorius Guildgate",
+          "Wastes"
+        ]
+      }
+    },
+    "Secluded Glen": {
+      "oracle": {
+        "oracle_id": "09f52275-99e6-45e0-b2db-cafe26d5fb91",
+        "name": "Secluded Glen",
+        "oracle_text": "As this land enters, you may reveal a Faerie card from your hand. If you don't, this land enters tapped.\n{T}: Add {U} or {B}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/271/secluded-glen?utm_source=api"
+      },
+      "handler": "manalinkeh_card_secluded_glen",
+      "choices": {
+        "positive": [
+          "Nightshade Stinger",
+          "Woodland Changeling",
+          "Faerie Trickery"
+        ],
+        "negative": [
+          "Grizzly Bears",
+          "Wastes"
+        ]
+      }
+    },
+    "Game Trail": {
+      "oracle": {
+        "oracle_id": "00de57d2-7cb6-4337-9bc6-f6711e4dfabf",
+        "name": "Game Trail",
+        "oracle_text": "As this land enters, you may reveal a Mountain or Forest card from your hand. If you don't, this land enters tapped.\n{T}: Add {R} or {G}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mkc/264/game-trail?utm_source=api"
+      },
+      "handler": "manalinkeh_card_game_trail",
+      "choices": {
+        "positive": [
+          "Mountain",
+          "Forest",
+          "Stomping Ground"
+        ],
+        "negative": [
+          "Gruul Guildgate",
+          "Wastes"
+        ]
+      }
+    }
+  },
+  "witnesses": {
+    "Aquitect's Will": {
+      "oracle": {
+        "oracle_id": "d02befcb-3e2c-4cfe-a913-9bb648e5bb2c",
+        "name": "Aquitect's Will",
+        "oracle_text": "Put a flood counter on target land. That land is an Island in addition to its other types for as long as it has a flood counter on it. If you control a Merfolk, draw a card.",
+        "mana_cost": "{U}",
+        "type_line": "Kindred Sorcery — Merfolk",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddt/2/aquitects-will?utm_source=api"
+      },
+      "handler": "manalinkeh_card_aquitects_will"
+    },
+    "Azorius Guildgate": {
+      "oracle": {
+        "oracle_id": "ad1712d8-809f-410c-8b91-ffe6fb8a69a1",
+        "name": "Azorius Guildgate",
+        "oracle_text": "This land enters tapped.\n{T}: Add {W} or {U}.",
+        "mana_cost": "",
+        "type_line": "Land — Gate",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/683/azorius-guildgate?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer_tapped"
+    },
+    "Blood Crypt": {
+      "oracle": {
+        "oracle_id": "43985bbc-a0f6-4812-984e-392bc8562633",
+        "name": "Blood Crypt",
+        "oracle_text": "({T}: Add {B} or {R}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+        "mana_cost": "",
+        "type_line": "Land — Swamp Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/278/blood-crypt?utm_source=api"
+      },
+      "handler": "manalinkeh_card_generic_shockland"
+    },
+    "Boomerang": {
+      "oracle": {
+        "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+        "name": "Boomerang",
+        "oracle_text": "Return target permanent to its owner's hand.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+      },
+      "handler": "manalinkeh_card_boomerang"
+    },
+    "Coral Merfolk": {
+      "oracle": {
+        "oracle_id": "4ed27607-21a8-4bc3-997e-6d2242313f6d",
+        "name": "Coral Merfolk",
+        "oracle_text": "",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Merfolk",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/315/coral-merfolk?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Crush Underfoot": {
+      "oracle": {
+        "oracle_id": "81686da0-85fc-4938-962b-24443de3ada1",
+        "name": "Crush Underfoot",
+        "oracle_text": "Choose a Giant creature you control. It deals damage equal to its power to target creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Kindred Instant — Giant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mma/109/crush-underfoot?utm_source=api"
+      },
+      "handler": "manalinkeh_card_crush_underfoot"
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    },
+    "Goblin Piker": {
+      "oracle": {
+        "oracle_id": "50608184-90d3-43d2-a221-deb186c78323",
+        "name": "Goblin Piker",
+        "oracle_text": "",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m12/141/goblin-piker?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Hallowed Fountain": {
+      "oracle": {
+        "oracle_id": "f1750962-a87c-49f6-b731-02ae971ac6ea",
+        "name": "Hallowed Fountain",
+        "oracle_text": "({T}: Add {W} or {U}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+        "mana_cost": "",
+        "type_line": "Land — Plains Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/286/hallowed-fountain?utm_source=api"
+      },
+      "handler": "manalinkeh_card_generic_shockland"
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    },
+    "Jungle Lion": {
+      "oracle": {
+        "oracle_id": "45b42694-9ee8-44f3-9de3-aa2c0f1b6a13",
+        "name": "Jungle Lion",
+        "oracle_text": "This creature can't block.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Cat",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/125/jungle-lion?utm_source=api"
+      },
+      "handler": "manalinkeh_card_jungle_lion"
+    },
+    "Merfolk of the Pearl Trident": {
+      "oracle": {
+        "oracle_id": "218d9277-c179-4de3-9c7f-79b5a6d4fa38",
+        "name": "Merfolk of the Pearl Trident",
+        "oracle_text": "",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Merfolk",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/60/merfolk-of-the-pearl-trident?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    },
+    "Raging Goblin": {
+      "oracle": {
+        "oracle_id": "30997b43-fc13-41d3-8064-1ccc2cb6fd2b",
+        "name": "Raging Goblin",
+        "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin Berserker",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/oana/43/raging-goblin?utm_source=api"
+      },
+      "handler": "manalinkeh_card_ambush_party"
+    },
+    "Rakdos Guildgate": {
+      "oracle": {
+        "oracle_id": "361f534b-39d1-4421-b5a8-d3813c62f86d",
+        "name": "Rakdos Guildgate",
+        "oracle_text": "This land enters tapped.\n{T}: Add {B} or {R}.",
+        "mana_cost": "",
+        "type_line": "Land — Gate",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/693/rakdos-guildgate?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer_tapped"
+    },
+    "Savannah Lions": {
+      "oracle": {
+        "oracle_id": "60ba93eb-39e6-4af2-9c66-cd38f72daff2",
+        "name": "Savannah Lions",
+        "oracle_text": "",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Cat",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/146/savannah-lions?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Selesnya Guildgate": {
+      "oracle": {
+        "oracle_id": "75b235d3-595a-4859-be45-9559d8445db5",
+        "name": "Selesnya Guildgate",
+        "oracle_text": "This land enters tapped.\n{T}: Add {G} or {W}.",
+        "mana_cost": "",
+        "type_line": "Land — Gate",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/694/selesnya-guildgate?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer_tapped"
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    },
+    "Tarfire": {
+      "oracle": {
+        "oracle_id": "f07b821c-bbc1-4def-b009-6c03689478d0",
+        "name": "Tarfire",
+        "oracle_text": "Tarfire deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Kindred Instant — Goblin",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddt/55/tarfire?utm_source=api"
+      },
+      "handler": "manalinkeh_card_shock2"
+    },
+    "Temple Garden": {
+      "oracle": {
+        "oracle_id": "f413a83d-a40d-434c-b20a-4c707c0527fa",
+        "name": "Temple Garden",
+        "oracle_text": "({T}: Add {G} or {W}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+        "mana_cost": "",
+        "type_line": "Land — Forest Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/301/temple-garden?utm_source=api"
+      },
+      "handler": "manalinkeh_card_generic_shockland"
+    },
+    "Typhoid Rats": {
+      "oracle": {
+        "oracle_id": "d6ee6cc1-902d-4f56-afa5-6fa4813bfbbc",
+        "name": "Typhoid Rats",
+        "oracle_text": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Rat",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Deathtouch"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frf/89/typhoid-rats?utm_source=api"
+      },
+      "handler": "manalinkeh_card_deadly_recluse"
+    },
+    "Walking Atlas": {
+      "oracle": {
+        "oracle_id": "855a4837-7fc8-4b97-afbd-daa88e322c89",
+        "name": "Walking Atlas",
+        "oracle_text": "{T}: You may put a land card from your hand onto the battlefield.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/131/walking-atlas?utm_source=api"
+      },
+      "handler": "manalinkeh_card_sakura_tribe_scout"
+    },
+    "Wastes": {
+      "oracle": {
+        "oracle_id": "05d24b0c-904a-46b6-b42a-96a4d91a0dd4",
+        "name": "Wastes",
+        "oracle_text": "{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Basic Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/191/wastes?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    },
+    "Woodland Changeling": {
+      "oracle": {
+        "oracle_id": "338f0ab6-f744-4e5a-a358-05e71b93758d",
+        "name": "Woodland Changeling",
+        "oracle_text": "Changeling (This card is every creature type.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Shapeshifter",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Changeling"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/242/woodland-changeling?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Nightshade Stinger": {
+      "oracle": {
+        "oracle_id": "c57edca9-b71e-4ec1-84d5-4b178969ccb7",
+        "name": "Nightshade Stinger",
+        "oracle_text": "Flying\nThis creature can't block.",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Faerie Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/258/nightshade-stinger?utm_source=api"
+      },
+      "handler": "manalinkeh_card_nightshade_stinger"
+    },
+    "Faerie Trickery": {
+      "oracle": {
+        "oracle_id": "bbe370ba-412b-4052-89d9-2d0ae4928118",
+        "name": "Faerie Trickery",
+        "oracle_text": "Counter target non-Faerie spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Kindred Instant — Faerie",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/62/faerie-trickery?utm_source=api"
+      },
+      "handler": "manalinkeh_card_faerie_trickery"
+    },
+    "Stomping Ground": {
+      "oracle": {
+        "oracle_id": "16052b52-ade1-406f-a06b-ce7ea607fb63",
+        "name": "Stomping Ground",
+        "oracle_text": "({T}: Add {R} or {G}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+        "mana_cost": "",
+        "type_line": "Land — Mountain Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/299/stomping-ground?utm_source=api"
+      },
+      "handler": "manalinkeh_card_generic_shockland"
+    },
+    "Gruul Guildgate": {
+      "oracle": {
+        "oracle_id": "d38476e9-2e47-4c0c-8129-483c0bd09ec0",
+        "name": "Gruul Guildgate",
+        "oracle_text": "This land enters tapped.\n{T}: Add {R} or {G}.",
+        "mana_cost": "",
+        "type_line": "Land — Gate",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/690/gruul-guildgate?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer_tapped"
+    }
+  }
+}

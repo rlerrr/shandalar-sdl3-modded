@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 14161,
+  "card": "Resolute Archangel",
+  "recipes": [
+    {
+      "family": "remaining_entry_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 14161,
+        "printed_cost": "{5}{W}{W}"
+      },
+      "oracle_text": "Flying\nWhen this creature enters, if your life total is less than your starting life total, it becomes equal to your starting life total.",
+      "variants": [
+        "below_0",
+        "above_0",
+        "equal_0",
+        "flying_0",
+        "countered_0",
+        "below_1",
+        "above_1",
+        "equal_1",
+        "flying_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

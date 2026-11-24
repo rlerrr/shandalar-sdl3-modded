@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 2987,
+  "card": "Harvest Wurm",
+  "recipes": [
+    {
+      "family": "entry_trigger_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 2987,
+        "printed_cost": "{1}{G}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, sacrifice it unless you return a basic land card from your graveyard to your hand.",
+      "variants": [
+        "return_basic_0",
+        "no_lands_0",
+        "nonbasic_only_0",
+        "decline_0",
+        "return_basic_1",
+        "no_lands_1",
+        "nonbasic_only_1",
+        "decline_1"
+      ]
+    }
+  ]
+}

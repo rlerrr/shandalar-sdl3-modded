@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "csvid": 14663,
+  "card": "Acid-Spewer Dragon",
+  "recipes": [
+    {
+      "family": "megamorph_dragon_counters",
+      "version": 2,
+      "params": {
+        "effect": "dragon_counters",
+        "keyword": "deathtouch",
+        "cast_mana": [
+          5,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "flip_mana": [
+          5,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 3,
+        "toughness": 3
+      },
+      "oracle_text": "Flying, deathtouch\nMegamorph {5}{B}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\nWhen this creature is turned face up, put a +1/+1 counter on each other Dragon creature you control.",
+      "variants": [
+        "hidden_0",
+        "faceup_0",
+        "hidden_choice_0",
+        "hidden_short_0",
+        "reveal_0",
+        "flip_short_0",
+        "flip_wrong_0",
+        "offturn_0",
+        "no_ally_0",
+        "hidden_dragon_0",
+        "donated_0",
+        "acquired_0",
+        "late_dragon_0",
+        "recast_0",
+        "replay_0",
+        "flying_0",
+        "ground_hidden_0",
+        "deathtouch_0",
+        "deathtouch_hidden_0",
+        "hidden_1",
+        "faceup_1",
+        "hidden_choice_1",
+        "hidden_short_1",
+        "reveal_1",
+        "flip_short_1",
+        "flip_wrong_1",
+        "offturn_1",
+        "no_ally_1",
+        "hidden_dragon_1",
+        "donated_1",
+        "acquired_1",
+        "late_dragon_1",
+        "recast_1",
+        "replay_1",
+        "flying_1",
+        "ground_hidden_1",
+        "deathtouch_1",
+        "deathtouch_hidden_1"
+      ]
+    }
+  ]
+}

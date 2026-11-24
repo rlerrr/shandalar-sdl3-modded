@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 16993,
+  "card": "Plague Belcher",
+  "recipes": [
+    {
+      "family": "remaining_entry_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 16993,
+        "printed_cost": "{2}{B}"
+      },
+      "oracle_text": "Menace\nWhen this creature enters, put two -1/-1 counters on target creature you control.\nWhenever another Zombie you control dies, each opponent loses 1 life.",
+      "variants": [
+        "own_dies_0",
+        "foe_death_0",
+        "other_death_0",
+        "self_death_0",
+        "menace_one_0",
+        "menace_pair_0",
+        "countered_0",
+        "own_dies_1",
+        "foe_death_1",
+        "other_death_1",
+        "self_death_1",
+        "menace_one_1",
+        "menace_pair_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

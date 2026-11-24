@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Probe",
+  "csvid": 5071,
+  "recipes": [
+    {
+      "family": "kicker_card_flow",
+      "version": 2,
+      "oracle_text": "Kicker {1}{B} (You may pay an additional {1}{B} as you cast this spell.)\nDraw three cards, then discard two cards. If this spell was kicked, target player discards two cards.",
+      "params": {
+        "effect": "probe",
+        "base_cost": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "kicker_cost": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "kicker_short_0",
+        "kicker_short_1",
+        "base_short_0",
+        "base_short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "self_target_0",
+        "self_target_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Deputy of Detention",
+  "csvid": 19600,
+  "recipes": [
+    {
+      "family": "entry_follow_on_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 19600,
+        "cost": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "When this creature enters, exile target nonland permanent an opponent controls and all other nonland permanents that player controls with the same name as that permanent until this creature leaves the battlefield.",
+      "variants": [
+        "same_name_0",
+        "same_name_1",
+        "distinct_0",
+        "distinct_1",
+        "empty_opponent_0",
+        "empty_opponent_1"
+      ]
+    }
+  ]
+}

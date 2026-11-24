@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 4123,
+  "card": "False Prophet",
+  "recipes": [
+    {
+      "family": "departure_damage_and_removal",
+      "version": 2,
+      "params": {
+        "csvid": 4123,
+        "printed_cost": "{2}{W}{W}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature dies, exile all creatures.",
+      "variants": [
+        "death_0",
+        "bounce_0",
+        "exile_0",
+        "death_1",
+        "bounce_1",
+        "exile_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Salvage Scuttler",
+  "csvid": 16789,
+  "recipes": [
+    {
+      "family": "attack_trigger_zones_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 16789,
+        "cost": [
+          4,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks, return an artifact you control to its owner's hand.",
+      "variants": [
+        "artifact_0",
+        "artifact_1",
+        "borrowed_0",
+        "borrowed_1",
+        "no_artifact_0",
+        "no_artifact_1"
+      ]
+    }
+  ]
+}

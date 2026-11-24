@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "csvid": 8655,
+  "card": "Savage Thallid",
+  "recipes": [
+    {
+      "family": "spore_upkeep_additional_riders",
+      "version": 2,
+      "params": {
+        "shape": "fungus_regen",
+        "mana": [
+          3,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "keywords": [
+          "Regenerate"
+        ],
+        "power": 5,
+        "toughness": 2
+      },
+      "variants": [
+        "threshold_0",
+        "threshold_1",
+        "bank_0",
+        "bank_1",
+        "proactive_0",
+        "proactive_1",
+        "own_fungus_0",
+        "own_fungus_1",
+        "enemy_fungus_0",
+        "enemy_fungus_1",
+        "nonfungus_0",
+        "nonfungus_1",
+        "replay_0",
+        "replay_1"
+      ],
+      "oracle_text": "At the beginning of your upkeep, put a spore counter on this creature.\nRemove three spore counters from this creature: Create a 1/1 green Saproling creature token.\nSacrifice a Saproling: Regenerate target Fungus."
+    }
+  ]
+}

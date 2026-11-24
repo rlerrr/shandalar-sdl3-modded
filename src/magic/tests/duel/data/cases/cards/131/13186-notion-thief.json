@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Notion Thief",
+  "csvid": 13186,
+  "recipes": [
+    {
+      "family": "flash_remaining_rule_effects",
+      "version": 2,
+      "params": {
+        "csvid": 13186,
+        "printed_mana": [
+          2,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "rules": "Flash\nIf an opponent would draw a card except the first one they draw in each of their draw steps, instead that player skips that draw and you draw a card."
+      },
+      "oracle_text": "Flash\nIf an opponent would draw a card except the first one they draw in each of their draw steps, instead that player skips that draw and you draw a card.",
+      "variants": [
+        "outside_draw_0",
+        "outside_draw_1",
+        "first_draw_0",
+        "first_draw_1"
+      ]
+    }
+  ]
+}

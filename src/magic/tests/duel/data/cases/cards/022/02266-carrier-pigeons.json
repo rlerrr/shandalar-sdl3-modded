@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Carrier Pigeons",
+  "csvid": 2266,
+  "recipes": [
+    {
+      "family": "entry_trigger_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 2266,
+        "printed_mana": "{3}{W}",
+        "rules": "Flying\nWhen this creature enters, draw a card at the beginning of the next turn's upkeep."
+      },
+      "oracle_text": "Flying\nWhen this creature enters, draw a card at the beginning of the next turn's upkeep.",
+      "variants": [
+        "next_upkeep_0",
+        "next_upkeep_1",
+        "removed_before_upkeep_0",
+        "removed_before_upkeep_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

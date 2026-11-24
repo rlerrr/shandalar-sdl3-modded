@@ -1,0 +1,539 @@
+{
+  "version": 1,
+  "sources": {
+    "Blanket of Night": {
+      "oracle": {
+        "oracle_id": "10e95489-a94d-4523-964c-ec9753103a62",
+        "name": "Blanket of Night",
+        "oracle_text": "Each land is a Swamp in addition to its other land types.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vis/52/blanket-of-night?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2673,
+        "iid": 1046,
+        "name": "Blanket of Night",
+        "handler": "manalinkeh_card_blanket_of_night",
+        "kind": "card"
+      }
+    },
+    "Blood Moon": {
+      "oracle": {
+        "oracle_id": "94fac5fe-97d5-4c12-a80c-8efff9d853ae",
+        "name": "Blood Moon",
+        "oracle_text": "Nonbasic lands are Mountains.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/118/blood-moon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 299,
+        "iid": 1114,
+        "name": "Blood Moon",
+        "handler": "manalinkeh_card_blood_moon",
+        "kind": "card"
+      }
+    },
+    "Magus of the Moon": {
+      "oracle": {
+        "oracle_id": "6800d01c-345d-4932-a2a4-8df0fb1902f2",
+        "name": "Magus of the Moon",
+        "oracle_text": "Nonbasic lands are Mountains.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/175/magus-of-the-moon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1261,
+        "iid": 5817,
+        "name": "Magus of the Moon",
+        "handler": "manalinkeh_card_blood_moon",
+        "kind": "card"
+      }
+    },
+    "Nylea's Presence": {
+      "oracle": {
+        "oracle_id": "93fe5eed-520f-467a-8e27-6f40eaa727e8",
+        "name": "Nylea's Presence",
+        "oracle_text": "Enchant land\nWhen this Aura enters, draw a card.\nEnchanted land is every basic land type in addition to its other types.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/169/nyleas-presence?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13500,
+        "iid": 6727,
+        "name": "Nylea's Presence",
+        "handler": "manalinkeh_card_nyleas_presence",
+        "kind": "card"
+      }
+    },
+    "Prismatic Omen": {
+      "oracle": {
+        "oracle_id": "d90882ae-6572-4214-8d9c-0bdfb75f9be2",
+        "name": "Prismatic Omen",
+        "oracle_text": "Lands you control are every basic land type in addition to their other types.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/shm/126/prismatic-omen?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9632,
+        "iid": 7392,
+        "name": "Prismatic Omen",
+        "handler": "manalinkeh_card_prismatic_omen",
+        "kind": "card"
+      }
+    },
+    "Urborg, Tomb of Yawgmoth": {
+      "oracle": {
+        "oracle_id": "db6174d7-211d-4817-b8e4-8384594c83f9",
+        "name": "Urborg, Tomb of Yawgmoth",
+        "oracle_text": "Each land is a Swamp in addition to its other land types.",
+        "mana_cost": "",
+        "type_line": "Legendary Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/287/urborg-tomb-of-yawgmoth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8870,
+        "iid": 10414,
+        "name": "Urborg, Tomb of Yawgmoth",
+        "handler": "manalinkeh_card_urborg_tomb_of_yawgmoth",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Seat of the Synod": {
+      "oracle": {
+        "oracle_id": "39451b4d-cd7a-40da-b457-cb51b609173f",
+        "name": "Seat of the Synod",
+        "oracle_text": "{T}: Add {U}.",
+        "mana_cost": "",
+        "type_line": "Artifact Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/176/seat-of-the-synod?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1216,
+        "iid": 8419,
+        "name": "Seat of the Synod",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Tree of Tales": {
+      "oracle": {
+        "oracle_id": "8b4aa971-b919-4750-8388-33d4f42c9280",
+        "name": "Tree of Tales",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "",
+        "type_line": "Artifact Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/319/tree-of-tales?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1217,
+        "iid": 10182,
+        "name": "Tree of Tales",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Walking Atlas": {
+      "oracle": {
+        "oracle_id": "855a4837-7fc8-4b97-afbd-daa88e322c89",
+        "name": "Walking Atlas",
+        "oracle_text": "{T}: You may put a land card from your hand onto the battlefield.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/131/walking-atlas?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10860,
+        "iid": 10746,
+        "name": "Walking Atlas",
+        "handler": "manalinkeh_card_sakura_tribe_scout",
+        "kind": "card"
+      }
+    },
+    "Matca Rioters": {
+      "oracle": {
+        "oracle_id": "b46294cb-9971-415e-90d1-a02c44cd1391",
+        "name": "Matca Rioters",
+        "oracle_text": "Domain — Matca Rioters's power and toughness are each equal to the number of basic land types among lands you control.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Human Warrior",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [
+          "Domain"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm2/148/matca-rioters?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1619,
+        "iid": 5977,
+        "name": "Matca Rioters",
+        "handler": "manalinkeh_card_matca_rioters",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Elvish Mystic": {
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13284,
+        "iid": 2982,
+        "name": "Elvish Mystic",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Sinkhole": {
+      "oracle": {
+        "oracle_id": "5a46ad2a-35b1-4dd5-b7c3-fec36b7c67ab",
+        "name": "Sinkhole",
+        "oracle_text": "Destroy target land.",
+        "mana_cost": "{B}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/106/sinkhole?utm_source=api"
+      },
+      "registry": {
+        "csvid": 226,
+        "iid": 8784,
+        "name": "Sinkhole",
+        "handler": "manalinkeh_card_ice_storm",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Naturalize": {
+      "oracle": {
+        "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+        "name": "Naturalize",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1096,
+        "iid": 6485,
+        "name": "Naturalize",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Shatter": {
+      "oracle": {
+        "oracle_id": "84d32e68-72b9-432d-a023-7bc6a26b8ad0",
+        "name": "Shatter",
+        "oracle_text": "Destroy target artifact.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rix/114/shatter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 223,
+        "iid": 8597,
+        "name": "Shatter",
+        "handler": "manalinkeh_card_shatter",
+        "kind": "card"
+      }
+    },
+    "Sol Ring": {
+      "oracle": {
+        "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+        "name": "Sol Ring",
+        "oracle_text": "{T}: Add {C}{C}.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+      },
+      "registry": {
+        "csvid": 230,
+        "iid": 8968,
+        "name": "Sol Ring",
+        "handler": "manalinkeh_card_sol_ring",
+        "kind": "card"
+      }
+    }
+  }
+}

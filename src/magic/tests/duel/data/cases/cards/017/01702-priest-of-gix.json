@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Priest of Gix",
+  "csvid": 1702,
+  "recipes": [
+    {
+      "family": "entry_mana_creature",
+      "version": 2,
+      "oracle_text": "When this creature enters, add {B}{B}{B}.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "gate": "entry",
+          "mana": [
+            2,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hybrid": false,
+          "produced": [
+            0,
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "clause": "When this creature enters, add {B}{B}{B}."
+        }
+      },
+      "variants": [
+        "cast_0",
+        "wrong_color_0",
+        "insufficient_0",
+        "countered_0",
+        "spend_0",
+        "carry_pool_0",
+        "reanimate_0",
+        "blink_0",
+        "nonmatching_entry_0",
+        "ready_replay_0",
+        "pending_replay_0",
+        "cast_1",
+        "wrong_color_1",
+        "insufficient_1",
+        "countered_1",
+        "spend_1",
+        "carry_pool_1",
+        "reanimate_1",
+        "blink_1",
+        "nonmatching_entry_1",
+        "ready_replay_1",
+        "pending_replay_1"
+      ]
+    }
+  ]
+}

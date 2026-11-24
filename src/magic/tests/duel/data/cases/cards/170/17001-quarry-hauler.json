@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 17001,
+  "card": "Quarry Hauler",
+  "recipes": [
+    {
+      "family": "entry_interaction_counters",
+      "version": 2,
+      "params": {
+        "csvid": 17001,
+        "printed_cost": "{3}{G}"
+      },
+      "oracle_text": "When this creature enters, for each kind of counter on target permanent, put another counter of that kind on it or remove one from it.",
+      "variants": [
+        "empty_0",
+        "add_charge_0",
+        "remove_charge_0",
+        "countered_0",
+        "empty_1",
+        "add_charge_1",
+        "remove_charge_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

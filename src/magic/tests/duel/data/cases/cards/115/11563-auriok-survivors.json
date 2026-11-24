@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Auriok Survivors",
+  "csvid": 11563,
+  "recipes": [
+    {
+      "family": "entry_rider_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 11563,
+        "cost": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "When this creature enters, you may return target Equipment card from your graveyard to the battlefield. If you do, you may attach it to this creature.",
+      "variants": [
+        "return_attach_0",
+        "return_attach_1",
+        "return_unattached_0",
+        "return_unattached_1",
+        "decline_return_0",
+        "decline_return_1",
+        "enemy_only_0",
+        "enemy_only_1",
+        "shrouded_0",
+        "shrouded_1"
+      ]
+    }
+  ]
+}

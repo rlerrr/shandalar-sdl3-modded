@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Frenzied Fugue",
+  "csvid": 16606,
+  "recipes": [
+    {
+      "family": "entry_rider_control",
+      "version": 2,
+      "params": {
+        "csvid": 16606,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Enchant permanent\nWhen this Aura enters and at the beginning of your upkeep, gain control of enchanted permanent until end of turn. Untap that permanent. It gains haste until end of turn.",
+      "variants": [
+        "entry_0",
+        "entry_1",
+        "upkeep_0",
+        "upkeep_1",
+        "noncreature_0",
+        "noncreature_1"
+      ]
+    }
+  ]
+}

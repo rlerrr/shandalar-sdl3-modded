@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "card": "Adaptive Snapjaw",
+  "csvid": 12875,
+  "recipes": [
+    {
+      "family": "evolve_creature",
+      "version": 2,
+      "params": {
+        "mana": [
+          4,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "power": 6,
+        "toughness": 2,
+        "keyword": null
+      },
+      "oracle_text": "Evolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)",
+      "variants": [
+        "power_only_0",
+        "toughness_only_0",
+        "both_greater_0",
+        "equal_0",
+        "opponent_entry_0",
+        "noncreature_entry_0",
+        "lower_after_growth_0",
+        "sequence_0",
+        "separate_sources_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "piper_entry_0",
+        "response_prevents_0",
+        "countered_entrant_0",
+        "bounce_reset_0",
+        "pending_replay_0",
+        "weaker_0",
+        "power_only_1",
+        "toughness_only_1",
+        "both_greater_1",
+        "equal_1",
+        "opponent_entry_1",
+        "noncreature_entry_1",
+        "lower_after_growth_1",
+        "sequence_1",
+        "separate_sources_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "piper_entry_1",
+        "response_prevents_1",
+        "countered_entrant_1",
+        "bounce_reset_1",
+        "pending_replay_1",
+        "weaker_1"
+      ]
+    }
+  ]
+}

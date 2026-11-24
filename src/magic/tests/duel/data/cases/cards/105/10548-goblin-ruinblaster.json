@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Goblin Ruinblaster",
+  "csvid": 10548,
+  "recipes": [
+    {
+      "family": "kicker_targeted_entry",
+      "version": 2,
+      "params": {
+        "kind": "nonbasic_land",
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "kicker": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nHaste\nWhen this creature enters, if it was kicked, destroy target nonbasic land.",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "base_only_0",
+        "base_only_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "countered_0",
+        "countered_1",
+        "scope_0",
+        "scope_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

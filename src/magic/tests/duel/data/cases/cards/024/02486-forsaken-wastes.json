@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Forsaken Wastes",
+  "csvid": 2486,
+  "recipes": [
+    {
+      "family": "upkeep_damage_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 2486
+      },
+      "oracle_text": "Players can't gain life.\nAt the beginning of each player's upkeep, that player loses 1 life.\nWhenever this enchantment becomes the target of a spell, that spell's controller loses 5 life.",
+      "variants": [
+        "two_upkeeps_0",
+        "two_upkeeps_1",
+        "deny_gain_0",
+        "deny_gain_1",
+        "targeted_0",
+        "targeted_1"
+      ]
+    }
+  ]
+}

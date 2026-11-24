@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "card": "Phantom Beast",
+  "csvid": 11157,
+  "recipes": [
+    {
+      "family": "targeted_self_sacrifice",
+      "version": 2,
+      "params": {
+        "printed_mana": "{3}{U}",
+        "keywords": [],
+        "target_events": [
+          "spell",
+          "ability"
+        ]
+      },
+      "oracle_text": "When this creature becomes the target of a spell or ability, sacrifice it.",
+      "variants": [
+        "cast_payment_0",
+        "cast_unaffordable_0",
+        "cast_wrong_color_0",
+        "cast_countered_0",
+        "fresh_attack_0",
+        "own_bounce_0",
+        "enemy_bounce_0",
+        "own_pump_0",
+        "other_spell_target_0",
+        "countered_targeting_spell_0",
+        "spell_before_announcement_snapshot_0",
+        "spell_after_announcement_snapshot_0",
+        "untargeted_anthem_0",
+        "indestructible_sacrifice_0",
+        "own_ability_0",
+        "enemy_ability_0",
+        "other_ability_target_0",
+        "ability_targets_player_0",
+        "tapping_ability_0",
+        "ability_pending_snapshot_0",
+        "ground_combat_0",
+        "defend_ground_0",
+        "cast_payment_1",
+        "cast_unaffordable_1",
+        "cast_wrong_color_1",
+        "cast_countered_1",
+        "fresh_attack_1",
+        "own_bounce_1",
+        "enemy_bounce_1",
+        "own_pump_1",
+        "other_spell_target_1",
+        "countered_targeting_spell_1",
+        "spell_before_announcement_snapshot_1",
+        "spell_after_announcement_snapshot_1",
+        "untargeted_anthem_1",
+        "indestructible_sacrifice_1",
+        "own_ability_1",
+        "enemy_ability_1",
+        "other_ability_target_1",
+        "ability_targets_player_1",
+        "tapping_ability_1",
+        "ability_pending_snapshot_1",
+        "ground_combat_1",
+        "defend_ground_1",
+        "cancel_target_0"
+      ]
+    }
+  ]
+}

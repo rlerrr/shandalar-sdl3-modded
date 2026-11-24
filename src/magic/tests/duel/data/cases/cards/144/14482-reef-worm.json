@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Reef Worm",
+  "csvid": 14482,
+  "recipes": [
+    {
+      "family": "departure_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 14482,
+        "mana_cost": "{3}{U}"
+      },
+      "oracle_text": "When this creature dies, create a 3/3 blue Fish creature token with \"When this token dies, create a 6/6 blue Whale creature token with 'When this token dies, create a 9/9 blue Kraken creature token.'\"",
+      "variants": [
+        "chain_0",
+        "chain_1",
+        "typed_chain_0",
+        "typed_chain_1",
+        "fish_exile_0",
+        "fish_exile_1",
+        "whale_bounce_0",
+        "whale_bounce_1",
+        "source_bounce_0",
+        "source_bounce_1"
+      ]
+    }
+  ]
+}

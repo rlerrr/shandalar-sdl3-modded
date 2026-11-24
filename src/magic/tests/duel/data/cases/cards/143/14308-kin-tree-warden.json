@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "card": "Kin-Tree Warden",
+  "csvid": 14308,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "morph_faceup_activated",
+      "version": 2,
+      "oracle_text": "{2}: Regenerate this creature.\nMorph {G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+      "params": {
+        "mode": "regen_self",
+        "subtype": null,
+        "bonus": [],
+        "megamorph": false,
+        "mana": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "morph": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "activation": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 1,
+        "toughness": 1,
+        "keywords": [],
+        "color": 8
+      },
+      "variants": [
+        "printed_0",
+        "printed_1",
+        "face_down_choice_0",
+        "face_down_choice_1",
+        "short_cast_0",
+        "short_cast_1",
+        "short_reveal_0",
+        "short_reveal_1",
+        "wrong_reveal_color_0",
+        "wrong_reveal_color_1",
+        "effect_0",
+        "effect_1",
+        "hidden_ability_0",
+        "hidden_ability_1",
+        "replay_0",
+        "replay_1",
+        "opposing_turn_0",
+        "opposing_turn_1",
+        "short_ability_0",
+        "short_ability_1",
+        "countered_0",
+        "countered_1",
+        "regen_lethal_0",
+        "regen_lethal_1",
+        "cannot_regenerate_0",
+        "cannot_regenerate_1",
+        "no_response_0",
+        "no_response_1",
+        "proactive_0",
+        "proactive_1",
+        "regen_combat_0",
+        "regen_combat_1",
+        "spent_reuse_0",
+        "spent_reuse_1"
+      ]
+    }
+  ]
+}

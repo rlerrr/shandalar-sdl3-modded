@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "card": "Utopia Mycon",
+  "csvid": 9045,
+  "recipes": [
+    {
+      "family": "spore_synergy_riders",
+      "version": 2,
+      "params": {
+        "shape": "mana",
+        "mana": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "keywords": [],
+        "power": 0,
+        "toughness": 2
+      },
+      "oracle_text": "At the beginning of your upkeep, put a spore counter on this creature.\nRemove three spore counters from this creature: Create a 1/1 green Saproling creature token.\nSacrifice a Saproling: Add one mana of any color.",
+      "variants": [
+        "threshold_0",
+        "black_0",
+        "blue_0",
+        "green_0",
+        "red_0",
+        "white_0",
+        "mana_replay_0",
+        "threshold_1",
+        "black_1",
+        "blue_1",
+        "green_1",
+        "red_1",
+        "white_1",
+        "mana_replay_1"
+      ]
+    }
+  ]
+}

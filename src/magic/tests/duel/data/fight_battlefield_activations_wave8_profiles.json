@@ -1,0 +1,429 @@
+{
+  "sources": {
+    "Arena": {
+      "oracle": {
+        "oracle_id": "12326d23-1fb5-4084-a23a-d6e2c90ea36c",
+        "name": "Arena",
+        "oracle_text": "{3}, {T}: Tap target creature you control and target creature of an opponent's choice they control. Those creatures fight each other. (Each deals damage equal to its power to the other.)",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [
+          "Fight"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsb/117/arena?utm_source=api"
+      },
+      "registry": {
+        "csvid": 899,
+        "iid": 578,
+        "name": "Arena",
+        "handler": "manalinkeh_card_arena",
+        "kind": "card"
+      }
+    },
+    "Contested Cliffs": {
+      "oracle": {
+        "oracle_id": "b891a683-2ebc-4e9c-b402-5dd9c1b42b69",
+        "name": "Contested Cliffs",
+        "oracle_text": "{T}: Add {C}.\n{R}{G}, {T}: Target Beast creature you control fights target creature an opponent controls. (Each deals damage equal to its power to the other.)",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [
+          "Fight"
+        ],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c13/282/contested-cliffs?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6092,
+        "iid": 1935,
+        "name": "Contested Cliffs",
+        "handler": "manalinkeh_card_contested_cliffs",
+        "kind": "card"
+      }
+    },
+    "Magus of the Arena": {
+      "oracle": {
+        "oracle_id": "44865261-16f8-42d2-a388-a57173142eb0",
+        "name": "Magus of the Arena",
+        "oracle_text": "{3}, {T}: Tap target creature you control and target creature of an opponent's choice they control. Those creatures fight each other. (Each deals damage equal to its power to the other.)",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature — Human Wizard",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Fight"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c13/115/magus-of-the-arena?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1266,
+        "iid": 5807,
+        "name": "Magus of the Arena",
+        "handler": "manalinkeh_card_magus_of_the_arena",
+        "kind": "card"
+      }
+    },
+    "Ulvenwald Tracker": {
+      "oracle": {
+        "oracle_id": "63a37c08-7e38-4fe2-9a71-cc4604c4f831",
+        "name": "Ulvenwald Tracker",
+        "oracle_text": "{1}{G}, {T}: Target creature you control fights another target creature.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Human Shaman",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Fight"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm3/144/ulvenwald-tracker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12496,
+        "iid": 10321,
+        "name": "Ulvenwald Tracker",
+        "handler": "manalinkeh_card_ulvenwald_tracker",
+        "kind": "card"
+      }
+    },
+    "Domri Rade": {
+      "oracle": {
+        "oracle_id": "0c4a2c42-0874-40b4-8d12-47eeadc3e976",
+        "name": "Domri Rade",
+        "oracle_text": "+1: Look at the top card of your library. If it's a creature card, you may reveal it and put it into your hand.\n−2: Target creature you control fights another target creature.\n−7: You get an emblem with \"Creatures you control have double strike, trample, hexproof, and haste.\"",
+        "mana_cost": "{1}{R}{G}",
+        "type_line": "Legendary Planeswalker — Domri",
+        "loyalty": "3",
+        "keywords": [
+          "Fight"
+        ],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/179/domri-rade?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12930,
+        "iid": 2635,
+        "name": "Domri Rade",
+        "handler": "manalinkeh_card_domri_rade",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Craw Wurm": {
+      "oracle": {
+        "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+        "name": "Craw Wurm",
+        "oracle_text": "",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "6",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/173/craw-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 49,
+        "iid": 2032,
+        "name": "Craw Wurm",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Ravenous Baloth": {
+      "oracle": {
+        "oracle_id": "ee771e66-72f8-480f-9920-92c68ab93c3b",
+        "name": "Ravenous Baloth",
+        "oracle_text": "Sacrifice a Beast: You gain 4 life.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/424/ravenous-baloth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1222,
+        "iid": 7692,
+        "name": "Ravenous Baloth",
+        "handler": "manalinkeh_card_ravenous_baloth",
+        "kind": "card"
+      }
+    },
+    "Scaled Wurm": {
+      "oracle": {
+        "oracle_id": "009a8e38-74d0-4b4a-b8ca-62c9f3183531",
+        "name": "Scaled Wurm",
+        "oracle_text": "",
+        "mana_cost": "{7}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "7",
+        "toughness": "6",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/178/scaled-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2085,
+        "iid": 8287,
+        "name": "Scaled Wurm",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Squire": {
+      "oracle": {
+        "oracle_id": "aa6cdcc7-f5ea-47bf-9448-1c63e36b18d1",
+        "name": "Squire",
+        "oracle_text": "",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsb/15/squire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 948,
+        "iid": 9275,
+        "name": "Squire",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Wall of Stone": {
+      "oracle": {
+        "oracle_id": "cd4cadb4-3156-49bd-b36e-12ba5c85938b",
+        "name": "Wall of Stone",
+        "oracle_text": "Defender (This creature can't attack.)",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "8",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/232/wall-of-stone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 272,
+        "iid": 10783,
+        "name": "Wall of Stone",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  },
+  "runtime_emblem": {
+    "csvid": 12931,
+    "iid": 2636,
+    "name": "#12931",
+    "handler": "manalinkeh_card_domri_rades_emblem",
+    "kind": "internal"
+  }
+}

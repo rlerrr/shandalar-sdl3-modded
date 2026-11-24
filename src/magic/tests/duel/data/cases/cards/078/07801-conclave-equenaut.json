@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Conclave Equenaut",
+  "csvid": 7801,
+  "recipes": [
+    {
+      "family": "convoke_fixed_basics",
+      "version": 2,
+      "params": {
+        "csvid": 7801,
+        "cost": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "stats": [
+          3,
+          3
+        ],
+        "flying": true,
+        "clauses": [
+          "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)",
+          "Flying"
+        ],
+        "modes": [
+          "normal",
+          "generic_fresh",
+          "tapped_denied",
+          "opposing_denied",
+          "noncreature_denied",
+          "colored_mixed",
+          "wrong_color",
+          "foreign_owned_mixed"
+        ]
+      },
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nFlying",
+      "variants": [
+        "normal_0",
+        "normal_1",
+        "generic_fresh_0",
+        "generic_fresh_1",
+        "tapped_denied_0",
+        "tapped_denied_1",
+        "opposing_denied_0",
+        "opposing_denied_1",
+        "noncreature_denied_0",
+        "noncreature_denied_1",
+        "colored_mixed_0",
+        "colored_mixed_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "foreign_owned_mixed_0",
+        "foreign_owned_mixed_1"
+      ]
+    }
+  ]
+}

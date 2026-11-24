@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 17860,
+  "card": "Spark Fiend",
+  "recipes": [
+    {
+      "family": "remaining_entry_turn_and_choices",
+      "version": 2,
+      "params": {
+        "csvid": 17860,
+        "printed_cost": "{4}{R}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, roll two six-sided dice. If you rolled 2, 3, or 12, sacrifice this creature. If you rolled 7 or 11, don't roll dice for this creature during any of your following upkeeps. If you rolled any other total, note that total.\nAt the beginning of your upkeep, roll two six-sided dice. If you rolled 7, sacrifice this creature. If you roll the noted total, don't roll dice for this creature during any of your following upkeeps. Otherwise, do nothing.",
+      "variants": [
+        "entry_sacrifice_0",
+        "natural_0",
+        "point_loss_0",
+        "point_match_0",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

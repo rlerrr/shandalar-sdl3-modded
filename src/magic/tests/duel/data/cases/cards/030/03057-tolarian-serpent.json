@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Tolarian Serpent",
+  "csvid": 3057,
+  "recipes": [
+    {
+      "family": "mill_upkeep_and_untap",
+      "version": 2,
+      "params": {
+        "csvid": 3057,
+        "printed_mana": [
+          5,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "rules": "At the beginning of your upkeep, mill seven cards."
+      },
+      "oracle_text": "At the beginning of your upkeep, mill seven cards.",
+      "variants": [
+        "seven_and_draw_0",
+        "seven_and_draw_1",
+        "short_library_0",
+        "short_library_1"
+      ]
+    }
+  ]
+}

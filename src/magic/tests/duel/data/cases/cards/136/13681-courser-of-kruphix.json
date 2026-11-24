@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Courser of Kruphix",
+  "csvid": 13681,
+  "recipes": [
+    {
+      "family": "landfall_control_and_recovery",
+      "version": 2,
+      "oracle_text": "Play with the top card of your library revealed.\nYou may play lands from the top of your library.\nLandfall — Whenever a land you control enters, you gain 1 life.",
+      "params": {
+        "source": "Courser of Kruphix"
+      },
+      "variants": [
+        "own_land_0",
+        "own_land_1",
+        "opposing_land_0",
+        "opposing_land_1",
+        "repeat_0",
+        "repeat_1",
+        "replay_0",
+        "replay_1",
+        "top_land_0",
+        "top_land_1",
+        "top_nonland_0",
+        "top_nonland_1",
+        "empty_top_0",
+        "empty_top_1",
+        "land_used_0",
+        "land_used_1",
+        "offturn_top_0",
+        "offturn_top_1"
+      ]
+    }
+  ]
+}

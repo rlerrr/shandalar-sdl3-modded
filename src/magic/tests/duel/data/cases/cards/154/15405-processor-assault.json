@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Processor Assault",
+  "csvid": 15405,
+  "recipes": [
+    {
+      "family": "devoid_opponent_exile_costs",
+      "version": 2,
+      "params": {
+        "model": "assault",
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "fee": null,
+        "exile_cost": 1
+      },
+      "oracle_text": "Devoid (This card has no color.)\nAs an additional cost to cast this spell, put a card an opponent owns from exile into that player's graveyard.\nProcessor Assault deals 5 damage to target creature.",
+      "variants": [
+        "paid_0",
+        "own_exile_0",
+        "empty_0",
+        "mixed_0",
+        "replay_0",
+        "short_0",
+        "lethal_0",
+        "red_protection_0",
+        "countered_0",
+        "paid_1",
+        "own_exile_1",
+        "empty_1",
+        "mixed_1",
+        "replay_1",
+        "short_1",
+        "lethal_1",
+        "red_protection_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

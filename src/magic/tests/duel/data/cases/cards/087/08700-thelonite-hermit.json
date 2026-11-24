@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "csvid": 8700,
+  "card": "Thelonite Hermit",
+  "recipes": [
+    {
+      "family": "morph_turn_up_tokens",
+      "version": 2,
+      "oracle_text": "All Saprolings get +1/+1.\nMorph {3}{G}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, create four 1/1 green Saproling creature tokens.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "kind": "fixed",
+          "printed": [
+            3,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "morph": [
+            3,
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "token": "Saproling",
+          "token_color": 8,
+          "quantity": 4,
+          "entry": false,
+          "anthem": true,
+          "clauses": [
+            "All Saprolings get +1/+1.",
+            "Morph {3}{G}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+            "When this creature is turned face up, create four 1/1 green Saproling creature tokens."
+          ],
+          "power": 1,
+          "toughness": 1,
+          "color": 8,
+          "subtypes": [
+            "Elf",
+            "Shaman"
+          ]
+        }
+      },
+      "variants": [
+        "hidden_0",
+        "hidden_1",
+        "faceup_0",
+        "faceup_1",
+        "cast_short_0",
+        "cast_short_1",
+        "countered_0",
+        "countered_1",
+        "flip_0",
+        "flip_1",
+        "offturn_0",
+        "offturn_1",
+        "flip_wrong_color_0",
+        "flip_wrong_color_1",
+        "repeat_0",
+        "repeat_1",
+        "replay_0",
+        "replay_1",
+        "flip_short_0",
+        "flip_short_1",
+        "anthem_leaves_0",
+        "anthem_leaves_1"
+      ]
+    }
+  ]
+}

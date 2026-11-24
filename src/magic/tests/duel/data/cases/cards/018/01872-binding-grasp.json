@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 1872,
+  "card": "Binding Grasp",
+  "recipes": [
+    {
+      "family": "upkeep_payment_and_sacrifice",
+      "version": 2,
+      "params": {
+        "csvid": 1872,
+        "printed_cost": "{3}{U}",
+        "keywords": [
+          "Enchant"
+        ]
+      },
+      "oracle_text": "Enchant creature\nAt the beginning of your upkeep, sacrifice this Aura unless you pay {1}{U}.\nYou control enchanted creature.\nEnchanted creature gets +0/+1.",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "short_0",
+        "short_1",
+        "decline_0",
+        "decline_1"
+      ]
+    }
+  ]
+}

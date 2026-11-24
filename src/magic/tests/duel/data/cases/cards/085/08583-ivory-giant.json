@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Ivory Giant",
+  "csvid": 8583,
+  "recipes": [
+    {
+      "family": "suspend_entry_and_sacrifice",
+      "version": 2,
+      "params": {
+        "csvid": 8583,
+        "duration": 5,
+        "mana": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "suspend_fee": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "When this creature enters, tap all nonwhite creatures.\nSuspend 5—{W} (Rather than cast this card from your hand, you may pay {W} and exile it with five time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost. It has haste.)",
+      "variants": [
+        "parked_0",
+        "parked_1",
+        "unfunded_0",
+        "unfunded_1",
+        "countdown_0",
+        "countdown_1",
+        "normal_0",
+        "normal_1",
+        "wrong_suspend_color_0",
+        "wrong_suspend_color_1",
+        "countered_normal_0",
+        "countered_normal_1",
+        "replay_release_0",
+        "replay_release_1",
+        "next_untap_0",
+        "next_untap_1"
+      ]
+    }
+  ]
+}

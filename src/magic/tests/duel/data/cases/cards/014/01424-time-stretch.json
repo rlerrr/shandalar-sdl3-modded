@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "csvid": 1424,
+  "card": "Time Stretch",
+  "recipes": [
+    {
+      "family": "extra_turn_spell",
+      "version": 2,
+      "oracle_text": "Target player takes two extra turns after this one.",
+      "params": {
+        "cast_cost": [
+          8,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "instant": false,
+        "lose_at_linked_end": false,
+        "target_turns": 2,
+        "shuffle_to_owner": false
+      },
+      "variants": [
+        "target_self_0",
+        "target_other_0",
+        "target_countered_0",
+        "target_invalidated_0",
+        "target_stacked_0",
+        "target_replay_0",
+        "target_suppressed_0",
+        "target_untap_0",
+        "unfunded_0",
+        "wrong_color_0",
+        "target_self_1",
+        "target_other_1",
+        "target_countered_1",
+        "target_invalidated_1",
+        "target_stacked_1",
+        "target_replay_1",
+        "target_suppressed_1",
+        "target_untap_1",
+        "unfunded_1",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

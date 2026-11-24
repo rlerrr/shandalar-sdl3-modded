@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Mtenda Lion",
+  "csvid": 2551,
+  "recipes": [
+    {
+      "family": "attack_trigger_costs_and_damage",
+      "version": 2,
+      "params": {
+        "csvid": 2551,
+        "printed_mana": "{G}",
+        "rules": "Whenever this creature attacks, defending player may pay {U}. If that player does, prevent all combat damage that would be dealt by this creature this turn."
+      },
+      "oracle_text": "Whenever this creature attacks, defending player may pay {U}. If that player does, prevent all combat damage that would be dealt by this creature this turn.",
+      "variants": [
+        "blue_payment_0",
+        "blue_payment_1",
+        "decline_blue_0",
+        "decline_blue_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "blocked_payment_0",
+        "blocked_payment_1"
+      ]
+    }
+  ]
+}

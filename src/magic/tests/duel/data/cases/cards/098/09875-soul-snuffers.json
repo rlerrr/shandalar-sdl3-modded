@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 9875,
+  "card": "Soul Snuffers",
+  "recipes": [
+    {
+      "family": "entry_trigger_life_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 9875,
+        "printed_cost": "{2}{B}{B}"
+      },
+      "oracle_text": "When this creature enters, put a -1/-1 counter on each creature.",
+      "variants": [
+        "short_0",
+        "countered_0",
+        "each_0",
+        "lethal_0",
+        "protected_0",
+        "recast_0",
+        "short_1",
+        "countered_1",
+        "each_1",
+        "lethal_1",
+        "protected_1",
+        "recast_1"
+      ]
+    }
+  ]
+}

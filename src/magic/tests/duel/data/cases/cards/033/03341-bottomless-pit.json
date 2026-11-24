@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Bottomless Pit",
+  "csvid": 3341,
+  "recipes": [
+    {
+      "family": "upkeep_draw_and_discard",
+      "version": 2,
+      "params": {
+        "csvid": 3341,
+        "printed_mana": "{1}{B}{B}",
+        "rules": "At the beginning of each player's upkeep, that player discards a card at random."
+      },
+      "oracle_text": "At the beginning of each player's upkeep, that player discards a card at random.",
+      "variants": [
+        "both_upkeeps_0",
+        "both_upkeeps_1",
+        "empty_rival_0",
+        "empty_rival_1",
+        "mixed_random_0",
+        "mixed_random_1"
+      ]
+    }
+  ]
+}

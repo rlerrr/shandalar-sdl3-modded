@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "csvid": 15956,
+  "card": "Skeleton Key",
+  "recipes": [
+    {
+      "family": "equipment_combat_damage_hand_and_cast",
+      "version": 2,
+      "params": {
+        "csvid": 15956,
+        "equip_generic": 2,
+        "printed_cost": "{1}"
+      },
+      "oracle_text": "Equipped creature has skulk. (It can't be blocked by creatures with greater power.)\nWhenever equipped creature deals combat damage to a player, you may draw a card. If you do, discard a card.\nEquip {2}",
+      "variants": [
+        "hit_0",
+        "noncombat_0",
+        "blocked_0",
+        "bare_0",
+        "short_equip_0",
+        "skulk_0",
+        "selected_discard_0",
+        "decline_0",
+        "hit_1",
+        "noncombat_1",
+        "blocked_1",
+        "bare_1",
+        "short_equip_1",
+        "skulk_1"
+      ]
+    }
+  ]
+}

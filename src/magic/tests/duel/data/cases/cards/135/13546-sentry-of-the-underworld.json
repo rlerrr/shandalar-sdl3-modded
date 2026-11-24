@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Sentry of the Underworld",
+  "csvid": 13546,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_conditional_costs",
+      "version": 2,
+      "params": {
+        "csvid": 13546,
+        "printed_mana": "{3}{W}{B}",
+        "rules": "Flying, vigilance\n{W}{B}, Pay 3 life: Regenerate this creature."
+      },
+      "oracle_text": "Flying, vigilance\n{W}{B}, Pay 3 life: Regenerate this creature.",
+      "variants": [
+        "pay_both_0",
+        "pay_both_1",
+        "wrong_mana_0",
+        "wrong_mana_1",
+        "short_life_0",
+        "short_life_1",
+        "flying_vigilance_0",
+        "flying_vigilance_1"
+      ]
+    }
+  ]
+}

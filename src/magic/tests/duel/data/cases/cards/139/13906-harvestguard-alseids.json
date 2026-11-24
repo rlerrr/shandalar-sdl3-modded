@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "card": "Harvestguard Alseids",
+  "csvid": 13906,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "constellation_entry_spell",
+      "version": 2,
+      "oracle_text": "Constellation — Whenever this creature or another enchantment you control enters, prevent all damage that would be dealt to target creature this turn.",
+      "params": {
+        "mode": "target_prevents",
+        "power": 2,
+        "toughness": 3,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "keywords": [
+          "Constellation"
+        ]
+      },
+      "variants": [
+        "self_entry_0",
+        "self_entry_1",
+        "own_enchantment_0",
+        "own_enchantment_1",
+        "own_enchantment_creature_0",
+        "own_enchantment_creature_1",
+        "opponent_enchantment_0",
+        "opponent_enchantment_1",
+        "opponent_enchantment_creature_0",
+        "opponent_enchantment_creature_1",
+        "own_noncreature_0",
+        "own_noncreature_1",
+        "own_creature_0",
+        "own_creature_1",
+        "double_watchers_0",
+        "double_watchers_1",
+        "alternating_turns_0",
+        "alternating_turns_1",
+        "piper_entry_0",
+        "piper_entry_1",
+        "countered_0",
+        "countered_1",
+        "source_removed_0",
+        "source_removed_1",
+        "bounce_recast_0",
+        "bounce_recast_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "unfunded_0",
+        "unfunded_1",
+        "pending_replay_0",
+        "pending_replay_1",
+        "protect_damage_0",
+        "protect_damage_1",
+        "protect_other_0",
+        "protect_other_1",
+        "protect_enemy_0",
+        "protect_enemy_1",
+        "protect_expires_0",
+        "protect_expires_1",
+        "protect_combat_0",
+        "protect_combat_1"
+      ]
+    }
+  ]
+}

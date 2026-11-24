@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "card": "Temporal Isolation",
+  "csvid": 8696,
+  "recipes": [
+    {
+      "family": "flash_remaining_auras_and_enchantments",
+      "version": 2,
+      "params": {
+        "csvid": 8696,
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "clauses": [
+          "Flash",
+          "Enchant creature",
+          "Enchanted creature has shadow. (It can block or be blocked by only creatures with shadow.)",
+          "Prevent all damage that would be dealt by enchanted creature."
+        ],
+        "modes": [
+          "shadow_and_prevent",
+          "shadow_blocks",
+          "noncombat_prevent",
+          "removed_in_combat",
+          "lost_target"
+        ]
+      },
+      "oracle_text": "Flash\nEnchant creature\nEnchanted creature has shadow. (It can block or be blocked by only creatures with shadow.)\nPrevent all damage that would be dealt by enchanted creature.",
+      "variants": [
+        "shadow_and_prevent_0",
+        "shadow_and_prevent_1",
+        "shadow_blocks_0",
+        "shadow_blocks_1",
+        "noncombat_prevent_0",
+        "noncombat_prevent_1",
+        "removed_in_combat_0",
+        "removed_in_combat_1",
+        "lost_target_0",
+        "lost_target_1"
+      ]
+    }
+  ]
+}

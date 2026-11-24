@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "csvid": 6460,
+  "card": "Warbreak Trumpeter",
+  "recipes": [
+    {
+      "family": "morph_turn_up_tokens",
+      "version": 2,
+      "oracle_text": "Morph {X}{X}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, create X 1/1 red Goblin creature tokens.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "kind": "double_x",
+          "printed": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "morph": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "token": "Goblin",
+          "token_color": 16,
+          "quantity": 0,
+          "entry": false,
+          "anthem": false,
+          "clauses": [
+            "Morph {X}{X}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+            "When this creature is turned face up, create X 1/1 red Goblin creature tokens."
+          ],
+          "power": 1,
+          "toughness": 1,
+          "color": 16,
+          "subtypes": [
+            "Goblin"
+          ]
+        }
+      },
+      "variants": [
+        "hidden_0",
+        "hidden_1",
+        "faceup_0",
+        "faceup_1",
+        "cast_short_0",
+        "cast_short_1",
+        "countered_0",
+        "countered_1",
+        "flip_0",
+        "flip_1",
+        "offturn_0",
+        "offturn_1",
+        "flip_wrong_color_0",
+        "flip_wrong_color_1",
+        "repeat_0",
+        "repeat_1",
+        "replay_0",
+        "replay_1",
+        "x_zero_0",
+        "x_zero_1",
+        "x_one_0",
+        "x_one_1",
+        "x_surplus_0",
+        "x_surplus_1"
+      ]
+    }
+  ]
+}

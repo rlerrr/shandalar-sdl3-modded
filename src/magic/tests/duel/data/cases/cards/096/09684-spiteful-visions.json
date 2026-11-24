@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Spiteful Visions",
+  "csvid": 9684,
+  "recipes": [
+    {
+      "family": "draw_step_damage_and_upkeep",
+      "version": 2,
+      "params": {
+        "csvid": 9684,
+        "printed_cost": "{2}{B/R}{B/R}"
+      },
+      "oracle_text": "At the beginning of each player's draw step, that player draws an additional card.\nWhenever a player draws a card, this enchantment deals 1 damage to that player.",
+      "variants": [
+        "both_steps_0",
+        "spell_draw_0",
+        "removed_0",
+        "replay_0",
+        "prevention_0",
+        "both_steps_1",
+        "spell_draw_1",
+        "removed_1",
+        "replay_1",
+        "prevention_1"
+      ]
+    }
+  ]
+}

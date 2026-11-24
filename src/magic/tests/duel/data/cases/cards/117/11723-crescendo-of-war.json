@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "csvid": 11723,
+  "card": "Crescendo of War",
+  "recipes": [
+    {
+      "family": "upkeep_counters",
+      "version": 2,
+      "params": {
+        "csvid": 11723,
+        "printed_cost": "{3}{W}"
+      },
+      "oracle_text": "At the beginning of each upkeep, put a strife counter on this enchantment.\nAttacking creatures get +1/+0 for each strife counter on this enchantment.\nBlocking creatures you control get +1/+0 for each strife counter on this enchantment.",
+      "variants": [
+        "own_attack_0",
+        "opposing_attack_0",
+        "own_attack_1",
+        "opposing_attack_1"
+      ]
+    }
+  ]
+}

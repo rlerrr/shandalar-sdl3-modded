@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Strands of Undeath",
+  "csvid": 7970,
+  "recipes": [
+    {
+      "family": "regeneration_spells_and_auras",
+      "version": 2,
+      "params": {
+        "csvid": 7970,
+        "printed_cost": "{3}{B}",
+        "choices": [
+          "opponent_discards_0",
+          "opponent_discards_1",
+          "self_discards_0",
+          "self_discards_1",
+          "one_card_0",
+          "one_card_1",
+          "foreign_0",
+          "foreign_1",
+          "proactive_0",
+          "proactive_1"
+        ]
+      },
+      "oracle_text": "Enchant creature\nWhen this Aura enters, target player discards two cards.\n{B}: Regenerate enchanted creature.",
+      "variants": [
+        "opponent_discards_0",
+        "opponent_discards_1",
+        "self_discards_0",
+        "self_discards_1",
+        "one_card_0",
+        "one_card_1",
+        "foreign_0",
+        "foreign_1",
+        "proactive_0",
+        "proactive_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "card": "Reality Strobe",
+  "csvid": 9000,
+  "recipes": [
+    {
+      "family": "suspend_time_and_recurring_exile",
+      "version": 2,
+      "oracle_text": "Return target permanent to its owner's hand. Exile Reality Strobe with three time counters on it.\nSuspend 3—{2}{U} (Rather than cast this card from your hand, you may pay {2}{U} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost.)",
+      "params": {
+        "source": 9000,
+        "duration": 3,
+        "suspend_fee": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "recurring_0",
+        "recurring_1",
+        "normal_recur_0",
+        "normal_recur_1",
+        "unfunded_0",
+        "unfunded_1",
+        "replay_0",
+        "replay_1",
+        "countered_0",
+        "countered_1",
+        "exile_loss_0",
+        "exile_loss_1"
+      ]
+    }
+  ]
+}

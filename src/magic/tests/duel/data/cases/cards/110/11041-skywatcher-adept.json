@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "csvid": 11041,
+  "card": "Skywatcher Adept",
+  "recipes": [
+    {
+      "family": "level_keyword_combat",
+      "version": 2,
+      "oracle_text": "Level up {3} ({3}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 1-2\n2/2\nFlying\nLEVEL 3+\n4/2\nFlying",
+      "params": {
+        "price": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "activation": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          1,
+          1
+        ],
+        "first": [
+          1,
+          2,
+          2
+        ],
+        "second": [
+          3,
+          4,
+          2
+        ],
+        "first_riders": [
+          "Flying"
+        ],
+        "second_riders": [
+          "Flying"
+        ],
+        "rider": "flight"
+      },
+      "variants": [
+        "thresholds_0",
+        "thresholds_1",
+        "short_payment_0",
+        "short_payment_1",
+        "offturn_0",
+        "offturn_1",
+        "pending_spell_0",
+        "pending_spell_1",
+        "base_block_0",
+        "base_block_1",
+        "first_ground_0",
+        "first_ground_1",
+        "second_ground_0",
+        "second_ground_1",
+        "second_reach_0",
+        "second_reach_1"
+      ]
+    }
+  ]
+}

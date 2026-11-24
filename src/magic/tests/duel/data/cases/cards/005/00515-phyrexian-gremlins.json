@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "card": "Phyrexian Gremlins",
+  "csvid": 515,
+  "recipes": [
+    {
+      "family": "tapped_source_untap_lock",
+      "version": 2,
+      "oracle_text": "You may choose not to untap this creature during your untap step.\n{T}: Tap target artifact. It doesn't untap during its controller's untap step for as long as this creature remains tapped.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "scope": "artifact",
+          "activation_mana": 0,
+          "creature": true,
+          "artifact": false,
+          "clauses": [
+            "You may choose not to untap this creature during your untap step.",
+            "{T}: Tap target artifact. It doesn't untap during its controller's untap step for as long as this creature remains tapped."
+          ]
+        }
+      },
+      "variants": [
+        "lifecycle_0",
+        "same_controller_0",
+        "already_tapped_0",
+        "fresh_0",
+        "repeat_denied_0",
+        "manual_target_0",
+        "manual_source_0",
+        "source_bounce_0",
+        "target_bounce_0",
+        "cast_countered_0",
+        "ready_replay_0",
+        "pending_replay_0",
+        "locked_replay_0",
+        "target_1_0",
+        "no_legal_target_0",
+        "lifecycle_1",
+        "same_controller_1",
+        "already_tapped_1",
+        "fresh_1",
+        "repeat_denied_1",
+        "manual_target_1",
+        "manual_source_1",
+        "source_bounce_1",
+        "target_bounce_1",
+        "cast_countered_1",
+        "ready_replay_1",
+        "pending_replay_1",
+        "locked_replay_1",
+        "target_1_1",
+        "no_legal_target_1",
+        "choose_to_untap_0"
+      ]
+    }
+  ]
+}

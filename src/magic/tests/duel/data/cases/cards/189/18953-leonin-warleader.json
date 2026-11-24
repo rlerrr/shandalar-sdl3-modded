@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 18953,
+  "card": "Leonin Warleader",
+  "recipes": [
+    {
+      "family": "attack_trigger_tokens_and_combat",
+      "version": 2,
+      "params": {
+        "csvid": 18953,
+        "printed_cost": "{2}{W}{W}",
+        "keywords": []
+      },
+      "oracle_text": "Whenever this creature attacks, create two 1/1 white Cat creature tokens with lifelink that are tapped and attacking.",
+      "variants": [
+        "ordinary_0",
+        "blocked_source_0",
+        "blocked_cat_0",
+        "cat_dies_0",
+        "other_only_0",
+        "ordinary_1",
+        "blocked_source_1",
+        "blocked_cat_1",
+        "cat_dies_1",
+        "other_only_1"
+      ]
+    }
+  ]
+}

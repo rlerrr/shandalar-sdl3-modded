@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Vodalian Illusionist",
+  "csvid": 3065,
+  "recipes": [
+    {
+      "family": "phase_untap_creature",
+      "version": 2,
+      "params": {
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "mechanism": "illusionist"
+      },
+      "oracle_text": "{U}{U}, {T}: Target creature phases out. (While it's phased out, it's treated as though it doesn't exist. It phases in before its controller untaps during their next untap step.)",
+      "variants": [
+        "opponent_creature_0",
+        "own_creature_0",
+        "self_target_0",
+        "offturn_0",
+        "fresh_0",
+        "short_activation_0",
+        "wrong_activation_color_0",
+        "noncreature_filter_0",
+        "pending_replay_0",
+        "opponent_creature_1",
+        "own_creature_1",
+        "self_target_1",
+        "offturn_1",
+        "fresh_1",
+        "short_activation_1",
+        "wrong_activation_color_1",
+        "noncreature_filter_1",
+        "pending_replay_1"
+      ]
+    }
+  ]
+}

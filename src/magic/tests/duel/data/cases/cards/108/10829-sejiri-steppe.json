@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Sejiri Steppe",
+  "csvid": 10829,
+  "recipes": [
+    {
+      "family": "entry_interaction_combat",
+      "version": 2,
+      "params": {
+        "csvid": 10829,
+        "cost": "",
+        "choices": [
+          "red_block_0",
+          "red_block_1",
+          "blue_contrast_0",
+          "blue_contrast_1",
+          "expire_0",
+          "expire_1",
+          "foreign_only_0",
+          "foreign_only_1",
+          "mana_0",
+          "mana_1",
+          "damage_0",
+          "damage_1"
+        ]
+      },
+      "oracle_text": "This land enters tapped.\nWhen this land enters, target creature you control gains protection from the color of your choice until end of turn.\n{T}: Add {W}.",
+      "variants": [
+        "red_block_0",
+        "red_block_1",
+        "blue_contrast_0",
+        "blue_contrast_1",
+        "expire_0",
+        "expire_1",
+        "foreign_only_0",
+        "foreign_only_1",
+        "mana_0",
+        "mana_1",
+        "damage_0",
+        "damage_1"
+      ]
+    }
+  ]
+}

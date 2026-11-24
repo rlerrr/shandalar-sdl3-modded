@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Engineered Plague",
+  "csvid": 3987,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "chosen_type_effects",
+      "version": 2,
+      "oracle_text": "As this enchantment enters, choose a creature type.\nAll creatures of the chosen type get -1/-1.",
+      "params": {
+        "mode": "plague",
+        "mana": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "goblins_0",
+        "goblins_1",
+        "angels_0",
+        "angels_1",
+        "short_0",
+        "short_1",
+        "source_removed_0",
+        "source_removed_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "late_match_0",
+        "late_match_1",
+        "lethal_0",
+        "lethal_1",
+        "late_lethal_0",
+        "late_lethal_1"
+      ]
+    }
+  ]
+}

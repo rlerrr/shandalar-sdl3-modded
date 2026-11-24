@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "csvid": 5782,
+  "card": "Centaur Chieftain",
+  "recipes": [
+    {
+      "family": "threshold_conditional_entry",
+      "version": 2,
+      "oracle_text": "Haste\nThreshold — As long as there are seven or more cards in your graveyard, this creature has \"When this creature enters, creatures you control get +1/+1 and gain trample until end of turn.\"",
+      "params": {
+        "csvid": 5782,
+        "effect": "team",
+        "printed": [
+          3,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "six_0",
+        "seven_0",
+        "opponent_only_0",
+        "wrong_color_0",
+        "crossing_0",
+        "replay_0",
+        "six_1",
+        "seven_1",
+        "opponent_only_1",
+        "wrong_color_1",
+        "crossing_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

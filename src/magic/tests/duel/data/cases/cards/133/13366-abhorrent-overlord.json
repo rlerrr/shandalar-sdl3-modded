@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Abhorrent Overlord",
+  "csvid": 13366,
+  "recipes": [
+    {
+      "family": "entry_follow_on_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 13366,
+        "mana_cost": "{5}{B}{B}"
+      },
+      "oracle_text": "Flying\nWhen this creature enters, create a number of 1/1 black Harpy creature tokens with flying equal to your devotion to black. (Each {B} in the mana costs of permanents you control counts toward your devotion to black.)\nAt the beginning of your upkeep, sacrifice a creature.",
+      "variants": [
+        "devotion_0",
+        "devotion_1",
+        "flying_0",
+        "flying_1",
+        "sacrifice_0",
+        "sacrifice_1"
+      ]
+    }
+  ]
+}

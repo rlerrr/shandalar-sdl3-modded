@@ -1,0 +1,376 @@
+{
+  "sources": {
+    "Avacyn's Judgment": {
+      "oracle": {
+        "oracle_id": "f3ae58ed-8ef7-4e0a-945f-1f622157236b",
+        "name": "Avacyn's Judgment",
+        "oracle_text": "Madness {X}{R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)\nAvacyn's Judgment deals 2 damage divided as you choose among any number of targets. If this spell's madness cost was paid, it deals X damage divided as you choose among those permanents and/or players instead.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Madness"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/voc/142/avacyns-judgment?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15746,
+        "iid": 15819,
+        "name": "Avacyn's Judgment",
+        "handler": "manalinkeh_card_avacyns_judgment",
+        "kind": "card"
+      }
+    },
+    "From Under the Floorboards": {
+      "oracle": {
+        "oracle_id": "a1fc4269-f3e4-4a59-849d-aa1727eef23a",
+        "name": "From Under the Floorboards",
+        "oracle_text": "Madness {X}{B}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)\nCreate three tapped 2/2 black Zombie creature tokens and you gain 3 life. If this spell's madness cost was paid, instead create X of those tokens and you gain X life.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Madness"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c19/113/from-under-the-floorboards?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15823,
+        "iid": 15896,
+        "name": "From Under the Floorboards",
+        "handler": "manalinkeh_card_from_under_the_floorboards",
+        "kind": "card"
+      }
+    },
+    "Welcome to the Fold": {
+      "oracle": {
+        "oracle_id": "b8647f54-f50b-4bc6-bd44-fda25ef189fa",
+        "name": "Welcome to the Fold",
+        "oracle_text": "Madness {X}{U}{U} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)\nGain control of target creature if its toughness is 2 or less. If this spell's madness cost was paid, instead gain control of that creature if its toughness is X or less.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Madness"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/96/welcome-to-the-fold?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16021,
+        "iid": 16095,
+        "name": "Welcome to the Fold",
+        "handler": "manalinkeh_card_welcome_to_the_fold",
+        "kind": "card"
+      }
+    },
+    "Psychotic Episode": {
+      "oracle": {
+        "oracle_id": "0ac7bacd-944d-44f4-927b-28e8c0a4371d",
+        "name": "Psychotic Episode",
+        "oracle_text": "Target player reveals their hand and the top card of their library. You choose a card revealed this way. That player puts the chosen card on the bottom of their library.\nMadness {1}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Madness"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/132/psychotic-episode?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8642,
+        "iid": 7453,
+        "name": "Psychotic Episode",
+        "handler": "manalinkeh_card_psychotic_episode",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Rummaging Goblin": {
+      "oracle": {
+        "oracle_id": "2055eb91-ee36-4752-a6dc-581eaef335c8",
+        "name": "Rummaging Goblin",
+        "oracle_text": "{T}, Discard a card: Draw a card.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Goblin Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/198/rummaging-goblin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12612,
+        "iid": 8111,
+        "name": "Rummaging Goblin",
+        "handler": "manalinkeh_card_rummaging_goblin",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Zombie": {
+      "oracle": {
+        "oracle_id": "ec6e76e8-e80e-4534-990a-03c3bbeda53a",
+        "name": "Zombie",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Zombie",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tinr/12/zombie?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18860,
+        "iid": 11220,
+        "name": "Zombie",
+        "handler": "manalinkeh_card_zombie",
+        "kind": "card"
+      }
+    }
+  }
+}

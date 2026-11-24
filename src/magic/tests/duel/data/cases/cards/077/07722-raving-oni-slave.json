@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 7722,
+  "card": "Raving Oni-Slave",
+  "recipes": [
+    {
+      "family": "entry_follow_on_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 7722,
+        "printed_cost": "{1}{B}"
+      },
+      "oracle_text": "When this creature enters or leaves the battlefield, you lose 3 life if you don't control a Demon.",
+      "variants": [
+        "no_demon_0",
+        "own_demon_0",
+        "foe_demon_0",
+        "exorcised_0",
+        "countered_0",
+        "no_demon_1",
+        "own_demon_1",
+        "foe_demon_1",
+        "exorcised_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

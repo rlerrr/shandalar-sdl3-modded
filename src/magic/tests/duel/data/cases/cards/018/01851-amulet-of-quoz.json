@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Amulet of Quoz",
+  "csvid": 1851,
+  "recipes": [
+    {
+      "family": "coin_flip_conditional_activation",
+      "version": 2,
+      "params": {
+        "csvid": 1851,
+        "cost": [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Remove this card from your deck before playing if you're not playing for ante.\n{T}, Sacrifice this artifact: Target opponent may ante the top card of their library. If they don't, you flip a coin. If you win the flip, that player loses the game. If you lose the flip, you lose the game. Activate only during your upkeep.",
+      "variants": [
+        "main_denied_0",
+        "main_denied_1",
+        "foe_upkeep_denied_0",
+        "foe_upkeep_denied_1",
+        "own_upkeep_probe_0",
+        "own_upkeep_probe_1"
+      ]
+    }
+  ]
+}

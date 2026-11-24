@@ -1,0 +1,527 @@
+{
+  "sources": {
+    "Goblin Ruinblaster": {
+      "oracle": {
+        "oracle_id": "d99fa026-6347-450a-9011-1fd79070a55c",
+        "name": "Goblin Ruinblaster",
+        "oracle_text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nHaste\nWhen this creature enters, if it was kicked, destroy target nonbasic land.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Goblin Shaman",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Haste",
+          "Kicker"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/127/goblin-ruinblaster?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10548,
+        "iid": 4041,
+        "name": "Goblin Ruinblaster",
+        "handler": "manalinkeh_card_goblin_ruinblaster",
+        "kind": "card"
+      }
+    },
+    "Heartstabber Mosquito": {
+      "oracle": {
+        "oracle_id": "f8fca88f-5eab-4854-913c-44261720a4d2",
+        "name": "Heartstabber Mosquito",
+        "oracle_text": "Kicker {2}{B} (You may pay an additional {2}{B} as you cast this spell.)\nFlying\nWhen this creature enters, if it was kicked, destroy target creature.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Insect",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Kicker",
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddp/52/heartstabber-mosquito?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10562,
+        "iid": 4448,
+        "name": "Heartstabber Mosquito",
+        "handler": "manalinkeh_card_heartstabber_mosquito",
+        "kind": "card"
+      }
+    },
+    "Kor Sanctifiers": {
+      "oracle": {
+        "oracle_id": "55d8ac5b-622c-42a9-83dc-f2c1c6c2506f",
+        "name": "Kor Sanctifiers",
+        "oracle_text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nWhen this creature enters, if it was kicked, destroy target artifact or enchantment.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Kor Cleric",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c15/73/kor-sanctifiers?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10589,
+        "iid": 5361,
+        "name": "Kor Sanctifiers",
+        "handler": "manalinkeh_card_kor_sanctifiers",
+        "kind": "card"
+      }
+    },
+    "Mold Shambler": {
+      "oracle": {
+        "oracle_id": "7aba1039-f108-423e-8aa4-d9d8b4da2414",
+        "name": "Mold Shambler",
+        "oracle_text": "Kicker {1}{G} (You may pay an additional {1}{G} as you cast this spell.)\nWhen this creature enters, if it was kicked, destroy target noncreature permanent.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Fungus Beast",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddm/60/mold-shambler?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10613,
+        "iid": 6259,
+        "name": "Mold Shambler",
+        "handler": "manalinkeh_card_mold_shambler",
+        "kind": "card"
+      }
+    },
+    "Oran-Rief Recluse": {
+      "oracle": {
+        "oracle_id": "043fa53c-8a46-4fbd-836f-2403c62e0121",
+        "name": "Oran-Rief Recluse",
+        "oracle_text": "Kicker {2}{G} (You may pay an additional {2}{G} as you cast this spell.)\nReach (This creature can block creatures with flying.)\nWhen this creature enters, if it was kicked, destroy target creature with flying.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Spider",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [
+          "Reach",
+          "Kicker"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddm/54/oran-rief-recluse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10627,
+        "iid": 6862,
+        "name": "Oran-Rief Recluse",
+        "handler": "manalinkeh_card_oran_rief_recluse",
+        "kind": "card"
+      }
+    },
+    "Verduran Emissary": {
+      "oracle": {
+        "oracle_id": "915bd598-c3dd-4982-bdcc-5904a6f17436",
+        "name": "Verduran Emissary",
+        "oracle_text": "Kicker {1}{R} (You may pay an additional {1}{R} as you cast this spell.)\nWhen this creature enters, if it was kicked, destroy target artifact. It can't be regenerated.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dde/43/verduran-emissary?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5175,
+        "iid": 10541,
+        "name": "Verduran Emissary",
+        "handler": "manalinkeh_card_verduran_emissary",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Clay Statue": {
+      "oracle": {
+        "oracle_id": "cc1ba59c-bb70-4da9-bbd0-a466075f9053",
+        "name": "Clay Statue",
+        "oracle_text": "{2}: Regenerate this creature.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/189/clay-statue?utm_source=api"
+      },
+      "registry": {
+        "csvid": 483,
+        "iid": 1780,
+        "name": "Clay Statue",
+        "handler": "manalinkeh_card_clay_statue",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Memnite": {
+      "oracle": {
+        "oracle_id": "7663ac7c-1de3-4250-b96a-fae9dbd66a27",
+        "name": "Memnite",
+        "oracle_text": "",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/td2/2/memnite?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11303,
+        "iid": 6020,
+        "name": "Memnite",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Sanguine Bond": {
+      "oracle": {
+        "oracle_id": "73089a39-a2f6-4aa2-a058-e6551475153d",
+        "name": "Sanguine Bond",
+        "oracle_text": "Whenever you gain life, target opponent loses that much life.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c21/153/sanguine-bond?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10463,
+        "iid": 8226,
+        "name": "Sanguine Bond",
+        "handler": "manalinkeh_card_sanguine_bond",
+        "kind": "card"
+      }
+    },
+    "Suntail Hawk": {
+      "oracle": {
+        "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+        "name": "Suntail Hawk",
+        "oracle_text": "Flying",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/40/suntail-hawk?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1195,
+        "iid": 9548,
+        "name": "Suntail Hawk",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Taiga": {
+      "oracle": {
+        "oracle_id": "22e3cf1d-3559-4ce1-954c-8dc815342979",
+        "name": "Taiga",
+        "oracle_text": "({T}: Add {R} or {G}.)",
+        "mana_cost": "",
+        "type_line": "Land — Mountain Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/317/taiga?utm_source=api"
+      },
+      "registry": {
+        "csvid": 241,
+        "iid": 10,
+        "name": "Taiga",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Traveler's Amulet": {
+      "oracle": {
+        "oracle_id": "48b561dd-f23d-409a-87c8-e49902b2477b",
+        "name": "Traveler's Amulet",
+        "oracle_text": "{1}, Sacrifice this artifact: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/273/travelers-amulet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12102,
+        "iid": 10166,
+        "name": "Traveler's Amulet",
+        "handler": "manalinkeh_card_travelers_amulet",
+        "kind": "card"
+      }
+    },
+    "Wind Drake": {
+      "oracle": {
+        "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+        "name": "Wind Drake",
+        "oracle_text": "Flying",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/70/wind-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1197,
+        "iid": 10989,
+        "name": "Wind Drake",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

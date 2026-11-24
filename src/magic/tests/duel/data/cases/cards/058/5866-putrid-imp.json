@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "csvid": 5866,
+  "card": "Putrid Imp",
+  "recipes": [
+    {
+      "family": "threshold_combat_activated",
+      "version": 2,
+      "oracle_text": "Discard a card: This creature gains flying until end of turn.\nThreshold — As long as there are seven or more cards in your graveyard, this creature gets +1/+1 and can't block.",
+      "params": {
+        "csvid": 5866,
+        "delta": 1,
+        "clauses": [
+          "Discard a card: This creature gains flying until end of turn.",
+          "Threshold — As long as there are seven or more cards in your graveyard, this creature gets +1/+1 and can't block."
+        ],
+        "price": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          1,
+          1
+        ]
+      },
+      "variants": [
+        "six_0",
+        "six_1",
+        "seven_0",
+        "seven_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "discard_cross_0",
+        "discard_cross_1",
+        "empty_hand_0",
+        "empty_hand_1",
+        "countered_0",
+        "countered_1",
+        "lose_threshold_0",
+        "lose_threshold_1",
+        "replay_0",
+        "replay_1",
+        "crossing_0",
+        "crossing_1"
+      ]
+    }
+  ]
+}

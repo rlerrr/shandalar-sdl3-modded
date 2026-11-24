@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 14480,
+  "card": "Overseer of the Damned",
+  "recipes": [
+    {
+      "family": "entry_follow_on_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 14480,
+        "printed_cost": "{5}{B}{B}",
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, you may destroy target creature.\nWhenever a nontoken creature an opponent controls dies, create a tapped 2/2 black Zombie creature token.",
+      "variants": [
+        "foe_creature_0",
+        "own_creature_0",
+        "opponent_token_0",
+        "later_death_0",
+        "flying_0",
+        "foe_creature_1",
+        "own_creature_1",
+        "opponent_token_1",
+        "later_death_1",
+        "flying_1"
+      ]
+    }
+  ]
+}

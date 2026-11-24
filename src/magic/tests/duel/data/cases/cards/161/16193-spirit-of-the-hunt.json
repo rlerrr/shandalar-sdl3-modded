@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Spirit of the Hunt",
+  "csvid": 16193,
+  "recipes": [
+    {
+      "family": "flash_entry_tribal_and_team",
+      "version": 2,
+      "params": {
+        "csvid": 16193,
+        "cost": [
+          1,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flash\nWhen this creature enters, each other creature you control that's a Wolf or a Werewolf gets +0/+3 until end of turn.",
+      "variants": [
+        "mixed_team_0",
+        "mixed_team_1",
+        "only_source_0",
+        "only_source_1",
+        "combat_wolf_0",
+        "combat_wolf_1",
+        "combat_werewolf_0",
+        "combat_werewolf_1"
+      ]
+    }
+  ]
+}

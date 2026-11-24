@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "csvid": 14173,
+  "card": "Siege Dragon",
+  "recipes": [
+    {
+      "family": "attack_damage_triggers",
+      "version": 2,
+      "oracle_text": "Flying\nWhen this creature enters, destroy all Walls your opponents control.\nWhenever this creature attacks, if defending player controls no Walls, it deals 2 damage to each creature without flying that player controls.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "kind": "siege",
+          "printed": [
+            5,
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          "equip": 0,
+          "creature": true,
+          "clauses": [
+            "Flying",
+            "When this creature enters, destroy all Walls your opponents control.",
+            "Whenever this creature attacks, if defending player controls no Walls, it deals 2 damage to each creature without flying that player controls."
+          ]
+        }
+      },
+      "variants": [
+        "cast_0",
+        "cast_1",
+        "short_cast_0",
+        "short_cast_1",
+        "fresh_attack_0",
+        "fresh_attack_1",
+        "hit_0",
+        "hit_1",
+        "wall_present_0",
+        "wall_present_1",
+        "own_wall_only_0",
+        "own_wall_only_1",
+        "ground_block_0",
+        "ground_block_1",
+        "opponent_attack_0",
+        "opponent_attack_1",
+        "cast_attack_0",
+        "cast_attack_1",
+        "replay_0",
+        "replay_1",
+        "wrong_color_0",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

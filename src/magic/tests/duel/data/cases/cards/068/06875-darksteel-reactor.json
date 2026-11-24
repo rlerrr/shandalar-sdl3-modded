@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 6875,
+  "card": "Darksteel Reactor",
+  "recipes": [
+    {
+      "family": "upkeep_counters",
+      "version": 2,
+      "params": {
+        "csvid": 6875,
+        "printed_cost": "{4}"
+      },
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)\nAt the beginning of your upkeep, you may put a charge counter on this artifact.\nWhen this artifact has twenty or more charge counters on it, you win the game.",
+      "variants": [
+        "one_0",
+        "decline_0",
+        "threshold_0",
+        "indestructible_0",
+        "one_1",
+        "threshold_1",
+        "indestructible_1"
+      ]
+    }
+  ]
+}

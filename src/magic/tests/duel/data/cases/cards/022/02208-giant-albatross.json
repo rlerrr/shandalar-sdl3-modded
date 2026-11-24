@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 2208,
+  "card": "Giant Albatross",
+  "recipes": [
+    {
+      "family": "departure_damage_and_removal",
+      "version": 2,
+      "params": {
+        "csvid": 2208,
+        "printed_cost": "{1}{U}",
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature dies, you may pay {1}{U}. If you do, for each creature that dealt damage to this creature this turn, destroy that creature unless its controller pays 2 life. A creature destroyed this way can't be regenerated.",
+      "variants": [
+        "unfunded_0",
+        "paid_bury_0",
+        "paid_ransom_0",
+        "nondamage_0",
+        "unfunded_1",
+        "paid_bury_1",
+        "paid_ransom_1",
+        "nondamage_1"
+      ]
+    }
+  ]
+}

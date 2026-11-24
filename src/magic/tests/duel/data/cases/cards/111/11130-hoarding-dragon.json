@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Hoarding Dragon",
+  "csvid": 11130,
+  "recipes": [
+    {
+      "family": "entry_interaction_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 11130,
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, you may search your library for an artifact card, exile it, then shuffle.\nWhen this creature dies, you may put the exiled card into its owner's hand.",
+      "variants": [
+        "death_return_0",
+        "death_return_1",
+        "death_decline_0",
+        "death_decline_1",
+        "bounce_0",
+        "bounce_1",
+        "flying_0",
+        "flying_1",
+        "fail_to_find_0",
+        "fail_to_find_1"
+      ]
+    }
+  ]
+}

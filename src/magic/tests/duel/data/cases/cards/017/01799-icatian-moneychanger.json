@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 1799,
+  "card": "Icatian Moneychanger",
+  "recipes": [
+    {
+      "family": "remaining_entry_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 1799,
+        "printed_cost": "{W}"
+      },
+      "oracle_text": "This creature enters with three credit counters on it.\nWhen this creature enters, it deals 3 damage to you.\nAt the beginning of your upkeep, put a credit counter on this creature.\nSacrifice this creature: You gain 1 life for each credit counter on this creature. Activate only during your upkeep.",
+      "variants": [
+        "first_0",
+        "second_0",
+        "not_phases_0",
+        "prevented_0",
+        "replay_0",
+        "countered_0",
+        "first_1",
+        "second_1",
+        "not_phases_1",
+        "prevented_1",
+        "replay_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

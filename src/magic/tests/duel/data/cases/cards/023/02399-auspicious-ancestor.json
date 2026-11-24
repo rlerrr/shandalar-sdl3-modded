@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Auspicious Ancestor",
+  "csvid": 2399,
+  "recipes": [
+    {
+      "family": "departure_resources",
+      "version": 2,
+      "params": {
+        "csvid": 2399,
+        "printed_mana": "{3}{W}",
+        "rules": "When this creature dies, you gain 3 life.\nWhenever a player casts a white spell, you may pay {1}. If you do, you gain 1 life."
+      },
+      "oracle_text": "When this creature dies, you gain 3 life.\nWhenever a player casts a white spell, you may pay {1}. If you do, you gain 1 life.",
+      "variants": [
+        "own_white_pay_0",
+        "own_white_pay_1",
+        "foe_white_pay_0",
+        "foe_white_pay_1",
+        "decline_0",
+        "unfunded_0",
+        "unfunded_1",
+        "nonwhite_0",
+        "nonwhite_1"
+      ]
+    }
+  ]
+}

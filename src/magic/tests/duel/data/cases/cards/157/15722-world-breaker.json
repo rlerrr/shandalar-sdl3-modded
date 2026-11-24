@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "World Breaker",
+  "csvid": 15722,
+  "recipes": [
+    {
+      "family": "devoid_cast_payments_and_targets",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\nWhen you cast this spell, exile target artifact, enchantment, or land.\nReach\n{2}{C}, Sacrifice a land: Return this card from your graveyard to your hand. ({C} represents colorless mana.)",
+      "params": {
+        "effect": "exile",
+        "price": [
+          6,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "power": 5,
+        "toughness": 7
+      },
+      "variants": [
+        "wrong_base_0",
+        "exile_artifact_0",
+        "exile_enchantment_0",
+        "exile_land_0",
+        "creature_only_0",
+        "countered_0",
+        "reach_0",
+        "replay_0",
+        "return_paid_0",
+        "return_wrong_color_0",
+        "return_short_0",
+        "return_no_land_0",
+        "return_offturn_0",
+        "wrong_base_1",
+        "exile_artifact_1",
+        "exile_enchantment_1",
+        "exile_land_1",
+        "creature_only_1",
+        "countered_1",
+        "reach_1",
+        "replay_1",
+        "return_paid_1",
+        "return_wrong_color_1",
+        "return_short_1",
+        "return_no_land_1",
+        "return_offturn_1"
+      ]
+    }
+  ]
+}

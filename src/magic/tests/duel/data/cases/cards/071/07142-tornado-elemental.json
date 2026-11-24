@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 7142,
+  "card": "Tornado Elemental",
+  "recipes": [
+    {
+      "family": "entry_rider_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 7142,
+        "printed_cost": "{5}{G}{G}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, it deals 6 damage to each creature with flying.\nYou may have this creature assign its combat damage as though it weren't blocked.",
+      "variants": [
+        "fliers_0",
+        "normal_damage_0",
+        "ignore_blocker_0",
+        "fliers_1",
+        "normal_damage_1",
+        "ignore_blocker_1"
+      ]
+    }
+  ]
+}

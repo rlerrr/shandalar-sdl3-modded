@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 16867,
+  "card": "Channeler Initiate",
+  "recipes": [
+    {
+      "family": "remaining_entry_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 16867,
+        "printed_cost": "{1}{G}"
+      },
+      "oracle_text": "When this creature enters, put three -1/-1 counters on target creature you control.\n{T}, Remove a -1/-1 counter from this creature: Add one mana of any color.",
+      "variants": [
+        "sick_0",
+        "other_0",
+        "red_0",
+        "green_0",
+        "empty_0",
+        "countered_0",
+        "sick_1",
+        "other_1",
+        "red_1",
+        "green_1",
+        "empty_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

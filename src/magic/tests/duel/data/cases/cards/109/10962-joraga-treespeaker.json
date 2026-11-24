@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "card": "Joraga Treespeaker",
+  "csvid": 10962,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "level_resource_riders",
+      "version": 2,
+      "oracle_text": "Level up {1}{G} ({1}{G}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 1-4\n1/2\n{T}: Add {G}{G}.\nLEVEL 5+\n1/4\nElves you control have \"{T}: Add {G}{G}.\"",
+      "params": {
+        "price": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "activation": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "base": [
+          1,
+          1
+        ],
+        "first": [
+          1,
+          1,
+          2
+        ],
+        "second": [
+          5,
+          1,
+          4
+        ],
+        "first_riders": [
+          "{T}: Add {G}{G}."
+        ],
+        "second_riders": [
+          "Elves you control have \"{T}: Add {G}{G}.\""
+        ],
+        "rider": "elf_mana"
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "opponent_timing_0",
+        "opponent_timing_1",
+        "self_mana_0",
+        "self_mana_1",
+        "mana_proxy_0",
+        "mana_proxy_1",
+        "mana_bearer_0",
+        "mana_bearer_1",
+        "foreign_only_0",
+        "foreign_only_1",
+        "fresh_0",
+        "fresh_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

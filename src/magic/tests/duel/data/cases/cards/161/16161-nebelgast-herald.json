@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Nebelgast Herald",
+  "csvid": 16161,
+  "recipes": [
+    {
+      "family": "flash_remaining_triggers_and_copy",
+      "version": 2,
+      "params": {
+        "csvid": 16161,
+        "cost": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flash\nFlying\nWhenever this creature or another Spirit you control enters, tap target creature an opponent controls.",
+      "variants": [
+        "own_spirit_0",
+        "own_spirit_1",
+        "foreign_spirit_0",
+        "foreign_spirit_1",
+        "own_nonspirit_0",
+        "own_nonspirit_1",
+        "flight_0",
+        "flight_1"
+      ]
+    }
+  ]
+}

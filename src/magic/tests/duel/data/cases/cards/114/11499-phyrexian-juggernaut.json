@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Phyrexian Juggernaut",
+  "csvid": 11499,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "mandatory_attack_lifecycle_riders",
+      "version": 2,
+      "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nThis creature attacks each combat if able.",
+      "params": {
+        "mode": "infect",
+        "costs": {
+          "printed": [
+            6,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "power": 5,
+        "toughness": 5,
+        "keywords": [
+          "Infect"
+        ],
+        "quantity": 0
+      },
+      "variants": [
+        "omitted_0",
+        "omitted_1",
+        "tapped_0",
+        "tapped_1",
+        "sick_0",
+        "sick_1",
+        "pacified_0",
+        "pacified_1",
+        "opponent_turn_0",
+        "opponent_turn_1",
+        "paid_fresh_0",
+        "paid_fresh_1",
+        "unfunded_0",
+        "unfunded_1",
+        "replay_0",
+        "replay_1",
+        "infect_blocked_0",
+        "infect_blocked_1",
+        "infect_noncombat_0",
+        "infect_noncombat_1"
+      ]
+    }
+  ]
+}

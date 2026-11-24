@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Sylvan Hierophant",
+  "csvid": 3046,
+  "recipes": [
+    {
+      "family": "departure_graveyard_and_return",
+      "version": 2,
+      "params": {
+        "csvid": 3046,
+        "cost": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature dies, exile it, then return another target creature card from your graveyard to your hand.",
+      "variants": [
+        "chosen_0",
+        "chosen_1",
+        "no_creature_0",
+        "no_creature_1",
+        "bounce_0",
+        "bounce_1"
+      ]
+    }
+  ]
+}

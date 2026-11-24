@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "csvid": 15630,
+  "card": "Kozilek's Translator",
+  "recipes": [
+    {
+      "family": "devoid_colorless_activations",
+      "version": 2,
+      "params": {
+        "price": [
+          4,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          3,
+          5
+        ],
+        "effect": "mana",
+        "generic": 0,
+        "colorless": 0,
+        "once": true,
+        "life_cost": 1,
+        "output": 1
+      },
+      "oracle_text": "Devoid (This card has no color.)\nPay 1 life: Add {C}. Activate only once each turn. ({C} represents colorless mana.)",
+      "variants": [
+        "immediate_0",
+        "immediate_1",
+        "once_0",
+        "once_1",
+        "reset_0",
+        "reset_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

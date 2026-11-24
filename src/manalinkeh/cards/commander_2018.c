@@ -11,7 +11,7 @@ static int vedalken_humiliation(int player, int card, event_t event);
 #ifndef SHANDALAR
 
 static int is_enchanted_or_enchantment_creature(int unused1, intptr_t unused2, int player, int card);
-static char *is_aura_or_equipment(int who_chooses, int player, int card);
+static const char *is_aura_or_equipment(int who_chooses, int player, int card, int unused_source_player, int unused_source_card);
 
 #endif
 
@@ -1579,7 +1579,7 @@ int card_gyrus_waker_of_corpses(int player, int card, event_t event)
 
 #ifndef SHANDALAR
 /* ManalinkEh 2022: 0x255f810; original cards/commander_2018.c:978. */
-static char *is_aura_or_equipment(int who_chooses, int player, int card)
+static const char *is_aura_or_equipment(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
   int result;
 

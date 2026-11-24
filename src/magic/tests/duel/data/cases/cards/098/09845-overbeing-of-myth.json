@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Overbeing of Myth",
+  "csvid": 9845,
+  "recipes": [
+    {
+      "family": "draw_step_discard_and_hand_size",
+      "version": 2,
+      "params": {
+        "csvid": 9845
+      },
+      "oracle_text": "Overbeing of Myth's power and toughness are each equal to the number of cards in your hand.\nAt the beginning of your draw step, draw an additional card.",
+      "variants": [
+        "scope_0",
+        "scope_1",
+        "removed_0",
+        "removed_1",
+        "mixed_replay_0",
+        "mixed_replay_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

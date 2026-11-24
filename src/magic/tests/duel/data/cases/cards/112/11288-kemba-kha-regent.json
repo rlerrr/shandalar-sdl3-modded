@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Kemba, Kha Regent",
+  "csvid": 11288,
+  "recipes": [
+    {
+      "family": "upkeep_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 11288,
+        "mana_cost": "{1}{W}{W}"
+      },
+      "oracle_text": "At the beginning of your upkeep, create a 2/2 white Cat creature token for each Equipment attached to Kemba.",
+      "variants": [
+        "zero_0",
+        "zero_1",
+        "two_0",
+        "two_1",
+        "move_equipment_0",
+        "move_equipment_1"
+      ]
+    }
+  ]
+}

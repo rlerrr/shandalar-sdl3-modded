@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Earwig Squad",
+  "csvid": 9349,
+  "recipes": [
+    {
+      "family": "remaining_entry_library_and_hand",
+      "version": 2,
+      "params": {
+        "csvid": 9349,
+        "printed_mana": "{3}{B}{B}",
+        "rules": "Prowl {2}{B} (You may cast this for its prowl cost if you dealt combat damage to a player this turn with a Goblin or Rogue.)\nWhen this creature enters, if its prowl cost was paid, search target opponent's library for three cards and exile them. Then that player shuffles."
+      },
+      "oracle_text": "Prowl {2}{B} (You may cast this for its prowl cost if you dealt combat damage to a player this turn with a Goblin or Rogue.)\nWhen this creature enters, if its prowl cost was paid, search target opponent's library for three cards and exile them. Then that player shuffles.",
+      "variants": [
+        "paid_prowl_0",
+        "paid_prowl_1",
+        "ordinary_after_hit_0",
+        "ordinary_after_hit_1",
+        "wrong_type_short_0",
+        "wrong_type_short_1"
+      ]
+    }
+  ]
+}

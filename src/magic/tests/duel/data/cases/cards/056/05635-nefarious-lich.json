@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Nefarious Lich",
+  "csvid": 5635,
+  "recipes": [
+    {
+      "family": "departure_linked_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 5635
+      },
+      "oracle_text": "If damage would be dealt to you, exile that many cards from your graveyard instead. If you can't, you lose the game.\nIf you would gain life, draw that many cards instead.\nWhen this enchantment leaves the battlefield, you lose the game.",
+      "variants": [
+        "draw_0",
+        "draw_1",
+        "replace_damage_0",
+        "replace_damage_1",
+        "short_grave_0",
+        "short_grave_1",
+        "leaves_0",
+        "leaves_1"
+      ]
+    }
+  ]
+}

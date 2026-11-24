@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Bringer of the Green Dawn",
+  "csvid": 7022,
+  "recipes": [
+    {
+      "family": "upkeep_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 7022,
+        "mana_cost": "{7}{G}{G}"
+      },
+      "oracle_text": "You may pay {W}{U}{B}{R}{G} rather than pay this spell's mana cost.\nTrample\nAt the beginning of your upkeep, you may create a 3/3 green Beast creature token.",
+      "variants": [
+        "normal_0",
+        "normal_1",
+        "rainbow_0",
+        "rainbow_1",
+        "decline_0",
+        "trample_0",
+        "trample_1",
+        "missing_blue_0",
+        "missing_blue_1"
+      ]
+    }
+  ]
+}

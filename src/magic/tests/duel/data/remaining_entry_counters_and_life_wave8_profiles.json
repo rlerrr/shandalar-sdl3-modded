@@ -1,0 +1,875 @@
+{
+  "sources": {
+    "Arbiter of Knollridge": {
+      "oracle": {
+        "oracle_id": "62705a41-7c4d-4e6c-85b0-36a9d27ab5ae",
+        "name": "Arbiter of Knollridge",
+        "oracle_text": "Vigilance\nWhen this creature enters, each player's life total becomes the highest life total among all players.",
+        "mana_cost": "{6}{W}",
+        "type_line": "Creature — Giant Wizard",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cm2/17/arbiter-of-knollridge?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9062,
+        "iid": 519,
+        "name": "Arbiter of Knollridge",
+        "handler": "manalinkeh_card_arbiter_of_knollridge",
+        "kind": "card"
+      }
+    },
+    "Elderscale Wurm": {
+      "oracle": {
+        "oracle_id": "1e81454a-ce30-4e41-9d09-3256ae30efc2",
+        "name": "Elderscale Wurm",
+        "oracle_text": "Trample\nWhen this creature enters, if your life total is less than 7, your life total becomes 7.\nAs long as you have 7 or more life, damage that would reduce your life total to less than 7 reduces it to 7 instead.",
+        "mana_cost": "{4}{G}{G}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/167/elderscale-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12565,
+        "iid": 2916,
+        "name": "Elderscale Wurm",
+        "handler": "manalinkeh_card_elderscale_wurm",
+        "kind": "card"
+      }
+    },
+    "Icatian Moneychanger": {
+      "oracle": {
+        "oracle_id": "9b81aa32-e0f7-493f-92b8-85c2c46aef91",
+        "name": "Icatian Moneychanger",
+        "oracle_text": "This creature enters with three credit counters on it.\nWhen this creature enters, it deals 3 damage to you.\nAt the beginning of your upkeep, put a credit counter on this creature.\nSacrifice this creature: You gain 1 life for each credit counter on this creature. Activate only during your upkeep.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fem/10a/icatian-moneychanger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1799,
+        "iid": 4753,
+        "name": "Icatian Moneychanger",
+        "handler": "manalinkeh_card_icatian_moneychanger",
+        "kind": "card"
+      }
+    },
+    "Resolute Archangel": {
+      "oracle": {
+        "oracle_id": "0d6dc95d-55ce-4ef8-b065-d7203f5bf642",
+        "name": "Resolute Archangel",
+        "oracle_text": "Flying\nWhen this creature enters, if your life total is less than your starting life total, it becomes equal to your starting life total.",
+        "mana_cost": "{5}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/28/resolute-archangel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14161,
+        "iid": 7856,
+        "name": "Resolute Archangel",
+        "handler": "manalinkeh_card_resolute_archangel",
+        "kind": "card"
+      }
+    },
+    "Blind Hunter": {
+      "oracle": {
+        "oracle_id": "a731f5bc-892c-4857-9590-4fa31c1caf00",
+        "name": "Blind Hunter",
+        "oracle_text": "Flying\nHaunt (When this creature dies, exile it haunting target creature.)\nWhen this creature enters or the creature it haunts dies, target player loses 2 life and you gain 2 life.",
+        "mana_cost": "{2}{W}{B}",
+        "type_line": "Creature — Bat",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Haunt"
+        ],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/166/blind-hunter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8027,
+        "iid": 1080,
+        "name": "Blind Hunter",
+        "handler": "manalinkeh_card_blind_hunter",
+        "kind": "card"
+      }
+    },
+    "Electric Eel": {
+      "oracle": {
+        "oracle_id": "ad8213db-074d-475c-b94a-9f1e81c8f4fd",
+        "name": "Electric Eel",
+        "oracle_text": "When this creature enters, it deals 1 damage to you.\n{R}{R}: This creature gets +2/+0 until end of turn and deals 1 damage to you.",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Fish",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/drk/25/electric-eel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 933,
+        "iid": 2921,
+        "name": "Electric Eel",
+        "handler": "manalinkeh_card_electric_eel",
+        "kind": "card"
+      }
+    },
+    "Malakir Bloodwitch": {
+      "oracle": {
+        "oracle_id": "870e199e-1d54-44ec-8e24-f24af93ae9c5",
+        "name": "Malakir Bloodwitch",
+        "oracle_text": "Flying, protection from white\nWhen this creature enters, each opponent loses life equal to the number of Vampires you control. You gain life equal to the life lost this way.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Creature — Vampire Shaman",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Protection"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/voc/131/malakir-bloodwitch?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10603,
+        "iid": 5829,
+        "name": "Malakir Bloodwitch",
+        "handler": "manalinkeh_card_malakir_bloodwitch",
+        "kind": "card"
+      }
+    },
+    "Shape of the Wiitigo": {
+      "oracle": {
+        "oracle_id": "16950554-0e39-4705-aab4-7a8734771844",
+        "name": "Shape of the Wiitigo",
+        "oracle_text": "Enchant creature\nWhen this Aura enters, put six +1/+1 counters on enchanted creature.\nAt the beginning of your upkeep, put a +1/+1 counter on enchanted creature if it attacked or blocked since your last upkeep. Otherwise, remove a +1/+1 counter from it.",
+        "mana_cost": "{3}{G}{G}{G}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/csp/120/shape-of-the-wiitigo?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8441,
+        "iid": 8580,
+        "name": "Shape of the Wiitigo",
+        "handler": "manalinkeh_card_shape_of_the_wiitigo",
+        "kind": "card"
+      }
+    },
+    "Thragtusk": {
+      "oracle": {
+        "oracle_id": "0dd0e91a-d16b-4718-8d11-1a3fcf8e0753",
+        "name": "Thragtusk",
+        "oracle_text": "When this creature enters, you gain 5 life.\nWhen this creature leaves the battlefield, create a 3/3 green Beast creature token.",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Beast",
+        "power": "5",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ncc/316/thragtusk?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12628,
+        "iid": 9939,
+        "name": "Thragtusk",
+        "handler": "manalinkeh_card_thragtusk",
+        "kind": "card"
+      }
+    },
+    "Shaman of the Pack": {
+      "oracle": {
+        "oracle_id": "39c7d2cc-4fd1-4f1a-be1a-a6ae56d2356d",
+        "name": "Shaman of the Pack",
+        "oracle_text": "When this creature enters, target opponent loses life equal to the number of Elves you control.",
+        "mana_cost": "{1}{B}{G}",
+        "type_line": "Creature — Elf Shaman",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/khc/92/shaman-of-the-pack?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15216,
+        "iid": 14536,
+        "name": "Shaman of the Pack",
+        "handler": "manalinkeh_card_shaman_of_the_pack",
+        "kind": "card"
+      }
+    },
+    "Wall of Resurgence": {
+      "oracle": {
+        "oracle_id": "8771e241-e69b-4e21-9108-223a9488e9c7",
+        "name": "Wall of Resurgence",
+        "oracle_text": "Defender\nWhen this creature enters, you may put three +1/+1 counters on target land you control. If you do, that land becomes a 0/0 Elemental creature with haste that's still a land.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "6",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/39/wall-of-resurgence?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15715,
+        "iid": 15790,
+        "name": "Wall of Resurgence",
+        "handler": "manalinkeh_card_wall_of_resurgence",
+        "kind": "card"
+      }
+    },
+    "Channeler Initiate": {
+      "oracle": {
+        "oracle_id": "a98ea782-1c49-4207-a130-41329087fdf6",
+        "name": "Channeler Initiate",
+        "oracle_text": "When this creature enters, put three -1/-1 counters on target creature you control.\n{T}, Remove a -1/-1 counter from this creature: Add one mana of any color.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Human Druid",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ecc/101/channeler-initiate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16867,
+        "iid": 16961,
+        "name": "Channeler Initiate",
+        "handler": "manalinkeh_card_channeler_initiate",
+        "kind": "card"
+      }
+    },
+    "Plague Belcher": {
+      "oracle": {
+        "oracle_id": "f086a82d-8dbe-4d02-a076-03789704e9d4",
+        "name": "Plague Belcher",
+        "oracle_text": "Menace\nWhen this creature enters, put two -1/-1 counters on target creature you control.\nWhenever another Zombie you control dies, each opponent loses 1 life.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Zombie Beast",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [
+          "Menace"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/akh/104/plague-belcher?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16993,
+        "iid": 17087,
+        "name": "Plague Belcher",
+        "handler": "manalinkeh_card_plague_belcher",
+        "kind": "card"
+      }
+    },
+    "Soulstinger": {
+      "oracle": {
+        "oracle_id": "31505942-52c4-4485-9241-c9592e6839e4",
+        "name": "Soulstinger",
+        "oracle_text": "When this creature enters, put two -1/-1 counters on target creature you control.\nWhen this creature dies, you may put a -1/-1 counter on target creature for each -1/-1 counter on this creature.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Scorpion Demon",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/akh/108/soulstinger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 17029,
+        "iid": 17123,
+        "name": "Soulstinger",
+        "handler": "manalinkeh_card_soulstinger",
+        "kind": "card"
+      }
+    },
+    "Sanguine Glorifier": {
+      "oracle": {
+        "oracle_id": "391f1331-7577-4bf4-a9ed-2f55ded4cbd8",
+        "name": "Sanguine Glorifier",
+        "oracle_text": "When this creature enters, put a +1/+1 counter on another target Vampire you control.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Vampire Cleric",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rix/20/sanguine-glorifier?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18280,
+        "iid": 18385,
+        "name": "Sanguine Glorifier",
+        "handler": "manalinkeh_card_stromkirk_mentor",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Lava Axe": {
+      "oracle": {
+        "oracle_id": "387b6b07-a283-412d-94c3-f7f1dc76e858",
+        "name": "Lava Axe",
+        "oracle_text": "Lava Axe deals 5 damage to target player or planeswalker.",
+        "mana_cost": "{4}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/150/lava-axe?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1066,
+        "iid": 5487,
+        "name": "Lava Axe",
+        "handler": "manalinkeh_card_lava_axe",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Putrid Leech": {
+      "oracle": {
+        "oracle_id": "16b723bc-aab9-40f2-8e1b-b9c2bd2af3bc",
+        "name": "Putrid Leech",
+        "oracle_text": "Pay 2 life: This creature gets +2/+2 until end of turn. Activate only once each turn.",
+        "mana_cost": "{B}{G}",
+        "type_line": "Creature — Zombie Leech",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddm/51/putrid-leech?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10330,
+        "iid": 7502,
+        "name": "Putrid Leech",
+        "handler": "manalinkeh_card_putrid_leech",
+        "kind": "card"
+      }
+    },
+    "Urza's Armor": {
+      "oracle": {
+        "oracle_id": "e5fa232a-c8f2-4532-88bf-60d1223181b0",
+        "name": "Urza's Armor",
+        "oracle_text": "If a source would deal damage to you, prevent 1 of that damage.",
+        "mana_cost": "{6}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/318/urzas-armor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1179,
+        "iid": 10419,
+        "name": "Urza's Armor",
+        "handler": "manalinkeh_card_urzas_armor",
+        "kind": "card"
+      }
+    },
+    "Whitesun's Passage": {
+      "oracle": {
+        "oracle_id": "df702285-3577-47cc-aa1e-868921cdf6f2",
+        "name": "Whitesun's Passage",
+        "oracle_text": "You gain 5 life.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/27/whitesuns-passage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11410,
+        "iid": 10946,
+        "name": "Whitesun's Passage",
+        "handler": "manalinkeh_card_whitesuns_passage",
+        "kind": "card"
+      }
+    },
+    "Vampire Interloper": {
+      "oracle": {
+        "oracle_id": "b753d7dd-4c6b-4472-a009-671572f927eb",
+        "name": "Vampire Interloper",
+        "oracle_text": "Flying\nThis creature can't block.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Vampire Scout",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/756/vampire-interloper?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12114,
+        "iid": 10455,
+        "name": "Vampire Interloper",
+        "handler": "manalinkeh_card_vampire_interloper",
+        "kind": "card"
+      }
+    },
+    "Elvish Mystic": {
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13284,
+        "iid": 2982,
+        "name": "Elvish Mystic",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Beast": {
+      "oracle": {
+        "oracle_id": "d2f35b1a-1eba-4007-8f27-737d26b7a6a2",
+        "name": "Beast",
+        "oracle_text": "This creature can't attack or block alone.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tdsk/3/beast?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18695,
+        "iid": 944,
+        "name": "Beast",
+        "handler": "manalinkeh_card_beast_token",
+        "kind": "card"
+      }
+    },
+    "Swords to Plowshares": {
+      "oracle": {
+        "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+        "name": "Swords to Plowshares",
+        "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+      },
+      "registry": {
+        "csvid": 240,
+        "iid": 9616,
+        "name": "Swords to Plowshares",
+        "handler": "manalinkeh_card_swords_to_plowshares",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Scaled Wurm": {
+      "oracle": {
+        "oracle_id": "009a8e38-74d0-4b4a-b8ca-62c9f3183531",
+        "name": "Scaled Wurm",
+        "oracle_text": "",
+        "mana_cost": "{7}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "7",
+        "toughness": "6",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/178/scaled-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2085,
+        "iid": 8287,
+        "name": "Scaled Wurm",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Walking Corpse": {
+      "oracle": {
+        "oracle_id": "fea95888-e16a-4209-9cd4-623f7f4d2f67",
+        "name": "Walking Corpse",
+        "oracle_text": "",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/128/walking-corpse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12124,
+        "iid": 10747,
+        "name": "Walking Corpse",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

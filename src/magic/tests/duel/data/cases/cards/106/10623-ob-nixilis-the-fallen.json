@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Ob Nixilis, the Fallen",
+  "csvid": 10623,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "landfall_targets_and_payment",
+      "version": 2,
+      "oracle_text": "Landfall — Whenever a land you control enters, you may have target player lose 3 life. If you do, put three +1/+1 counters on Ob Nixilis.",
+      "params": {
+        "effect": "loss",
+        "mana": [
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fee": [],
+        "stats": [
+          3,
+          3
+        ]
+      },
+      "variants": [
+        "own_0",
+        "own_1",
+        "enemy_0",
+        "enemy_1",
+        "offturn_0",
+        "offturn_1",
+        "repeat_0",
+        "repeat_1",
+        "replay_0",
+        "replay_1",
+        "removed_0",
+        "removed_1",
+        "self_target_0",
+        "self_target_1",
+        "prevention_0",
+        "prevention_1",
+        "decline_0",
+        "decline_1"
+      ]
+    }
+  ]
+}

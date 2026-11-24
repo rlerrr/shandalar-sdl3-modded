@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Paperfin Rascal",
+  "csvid": 9232,
+  "recipes": [
+    {
+      "family": "clash_whole_cards",
+      "version": 2,
+      "oracle_text": "When this creature enters, clash with an opponent. If you win, put a +1/+1 counter on this creature. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",
+      "params": {
+        "effect": "counter",
+        "mana": "{2}{U}",
+        "type_line": "Creature — Merfolk Rogue",
+        "power": 2,
+        "toughness": 2
+      },
+      "variants": [
+        "win_0",
+        "tie_0",
+        "loss_0",
+        "human_bottom_0",
+        "snapshot_0",
+        "win_1",
+        "tie_1",
+        "loss_1",
+        "human_bottom_1",
+        "snapshot_1"
+      ]
+    }
+  ]
+}

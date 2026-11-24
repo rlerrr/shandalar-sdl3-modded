@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "csvid": 4966,
+  "card": "Collective Restraint",
+  "recipes": [
+    {
+      "family": "global_attack_tax",
+      "version": 2,
+      "params": {
+        "cost": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "composition": "domain",
+        "tax_formula": "domain",
+        "protects_walker": false,
+        "flying": false
+      },
+      "oracle_text": "Domain — Creatures can't attack you unless their controller pays {X} for each creature they control that's attacking you, where X is the number of basic land types among lands you control.",
+      "variants": [
+        "domain_zero_0",
+        "domain_one_0",
+        "domain_three_0",
+        "domain_five_0",
+        "domain_duplicate_0",
+        "domain_enemy_0",
+        "domain_dual_0",
+        "domain_play_0",
+        "domain_remove_0",
+        "underfunded_0",
+        "two_paid_0",
+        "first_only_0",
+        "cast_source_0",
+        "walker_short_0",
+        "domain_zero_1",
+        "domain_one_1",
+        "domain_three_1",
+        "domain_five_1",
+        "domain_duplicate_1",
+        "domain_enemy_1",
+        "domain_dual_1",
+        "domain_play_1",
+        "domain_remove_1",
+        "underfunded_1",
+        "two_paid_1",
+        "first_only_1",
+        "cast_source_1",
+        "walker_short_1"
+      ]
+    }
+  ]
+}

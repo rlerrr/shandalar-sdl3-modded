@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Flesh Carver",
+  "csvid": 14461,
+  "recipes": [
+    {
+      "family": "departure_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 14461,
+        "mana_cost": "{2}{B}"
+      },
+      "oracle_text": "Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)\n{1}{B}, Sacrifice another creature: Put two +1/+1 counters on this creature.\nWhen this creature dies, create an X/X black Horror creature token, where X is this creature's power.",
+      "variants": [
+        "base_power_0",
+        "base_power_1",
+        "sacrifice_0",
+        "sacrifice_1",
+        "intimidate_black_0",
+        "intimidate_black_1",
+        "intimidate_artifact_0",
+        "intimidate_artifact_1"
+      ]
+    }
+  ]
+}

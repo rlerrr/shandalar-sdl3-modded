@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Nantuko Cultivator",
+  "csvid": 5846,
+  "recipes": [
+    {
+      "family": "entry_interaction_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 5846,
+        "printed_mana": "{3}{G}",
+        "rules": "When this creature enters, you may discard any number of land cards. Put that many +1/+1 counters on this creature and draw that many cards."
+      },
+      "oracle_text": "When this creature enters, you may discard any number of land cards. Put that many +1/+1 counters on this creature and draw that many cards.",
+      "variants": [
+        "discard_two_0",
+        "discard_two_1",
+        "partial_0",
+        "partial_1"
+      ]
+    }
+  ]
+}

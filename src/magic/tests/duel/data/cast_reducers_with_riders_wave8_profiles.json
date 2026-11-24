@@ -1,0 +1,754 @@
+{
+  "version": 1,
+  "sources": {
+    "Krosan Warchief": {
+      "oracle": {
+        "oracle_id": "88350861-244c-4634-9bc9-e9a79401bd02",
+        "name": "Krosan Warchief",
+        "oracle_text": "Beast spells you cast cost {1} less to cast.\n{1}{G}: Regenerate target Beast.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Beast",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c13/155/krosan-warchief?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6545,
+        "iid": 5407,
+        "name": "Krosan Warchief",
+        "handler": "manalinkeh_card_krosan_warchief",
+        "kind": "card"
+      }
+    },
+    "Long-Forgotten Gohei": {
+      "oracle": {
+        "oracle_id": "897910d5-13a4-4e1d-8f83-235b773b8322",
+        "name": "Long-Forgotten Gohei",
+        "oracle_text": "Arcane spells you cast cost {1} less to cast.\nSpirit creatures you control get +1/+1.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm2/221/long-forgotten-gohei?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7297,
+        "iid": 5679,
+        "name": "Long-Forgotten Gohei",
+        "handler": "manalinkeh_card_long_forgotten_gohei",
+        "kind": "card"
+      }
+    },
+    "Unesh, Criosphinx Sovereign": {
+      "oracle": {
+        "oracle_id": "7492ea06-24d5-4a1f-a6ac-c33743e91aa7",
+        "name": "Unesh, Criosphinx Sovereign",
+        "oracle_text": "Flying\nSphinx spells you cast cost {2} less to cast.\nWhenever Unesh or another Sphinx you control enters, reveal the top four cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+        "mana_cost": "{4}{U}{U}",
+        "type_line": "Legendary Creature — Sphinx",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hou/52/unesh-criosphinx-sovereign?utm_source=api"
+      },
+      "registry": {
+        "csvid": 17247,
+        "iid": 17341,
+        "name": "Unesh, Criosphinx Sovereign",
+        "handler": "manalinkeh_card_unesh_criosphinx_sovereign",
+        "kind": "card"
+      }
+    },
+    "Hero of Iroas": {
+      "oracle": {
+        "oracle_id": "0d44bd43-77da-449e-b771-8a14da88b677",
+        "name": "Hero of Iroas",
+        "oracle_text": "Aura spells you cast cost {1} less to cast.\nHeroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on this creature.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Heroic"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/20/hero-of-iroas?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13732,
+        "iid": 4520,
+        "name": "Hero of Iroas",
+        "handler": "manalinkeh_card_hero_of_iroas",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Boomerang": {
+      "oracle": {
+        "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+        "name": "Boomerang",
+        "oracle_text": "Return target permanent to its owner's hand.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+      },
+      "registry": {
+        "csvid": 585,
+        "iid": 1233,
+        "name": "Boomerang",
+        "handler": "manalinkeh_card_boomerang",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Encrust": {
+      "oracle": {
+        "oracle_id": "2e056743-78ff-45b6-80df-7486d52d5df6",
+        "name": "Encrust",
+        "oracle_text": "Enchant artifact or creature\nEnchanted permanent doesn't untap during its controller's untap step and its activated abilities can't be activated.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/53/encrust?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12566,
+        "iid": 3032,
+        "name": "Encrust",
+        "handler": "manalinkeh_card_encrust",
+        "kind": "card"
+      }
+    },
+    "Flight": {
+      "oracle": {
+        "oracle_id": "6a4068b0-fb4f-429c-a94e-47849f3eb7ef",
+        "name": "Flight",
+        "oracle_text": "Enchant creature\nEnchanted creature has flying.",
+        "mana_cost": "{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m12/53/flight?utm_source=api"
+      },
+      "registry": {
+        "csvid": 87,
+        "iid": 3523,
+        "name": "Flight",
+        "handler": "manalinkeh_card_flight2",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Glacial Ray": {
+      "oracle": {
+        "oracle_id": "e65a8ab8-84a7-4fe2-b009-ceb87bec6b4e",
+        "name": "Glacial Ray",
+        "oracle_text": "Glacial Ray deals 2 damage to any target.\nSplice onto Arcane {1}{R} (As you cast an Arcane spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card's effects to that spell.)",
+        "mana_cost": "{1}{R}",
+        "type_line": "Instant — Arcane",
+        "keywords": [
+          "Splice"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mma/115/glacial-ray?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7217,
+        "iid": 3910,
+        "name": "Glacial Ray",
+        "handler": "manalinkeh_card_glacial_ray",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Kami of Old Stone": {
+      "oracle": {
+        "oracle_id": "575d08b2-3150-47d2-8f83-e8bb1f184c0f",
+        "name": "Kami of Old Stone",
+        "oracle_text": "",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Spirit",
+        "power": "1",
+        "toughness": "7",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/24/kami-of-old-stone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7267,
+        "iid": 13234,
+        "name": "Kami of Old Stone",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Lava Spike": {
+      "oracle": {
+        "oracle_id": "2837888c-bfa8-4955-9334-0605ad409f7e",
+        "name": "Lava Spike",
+        "oracle_text": "Lava Spike deals 3 damage to target player or planeswalker.",
+        "mana_cost": "{R}",
+        "type_line": "Sorcery — Arcane",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/136/lava-spike?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1290,
+        "iid": 5491,
+        "name": "Lava Spike",
+        "handler": "manalinkeh_card_lava_spike",
+        "kind": "card"
+      }
+    },
+    "Levitation": {
+      "oracle": {
+        "oracle_id": "94b703c4-5584-4913-8365-7e9f2f535c2d",
+        "name": "Levitation",
+        "oracle_text": "Creatures you control have flying.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m12/61/levitation?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1606,
+        "iid": 5545,
+        "name": "Levitation",
+        "handler": "manalinkeh_card_levitation",
+        "kind": "card"
+      }
+    },
+    "Lightning Strike": {
+      "oracle": {
+        "oracle_id": "f34b9bc4-7bfe-47fd-ba23-4eeeb46026eb",
+        "name": "Lightning Strike",
+        "oracle_text": "Lightning Strike deals 3 damage to any target.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/142/lightning-strike?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13477,
+        "iid": 5610,
+        "name": "Lightning Strike",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Pacifism": {
+      "oracle": {
+        "oracle_id": "5f5e0b10-c8cf-450c-bfd3-bcb0528ec330",
+        "name": "Pacifism",
+        "oracle_text": "Enchant creature\nEnchanted creature can't attack or block.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/575/pacifism?utm_source=api"
+      },
+      "registry": {
+        "csvid": 968,
+        "iid": 6961,
+        "name": "Pacifism",
+        "handler": "manalinkeh_card_pacifism",
+        "kind": "card"
+      }
+    },
+    "Rumbling Baloth": {
+      "oracle": {
+        "oracle_id": "3191c6ca-4d25-4ba3-bfe1-4aeab1295573",
+        "name": "Rumbling Baloth",
+        "oracle_text": "",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/426/rumbling-baloth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13328,
+        "iid": 8108,
+        "name": "Rumbling Baloth",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Sphinx of Magosi": {
+      "oracle": {
+        "oracle_id": "1c9cf20c-51e4-4a87-b9f8-231b6baf5d6b",
+        "name": "Sphinx of Magosi",
+        "oracle_text": "Flying\n{2}{U}: Draw a card, then put a +1/+1 counter on this creature.",
+        "mana_cost": "{3}{U}{U}{U}",
+        "type_line": "Creature — Sphinx",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/w17/12/sphinx-of-magosi?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11048,
+        "iid": 9138,
+        "name": "Sphinx of Magosi",
+        "handler": "manalinkeh_card_sphinx_of_magosi",
+        "kind": "card"
+      }
+    },
+    "Terminate": {
+      "oracle": {
+        "oracle_id": "6257c2fd-005f-41e3-8a72-af76df1eb134",
+        "name": "Terminate",
+        "oracle_text": "Destroy target creature. It can't be regenerated.",
+        "mana_cost": "{B}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/189/terminate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1471,
+        "iid": 9812,
+        "name": "Terminate",
+        "handler": "manalinkeh_card_terminate",
+        "kind": "card"
+      }
+    },
+    "Vexing Sphinx": {
+      "oracle": {
+        "oracle_id": "c2affd47-2404-44b0-a571-e64e948130eb",
+        "name": "Vexing Sphinx",
+        "oracle_text": "Flying\nCumulative upkeep—Discard a card. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nWhen this creature dies, draw a card for each age counter on it.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Creature — Sphinx",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Cumulative upkeep",
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/73/vexing-sphinx?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8467,
+        "iid": 10562,
+        "name": "Vexing Sphinx",
+        "handler": "manalinkeh_card_vexing_sphinx",
+        "kind": "card"
+      }
+    },
+    "Wind Drake": {
+      "oracle": {
+        "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+        "name": "Wind Drake",
+        "oracle_text": "Flying",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/70/wind-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1197,
+        "iid": 10989,
+        "name": "Wind Drake",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Zombify": {
+      "oracle": {
+        "oracle_id": "bb95db4d-5017-4121-bf79-d68476602d8c",
+        "name": "Zombify",
+        "oracle_text": "Return target creature card from your graveyard to the battlefield.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/187/zombify?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1258,
+        "iid": 11230,
+        "name": "Zombify",
+        "handler": "manalinkeh_card_breath_of_life",
+        "kind": "card"
+      }
+    }
+  }
+}

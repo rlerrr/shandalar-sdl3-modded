@@ -1,0 +1,584 @@
+{
+  "sources": {
+    "Akoum Stonewaker": {
+      "oracle": {
+        "oracle_id": "36d1a46e-44ac-4a65-a93c-8d6ab5c31cbf",
+        "name": "Akoum Stonewaker",
+        "oracle_text": "Landfall — Whenever a land you control enters, you may pay {2}{R}. If you do, create a 3/1 red Elemental creature token with trample and haste. Exile that token at the beginning of the next end step.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Human Shaman",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/140/akoum-stonewaker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15261,
+        "iid": 11474,
+        "name": "Akoum Stonewaker",
+        "handler": "manalinkeh_card_akoum_stonewaker",
+        "kind": "card"
+      }
+    },
+    "Architect of the Untamed": {
+      "oracle": {
+        "oracle_id": "be6cab52-b3ae-46a2-a581-2468a49bff25",
+        "name": "Architect of the Untamed",
+        "oracle_text": "Landfall — Whenever a land you control enters, you get {E} (an energy counter).\nPay eight {E}: Create a 6/6 colorless Beast artifact creature token.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Elf Artificer Druid",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/143/architect-of-the-untamed?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16288,
+        "iid": 16377,
+        "name": "Architect of the Untamed",
+        "handler": "manalinkeh_card_architect_of_the_untamed",
+        "kind": "card"
+      }
+    },
+    "Lotus Cobra": {
+      "oracle": {
+        "oracle_id": "8ad91f64-ccab-4edc-bd54-b2ee9267d614",
+        "name": "Lotus Cobra",
+        "oracle_text": "Landfall — Whenever a land you control enters, add one mana of any color.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Snake",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/znr/193/lotus-cobra?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10597,
+        "iid": 5708,
+        "name": "Lotus Cobra",
+        "handler": "manalinkeh_card_lotus_cobra",
+        "kind": "card"
+      }
+    },
+    "Nesting Dragon": {
+      "oracle": {
+        "oracle_id": "0acc9372-58b4-43bf-ab82-1f95831c81d4",
+        "name": "Nesting Dragon",
+        "oracle_text": "Flying\nLandfall — Whenever a land you control enters, create a 0/2 red Dragon Egg creature token with defender and \"When this token dies, create a 2/2 red Dragon creature token with flying and '{R}: This token gets +1/+0 until end of turn.'\"",
+        "mana_cost": "{3}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [
+          "Landfall",
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/225/nesting-dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19110,
+        "iid": 19043,
+        "name": "Nesting Dragon",
+        "handler": "manalinkeh_card_nesting_dragon",
+        "kind": "card"
+      }
+    },
+    "Omnath, Locus of Rage": {
+      "oracle": {
+        "oracle_id": "1816eede-c5bd-49df-958f-a3af64cb2932",
+        "name": "Omnath, Locus of Rage",
+        "oracle_text": "Landfall — Whenever a land you control enters, create a 5/5 red and green Elemental creature token.\nWhenever Omnath or another Elemental you control dies, Omnath deals 3 damage to any target.",
+        "mana_cost": "{3}{R}{R}{G}{G}",
+        "type_line": "Legendary Creature — Elemental",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ecc/129/omnath-locus-of-rage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15390,
+        "iid": 13852,
+        "name": "Omnath, Locus of Rage",
+        "handler": "manalinkeh_card_omnath_locus_of_rage",
+        "kind": "card"
+      }
+    },
+    "Tireless Tracker": {
+      "oracle": {
+        "oracle_id": "e6555cca-e608-4c87-b835-9cd47fd1f543",
+        "name": "Tireless Tracker",
+        "oracle_text": "Landfall — Whenever a land you control enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on this creature.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Human Scout",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Investigate",
+          "Landfall"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/110/tireless-tracker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15991,
+        "iid": 16065,
+        "name": "Tireless Tracker",
+        "handler": "manalinkeh_card_tireless_tracker",
+        "kind": "card"
+      }
+    },
+    "Zendikar's Roil": {
+      "oracle": {
+        "oracle_id": "a842cc2b-52eb-4dc5-86c6-6575c2ed913d",
+        "name": "Zendikar's Roil",
+        "oracle_text": "Landfall — Whenever a land you control enters, create a 2/2 green Elemental creature token.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/znc/88/zendikars-roil?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15257,
+        "iid": 15587,
+        "name": "Zendikar's Roil",
+        "handler": "manalinkeh_card_zendikars_roil",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Beast": {
+      "oracle": {
+        "oracle_id": "d2f35b1a-1eba-4007-8f27-737d26b7a6a2",
+        "name": "Beast",
+        "oracle_text": "This creature can't attack or block alone.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tdsk/3/beast?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18695,
+        "iid": 944,
+        "name": "Beast",
+        "handler": "manalinkeh_card_beast_token",
+        "kind": "card"
+      }
+    },
+    "Clue": {
+      "oracle": {
+        "oracle_id": "496e1083-c792-40a4-adf4-fec1d559cd5e",
+        "name": "Clue",
+        "oracle_text": "{2}, Sacrifice this token: Draw a card.",
+        "mana_cost": "",
+        "type_line": "Token Artifact — Clue",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tfdc/13/clue?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18711,
+        "iid": 16105,
+        "name": "Clue",
+        "handler": "manalinkeh_card_clue",
+        "kind": "card"
+      }
+    },
+    "Coal Stoker": {
+      "oracle": {
+        "oracle_id": "7f3f7fb0-da18-467b-bf57-2ded458fda4d",
+        "name": "Coal Stoker",
+        "oracle_text": "When this creature enters, if you cast it from your hand, add {R}{R}{R}.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Elemental",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/114/coal-stoker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8507,
+        "iid": 1836,
+        "name": "Coal Stoker",
+        "handler": "manalinkeh_card_coal_stoker",
+        "kind": "card"
+      }
+    },
+    "Dragon": {
+      "oracle": {
+        "oracle_id": "ec6df381-5ea7-4c68-8416-093b107f0784",
+        "name": "Dragon",
+        "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Dragon",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/totc/11/dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18719,
+        "iid": 2669,
+        "name": "Dragon",
+        "handler": "manalinkeh_card_dragon_token",
+        "kind": "card"
+      }
+    },
+    "Dragon Egg": {
+      "oracle": {
+        "oracle_id": "8f561498-66e7-4cbf-8cb9-e6fd4717993d",
+        "name": "Dragon Egg",
+        "oracle_text": "Defender\nWhen this creature dies, create a 2/2 red Dragon creature token with flying and \"{R}: This token gets +1/+0 until end of turn.\"",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Dragon Egg",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/173/dragon-egg?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13282,
+        "iid": 2674,
+        "name": "Dragon Egg",
+        "handler": "manalinkeh_card_dragon_egg",
+        "kind": "card"
+      }
+    },
+    "Elemental": {
+      "oracle": {
+        "oracle_id": "ff9ee841-1174-4c4c-b9d3-56d79122acbb",
+        "name": "Elemental",
+        "oracle_text": "Whenever this creature becomes tapped, it deals 1 damage to target player.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Elemental",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmoc/22/elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18726,
+        "iid": 2926,
+        "name": "Elemental",
+        "handler": "manalinkeh_card_elemental_token",
+        "kind": "card"
+      }
+    },
+    "Evolving Wilds": {
+      "oracle": {
+        "oracle_id": "a75445d3-1303-4bb5-89ad-26ea93fecd48",
+        "name": "Evolving Wilds",
+        "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/240/evolving-wilds?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10925,
+        "iid": 3174,
+        "name": "Evolving Wilds",
+        "handler": "manalinkeh_card_terramorphic_expanse",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    }
+  }
+}

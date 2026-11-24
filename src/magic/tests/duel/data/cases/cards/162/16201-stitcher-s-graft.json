@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "card": "Stitcher's Graft",
+  "csvid": 16201,
+  "recipes": [
+    {
+      "family": "equipment_combat_attack_board_effects",
+      "version": 2,
+      "params": {
+        "csvid": 16201,
+        "cast_mana": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "equip_generic": 2,
+        "bonus": [
+          3,
+          3
+        ],
+        "clauses": [
+          "Equipped creature gets +3/+3.",
+          "Whenever equipped creature attacks, it doesn't untap during its controller's next untap step.",
+          "Whenever this Equipment becomes unattached from a permanent, sacrifice that permanent.",
+          "Equip {2}"
+        ],
+        "modes": [
+          "freeze_once",
+          "tapped_other_attacks",
+          "reequip_sacrifice",
+          "destroy_source",
+          "bounce_source_recast",
+          "host_departure",
+          "short_unattached_removal"
+        ]
+      },
+      "oracle_text": "Equipped creature gets +3/+3.\nWhenever equipped creature attacks, it doesn't untap during its controller's next untap step.\nWhenever this Equipment becomes unattached from a permanent, sacrifice that permanent.\nEquip {2}",
+      "variants": [
+        "freeze_once_0",
+        "freeze_once_1",
+        "tapped_other_attacks_0",
+        "tapped_other_attacks_1",
+        "reequip_sacrifice_0",
+        "reequip_sacrifice_1",
+        "destroy_source_0",
+        "destroy_source_1",
+        "bounce_source_recast_0",
+        "bounce_source_recast_1",
+        "host_departure_0",
+        "host_departure_1",
+        "short_unattached_removal_0",
+        "short_unattached_removal_1"
+      ]
+    }
+  ]
+}

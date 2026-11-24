@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "csvid": 15879,
+  "card": "Lambholt Pacifist",
+  "recipes": [
+    {
+      "family": "werewolf_combat_riders",
+      "version": 2,
+      "oracle_text": "This creature can't attack unless you control a creature with power 4 or greater.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+      "params": {
+        "price": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "front": {
+          "name": "Lambholt Pacifist",
+          "power": 3,
+          "toughness": 3,
+          "color": 8,
+          "clauses": [
+            "This creature can't attack unless you control a creature with power 4 or greater.",
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Lambholt Butcher",
+          "power": 4,
+          "toughness": 4,
+          "color": 8,
+          "clauses": [
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        },
+        "rider": "gate"
+      },
+      "variants": [
+        "front_split_0",
+        "front_split_1",
+        "back_split_0",
+        "back_split_1",
+        "back_two_0",
+        "back_two_1",
+        "no_ally_0",
+        "no_ally_1",
+        "small_ally_0",
+        "small_ally_1",
+        "enemy_four_0",
+        "enemy_four_1",
+        "own_four_0",
+        "own_four_1",
+        "back_ready_0",
+        "back_ready_1"
+      ]
+    }
+  ]
+}

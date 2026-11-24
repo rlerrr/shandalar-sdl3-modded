@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Thassa's Emissary",
+  "csvid": 13575,
+  "recipes": [
+    {
+      "family": "bestow_attack_and_damage_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 13575,
+        "normal": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "bestowed": [
+          5,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "creature": [
+          3,
+          3
+        ],
+        "bonus": [
+          3,
+          3
+        ]
+      },
+      "oracle_text": "Bestow {5}{U} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nWhenever this creature or enchanted creature deals combat damage to a player, draw a card.\nEnchanted creature gets +3/+3.",
+      "variants": [
+        "regular_attack_0",
+        "regular_attack_1",
+        "bestowed_attack_0",
+        "bestowed_attack_1",
+        "foreign_attack_0",
+        "foreign_attack_1",
+        "detach_attack_0",
+        "detach_attack_1",
+        "blocked_0",
+        "blocked_1",
+        "noncombat_damage_0",
+        "noncombat_damage_1"
+      ]
+    }
+  ]
+}

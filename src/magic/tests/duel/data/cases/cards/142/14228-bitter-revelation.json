@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Bitter Revelation",
+  "csvid": 14228,
+  "recipes": [
+    {
+      "family": "top_library_selection",
+      "version": 2,
+      "params": {
+        "method": "two",
+        "window": 4,
+        "cap": 2,
+        "required": true,
+        "eligible": [],
+        "life_loss": 2,
+        "cost": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "instant": false
+      },
+      "oracle_text": "Look at the top four cards of your library. Put two of them into your hand and the rest into your graveyard. You lose 2 life.",
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "empty_0",
+        "short_0",
+        "outside_0",
+        "duplicates_0",
+        "wrong_mana_0",
+        "short_mana_0",
+        "countered_0",
+        "replay_0",
+        "low_life_0",
+        "effect_1",
+        "alternate_1",
+        "empty_1",
+        "short_1",
+        "outside_1",
+        "duplicates_1",
+        "wrong_mana_1",
+        "short_mana_1",
+        "countered_1",
+        "replay_1",
+        "low_life_1"
+      ]
+    }
+  ]
+}

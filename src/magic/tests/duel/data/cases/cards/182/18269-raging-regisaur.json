@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "csvid": 18269,
+  "card": "Raging Regisaur",
+  "recipes": [
+    {
+      "family": "attack_damage_triggers",
+      "version": 2,
+      "oracle_text": "Whenever this creature attacks, it deals 1 damage to any target.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "kind": "regisaur",
+          "printed": [
+            2,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "equip": 0,
+          "creature": true,
+          "clauses": [
+            "Whenever this creature attacks, it deals 1 damage to any target."
+          ]
+        }
+      },
+      "variants": [
+        "cast_0",
+        "cast_1",
+        "short_cast_0",
+        "short_cast_1",
+        "hit_0",
+        "hit_1",
+        "idle_0",
+        "idle_1",
+        "opponent_attack_0",
+        "opponent_attack_1",
+        "replay_0",
+        "replay_1",
+        "other_attacker_0",
+        "other_attacker_1",
+        "own_player_0",
+        "own_player_1",
+        "own_creature_0",
+        "own_creature_1",
+        "walker_target_0",
+        "walker_target_1",
+        "walker_attack_0",
+        "walker_attack_1",
+        "opponent_creature_0",
+        "opponent_creature_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "fresh_attack_0",
+        "fresh_attack_1"
+      ]
+    }
+  ]
+}

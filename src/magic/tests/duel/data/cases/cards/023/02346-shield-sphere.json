@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Shield Sphere",
+  "csvid": 2346,
+  "recipes": [
+    {
+      "family": "zero_cost_creature",
+      "version": 2,
+      "params": {
+        "color": 0,
+        "toughness": 6,
+        "defender": true
+      },
+      "oracle_text": "Defender\nWhenever this creature blocks, put a -0/-1 counter on it.",
+      "variants": [
+        "cast_0",
+        "surplus_0",
+        "replay_0",
+        "attack_0",
+        "block_0",
+        "unblocked_0",
+        "repeat_block_0",
+        "cast_1",
+        "surplus_1",
+        "replay_1",
+        "attack_1",
+        "block_1",
+        "unblocked_1",
+        "repeat_block_1"
+      ]
+    }
+  ]
+}

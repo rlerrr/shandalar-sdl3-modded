@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "card": "Well of Ideas",
+  "csvid": 14500,
+  "recipes": [
+    {
+      "family": "draw_step_additional_draw",
+      "version": 2,
+      "params": {
+        "csvid": 14500,
+        "extra": 1,
+        "price": [
+          5,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "modes": [
+          "asymmetric",
+          "limited_entry",
+          "removed_after_entry",
+          "stacked_draw",
+          "countered"
+        ],
+        "clauses": [
+          "When this enchantment enters, draw two cards.",
+          "At the beginning of each other player's draw step, that player draws an additional card.",
+          "At the beginning of your draw step, draw two additional cards."
+        ]
+      },
+      "oracle_text": "When this enchantment enters, draw two cards.\nAt the beginning of each other player's draw step, that player draws an additional card.\nAt the beginning of your draw step, draw two additional cards.",
+      "variants": [
+        "asymmetric_0",
+        "asymmetric_1",
+        "limited_entry_0",
+        "limited_entry_1",
+        "removed_after_entry_0",
+        "removed_after_entry_1",
+        "stacked_draw_0",
+        "stacked_draw_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

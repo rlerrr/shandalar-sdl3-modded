@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "csvid": 11003,
+  "card": "Nirkana Cutthroat",
+  "recipes": [
+    {
+      "family": "level_upper_combat_riders",
+      "version": 2,
+      "params": {
+        "price": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "activation": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          3,
+          2
+        ],
+        "first": [
+          1,
+          4,
+          3
+        ],
+        "second": [
+          3,
+          5,
+          4
+        ],
+        "first_riders": [
+          "Deathtouch"
+        ],
+        "second_riders": [
+          "First strike, deathtouch"
+        ],
+        "effect": "strike"
+      },
+      "oracle_text": "Level up {2}{B} ({2}{B}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 1-2\n4/3\nDeathtouch\nLEVEL 3+\n5/4\nFirst strike, deathtouch",
+      "variants": [
+        "paid_bands_0",
+        "paid_bands_1",
+        "offturn_denied_0",
+        "offturn_denied_1",
+        "pending_denied_0",
+        "pending_denied_1",
+        "ordinary_damage_0",
+        "ordinary_damage_1",
+        "deathtouch_0",
+        "deathtouch_1",
+        "first_strike_0",
+        "first_strike_1"
+      ]
+    }
+  ]
+}

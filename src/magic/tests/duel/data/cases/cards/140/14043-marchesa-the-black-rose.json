@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "csvid": 14043,
+  "card": "Marchesa, the Black Rose",
+  "recipes": [
+    {
+      "family": "attack_follow_on_counters_and_dethrone",
+      "version": 2,
+      "params": {
+        "csvid": 14043,
+        "printed_cost": "{1}{U}{B}{R}"
+      },
+      "oracle_text": "Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.)\nOther creatures you control have dethrone.\nWhenever a creature you control with a +1/+1 counter on it dies, return that card to the battlefield under your control at the beginning of the next end step.",
+      "variants": [
+        "tie_team_0",
+        "behind_team_0",
+        "return_ally_0",
+        "return_self_0",
+        "no_counter_0",
+        "exile_before_end_0",
+        "enemy_counter_0",
+        "other_counter_0",
+        "tie_team_1",
+        "behind_team_1",
+        "return_ally_1",
+        "return_self_1",
+        "no_counter_1",
+        "exile_before_end_1",
+        "enemy_counter_1",
+        "other_counter_1"
+      ]
+    }
+  ]
+}

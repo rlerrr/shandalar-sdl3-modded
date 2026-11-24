@@ -1,0 +1,583 @@
+{
+  "sources": {
+    "Cephalid Vandal": {
+      "oracle": {
+        "oracle_id": "f48dae33-ebf9-41ee-a61e-7573a2733db2",
+        "name": "Cephalid Vandal",
+        "oracle_text": "At the beginning of your upkeep, put a shred counter on this creature. Then mill a card for each shred counter on this creature.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Octopus Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tor/31/cephalid-vandal?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5788,
+        "iid": 1611,
+        "name": "Cephalid Vandal",
+        "handler": "manalinkeh_card_cephalid_vandal",
+        "kind": "card"
+      }
+    },
+    "Curse of the Bloody Tome": {
+      "oracle": {
+        "oracle_id": "5480f855-80b7-45c7-94a9-071c7b5d5ccf",
+        "name": "Curse of the Bloody Tome",
+        "oracle_text": "Enchant player\nAt the beginning of enchanted player's upkeep, that player mills two cards.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Enchantment — Aura Curse",
+        "keywords": [
+          "Enchant",
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/isd/50/curse-of-the-bloody-tome?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11917,
+        "iid": 2159,
+        "name": "Curse of the Bloody Tome",
+        "handler": "manalinkeh_card_curse_of_the_bloody_tome",
+        "kind": "card"
+      }
+    },
+    "Infernal Genesis": {
+      "oracle": {
+        "oracle_id": "c3ce3473-e3bc-4b7c-ae57-957e6c40dc7a",
+        "name": "Infernal Genesis",
+        "oracle_text": "At the beginning of each player's upkeep, that player mills a card. Then they create X 1/1 black Minion creature tokens, where X is the milled card's mana value.",
+        "mana_cost": "{4}{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pcy/68/infernal-genesis?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4840,
+        "iid": 4859,
+        "name": "Infernal Genesis",
+        "handler": "manalinkeh_card_infernal_genesis",
+        "kind": "card"
+      }
+    },
+    "Siren of the Silent Song": {
+      "oracle": {
+        "oracle_id": "abb9a164-34cd-41d7-8e89-5700fff336dd",
+        "name": "Siren of the Silent Song",
+        "oracle_text": "Flying\nInspired — Whenever this creature becomes untapped, each opponent discards a card, then each opponent mills a card.",
+        "mana_cost": "{1}{U}{B}",
+        "type_line": "Creature — Zombie Siren",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Inspired",
+          "Mill"
+        ],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/155/siren-of-the-silent-song?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13806,
+        "iid": 8790,
+        "name": "Siren of the Silent Song",
+        "handler": "manalinkeh_card_siren_of_the_silent_song",
+        "kind": "card"
+      }
+    },
+    "Deep Spawn": {
+      "oracle": {
+        "oracle_id": "d1aba343-d85a-4829-bdfe-db31fcb3c320",
+        "name": "Deep Spawn",
+        "oracle_text": "Trample\nAt the beginning of your upkeep, sacrifice this creature unless you mill two cards.\n{U}: This creature gains shroud until end of turn and doesn't untap during your next untap step. Tap this creature. (A creature with shroud can't be the target of spells or abilities.)",
+        "mana_cost": "{5}{U}{U}{U}",
+        "type_line": "Creature — Homarid",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Trample",
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/45/deep-spawn?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1758,
+        "iid": 2376,
+        "name": "Deep Spawn",
+        "handler": "manalinkeh_card_deep_spawn",
+        "kind": "card"
+      }
+    },
+    "Splinterfright": {
+      "oracle": {
+        "oracle_id": "e54c6fa9-59ca-47dc-9354-91681228371e",
+        "name": "Splinterfright",
+        "oracle_text": "Trample\nSplinterfright's power and toughness are each equal to the number of creature cards in your graveyard.\nAt the beginning of your upkeep, mill two cards. (Put the top two cards of your library into your graveyard.)",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Elemental",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [
+          "Trample",
+          "Mill"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/217/splinterfright?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12086,
+        "iid": 9234,
+        "name": "Splinterfright",
+        "handler": "manalinkeh_card_splinterfright",
+        "kind": "card"
+      }
+    },
+    "Tolarian Serpent": {
+      "oracle": {
+        "oracle_id": "684e18bf-1390-4d12-8e7a-e8562db64dbb",
+        "name": "Tolarian Serpent",
+        "oracle_text": "At the beginning of your upkeep, mill seven cards.",
+        "mana_cost": "{5}{U}{U}",
+        "type_line": "Creature — Serpent",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/57/tolarian-serpent?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3057,
+        "iid": 10067,
+        "name": "Tolarian Serpent",
+        "handler": "manalinkeh_card_tolarian_serpent",
+        "kind": "card"
+      }
+    },
+    "Patient Rebuilding": {
+      "oracle": {
+        "oracle_id": "df9fe645-6f7b-44a0-ab69-b68cb7e525cd",
+        "name": "Patient Rebuilding",
+        "oracle_text": "At the beginning of your upkeep, target opponent mills three cards, then you draw a card for each land card put into their graveyard this way.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/67/patient-rebuilding?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18978,
+        "iid": 18911,
+        "name": "Patient Rebuilding",
+        "handler": "manalinkeh_card_patient_rebuilding",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hunger of the Howlpack": {
+      "oracle": {
+        "oracle_id": "296dee6b-6ec1-4ea4-8dc3-23080dd37646",
+        "name": "Hunger of the Howlpack",
+        "oracle_text": "Put a +1/+1 counter on target creature.\nMorbid — Put three +1/+1 counters on that creature instead if a creature died this turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Morbid"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/168/hunger-of-the-howlpack?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12212,
+        "iid": 4700,
+        "name": "Hunger of the Howlpack",
+        "handler": "manalinkeh_card_hunger_of_the_howlpack",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Minion": {
+      "oracle": {
+        "oracle_id": "62738f7a-1987-4e6c-a7fc-638ef6aaef13",
+        "name": "Minion",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Minion",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tdde/2/minion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18787,
+        "iid": 6167,
+        "name": "Minion",
+        "handler": "manalinkeh_card_minion",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Twiddle": {
+      "oracle": {
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "name": "Twiddle",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 256,
+        "iid": 10281,
+        "name": "Twiddle",
+        "handler": "manalinkeh_card_twiddle",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    }
+  }
+}

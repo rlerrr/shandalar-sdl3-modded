@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Sanity Grinding",
+  "csvid": 9861,
+  "recipes": [
+    {
+      "family": "mill_remaining_spells_and_modes",
+      "version": 2,
+      "params": {
+        "csvid": 9861,
+        "printed_cost": "{U}{U}{U}",
+        "clauses": [
+          "Chroma — Reveal the top ten cards of your library. For each blue mana symbol in the mana costs of the revealed cards, target opponent mills a card. Then put the cards you revealed this way on the bottom of your library in any order."
+        ],
+        "modes": [
+          "mixed",
+          "short_reveal",
+          "zero_blue",
+          "empty_reveal",
+          "short_target"
+        ],
+        "human_modes": []
+      },
+      "oracle_text": "Chroma — Reveal the top ten cards of your library. For each blue mana symbol in the mana costs of the revealed cards, target opponent mills a card. Then put the cards you revealed this way on the bottom of your library in any order.",
+      "variants": [
+        "mixed_0",
+        "mixed_1",
+        "short_reveal_0",
+        "short_reveal_1",
+        "zero_blue_0",
+        "zero_blue_1",
+        "empty_reveal_0",
+        "empty_reveal_1",
+        "short_target_0",
+        "short_target_1"
+      ]
+    }
+  ]
+}

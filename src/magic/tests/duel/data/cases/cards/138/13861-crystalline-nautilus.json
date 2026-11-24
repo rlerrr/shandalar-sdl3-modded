@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Crystalline Nautilus",
+  "csvid": 13861,
+  "recipes": [
+    {
+      "family": "bestow_dynamic_and_control",
+      "version": 2,
+      "params": {
+        "csvid": 13861,
+        "normal": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "bestowed": [
+          3,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "creature": [
+          4,
+          4
+        ],
+        "riders": [
+          "When this permanent becomes the target of a spell or ability, sacrifice it.",
+          "Enchanted creature gets +4/+4 and has \"When this creature becomes the target of a spell or ability, sacrifice it.\""
+        ]
+      },
+      "oracle_text": "Bestow {3}{U}{U} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nWhen this permanent becomes the target of a spell or ability, sacrifice it.\nEnchanted creature gets +4/+4 and has \"When this creature becomes the target of a spell or ability, sacrifice it.\"",
+      "variants": [
+        "regular_ability_0",
+        "regular_ability_1",
+        "bestowed_host_spell_0",
+        "bestowed_host_spell_1",
+        "bestowed_source_spell_0",
+        "bestowed_source_spell_1",
+        "regular_nontap_ability_0",
+        "regular_nontap_ability_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "card": "Prophecy",
+  "csvid": 2228,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "next_upkeep_cantrip_riders",
+      "version": 2,
+      "oracle_text": "Reveal the top card of target opponent's library. If it's a land, you gain 1 life. Then that player shuffles.\nDraw a card at the beginning of the next turn's upkeep.",
+      "params": {
+        "mode": "reveal",
+        "instant": false,
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "effect_0",
+        "effect_1",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "repeat_0",
+        "repeat_1",
+        "nonland_0",
+        "nonland_1",
+        "empty_target_0",
+        "empty_target_1"
+      ]
+    }
+  ]
+}

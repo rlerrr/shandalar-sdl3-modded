@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Broodstar",
+  "csvid": 6629,
+  "recipes": [
+    {
+      "family": "artifact_affinity",
+      "version": 2,
+      "params": {
+        "role": "size",
+        "printed": [
+          8,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "draw_count": 0,
+        "flash": false,
+        "power_pump": 0,
+        "dynamic_artifact_size": true
+      },
+      "oracle_text": "Affinity for artifacts (This spell costs {1} less to cast for each artifact you control.)\nFlying\nBroodstar's power and toughness are each equal to the number of artifacts you control.",
+      "variants": [
+        "paid_size_0",
+        "opponent_only_zero_0",
+        "actual_artifact_entry_0",
+        "last_artifact_leaves_0",
+        "control_changes_size_0",
+        "ground_block_denied_0",
+        "reach_block_allowed_0",
+        "block_flyer_0",
+        "short_blue_0",
+        "paid_size_1",
+        "opponent_only_zero_1",
+        "actual_artifact_entry_1",
+        "last_artifact_leaves_1",
+        "control_changes_size_1",
+        "ground_block_denied_1",
+        "reach_block_allowed_1",
+        "block_flyer_1",
+        "short_blue_1"
+      ]
+    }
+  ]
+}

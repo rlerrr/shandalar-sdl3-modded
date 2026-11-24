@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "csvid": 11958,
+  "card": "Gatstaf Shepherd",
+  "recipes": [
+    {
+      "family": "werewolf_combat_riders",
+      "version": 2,
+      "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+      "params": {
+        "price": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "front": {
+          "name": "Gatstaf Shepherd",
+          "power": 2,
+          "toughness": 2,
+          "color": 8,
+          "clauses": [
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Gatstaf Howler",
+          "power": 3,
+          "toughness": 3,
+          "color": 8,
+          "clauses": [
+            "Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)",
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        },
+        "rider": "intimidate"
+      },
+      "variants": [
+        "front_split_0",
+        "front_split_1",
+        "back_split_0",
+        "back_split_1",
+        "back_two_0",
+        "back_two_1",
+        "front_block_0",
+        "front_block_1",
+        "other_color_0",
+        "other_color_1",
+        "same_color_0",
+        "same_color_1",
+        "artifact_0",
+        "artifact_1"
+      ]
+    }
+  ]
+}

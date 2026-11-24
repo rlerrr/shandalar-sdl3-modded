@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "csvid": 5542,
+  "card": "Dirty Wererat",
+  "recipes": [
+    {
+      "family": "threshold_combat_activated",
+      "version": 2,
+      "oracle_text": "{B}, Discard a card: Regenerate this creature.\nThreshold — As long as there are seven or more cards in your graveyard, this creature gets +2/+2 and can't block.",
+      "params": {
+        "csvid": 5542,
+        "delta": 2,
+        "clauses": [
+          "{B}, Discard a card: Regenerate this creature.",
+          "Threshold — As long as there are seven or more cards in your graveyard, this creature gets +2/+2 and can't block."
+        ],
+        "price": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          2,
+          3
+        ]
+      },
+      "variants": [
+        "six_0",
+        "six_1",
+        "seven_0",
+        "seven_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "regen_cross_0",
+        "regen_cross_1",
+        "regen_no_discard_0",
+        "regen_no_discard_1",
+        "countered_0",
+        "countered_1",
+        "lose_threshold_0",
+        "lose_threshold_1",
+        "replay_0",
+        "replay_1",
+        "crossing_0",
+        "crossing_1",
+        "regen_wrong_mana_0",
+        "regen_wrong_mana_1"
+      ]
+    }
+  ]
+}

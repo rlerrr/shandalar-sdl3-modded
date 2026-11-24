@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "csvid": 15875,
+  "card": "Kessig Forgemaster",
+  "recipes": [
+    {
+      "family": "werewolf_triggered_riders",
+      "version": 2,
+      "params": {
+        "model": "kessig",
+        "price": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "front": {
+          "name": "Kessig Forgemaster",
+          "power": 2,
+          "toughness": 1,
+          "color": 16,
+          "keywords": [],
+          "clauses": [
+            "Whenever this creature blocks or becomes blocked by a creature, this creature deals 1 damage to that creature.",
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Flameheart Werewolf",
+          "power": 3,
+          "toughness": 2,
+          "color": 16,
+          "keywords": [],
+          "clauses": [
+            "Whenever this creature blocks or becomes blocked by a creature, this creature deals 2 damage to that creature.",
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        }
+      },
+      "variants": [
+        "short_cast_0",
+        "short_cast_1",
+        "split_stays_0",
+        "split_stays_1",
+        "replay_0",
+        "replay_1",
+        "front_blocks_0",
+        "front_blocks_1",
+        "front_blocked_0",
+        "front_blocked_1",
+        "back_blocks_0",
+        "back_blocks_1",
+        "back_blocked_0",
+        "back_blocked_1",
+        "unblocked_0",
+        "unblocked_1"
+      ],
+      "oracle_text": "Whenever this creature blocks or becomes blocked by a creature, this creature deals 1 damage to that creature.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+    }
+  ]
+}

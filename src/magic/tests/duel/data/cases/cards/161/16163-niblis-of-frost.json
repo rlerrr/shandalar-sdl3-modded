@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Niblis of Frost",
+  "csvid": 16163,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "cast_instant_or_sorcery_riders",
+      "version": 2,
+      "oracle_text": "Flying\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhenever you cast an instant or sorcery spell, tap target creature an opponent controls. That creature doesn't untap during its controller's next untap step.",
+      "params": {
+        "effect": "freeze",
+        "mana": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "hybrid": [],
+        "stats": [
+          3,
+          3
+        ],
+        "keywords": [
+          "Flying",
+          "Prowess"
+        ]
+      },
+      "variants": [
+        "instant_0",
+        "instant_1",
+        "sorcery_0",
+        "sorcery_1",
+        "own_creature_0",
+        "own_creature_1",
+        "enemy_instant_0",
+        "enemy_instant_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "freeze_expires_0",
+        "freeze_expires_1",
+        "artifact_prowess_0",
+        "artifact_prowess_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

@@ -14,6 +14,7 @@ typedef struct {
 } DuelTestCard;
 typedef struct DuelTestSnapshot DuelTestSnapshot;
 /* Read-only token observations; ordinary card inspection stays unchanged. */
+int duel_test_color(DuelTestRef ref);
 int duel_test_token_characteristic(DuelTestRef ref, const char *property);
 /* Actual shuffle entries since reset, restored by test and AI snapshots. */
 int duel_test_shuffle_count(int player);
@@ -57,8 +58,10 @@ int duel_test_forced_target_choices(void);
    selecting this mode; finish immediately after the actual activation. */
 void duel_test_activation_mode_decision(int player, DuelTestRef source, const char *label,
                                        int fallback_color, int allow_auto_nonmana);
+/* Select this exact mana vector if the named mode opens a hybrid payment submenu. */
+void duel_test_activation_mode_payment(int player, unsigned payment);
 /* 1 selected, 0 unavailable/no mode menu, negative fingerprint of an offered
-   menu lacking the requested label. Distinct menus retain distinct signatures. */
+   menu lacking the requested mode or payment. */
 int duel_test_finish_activation_mode(void);
 /* 0 disables; 1/2 choose the lowest/highest CSVID actually offered for discard.
    Starts a fresh counted policy; both fields are caller-snapshot state. */
@@ -73,10 +76,19 @@ DuelTestRef duel_test_permanent_at(int player, int index);
 DuelTestRef duel_test_hand_at(int player, int index);
 int duel_test_can_activate(DuelTestRef source);
 int duel_test_activate(DuelTestRef source);
+/* Use the live face-up permission for a card in this player's exile zone. */
+int duel_test_can_play_exiled(int player, int owner, int csvid);
+int duel_test_play_exiled(int player, int owner, int csvid);
 /* Native {T}-only mana grants: ref is the host, provider is its attached Aura.
    The host controller acts; arbitrary fee-paying grants are unsupported. */
 int duel_test_can_activate_granted_mana(DuelTestRef host, DuelTestRef provider);
 int duel_test_activate_granted_mana(DuelTestRef host, DuelTestRef provider);
+
+/* A bounded same-controller native activated legacy attached to this live
+   recipient. Its creator must preserve the registered source CSVID copied
+   by native effect creation. */
+int duel_test_can_activate_granted_legacy(DuelTestRef host, int source_csvid);
+int duel_test_activate_granted_legacy(DuelTestRef host, int source_csvid);
 /* Use the real rules-engine hand-ability menu; scripts choose its option. */
 int duel_test_can_activate_hand(DuelTestRef source);
 int duel_test_activate_hand(DuelTestRef source);
@@ -106,19 +118,26 @@ int duel_test_cast(DuelTestRef source);
 /* Run the real cast announcement once, retaining a pending spell for explicit
    responses. Test snapshots restore this opt-in phase marker. */
 int duel_test_announce_spell(DuelTestRef source);
+int duel_test_play_land(DuelTestRef source);
 /* Cast against the actual pending spell after a scripted cast has returned. */
 int duel_test_cast_response(DuelTestRef source);
+int duel_test_activate_response(DuelTestRef source);
 /* Start an explicitly authored death-history fixture as normal turn setup does. */
 void duel_test_reset_death_history(void);
 void duel_test_resolve(void);
+/* Return the losing seat from an explicit engine exit, or -1 if play continues. */
+int duel_test_resolve_duel_result(void);
 /* Drain an explicit response while preserving the pending parent's context. */
 void duel_test_resolve_response(void);
 void duel_test_cleanup(void);
 void duel_test_remove_from_combat(DuelTestRef ref);
 void duel_test_destroy(DuelTestRef ref);
 int duel_test_attack(DuelTestRef ref);
+int duel_test_attack_with_tax(DuelTestRef ref);
 /* Declare a complete group, then run the real attack event and trigger pipeline. */
 void duel_test_begin_attackers(void);
+void duel_test_begin_required_attackers(void);
+int duel_test_can_finish_attackers(void);
 void duel_test_finish_attackers(void);
 void duel_test_begin_blockers(void);
 int duel_test_block(DuelTestRef blocker, DuelTestRef attacker);
@@ -127,9 +146,13 @@ void duel_test_advance_combat(void);
 void duel_test_combat_damage(void);
 /* Resolve end-of-combat triggers, clear assignments, enter second main phase. */
 void duel_test_end_combat(void);
+int duel_test_end_combat_step(void);
 /* Cleanup and the next player's real start-turn gate, then select main phase.
    Does not simulate untap, upkeep or draw; fixture zones and mana stay intact. */
 void duel_test_advance_turn(void);
+/* Finish the current turn and enter the next unskipped scheduled turn.
+   Returns the active seat, or -1 when the duel has ended. */
+int duel_test_advance_scheduled_turn(void);
 /* Run the real complete untap wrapper once after advance_turn. Requires the
    current player, empty stack and zero floating mana; returns 0 on rejection.
    Snapshot restore also restores the one-step preparation. No upkeep/draw. */
@@ -139,6 +162,9 @@ int duel_test_untap_step(int player);
    required. Phase shortcuts/actions invalidate readiness; snapshot restores it.
    Returns 0 without mutation on rejection. Leaves real upkeep; no draw step. */
 int duel_test_upkeep_step(int player);
+/* Run the production draw phase once after this player's real upkeep.
+   Requires an offline turn, an empty stack and empty pools. */
+int duel_test_draw_step(int player);
 DuelTestCard duel_test_inspect(DuelTestRef ref);
 /* Read real permanent counters; invalid refs/kinds return -1. No mutation. */
 int duel_test_counter(DuelTestRef ref, const char *kind);

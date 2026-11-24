@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "csvid": 19642,
+  "card": "Growth Spiral",
+  "recipes": [
+    {
+      "family": "land_from_hand",
+      "version": 2,
+      "oracle_text": "Draw a card. You may put a land card from your hand onto the battlefield.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "cast": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "spell": "draw"
+        }
+      },
+      "variants": [
+        "choose_land_0",
+        "decline_0",
+        "nonland_only_0",
+        "tapped_entry_0",
+        "before_normal_0",
+        "after_normal_0",
+        "cast_short_0",
+        "wrong_color_0",
+        "countered_0",
+        "pending_replay_0",
+        "drawn_land_0",
+        "drawn_declined_0",
+        "opposing_turn_0",
+        "choose_land_1",
+        "decline_1",
+        "nonland_only_1",
+        "tapped_entry_1",
+        "before_normal_1",
+        "after_normal_1",
+        "cast_short_1",
+        "wrong_color_1",
+        "countered_1",
+        "pending_replay_1",
+        "drawn_land_1",
+        "drawn_declined_1",
+        "opposing_turn_1"
+      ]
+    }
+  ]
+}

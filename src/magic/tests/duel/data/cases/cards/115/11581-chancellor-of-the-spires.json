@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "csvid": 11581,
+  "card": "Chancellor of the Spires",
+  "recipes": [
+    {
+      "family": "mill_remaining_entry_and_token_riders",
+      "version": 2,
+      "params": {
+        "csvid": 11581,
+        "mana": [
+          4,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          5,
+          7
+        ]
+      },
+      "oracle_text": "You may reveal this card from your opening hand. If you do, at the beginning of the first upkeep, each opponent mills seven cards.\nFlying\nWhen this creature enters, you may cast target instant or sorcery card from an opponent's graveyard without paying its mana cost.",
+      "variants": [
+        "free_cast_0",
+        "free_cast_1",
+        "decline_cast_0",
+        "decline_cast_1",
+        "own_only_0",
+        "own_only_1",
+        "grave_shroud_0",
+        "grave_shroud_1",
+        "opening_reveal_0",
+        "opening_reveal_1",
+        "opening_decline_0",
+        "opening_decline_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

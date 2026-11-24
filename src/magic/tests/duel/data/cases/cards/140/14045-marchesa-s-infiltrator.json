@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 14045,
+  "card": "Marchesa's Infiltrator",
+  "recipes": [
+    {
+      "family": "attack_follow_on_counters_and_dethrone",
+      "version": 2,
+      "params": {
+        "csvid": 14045,
+        "printed_cost": "{2}{U}"
+      },
+      "oracle_text": "Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.)\nWhenever this creature deals combat damage to a player, draw a card.",
+      "variants": [
+        "tie_0",
+        "defender_ahead_0",
+        "defender_behind_0",
+        "blocked_0",
+        "fog_0",
+        "tie_1",
+        "defender_ahead_1",
+        "defender_behind_1",
+        "blocked_1",
+        "fog_1"
+      ]
+    }
+  ]
+}

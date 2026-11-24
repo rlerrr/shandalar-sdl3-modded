@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Deadbridge Chant",
+  "csvid": 13139,
+  "recipes": [
+    {
+      "family": "mill_recursion_and_zones",
+      "version": 2,
+      "params": {
+        "csvid": 13139,
+        "cost": [
+          4,
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this enchantment enters, mill ten cards.\nAt the beginning of your upkeep, choose a card at random in your graveyard. If it's a creature card, put it onto the battlefield. Otherwise, put it into your hand.",
+      "variants": [
+        "mill_ten_0",
+        "mill_ten_1",
+        "creature_upkeep_0",
+        "creature_upkeep_1",
+        "noncreature_upkeep_0",
+        "noncreature_upkeep_1",
+        "repeat_upkeep_0",
+        "repeat_upkeep_1"
+      ]
+    }
+  ]
+}

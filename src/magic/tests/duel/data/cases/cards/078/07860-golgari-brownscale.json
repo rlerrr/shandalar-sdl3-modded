@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Golgari Brownscale",
+  "csvid": 7860,
+  "recipes": [
+    {
+      "family": "mill_remaining_dredge_and_graveyard",
+      "version": 2,
+      "params": {
+        "csvid": 7860,
+        "cost": [
+          1,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "dredge": 2
+      },
+      "oracle_text": "When this card is put into your hand from your graveyard, you gain 2 life.\nDredge 2 (If you would draw a card, you may mill two cards instead. If you do, return this card from your graveyard to your hand.)",
+      "variants": [
+        "exact_0",
+        "exact_1",
+        "pass_0",
+        "pass_1",
+        "short_0",
+        "short_1",
+        "raise_dead_0",
+        "raise_dead_1",
+        "bounce_non_grave_0",
+        "bounce_non_grave_1"
+      ]
+    }
+  ]
+}

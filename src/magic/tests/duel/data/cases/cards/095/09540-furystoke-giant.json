@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Furystoke Giant",
+  "csvid": 9540,
+  "recipes": [
+    {
+      "family": "remaining_entry_combat",
+      "version": 2,
+      "params": {
+        "csvid": 9540,
+        "cost": "{3}{R}{R}",
+        "choices": [
+          "player_0",
+          "player_1",
+          "creature_0",
+          "creature_1",
+          "persist_0",
+          "persist_1",
+          "expired_0",
+          "expired_1",
+          "sick_0",
+          "sick_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, other creatures you control gain \"{T}: This creature deals 2 damage to any target\" until end of turn.\nPersist (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)",
+      "variants": [
+        "player_0",
+        "player_1",
+        "creature_0",
+        "creature_1",
+        "persist_0",
+        "persist_1",
+        "expired_0",
+        "expired_1",
+        "sick_0",
+        "sick_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

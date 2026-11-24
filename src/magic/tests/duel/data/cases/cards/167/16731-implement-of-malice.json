@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "csvid": 16731,
+  "card": "Implement of Malice",
+  "recipes": [
+    {
+      "family": "departure_counters_and_search",
+      "version": 2,
+      "params": {
+        "csvid": 16731,
+        "printed_cost": "{2}"
+      },
+      "oracle_text": "{B}, Sacrifice this artifact: Target player discards a card. Activate only as a sorcery.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+      "variants": [
+        "ability_0",
+        "dies_0",
+        "bounce_0",
+        "ability_1",
+        "dies_1",
+        "bounce_1"
+      ]
+    }
+  ]
+}

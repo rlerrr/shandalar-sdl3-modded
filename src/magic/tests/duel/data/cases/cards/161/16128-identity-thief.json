@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Identity Thief",
+  "csvid": 16128,
+  "recipes": [
+    {
+      "family": "attack_trigger_zones_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 16128,
+        "cost": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks, you may exile another target nontoken creature. If you do, this creature becomes a copy of that creature until end of turn. Return the exiled card to the battlefield under its owner's control at the beginning of the next end step.",
+      "variants": [
+        "copy_0",
+        "copy_1",
+        "copy_flying_0",
+        "copy_flying_1",
+        "decline_0",
+        "decline_1",
+        "token_only_0",
+        "token_only_1",
+        "no_other_0",
+        "no_other_1"
+      ]
+    }
+  ]
+}

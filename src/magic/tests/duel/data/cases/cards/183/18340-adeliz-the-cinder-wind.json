@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Adeliz, the Cinder Wind",
+  "csvid": 18340,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "cast_instant_or_sorcery_riders",
+      "version": 2,
+      "oracle_text": "Flying, haste\nWhenever you cast an instant or sorcery spell, Wizards you control get +1/+1 until end of turn.",
+      "params": {
+        "effect": "wizard",
+        "mana": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "hybrid": [],
+        "stats": [
+          2,
+          2
+        ],
+        "keywords": [
+          "Flying",
+          "Haste"
+        ]
+      },
+      "variants": [
+        "instant_0",
+        "instant_1",
+        "sorcery_0",
+        "sorcery_1",
+        "own_creature_0",
+        "own_creature_1",
+        "enemy_instant_0",
+        "enemy_instant_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "expiry_0",
+        "expiry_1",
+        "flying_haste_0",
+        "flying_haste_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Gatekeeper of Malakir",
+  "csvid": 10542,
+  "recipes": [
+    {
+      "family": "creature_entry_sacrifices",
+      "version": 2,
+      "params": {
+        "mode": "kicker",
+        "mana": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": [
+          "Kicker"
+        ],
+        "power": 2,
+        "toughness": 2
+      },
+      "oracle_text": "Kicker {B} (You may pay an additional {B} as you cast this spell.)\nWhen this creature enters, if it was kicked, target player sacrifices a creature of their choice.",
+      "variants": [
+        "paid_0",
+        "ordinary_0",
+        "no_victim_0",
+        "countered_0",
+        "wrong_color_0",
+        "snapshot_0",
+        "paid_1",
+        "ordinary_1",
+        "no_victim_1",
+        "countered_1",
+        "wrong_color_1",
+        "snapshot_1",
+        "decline_kicker_0",
+        "self_target_0"
+      ]
+    }
+  ]
+}

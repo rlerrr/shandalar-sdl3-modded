@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Markov Warlord",
+  "csvid": 12230,
+  "recipes": [
+    {
+      "family": "entry_rider_combat_modifiers",
+      "version": 2,
+      "params": {
+        "csvid": 12230,
+        "cost": "{5}{R}",
+        "choices": [
+          "two_0",
+          "two_1",
+          "one_0",
+          "one_1",
+          "decline_0",
+          "decline_1",
+          "expire_0",
+          "expire_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)\nWhen this creature enters, up to two target creatures can't block this turn.",
+      "variants": [
+        "two_0",
+        "two_1",
+        "one_0",
+        "one_1",
+        "decline_0",
+        "decline_1",
+        "expire_0",
+        "expire_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

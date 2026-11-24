@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "csvid": 7802,
+  "card": "Conclave Phalanx",
+  "recipes": [
+    {
+      "family": "convoke_entry_effects",
+      "version": 2,
+      "params": {
+        "csvid": 7802,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "stats": [
+          2,
+          4
+        ]
+      },
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nWhen this creature enters, you gain 1 life for each creature you control.",
+      "variants": [
+        "alone_0",
+        "alone_1",
+        "mixed_0",
+        "mixed_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

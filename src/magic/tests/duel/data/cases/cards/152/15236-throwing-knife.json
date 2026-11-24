@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Throwing Knife",
+  "csvid": 15236,
+  "recipes": [
+    {
+      "family": "equipment_combat_attack_board_effects",
+      "version": 2,
+      "params": {
+        "csvid": 15236,
+        "cast_mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "equip_generic": 2,
+        "bonus": [
+          2,
+          0
+        ],
+        "clauses": [
+          "Equipped creature gets +2/+0.",
+          "Whenever equipped creature attacks, you may sacrifice this Equipment. If you do, this Equipment deals 2 damage to any target.",
+          "Equip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)"
+        ],
+        "modes": [
+          "own_attack",
+          "other_attack",
+          "reequip_attack",
+          "unfunded",
+          "detached",
+          "throw_at_creature",
+          "human_declines"
+        ]
+      },
+      "oracle_text": "Equipped creature gets +2/+0.\nWhenever equipped creature attacks, you may sacrifice this Equipment. If you do, this Equipment deals 2 damage to any target.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+      "variants": [
+        "own_attack_0",
+        "own_attack_1",
+        "other_attack_0",
+        "other_attack_1",
+        "reequip_attack_0",
+        "reequip_attack_1",
+        "unfunded_0",
+        "unfunded_1",
+        "detached_0",
+        "detached_1",
+        "throw_at_creature_0",
+        "throw_at_creature_1",
+        "human_declines_0"
+      ]
+    }
+  ]
+}

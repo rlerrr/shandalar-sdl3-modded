@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Great Teacher's Decree",
+  "csvid": 14926,
+  "recipes": [
+    {
+      "family": "untargeted_rebound",
+      "version": 2,
+      "params": {
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "keywords": [],
+        "mode": "team",
+        "power": 2,
+        "toughness": 1
+      },
+      "oracle_text": "Creatures you control get +2/+1 until end of turn.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
+      "variants": [
+        "scheduled_0",
+        "countered_0",
+        "snapshot_0",
+        "wrong_color_0",
+        "enemy_only_0",
+        "combat_0",
+        "scheduled_1",
+        "countered_1",
+        "snapshot_1",
+        "wrong_color_1",
+        "enemy_only_1",
+        "combat_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Living End",
+  "csvid": 8596,
+  "recipes": [
+    {
+      "family": "suspend_mass_effects",
+      "version": 2,
+      "params": {
+        "csvid": 8596,
+        "duration": 3,
+        "effect": "exchange",
+        "mana": [
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Suspend 3—{2}{B}{B}\nEach player exiles all creature cards from their graveyard, then sacrifices all creatures they control, then puts all cards they exiled this way onto the battlefield.",
+      "variants": [
+        "parked_0",
+        "parked_1",
+        "countdown_0",
+        "countdown_1",
+        "unfunded_0",
+        "unfunded_1",
+        "no_grave_creatures_0",
+        "no_grave_creatures_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "first_owner_0",
+        "first_owner_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

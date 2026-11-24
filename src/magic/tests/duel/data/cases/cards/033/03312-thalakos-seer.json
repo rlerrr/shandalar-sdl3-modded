@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 3312,
+  "card": "Thalakos Seer",
+  "recipes": [
+    {
+      "family": "departure_counters_and_search",
+      "version": 2,
+      "params": {
+        "csvid": 3312,
+        "printed_cost": "{U}{U}"
+      },
+      "oracle_text": "Shadow (This creature can block or be blocked by only creatures with shadow.)\nWhen this creature leaves the battlefield, draw a card.",
+      "variants": [
+        "dies_0",
+        "bounce_0",
+        "exile_0",
+        "shadow_0",
+        "shadow_block_0",
+        "dies_1",
+        "bounce_1",
+        "exile_1",
+        "shadow_1",
+        "shadow_block_1"
+      ]
+    }
+  ]
+}

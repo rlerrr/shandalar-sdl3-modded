@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 14550,
+  "card": "Flamerush Rider",
+  "recipes": [
+    {
+      "family": "attack_trigger_tokens_and_combat",
+      "version": 2,
+      "params": {
+        "csvid": 14550,
+        "printed_cost": "{4}{R}",
+        "keywords": [
+          "Dash"
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks, create a token that's a copy of another target attacking creature and that's tapped and attacking. Exile the token at end of combat.\nDash {2}{R}{R} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)",
+      "variants": [
+        "copy_0",
+        "alone_0",
+        "dash_0",
+        "original_bounced_0",
+        "copy_1",
+        "alone_1",
+        "dash_1",
+        "original_bounced_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Door of Destinies",
+  "csvid": 9347,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "chosen_type_effects",
+      "version": 2,
+      "oracle_text": "As this artifact enters, choose a creature type.\nWhenever you cast a spell of the chosen type, put a charge counter on this artifact.\nCreatures you control of the chosen type get +1/+1 for each charge counter on this artifact.",
+      "params": {
+        "mode": "door",
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "goblins_0",
+        "goblins_1",
+        "angels_0",
+        "angels_1",
+        "short_0",
+        "short_1",
+        "source_removed_0",
+        "source_removed_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "late_match_0",
+        "late_match_1",
+        "matching_casts_0",
+        "matching_casts_1",
+        "kindred_0",
+        "kindred_1",
+        "countered_match_0",
+        "countered_match_1",
+        "opposing_cast_0",
+        "opposing_cast_1",
+        "nonmatching_cast_0",
+        "nonmatching_cast_1",
+        "failed_cast_0",
+        "failed_cast_1",
+        "turn_persist_0",
+        "turn_persist_1"
+      ]
+    }
+  ]
+}

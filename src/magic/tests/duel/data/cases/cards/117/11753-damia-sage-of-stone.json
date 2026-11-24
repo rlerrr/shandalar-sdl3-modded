@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Damia, Sage of Stone",
+  "csvid": 11753,
+  "recipes": [
+    {
+      "family": "draw_step_skip_and_trigger",
+      "version": 2,
+      "params": {
+        "csvid": 11753,
+        "casting_cost": [
+          4,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "clauses": [
+          "Deathtouch",
+          "Skip your draw step.",
+          "At the beginning of your upkeep, if you have fewer than seven cards in hand, draw cards equal to the difference."
+        ]
+      },
+      "oracle_text": "Deathtouch\nSkip your draw step.\nAt the beginning of your upkeep, if you have fewer than seven cards in hand, draw cards equal to the difference.",
+      "variants": [
+        "refill_0",
+        "refill_1",
+        "full_0",
+        "full_1",
+        "deathtouch_0",
+        "deathtouch_1"
+      ]
+    }
+  ]
+}

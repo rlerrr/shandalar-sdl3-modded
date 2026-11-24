@@ -1,0 +1,605 @@
+{
+  "version": 1,
+  "sources": {
+    "Hada Freeblade": {
+      "oracle": {
+        "oracle_id": "e9ad9df4-2fd6-4a22-b861-0a8d28f2fe10",
+        "name": "Hada Freeblade",
+        "oracle_text": "Whenever this creature or another Ally you control enters, you may put a +1/+1 counter on this creature.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Soldier Ally",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/7/hada-freeblade?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10772,
+        "iid": 4333,
+        "name": "Hada Freeblade",
+        "handler": "manalinkeh_card_hada_freeblade",
+        "kind": "card"
+      }
+    },
+    "Makindi Shieldmate": {
+      "oracle": {
+        "oracle_id": "b8a65e49-2379-42bf-823e-c208c2550aeb",
+        "name": "Makindi Shieldmate",
+        "oracle_text": "Defender\nWhenever this creature or another Ally you control enters, you may put a +1/+1 counter on this creature.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Kor Soldier Ally",
+        "power": "0",
+        "toughness": "3",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/26/makindi-shieldmate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10602,
+        "iid": 5827,
+        "name": "Makindi Shieldmate",
+        "handler": "manalinkeh_card_makindi_shieldmate",
+        "kind": "card"
+      }
+    },
+    "Nimana Sell-Sword": {
+      "oracle": {
+        "oracle_id": "5093df46-92cb-4f79-a5cf-4351c1fcf36d",
+        "name": "Nimana Sell-Sword",
+        "oracle_text": "Whenever this creature or another Ally you control enters, you may put a +1/+1 counter on this creature.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Human Warrior Ally",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/106/nimana-sell-sword?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10618,
+        "iid": 6640,
+        "name": "Nimana Sell-Sword",
+        "handler": "manalinkeh_card_oran_rief_survivalist",
+        "kind": "card"
+      }
+    },
+    "Oran-Rief Survivalist": {
+      "oracle": {
+        "oracle_id": "36b4c44a-7682-4876-ae2a-35112cb55ec0",
+        "name": "Oran-Rief Survivalist",
+        "oracle_text": "Whenever this creature or another Ally you control enters, you may put a +1/+1 counter on this creature.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Human Warrior Ally",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/174/oran-rief-survivalist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10628,
+        "iid": 6863,
+        "name": "Oran-Rief Survivalist",
+        "handler": "manalinkeh_card_oran_rief_survivalist",
+        "kind": "card"
+      }
+    },
+    "Tuktuk Grunts": {
+      "oracle": {
+        "oracle_id": "200ce414-8583-4bbd-88a6-ca30babb613d",
+        "name": "Tuktuk Grunts",
+        "oracle_text": "Haste\nWhenever this creature or another Ally you control enters, you may put a +1/+1 counter on this creature.",
+        "mana_cost": "{4}{R}",
+        "type_line": "Creature — Goblin Warrior Ally",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/152/tuktuk-grunts?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10694,
+        "iid": 10256,
+        "name": "Tuktuk Grunts",
+        "handler": "manalinkeh_card_tuktuk_grunts",
+        "kind": "card"
+      }
+    },
+    "Umara Raptor": {
+      "oracle": {
+        "oracle_id": "a58ee84f-1d9c-4924-b7b1-14a9b2ba3b98",
+        "name": "Umara Raptor",
+        "oracle_text": "Flying\nWhenever this creature or another Ally you control enters, you may put a +1/+1 counter on this creature.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Bird Ally",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/75/umara-raptor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10698,
+        "iid": 10322,
+        "name": "Umara Raptor",
+        "handler": "manalinkeh_card_oran_rief_survivalist",
+        "kind": "card"
+      }
+    },
+    "Graypelt Hunter": {
+      "oracle": {
+        "oracle_id": "b0553bf6-ecc1-4d08-9777-19827658355b",
+        "name": "Graypelt Hunter",
+        "oracle_text": "Trample\nWhenever this creature or another Ally you control enters, you may put a +1/+1 counter on this creature.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Human Warrior Ally",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddp/13/graypelt-hunter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10768,
+        "iid": 12893,
+        "name": "Graypelt Hunter",
+        "handler": "manalinkeh_card_oran_rief_survivalist",
+        "kind": "card"
+      }
+    },
+    "Kazandu Blademaster": {
+      "oracle": {
+        "oracle_id": "133f5d30-d883-493e-93a1-cf9583db460b",
+        "name": "Kazandu Blademaster",
+        "oracle_text": "First strike, vigilance\nWhenever this creature or another Ally you control enters, you may put a +1/+1 counter on this creature.",
+        "mana_cost": "{W}{W}",
+        "type_line": "Creature — Human Soldier Ally",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Vigilance",
+          "First strike"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/16/kazandu-blademaster?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10579,
+        "iid": 5186,
+        "name": "Kazandu Blademaster",
+        "handler": "manalinkeh_card_kazandu_blademaster",
+        "kind": "card"
+      }
+    },
+    "Kazuul Warlord": {
+      "oracle": {
+        "oracle_id": "78504edb-6536-4a11-ac1c-7d53684f2226",
+        "name": "Kazuul Warlord",
+        "oracle_text": "Whenever this creature or another Ally you control enters, you may put a +1/+1 counter on each Ally creature you control.",
+        "mana_cost": "{4}{R}",
+        "type_line": "Creature — Minotaur Warrior Ally",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/134/kazuul-warlord?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10581,
+        "iid": 5189,
+        "name": "Kazuul Warlord",
+        "handler": "manalinkeh_card_kazuul_warlord",
+        "kind": "card"
+      }
+    },
+    "Turntimber Ranger": {
+      "oracle": {
+        "oracle_id": "391fdf1e-e489-410e-9f33-b674fd98d0fc",
+        "name": "Turntimber Ranger",
+        "oracle_text": "Whenever this creature or another Ally you control enters, you may create a 2/2 green Wolf creature token. If you do, put a +1/+1 counter on this creature.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Elf Scout Ranger Ally",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/191/turntimber-ranger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10697,
+        "iid": 10277,
+        "name": "Turntimber Ranger",
+        "handler": "manalinkeh_card_turntimber_ranger",
+        "kind": "card"
+      }
+    },
+    "Talus Paladin": {
+      "oracle": {
+        "oracle_id": "98914c0e-967f-4c8b-bd74-e2ce15c7fe95",
+        "name": "Talus Paladin",
+        "oracle_text": "Whenever this creature or another Ally you control enters, you may have Allies you control gain lifelink until end of turn, and you may put a +1/+1 counter on this creature.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Human Knight Ally",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/21/talus-paladin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10845,
+        "iid": 9692,
+        "name": "Talus Paladin",
+        "handler": "manalinkeh_card_talus_paladin",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Cliffside Lookout": {
+      "oracle": {
+        "oracle_id": "97671aac-7322-44ae-8908-d573734db3af",
+        "name": "Cliffside Lookout",
+        "oracle_text": "{4}{W}: Creatures you control get +1/+1 until end of turn.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Kor Scout Ally",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/20/cliffside-lookout?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15294,
+        "iid": 12000,
+        "name": "Cliffside Lookout",
+        "handler": "manalinkeh_card_cliffside_lookout",
+        "kind": "card"
+      }
+    },
+    "Avian Changeling": {
+      "oracle": {
+        "oracle_id": "767c1f97-03de-474d-9112-e7521ba3b3f3",
+        "name": "Avian Changeling",
+        "oracle_text": "Changeling (This card is every creature type.)\nFlying",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Shapeshifter",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Changeling",
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mma/6/avian-changeling?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9068,
+        "iid": 765,
+        "name": "Avian Changeling",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Elvish Piper": {
+      "oracle": {
+        "oracle_id": "872ef617-7cdb-4a7a-85f5-efc9e12bece5",
+        "name": "Elvish Piper",
+        "oracle_text": "{G}, {T}: You may put a creature card from your hand onto the battlefield.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Elf Shaman",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/a25/168/elvish-piper?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1027,
+        "iid": 2984,
+        "name": "Elvish Piper",
+        "handler": "manalinkeh_card_elvish_piper",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Sol Ring": {
+      "oracle": {
+        "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+        "name": "Sol Ring",
+        "oracle_text": "{T}: Add {C}{C}.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+      },
+      "registry": {
+        "csvid": 230,
+        "iid": 8968,
+        "name": "Sol Ring",
+        "handler": "manalinkeh_card_sol_ring",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Mons's Goblin Raiders": {
+      "oracle": {
+        "oracle_id": "a37159df-f6d7-4db6-85de-0ea77f425993",
+        "name": "Mons's Goblin Raiders",
+        "oracle_text": "",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/s00/32/monss-goblin-raiders?utm_source=api"
+      },
+      "registry": {
+        "csvid": 163,
+        "iid": 6293,
+        "name": "Mons's Goblin Raiders",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Wolf": {
+      "oracle": {
+        "oracle_id": "b2224843-8274-4872-a7ca-2adf69cc066b",
+        "name": "Wolf",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Wolf",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/thob/9/wolf?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18856,
+        "iid": 11056,
+        "name": "Wolf",
+        "handler": "manalinkeh_card_wolf_token",
+        "kind": "card"
+      }
+    }
+  }
+}

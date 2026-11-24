@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Phthisis",
+  "csvid": 8632,
+  "recipes": [
+    {
+      "family": "suspend_entry_and_sacrifice",
+      "version": 2,
+      "params": {
+        "csvid": 8632,
+        "duration": 5,
+        "mana": [
+          3,
+          4,
+          0,
+          0,
+          0,
+          0
+        ],
+        "suspend_fee": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Destroy target creature. Its controller loses life equal to its power plus its toughness.\nSuspend 5—{1}{B} (Rather than cast this card from your hand, you may pay {1}{B} and exile it with five time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost.)",
+      "variants": [
+        "parked_0",
+        "parked_1",
+        "unfunded_0",
+        "unfunded_1",
+        "countdown_0",
+        "countdown_1",
+        "normal_0",
+        "normal_1",
+        "own_target_0",
+        "own_target_1",
+        "indestructible_0",
+        "indestructible_1",
+        "wrong_suspend_color_0",
+        "wrong_suspend_color_1",
+        "countered_normal_0",
+        "countered_normal_1",
+        "replay_release_0",
+        "replay_release_1",
+        "response_growth_0",
+        "response_growth_1",
+        "target_bounced_0",
+        "target_bounced_1"
+      ]
+    }
+  ]
+}

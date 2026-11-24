@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Arctic Merfolk",
+  "csvid": 5201,
+  "recipes": [
+    {
+      "family": "kicker_entry_counters",
+      "version": 2,
+      "oracle_text": "Kicker—Return a creature you control to its owner's hand. (You may return a creature you control to its owner's hand in addition to any other costs as you cast this spell.)\nIf this creature was kicked, it enters with a +1/+1 counter on it.",
+      "params": {
+        "mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "life": 0,
+        "returned_card": "Grizzly Bears",
+        "counter": "plus1",
+        "base": 0,
+        "extra": 1,
+        "rider": "none"
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "kicker_short_0",
+        "kicker_short_1",
+        "base_short_0",
+        "base_short_1",
+        "countered_0",
+        "countered_1",
+        "blink_0",
+        "blink_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

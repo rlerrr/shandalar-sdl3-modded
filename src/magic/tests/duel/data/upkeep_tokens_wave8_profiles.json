@@ -1,0 +1,1402 @@
+{
+  "sources": {
+    "Assemble the Legion": {
+      "oracle": {
+        "oracle_id": "6f81bef3-6ca0-4cf4-aa99-7b2813eeef04",
+        "name": "Assemble the Legion",
+        "oracle_text": "At the beginning of your upkeep, put a muster counter on this enchantment. Then create a 1/1 red and white Soldier creature token with haste for each muster counter on this enchantment.",
+        "mana_cost": "{3}{R}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/163/assemble-the-legion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12885,
+        "iid": 681,
+        "name": "Assemble the Legion",
+        "handler": "manalinkeh_card_assemble_the_legion",
+        "kind": "card"
+      }
+    },
+    "Awakening Zone": {
+      "oracle": {
+        "oracle_id": "f955bc96-d602-4142-a9a2-87009cc7028c",
+        "name": "Awakening Zone",
+        "oracle_text": "At the beginning of your upkeep, you may create a 0/1 colorless Eldrazi Spawn creature token. It has \"Sacrifice this token: Add {C}.\"",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/262/awakening-zone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10873,
+        "iid": 771,
+        "name": "Awakening Zone",
+        "handler": "manalinkeh_card_awakening_zone",
+        "kind": "card"
+      }
+    },
+    "Bitterblossom": {
+      "oracle": {
+        "oracle_id": "fb868840-09fa-49b1-85cb-b08ad065e972",
+        "name": "Bitterblossom",
+        "oracle_text": "At the beginning of your upkeep, you lose 1 life and create a 1/1 black Faerie Rogue creature token with flying.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Kindred Enchantment — Faerie",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/69/bitterblossom?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1440,
+        "iid": 1015,
+        "name": "Bitterblossom",
+        "handler": "manalinkeh_card_bitterblossom",
+        "kind": "card"
+      }
+    },
+    "Bringer of the Green Dawn": {
+      "oracle": {
+        "oracle_id": "f0548af1-d1cc-44d1-b5a0-f013563f29de",
+        "name": "Bringer of the Green Dawn",
+        "oracle_text": "You may pay {W}{U}{B}{R}{G} rather than pay this spell's mana cost.\nTrample\nAt the beginning of your upkeep, you may create a 3/3 green Beast creature token.",
+        "mana_cost": "{7}{G}{G}",
+        "type_line": "Creature — Bringer",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G",
+          "R",
+          "U",
+          "W"
+        ],
+        "cmc": 9.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5dn/83/bringer-of-the-green-dawn?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7022,
+        "iid": 1348,
+        "name": "Bringer of the Green Dawn",
+        "handler": "manalinkeh_card_bringer_of_the_green_dawn",
+        "kind": "card"
+      }
+    },
+    "Creakwood Liege": {
+      "oracle": {
+        "oracle_id": "1e67b4eb-e5d2-4368-8284-4ba5c4c42455",
+        "name": "Creakwood Liege",
+        "oracle_text": "Other black creatures you control get +1/+1.\nOther green creatures you control get +1/+1.\nAt the beginning of your upkeep, you may create a 1/1 black and green Worm creature token.",
+        "mana_cost": "{1}{B/G}{B/G}{B/G}",
+        "type_line": "Creature — Horror",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/301/creakwood-liege?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9759,
+        "iid": 2036,
+        "name": "Creakwood Liege",
+        "handler": "manalinkeh_card_creakwood_liege",
+        "kind": "card"
+      }
+    },
+    "Dragon Broodmother": {
+      "oracle": {
+        "oracle_id": "a9a6c2ba-30ba-4e45-9ea0-ea9833342069",
+        "name": "Dragon Broodmother",
+        "oracle_text": "Flying\nAt the beginning of each upkeep, create a 1/1 red and green Dragon creature token with flying and devour 2. (As the token enters, you may sacrifice any number of creatures. It enters with twice that many +1/+1 counters on it.)",
+        "mana_cost": "{2}{R}{R}{R}{G}",
+        "type_line": "Creature — Dragon",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/arb/53/dragon-broodmother?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10263,
+        "iid": 2673,
+        "name": "Dragon Broodmother",
+        "handler": "manalinkeh_card_dragon_broodmother",
+        "kind": "card"
+      }
+    },
+    "Dragonmaster Outcast": {
+      "oracle": {
+        "oracle_id": "b6fb79c3-cd32-4045-8177-e52841eea65b",
+        "name": "Dragonmaster Outcast",
+        "oracle_text": "At the beginning of your upkeep, if you control six or more lands, create a 5/5 red Dragon creature token with flying.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Human Shaman",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/211/dragonmaster-outcast?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10755,
+        "iid": 2695,
+        "name": "Dragonmaster Outcast",
+        "handler": "manalinkeh_card_dragonmaster_outcast",
+        "kind": "card"
+      }
+    },
+    "Dreampod Druid": {
+      "oracle": {
+        "oracle_id": "db2af2b0-a5aa-4e4a-b5bc-52a5ac3968fc",
+        "name": "Dreampod Druid",
+        "oracle_text": "At the beginning of each upkeep, if this creature is enchanted, create a 1/1 green Saproling creature token.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Human Druid",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pca/64/dreampod-druid?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12520,
+        "iid": 2745,
+        "name": "Dreampod Druid",
+        "handler": "manalinkeh_card_dreampod_druid",
+        "kind": "card"
+      }
+    },
+    "First Response": {
+      "oracle": {
+        "oracle_id": "0fe66bc0-8eda-4625-a068-6a5de826466f",
+        "name": "First Response",
+        "oracle_text": "At the beginning of each upkeep, if you lost life last turn, create a 1/1 white Soldier creature token.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/22/first-response?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14100,
+        "iid": 3445,
+        "name": "First Response",
+        "handler": "manalinkeh_card_first_response",
+        "kind": "card"
+      }
+    },
+    "Followed Footsteps": {
+      "oracle": {
+        "oracle_id": "732b1314-68bb-4d3d-9f3f-7e66e763caf5",
+        "name": "Followed Footsteps",
+        "oracle_text": "Enchant creature\nAt the beginning of your upkeep, create a token that's a copy of enchanted creature.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cn2/111/followed-footsteps?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7849,
+        "iid": 3568,
+        "name": "Followed Footsteps",
+        "handler": "manalinkeh_card_followed_footsteps",
+        "kind": "card"
+      }
+    },
+    "Goblin Assault": {
+      "oracle": {
+        "oracle_id": "d1255776-b88b-4f05-9b71-ff89a2eba453",
+        "name": "Goblin Assault",
+        "oracle_text": "At the beginning of your upkeep, create a 1/1 red Goblin creature token with haste.\nGoblin creatures attack each combat if able.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm3/95/goblin-assault?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9976,
+        "iid": 3979,
+        "name": "Goblin Assault",
+        "handler": "manalinkeh_card_goblin_assault",
+        "kind": "card"
+      }
+    },
+    "Greener Pastures": {
+      "oracle": {
+        "oracle_id": "f9e1346a-af72-4644-b384-8f7b0a35ec31",
+        "name": "Greener Pastures",
+        "oracle_text": "At the beginning of each player's upkeep, if that player controls more lands than each other player, the player creates a 1/1 green Saproling creature token.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/usg/258/greener-pastures?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3789,
+        "iid": 4204,
+        "name": "Greener Pastures",
+        "handler": "manalinkeh_card_greener_pastures",
+        "kind": "card"
+      }
+    },
+    "Growing Ranks": {
+      "oracle": {
+        "oracle_id": "bec6fb31-60a3-432f-ba36-aebf172f8b27",
+        "name": "Growing Ranks",
+        "oracle_text": "At the beginning of your upkeep, populate. (Create a token that's a copy of a creature token you control.)",
+        "mana_cost": "{2}{G/W}{G/W}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Populate"
+        ],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c19/193/growing-ranks?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12741,
+        "iid": 4269,
+        "name": "Growing Ranks",
+        "handler": "manalinkeh_card_growing_ranks",
+        "kind": "card"
+      }
+    },
+    "Kemba, Kha Regent": {
+      "oracle": {
+        "oracle_id": "499d5801-0c56-40f2-9a46-77025ed6cb87",
+        "name": "Kemba, Kha Regent",
+        "oracle_text": "At the beginning of your upkeep, create a 2/2 white Cat creature token for each Equipment attached to Kemba.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Legendary Creature — Cat Cleric",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/34/kemba-kha-regent?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11288,
+        "iid": 5220,
+        "name": "Kemba, Kha Regent",
+        "handler": "manalinkeh_card_kemba_kha_regent",
+        "kind": "card"
+      }
+    },
+    "Luminous Angel": {
+      "oracle": {
+        "oracle_id": "8d7cf56c-94fd-47d8-9e0f-cd3163688983",
+        "name": "Luminous Angel",
+        "oracle_text": "Flying\nAt the beginning of your upkeep, you may create a 1/1 white Spirit creature token with flying.",
+        "mana_cost": "{4}{W}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dvd/12/luminous-angel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6717,
+        "iid": 5740,
+        "name": "Luminous Angel",
+        "handler": "manalinkeh_card_luminous_angel",
+        "kind": "card"
+      }
+    },
+    "Master of the Wild Hunt": {
+      "oracle": {
+        "oracle_id": "dd25cab9-15cc-40f5-9b68-8f345dd7e952",
+        "name": "Master of the Wild Hunt",
+        "oracle_text": "At the beginning of your upkeep, create a 2/2 green Wolf creature token.\n{T}: Tap all untapped Wolf creatures you control. Each Wolf tapped this way deals damage equal to its power to target creature. That creature deals damage equal to its power divided as its controller chooses among any number of those Wolves.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Human Shaman",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/a25/181/master-of-the-wild-hunt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10444,
+        "iid": 5967,
+        "name": "Master of the Wild Hunt",
+        "handler": "manalinkeh_card_master_of_the_wild_hunt",
+        "kind": "card"
+      }
+    },
+    "Mirror-Sigil Sergeant": {
+      "oracle": {
+        "oracle_id": "c021c808-dc58-4386-8758-68b858badbd5",
+        "name": "Mirror-Sigil Sergeant",
+        "oracle_text": "Trample\nAt the beginning of your upkeep, if you control a blue permanent, you may create a token that's a copy of this creature.",
+        "mana_cost": "{5}{W}",
+        "type_line": "Creature — Rhino Soldier",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/con/12/mirror-sigil-sergeant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10175,
+        "iid": 6201,
+        "name": "Mirror-Sigil Sergeant",
+        "handler": "manalinkeh_card_mirror_sigil_sergeant",
+        "kind": "card"
+      }
+    },
+    "Ophiomancer": {
+      "oracle": {
+        "oracle_id": "55eca80c-dcd8-4c2f-aa0f-fb0aec7b80f7",
+        "name": "Ophiomancer",
+        "oracle_text": "At the beginning of each upkeep, if you control no Snakes, create a 1/1 black Snake creature token with deathtouch.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Human Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/118/ophiomancer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13630,
+        "iid": 6850,
+        "name": "Ophiomancer",
+        "handler": "manalinkeh_card_ophiomancer",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Aether Snap": {
+      "oracle": {
+        "oracle_id": "1a1a16e5-ce4f-42b8-a1c6-05dd635d83cc",
+        "name": "Aether Snap",
+        "oracle_text": "Remove all counters from all permanents and exile all tokens.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ncc/241/aether-snap?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6855,
+        "iid": 265,
+        "name": "Aether Snap",
+        "handler": "manalinkeh_card_aether_snap",
+        "kind": "card"
+      }
+    },
+    "Air Elemental": {
+      "oracle": {
+        "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+        "name": "Air Elemental",
+        "oracle_text": "Flying",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/44/air-elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 0,
+        "iid": 298,
+        "name": "Air Elemental",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Beast": {
+      "oracle": {
+        "oracle_id": "d2f35b1a-1eba-4007-8f27-737d26b7a6a2",
+        "name": "Beast",
+        "oracle_text": "This creature can't attack or block alone.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tdsk/3/beast?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18695,
+        "iid": 944,
+        "name": "Beast",
+        "handler": "manalinkeh_card_beast_token",
+        "kind": "card"
+      }
+    },
+    "Bonesplitter": {
+      "oracle": {
+        "oracle_id": "452e3f5f-ce17-4682-966b-5cc100210aee",
+        "name": "Bonesplitter",
+        "oracle_text": "Equipped creature gets +2/+0.\nEquip {1}",
+        "mana_cost": "{1}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/458/bonesplitter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6627,
+        "iid": 1226,
+        "name": "Bonesplitter",
+        "handler": "manalinkeh_card_bonesplitter",
+        "kind": "card"
+      }
+    },
+    "Cat": {
+      "oracle": {
+        "oracle_id": "f6aa9961-6d5f-4ea6-8db0-4e03ffd8d5ea",
+        "name": "Cat",
+        "oracle_text": "Haste",
+        "mana_cost": "",
+        "type_line": "Token Creature — Cat",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tsnc/9/cat?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18704,
+        "iid": 1530,
+        "name": "Cat",
+        "handler": "manalinkeh_card_cat_token",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Dragon": {
+      "oracle": {
+        "oracle_id": "ec6df381-5ea7-4c68-8416-093b107f0784",
+        "name": "Dragon",
+        "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Dragon",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/totc/11/dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18719,
+        "iid": 2669,
+        "name": "Dragon",
+        "handler": "manalinkeh_card_dragon_token",
+        "kind": "card"
+      }
+    },
+    "Eager Cadet": {
+      "oracle": {
+        "oracle_id": "39780477-01ba-40c6-8fe6-2178efb10b92",
+        "name": "Eager Cadet",
+        "oracle_text": "",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/S1/eager-cadet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4363,
+        "iid": 12406,
+        "name": "Eager Cadet",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Eldrazi Spawn": {
+      "oracle": {
+        "oracle_id": "3aaf906a-e749-4e86-ac79-97650b92f271",
+        "name": "Eldrazi Spawn",
+        "oracle_text": "Sacrifice this creature: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Eldrazi Spawn",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tsoc/1/eldrazi-spawn?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18725,
+        "iid": 2919,
+        "name": "Eldrazi Spawn",
+        "handler": "manalinkeh_card_eldrazi_spawn",
+        "kind": "card"
+      }
+    },
+    "Faerie Rogue": {
+      "oracle": {
+        "oracle_id": "759b1cd0-a2d9-46d3-8433-33892abd184c",
+        "name": "Faerie Rogue",
+        "oracle_text": "Flying",
+        "mana_cost": "",
+        "type_line": "Token Creature — Faerie Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/twoc/16/faerie-rogue?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18736,
+        "iid": 3245,
+        "name": "Faerie Rogue",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Flight": {
+      "oracle": {
+        "oracle_id": "6a4068b0-fb4f-429c-a94e-47849f3eb7ef",
+        "name": "Flight",
+        "oracle_text": "Enchant creature\nEnchanted creature has flying.",
+        "mana_cost": "{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m12/53/flight?utm_source=api"
+      },
+      "registry": {
+        "csvid": 87,
+        "iid": 3523,
+        "name": "Flight",
+        "handler": "manalinkeh_card_flight2",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Goblin": {
+      "oracle": {
+        "oracle_id": "fa8ea5cd-b390-41a1-9a2a-11af1bc6bfd0",
+        "name": "Goblin",
+        "oracle_text": "Haste",
+        "mana_cost": "",
+        "type_line": "Token Creature — Goblin",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/trvr/9/goblin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18746,
+        "iid": 3975,
+        "name": "Goblin",
+        "handler": "manalinkeh_card_goblin_token",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Icy Manipulator": {
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 119,
+        "iid": 4775,
+        "name": "Icy Manipulator",
+        "handler": "manalinkeh_card_icy_manipulator",
+        "kind": "card"
+      }
+    },
+    "Leonin Scimitar": {
+      "oracle": {
+        "oracle_id": "cde26d69-f3e7-4dd0-a53b-cd0ec812d717",
+        "name": "Leonin Scimitar",
+        "oracle_text": "Equipped creature gets +1/+1.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+        "mana_cost": "{1}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/331/leonin-scimitar?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6700,
+        "iid": 5536,
+        "name": "Leonin Scimitar",
+        "handler": "manalinkeh_card_leonin_scimitar",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mons's Goblin Raiders": {
+      "oracle": {
+        "oracle_id": "a37159df-f6d7-4db6-85de-0ea77f425993",
+        "name": "Mons's Goblin Raiders",
+        "oracle_text": "",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/s00/32/monss-goblin-raiders?utm_source=api"
+      },
+      "registry": {
+        "csvid": 163,
+        "iid": 6293,
+        "name": "Mons's Goblin Raiders",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Orochi Sustainer": {
+      "oracle": {
+        "oracle_id": "d3039b42-25d5-4fe2-955a-0d910d7395bd",
+        "name": "Orochi Sustainer",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Snake Shaman",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/236/orochi-sustainer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7339,
+        "iid": 6912,
+        "name": "Orochi Sustainer",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Peppersmoke": {
+      "oracle": {
+        "oracle_id": "071733a2-6dc6-4b6e-8ed6-a130d14657fd",
+        "name": "Peppersmoke",
+        "oracle_text": "Target creature gets -1/-1 until end of turn. If you control a Faerie, draw a card.",
+        "mana_cost": "{B}",
+        "type_line": "Kindred Instant — Faerie",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mma/92/peppersmoke?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9233,
+        "iid": 7083,
+        "name": "Peppersmoke",
+        "handler": "manalinkeh_card_peppersmoke",
+        "kind": "card"
+      }
+    },
+    "Putrid Leech": {
+      "oracle": {
+        "oracle_id": "16b723bc-aab9-40f2-8e1b-b9c2bd2af3bc",
+        "name": "Putrid Leech",
+        "oracle_text": "Pay 2 life: This creature gets +2/+2 until end of turn. Activate only once each turn.",
+        "mana_cost": "{B}{G}",
+        "type_line": "Creature — Zombie Leech",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddm/51/putrid-leech?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10330,
+        "iid": 7502,
+        "name": "Putrid Leech",
+        "handler": "manalinkeh_card_putrid_leech",
+        "kind": "card"
+      }
+    },
+    "Raise the Alarm": {
+      "oracle": {
+        "oracle_id": "5b2364d7-a811-4595-a1b4-224c70555ffa",
+        "name": "Raise the Alarm",
+        "oracle_text": "Create two 1/1 white Soldier creature tokens.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/41/raise-the-alarm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1450,
+        "iid": 7615,
+        "name": "Raise the Alarm",
+        "handler": "manalinkeh_card_raise_the_alarm",
+        "kind": "card"
+      }
+    },
+    "Saproling": {
+      "oracle": {
+        "oracle_id": "2b7dba01-b08c-4218-9fc1-da55559d9155",
+        "name": "Saproling",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Saproling",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tsoc/18/saproling?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18813,
+        "iid": 8235,
+        "name": "Saproling",
+        "handler": "manalinkeh_card_saproling",
+        "kind": "card"
+      }
+    },
+    "Snake": {
+      "oracle": {
+        "oracle_id": "e3863ec2-e8ce-43d2-ab7e-ec99dfa381b6",
+        "name": "Snake",
+        "oracle_text": "Deathtouch",
+        "mana_cost": "",
+        "type_line": "Token Creature — Snake",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Deathtouch"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tecc/8/snake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18821,
+        "iid": 8951,
+        "name": "Snake",
+        "handler": "manalinkeh_card_snake_token",
+        "kind": "card"
+      }
+    },
+    "Soldier": {
+      "oracle": {
+        "oracle_id": "eac25f12-6459-438c-a09e-93e23d2cf80d",
+        "name": "Soldier",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tfrc/3/soldier?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18822,
+        "iid": 8976,
+        "name": "Soldier",
+        "handler": "manalinkeh_card_rhino_token",
+        "kind": "card"
+      }
+    },
+    "Spirit": {
+      "oracle": {
+        "oracle_id": "f39a3005-bc92-49bf-9e32-28e99c4de5c5",
+        "name": "Spirit",
+        "oracle_text": "Flying",
+        "mana_cost": "",
+        "type_line": "Token Creature — Spirit",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmoc/13/spirit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18829,
+        "iid": 9193,
+        "name": "Spirit",
+        "handler": "manalinkeh_card_spirit2",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Walking Corpse": {
+      "oracle": {
+        "oracle_id": "fea95888-e16a-4209-9cd4-623f7f4d2f67",
+        "name": "Walking Corpse",
+        "oracle_text": "",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/128/walking-corpse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12124,
+        "iid": 10747,
+        "name": "Walking Corpse",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Wall of Stone": {
+      "oracle": {
+        "oracle_id": "cd4cadb4-3156-49bd-b36e-12ba5c85938b",
+        "name": "Wall of Stone",
+        "oracle_text": "Defender (This creature can't attack.)",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "8",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/232/wall-of-stone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 272,
+        "iid": 10783,
+        "name": "Wall of Stone",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Wolf": {
+      "oracle": {
+        "oracle_id": "b2224843-8274-4872-a7ca-2adf69cc066b",
+        "name": "Wolf",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Wolf",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/thob/9/wolf?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18856,
+        "iid": 11056,
+        "name": "Wolf",
+        "handler": "manalinkeh_card_wolf_token",
+        "kind": "card"
+      }
+    },
+    "Worm": {
+      "oracle": {
+        "oracle_id": "318d6000-b6e0-4ef0-ad58-d470f4a271e6",
+        "name": "Worm",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Worm",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tsoc/26/worm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18858,
+        "iid": 11109,
+        "name": "Worm",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

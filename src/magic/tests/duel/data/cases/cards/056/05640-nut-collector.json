@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Nut Collector",
+  "csvid": 5640,
+  "recipes": [
+    {
+      "family": "threshold_global_effects",
+      "version": 2,
+      "params": {
+        "csvid": 5640,
+        "branch": "nut",
+        "mana": [
+          5,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "At the beginning of your upkeep, you may create a 1/1 green Squirrel creature token.\nThreshold — All Squirrels get +2/+2 as long as there are seven or more cards in your graveyard.",
+      "variants": [
+        "six_0",
+        "six_1",
+        "seven_0",
+        "seven_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "gain_seventh_0",
+        "gain_seventh_1",
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "countered_0",
+        "countered_1",
+        "lose_seventh_0",
+        "lose_seventh_1",
+        "replay_0",
+        "replay_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

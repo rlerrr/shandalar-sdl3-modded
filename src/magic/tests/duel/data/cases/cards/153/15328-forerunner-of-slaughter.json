@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "csvid": 15328,
+  "card": "Forerunner of Slaughter",
+  "recipes": [
+    {
+      "family": "devoid_cast_and_control",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\n{1}: Target colorless creature gains haste until end of turn.",
+      "params": {
+        "effect": "grant",
+        "price": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "power": 3,
+        "toughness": 2,
+        "fee": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "grant_self_0",
+        "grant_self_1",
+        "grant_devoid_0",
+        "grant_devoid_1",
+        "grant_enemy_0",
+        "grant_enemy_1",
+        "short_fee_0",
+        "short_fee_1",
+        "target_probes_0",
+        "target_probes_1"
+      ]
+    }
+  ]
+}

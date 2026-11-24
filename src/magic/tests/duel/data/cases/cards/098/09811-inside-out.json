@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Inside Out",
+  "csvid": 9811,
+  "recipes": [
+    {
+      "family": "instant_switch_stats",
+      "version": 2,
+      "params": {
+        "generic": 1,
+        "colors": "UR",
+        "draw": 1
+      },
+      "oracle_text": "Switch target creature's power and toughness until end of turn.\nDraw a card.",
+      "variants": [
+        "cast_0",
+        "offturn_0",
+        "expiry_0",
+        "twice_0",
+        "fizzle_0",
+        "countered_0",
+        "short_0",
+        "combat_0",
+        "equal_stats_0",
+        "red_hybrid_0",
+        "cast_1",
+        "offturn_1",
+        "expiry_1",
+        "twice_1",
+        "fizzle_1",
+        "countered_1",
+        "short_1",
+        "combat_1",
+        "equal_stats_1",
+        "red_hybrid_1"
+      ]
+    }
+  ]
+}

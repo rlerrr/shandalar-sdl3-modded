@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Disciple of Phenax",
+  "csvid": 13423,
+  "recipes": [
+    {
+      "family": "entry_interaction_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 13423,
+        "printed_mana": "{2}{B}{B}",
+        "rules": "When this creature enters, target player reveals a number of cards from their hand equal to your devotion to black. You choose one of them. That player discards that card. (Each {B} in the mana costs of permanents you control counts toward your devotion to black.)"
+      },
+      "oracle_text": "When this creature enters, target player reveals a number of cards from their hand equal to your devotion to black. You choose one of them. That player discards that card. (Each {B} in the mana costs of permanents you control counts toward your devotion to black.)",
+      "variants": [
+        "self_short_0",
+        "self_short_1",
+        "source_devotion_0",
+        "source_devotion_1",
+        "additional_devotion_0",
+        "additional_devotion_1"
+      ]
+    }
+  ]
+}

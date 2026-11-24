@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Soulsworn Spirit",
+  "csvid": 12830,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "detain_effects",
+      "version": 2,
+      "oracle_text": "This creature can't be blocked.\nWhen this creature enters, detain target creature an opponent controls. (Until your next turn, that creature can't attack or block and its activated abilities can't be activated.)",
+      "params": {
+        "follow": "spirit",
+        "callback": "soulsworn_spirit",
+        "etb": true,
+        "flying": false,
+        "draw": false,
+        "maximum": 1,
+        "nonland": false,
+        "mana": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "effect_0",
+        "effect_1",
+        "attack_lock_0",
+        "attack_lock_1",
+        "activation_lock_0",
+        "activation_lock_1",
+        "mana_lock_0",
+        "mana_lock_1",
+        "expiry_0",
+        "expiry_1",
+        "no_target_0",
+        "no_target_1",
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "source_removed_0",
+        "source_removed_1",
+        "unblockable_0",
+        "unblockable_1"
+      ]
+    }
+  ]
+}

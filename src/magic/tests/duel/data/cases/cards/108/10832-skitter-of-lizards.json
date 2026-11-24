@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "csvid": 10832,
+  "card": "Skitter of Lizards",
+  "recipes": [
+    {
+      "family": "kicker_multikicker_counters",
+      "version": 2,
+      "oracle_text": "Multikicker {1}{R} (You may pay an additional {1}{R} any number of times as you cast this spell.)\nHaste\nThis creature enters with a +1/+1 counter on it for each time it was kicked.",
+      "params": {
+        "printed": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "fee": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "rider": "haste"
+      },
+      "variants": [
+        "declined_0",
+        "once_0",
+        "twice_0",
+        "thrice_0",
+        "exact_two_0",
+        "short_second_0",
+        "wrong_kicker_color_0",
+        "short_base_0",
+        "countered_0",
+        "replay_0",
+        "declined_1",
+        "once_1",
+        "twice_1",
+        "thrice_1",
+        "exact_two_1",
+        "short_second_1",
+        "wrong_kicker_color_1",
+        "short_base_1",
+        "countered_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

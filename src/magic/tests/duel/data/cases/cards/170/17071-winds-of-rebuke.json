@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Winds of Rebuke",
+  "csvid": 17071,
+  "recipes": [
+    {
+      "family": "mill_recursion_and_zones",
+      "version": 2,
+      "params": {
+        "csvid": 17071,
+        "cost": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Return target nonland permanent to its owner's hand. Each player mills two cards.",
+      "variants": [
+        "artifact_0",
+        "artifact_1",
+        "stolen_0",
+        "stolen_1",
+        "short_offturn_0",
+        "short_offturn_1",
+        "target_lost_0",
+        "target_lost_1",
+        "land_only_0",
+        "land_only_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Deep Spawn",
+  "csvid": 1758,
+  "recipes": [
+    {
+      "family": "mill_upkeep_and_untap",
+      "version": 2,
+      "params": {
+        "csvid": 1758,
+        "printed_mana": [
+          5,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        "rules": "Trample\nAt the beginning of your upkeep, sacrifice this creature unless you mill two cards.\n{U}: This creature gains shroud until end of turn and doesn't untap during your next untap step. Tap this creature. (A creature with shroud can't be the target of spells or abilities.)"
+      },
+      "oracle_text": "Trample\nAt the beginning of your upkeep, sacrifice this creature unless you mill two cards.\n{U}: This creature gains shroud until end of turn and doesn't untap during your next untap step. Tap this creature. (A creature with shroud can't be the target of spells or abilities.)",
+      "variants": [
+        "tax_declined_0",
+        "tax_declined_1",
+        "shroud_trample_0",
+        "shroud_trample_1"
+      ]
+    }
+  ]
+}

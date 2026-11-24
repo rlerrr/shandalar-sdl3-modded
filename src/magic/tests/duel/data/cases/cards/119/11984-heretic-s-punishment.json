@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 11984,
+  "card": "Heretic's Punishment",
+  "recipes": [
+    {
+      "family": "mill_remaining_activated_and_loyalty",
+      "version": 2,
+      "params": {
+        "csvid": 11984,
+        "printed_cost": "{4}{R}"
+      },
+      "oracle_text": "{3}{R}: Choose any target, then mill three cards. This enchantment deals damage to that permanent or player equal to the greatest mana value among the milled cards.",
+      "variants": [
+        "player_0",
+        "creature_0",
+        "walker_0",
+        "land_only_0",
+        "short_deck_0",
+        "lost_target_0",
+        "player_1",
+        "creature_1",
+        "walker_1",
+        "land_only_1",
+        "short_deck_1",
+        "lost_target_1"
+      ]
+    }
+  ]
+}

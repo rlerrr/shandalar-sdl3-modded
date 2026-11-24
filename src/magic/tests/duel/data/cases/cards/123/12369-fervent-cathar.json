@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Fervent Cathar",
+  "csvid": 12369,
+  "recipes": [
+    {
+      "family": "entry_rider_combat_modifiers",
+      "version": 2,
+      "params": {
+        "csvid": 12369,
+        "cost": "{2}{R}",
+        "choices": [
+          "haste_0",
+          "haste_1",
+          "other_blocks_0",
+          "other_blocks_1",
+          "own_0",
+          "own_1",
+          "expire_0",
+          "expire_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "Haste\nWhen this creature enters, target creature can't block this turn.",
+      "variants": [
+        "haste_0",
+        "haste_1",
+        "other_blocks_0",
+        "other_blocks_1",
+        "own_0",
+        "own_1",
+        "expire_0",
+        "expire_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

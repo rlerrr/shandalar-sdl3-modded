@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Driver of the Dead",
+  "csvid": 12355,
+  "recipes": [
+    {
+      "family": "graveyard_recursion_triggers",
+      "version": 2,
+      "params": {
+        "model": "death",
+        "destination": "battlefield",
+        "cost": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power_toughness": [
+          3,
+          2
+        ]
+      },
+      "oracle_text": "When this creature dies, return target creature card with mana value 2 or less from your graveyard to the battlefield.",
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "empty_0",
+        "wrong_type_0",
+        "opponent_grave_0",
+        "shroud_0",
+        "cross_owned_0",
+        "replay_0",
+        "countered_0",
+        "short_mana_0",
+        "wrong_mana_0",
+        "exile_source_0",
+        "bounce_source_0",
+        "other_dies_0",
+        "zero_mv_0",
+        "combat_death_0",
+        "effect_1",
+        "alternate_1",
+        "empty_1",
+        "wrong_type_1",
+        "opponent_grave_1",
+        "shroud_1",
+        "cross_owned_1",
+        "replay_1",
+        "countered_1",
+        "short_mana_1",
+        "wrong_mana_1",
+        "exile_source_1",
+        "bounce_source_1",
+        "other_dies_1",
+        "zero_mv_1",
+        "combat_death_1"
+      ]
+    }
+  ]
+}

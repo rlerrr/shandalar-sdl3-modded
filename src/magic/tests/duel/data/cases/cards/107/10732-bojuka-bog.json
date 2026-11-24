@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Bojuka Bog",
+  "csvid": 10732,
+  "recipes": [
+    {
+      "family": "entry_trigger_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 10732,
+        "cost": null
+      },
+      "oracle_text": "This land enters tapped.\nWhen this land enters, exile target player's graveyard.\n{T}: Add {B}.",
+      "variants": [
+        "opponent_grave_0",
+        "opponent_grave_1",
+        "own_grave_0",
+        "own_grave_1",
+        "empty_target_0",
+        "empty_target_1",
+        "tapped_black_mana_0",
+        "tapped_black_mana_1"
+      ]
+    }
+  ]
+}

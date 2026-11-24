@@ -1,0 +1,207 @@
+{
+  "version": 1,
+  "sources": {
+    "Ballista Charger": {
+      "oracle_record_sha256": "1355d1d2de1a55a78c4b40f78494fef5c89ca5d4ddd51c89439a337ffaf38310",
+      "registry": {
+        "csvid": 16293,
+        "iid": 16382,
+        "name": "Ballista Charger",
+        "handler": "manalinkeh_card_ballista_charger",
+        "kind": "card"
+      }
+    },
+    "Bomat Bazaar Barge": {
+      "oracle_record_sha256": "731854b3ca4c661380939f2656f6641dcd59eadd9971321811c568646c85d719",
+      "registry": {
+        "csvid": 16299,
+        "iid": 16388,
+        "name": "Bomat Bazaar Barge",
+        "handler": "manalinkeh_card_bomat_bazaar_barge",
+        "kind": "card"
+      }
+    },
+    "Fleetwheel Cruiser": {
+      "oracle_record_sha256": "31c8ef9fe2e366dfafd4e418ae9798100a165914d22bef5778e24c5c56634451",
+      "registry": {
+        "csvid": 16379,
+        "iid": 16466,
+        "name": "Fleetwheel Cruiser",
+        "handler": "manalinkeh_card_fleetwheel_cruiser",
+        "kind": "card"
+      }
+    },
+    "Renegade Freighter": {
+      "oracle_record_sha256": "90395a1966f1c0586b88b492054005ae3ed08c8519a720269e6bc5ac5a39f965",
+      "registry": {
+        "csvid": 16494,
+        "iid": 16580,
+        "name": "Renegade Freighter",
+        "handler": "manalinkeh_card_renegade_freighter",
+        "kind": "card"
+      }
+    },
+    "Smuggler's Copter": {
+      "oracle_record_sha256": "403eefb425a66666c166c077d81fea9ffb528bd7be06dda387e66723c17ae921",
+      "registry": {
+        "csvid": 16525,
+        "iid": 16611,
+        "name": "Smuggler's Copter",
+        "handler": "manalinkeh_card_smugglers_copter",
+        "kind": "card"
+      }
+    },
+    "Mobile Garrison": {
+      "oracle_record_sha256": "bc887760ecf5948f36d5c491959fce2c47d44c8e7b2a018352e1670edb9e2279",
+      "registry": {
+        "csvid": 16754,
+        "iid": 16847,
+        "name": "Mobile Garrison",
+        "handler": "manalinkeh_card_mobile_garrison",
+        "kind": "card"
+      }
+    },
+    "Untethered Express": {
+      "oracle_record_sha256": "2e32b67155db5d44486e6e32d5232f35c5bdf8f32f32bf805954aad1df523120",
+      "registry": {
+        "csvid": 16819,
+        "iid": 16913,
+        "name": "Untethered Express",
+        "handler": "manalinkeh_card_untethered_express",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Unsummon": {
+      "oracle_record_sha256": "0c5bac8f5868ada1be85b5c6cabfbb406db13c0b449461f797d70df0855b25d0",
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Wall of Tanglecord": {
+      "oracle_record_sha256": "aa1853067f8496837841e6ee7d8590508c194aa7d0b80fa2f4991d5927521e90",
+      "registry": {
+        "csvid": 11409,
+        "iid": 10785,
+        "name": "Wall of Tanglecord",
+        "handler": "manalinkeh_card_wall_of_tanglecord",
+        "kind": "card"
+      }
+    },
+    "Mogg Fanatic": {
+      "oracle_record_sha256": "4697ab2882c3835839712e4aa7d53f163d546f55fc17fcf27a51721799cf0af5",
+      "registry": {
+        "csvid": 1354,
+        "iid": 6244,
+        "name": "Mogg Fanatic",
+        "handler": "manalinkeh_card_mogg_fanatic",
+        "kind": "card"
+      }
+    },
+    "Catapult Squad": {
+      "oracle_record_sha256": "d5899f929e51ebb6729e885b17400107935c0680e763fd849d4742eb246daa85",
+      "registry": {
+        "csvid": 6081,
+        "iid": 1540,
+        "name": "Catapult Squad",
+        "handler": "manalinkeh_card_catapult_squad",
+        "kind": "card"
+      }
+    },
+    "Unyielding Krumar": {
+      "oracle_record_sha256": "a7479b8c98d51d47b6a785aba8b823003566e97c75a328268946e04d48ce9837",
+      "registry": {
+        "csvid": 14419,
+        "iid": 10395,
+        "name": "Unyielding Krumar",
+        "handler": "manalinkeh_card_unyielding_krumar",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle_record_sha256": "25853cbee66ee747db3b1fcf3330b5869545c0d95498e50dd6e51ebd44ea47a4",
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle_record_sha256": "886664d9e2cb535b687e433d8ea097379a4eedd125fde04ca68ea95610b93ed8",
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle_record_sha256": "fd9729323aed22b078e77210051e1d25002aaff6e59c901a0059d7229feeb6eb",
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle_record_sha256": "997776d5eba2bd863bd6a28f6e65ab4835474b079939b791554e6c43e156cb40",
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle_record_sha256": "cdc1262047c1476b8c5144c0fbfbe5822b49b956822cd421e6dfeeb850037c38",
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Welkin Tern": {
+      "oracle_record_sha256": "8925d6ca40cc266ce8f2740fa277c30b80499afedd409d28ee7e17f0fc686f58",
+      "registry": {
+        "csvid": 10709,
+        "iid": 10901,
+        "name": "Welkin Tern",
+        "handler": "manalinkeh_card_skywinder_drake",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle_record_sha256": "1e7c0c1e3ad096022fd4e7d0fd676ce37ff47f75f80221feff38fd459a619989",
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Boomerang": {
+      "oracle_record_sha256": "1d4994e5ed51ded2e46cdb69fb0a72fcd95fbc9f9288d7580e3b113abbdfcbe3",
+      "registry": {
+        "csvid": 585,
+        "iid": 1233,
+        "name": "Boomerang",
+        "handler": "manalinkeh_card_boomerang",
+        "kind": "card"
+      }
+    }
+  }
+}

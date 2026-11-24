@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "csvid": 8148,
+  "card": "Tibor and Lumia",
+  "recipes": [
+    {
+      "family": "cast_spell_color_riders",
+      "version": 2,
+      "params": {
+        "effect": "tibor",
+        "colors": [
+          "U",
+          "R"
+        ],
+        "price": [
+          2,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "other_price": [
+          2,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "hybrid": false,
+        "base": [
+          3,
+          3
+        ],
+        "clauses": [
+          "Whenever you cast a blue spell, target creature gains flying until end of turn.",
+          "Whenever you cast a red spell, Tibor and Lumia deals 1 damage to each creature without flying."
+        ]
+      },
+      "oracle_text": "Whenever you cast a blue spell, target creature gains flying until end of turn.\nWhenever you cast a red spell, Tibor and Lumia deals 1 damage to each creature without flying.",
+      "variants": [
+        "first_0",
+        "first_1",
+        "opponent_0",
+        "opponent_1",
+        "unmatched_0",
+        "unmatched_1",
+        "colorless_0",
+        "colorless_1",
+        "replay_0",
+        "replay_1",
+        "second_0",
+        "second_1",
+        "both_0",
+        "both_1",
+        "flying_0",
+        "flying_1",
+        "flying_expiry_0",
+        "flying_expiry_1"
+      ]
+    }
+  ]
+}

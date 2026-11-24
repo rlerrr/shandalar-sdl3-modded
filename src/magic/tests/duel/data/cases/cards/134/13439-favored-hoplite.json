@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "csvid": 13439,
+  "card": "Favored Hoplite",
+  "recipes": [
+    {
+      "family": "heroic_counter_riders",
+      "version": 2,
+      "params": {
+        "effect": "prevent",
+        "clauses": [
+          "Heroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on this creature and prevent all damage that would be dealt to it this turn."
+        ],
+        "price": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "base": [
+          1,
+          2
+        ]
+      },
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on this creature and prevent all damage that would be dealt to it this turn.",
+      "variants": [
+        "own_0",
+        "own_1",
+        "opponent_0",
+        "opponent_1",
+        "elsewhere_0",
+        "elsewhere_1",
+        "shield_0",
+        "shield_1",
+        "no_shield_0",
+        "no_shield_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Smoldering Spires",
+  "csvid": 10835,
+  "recipes": [
+    {
+      "family": "entry_follow_on_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 10835,
+        "cost": "",
+        "choices": [
+          "forbid_0",
+          "forbid_1",
+          "other_blocks_0",
+          "other_blocks_1",
+          "own_target_0",
+          "own_target_1",
+          "no_creatures_0",
+          "no_creatures_1",
+          "mana_0",
+          "mana_1"
+        ]
+      },
+      "oracle_text": "This land enters tapped.\nWhen this land enters, target creature can't block this turn.\n{T}: Add {R}.",
+      "variants": [
+        "forbid_0",
+        "forbid_1",
+        "other_blocks_0",
+        "other_blocks_1",
+        "own_target_0",
+        "own_target_1",
+        "no_creatures_0",
+        "no_creatures_1",
+        "mana_0",
+        "mana_1"
+      ]
+    }
+  ]
+}

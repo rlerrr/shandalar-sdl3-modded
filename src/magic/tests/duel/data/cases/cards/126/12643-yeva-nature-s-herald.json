@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "csvid": 12643,
+  "card": "Yeva, Nature's Herald",
+  "recipes": [
+    {
+      "family": "flash_remaining_casting_and_counterability",
+      "version": 2,
+      "params": {
+        "csvid": 12643,
+        "mana": [
+          2,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "stats": [
+          4,
+          4
+        ]
+      },
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nYou may cast green creature spells as though they had flash.",
+      "variants": [
+        "green_0",
+        "green_1",
+        "multicolor_0",
+        "multicolor_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "wrong_type_0",
+        "wrong_type_1",
+        "removed_0",
+        "removed_1"
+      ]
+    }
+  ]
+}

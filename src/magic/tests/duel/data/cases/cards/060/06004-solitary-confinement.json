@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Solitary Confinement",
+  "csvid": 6004,
+  "recipes": [
+    {
+      "family": "draw_step_skip_and_trigger",
+      "version": 2,
+      "params": {
+        "csvid": 6004,
+        "casting_cost": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "clauses": [
+          "At the beginning of your upkeep, sacrifice this enchantment unless you discard a card.",
+          "Skip your draw step.",
+          "You have shroud. (You can't be the target of spells or abilities.)",
+          "Prevent all damage that would be dealt to you."
+        ]
+      },
+      "oracle_text": "At the beginning of your upkeep, sacrifice this enchantment unless you discard a card.\nSkip your draw step.\nYou have shroud. (You can't be the target of spells or abilities.)\nPrevent all damage that would be dealt to you.",
+      "variants": [
+        "pay_0",
+        "pay_1",
+        "empty_0",
+        "empty_1"
+      ]
+    }
+  ]
+}

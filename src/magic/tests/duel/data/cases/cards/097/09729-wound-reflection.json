@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Wound Reflection",
+  "csvid": 9729,
+  "recipes": [
+    {
+      "family": "each_end_step_history_trigger",
+      "version": 2,
+      "oracle_text": "At the beginning of each end step, each opponent loses life equal to the life they lost this turn. (Damage causes loss of life.)",
+      "params": {
+        "role": "life_loss",
+        "printed_mana": "{5}{B}",
+        "flying": false
+      },
+      "variants": [
+        "cast_payment_0",
+        "cast_unaffordable_0",
+        "cast_wrong_color_0",
+        "cast_countered_0",
+        "no_history_0",
+        "own_history_0",
+        "opponent_history_0",
+        "before_end_0",
+        "removed_before_end_0",
+        "end_snapshot_0",
+        "next_turn_reset_0",
+        "damage_two_0",
+        "pure_loss_0",
+        "own_loss_0",
+        "loss_then_gain_0",
+        "mixed_loss_0",
+        "two_reflections_0",
+        "cast_payment_1",
+        "cast_unaffordable_1",
+        "cast_wrong_color_1",
+        "cast_countered_1",
+        "no_history_1",
+        "own_history_1",
+        "opponent_history_1",
+        "before_end_1",
+        "removed_before_end_1",
+        "end_snapshot_1",
+        "next_turn_reset_1",
+        "damage_two_1",
+        "pure_loss_1",
+        "own_loss_1",
+        "loss_then_gain_1",
+        "mixed_loss_1",
+        "two_reflections_1"
+      ]
+    }
+  ]
+}

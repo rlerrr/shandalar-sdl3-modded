@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Twilight Shepherd",
+  "csvid": 9707,
+  "recipes": [
+    {
+      "family": "remaining_entry_zone_and_permissions",
+      "version": 2,
+      "params": {
+        "csvid": 9707,
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          3
+        ]
+      },
+      "oracle_text": "Flying, vigilance\nWhen this creature enters, return to your hand all cards in your graveyard that were put there from the battlefield this turn.\nPersist (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)",
+      "variants": [
+        "same_turn_0",
+        "same_turn_1",
+        "older_turn_0",
+        "older_turn_1",
+        "persist_twice_0",
+        "persist_twice_1",
+        "flying_vigilance_0",
+        "flying_vigilance_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Angel of Glory's Rise",
+  "csvid": 12303,
+  "recipes": [
+    {
+      "family": "entry_trigger_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 12303,
+        "cost": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, exile all Zombies, then return all Human creature cards from your graveyard to the battlefield.",
+      "variants": [
+        "mixed_tribes_0",
+        "mixed_tribes_1",
+        "return_humans_0",
+        "return_humans_1",
+        "exile_zombies_0",
+        "exile_zombies_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

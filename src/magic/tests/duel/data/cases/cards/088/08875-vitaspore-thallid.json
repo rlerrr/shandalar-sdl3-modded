@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "card": "Vitaspore Thallid",
+  "csvid": 8875,
+  "recipes": [
+    {
+      "family": "spore_upkeep_riders",
+      "version": 2,
+      "params": {
+        "shape": "haste",
+        "keywords": [],
+        "mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "power": 1,
+        "toughness": 1
+      },
+      "oracle_text": "At the beginning of your upkeep, put a spore counter on this creature.\nRemove three spore counters from this creature: Create a 1/1 green Saproling creature token.\nSacrifice a Saproling: Target creature gains haste until end of turn.",
+      "variants": [
+        "threshold_0",
+        "bank_four_0",
+        "snapshot_0",
+        "fresh_haste_0",
+        "haste_expiry_0",
+        "threshold_1",
+        "bank_four_1",
+        "snapshot_1",
+        "fresh_haste_1",
+        "haste_expiry_1"
+      ]
+    }
+  ]
+}

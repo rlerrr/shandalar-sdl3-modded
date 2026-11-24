@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 12111,
+  "card": "Undead Alchemist",
+  "recipes": [
+    {
+      "family": "mill_combat_and_draw",
+      "version": 2,
+      "params": {
+        "csvid": 12111,
+        "printed_cost": "{3}{U}"
+      },
+      "oracle_text": "If a Zombie you control would deal combat damage to a player, instead that player mills that many cards.\nWhenever a creature card is put into an opponent's graveyard from their library, exile that card and create a 2/2 black Zombie creature token.",
+      "variants": [
+        "own_zombie_0",
+        "nonzombie_0",
+        "enemy_zombie_0",
+        "external_mill_0",
+        "own_library_0",
+        "own_zombie_1",
+        "nonzombie_1",
+        "enemy_zombie_1",
+        "external_mill_1",
+        "own_library_1"
+      ]
+    }
+  ]
+}

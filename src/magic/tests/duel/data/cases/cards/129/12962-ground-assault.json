@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "csvid": 12962,
+  "card": "Ground Assault",
+  "recipes": [
+    {
+      "family": "counted_battlefield_damage",
+      "version": 2,
+      "oracle_text": "Ground Assault deals damage to target creature equal to the number of lands you control.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "scope": "land",
+          "printed": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "instant": false,
+          "clauses": [
+            "Ground Assault deals damage to target creature equal to the number of lands you control."
+          ]
+        }
+      },
+      "variants": [
+        "zero_0",
+        "zero_1",
+        "own_mixed_0",
+        "own_mixed_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "other_zones_0",
+        "other_zones_1",
+        "no_legal_target_0",
+        "no_legal_target_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "unfunded_0",
+        "unfunded_1",
+        "own_target_0",
+        "own_target_1",
+        "exact_lethal_0",
+        "exact_lethal_1",
+        "target_bounced_0",
+        "target_bounced_1",
+        "target_hexproof_0",
+        "target_hexproof_1",
+        "countered_0",
+        "countered_1",
+        "gain_own_0",
+        "gain_own_1",
+        "gain_opponent_0",
+        "gain_opponent_1",
+        "lose_own_0",
+        "lose_own_1",
+        "lose_opponent_0",
+        "lose_opponent_1",
+        "replay_update_0",
+        "replay_update_1",
+        "cleanup_mark_0",
+        "cleanup_mark_1"
+      ]
+    }
+  ]
+}

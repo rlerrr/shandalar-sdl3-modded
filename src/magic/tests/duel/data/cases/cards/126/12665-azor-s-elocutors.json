@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 12665,
+  "card": "Azor's Elocutors",
+  "recipes": [
+    {
+      "family": "upkeep_counters",
+      "version": 2,
+      "params": {
+        "csvid": 12665,
+        "printed_cost": "{3}{W/U}{W/U}"
+      },
+      "oracle_text": "At the beginning of your upkeep, put a filibuster counter on this creature. Then if this creature has five or more filibuster counters on it, you win the game.\nWhenever a source deals damage to you, remove a filibuster counter from this creature.",
+      "variants": [
+        "white_0",
+        "blue_0",
+        "setback_0",
+        "opposing_hit_0",
+        "white_1",
+        "blue_1",
+        "setback_1",
+        "opposing_hit_1"
+      ]
+    }
+  ]
+}

@@ -22,7 +22,7 @@ class EntryTapTriggerTest(unittest.TestCase):
     def case(self,n,mode='tap',owner=0):
         d=self.declaration(n);d['variants']=[f'{mode}_{owner}'];p=model.spec(d,self.oracle[n]);return model.expand(n,self.rows[n]['csvid'],d,p,d['variants'],self.rows,self.oracle)[0]
 
-    def test_all_twelve_expand_504_whole_oracle_valid_cases(self):
+    def test_all_thirteen_expand_543_whole_oracle_valid_cases(self):
         total=0
         for n in model.pins()['sources']:
             d=self.declaration(n);p=model.spec(d,self.oracle[n]);d['variants']=model.variants(p);cases=model.expand(n,self.rows[n]['csvid'],d,p,d['variants'],self.rows,self.oracle);total+=len(cases)
@@ -33,7 +33,7 @@ class EntryTapTriggerTest(unittest.TestCase):
                 for s in c['steps']:
                     self.assertIn(s['op'],OPS)
                     if 'property' in s:self.assertIn(s['property'],PROPERTIES)
-        self.assertEqual(total,504)
+        self.assertEqual(total,543)
 
     def test_actual_type_cost_and_full_other_clauses_cannot_change(self):
         for n in model.pins()['sources']:
@@ -69,11 +69,20 @@ class EntryTapTriggerTest(unittest.TestCase):
                     lands=[x['name'] for x in c['setup'] if x['zone']=='battlefield' and x['player']==owner and 'Land' in self.oracle[x['name']]['type_line'].partition(' — ')[0].split()]
                     self.assertEqual(lands,['Swamp'])
 
+    def test_either_hybrid_color_pays_the_same_entry_effect(self):
+        for owner in (0,1):
+            for mode,color in (('payment',2),('alternate_payment',5)):
+                steps=self.case('Somnomancer',mode,owner)['steps']
+                cast=next(i for i,step in enumerate(steps) if step['op']=='cast')
+                self.assertEqual([step['value'] for step in steps[:cast] if step['op']=='set_mana' and step['player']==owner],
+                                 [int(i in (0,color)) for i in range(6)])
+                self.assertIn(dict(op='assert_card',ref=f'creature_{1-owner}',property='tapped',value=1),steps[cast:])
+
     def test_only_actual_optional_entry_wrapper_is_chosen(self):
         for owner in (0,1):
             for n in model.pins()['sources']:
                 s=self.case(n,owner=owner)['steps'];triggers=[i for i,x in enumerate(s) if x['op']=='choose_trigger']
-                self.assertEqual(len(triggers),int(n in ('Bounding Krasis','Niblis of the Mist') and owner==0))
+                self.assertEqual(len(triggers),int(n in ('Bounding Krasis','Niblis of the Mist','Somnomancer') and owner==0))
                 if triggers:self.assertLess(triggers[0],next(i for i,x in enumerate(s) if x['op']=='choose_target'))
 
     def test_twiddle_target_then_real_menu_precedes_entry_resolution_for_both_choosers(self):
@@ -181,7 +190,7 @@ class EntryTapTriggerTest(unittest.TestCase):
                     # The unchanged accepted Flash-block smoke cases explicitly
                     # stop at legal declarations; they never advance/end combat.
                     self.assertEqual(state,'blockers');self.assertTrue(c['_recipe']['variant'].startswith('block_flying_'));declarations.append(c['name'])
-        self.assertEqual(count,504);self.assertEqual(len(complete),28);self.assertEqual(len(declarations),8)
+        self.assertEqual(count,543);self.assertEqual(len(complete),28);self.assertEqual(len(declarations),8)
 
     def test_completed_flying_combat_has_real_player_damage_or_death_and_marked_survivor(self):
         for owner in (0,1):

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Gutwrencher Oni",
+  "csvid": 7222,
+  "recipes": [
+    {
+      "family": "upkeep_draw_and_discard",
+      "version": 2,
+      "params": {
+        "csvid": 7222,
+        "printed_mana": "{3}{B}{B}",
+        "rules": "Trample\nAt the beginning of your upkeep, discard a card if you don't control an Ogre."
+      },
+      "oracle_text": "Trample\nAt the beginning of your upkeep, discard a card if you don't control an Ogre.",
+      "variants": [
+        "rival_ogre_trample_0",
+        "rival_ogre_trample_1",
+        "own_ogre_0",
+        "own_ogre_1"
+      ]
+    }
+  ]
+}

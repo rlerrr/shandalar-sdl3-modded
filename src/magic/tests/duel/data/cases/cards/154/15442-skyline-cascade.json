@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Skyline Cascade",
+  "csvid": 15442,
+  "recipes": [
+    {
+      "family": "entry_follow_on_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 15442,
+        "cost": "",
+        "choices": [
+          "skip_0",
+          "skip_1",
+          "does_not_tap_0",
+          "does_not_tap_1",
+          "source_lost_0",
+          "source_lost_1",
+          "mana_0",
+          "mana_1"
+        ]
+      },
+      "oracle_text": "This land enters tapped.\nWhen this land enters, target creature an opponent controls doesn't untap during its controller's next untap step.\n{T}: Add {U}.",
+      "variants": [
+        "skip_0",
+        "skip_1",
+        "does_not_tap_0",
+        "does_not_tap_1",
+        "source_lost_0",
+        "source_lost_1",
+        "mana_0",
+        "mana_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "csvid": 15259,
+  "card": "Akoum Firebird",
+  "recipes": [
+    {
+      "family": "mandatory_attack_additional_riders",
+      "version": 2,
+      "params": {
+        "shape": "landfall",
+        "keywords": [
+          "Landfall",
+          "Flying",
+          "Haste"
+        ],
+        "costs": {
+          "printed": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          "return": [
+            4,
+            0,
+            0,
+            0,
+            2,
+            0
+          ]
+        },
+        "power": 3,
+        "toughness": 3
+      },
+      "variants": [
+        "omitted_0",
+        "paid_fresh_0",
+        "reach_block_0",
+        "air_block_0",
+        "return_pay_0",
+        "return_decline_0",
+        "short_0",
+        "enemy_land_0",
+        "omitted_1",
+        "paid_fresh_1",
+        "reach_block_1",
+        "air_block_1",
+        "return_pay_1",
+        "return_decline_1",
+        "short_1",
+        "enemy_land_1"
+      ],
+      "oracle_text": "Flying, haste\nThis creature attacks each combat if able.\nLandfall — Whenever a land you control enters, you may pay {4}{R}{R}. If you do, return this card from your graveyard to the battlefield."
+    }
+  ]
+}

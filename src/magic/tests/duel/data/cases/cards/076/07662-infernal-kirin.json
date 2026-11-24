@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "csvid": 7662,
+  "card": "Infernal Kirin",
+  "recipes": [
+    {
+      "family": "cast_spirit_or_arcane_riders",
+      "version": 2,
+      "oracle_text": "Flying\nWhenever you cast a Spirit or Arcane spell, target player reveals their hand and discards all cards with that spell's mana value.",
+      "params": {
+        "effect": "same_mv_discard",
+        "price": [
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "flying": true,
+        "power": 3,
+        "toughness": 3,
+        "extra": [
+          "self_hand",
+          "flight_ground",
+          "flight_reach"
+        ],
+        "human": []
+      },
+      "variants": [
+        "own_spirit_0",
+        "own_spirit_1",
+        "own_arcane_0",
+        "own_arcane_1",
+        "own_other_creature_0",
+        "own_other_creature_1",
+        "own_other_instant_0",
+        "own_other_instant_1",
+        "enemy_spirit_0",
+        "enemy_spirit_1",
+        "enemy_arcane_0",
+        "enemy_arcane_1",
+        "self_hand_0",
+        "self_hand_1",
+        "flight_ground_0",
+        "flight_ground_1",
+        "flight_reach_0",
+        "flight_reach_1"
+      ]
+    }
+  ]
+}

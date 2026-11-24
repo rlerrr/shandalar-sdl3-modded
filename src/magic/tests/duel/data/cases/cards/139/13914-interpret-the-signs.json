@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Interpret the Signs",
+  "csvid": 13914,
+  "recipes": [
+    {
+      "family": "library_scry_before_draw",
+      "version": 2,
+      "params": {
+        "csvid": 13914,
+        "printed_cost": "{5}{U}",
+        "choices": [
+          "short_0",
+          "short_1",
+          "countered_0",
+          "countered_1",
+          "reverse_top_0",
+          "split_bottom_0",
+          "all_bottom_0",
+          "ai_sweep_1",
+          "ai_keep_land_1",
+          "empty_0",
+          "empty_1",
+          "zero_top_0"
+        ]
+      },
+      "oracle_text": "Scry 3, then reveal the top card of your library. Draw cards equal to that card's mana value. (To scry 3, look at the top three cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+      "variants": [
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "reverse_top_0",
+        "split_bottom_0",
+        "all_bottom_0",
+        "ai_sweep_1",
+        "ai_keep_land_1",
+        "empty_0",
+        "empty_1",
+        "zero_top_0"
+      ]
+    }
+  ]
+}

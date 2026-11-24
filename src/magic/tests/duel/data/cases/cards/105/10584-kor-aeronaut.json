@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "csvid": 10584,
+  "card": "Kor Aeronaut",
+  "recipes": [
+    {
+      "family": "kicker_targeted_utility",
+      "version": 2,
+      "oracle_text": "Kicker {1}{W} (You may pay an additional {1}{W} as you cast this spell.)\nFlying\nWhen this creature enters, if it was kicked, target creature gains flying until end of turn.",
+      "params": {
+        "effect": "flying",
+        "cast_price": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "fee": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "power": 2,
+        "toughness": 2,
+        "extras": [
+          "expires",
+          "grant_defender"
+        ]
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "base_only_0",
+        "base_only_1",
+        "short_kicker_0",
+        "short_kicker_1",
+        "countered_paid_0",
+        "countered_paid_1",
+        "replay_0",
+        "replay_1",
+        "expires_0",
+        "expires_1",
+        "grant_defender_0",
+        "grant_defender_1"
+      ]
+    }
+  ]
+}

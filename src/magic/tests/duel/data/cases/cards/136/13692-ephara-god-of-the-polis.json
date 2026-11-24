@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Ephara, God of the Polis",
+  "csvid": 13692,
+  "recipes": [
+    {
+      "family": "upkeep_draw_and_discard",
+      "version": 2,
+      "params": {
+        "csvid": 13692,
+        "printed_mana": "{2}{W}{U}",
+        "rules": "Indestructible\nAs long as your devotion to white and blue is less than seven, Ephara isn't a creature.\nAt the beginning of each upkeep, if you had another creature enter the battlefield under your control last turn, draw a card."
+      },
+      "oracle_text": "Indestructible\nAs long as your devotion to white and blue is less than seven, Ephara isn't a creature.\nAt the beginning of each upkeep, if you had another creature enter the battlefield under your control last turn, draw a card.",
+      "variants": [
+        "last_friendly_entry_0",
+        "last_friendly_entry_1",
+        "foreign_entry_0",
+        "foreign_entry_1",
+        "devotion_indestructible_0",
+        "devotion_indestructible_1"
+      ]
+    }
+  ]
+}

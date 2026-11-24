@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Galepowder Mage",
+  "csvid": 9147,
+  "recipes": [
+    {
+      "family": "attack_trigger_zones_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 9147,
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Flying\nWhenever this creature attacks, exile another target creature. Return that card to the battlefield under its owner's control at the beginning of the next end step.",
+      "variants": [
+        "own_etb_0",
+        "own_etb_1",
+        "foe_0",
+        "foe_1",
+        "borrowed_0",
+        "borrowed_1",
+        "source_dies_0",
+        "source_dies_1",
+        "no_other_0",
+        "no_other_1",
+        "flight_0",
+        "flight_1"
+      ]
+    }
+  ]
+}

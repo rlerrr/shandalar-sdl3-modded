@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Form of the Dragon",
+  "csvid": 6531,
+  "recipes": [
+    {
+      "family": "upkeep_damage_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 6531
+      },
+      "oracle_text": "At the beginning of your upkeep, this enchantment deals 5 damage to any target.\nAt the beginning of each end step, your life total becomes 5.\nCreatures without flying can't attack you.",
+      "variants": [
+        "player_0",
+        "player_1",
+        "creature_0",
+        "creature_1",
+        "flying_gate_0",
+        "flying_gate_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Knight of the Holy Nimbus",
+  "csvid": 8591,
+  "recipes": [
+    {
+      "family": "regeneration_conditional",
+      "version": 2,
+      "params": {
+        "csvid": 8591,
+        "printed_mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "rules": "Flanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)\nIf this creature would be destroyed, regenerate it. (Tap it, remove it from combat, and heal all damage on it.)\n{2}: This creature can't be regenerated this turn. Only your opponents may activate this ability."
+      },
+      "oracle_text": "Flanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)\nIf this creature would be destroyed, regenerate it. (Tap it, remove it from combat, and heal all damage on it.)\n{2}: This creature can't be regenerated this turn. Only your opponents may activate this ability.",
+      "variants": [
+        "automatic_0",
+        "automatic_1",
+        "deny_fee_0",
+        "deny_fee_1",
+        "flanking_combat_0",
+        "flanking_combat_1",
+        "cannot_regenerate_0",
+        "cannot_regenerate_1"
+      ]
+    }
+  ]
+}

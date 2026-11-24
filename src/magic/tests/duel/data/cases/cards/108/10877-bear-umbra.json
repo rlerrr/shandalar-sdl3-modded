@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Bear Umbra",
+  "csvid": 10877,
+  "recipes": [
+    {
+      "family": "attack_trigger_team_keywords",
+      "version": 2,
+      "params": {
+        "csvid": 10877,
+        "mana": [
+          2,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature gets +2/+2 and has \"Whenever this creature attacks, untap all lands you control.\"\nUmbra armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)",
+      "variants": [
+        "own_host_0",
+        "own_host_1",
+        "other_attacks_0",
+        "other_attacks_1",
+        "foreign_host_0",
+        "foreign_host_1",
+        "armor_0",
+        "armor_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Shapeshifter's Marrow",
+  "csvid": 9014,
+  "recipes": [
+    {
+      "family": "upkeep_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 9014,
+        "cost": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "At the beginning of each opponent's upkeep, that player reveals the top card of their library. If it's a creature card, the player puts the card into their graveyard and this enchantment becomes a copy of that card. (If it does, it loses this ability.)",
+      "variants": [
+        "copy_0",
+        "copy_1",
+        "no_copy_0",
+        "no_copy_1",
+        "empty_0",
+        "empty_1",
+        "owner_upkeep_0",
+        "owner_upkeep_1"
+      ]
+    }
+  ]
+}

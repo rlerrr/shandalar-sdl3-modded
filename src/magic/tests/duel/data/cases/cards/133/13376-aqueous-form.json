@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "csvid": 13376,
+  "card": "Aqueous Form",
+  "recipes": [
+    {
+      "family": "library_scry_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 13376,
+        "mana": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "stats": null
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature can't be blocked.\nWhenever enchanted creature attacks, scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "variants": [
+        "bottom_0",
+        "bottom_1",
+        "keep_0",
+        "keep_1",
+        "other_attack_0",
+        "other_attack_1",
+        "foe_host_0",
+        "foe_host_1",
+        "removed_0",
+        "removed_1"
+      ]
+    }
+  ]
+}

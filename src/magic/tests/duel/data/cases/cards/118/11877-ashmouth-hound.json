@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "csvid": 11877,
+  "card": "Ashmouth Hound",
+  "recipes": [
+    {
+      "family": "block_damage_trigger",
+      "version": 2,
+      "oracle_text": "Whenever this creature blocks or becomes blocked by a creature, this creature deals 1 damage to that creature.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "defense": true,
+          "damage": 1,
+          "controller_damage": 0,
+          "renown": false,
+          "printed": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "power": 2,
+          "toughness": 1,
+          "clauses": [
+            "Whenever this creature blocks or becomes blocked by a creature, this creature deals 1 damage to that creature."
+          ]
+        }
+      },
+      "variants": [
+        "cast_0",
+        "cast_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "unfunded_0",
+        "unfunded_1",
+        "fresh_attack_0",
+        "fresh_attack_1",
+        "attack_lethal_0",
+        "attack_lethal_1",
+        "defend_lethal_0",
+        "defend_lethal_1",
+        "attack_marked_0",
+        "attack_marked_1",
+        "defend_marked_0",
+        "defend_marked_1",
+        "attack_first_strike_0",
+        "attack_first_strike_1",
+        "attack_two_0",
+        "attack_two_1",
+        "hexproof_blocker_0",
+        "hexproof_blocker_1",
+        "unblocked_0",
+        "unblocked_1",
+        "unrelated_0",
+        "unrelated_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

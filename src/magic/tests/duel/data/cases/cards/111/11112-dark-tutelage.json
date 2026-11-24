@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Dark Tutelage",
+  "csvid": 11112,
+  "recipes": [
+    {
+      "family": "upkeep_damage_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 11112
+      },
+      "oracle_text": "At the beginning of your upkeep, reveal the top card of your library and put that card into your hand. You lose life equal to its mana value.",
+      "variants": [
+        "high_0",
+        "high_1",
+        "land_0",
+        "land_1",
+        "successive_0",
+        "successive_1"
+      ]
+    }
+  ]
+}

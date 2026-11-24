@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "csvid": 15594,
+  "card": "Embodiment of Insight",
+  "recipes": [
+    {
+      "family": "landfall_combat_and_animation",
+      "version": 2,
+      "oracle_text": "Vigilance\nLand creatures you control have vigilance.\nLandfall — Whenever a land you control enters, you may have target land you control become a 3/3 Elemental creature with haste until end of turn. It's still a land.",
+      "params": {
+        "effect": "animate",
+        "grant": "vigilance"
+      },
+      "variants": [
+        "opponent_land_0",
+        "cleanup_0",
+        "animate_combat_0",
+        "animate_old_land_0",
+        "land_mana_0",
+        "own_land_creature_0",
+        "foe_land_creature_0",
+        "nonland_creature_0",
+        "intrinsic_keyword_0",
+        "opponent_land_1",
+        "cleanup_1",
+        "animate_combat_1",
+        "animate_old_land_1",
+        "land_mana_1",
+        "own_land_creature_1",
+        "foe_land_creature_1",
+        "nonland_creature_1",
+        "intrinsic_keyword_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

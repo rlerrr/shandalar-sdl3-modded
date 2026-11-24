@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "csvid": 2695,
+  "card": "Elephant Grass",
+  "recipes": [
+    {
+      "family": "global_attack_tax",
+      "version": 2,
+      "params": {
+        "cost": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "composition": "elephant",
+        "tax_formula": "fixed",
+        "amount": 2,
+        "upkeep_per_age": 1,
+        "protects_walker": false,
+        "flying": false
+      },
+      "oracle_text": "Cumulative upkeep {1} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nBlack creatures can't attack you.\nNonblack creatures can't attack you unless their controller pays {2} for each creature they control that's attacking you.",
+      "variants": [
+        "pay_exact_0",
+        "underfunded_0",
+        "black_0",
+        "black_multicolor_0",
+        "walker_short_0",
+        "age_paid_once_0",
+        "age_paid_twice_0",
+        "age_decline_0",
+        "age_unfunded_0",
+        "cast_source_0",
+        "pay_exact_1",
+        "underfunded_1",
+        "black_1",
+        "black_multicolor_1",
+        "walker_short_1",
+        "age_paid_once_1",
+        "age_paid_twice_1",
+        "age_decline_1",
+        "age_unfunded_1",
+        "cast_source_1"
+      ]
+    }
+  ]
+}

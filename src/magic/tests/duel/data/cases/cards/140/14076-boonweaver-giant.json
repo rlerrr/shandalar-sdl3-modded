@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Boonweaver Giant",
+  "csvid": 14076,
+  "recipes": [
+    {
+      "family": "remaining_entry_attachments",
+      "version": 2,
+      "params": {
+        "csvid": 14076,
+        "mana_cost": "{6}{W}"
+      },
+      "oracle_text": "When this creature enters, you may search your graveyard, hand, and/or library for an Aura card and put it onto the battlefield attached to this creature. If you search your library this way, shuffle.",
+      "variants": [
+        "grave_0",
+        "grave_1",
+        "hand_0",
+        "hand_1",
+        "library_0",
+        "library_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

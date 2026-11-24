@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Act on Impulse",
+  "csvid": 14063,
+  "recipes": [
+    {
+      "family": "play_own_exile_effects",
+      "version": 2,
+      "params": {
+        "model": "fixed",
+        "count": 3,
+        "next_turn": false,
+        "cost": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Exile the top three cards of your library. Until end of turn, you may play those cards. (If you cast a spell this way, you still pay its costs. You can play a land this way only if you have an available land play remaining.)",
+      "variants": [
+        "grant_0",
+        "empty_0",
+        "play_land_0",
+        "play_spell_0",
+        "wrong_spell_mana_0",
+        "wrong_seat_0",
+        "wrong_card_0",
+        "spent_land_drop_0",
+        "expiry_0",
+        "offturn_land_0",
+        "replay_0",
+        "source_wrong_mana_0",
+        "source_countered_0",
+        "shallow_0",
+        "second_land_0",
+        "grant_1",
+        "empty_1",
+        "play_land_1",
+        "play_spell_1",
+        "wrong_spell_mana_1",
+        "wrong_seat_1",
+        "wrong_card_1",
+        "spent_land_drop_1",
+        "expiry_1",
+        "offturn_land_1",
+        "replay_1",
+        "source_wrong_mana_1",
+        "source_countered_1",
+        "shallow_1",
+        "second_land_1"
+      ]
+    }
+  ]
+}

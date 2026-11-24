@@ -1,0 +1,570 @@
+{
+  "sources": {
+    "Arnjlot's Ascent": {
+      "oracle": {
+        "oracle_id": "f2cedb38-12b0-4489-a62b-9b6a3776d695",
+        "name": "Arnjlot's Ascent",
+        "oracle_text": "Cumulative upkeep {U} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\n{1}: Target creature gains flying until end of turn.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Cumulative upkeep"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ice/57/arnjlots-ascent?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1859,
+        "iid": 624,
+        "name": "Arnjlot's Ascent",
+        "handler": "manalinkeh_card_arnjlots_ascent",
+        "kind": "card"
+      }
+    },
+    "Balduvian Fallen": {
+      "oracle": {
+        "oracle_id": "3f60a7ce-c714-4e87-a2d9-3710f2d610fa",
+        "name": "Balduvian Fallen",
+        "oracle_text": "Cumulative upkeep {1} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nWhenever this creature's cumulative upkeep is paid, it gets +1/+0 until end of turn for each {B} or {R} spent this way.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "3",
+        "toughness": "5",
+        "keywords": [
+          "Cumulative upkeep"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/csp/51/balduvian-fallen?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8335,
+        "iid": 814,
+        "name": "Balduvian Fallen",
+        "handler": "manalinkeh_card_balduvian_fallen",
+        "kind": "card"
+      }
+    },
+    "Kjeldoran Javelineer": {
+      "oracle": {
+        "oracle_id": "95921d1e-0487-4274-b797-8652e94fc4bc",
+        "name": "Kjeldoran Javelineer",
+        "oracle_text": "Cumulative upkeep {1} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\n{T}: This creature deals damage equal to the number of age counters on it to target attacking or blocking creature.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Cumulative upkeep"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/csp/11/kjeldoran-javelineer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8397,
+        "iid": 5299,
+        "name": "Kjeldoran Javelineer",
+        "handler": "manalinkeh_card_kjeldoran_javelineer",
+        "kind": "card"
+      }
+    },
+    "Soldevi Simulacrum": {
+      "oracle": {
+        "oracle_id": "227ed0b7-7a9a-41f1-a190-1d1b85a44720",
+        "name": "Soldevi Simulacrum",
+        "oracle_text": "Cumulative upkeep {1} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\n{1}: This creature gets +1/+0 until end of turn.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature — Soldier",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Cumulative upkeep"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/222/soldevi-simulacrum?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2109,
+        "iid": 8975,
+        "name": "Soldevi Simulacrum",
+        "handler": "manalinkeh_card_soldevi_simulacrum",
+        "kind": "card"
+      }
+    },
+    "Brand of Ill Omen": {
+      "oracle": {
+        "oracle_id": "947bd180-ee95-4db4-b5d9-432428018eb8",
+        "name": "Brand of Ill Omen",
+        "oracle_text": "Enchant creature\nCumulative upkeep {R} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nEnchanted creature's controller can't cast creature spells.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant",
+          "Cumulative upkeep"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ice/177/brand-of-ill-omen?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1878,
+        "iid": 1296,
+        "name": "Brand of Ill Omen",
+        "handler": "manalinkeh_card_brand_of_ill_omen",
+        "kind": "card"
+      }
+    },
+    "Fyndhorn Pollen": {
+      "oracle": {
+        "oracle_id": "2f18967d-c2cd-449d-a288-df6343672743",
+        "name": "Fyndhorn Pollen",
+        "oracle_text": "Cumulative upkeep {1} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nAll creatures get -1/-0.\n{1}{G}: All creatures get -1/-0 until end of turn.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Cumulative upkeep"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/166/fyndhorn-pollen?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1942,
+        "iid": 3699,
+        "name": "Fyndhorn Pollen",
+        "handler": "manalinkeh_card_fyndhorn_pollen",
+        "kind": "card"
+      }
+    },
+    "Maddening Wind": {
+      "oracle": {
+        "oracle_id": "c9798915-3f9e-466b-bbd6-f4e126bdb67d",
+        "name": "Maddening Wind",
+        "oracle_text": "Enchant creature\nCumulative upkeep {G} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nAt the beginning of the upkeep of enchanted creature's controller, this Aura deals 2 damage to that player.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant",
+          "Cumulative upkeep"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ice/254/maddening-wind?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2024,
+        "iid": 13483,
+        "name": "Maddening Wind",
+        "handler": "manalinkeh_card_maddening_wind",
+        "kind": "card"
+      }
+    },
+    "Volunteer Reserves": {
+      "oracle": {
+        "oracle_id": "a2dabd52-0b75-42d7-a07d-0df7b38646e2",
+        "name": "Volunteer Reserves",
+        "oracle_text": "Banding (Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are blocking or being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's being blocked by or is blocking.)\nCumulative upkeep {1} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Banding",
+          "Cumulative upkeep"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/29/volunteer-reserves?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3066,
+        "iid": 10701,
+        "name": "Volunteer Reserves",
+        "handler": "manalinkeh_card_volounteer_reserves",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Feldon's Cane": {
+      "oracle": {
+        "oracle_id": "9b884dfd-59f4-45c0-bf1e-6ad9f5b58895",
+        "name": "Feldon's Cane",
+        "oracle_text": "{T}, Exile this artifact: Shuffle your graveyard into your library.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/673/feldons-cane?utm_source=api"
+      },
+      "registry": {
+        "csvid": 495,
+        "iid": 3336,
+        "name": "Feldon's Cane",
+        "handler": "manalinkeh_card_feldons_cane",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mons's Goblin Raiders": {
+      "oracle": {
+        "oracle_id": "a37159df-f6d7-4db6-85de-0ea77f425993",
+        "name": "Mons's Goblin Raiders",
+        "oracle_text": "",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/s00/32/monss-goblin-raiders?utm_source=api"
+      },
+      "registry": {
+        "csvid": 163,
+        "iid": 6293,
+        "name": "Mons's Goblin Raiders",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Squire": {
+      "oracle": {
+        "oracle_id": "aa6cdcc7-f5ea-47bf-9448-1c63e36b18d1",
+        "name": "Squire",
+        "oracle_text": "",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsb/15/squire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 948,
+        "iid": 9275,
+        "name": "Squire",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Wastes": {
+      "oracle": {
+        "oracle_id": "05d24b0c-904a-46b6-b42a-96a4d91a0dd4",
+        "name": "Wastes",
+        "oracle_text": "{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Basic Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/191/wastes?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15719,
+        "iid": 15794,
+        "name": "Wastes",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Wind Drake": {
+      "oracle": {
+        "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+        "name": "Wind Drake",
+        "oracle_text": "Flying",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/70/wind-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1197,
+        "iid": 10989,
+        "name": "Wind Drake",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

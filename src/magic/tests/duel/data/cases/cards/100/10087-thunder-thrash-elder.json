@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "card": "Thunder-Thrash Elder",
+  "csvid": 10087,
+  "recipes": [
+    {
+      "family": "devour_entry_rewards",
+      "version": 2,
+      "params": {
+        "reward": "counters",
+        "multiplier": 3,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "keywords": [],
+        "power": 1,
+        "toughness": 1
+      },
+      "oracle_text": "Devour 3 (As this creature enters, you may sacrifice any number of creatures. It enters with three times that many +1/+1 counters on it.)",
+      "variants": [
+        "none_0",
+        "paid_one_0",
+        "countered_0",
+        "wrong_color_0",
+        "snapshot_0",
+        "blink_entry_0",
+        "none_1",
+        "paid_one_1",
+        "countered_1",
+        "wrong_color_1",
+        "snapshot_1",
+        "blink_entry_1",
+        "paid_two_0",
+        "partial_0",
+        "decline_0",
+        "borrowed_meal_0",
+        "shroud_meal_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Mijae Djinn",
+  "csvid": 442,
+  "recipes": [
+    {
+      "family": "coin_flip_combat_flips",
+      "version": 2,
+      "params": {
+        "csvid": 442,
+        "mana": [
+          0,
+          0,
+          0,
+          0,
+          3,
+          0
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks, flip a coin. If you lose the flip, remove this creature from combat and tap it.",
+      "variants": [
+        "win_0",
+        "win_1",
+        "lose_0",
+        "lose_1",
+        "idle_0",
+        "idle_1",
+        "blocked_win_0",
+        "blocked_win_1"
+      ]
+    }
+  ]
+}

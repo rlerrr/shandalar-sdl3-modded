@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "card": "Descend upon the Sinful",
+  "csvid": 15785,
+  "recipes": [
+    {
+      "family": "delirium_tokens_and_board",
+      "version": 2,
+      "params": {
+        "csvid": 15785,
+        "branch": "descend",
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "Exile all creatures.\nDelirium — Create a 4/4 white Angel creature token with flying if there are four or more card types among cards in your graveyard.",
+      "variants": [
+        "three_duplicates_0",
+        "three_duplicates_1",
+        "four_types_0",
+        "four_types_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "angel_flying_0",
+        "angel_flying_1",
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "countered_0",
+        "countered_1",
+        "gain_fourth_0",
+        "gain_fourth_1"
+      ]
+    }
+  ]
+}

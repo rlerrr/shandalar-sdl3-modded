@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "csvid": 3974,
+  "card": "Brink of Madness",
+  "recipes": [
+    {
+      "family": "upkeep_payment_and_sacrifice",
+      "version": 2,
+      "params": {
+        "csvid": 3974,
+        "printed_cost": "{2}{B}{B}",
+        "keywords": []
+      },
+      "oracle_text": "At the beginning of your upkeep, if you have no cards in hand, sacrifice this enchantment and target opponent discards their hand.",
+      "variants": [
+        "empty_0",
+        "empty_1",
+        "one_card_0",
+        "one_card_1"
+      ]
+    }
+  ]
+}

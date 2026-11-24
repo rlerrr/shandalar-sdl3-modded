@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Wrap in Vigor",
+  "csvid": 9054,
+  "recipes": [
+    {
+      "family": "regeneration_spells_and_auras",
+      "version": 2,
+      "params": {
+        "csvid": 9054,
+        "printed_cost": "{1}{G}",
+        "choices": [
+          "mass_0",
+          "mass_1",
+          "single_use_0",
+          "single_use_1",
+          "expires_0",
+          "expires_1",
+          "cannot_regenerate_0",
+          "cannot_regenerate_1",
+          "zero_toughness_0",
+          "zero_toughness_1",
+          "combat_0",
+          "combat_1"
+        ]
+      },
+      "oracle_text": "Regenerate each creature you control.",
+      "variants": [
+        "mass_0",
+        "mass_1",
+        "single_use_0",
+        "single_use_1",
+        "expires_0",
+        "expires_1",
+        "cannot_regenerate_0",
+        "cannot_regenerate_1",
+        "zero_toughness_0",
+        "zero_toughness_1",
+        "combat_0",
+        "combat_1"
+      ]
+    }
+  ]
+}

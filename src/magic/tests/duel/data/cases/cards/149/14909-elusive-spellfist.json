@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Elusive Spellfist",
+  "csvid": 14909,
+  "recipes": [
+    {
+      "family": "cast_noncreature_riders",
+      "version": 2,
+      "params": {
+        "role": "fist",
+        "mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever you cast a noncreature spell, this creature gets +1/+0 until end of turn and can't be blocked this turn.",
+      "variants": [
+        "own_0",
+        "creature_0",
+        "opponent_0",
+        "countered_0",
+        "combat_0",
+        "expiry_0",
+        "own_1",
+        "creature_1",
+        "opponent_1",
+        "countered_1",
+        "combat_1",
+        "expiry_1"
+      ]
+    }
+  ]
+}

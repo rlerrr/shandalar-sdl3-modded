@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Brontotherium",
+  "csvid": 6344,
+  "recipes": [
+    {
+      "family": "attack_follow_on_requirements_and_legality",
+      "version": 2,
+      "params": {
+        "csvid": 6344,
+        "cost": "{4}{G}{G}",
+        "choices": [
+          "provoke_0",
+          "provoke_1",
+          "decline_0",
+          "decline_1",
+          "trample_0",
+          "trample_1"
+        ]
+      },
+      "oracle_text": "Trample\nProvoke (Whenever this creature attacks, you may have target creature defending player controls untap and block it if able.)",
+      "variants": [
+        "provoke_0",
+        "provoke_1",
+        "decline_0",
+        "decline_1",
+        "trample_0",
+        "trample_1"
+      ]
+    }
+  ]
+}

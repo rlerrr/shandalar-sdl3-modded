@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Kavu Titan",
+  "csvid": 5028,
+  "recipes": [
+    {
+      "family": "kicker_entry_counters",
+      "version": 2,
+      "oracle_text": "Kicker {2}{G} (You may pay an additional {2}{G} as you cast this spell.)\nIf this creature was kicked, it enters with three +1/+1 counters on it and with trample.",
+      "params": {
+        "mana": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "life": 0,
+        "returned_card": null,
+        "counter": "plus1",
+        "base": 0,
+        "extra": 3,
+        "rider": "trample_when_kicked"
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "kicker_short_0",
+        "kicker_short_1",
+        "base_short_0",
+        "base_short_1",
+        "countered_0",
+        "countered_1",
+        "blink_0",
+        "blink_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

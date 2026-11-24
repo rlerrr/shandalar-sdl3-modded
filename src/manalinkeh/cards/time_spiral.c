@@ -6820,7 +6820,7 @@ Land
 		instance->number_of_targets = 0;
 		int abils[3] = {0, mana_producer(player, card, EVENT_CAN_ACTIVATE), 0};
 		if( land_can_be_played & LCBP_REGENERATION ){
-			if( generic_activated_ability(player, card, event, GAA_UNTAPPED | GAA_CAN_TARGET, MANACOST0, 0, &td, NULL) ){
+			if( generic_activated_ability(player, card, EVENT_CAN_ACTIVATE, GAA_UNTAPPED | GAA_CAN_TARGET, MANACOST0, 0, &td, NULL) ){
 				abils[2] = 1;
 			}
 		}

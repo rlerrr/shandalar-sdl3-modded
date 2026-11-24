@@ -1,0 +1,463 @@
+{
+  "sources": {
+    "Deity of Scars": {
+      "oracle": {
+        "oracle_id": "bf7c1fa8-0460-4be5-b00d-72c0960c4149",
+        "name": "Deity of Scars",
+        "oracle_text": "Trample\nThis creature enters with two -1/-1 counters on it.\n{B/G}, Remove a -1/-1 counter from this creature: Regenerate this creature.",
+        "mana_cost": "{B/G}{B/G}{B/G}{B/G}{B/G}",
+        "type_line": "Creature — Spirit Avatar",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [
+          "Regenerate",
+          "Trample"
+        ],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eve/118/deity-of-scars?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9762,
+        "iid": 2408,
+        "name": "Deity of Scars",
+        "handler": "manalinkeh_card_deity_of_scars",
+        "kind": "card"
+      }
+    },
+    "Rimebound Dead": {
+      "oracle": {
+        "oracle_id": "cfc58887-859d-4ba5-8507-1fb1aa4d37c0",
+        "name": "Rimebound Dead",
+        "oracle_text": "{S}: Regenerate this creature. ({S} can be paid with one mana from a snow source.)",
+        "mana_cost": "{B}",
+        "type_line": "Snow Creature — Skeleton",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/csp/69/rimebound-dead?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8428,
+        "iid": 7950,
+        "name": "Rimebound Dead",
+        "handler": "manalinkeh_card_rimebound_dead",
+        "kind": "card"
+      }
+    },
+    "Scavenging Ghoul": {
+      "oracle": {
+        "oracle_id": "68c0c04e-b0d5-4721-83bf-bf18e8b7e680",
+        "name": "Scavenging Ghoul",
+        "oracle_text": "At the beginning of each end step, put a corpse counter on this creature for each creature that died this turn.\nRemove a corpse counter from this creature: Regenerate this creature.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/95/scavenging-ghoul?utm_source=api"
+      },
+      "registry": {
+        "csvid": 215,
+        "iid": 8309,
+        "name": "Scavenging Ghoul",
+        "handler": "manalinkeh_card_scavenging_ghoul",
+        "kind": "card"
+      }
+    },
+    "Sentry of the Underworld": {
+      "oracle": {
+        "oracle_id": "fd4d83fa-070c-46bf-a620-041f69acdea9",
+        "name": "Sentry of the Underworld",
+        "oracle_text": "Flying, vigilance\n{W}{B}, Pay 3 life: Regenerate this creature.",
+        "mana_cost": "{3}{W}{B}",
+        "type_line": "Creature — Griffin Skeleton",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Vigilance",
+          "Regenerate"
+        ],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/202/sentry-of-the-underworld?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13546,
+        "iid": 8497,
+        "name": "Sentry of the Underworld",
+        "handler": "manalinkeh_card_sentry_of_the_underworld",
+        "kind": "card"
+      }
+    },
+    "Spiny Starfish": {
+      "oracle": {
+        "oracle_id": "663d6c61-e269-4f2f-9d8f-49c4c23f05d8",
+        "name": "Spiny Starfish",
+        "oracle_text": "{U}: Regenerate this creature.\nAt the beginning of each end step, if this creature regenerated this turn, create a 0/1 blue Starfish creature token for each time it regenerated this turn.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Starfish",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/50/spiny-starfish?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2356,
+        "iid": 9184,
+        "name": "Spiny Starfish",
+        "handler": "manalinkeh_card_spiny_starfish",
+        "kind": "card"
+      }
+    },
+    "Skeletal Changeling": {
+      "oracle": {
+        "oracle_id": "b9d388ca-1a63-4a11-bf33-9f7b87305a52",
+        "name": "Skeletal Changeling",
+        "oracle_text": "Changeling (This card is every creature type.)\n{1}{B}: Regenerate this creature.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Shapeshifter",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate",
+          "Changeling"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/140/skeletal-changeling?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9260,
+        "iid": 8805,
+        "name": "Skeletal Changeling",
+        "handler": "manalinkeh_card_skeletal_changeling",
+        "kind": "card"
+      }
+    },
+    "Yule Ooze": {
+      "oracle": {
+        "oracle_id": "a01cab88-0874-4b2d-8fbc-a9601a0572f3",
+        "name": "Yule Ooze",
+        "oracle_text": "At the beginning of your upkeep, destroy another nonland permanent chosen at random, then put a number of +1/+1 counters on Yule Ooze equal to that permanent's converted mana cost.\n{R}{G}, Eat some food: Regenerate Yule Ooze.",
+        "mana_cost": "{2}{R}{G}",
+        "type_line": "Creature — Ooze",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hho/11/yule-ooze?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16253,
+        "iid": 16342,
+        "name": "Yule Ooze",
+        "handler": "manalinkeh_card_yule_ooze",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Coat of Arms": {
+      "oracle": {
+        "oracle_id": "5f7f133e-58ea-41ab-b1be-be4b400fac4c",
+        "name": "Coat of Arms",
+        "oracle_text": "Each creature gets +1/+1 for each other creature on the battlefield that shares at least one creature type with it. (For example, if two Goblin Warriors and a Goblin Shaman are on the battlefield, each gets +2/+2.)",
+        "mana_cost": "{5}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/58/coat-of-arms?utm_source=api"
+      },
+      "registry": {
+        "csvid": 996,
+        "iid": 1844,
+        "name": "Coat of Arms",
+        "handler": "manalinkeh_card_coat_of_arms",
+        "kind": "card"
+      }
+    },
+    "Darksteel Ingot": {
+      "oracle": {
+        "oracle_id": "a2529491-7389-4cfa-92d2-145eda779603",
+        "name": "Darksteel Ingot",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)\n{T}: Add one mana of any color.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/otc/256/darksteel-ingot?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1561,
+        "iid": 2251,
+        "name": "Darksteel Ingot",
+        "handler": "manalinkeh_card_darksteel_ingot",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Snow-Covered Swamp": {
+      "oracle": {
+        "oracle_id": "d8239a86-7184-4005-ba1e-2dddcd756c47",
+        "name": "Snow-Covered Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Snow Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/khm/280/snow-covered-swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2104,
+        "iid": 11399,
+        "name": "Snow-Covered Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Spellbook": {
+      "oracle": {
+        "oracle_id": "83133f51-bfbd-4db5-9be0-f660e3b66435",
+        "name": "Spellbook",
+        "oracle_text": "You have no maximum hand size.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact — Book",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/220/spellbook?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1154,
+        "iid": 9121,
+        "name": "Spellbook",
+        "handler": "manalinkeh_card_spellbook",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    }
+  },
+  "token_witnesses": {
+    "Starfish": {
+      "registry": {
+        "csvid": 18834,
+        "iid": 9315,
+        "name": "Starfish",
+        "handler": "manalinkeh_card_rhino_token",
+        "kind": "card"
+      },
+      "power": 0,
+      "toughness": 1,
+      "color": 4,
+      "subtype": "Starfish"
+    }
+  }
+}

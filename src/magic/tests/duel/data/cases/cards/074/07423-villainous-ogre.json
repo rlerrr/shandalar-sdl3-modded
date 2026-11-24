@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Villainous Ogre",
+  "csvid": 7423,
+  "recipes": [
+    {
+      "family": "regeneration_conditional",
+      "version": 2,
+      "params": {
+        "csvid": 7423,
+        "printed_mana": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "rules": "This creature can't block.\nAs long as you control a Demon, this creature has \"{B}: Regenerate this creature.\""
+      },
+      "oracle_text": "This creature can't block.\nAs long as you control a Demon, this creature has \"{B}: Regenerate this creature.\"",
+      "variants": [
+        "demon_shield_0",
+        "demon_shield_1",
+        "rival_demon_0",
+        "rival_demon_1",
+        "demon_unfunded_0",
+        "demon_unfunded_1",
+        "cannot_block_0",
+        "cannot_block_1"
+      ]
+    }
+  ]
+}

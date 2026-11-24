@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "csvid": 15755,
+  "card": "Breakneck Rider",
+  "recipes": [
+    {
+      "family": "werewolf_combat_riders",
+      "version": 2,
+      "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+      "params": {
+        "price": [
+          1,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "front": {
+          "name": "Breakneck Rider",
+          "power": 3,
+          "toughness": 3,
+          "color": 16,
+          "clauses": [
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Neck Breaker",
+          "power": 4,
+          "toughness": 3,
+          "color": 16,
+          "clauses": [
+            "Attacking creatures you control get +1/+0 and have trample.",
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        },
+        "rider": "team"
+      },
+      "variants": [
+        "front_split_0",
+        "front_split_1",
+        "back_split_0",
+        "back_split_1",
+        "back_two_0",
+        "back_two_1",
+        "front_team_0",
+        "front_team_1",
+        "back_team_0",
+        "back_team_1",
+        "enemy_team_0",
+        "enemy_team_1"
+      ]
+    }
+  ]
+}

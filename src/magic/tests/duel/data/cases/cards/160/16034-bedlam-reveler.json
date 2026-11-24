@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Bedlam Reveler",
+  "csvid": 16034,
+  "recipes": [
+    {
+      "family": "entry_rider_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 16034,
+        "printed_mana": "{6}{R}{R}",
+        "rules": "This spell costs {1} less to cast for each instant and sorcery card in your graveyard.\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhen this creature enters, discard your hand, then draw three cards."
+      },
+      "oracle_text": "This spell costs {1} less to cast for each instant and sorcery card in your graveyard.\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhen this creature enters, discard your hand, then draw three cards.",
+      "variants": [
+        "exact_discount_prowess_0",
+        "exact_discount_prowess_1",
+        "opponent_spells_ignored_0",
+        "opponent_spells_ignored_1",
+        "short_0",
+        "short_1"
+      ]
+    }
+  ]
+}

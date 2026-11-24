@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Wort, Boggart Auntie",
+  "csvid": 9317,
+  "recipes": [
+    {
+      "family": "graveyard_reanimation_permissions",
+      "version": 2,
+      "params": {
+        "model": "goblin",
+        "cost": [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "hybrid_symbols": []
+      },
+      "oracle_text": "Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)\nAt the beginning of your upkeep, you may return target Goblin card from your graveyard to your hand.",
+      "variants": [
+        "effect_0",
+        "opponent_upkeep_0",
+        "replay_0",
+        "repeat_0",
+        "underpaid_0",
+        "countered_0",
+        "kindred_0",
+        "decline_0",
+        "opp_only_0",
+        "wrong_type_0",
+        "wrong_zone_0",
+        "shroud_0",
+        "fear_ground_0",
+        "fear_black_0",
+        "fear_artifact_0",
+        "effect_1",
+        "opponent_upkeep_1",
+        "replay_1",
+        "repeat_1",
+        "underpaid_1",
+        "countered_1",
+        "kindred_1",
+        "decline_1",
+        "opp_only_1",
+        "wrong_type_1",
+        "wrong_zone_1",
+        "shroud_1",
+        "fear_ground_1",
+        "fear_black_1",
+        "fear_artifact_1"
+      ]
+    }
+  ]
+}

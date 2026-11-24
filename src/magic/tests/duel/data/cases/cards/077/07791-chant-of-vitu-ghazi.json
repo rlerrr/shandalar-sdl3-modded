@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 7791,
+  "card": "Chant of Vitu-Ghazi",
+  "recipes": [
+    {
+      "family": "convoke_prevention_and_vigilance",
+      "version": 2,
+      "params": {
+        "csvid": 7791,
+        "printed_cost": "{6}{W}{W}"
+      },
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nPrevent all damage that would be dealt by creatures this turn. You gain life equal to the damage prevented this way.",
+      "variants": [
+        "combat_0",
+        "mixed_damage_0",
+        "expiry_0",
+        "all_creatures_0",
+        "short_0",
+        "creature_packets_0",
+        "combat_1",
+        "mixed_damage_1",
+        "expiry_1",
+        "all_creatures_1",
+        "short_1",
+        "creature_packets_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 16338,
+  "card": "Deadlock Trap",
+  "recipes": [
+    {
+      "family": "entry_rider_energy_and_mana",
+      "version": 2,
+      "params": {
+        "csvid": 16338,
+        "printed_cost": "{3}"
+      },
+      "oracle_text": "This artifact enters tapped.\nWhen this artifact enters, you get {E}{E} (two energy counters).\n{T}, Pay {E}: Tap target creature or planeswalker. Its activated abilities can't be activated this turn.",
+      "variants": [
+        "entry_0",
+        "lock_0",
+        "planeswalker_0",
+        "countered_0",
+        "entry_1",
+        "lock_1",
+        "planeswalker_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

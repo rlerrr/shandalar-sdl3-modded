@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Pendulum of Patterns",
+  "csvid": 16766,
+  "recipes": [
+    {
+      "family": "entry_interaction_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 16766,
+        "printed_mana": "{2}",
+        "rules": "When this artifact enters, you gain 3 life.\n{5}, {T}, Sacrifice this artifact: Draw a card."
+      },
+      "oracle_text": "When this artifact enters, you gain 3 life.\n{5}, {T}, Sacrifice this artifact: Draw a card.",
+      "variants": [
+        "cost_five_0",
+        "cost_five_1",
+        "short_0",
+        "short_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,436 @@
+{
+  "version": 1,
+  "sources": {
+    "Primordial Ooze": {
+      "oracle": {
+        "oracle_id": "133109c3-a2ca-4231-b3b1-baa700800b07",
+        "name": "Primordial Ooze",
+        "oracle_text": "This creature attacks each combat if able.\nAt the beginning of your upkeep, put a +1/+1 counter on this creature. Then you may pay {X}, where X is the number of +1/+1 counters on it. If you don't, tap this creature and it deals X damage to you.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Ooze",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5ed/261/primordial-ooze?utm_source=api"
+      },
+      "registry": {
+        "csvid": 747,
+        "iid": 7384,
+        "name": "Primordial Ooze",
+        "handler": "manalinkeh_card_primordial_ooze",
+        "kind": "card"
+      }
+    },
+    "Thran War Machine": {
+      "oracle": {
+        "oracle_id": "b3b8fe34-4f69-4555-bcac-04563d02c99f",
+        "name": "Thran War Machine",
+        "oracle_text": "Echo {4} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nThis creature attacks each combat if able.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Echo"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ulg/134/thran-war-machine?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4070,
+        "iid": 9946,
+        "name": "Thran War Machine",
+        "handler": "manalinkeh_card_thran_war_machine",
+        "kind": "card"
+      }
+    },
+    "Ulamog's Crusher": {
+      "oracle": {
+        "oracle_id": "597bce51-af89-4d13-9a97-667b4f4f4694",
+        "name": "Ulamog's Crusher",
+        "oracle_text": "Annihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents of their choice.)\nThis creature attacks each combat if able.",
+        "mana_cost": "{8}",
+        "type_line": "Creature — Eldrazi",
+        "power": "8",
+        "toughness": "8",
+        "keywords": [
+          "Annihilator"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/6/ulamogs-crusher?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11069,
+        "iid": 10314,
+        "name": "Ulamog's Crusher",
+        "handler": "manalinkeh_card_ulamogs_crusher",
+        "kind": "card"
+      }
+    },
+    "Phyrexian Juggernaut": {
+      "oracle": {
+        "oracle_id": "009fcd1e-5c5f-435b-afc1-099f1622e45c",
+        "name": "Phyrexian Juggernaut",
+        "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nThis creature attacks each combat if able.",
+        "mana_cost": "{6}",
+        "type_line": "Artifact Creature — Phyrexian Juggernaut",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Infect"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/td2/63/phyrexian-juggernaut?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11499,
+        "iid": 7169,
+        "name": "Phyrexian Juggernaut",
+        "handler": "manalinkeh_card_berserkers_of_blood_ridge",
+        "kind": "card"
+      }
+    },
+    "Deathbellow Raider": {
+      "oracle": {
+        "oracle_id": "3b14e7ea-e01c-421d-acd2-0b70436ca6aa",
+        "name": "Deathbellow Raider",
+        "oracle_text": "This creature attacks each combat if able.\n{2}{B}: Regenerate this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Minotaur Berserker",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/117/deathbellow-raider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13419,
+        "iid": 2340,
+        "name": "Deathbellow Raider",
+        "handler": "manalinkeh_card_deathbellow_raider",
+        "kind": "card"
+      }
+    },
+    "Sprinting Warbrute": {
+      "oracle": {
+        "oracle_id": "e680f3e9-5c76-41e6-a4a5-662ee05ac3af",
+        "name": "Sprinting Warbrute",
+        "oracle_text": "This creature attacks each combat if able.\nDash {3}{R} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)",
+        "mana_cost": "{4}{R}",
+        "type_line": "Creature — Ogre Berserker",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [
+          "Dash"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/157/sprinting-warbrute?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15035,
+        "iid": 14832,
+        "name": "Sprinting Warbrute",
+        "handler": "manalinkeh_card_sprinting_warbrute",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Dazzling Ramparts": {
+      "oracle": {
+        "oracle_id": "0527fc47-2bfc-4d02-90fa-5a1284f89a0a",
+        "name": "Dazzling Ramparts",
+        "oracle_text": "Defender\n{1}{W}, {T}: Tap target creature.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "7",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/6/dazzling-ramparts?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14247,
+        "iid": 2299,
+        "name": "Dazzling Ramparts",
+        "handler": "manalinkeh_card_dazzling_ramparts",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Hermetic Study": {
+      "oracle": {
+        "oracle_id": "792d7818-ee5c-4254-b969-7b50f475c629",
+        "name": "Hermetic Study",
+        "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to any target.\"",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/53/hermetic-study?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3793,
+        "iid": 4517,
+        "name": "Hermetic Study",
+        "handler": "manalinkeh_card_hermetic_study",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Pacifism": {
+      "oracle": {
+        "oracle_id": "5f5e0b10-c8cf-450c-bfd3-bcb0528ec330",
+        "name": "Pacifism",
+        "oracle_text": "Enchant creature\nEnchanted creature can't attack or block.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/575/pacifism?utm_source=api"
+      },
+      "registry": {
+        "csvid": 968,
+        "iid": 6961,
+        "name": "Pacifism",
+        "handler": "manalinkeh_card_pacifism",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Sol Ring": {
+      "oracle": {
+        "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+        "name": "Sol Ring",
+        "oracle_text": "{T}: Add {C}{C}.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+      },
+      "registry": {
+        "csvid": 230,
+        "iid": 8968,
+        "name": "Sol Ring",
+        "handler": "manalinkeh_card_sol_ring",
+        "kind": "card"
+      }
+    }
+  }
+}

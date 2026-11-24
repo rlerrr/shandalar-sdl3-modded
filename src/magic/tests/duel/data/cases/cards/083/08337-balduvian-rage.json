@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Balduvian Rage",
+  "csvid": 8337,
+  "recipes": [
+    {
+      "family": "temporary_x_power_instants",
+      "version": 2,
+      "params": {
+        "model": "rage",
+        "mana": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "instant": true,
+        "on_cast_x": true
+      },
+      "oracle_text": "Target attacking creature gets +X/+0 until end of turn.\nDraw a card at the beginning of the next turn's upkeep.",
+      "variants": [
+        "exact_0",
+        "zero_0",
+        "wrong_color_0",
+        "short_0",
+        "no_legal_target_0",
+        "opponent_target_0",
+        "countered_0",
+        "lost_target_0",
+        "blocked_0",
+        "snapshot_0",
+        "exact_1",
+        "zero_1",
+        "wrong_color_1",
+        "short_1",
+        "no_legal_target_1",
+        "opponent_target_1",
+        "countered_1",
+        "lost_target_1",
+        "blocked_1",
+        "snapshot_1"
+      ]
+    }
+  ]
+}

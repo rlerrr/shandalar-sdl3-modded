@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Clearwater Goblet",
+  "csvid": 7027,
+  "recipes": [
+    {
+      "family": "upkeep_damage_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 7027
+      },
+      "oracle_text": "Sunburst (This artifact enters with a charge counter on it for each color of mana spent to cast it.)\nAt the beginning of your upkeep, you may gain life equal to the number of charge counters on this artifact.",
+      "variants": [
+        "two_colors_0",
+        "two_colors_1",
+        "one_color_0",
+        "one_color_1",
+        "colorless_0",
+        "colorless_1",
+        "decline_0",
+        "removed_0",
+        "removed_1"
+      ]
+    }
+  ]
+}

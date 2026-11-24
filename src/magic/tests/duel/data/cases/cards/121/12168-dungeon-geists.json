@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Dungeon Geists",
+  "csvid": 12168,
+  "recipes": [
+    {
+      "family": "entry_interaction_combat",
+      "version": 2,
+      "params": {
+        "csvid": 12168,
+        "cost": "{2}{U}{U}",
+        "choices": [
+          "lock_0",
+          "lock_1",
+          "leaves_0",
+          "leaves_1",
+          "control_0",
+          "control_1",
+          "own_only_0",
+          "own_only_1",
+          "flying_0",
+          "flying_1"
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, tap target creature an opponent controls. That creature doesn't untap during its controller's untap step for as long as you control this creature.",
+      "variants": [
+        "lock_0",
+        "lock_1",
+        "leaves_0",
+        "leaves_1",
+        "control_0",
+        "control_1",
+        "own_only_0",
+        "own_only_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

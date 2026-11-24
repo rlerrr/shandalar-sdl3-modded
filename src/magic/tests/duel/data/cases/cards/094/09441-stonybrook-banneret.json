@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "csvid": 9441,
+  "card": "Stonybrook Banneret",
+  "recipes": [
+    {
+      "family": "typed_cast_reducers",
+      "version": 2,
+      "params": {
+        "effect": "subtype_discount",
+        "cost": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "subtypes": [
+          "Merfolk",
+          "Wizard"
+        ],
+        "amount": 1,
+        "perk": "islandwalk"
+      },
+      "oracle_text": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)\nMerfolk spells and Wizard spells you cast cost {1} less to cast.",
+      "variants": [
+        "first_match_0",
+        "first_match_1",
+        "printed_budget_0",
+        "printed_budget_1",
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "source_grave_0",
+        "source_grave_1",
+        "source_leaves_0",
+        "source_leaves_1",
+        "opposing_caster_0",
+        "opposing_caster_1",
+        "source_cast_0",
+        "source_cast_1",
+        "source_short_0",
+        "source_short_1",
+        "paid_replay_0",
+        "paid_replay_1",
+        "countered_0",
+        "countered_1",
+        "combined_0",
+        "combined_1",
+        "kindred_changeling_0",
+        "kindred_changeling_1",
+        "changeling_creature_0",
+        "changeling_creature_1",
+        "unrelated_creature_0",
+        "unrelated_creature_1",
+        "unrelated_noncreature_0",
+        "unrelated_noncreature_1",
+        "tapped_source_0",
+        "tapped_source_1",
+        "second_match_0",
+        "second_match_1",
+        "overlap_0",
+        "overlap_1",
+        "overlap_payment_0",
+        "overlap_payment_1",
+        "printed_kindred_0",
+        "printed_kindred_1",
+        "defender_island_0",
+        "defender_island_1",
+        "defender_forest_0",
+        "defender_forest_1",
+        "own_island_0",
+        "own_island_1",
+        "island_leaves_0",
+        "island_leaves_1"
+      ]
+    }
+  ]
+}

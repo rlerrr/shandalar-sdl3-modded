@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Noetic Scales",
+  "csvid": 3833,
+  "recipes": [
+    {
+      "family": "upkeep_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 3833,
+        "cost": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "At the beginning of each player's upkeep, return to its owner's hand each creature that player controls with power greater than the number of cards in their hand.",
+      "variants": [
+        "both_0",
+        "both_1",
+        "empty_hand_0",
+        "empty_hand_1",
+        "foe_upkeep_0",
+        "foe_upkeep_1"
+      ]
+    }
+  ]
+}

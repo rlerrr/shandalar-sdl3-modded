@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Angel of Flight Alabaster",
+  "csvid": 11873,
+  "recipes": [
+    {
+      "family": "graveyard_recursion_triggers",
+      "version": 2,
+      "params": {
+        "model": "spirit",
+        "destination": "hand",
+        "cost": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "power_toughness": [
+          4,
+          4
+        ]
+      },
+      "oracle_text": "Flying\nAt the beginning of your upkeep, return target Spirit card from your graveyard to your hand.",
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "empty_0",
+        "wrong_type_0",
+        "opponent_grave_0",
+        "shroud_0",
+        "cross_owned_0",
+        "replay_0",
+        "opponent_upkeep_0",
+        "repeat_0",
+        "countered_0",
+        "short_mana_0",
+        "wrong_mana_0",
+        "flying_ground_0",
+        "flying_reach_0",
+        "effect_1",
+        "alternate_1",
+        "empty_1",
+        "wrong_type_1",
+        "opponent_grave_1",
+        "shroud_1",
+        "cross_owned_1",
+        "replay_1",
+        "opponent_upkeep_1",
+        "repeat_1",
+        "countered_1",
+        "short_mana_1",
+        "wrong_mana_1",
+        "flying_ground_1",
+        "flying_reach_1"
+      ]
+    }
+  ]
+}

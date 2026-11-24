@@ -4089,7 +4089,7 @@ int card_nomad_decoy(int player, int card, event_t event){
 			spell_fizzled = 1;
 			return 0;
 		}
-		generic_activated_ability(player, card, event, GAA_UNTAPPED | GAA_CAN_TARGET, MANACOST_W(choice), 0, &td, NULL);
+		generic_activated_ability(player, card, event, GAA_UNTAPPED | GAA_CAN_TARGET, MANACOST_W(choice), 0, &td, "TARGET_CREATURE");
 		if( spell_fizzled != 1 ){
 			if( choice == 2 ){
 				state_untargettable(instance->targets[0].player, instance->targets[0].card, 1);

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Spreading Algae",
+  "csvid": 1159,
+  "recipes": [
+    {
+      "family": "departure_linked_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 1159
+      },
+      "oracle_text": "Enchant Swamp\nWhen enchanted land becomes tapped, destroy it.\nWhen this Aura is put into a graveyard from the battlefield, return it to its owner's hand.",
+      "variants": [
+        "tap_0",
+        "tap_1",
+        "non_swamp_0",
+        "non_swamp_1",
+        "exile_0",
+        "exile_1"
+      ]
+    }
+  ]
+}

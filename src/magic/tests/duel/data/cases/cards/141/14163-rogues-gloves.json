@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Rogue's Gloves",
+  "csvid": 14163,
+  "recipes": [
+    {
+      "family": "attachment_combat_draw",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "attachment": "equipment",
+        "equip": 2,
+        "fear": false,
+        "recipient": "player",
+        "ability": "attachment"
+      },
+      "oracle_text": "Whenever equipped creature deals combat damage to a player, you may draw a card.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+      "variants": [
+        "hit_0",
+        "blocked_0",
+        "other_attacker_0",
+        "noncombat_0",
+        "source_removed_0",
+        "unaffordable_cast_0",
+        "ready_snapshot_0",
+        "damage_snapshot_0",
+        "foreign_owned_host_0",
+        "unattached_0",
+        "equip_insufficient_0",
+        "equip_no_own_0",
+        "moved_0",
+        "hit_1",
+        "blocked_1",
+        "other_attacker_1",
+        "noncombat_1",
+        "source_removed_1",
+        "unaffordable_cast_1",
+        "ready_snapshot_1",
+        "damage_snapshot_1",
+        "foreign_owned_host_1",
+        "unattached_1",
+        "equip_insufficient_1",
+        "equip_no_own_1",
+        "moved_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

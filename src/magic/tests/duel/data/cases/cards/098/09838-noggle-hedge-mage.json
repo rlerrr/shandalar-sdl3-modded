@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 9838,
+  "card": "Noggle Hedge-Mage",
+  "recipes": [
+    {
+      "family": "remaining_entry_turn_and_choices",
+      "version": 2,
+      "params": {
+        "csvid": 9838,
+        "printed_cost": "{2}{U/R}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, if you control two or more Islands, you may tap two target permanents.\nWhen this creature enters, if you control two or more Mountains, you may have this creature deal 2 damage to target player or planeswalker.",
+      "variants": [
+        "dual_types_0",
+        "islands_0",
+        "mountains_walker_0",
+        "opponent_lands_0",
+        "decline_0",
+        "dual_types_1",
+        "islands_1",
+        "mountains_walker_1",
+        "opponent_lands_1",
+        "decline_1"
+      ]
+    }
+  ]
+}

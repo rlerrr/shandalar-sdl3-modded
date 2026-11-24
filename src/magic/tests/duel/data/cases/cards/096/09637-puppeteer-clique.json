@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Puppeteer Clique",
+  "csvid": 9637,
+  "recipes": [
+    {
+      "family": "reanimation_additional_riders",
+      "version": 2,
+      "params": {
+        "rider": "persist",
+        "cost": [
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "threshold": null
+      },
+      "oracle_text": "Flying\nWhen this creature enters, put target creature card from an opponent's graveyard onto the battlefield under your control. It gains haste. At the beginning of your next end step, exile it.\nPersist (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)",
+      "variants": [
+        "effect_0",
+        "underpaid_0",
+        "countered_0",
+        "replay_0",
+        "empty_0",
+        "wrong_type_0",
+        "alternate_0",
+        "own_only_0",
+        "shroud_0",
+        "persist_0",
+        "source_bounced_0",
+        "borrowed_bounced_0",
+        "flight_ground_0",
+        "flight_reach_0",
+        "effect_1",
+        "underpaid_1",
+        "countered_1",
+        "replay_1",
+        "empty_1",
+        "wrong_type_1",
+        "alternate_1",
+        "own_only_1",
+        "shroud_1",
+        "persist_1",
+        "source_bounced_1",
+        "borrowed_bounced_1",
+        "flight_ground_1",
+        "flight_reach_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Keeper of Tresserhorn",
+  "csvid": 2302,
+  "recipes": [
+    {
+      "family": "attack_follow_on_unblocked_modes",
+      "version": 2,
+      "params": {
+        "csvid": 2302,
+        "cost": [
+          5,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks and isn't blocked, it assigns no combat damage this turn and defending player loses 2 life.",
+      "variants": [
+        "unblocked_0",
+        "unblocked_1",
+        "blocked_0",
+        "blocked_1",
+        "other_attacks_0",
+        "other_attacks_1"
+      ]
+    }
+  ]
+}

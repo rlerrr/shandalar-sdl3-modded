@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 10794,
+  "card": "Lightkeeper of Emeria",
+  "recipes": [
+    {
+      "family": "kicker_variable_and_multikicker",
+      "version": 2,
+      "oracle_text": "Multikicker {W} (You may pay an additional {W} any number of times as you cast this spell.)\nFlying\nWhen this creature enters, you gain 2 life for each time it was kicked.",
+      "params": {
+        "effect": "life",
+        "kicker_cost": "{W}",
+        "base_cost": "{3}{W}",
+        "csvid": 10794
+      },
+      "variants": [
+        "declined_0",
+        "paid_0",
+        "once_0",
+        "short_base_0",
+        "countered_0",
+        "replay_0",
+        "declined_1",
+        "paid_1",
+        "once_1",
+        "short_base_1",
+        "countered_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

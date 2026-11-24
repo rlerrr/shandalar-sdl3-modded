@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Geistcatcher's Rig",
+  "csvid": 11963,
+  "recipes": [
+    {
+      "family": "entry_trigger_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 11963,
+        "cost": "{6}",
+        "choices": [
+          "kill_flyer_0",
+          "kill_flyer_1",
+          "decline_0",
+          "decline_1",
+          "no_flyer_0",
+          "no_flyer_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, you may have it deal 4 damage to target creature with flying.",
+      "variants": [
+        "kill_flyer_0",
+        "kill_flyer_1",
+        "decline_0",
+        "decline_1",
+        "no_flyer_0",
+        "no_flyer_1"
+      ]
+    }
+  ]
+}

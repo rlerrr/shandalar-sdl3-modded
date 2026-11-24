@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "card": "Gather the Pack",
+  "csvid": 15133,
+  "recipes": [
+    {
+      "family": "top_library_selection",
+      "version": 2,
+      "params": {
+        "method": "mastery",
+        "window": 5,
+        "cap": 2,
+        "required": false,
+        "eligible": [
+          "Creature"
+        ],
+        "life_loss": 0,
+        "cost": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "instant": false
+      },
+      "oracle_text": "Reveal the top five cards of your library. You may put a creature card from among them into your hand. Put the rest into your graveyard.\nSpell mastery — If there are two or more instant and/or sorcery cards in your graveyard, put up to two creature cards from among the revealed cards into your hand instead of one.",
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "empty_0",
+        "short_0",
+        "outside_0",
+        "duplicates_0",
+        "wrong_mana_0",
+        "short_mana_0",
+        "countered_0",
+        "replay_0",
+        "mastery_both_0",
+        "mastery_live_0",
+        "mastery_one_0",
+        "mastery_decline_0",
+        "mastery_foe_0",
+        "mastery_nonspell_0",
+        "mastery_same_spell_0",
+        "mastery_loses_0",
+        "mastery_small_0",
+        "effect_1",
+        "alternate_1",
+        "empty_1",
+        "short_1",
+        "outside_1",
+        "duplicates_1",
+        "wrong_mana_1",
+        "short_mana_1",
+        "countered_1",
+        "replay_1",
+        "mastery_both_1",
+        "mastery_live_1",
+        "mastery_one_1",
+        "mastery_decline_1",
+        "mastery_foe_1",
+        "mastery_nonspell_1",
+        "mastery_same_spell_1",
+        "mastery_loses_1",
+        "mastery_small_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "csvid": 19376,
+  "card": "Glowspore Shaman",
+  "recipes": [
+    {
+      "family": "mill_death_and_entry",
+      "version": 2,
+      "params": {
+        "csvid": 19376,
+        "mana": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "stats": [
+          3,
+          1
+        ]
+      },
+      "oracle_text": "When this creature enters, mill three cards. You may put a land card from your graveyard on top of your library. (To mill a card, put the top card of your library into your graveyard.)",
+      "variants": [
+        "recover_milled_0",
+        "recover_milled_1",
+        "recover_old_0",
+        "recover_old_1",
+        "decline_0",
+        "decline_1",
+        "no_land_0",
+        "no_land_1",
+        "short_0",
+        "short_1",
+        "grave_shroud_0",
+        "grave_shroud_1"
+      ]
+    }
+  ]
+}

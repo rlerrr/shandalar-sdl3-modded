@@ -1,0 +1,621 @@
+{
+  "sources": {
+    "Swamp Mosquito": {
+      "oracle": {
+        "oracle_id": "4bb4844c-2678-45c7-8f5e-9cf185fd484b",
+        "name": "Swamp Mosquito",
+        "oracle_text": "Flying\nWhenever this creature attacks and isn't blocked, defending player gets a poison counter. (A player with ten or more poison counters loses the game.)",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Insect",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsb/49/swamp-mosquito?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2365,
+        "iid": 9590,
+        "name": "Swamp Mosquito",
+        "handler": "manalinkeh_card_swamp_mosquito",
+        "kind": "card"
+      }
+    },
+    "Floral Spuzzem": {
+      "oracle": {
+        "oracle_id": "994de451-14f9-466f-a56e-da052b4666e5",
+        "name": "Floral Spuzzem",
+        "oracle_text": "Whenever this creature attacks and isn't blocked, you may destroy target artifact defending player controls. If you do, this creature assigns no combat damage this turn.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Elemental",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/leg/187/floral-spuzzem?utm_source=api"
+      },
+      "registry": {
+        "csvid": 639,
+        "iid": 3538,
+        "name": "Floral Spuzzem",
+        "handler": "manalinkeh_card_floral_spuzzem",
+        "kind": "card"
+      }
+    },
+    "Goblin Vandal": {
+      "oracle": {
+        "oracle_id": "50bebbb9-01b7-4eb6-8efd-307c9bcd2517",
+        "name": "Goblin Vandal",
+        "oracle_text": "Whenever this creature attacks and isn't blocked, you may pay {R}. If you do, destroy target artifact defending player controls and this creature assigns no combat damage this turn.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/105/goblin-vandal?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2986,
+        "iid": 4060,
+        "name": "Goblin Vandal",
+        "handler": "manalinkeh_card_goblin_vandal",
+        "kind": "card"
+      }
+    },
+    "Necrite": {
+      "oracle": {
+        "oracle_id": "e6ab8a04-e225-4ff0-bb8b-c80d0e6ce50c",
+        "name": "Necrite",
+        "oracle_text": "Whenever this creature attacks and isn't blocked, you may sacrifice it. If you do, destroy target creature defending player controls. It can't be regenerated.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Thrull",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/106/necrite?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1809,
+        "iid": 6509,
+        "name": "Necrite",
+        "handler": "manalinkeh_card_necrite",
+        "kind": "card"
+      }
+    },
+    "Goblin Grenadiers": {
+      "oracle": {
+        "oracle_id": "be83a518-cfab-46b1-9fe9-7e3d54311c37",
+        "name": "Goblin Grenadiers",
+        "oracle_text": "Whenever this creature attacks and isn't blocked, you may sacrifice it. If you do, destroy target creature and target land.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Goblin",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/104/goblin-grenadiers?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2984,
+        "iid": 4011,
+        "name": "Goblin Grenadiers",
+        "handler": "manalinkeh_card_goblin_grenadiers",
+        "kind": "card"
+      }
+    },
+    "Guiltfeeder": {
+      "oracle": {
+        "oracle_id": "0285bd20-f49e-48f7-8c8c-960f9fbe4d34",
+        "name": "Guiltfeeder",
+        "oracle_text": "Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)\nWhenever this creature attacks and isn't blocked, defending player loses 1 life for each card in their graveyard.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Creature — Horror",
+        "power": "0",
+        "toughness": "4",
+        "keywords": [
+          "Fear"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clb/756/guiltfeeder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5956,
+        "iid": 4309,
+        "name": "Guiltfeeder",
+        "handler": "manalinkeh_card_guiltfeeder",
+        "kind": "card"
+      }
+    },
+    "Murk Dwellers": {
+      "oracle": {
+        "oracle_id": "00358a89-2058-448b-a2fd-389f639ba2da",
+        "name": "Murk Dwellers",
+        "oracle_text": "Whenever this creature attacks and isn't blocked, it gets +2/+0 until end of combat.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5ed/180/murk-dwellers?utm_source=api"
+      },
+      "registry": {
+        "csvid": 371,
+        "iid": 6389,
+        "name": "Murk Dwellers",
+        "handler": "manalinkeh_card_murk_dwellers",
+        "kind": "card"
+      }
+    },
+    "Suq'Ata Assassin": {
+      "oracle": {
+        "oracle_id": "db43b866-13e0-4336-a580-b64fe1ee5954",
+        "name": "Suq'Ata Assassin",
+        "oracle_text": "Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)\nWhenever this creature attacks and isn't blocked, defending player gets a poison counter. (A player with ten or more poison counters loses the game.)",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Human Assassin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Fear"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vis/69/suqata-assassin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2788,
+        "iid": 9559,
+        "name": "Suq'Ata Assassin",
+        "handler": "manalinkeh_card_suqata_assassin",
+        "kind": "card"
+      }
+    },
+    "Thalakos Deceiver": {
+      "oracle": {
+        "oracle_id": "c304777a-39a9-4a2a-8cec-8116afb34c5b",
+        "name": "Thalakos Deceiver",
+        "oracle_text": "Shadow (This creature can block or be blocked by only creatures with shadow.)\nWhenever this creature attacks and isn't blocked, you may sacrifice it. If you do, gain control of target creature. (This effect lasts indefinitely.)",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Thalakos Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Shadow"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sth/45/thalakos-deceiver?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3442,
+        "iid": 9838,
+        "name": "Thalakos Deceiver",
+        "handler": "manalinkeh_card_thalakos_deceiver",
+        "kind": "card"
+      }
+    },
+    "Crypt Cobra": {
+      "oracle": {
+        "oracle_id": "456bbc0e-a648-481f-b37e-9996029556bd",
+        "name": "Crypt Cobra",
+        "oracle_text": "Whenever this creature attacks and isn't blocked, defending player gets a poison counter. (A player with ten or more poison counters loses the game.)",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Snake",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/114/crypt-cobra?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2441,
+        "iid": 12135,
+        "name": "Crypt Cobra",
+        "handler": "manalinkeh_card_swamp_mosquito",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Darksteel Ingot": {
+      "oracle": {
+        "oracle_id": "a2529491-7389-4cfa-92d2-145eda779603",
+        "name": "Darksteel Ingot",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)\n{T}: Add one mana of any color.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/otc/256/darksteel-ingot?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1561,
+        "iid": 2251,
+        "name": "Darksteel Ingot",
+        "handler": "manalinkeh_card_darksteel_ingot",
+        "kind": "card"
+      }
+    },
+    "Darksteel Myr": {
+      "oracle": {
+        "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+        "name": "Darksteel Myr",
+        "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11238,
+        "iid": 2255,
+        "name": "Darksteel Myr",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Darksteel Sentinel": {
+      "oracle": {
+        "oracle_id": "b91c8946-591b-4c0d-a37e-36803df40db7",
+        "name": "Darksteel Sentinel",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nVigilance\nIndestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it's still put into its owner's graveyard.)",
+        "mana_cost": "{6}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Indestructible",
+          "Vigilance",
+          "Flash"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/td2/16/darksteel-sentinel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11239,
+        "iid": 2260,
+        "name": "Darksteel Sentinel",
+        "handler": "manalinkeh_card_darksteel_sentinel",
+        "kind": "card"
+      }
+    },
+    "Dazzling Ramparts": {
+      "oracle": {
+        "oracle_id": "0527fc47-2bfc-4d02-90fa-5a1284f89a0a",
+        "name": "Dazzling Ramparts",
+        "oracle_text": "Defender\n{1}{W}, {T}: Tap target creature.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "7",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/6/dazzling-ramparts?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14247,
+        "iid": 2299,
+        "name": "Dazzling Ramparts",
+        "handler": "manalinkeh_card_dazzling_ramparts",
+        "kind": "card"
+      }
+    },
+    "Drift of Phantasms": {
+      "oracle": {
+        "oracle_id": "6ee51134-c4ad-4101-8ce2-23dde9359cd4",
+        "name": "Drift of Phantasms",
+        "oracle_text": "Defender (This creature can't attack.)\nFlying\nTransmute {1}{U}{U} ({1}{U}{U}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Spirit",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Defender",
+          "Transmute"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/42/drift-of-phantasms?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7828,
+        "iid": 2753,
+        "name": "Drift of Phantasms",
+        "handler": "manalinkeh_card_drift_of_phantasms",
+        "kind": "card"
+      }
+    },
+    "Drudge Skeletons": {
+      "oracle": {
+        "oracle_id": "c180ed02-07f4-4538-9bea-8c249234a8e2",
+        "name": "Drudge Skeletons",
+        "oracle_text": "{B}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Skeleton",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Heal",
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gvl/36/drudge-skeletons?utm_source=api"
+      },
+      "registry": {
+        "csvid": 70,
+        "iid": 2782,
+        "name": "Drudge Skeletons",
+        "handler": "manalinkeh_card_drudge_skeletons",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Millstone": {
+      "oracle": {
+        "oracle_id": "3212e47a-5492-4c50-9d4a-6ea562f1a6e1",
+        "name": "Millstone",
+        "oracle_text": "{2}, {T}: Target player mills two cards.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/242/millstone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 507,
+        "iid": 6116,
+        "name": "Millstone",
+        "handler": "manalinkeh_card_millstone",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Soltari Lancer": {
+      "oracle": {
+        "oracle_id": "d2cbd71a-841b-4ff2-a794-247a030e0233",
+        "name": "Soltari Lancer",
+        "oracle_text": "Shadow (This creature can block or be blocked by only creatures with shadow.)\nThis creature has first strike as long as it's attacking.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Soltari Knight",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Shadow"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/30/soltari-lancer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3289,
+        "iid": 8992,
+        "name": "Soltari Lancer",
+        "handler": "manalinkeh_card_soltari_lancer",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Shrieking Mogg",
+  "csvid": 4760,
+  "recipes": [
+    {
+      "family": "entry_trigger_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 4760,
+        "cost": "{1}{R}",
+        "choices": [
+          "scope_0",
+          "scope_1",
+          "haste_0",
+          "haste_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "Haste\nWhen this creature enters, tap all other creatures.",
+      "variants": [
+        "scope_0",
+        "scope_1",
+        "haste_0",
+        "haste_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "card": "Parallax Tide",
+  "csvid": 4733,
+  "recipes": [
+    {
+      "family": "departure_linked_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 4733
+      },
+      "oracle_text": "Fading 5 (This enchantment enters with five fade counters on it. At the beginning of your upkeep, remove a fade counter from it. If you can't, sacrifice it.)\nRemove a fade counter from this enchantment: Exile target land.\nWhen this enchantment leaves the battlefield, each player returns to the battlefield all cards they own exiled with it.",
+      "variants": [
+        "both_owners_0",
+        "both_owners_1",
+        "fading_0",
+        "fading_1"
+      ]
+    }
+  ]
+}

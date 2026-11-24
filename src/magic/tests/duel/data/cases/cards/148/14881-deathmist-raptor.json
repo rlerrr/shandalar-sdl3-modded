@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "card": "Deathmist Raptor",
+  "csvid": 14881,
+  "recipes": [
+    {
+      "family": "megamorph_zone_effects",
+      "version": 2,
+      "params": {
+        "effect": "raptor",
+        "cast_mana": [
+          1,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "flip_mana": [
+          4,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "power": 3,
+        "toughness": 3
+      },
+      "oracle_text": "Deathtouch\nWhenever a permanent you control is turned face up, you may return this card from your graveyard to the battlefield face up or face down.\nMegamorph {4}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)",
+      "variants": [
+        "hidden_0",
+        "faceup_0",
+        "hidden_choice_0",
+        "hidden_short_0",
+        "flip_0",
+        "flip_short_0",
+        "flip_wrong_0",
+        "offturn_0",
+        "replay_0",
+        "return_up_0",
+        "return_down_0",
+        "return_down_reveal_0",
+        "return_decline_0",
+        "opponent_flip_0",
+        "grave_shroud_0",
+        "deathtouch_0",
+        "hidden_damage_0",
+        "hidden_1",
+        "faceup_1",
+        "hidden_choice_1",
+        "hidden_short_1",
+        "flip_1",
+        "flip_short_1",
+        "flip_wrong_1",
+        "offturn_1",
+        "replay_1",
+        "return_up_1",
+        "return_down_1",
+        "return_down_reveal_1",
+        "return_decline_1",
+        "opponent_flip_1",
+        "grave_shroud_1",
+        "deathtouch_1",
+        "hidden_damage_1"
+      ]
+    }
+  ]
+}

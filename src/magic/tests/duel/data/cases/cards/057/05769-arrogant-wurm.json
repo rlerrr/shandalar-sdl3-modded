@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "card": "Arrogant Wurm",
+  "csvid": 5769,
+  "recipes": [
+    {
+      "family": "madness_creature_casting",
+      "version": 2,
+      "params": {
+        "csvid": 5769,
+        "role": "trample",
+        "normal": [
+          3,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "madness": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Trample\nMadness {2}{G} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "normal_0",
+        "normal_1",
+        "short_0",
+        "short_1",
+        "offturn_paid_0",
+        "offturn_paid_1",
+        "normal_countered_0",
+        "normal_countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

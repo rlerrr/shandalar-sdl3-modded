@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 5831,
+  "card": "Laquatus's Champion",
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_self_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 5831,
+        "printed_cost": "{4}{B}{B}"
+      },
+      "oracle_text": "When this creature enters, target player loses 6 life.\nWhen this creature leaves the battlefield, that player gains 6 life.\n{B}: Regenerate this creature.",
+      "variants": [
+        "regenerate_0",
+        "short_0",
+        "terminate_0",
+        "proactive_0",
+        "linked_self_0",
+        "bounce_0",
+        "regenerate_1",
+        "short_1",
+        "terminate_1",
+        "proactive_1",
+        "linked_self_1",
+        "bounce_1"
+      ]
+    }
+  ]
+}

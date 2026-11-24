@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Morkrut Necropod",
+  "csvid": 15895,
+  "recipes": [
+    {
+      "family": "attack_trigger_costs_and_damage",
+      "version": 2,
+      "params": {
+        "csvid": 15895,
+        "printed_mana": "{5}{B}",
+        "rules": "Menace (This creature can't be blocked except by two or more creatures.)\nWhenever this creature attacks or blocks, sacrifice another creature or land."
+      },
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nWhenever this creature attacks or blocks, sacrifice another creature or land.",
+      "variants": [
+        "sacrifice_land_0",
+        "sacrifice_land_1",
+        "sacrifice_creature_0",
+        "sacrifice_creature_1",
+        "block_sacrifice_0",
+        "block_sacrifice_1",
+        "menace_single_0",
+        "menace_single_1",
+        "menace_pair_0",
+        "menace_pair_1"
+      ]
+    }
+  ]
+}

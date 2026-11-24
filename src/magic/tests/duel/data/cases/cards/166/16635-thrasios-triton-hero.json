@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Thrasios, Triton Hero",
+  "csvid": 16635,
+  "recipes": [
+    {
+      "family": "library_scry_activated_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 16635,
+        "mana": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{4}: Scry 1, then reveal the top card of your library. If it's a land card, put it onto the battlefield tapped. Otherwise, draw a card.\nPartner (You can have two commanders if both have partner.)",
+      "variants": [
+        "land_0",
+        "land_1",
+        "draw_0",
+        "draw_1",
+        "empty_deck_0",
+        "empty_deck_1",
+        "short_generic_0",
+        "short_generic_1"
+      ]
+    }
+  ]
+}

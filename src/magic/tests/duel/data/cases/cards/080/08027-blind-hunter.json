@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 8027,
+  "card": "Blind Hunter",
+  "recipes": [
+    {
+      "family": "remaining_entry_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 8027,
+        "printed_cost": "{2}{W}{B}"
+      },
+      "oracle_text": "Flying\nHaunt (When this creature dies, exile it haunting target creature.)\nWhen this creature enters or the creature it haunts dies, target player loses 2 life and you gain 2 life.",
+      "variants": [
+        "hit_self_0",
+        "flying_0",
+        "haunt_own_0",
+        "haunt_foe_0",
+        "haunt_unrelated_0",
+        "countered_0",
+        "hit_self_1",
+        "flying_1",
+        "haunt_own_1",
+        "haunt_foe_1",
+        "haunt_unrelated_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Pandora's Box",
+  "csvid": 863,
+  "recipes": [
+    {
+      "family": "coin_flip_conditional_activation",
+      "version": 2,
+      "params": {
+        "csvid": 863,
+        "cost": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{3}, {T}: Choose a random summon card from all players' decks. For each player, flip a coin. If the flip ends up heads, put a token creature into play and treat it as though an exact copy of the chosen summon card were just played.",
+      "variants": [
+        "both_heads_0",
+        "both_heads_1",
+        "both_tails_0",
+        "both_tails_1",
+        "own_heads_0",
+        "own_heads_1",
+        "foe_heads_0",
+        "foe_heads_1"
+      ]
+    }
+  ]
+}

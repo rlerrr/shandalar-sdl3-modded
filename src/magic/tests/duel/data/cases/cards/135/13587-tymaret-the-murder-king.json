@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Tymaret, the Murder King",
+  "csvid": 13587,
+  "recipes": [
+    {
+      "family": "activated_graveyard_returns_to_hand",
+      "version": 2,
+      "oracle_text": "{1}{R}, Sacrifice another creature: Tymaret deals 2 damage to target player or planeswalker.\n{1}{B}, Sacrifice a creature: Return this card from your graveyard to your hand.",
+      "params": {
+        "model": "tymaret",
+        "fee": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "printed": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "variants": [
+        "paid_0",
+        "opponent_turn_0",
+        "replay_0",
+        "short_0",
+        "no_creature_0",
+        "player_damage_0",
+        "walker_damage_0",
+        "paid_1",
+        "opponent_turn_1",
+        "replay_1",
+        "short_1",
+        "no_creature_1",
+        "player_damage_1",
+        "walker_damage_1"
+      ]
+    }
+  ]
+}

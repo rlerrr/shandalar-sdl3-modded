@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "csvid": 15318,
+  "card": "Emeria Shepherd",
+  "recipes": [
+    {
+      "family": "landfall_land_type_riders",
+      "version": 2,
+      "oracle_text": "Flying\nLandfall — Whenever a land you control enters, you may return target nonland permanent card from your graveyard to your hand. If that land is a Plains, you may return that nonland permanent card to the battlefield instead.",
+      "params": {
+        "effect": "return",
+        "subtype": "Plains",
+        "dual": "Savannah",
+        "modes": [
+          "matched_hand",
+          "no_legal_grave",
+          "noncreature"
+        ],
+        "cast_price": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "power": 4,
+        "toughness": 4
+      },
+      "variants": [
+        "ordinary_0",
+        "ordinary_1",
+        "matched_0",
+        "matched_1",
+        "both_subtypes_0",
+        "both_subtypes_1",
+        "foreign_0",
+        "foreign_1",
+        "before_source_0",
+        "before_source_1",
+        "flying_ground_0",
+        "flying_ground_1",
+        "flying_reach_0",
+        "flying_reach_1",
+        "matched_hand_0",
+        "matched_hand_1",
+        "no_legal_grave_0",
+        "no_legal_grave_1",
+        "noncreature_0",
+        "noncreature_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Vaultbreaker",
+  "csvid": 14649,
+  "recipes": [
+    {
+      "family": "attack_follow_on_attack_riders",
+      "version": 2,
+      "params": {
+        "csvid": 14649,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks, you may discard a card. If you do, draw a card.\nDash {2}{R} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)",
+      "variants": [
+        "dash_loot_0",
+        "dash_loot_1",
+        "dash_decline_0",
+        "dash_decline_1",
+        "dash_empty_0",
+        "dash_empty_1",
+        "normal_loot_0",
+        "normal_loot_1",
+        "wrong_color_0",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

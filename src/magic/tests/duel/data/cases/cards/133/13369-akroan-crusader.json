@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "csvid": 13369,
+  "card": "Akroan Crusader",
+  "recipes": [
+    {
+      "family": "heroic_basic_riders",
+      "version": 2,
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, create a 1/1 red Soldier creature token with haste. (It can attack and {T} as soon as it comes under your control.)",
+      "params": {
+        "name": "Akroan Crusader",
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "effect": "soldier",
+        "power": 1,
+        "toughness": 1,
+        "keywords": []
+      },
+      "variants": [
+        "own_0",
+        "own_1",
+        "opponent_0",
+        "opponent_1",
+        "other_target_0",
+        "other_target_1",
+        "repeat_0",
+        "repeat_1",
+        "token_attack_0",
+        "token_attack_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Jarad, Golgari Lich Lord",
+  "csvid": 12758,
+  "recipes": [
+    {
+      "family": "activated_graveyard_returns_to_hand",
+      "version": 2,
+      "oracle_text": "Jarad gets +1/+1 for each creature card in your graveyard.\n{1}{B}{G}, Sacrifice another creature: Each opponent loses life equal to the sacrificed creature's power.\nSacrifice a Swamp and a Forest: Return this card from your graveyard to your hand.",
+      "params": {
+        "model": "lands",
+        "fee": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "printed": [
+          0,
+          2,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "paid_0",
+        "opponent_turn_0",
+        "replay_0",
+        "short_0",
+        "wrong_type_0",
+        "drain_0",
+        "recast_0",
+        "paid_1",
+        "opponent_turn_1",
+        "replay_1",
+        "short_1",
+        "wrong_type_1",
+        "drain_1",
+        "recast_1"
+      ]
+    }
+  ]
+}

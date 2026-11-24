@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "csvid": 15687,
+  "card": "Stalking Drone",
+  "recipes": [
+    {
+      "family": "devoid_colorless_activations",
+      "version": 2,
+      "params": {
+        "price": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "base": [
+          2,
+          2
+        ],
+        "generic": 0,
+        "colorless": 1,
+        "effect": "pump",
+        "delta": [
+          1,
+          2
+        ],
+        "once": true
+      },
+      "oracle_text": "Devoid (This card has no color.)\n{C}: This creature gets +1/+2 until end of turn. Activate only once each turn. ({C} represents colorless mana.)",
+      "variants": [
+        "exact_0",
+        "exact_1",
+        "colored_only_0",
+        "colored_only_1",
+        "short_0",
+        "short_1",
+        "replay_0",
+        "replay_1",
+        "once_0",
+        "once_1",
+        "reset_0",
+        "reset_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Dictate of the Twin Gods",
+  "csvid": 13875,
+  "recipes": [
+    {
+      "family": "flash_remaining_auras_and_enchantments",
+      "version": 2,
+      "params": {
+        "csvid": 13875,
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "clauses": [
+          "Flash",
+          "If a source would deal damage to a permanent or player, it deals double that damage to that permanent or player instead."
+        ],
+        "modes": [
+          "combat_player",
+          "combat_both",
+          "direct_damage",
+          "remove_before_damage"
+        ]
+      },
+      "oracle_text": "Flash\nIf a source would deal damage to a permanent or player, it deals double that damage to that permanent or player instead.",
+      "variants": [
+        "combat_player_0",
+        "combat_player_1",
+        "combat_both_0",
+        "combat_both_1",
+        "direct_damage_0",
+        "direct_damage_1",
+        "remove_before_damage_0",
+        "remove_before_damage_1"
+      ]
+    }
+  ]
+}

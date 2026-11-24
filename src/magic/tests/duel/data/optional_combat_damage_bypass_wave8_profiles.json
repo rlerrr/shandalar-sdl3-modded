@@ -1,0 +1,385 @@
+{
+  "version": 1,
+  "sources": {
+    "Deathcoil Wurm": {
+      "oracle": {
+        "oracle_id": "48408f60-56bc-402f-ba19-c9dc53836765",
+        "name": "Deathcoil Wurm",
+        "oracle_text": "You may have this creature assign its combat damage as though it weren't blocked.",
+        "mana_cost": "{6}{G}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "7",
+        "toughness": "6",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/149/deathcoil-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3632,
+        "iid": 2343,
+        "name": "Deathcoil Wurm",
+        "handler": "manalinkeh_card_thorn_elemental",
+        "kind": "card"
+      }
+    },
+    "Lone Wolf": {
+      "oracle": {
+        "oracle_id": "f77dfcb6-72b0-4d50-8177-6f6c57a034b9",
+        "name": "Lone Wolf",
+        "oracle_text": "You may have this creature assign its combat damage as though it weren't blocked.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Wolf",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/262/lone-wolf?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1074,
+        "iid": 5677,
+        "name": "Lone Wolf",
+        "handler": "manalinkeh_card_thorn_elemental",
+        "kind": "card"
+      }
+    },
+    "Pride of Lions": {
+      "oracle": {
+        "oracle_id": "5b5e0df8-f8f0-40a1-9814-89d73a026ad0",
+        "name": "Pride of Lions",
+        "oracle_text": "You may have this creature assign its combat damage as though it weren't blocked.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Cat",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddh/19/pride-of-lions?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4378,
+        "iid": 7353,
+        "name": "Pride of Lions",
+        "handler": "manalinkeh_card_thorn_elemental",
+        "kind": "card"
+      }
+    },
+    "Thorn Elemental": {
+      "oracle": {
+        "oracle_id": "9cdf840d-314e-46ef-9c04-74f145d9e65b",
+        "name": "Thorn Elemental",
+        "oracle_text": "You may have this creature assign its combat damage as though it weren't blocked.",
+        "mana_cost": "{5}{G}{G}",
+        "type_line": "Creature — Elemental",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dom/185/thorn-elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1173,
+        "iid": 9897,
+        "name": "Thorn Elemental",
+        "handler": "manalinkeh_card_thorn_elemental",
+        "kind": "card"
+      }
+    },
+    "Wolf Pack": {
+      "oracle": {
+        "oracle_id": "ec58a82f-8c78-4f88-90d5-e32d83be7a48",
+        "name": "Wolf Pack",
+        "oracle_text": "You may have this creature assign its combat damage as though it weren't blocked.",
+        "mana_cost": "{6}{G}{G}",
+        "type_line": "Creature — Wolf",
+        "power": "7",
+        "toughness": "6",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/187/wolf-pack?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4352,
+        "iid": 11057,
+        "name": "Wolf Pack",
+        "handler": "manalinkeh_card_thorn_elemental",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Craw Wurm": {
+      "oracle": {
+        "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+        "name": "Craw Wurm",
+        "oracle_text": "",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "6",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/173/craw-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 49,
+        "iid": 2032,
+        "name": "Craw Wurm",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Pit Fight": {
+      "oracle": {
+        "oracle_id": "ef4b0ced-70a1-41d8-9aed-34e75f979c5f",
+        "name": "Pit Fight",
+        "oracle_text": "Target creature you control fights another target creature. (Each deals damage equal to its power to the other.)",
+        "mana_cost": "{1}{R/G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Fight"
+        ],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/202/pit-fight?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13028,
+        "iid": 7223,
+        "name": "Pit Fight",
+        "handler": "manalinkeh_card_pit_fight",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Wall of Stone": {
+      "oracle": {
+        "oracle_id": "cd4cadb4-3156-49bd-b36e-12ba5c85938b",
+        "name": "Wall of Stone",
+        "oracle_text": "Defender (This creature can't attack.)",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "8",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/232/wall-of-stone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 272,
+        "iid": 10783,
+        "name": "Wall of Stone",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Wall of Wood": {
+      "oracle": {
+        "oracle_id": "aa5e6894-8c97-46f8-a0fd-07c6db51e9a7",
+        "name": "Wall of Wood",
+        "oracle_text": "Defender (This creature can't attack.)",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "3",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/309/wall-of-wood?utm_source=api"
+      },
+      "registry": {
+        "csvid": 275,
+        "iid": 10793,
+        "name": "Wall of Wood",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "White Knight": {
+      "oracle": {
+        "oracle_id": "ddb021df-ae4a-4ac1-8353-d0b375761714",
+        "name": "White Knight",
+        "oracle_text": "First strike (This creature deals combat damage before creatures without first strike.)\nProtection from black (This creature can't be blocked, targeted, dealt damage, or enchanted by anything black.)",
+        "mana_cost": "{W}{W}",
+        "type_line": "Creature — Human Knight",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "First strike",
+          "Protection"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddg/9/white-knight?utm_source=api"
+      },
+      "registry": {
+        "csvid": 283,
+        "iid": 10939,
+        "name": "White Knight",
+        "handler": "manalinkeh_card_white_knight",
+        "kind": "card"
+      }
+    }
+  }
+}

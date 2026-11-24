@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 14618,
+  "card": "Sandsteppe Mastodon",
+  "recipes": [
+    {
+      "family": "entry_interaction_counters",
+      "version": 2,
+      "params": {
+        "csvid": 14618,
+        "printed_cost": "{5}{G}{G}"
+      },
+      "oracle_text": "Reach\nWhen this creature enters, bolster 5. (Choose a creature with the least toughness among creatures you control and put five +1/+1 counters on it.)",
+      "variants": [
+        "solo_0",
+        "weak_0",
+        "tie_0",
+        "reach_0",
+        "countered_0",
+        "solo_1",
+        "weak_1",
+        "tie_1",
+        "reach_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

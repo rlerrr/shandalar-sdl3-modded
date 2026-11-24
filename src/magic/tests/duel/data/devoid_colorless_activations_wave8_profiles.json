@@ -1,0 +1,566 @@
+{
+  "sources": {
+    "Essence Depleter": {
+      "oracle": {
+        "oracle_id": "19ea37cc-e715-4a3c-87f3-5ed9d44f42d9",
+        "name": "Essence Depleter",
+        "oracle_text": "Devoid (This card has no color.)\n{1}{C}: Target opponent loses 1 life and you gain 1 life. ({C} represents colorless mana.)",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/69/essence-depleter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15596,
+        "iid": 15671,
+        "name": "Essence Depleter",
+        "handler": "manalinkeh_card_essence_depleter",
+        "kind": "card"
+      }
+    },
+    "Havoc Sower": {
+      "oracle": {
+        "oracle_id": "098e6926-4a6a-4bbb-96bc-1f35cc7982ae",
+        "name": "Havoc Sower",
+        "oracle_text": "Devoid (This card has no color.)\n{1}{C}: This creature gets +2/+1 until end of turn. ({C} represents colorless mana.)",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/71/havoc-sower?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15610,
+        "iid": 15685,
+        "name": "Havoc Sower",
+        "handler": "manalinkeh_card_havoc_sower",
+        "kind": "card"
+      }
+    },
+    "Kozilek's Translator": {
+      "oracle": {
+        "oracle_id": "6766c5e4-baa7-4db4-a900-c08fbcd98f5d",
+        "name": "Kozilek's Translator",
+        "oracle_text": "Devoid (This card has no color.)\nPay 1 life: Add {C}. Activate only once each turn. ({C} represents colorless mana.)",
+        "mana_cost": "{4}{B}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "3",
+        "toughness": "5",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/74/kozileks-translator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15630,
+        "iid": 15705,
+        "name": "Kozilek's Translator",
+        "handler": "manalinkeh_card_kozileks_translator",
+        "kind": "card"
+      }
+    },
+    "Maw of Kozilek": {
+      "oracle": {
+        "oracle_id": "11b529f0-e365-4500-b54a-44e2ac6e709f",
+        "name": "Maw of Kozilek",
+        "oracle_text": "Devoid (This card has no color.)\n{C}: This creature gets +2/-2 until end of turn. ({C} represents colorless mana.)",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "2",
+        "toughness": "5",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/99/maw-of-kozilek?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15639,
+        "iid": 15714,
+        "name": "Maw of Kozilek",
+        "handler": "manalinkeh_card_maw_of_kozilek",
+        "kind": "card"
+      }
+    },
+    "Prophet of Distortion": {
+      "oracle": {
+        "oracle_id": "6bc82093-0246-4c60-bf30-0b605bef01cd",
+        "name": "Prophet of Distortion",
+        "oracle_text": "Devoid (This card has no color.)\n{3}{C}: Draw a card. ({C} represents colorless mana.)",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/46/prophet-of-distortion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15658,
+        "iid": 15733,
+        "name": "Prophet of Distortion",
+        "handler": "manalinkeh_card_prophet_of_distortion",
+        "kind": "card"
+      }
+    },
+    "Stalking Drone": {
+      "oracle": {
+        "oracle_id": "2659cc53-d20d-476f-bc64-4b35a4288d0e",
+        "name": "Stalking Drone",
+        "oracle_text": "Devoid (This card has no color.)\n{C}: This creature gets +1/+2 until end of turn. Activate only once each turn. ({C} represents colorless mana.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/124/stalking-drone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15687,
+        "iid": 15762,
+        "name": "Stalking Drone",
+        "handler": "manalinkeh_card_stalking_drone",
+        "kind": "card"
+      }
+    },
+    "Kozilek's Shrieker": {
+      "oracle": {
+        "oracle_id": "b2b5683b-f8ea-4af6-b847-953ab4a267c4",
+        "name": "Kozilek's Shrieker",
+        "oracle_text": "Devoid (This card has no color.)\n{C}: This creature gets +1/+0 and gains menace until end of turn. (It can't be blocked except by two or more creatures. {C} represents colorless mana.)",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/73/kozileks-shrieker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15629,
+        "iid": 15704,
+        "name": "Kozilek's Shrieker",
+        "handler": "manalinkeh_card_kozileks_shrieker",
+        "kind": "card"
+      }
+    },
+    "Slaughter Drone": {
+      "oracle": {
+        "oracle_id": "047e09c0-cbd9-45ba-9729-bf35ebe24e69",
+        "name": "Slaughter Drone",
+        "oracle_text": "Devoid (This card has no color.)\n{C}: This creature gains deathtouch until end of turn. (Any amount of damage it deals to a creature is enough to destroy it. {C} represents colorless mana.)",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/79/slaughter-drone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15681,
+        "iid": 15756,
+        "name": "Slaughter Drone",
+        "handler": "manalinkeh_card_slaughter_drone",
+        "kind": "card"
+      }
+    },
+    "Blinding Drone": {
+      "oracle": {
+        "oracle_id": "c924e240-02a0-46b5-b004-d5c42db277ec",
+        "name": "Blinding Drone",
+        "oracle_text": "Devoid (This card has no color.)\n{C}, {T}: Tap target creature. ({C} represents colorless mana.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/41/blinding-drone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15560,
+        "iid": 15635,
+        "name": "Blinding Drone",
+        "handler": "manalinkeh_card_blinding_drone",
+        "kind": "card"
+      }
+    },
+    "Dimensional Infiltrator": {
+      "oracle": {
+        "oracle_id": "b93732e4-7aeb-4c37-a415-2b0ff46e2056",
+        "name": "Dimensional Infiltrator",
+        "oracle_text": "Devoid (This card has no color.)\nFlash\nFlying\n{1}{C}: Target opponent exiles the top card of their library. If it's a land card, you may return this creature to its owner's hand. ({C} represents colorless mana.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Eldrazi",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Devoid",
+          "Flash"
+        ],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/44/dimensional-infiltrator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15585,
+        "iid": 15660,
+        "name": "Dimensional Infiltrator",
+        "handler": "manalinkeh_card_dimensional_infiltrator",
+        "kind": "card"
+      }
+    },
+    "Dread Defiler": {
+      "oracle": {
+        "oracle_id": "ebdd0027-3340-459e-a598-dd416e76744f",
+        "name": "Dread Defiler",
+        "oracle_text": "Devoid (This card has no color.)\n{3}{C}, Exile a creature card from your graveyard: Target opponent loses life equal to the exiled card's power. ({C} represents colorless mana.)",
+        "mana_cost": "{6}{B}",
+        "type_line": "Creature — Eldrazi",
+        "power": "6",
+        "toughness": "8",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/68/dread-defiler?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15587,
+        "iid": 15662,
+        "name": "Dread Defiler",
+        "handler": "manalinkeh_card_dread_defiler",
+        "kind": "card"
+      }
+    },
+    "Mindmelter": {
+      "oracle": {
+        "oracle_id": "dbcceed6-51a9-4ab4-b9a8-d65140661195",
+        "name": "Mindmelter",
+        "oracle_text": "Devoid (This card has no color.)\nThis creature can't be blocked.\n{3}{C}: Target opponent exiles a card from their hand. Activate only as a sorcery. ({C} represents colorless mana.)",
+        "mana_cost": "{1}{U}{B}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/149/mindmelter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15642,
+        "iid": 15717,
+        "name": "Mindmelter",
+        "handler": "manalinkeh_card_mindmelter",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Bonesplitter": {
+      "oracle": {
+        "oracle_id": "452e3f5f-ce17-4682-966b-5cc100210aee",
+        "name": "Bonesplitter",
+        "oracle_text": "Equipped creature gets +2/+0.\nEquip {1}",
+        "mana_cost": "{1}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/458/bonesplitter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6627,
+        "iid": 1226,
+        "name": "Bonesplitter",
+        "handler": "manalinkeh_card_bonesplitter",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Fog Bank": {
+      "oracle": {
+        "oracle_id": "3a2bb47d-228d-499e-a34b-9e10d99e9b2c",
+        "name": "Fog Bank",
+        "oracle_text": "Defender (This creature can't attack.)\nFlying\nPrevent all combat damage that would be dealt to and dealt by this creature.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Defender"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/591/fog-bank?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3772,
+        "iid": 3564,
+        "name": "Fog Bank",
+        "handler": "manalinkeh_card_fog_bank",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Krosan Tusker": {
+      "oracle": {
+        "oracle_id": "82406175-63b3-4972-be8b-db0e70c908cb",
+        "name": "Krosan Tusker",
+        "oracle_text": "Cycling {2}{G} ({2}{G}, Discard this card: Draw a card.)\nWhen you cycle this card, you may search your library for a basic land card, reveal that card, put it into your hand, then shuffle. (Do this before you draw.)",
+        "mana_cost": "{5}{G}{G}",
+        "type_line": "Creature — Boar Beast",
+        "power": "6",
+        "toughness": "5",
+        "keywords": [
+          "Cycling"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/302/krosan-tusker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6196,
+        "iid": 5405,
+        "name": "Krosan Tusker",
+        "handler": "manalinkeh_card_krosan_tusker",
+        "kind": "card"
+      }
+    },
+    "Terra Stomper": {
+      "oracle": {
+        "oracle_id": "d688baac-0574-4d88-b7eb-a7384c298ef5",
+        "name": "Terra Stomper",
+        "oracle_text": "This spell can't be countered.\nTrample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)",
+        "mana_cost": "{3}{G}{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "8",
+        "toughness": "8",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ori/288/terra-stomper?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10686,
+        "iid": 9817,
+        "name": "Terra Stomper",
+        "handler": "manalinkeh_card_terra_stomper",
+        "kind": "card"
+      }
+    },
+    "Welkin Tern": {
+      "oracle": {
+        "oracle_id": "010c660a-a67b-48f0-a63a-15470eb89f69",
+        "name": "Welkin Tern",
+        "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nThis creature can block only creatures with flying.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Bird",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gs1/5/welkin-tern?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10709,
+        "iid": 10901,
+        "name": "Welkin Tern",
+        "handler": "manalinkeh_card_skywinder_drake",
+        "kind": "card"
+      }
+    }
+  }
+}

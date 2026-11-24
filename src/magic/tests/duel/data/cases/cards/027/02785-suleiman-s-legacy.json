@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 2785,
+  "card": "Suleiman's Legacy",
+  "recipes": [
+    {
+      "family": "entry_interaction_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 2785,
+        "printed_cost": "{R}{W}",
+        "keywords": []
+      },
+      "oracle_text": "When this enchantment enters, destroy all Djinns and Efreets. They can't be regenerated.\nWhenever a Djinn or Efreet enters, destroy it. It can't be regenerated.",
+      "variants": [
+        "both_types_0",
+        "later_djinn_0",
+        "later_efreet_0",
+        "shield_0",
+        "both_types_1",
+        "later_djinn_1",
+        "later_efreet_1",
+        "shield_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Dynavolt Tower",
+  "csvid": 16356,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "cast_instant_or_sorcery_riders",
+      "version": 2,
+      "oracle_text": "Whenever you cast an instant or sorcery spell, you get {E}{E} (two energy counters).\n{T}, Pay {E}{E}{E}{E}{E}: This artifact deals 3 damage to any target.",
+      "params": {
+        "effect": "tower",
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hybrid": [],
+        "stats": [],
+        "keywords": []
+      },
+      "variants": [
+        "instant_0",
+        "instant_1",
+        "sorcery_0",
+        "sorcery_1",
+        "own_creature_0",
+        "own_creature_1",
+        "enemy_instant_0",
+        "enemy_instant_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "spend_energy_0",
+        "spend_energy_1",
+        "short_energy_0",
+        "short_energy_1"
+      ]
+    }
+  ]
+}

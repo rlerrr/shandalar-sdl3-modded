@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Sorcerer's Strongbox",
+  "csvid": 11173,
+  "recipes": [
+    {
+      "family": "seeded_coin_riders",
+      "version": 2,
+      "params": {
+        "shape": "strongbox",
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "oracle_text": "{2}, {T}: Flip a coin. If you win the flip, sacrifice this artifact and draw three cards.",
+      "variants": [
+        "win_0",
+        "lose_0",
+        "replay_0",
+        "unfunded_0",
+        "tapped_0",
+        "win_1",
+        "lose_1",
+        "replay_1",
+        "unfunded_1",
+        "tapped_1"
+      ]
+    }
+  ]
+}

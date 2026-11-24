@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Imaginary Pet",
+  "csvid": 3811,
+  "recipes": [
+    {
+      "family": "upkeep_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 3811,
+        "cost": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "At the beginning of your upkeep, if you have a card in hand, return this creature to its owner's hand.",
+      "variants": [
+        "held_0",
+        "held_1",
+        "empty_0",
+        "empty_1",
+        "wrong_upkeep_0",
+        "wrong_upkeep_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Aether Figment",
+  "csvid": 10499,
+  "recipes": [
+    {
+      "family": "kicker_entry_counters",
+      "version": 2,
+      "oracle_text": "Kicker {3} (You may pay an additional {3} as you cast this spell.)\nIf this creature was kicked, it enters with two +1/+1 counters on it.\nThis creature can't be blocked.",
+      "params": {
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "life": 0,
+        "returned_card": null,
+        "counter": "plus1",
+        "base": 0,
+        "extra": 2,
+        "rider": "unblockable"
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "kicker_short_0",
+        "kicker_short_1",
+        "base_short_0",
+        "base_short_1",
+        "countered_0",
+        "countered_1",
+        "blink_0",
+        "blink_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

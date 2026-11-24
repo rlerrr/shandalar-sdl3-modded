@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "card": "Bloodforged Battle-Axe",
+  "csvid": 17284,
+  "recipes": [
+    {
+      "family": "equipment_combat_counters_and_copies",
+      "version": 2,
+      "params": {
+        "csvid": 17284,
+        "fee": 2,
+        "mana": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Equipped creature gets +2/+0.\nWhenever equipped creature deals combat damage to a player, create a token that's a copy of this Equipment.\nEquip {2}",
+      "variants": [
+        "copy_hit_0",
+        "copy_hit_1",
+        "clone_reequip_0",
+        "clone_reequip_1",
+        "clone_chain_0",
+        "clone_chain_1",
+        "clone_blocked_0",
+        "clone_blocked_1",
+        "clone_noncombat_0",
+        "clone_noncombat_1",
+        "unattached_stays_idle_0",
+        "unattached_stays_idle_1",
+        "other_attacker_0",
+        "other_attacker_1",
+        "offturn_0",
+        "offturn_1"
+      ]
+    }
+  ]
+}

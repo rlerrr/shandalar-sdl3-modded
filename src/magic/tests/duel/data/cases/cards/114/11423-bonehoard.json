@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "csvid": 11423,
+  "card": "Bonehoard",
+  "recipes": [
+    {
+      "family": "living_weapon_equipment",
+      "version": 2,
+      "params": {
+        "effect": "living_weapon",
+        "rider": "graveyard",
+        "cast_mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "equip_generic": 2,
+        "power_delta": 0,
+        "toughness_delta": 0,
+        "keyword": ""
+      },
+      "oracle_text": "Living weapon (When this Equipment enters, create a 0/0 black Phyrexian Germ creature token, then attach this to it.)\nEquipped creature gets +X/+X, where X is the number of creature cards in all graveyards.\nEquip {2}",
+      "variants": [
+        "enter_0",
+        "cast_short_0",
+        "countered_0",
+        "move_0",
+        "remove_source_0",
+        "bounce_germ_0",
+        "equip_target_leaves_0",
+        "replay_entry_0",
+        "replay_move_0",
+        "own_grave_only_0",
+        "foe_grave_only_0",
+        "zero_count_0",
+        "grave_grow_0",
+        "grave_shrink_0",
+        "grave_to_zero_0",
+        "enter_1",
+        "cast_short_1",
+        "countered_1",
+        "move_1",
+        "remove_source_1",
+        "bounce_germ_1",
+        "equip_target_leaves_1",
+        "replay_entry_1",
+        "replay_move_1",
+        "own_grave_only_1",
+        "foe_grave_only_1",
+        "zero_count_1",
+        "grave_grow_1",
+        "grave_shrink_1",
+        "grave_to_zero_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Blurred Mongoose",
+  "csvid": 4952,
+  "recipes": [
+    {
+      "family": "uncounterable_creature_casts",
+      "version": 2,
+      "oracle_text": "This spell can't be countered.\nShroud (This creature can't be the target of spells or abilities.)",
+      "params": {
+        "model": "shroud",
+        "cost": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "protection": [],
+        "trample": false,
+        "flash": false
+      },
+      "variants": [
+        "cast_0",
+        "short_0",
+        "counter_0",
+        "exclude_0",
+        "ordinary_counter_0",
+        "ordinary_exclude_0",
+        "replay_0",
+        "own_spell_0",
+        "foe_spell_0",
+        "own_ability_0",
+        "foe_ability_0",
+        "cast_1",
+        "short_1",
+        "counter_1",
+        "exclude_1",
+        "ordinary_counter_1",
+        "ordinary_exclude_1",
+        "replay_1",
+        "own_spell_1",
+        "foe_spell_1",
+        "own_ability_1",
+        "foe_ability_1"
+      ]
+    }
+  ]
+}

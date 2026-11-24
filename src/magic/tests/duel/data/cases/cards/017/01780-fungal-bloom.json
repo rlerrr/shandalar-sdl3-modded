@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Fungal Bloom",
+  "csvid": 1780,
+  "recipes": [
+    {
+      "family": "spore_synergy_riders",
+      "version": 2,
+      "params": {
+        "shape": "placement",
+        "mana": [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "oracle_text": "{G}{G}: Put a spore counter on target Fungus.",
+      "variants": [
+        "own_fungus_0",
+        "enemy_fungus_0",
+        "short_green_0",
+        "no_fungus_0",
+        "own_fungus_1",
+        "enemy_fungus_1",
+        "short_green_1",
+        "no_fungus_1"
+      ]
+    }
+  ]
+}

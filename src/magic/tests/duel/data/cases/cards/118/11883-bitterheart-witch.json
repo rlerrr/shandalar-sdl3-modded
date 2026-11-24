@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 11883,
+  "card": "Bitterheart Witch",
+  "recipes": [
+    {
+      "family": "departure_counters_and_search",
+      "version": 2,
+      "params": {
+        "csvid": 11883,
+        "printed_cost": "{4}{B}"
+      },
+      "oracle_text": "Deathtouch\nWhen this creature dies, you may search your library for a Curse card, put it onto the battlefield attached to target player, then shuffle.",
+      "variants": [
+        "search_0",
+        "whiff_0",
+        "decline_0",
+        "combat_0",
+        "bounce_0",
+        "search_1",
+        "whiff_1",
+        "combat_1",
+        "bounce_1"
+      ]
+    }
+  ]
+}

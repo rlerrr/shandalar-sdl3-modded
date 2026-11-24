@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Thorn of the Black Rose",
+  "csvid": 16547,
+  "recipes": [
+    {
+      "family": "monarch_entry_riders",
+      "version": 2,
+      "params": {
+        "model": "touch",
+        "cost": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Deathtouch\nWhen this creature enters, you become the monarch.",
+      "variants": [
+        "entry_0",
+        "transfer_0",
+        "noncombat_0",
+        "already_0",
+        "underpaid_0",
+        "countered_0",
+        "replay_0",
+        "death_touch_0",
+        "entry_1",
+        "transfer_1",
+        "noncombat_1",
+        "already_1",
+        "underpaid_1",
+        "countered_1",
+        "replay_1",
+        "death_touch_1"
+      ]
+    }
+  ]
+}

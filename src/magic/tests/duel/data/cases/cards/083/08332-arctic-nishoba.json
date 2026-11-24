@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Arctic Nishoba",
+  "csvid": 8332,
+  "recipes": [
+    {
+      "family": "cumulative_upkeep_alternative_and_snow",
+      "version": 2,
+      "params": {
+        "csvid": 8332,
+        "fee": "{G} or {W}",
+        "price": [
+          5,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "clauses": [
+          "Trample",
+          "Cumulative upkeep {G} or {W} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)",
+          "When this creature dies, you gain 2 life for each age counter on it."
+        ]
+      },
+      "oracle_text": "Trample\nCumulative upkeep {G} or {W} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nWhen this creature dies, you gain 2 life for each age counter on it.",
+      "variants": [
+        "first_color_0",
+        "first_color_1",
+        "second_color_0",
+        "second_color_1",
+        "mixed_0",
+        "mixed_1",
+        "unpayable_0",
+        "unpayable_1",
+        "decline_after_one_0",
+        "decline_after_one_1",
+        "destroy_age_two_0",
+        "destroy_age_two_1"
+      ]
+    }
+  ]
+}

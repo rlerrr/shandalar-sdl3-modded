@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "csvid": 1762,
+  "card": "Draconian Cylix",
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_targeted_costs",
+      "version": 2,
+      "params": {
+        "csvid": 1762,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "activation": "{2}",
+        "stats": null
+      },
+      "oracle_text": "{2}, {T}, Discard a card at random: Regenerate target creature.",
+      "variants": [
+        "own_0",
+        "own_1",
+        "foreign_0",
+        "foreign_1",
+        "mixed_random_0",
+        "mixed_random_1",
+        "empty_0",
+        "empty_1",
+        "short_0",
+        "short_1",
+        "wrong_type_0",
+        "wrong_type_1",
+        "proactive_0",
+        "proactive_1"
+      ]
+    }
+  ]
+}

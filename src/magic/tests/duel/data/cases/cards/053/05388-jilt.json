@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Jilt",
+  "csvid": 5388,
+  "recipes": [
+    {
+      "family": "kicker_card_flow",
+      "version": 2,
+      "oracle_text": "Kicker {1}{R} (You may pay an additional {1}{R} as you cast this spell.)\nReturn target creature to its owner's hand. If this spell was kicked, it deals 2 damage to another target creature.",
+      "params": {
+        "effect": "bounce_damage",
+        "base_cost": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "kicker_cost": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "kicker_short_0",
+        "kicker_short_1",
+        "base_short_0",
+        "base_short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "damage_target_lost_0",
+        "damage_target_lost_1"
+      ]
+    }
+  ]
+}

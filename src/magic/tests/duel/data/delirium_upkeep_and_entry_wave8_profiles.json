@@ -1,0 +1,472 @@
+{
+  "sources": {
+    "Gibbering Fiend": {
+      "oracle": {
+        "oracle_id": "2aa03852-6c38-4e91-afed-0c4cd5964598",
+        "name": "Gibbering Fiend",
+        "oracle_text": "When this creature enters, it deals 1 damage to each opponent.\nDelirium — At the beginning of each opponent's upkeep, if there are four or more card types among cards in your graveyard, this creature deals 1 damage to that player.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Devil",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Delirium"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/161/gibbering-fiend?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15834,
+        "iid": 15906,
+        "name": "Gibbering Fiend",
+        "handler": "manalinkeh_card_gibbering_fiend",
+        "kind": "card"
+      }
+    },
+    "Manic Scribe": {
+      "oracle": {
+        "oracle_id": "d2ef475d-6043-4da8-83f0-dffa76052707",
+        "name": "Manic Scribe",
+        "oracle_text": "When this creature enters, each opponent mills three cards.\nDelirium — At the beginning of each opponent's upkeep, if there are four or more card types among cards in your graveyard, that player mills three cards.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Human Wizard",
+        "power": "0",
+        "toughness": "3",
+        "keywords": [
+          "Delirium",
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/73/manic-scribe?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15886,
+        "iid": 15958,
+        "name": "Manic Scribe",
+        "handler": "manalinkeh_card_manic_scribe",
+        "kind": "card"
+      }
+    },
+    "Mindwrack Demon": {
+      "oracle": {
+        "oracle_id": "3dda8d3d-89e2-4600-be8d-9b76b4f36e33",
+        "name": "Mindwrack Demon",
+        "oracle_text": "Flying, trample\nWhen this creature enters, mill four cards.\nDelirium — At the beginning of your upkeep, you lose 4 life unless there are four or more card types among cards in your graveyard.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Creature — Demon",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Delirium",
+          "Trample",
+          "Mill"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/124/mindwrack-demon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15891,
+        "iid": 15963,
+        "name": "Mindwrack Demon",
+        "handler": "manalinkeh_card_mindwrack_demon",
+        "kind": "card"
+      }
+    },
+    "Obsessive Skinner": {
+      "oracle": {
+        "oracle_id": "e7e59437-cdd0-476a-b1ec-231be4139d31",
+        "name": "Obsessive Skinner",
+        "oracle_text": "When this creature enters, put a +1/+1 counter on target creature.\nDelirium — At the beginning of each opponent's upkeep, if there are four or more card types among cards in your graveyard, put a +1/+1 counter on target creature.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Human Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Delirium"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/191/obsessive-skinner?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15907,
+        "iid": 15980,
+        "name": "Obsessive Skinner",
+        "handler": "manalinkeh_card_obsessive_skinner",
+        "kind": "card"
+      }
+    },
+    "Tooth Collector": {
+      "oracle": {
+        "oracle_id": "b7c165a4-53a2-4117-a452-b9a8fe309c09",
+        "name": "Tooth Collector",
+        "oracle_text": "When this creature enters, target creature an opponent controls gets -1/-1 until end of turn.\nDelirium — At the beginning of each opponent's upkeep, if there are four or more card types among cards in your graveyard, target creature that player controls gets -1/-1 until end of turn.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Human Rogue",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Delirium"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/140/tooth-collector?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15993,
+        "iid": 16067,
+        "name": "Tooth Collector",
+        "handler": "manalinkeh_card_tooth_collector",
+        "kind": "card"
+      }
+    },
+    "Topplegeist": {
+      "oracle": {
+        "oracle_id": "4a71f404-e48d-4c86-882e-4e21c8210dea",
+        "name": "Topplegeist",
+        "oracle_text": "Flying\nWhen this creature enters, tap target creature an opponent controls.\nDelirium — At the beginning of each opponent's upkeep, if there are four or more card types among cards in your graveyard, tap target creature that player controls.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Spirit",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Delirium"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/45/topplegeist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15994,
+        "iid": 16068,
+        "name": "Topplegeist",
+        "handler": "manalinkeh_card_topplegeist",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Bottle Gnomes": {
+      "oracle": {
+        "oracle_id": "54b5e429-7a44-480d-bea4-4f8eeb7449b5",
+        "name": "Bottle Gnomes",
+        "oracle_text": "Sacrifice this creature: You gain 3 life.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Gnome",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cm2/177/bottle-gnomes?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1705,
+        "iid": 1265,
+        "name": "Bottle Gnomes",
+        "handler": "manalinkeh_card_bottle_gnomes",
+        "kind": "card"
+      }
+    },
+    "Cloudfin Raptor": {
+      "oracle": {
+        "oracle_id": "cb0e1afa-fd9e-4bf9-bcb1-6e8110d6e2ff",
+        "name": "Cloudfin Raptor",
+        "oracle_text": "Flying\nEvolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Bird Mutant",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Evolve"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/37/cloudfin-raptor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12909,
+        "iid": 1823,
+        "name": "Cloudfin Raptor",
+        "handler": "manalinkeh_card_cloudfin_raptor",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Saltfield Recluse": {
+      "oracle": {
+        "oracle_id": "c87e056a-6067-49e6-b3f7-bba8234777de",
+        "name": "Saltfield Recluse",
+        "oracle_text": "{T}: Target creature gets -2/-0 until end of turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Rebel Cleric",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/40/saltfield-recluse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8842,
+        "iid": 8196,
+        "name": "Saltfield Recluse",
+        "handler": "manalinkeh_card_saltfield_recluse",
+        "kind": "card"
+      }
+    },
+    "Traveler's Amulet": {
+      "oracle": {
+        "oracle_id": "48b561dd-f23d-409a-87c8-e49902b2477b",
+        "name": "Traveler's Amulet",
+        "oracle_text": "{1}, Sacrifice this artifact: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/273/travelers-amulet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12102,
+        "iid": 10166,
+        "name": "Traveler's Amulet",
+        "handler": "manalinkeh_card_travelers_amulet",
+        "kind": "card"
+      }
+    }
+  }
+}

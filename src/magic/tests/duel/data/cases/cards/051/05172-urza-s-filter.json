@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "card": "Urza's Filter",
+  "csvid": 5172,
+  "recipes": [
+    {
+      "family": "fixed_generic_cast_reducers",
+      "version": 2,
+      "oracle_text": "Multicolored spells cost {2} less to cast.",
+      "params": {
+        "effect": "fixed_generic_discount",
+        "spells": "multicolored",
+        "amount": 2,
+        "bilateral": true,
+        "cost": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "exact_0",
+        "residual_0",
+        "short_0",
+        "wrong_color_0",
+        "source_cast_0",
+        "source_leaves_0",
+        "opposing_caster_0",
+        "mixed_sources_0",
+        "stacked_0",
+        "countered_0",
+        "paid_replay_0",
+        "tax_0",
+        "devoid_negative_0",
+        "mixed_negative_0",
+        "colorless_negative_0",
+        "one_generic_0",
+        "colored_floor_0",
+        "tapped_source_0",
+        "exact_1",
+        "residual_1",
+        "short_1",
+        "wrong_color_1",
+        "source_cast_1",
+        "source_leaves_1",
+        "opposing_caster_1",
+        "mixed_sources_1",
+        "stacked_1",
+        "countered_1",
+        "paid_replay_1",
+        "tax_1",
+        "devoid_negative_1",
+        "mixed_negative_1",
+        "colorless_negative_1",
+        "one_generic_1",
+        "colored_floor_1",
+        "tapped_source_1"
+      ]
+    }
+  ]
+}

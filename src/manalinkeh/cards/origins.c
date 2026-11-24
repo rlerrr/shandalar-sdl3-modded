@@ -302,15 +302,15 @@ int card_grasp_of_the_hieromancer(int player, int card, event_t event)
 	}
 	if (event == EVENT_DAT_ABILITY){
 		card_instance_t* instance = get_card_instance(player, card);
-		card_instance_t* creature = get_card_instance(instance->damage_target_player, instance->damage_target_card);
+		int target_index = instance->number_of_targets;
 		target_definition_t td;
 		default_target_definition(instance->damage_target_player, instance->damage_target_card, &td, TYPE_CREATURE);
 		td.allowed_controller = 1-player;
 		td.allow_cancel = 0;
 		if (can_target(&td) && pick_next_target_arbitrary(&td, "TARGET_CREATURE_OPPONENT_CONTROLS", player, card)){
-			tap_card(creature->targets[0].player, creature->targets[0].card);
+			instance->number_of_targets = target_index;
+			tap_card(instance->targets[target_index].player, instance->targets[target_index].card);
 		}
-		creature->number_of_targets = 0;
 	}
 	attached_gets_pt(player, card, event, 1, 1);
 	return aura(player, card, event, NULL, NULL);

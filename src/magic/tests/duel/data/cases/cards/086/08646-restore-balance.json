@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Restore Balance",
+  "csvid": 8646,
+  "recipes": [
+    {
+      "family": "suspend_mass_effects",
+      "version": 2,
+      "params": {
+        "csvid": 8646,
+        "duration": 6,
+        "effect": "balance",
+        "mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Suspend 6—{W}\nEach player chooses a number of lands they control equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players sacrifice creatures and discard cards the same way.",
+      "variants": [
+        "parked_0",
+        "parked_1",
+        "countdown_0",
+        "countdown_1",
+        "unfunded_0",
+        "unfunded_1",
+        "choices_0",
+        "choices_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "first_owner_0",
+        "first_owner_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Goblin Recruiter",
+  "csvid": 2712,
+  "recipes": [
+    {
+      "family": "entry_rider_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 2712,
+        "printed_mana": "{1}{R}",
+        "rules": "When this creature enters, search your library for any number of Goblin cards, reveal them, then shuffle and put those cards on top in any order."
+      },
+      "oracle_text": "When this creature enters, search your library for any number of Goblin cards, reveal them, then shuffle and put those cards on top in any order.",
+      "variants": [
+        "one_goblin_0",
+        "one_goblin_1",
+        "zero_goblin_0",
+        "zero_goblin_1"
+      ]
+    }
+  ]
+}

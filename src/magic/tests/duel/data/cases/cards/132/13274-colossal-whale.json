@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Colossal Whale",
+  "csvid": 13274,
+  "recipes": [
+    {
+      "family": "attack_trigger_zones_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 13274,
+        "cost": [
+          5,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)\nWhenever this creature attacks, you may exile target creature defending player controls until this creature leaves the battlefield. (That creature returns under its owner's control.)",
+      "variants": [
+        "exile_stays_0",
+        "exile_stays_1",
+        "leaves_0",
+        "leaves_1",
+        "owner_return_0",
+        "owner_return_1",
+        "decline_0",
+        "decline_1",
+        "islandwalk_0",
+        "islandwalk_1",
+        "no_island_0",
+        "no_island_1"
+      ]
+    }
+  ]
+}

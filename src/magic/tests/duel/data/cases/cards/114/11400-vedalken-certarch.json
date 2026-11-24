@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "csvid": 11400,
+  "card": "Vedalken Certarch",
+  "recipes": [
+    {
+      "family": "metalcraft_artifact",
+      "version": 2,
+      "params": {
+        "effect": "tap",
+        "flying": false,
+        "artifact": false,
+        "cast_mana": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "power": 1,
+        "toughness": 1
+      },
+      "oracle_text": "Metalcraft — {T}: Tap target artifact, creature, or land. Activate only if you control three or more artifacts.",
+      "variants": [
+        "cast_below_0",
+        "cast_threshold_0",
+        "unfunded_0",
+        "enemy_scope_0",
+        "gain_0",
+        "drop_0",
+        "target_artifact_0",
+        "target_land_0",
+        "target_creature_0",
+        "sick_0",
+        "pending_drop_0",
+        "invalid_enchantment_0",
+        "target_lost_0",
+        "replay_0",
+        "wrong_color_0",
+        "cast_below_1",
+        "cast_threshold_1",
+        "unfunded_1",
+        "enemy_scope_1",
+        "gain_1",
+        "drop_1",
+        "target_artifact_1",
+        "target_land_1",
+        "target_creature_1",
+        "sick_1",
+        "pending_drop_1",
+        "invalid_enchantment_1",
+        "target_lost_1",
+        "replay_1",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

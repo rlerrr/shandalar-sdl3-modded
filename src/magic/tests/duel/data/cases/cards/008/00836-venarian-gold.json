@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Venarian Gold",
+  "csvid": 836,
+  "recipes": [
+    {
+      "family": "remaining_entry_attachments",
+      "version": 2,
+      "params": {
+        "csvid": 836,
+        "mana_cost": "{X}{U}{U}"
+      },
+      "oracle_text": "Enchant creature\nWhen this Aura enters, tap enchanted creature and put X sleep counters on it.\nEnchanted creature doesn't untap during its controller's untap step if it has a sleep counter on it.\nAt the beginning of the upkeep of enchanted creature's controller, remove a sleep counter from that creature.",
+      "variants": [
+        "zero_0",
+        "zero_1",
+        "two_0",
+        "two_1",
+        "source_removed_0",
+        "source_removed_1"
+      ]
+    }
+  ]
+}

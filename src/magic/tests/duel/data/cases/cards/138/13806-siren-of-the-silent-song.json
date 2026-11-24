@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Siren of the Silent Song",
+  "csvid": 13806,
+  "recipes": [
+    {
+      "family": "mill_upkeep_and_untap",
+      "version": 2,
+      "params": {
+        "csvid": 13806,
+        "printed_mana": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "rules": "Flying\nInspired — Whenever this creature becomes untapped, each opponent discards a card, then each opponent mills a card."
+      },
+      "oracle_text": "Flying\nInspired — Whenever this creature becomes untapped, each opponent discards a card, then each opponent mills a card.",
+      "variants": [
+        "untap_discard_0",
+        "untap_discard_1",
+        "manual_empty_hand_0",
+        "manual_empty_hand_1"
+      ]
+    }
+  ]
+}

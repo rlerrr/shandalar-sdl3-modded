@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Endless Horizons",
+  "csvid": 9777,
+  "recipes": [
+    {
+      "family": "remaining_entry_library_and_hand",
+      "version": 2,
+      "params": {
+        "csvid": 9777,
+        "printed_mana": "{3}{W}",
+        "rules": "When this enchantment enters, search your library for any number of Plains cards, exile them, then shuffle.\nAt the beginning of your upkeep, you may put a card you own exiled with this enchantment into your hand."
+      },
+      "oracle_text": "When this enchantment enters, search your library for any number of Plains cards, exile them, then shuffle.\nAt the beginning of your upkeep, you may put a card you own exiled with this enchantment into your hand.",
+      "variants": [
+        "return_upkeep_0",
+        "return_upkeep_1",
+        "zero_selection_0",
+        "zero_selection_1",
+        "decline_upkeep_0"
+      ]
+    }
+  ]
+}

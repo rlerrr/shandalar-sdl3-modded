@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Eternity Vessel",
+  "csvid": 10536,
+  "recipes": [
+    {
+      "family": "landfall_control_and_recovery",
+      "version": 2,
+      "oracle_text": "This artifact enters with X charge counters on it, where X is your life total.\nLandfall — Whenever a land you control enters, you may have your life total become the number of charge counters on this artifact.",
+      "params": {
+        "source": "Eternity Vessel"
+      },
+      "variants": [
+        "own_land_0",
+        "own_land_1",
+        "opposing_land_0",
+        "opposing_land_1",
+        "repeat_0",
+        "repeat_1",
+        "replay_0",
+        "replay_1",
+        "from_below_0",
+        "from_below_1",
+        "from_above_0",
+        "from_above_1",
+        "new_count_0",
+        "new_count_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "card": "Thallid Shell-Dweller",
+  "csvid": 8698,
+  "recipes": [
+    {
+      "family": "spore_upkeep_riders",
+      "version": 2,
+      "params": {
+        "shape": "defender",
+        "keywords": [
+          "Defender"
+        ],
+        "mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "power": 0,
+        "toughness": 5
+      },
+      "oracle_text": "Defender\nAt the beginning of your upkeep, put a spore counter on this creature.\nRemove three spore counters from this creature: Create a 1/1 green Saproling creature token.",
+      "variants": [
+        "threshold_0",
+        "bank_four_0",
+        "snapshot_0",
+        "defender_0",
+        "threshold_1",
+        "bank_four_1",
+        "snapshot_1",
+        "defender_1"
+      ]
+    }
+  ]
+}

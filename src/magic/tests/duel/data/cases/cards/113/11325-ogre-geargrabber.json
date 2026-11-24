@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Ogre Geargrabber",
+  "csvid": 11325,
+  "recipes": [
+    {
+      "family": "attack_follow_on_attack_riders",
+      "version": 2,
+      "params": {
+        "csvid": 11325,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks, gain control of target Equipment an opponent controls until end of turn. Attach it to this creature. When you lose control of that Equipment, unattach it.",
+      "variants": [
+        "steal_0",
+        "steal_1",
+        "attached_0",
+        "attached_1",
+        "no_eligible_0",
+        "no_eligible_1",
+        "host_leaves_0",
+        "host_leaves_1"
+      ]
+    }
+  ]
+}

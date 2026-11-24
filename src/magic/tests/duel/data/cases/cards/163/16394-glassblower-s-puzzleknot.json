@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Glassblower's Puzzleknot",
+  "csvid": 16394,
+  "recipes": [
+    {
+      "family": "library_scry_before_draw",
+      "version": 2,
+      "params": {
+        "csvid": 16394,
+        "printed_cost": "{2}",
+        "choices": [
+          "paid_sacrifice_0",
+          "paid_sacrifice_1",
+          "short_0",
+          "short_1",
+          "short_payment_0",
+          "short_payment_1"
+        ]
+      },
+      "oracle_text": "When this artifact enters, scry 2, then you get {E}{E}. (You get two energy counters. To scry 2, look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)\n{2}{U}, Sacrifice this artifact: Scry 2, then you get {E}{E}.",
+      "variants": [
+        "paid_sacrifice_0",
+        "paid_sacrifice_1",
+        "short_0",
+        "short_1",
+        "short_payment_0",
+        "short_payment_1"
+      ]
+    }
+  ]
+}

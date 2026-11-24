@@ -1,0 +1,864 @@
+{
+  "sources": {
+    "Devouring Strossus": {
+      "oracle": {
+        "oracle_id": "8f2ab0a8-9d60-493b-a284-9ed7fa07e5ea",
+        "name": "Devouring Strossus",
+        "oracle_text": "Flying, trample\nAt the beginning of your upkeep, sacrifice a creature.\nSacrifice a creature: Regenerate this creature.",
+        "mana_cost": "{5}{B}{B}{B}",
+        "type_line": "Creature — Phyrexian Horror",
+        "power": "9",
+        "toughness": "9",
+        "keywords": [
+          "Flying",
+          "Regenerate",
+          "Trample"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inv/101/devouring-strossus?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4979,
+        "iid": 2503,
+        "name": "Devouring Strossus",
+        "handler": "manalinkeh_card_devouring_strossus",
+        "kind": "card"
+      }
+    },
+    "Dimir House Guard": {
+      "oracle": {
+        "oracle_id": "35c027cd-f754-4e41-9242-8a9d0481171c",
+        "name": "Dimir House Guard",
+        "oracle_text": "Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)\nSacrifice a creature: Regenerate this creature.\nTransmute {1}{B}{B} ({1}{B}{B}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.)",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Skeleton",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Regenerate",
+          "Fear",
+          "Transmute"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/73/dimir-house-guard?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7817,
+        "iid": 2543,
+        "name": "Dimir House Guard",
+        "handler": "manalinkeh_card_dimir_house_guard",
+        "kind": "card"
+      }
+    },
+    "Eater of Hope": {
+      "oracle": {
+        "oracle_id": "3055381a-fb6b-47a3-8e77-a44768808e27",
+        "name": "Eater of Hope",
+        "oracle_text": "Flying\n{B}, Sacrifice another creature: Regenerate this creature.\n{2}{B}, Sacrifice two other creatures: Destroy target creature.",
+        "mana_cost": "{5}{B}{B}",
+        "type_line": "Creature — Demon",
+        "power": "6",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mic/115/eater-of-hope?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13688,
+        "iid": 2871,
+        "name": "Eater of Hope",
+        "handler": "manalinkeh_card_eater_of_hope",
+        "kind": "card"
+      }
+    },
+    "Gatherer of Graces": {
+      "oracle": {
+        "oracle_id": "3b19054c-ba33-44b4-b328-bb8ea3f52dab",
+        "name": "Gatherer of Graces",
+        "oracle_text": "This creature gets +1/+1 for each Aura attached to it.\nSacrifice an Aura: Regenerate this creature.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Human Druid",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gpt/85/gatherer-of-graces?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8053,
+        "iid": 3759,
+        "name": "Gatherer of Graces",
+        "handler": "manalinkeh_card_gatherer_of_graces",
+        "kind": "card"
+      }
+    },
+    "Nim Shambler": {
+      "oracle": {
+        "oracle_id": "83d2ff7f-4d6e-4cc0-b8a9-3c5b3236eea0",
+        "name": "Nim Shambler",
+        "oracle_text": "This creature gets +1/+0 for each artifact you control.\nSacrifice a creature: Regenerate this creature.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mrd/72/nim-shambler?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6747,
+        "iid": 6638,
+        "name": "Nim Shambler",
+        "handler": "manalinkeh_card_nim_shambler",
+        "kind": "card"
+      }
+    },
+    "Rhys the Exiled": {
+      "oracle": {
+        "oracle_id": "7613c50b-4568-4340-b64a-ab427aaffd51",
+        "name": "Rhys the Exiled",
+        "oracle_text": "Whenever Rhys attacks, you gain 1 life for each Elf you control.\n{B}, Sacrifice an Elf: Regenerate Rhys.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Legendary Creature — Elf Warrior",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/khc/73/rhys-the-exiled?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9420,
+        "iid": 7920,
+        "name": "Rhys the Exiled",
+        "handler": "manalinkeh_card_rhys_the_exiled",
+        "kind": "card"
+      }
+    },
+    "Uktabi Wildcats": {
+      "oracle": {
+        "oracle_id": "dd25afe0-a69a-4e0b-b364-b88d3a522ed3",
+        "name": "Uktabi Wildcats",
+        "oracle_text": "Uktabi Wildcats's power and toughness are each equal to the number of Forests you control.\n{G}, Sacrifice a Forest: Regenerate this creature.",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Cat",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/7ed/278/uktabi-wildcats?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2642,
+        "iid": 10312,
+        "name": "Uktabi Wildcats",
+        "handler": "manalinkeh_card_uktabi_wildcats",
+        "kind": "card"
+      }
+    },
+    "Fiend of the Shadows": {
+      "oracle": {
+        "oracle_id": "3891a3b6-d8ac-4cd3-b2f6-d6d786e89a67",
+        "name": "Fiend of the Shadows",
+        "oracle_text": "Flying\nWhenever this creature deals combat damage to a player, that player exiles a card from their hand. You may play that card for as long as it remains exiled.\nSacrifice a Human: Regenerate this creature.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Creature — Vampire Wizard",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/afc/99/fiend-of-the-shadows?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12181,
+        "iid": 3386,
+        "name": "Fiend of the Shadows",
+        "handler": "manalinkeh_card_fiend_of_the_shadows",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Fervor": {
+      "oracle": {
+        "oracle_id": "8e0cea9c-3110-4728-9378-76849e33bb90",
+        "name": "Fervor",
+        "oracle_text": "Creatures you control have haste. (They can attack and {T} as soon as they come under your control.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/129/fervor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1604,
+        "iid": 3365,
+        "name": "Fervor",
+        "handler": "manalinkeh_card_fervor",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Holy Strength": {
+      "oracle": {
+        "oracle_id": "9357de36-f8be-4f49-b2c8-9fe9eaf82b07",
+        "name": "Holy Strength",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +1/+2.",
+        "mana_cost": "{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m11/16/holy-strength?utm_source=api"
+      },
+      "registry": {
+        "csvid": 112,
+        "iid": 4610,
+        "name": "Holy Strength",
+        "handler": "manalinkeh_card_holy_strenght",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Ornithopter": {
+      "oracle": {
+        "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+        "name": "Ornithopter",
+        "oracle_text": "Flying",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Thopter",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 514,
+        "iid": 6907,
+        "name": "Ornithopter",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Pacifism": {
+      "oracle": {
+        "oracle_id": "5f5e0b10-c8cf-450c-bfd3-bcb0528ec330",
+        "name": "Pacifism",
+        "oracle_text": "Enchant creature\nEnchanted creature can't attack or block.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/575/pacifism?utm_source=api"
+      },
+      "registry": {
+        "csvid": 968,
+        "iid": 6961,
+        "name": "Pacifism",
+        "handler": "manalinkeh_card_pacifism",
+        "kind": "card"
+      }
+    },
+    "Terminate": {
+      "oracle": {
+        "oracle_id": "6257c2fd-005f-41e3-8a72-af76df1eb134",
+        "name": "Terminate",
+        "oracle_text": "Destroy target creature. It can't be regenerated.",
+        "mana_cost": "{B}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/189/terminate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1471,
+        "iid": 9812,
+        "name": "Terminate",
+        "handler": "manalinkeh_card_terminate",
+        "kind": "card"
+      }
+    },
+    "Unholy Strength": {
+      "oracle": {
+        "oracle_id": "090d88a9-7f2d-4bd1-a30a-7c48d05068be",
+        "name": "Unholy Strength",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +2/+1.",
+        "mana_cost": "{B}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dvd/47/unholy-strength?utm_source=api"
+      },
+      "registry": {
+        "csvid": 259,
+        "iid": 10368,
+        "name": "Unholy Strength",
+        "handler": "manalinkeh_card_unholy_strenght",
+        "kind": "card"
+      }
+    },
+    "Walking Corpse": {
+      "oracle": {
+        "oracle_id": "fea95888-e16a-4209-9cd4-623f7f4d2f67",
+        "name": "Walking Corpse",
+        "oracle_text": "",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/128/walking-corpse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12124,
+        "iid": 10747,
+        "name": "Walking Corpse",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Mind Stone": {
+      "oracle": {
+        "oracle_id": "c97361b5-af16-4a7b-af85-a429dbaf4ad2",
+        "name": "Mind Stone",
+        "oracle_text": "{T}: Add {C}.\n{1}, {T}, Sacrifice this artifact: Draw a card.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbc/76/mind-stone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3009,
+        "iid": 6137,
+        "name": "Mind Stone",
+        "handler": "manalinkeh_card_mind_stone",
+        "kind": "card"
+      }
+    },
+    "Naturalize": {
+      "oracle": {
+        "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+        "name": "Naturalize",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1096,
+        "iid": 6485,
+        "name": "Naturalize",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Elvish Archers": {
+      "oracle": {
+        "oracle_id": "534ce8e2-53a1-407c-9881-d3b5347d43c3",
+        "name": "Elvish Archers",
+        "oracle_text": "First strike",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Elf Archer",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "First strike"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/7ed/239/elvish-archers?utm_source=api"
+      },
+      "registry": {
+        "csvid": 76,
+        "iid": 2970,
+        "name": "Elvish Archers",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Elvish Warrior": {
+      "oracle": {
+        "oracle_id": "da587161-da7e-48ae-8af6-7f02ee71afd8",
+        "name": "Elvish Warrior",
+        "oracle_text": "",
+        "mana_cost": "{G}{G}",
+        "type_line": "Creature — Elf Warrior",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/evg/5/elvish-warrior?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1703,
+        "iid": 2993,
+        "name": "Elvish Warrior",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Glorious Anthem": {
+      "oracle": {
+        "oracle_id": "e3886fe8-9b76-4613-8891-4ec74657c087",
+        "name": "Glorious Anthem",
+        "oracle_text": "Creatures you control get +1/+1.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/21/glorious-anthem?utm_source=api"
+      },
+      "registry": {
+        "csvid": 966,
+        "iid": 3948,
+        "name": "Glorious Anthem",
+        "handler": "manalinkeh_card_gaeas_anthem",
+        "kind": "card"
+      }
+    },
+    "Taiga": {
+      "oracle": {
+        "oracle_id": "22e3cf1d-3559-4ce1-954c-8dc815342979",
+        "name": "Taiga",
+        "oracle_text": "({T}: Add {R} or {G}.)",
+        "mana_cost": "",
+        "type_line": "Land — Mountain Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/317/taiga?utm_source=api"
+      },
+      "registry": {
+        "csvid": 241,
+        "iid": 10,
+        "name": "Taiga",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Visions of Beyond": {
+      "oracle": {
+        "oracle_id": "c68964df-51ae-43b0-abea-74735016c13f",
+        "name": "Visions of Beyond",
+        "oracle_text": "Draw a card. If a graveyard has twenty or more cards in it, draw three cards instead.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/81/visions-of-beyond?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11865,
+        "iid": 10634,
+        "name": "Visions of Beyond",
+        "handler": "manalinkeh_card_visions_of_beyond",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Expedition Envoy": {
+      "oracle": {
+        "oracle_id": "8bc7c769-33e0-4482-95fc-b344b772e174",
+        "name": "Expedition Envoy",
+        "oracle_text": "",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Scout Ally",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/24/expedition-envoy?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15322,
+        "iid": 12528,
+        "name": "Expedition Envoy",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

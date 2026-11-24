@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "card": "Long-Forgotten Gohei",
+  "csvid": 7297,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "cast_reducers_with_riders",
+      "version": 2,
+      "oracle_text": "Arcane spells you cast cost {1} less to cast.\nSpirit creatures you control get +1/+1.",
+      "params": {
+        "subtype": "Arcane",
+        "reduction": 1,
+        "mode": "anthem",
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": [],
+        "regen_cost": []
+      },
+      "variants": [
+        "match_0",
+        "match_1",
+        "surplus_0",
+        "surplus_1",
+        "short_0",
+        "short_1",
+        "opponent_0",
+        "opponent_1",
+        "nonmatch_0",
+        "nonmatch_1",
+        "removed_0",
+        "removed_1",
+        "source_short_0",
+        "source_short_1",
+        "replay_0",
+        "replay_1",
+        "spirit_late_0",
+        "spirit_late_1",
+        "floor_0",
+        "floor_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

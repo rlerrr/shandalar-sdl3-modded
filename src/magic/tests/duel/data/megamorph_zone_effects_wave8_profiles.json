@@ -1,0 +1,621 @@
+{
+  "sources": {
+    "Deathmist Raptor": {
+      "oracle": {
+        "oracle_id": "a7d4f5aa-26d4-4363-aa5a-a26d6f791b82",
+        "name": "Deathmist Raptor",
+        "oracle_text": "Deathtouch\nWhenever a permanent you control is turned face up, you may return this card from your graveyard to the battlefield face up or face down.\nMegamorph {4}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Creature — Dinosaur Beast",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Megamorph",
+          "Deathtouch"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/176/deathmist-raptor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14881,
+        "iid": 12231,
+        "name": "Deathmist Raptor",
+        "handler": "manalinkeh_card_deathmist_raptor",
+        "kind": "card"
+      }
+    },
+    "Den Protector": {
+      "oracle": {
+        "oracle_id": "59324efc-65b7-4b31-89c5-17aed5c7eeb1",
+        "name": "Den Protector",
+        "oracle_text": "Creatures with power less than this creature's power can't block it.\nMegamorph {1}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\nWhen this creature is turned face up, return target card from your graveyard to your hand.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Human Warrior",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Megamorph"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mkc/169/den-protector?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14883,
+        "iid": 12262,
+        "name": "Den Protector",
+        "handler": "manalinkeh_card_den_protector",
+        "kind": "card"
+      }
+    },
+    "Ire Shaman": {
+      "oracle": {
+        "oracle_id": "7f691e0d-dac5-4d7e-8727-dd2cab9a7863",
+        "name": "Ire Shaman",
+        "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nMegamorph {R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\nWhen this creature is turned face up, exile the top card of your library. Until end of turn, you may play that card.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Orc Shaman",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Menace",
+          "Megamorph"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/a25/137/ire-shaman?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14942,
+        "iid": 13170,
+        "name": "Ire Shaman",
+        "handler": "manalinkeh_card_ire_shaman",
+        "kind": "card"
+      }
+    },
+    "Monastery Loremaster": {
+      "oracle": {
+        "oracle_id": "1c8ef715-3c3c-4d04-9f30-941b870b11d3",
+        "name": "Monastery Loremaster",
+        "oracle_text": "Megamorph {5}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\nWhen this creature is turned face up, return target noncreature, nonland card from your graveyard to your hand.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Djinn Wizard",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Megamorph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/63/monastery-loremaster?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14962,
+        "iid": 13680,
+        "name": "Monastery Loremaster",
+        "handler": "manalinkeh_card_monastery_loremaster",
+        "kind": "card"
+      }
+    },
+    "Salt Road Ambushers": {
+      "oracle": {
+        "oracle_id": "2373e035-25f7-473a-9386-2093f77d3f94",
+        "name": "Salt Road Ambushers",
+        "oracle_text": "Whenever another permanent you control is turned face up, if it's a creature, put two +1/+1 counters on it.\nMegamorph {3}{G}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Dog Warrior",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Megamorph"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mkc/184/salt-road-ambushers?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14997,
+        "iid": 14367,
+        "name": "Salt Road Ambushers",
+        "handler": "manalinkeh_card_salt_road_ambushers",
+        "kind": "card"
+      }
+    },
+    "Shorecrasher Elemental": {
+      "oracle": {
+        "oracle_id": "5eb0d8dc-be4b-4a20-b480-f70514ffb299",
+        "name": "Shorecrasher Elemental",
+        "oracle_text": "{U}: Exile this creature, then return it to the battlefield face down under its owner's control.\n{1}: This creature gets +1/-1 or -1/+1 until end of turn.\nMegamorph {4}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)",
+        "mana_cost": "{U}{U}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Megamorph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/73/shorecrasher-elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15020,
+        "iid": 14578,
+        "name": "Shorecrasher Elemental",
+        "handler": "manalinkeh_card_shorecrasher_elemental",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Bazaar Trader": {
+      "oracle": {
+        "oracle_id": "21ad7067-3210-42d6-9009-0784b2834227",
+        "name": "Bazaar Trader",
+        "oracle_text": "{T}: Target player gains control of target artifact, creature, or land you control.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/72/bazaar-trader?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10729,
+        "iid": 930,
+        "name": "Bazaar Trader",
+        "handler": "manalinkeh_card_bazaar_trader",
+        "kind": "card"
+      }
+    },
+    "Craw Wurm": {
+      "oracle": {
+        "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+        "name": "Craw Wurm",
+        "oracle_text": "",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "6",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/173/craw-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 49,
+        "iid": 2032,
+        "name": "Craw Wurm",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Glacial Stalker": {
+      "oracle": {
+        "oracle_id": "49d06291-c8cb-4e22-b178-d0598582b2ee",
+        "name": "Glacial Stalker",
+        "oracle_text": "Morph {4}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+        "mana_cost": "{5}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/41/glacial-stalker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14275,
+        "iid": 3911,
+        "name": "Glacial Stalker",
+        "handler": "manalinkeh_card_glacial_stalker",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Reach Through Mists": {
+      "oracle": {
+        "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+        "name": "Reach Through Mists",
+        "oracle_text": "Draw a card.",
+        "mana_cost": "{U}",
+        "type_line": "Instant — Arcane",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/7/reach-through-mists?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7353,
+        "iid": 7720,
+        "name": "Reach Through Mists",
+        "handler": "manalinkeh_card_reach_through_mists",
+        "kind": "card"
+      }
+    },
+    "Sandstorm Charger": {
+      "oracle": {
+        "oracle_id": "aa7a9689-e79a-4562-a621-eadc45966ce8",
+        "name": "Sandstorm Charger",
+        "oracle_text": "Megamorph {4}{W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Beast",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Megamorph"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/34/sandstorm-charger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15001,
+        "iid": 14392,
+        "name": "Sandstorm Charger",
+        "handler": "manalinkeh_card_aven_sunstriker",
+        "kind": "card"
+      }
+    },
+    "Silent Gravestone": {
+      "oracle": {
+        "oracle_id": "803815c5-12be-48b3-a101-f416c1ef9b7b",
+        "name": "Silent Gravestone",
+        "oracle_text": "Cards in graveyards can't be the targets of spells or abilities.\n{4}, {T}: Exile this artifact and all cards from all graveyards. Draw a card.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rix/182/silent-gravestone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18287,
+        "iid": 18392,
+        "name": "Silent Gravestone",
+        "handler": "manalinkeh_card_silent_gravestone",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Wall of Stone": {
+      "oracle": {
+        "oracle_id": "cd4cadb4-3156-49bd-b36e-12ba5c85938b",
+        "name": "Wall of Stone",
+        "oracle_text": "Defender (This creature can't attack.)",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "8",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/232/wall-of-stone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 272,
+        "iid": 10783,
+        "name": "Wall of Stone",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  },
+  "hidden_observer": {
+    "csvid": 13252,
+    "iid": 3230,
+    "name": "Face-Down Creature",
+    "handler": "manalinkeh_card_face_down_creature",
+    "kind": "card"
+  }
+}

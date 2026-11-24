@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Mortuary Mire",
+  "csvid": 15378,
+  "recipes": [
+    {
+      "family": "remaining_entry_library_and_hand",
+      "version": 2,
+      "params": {
+        "csvid": 15378,
+        "printed_mana": "",
+        "rules": "This land enters tapped.\nWhen this land enters, you may put target creature card from your graveyard on top of your library.\n{T}: Add {B}."
+      },
+      "oracle_text": "This land enters tapped.\nWhen this land enters, you may put target creature card from your graveyard on top of your library.\n{T}: Add {B}.",
+      "variants": [
+        "recover_and_mana_0",
+        "recover_and_mana_1",
+        "decline_and_mana_0",
+        "decline_and_mana_1"
+      ]
+    }
+  ]
+}

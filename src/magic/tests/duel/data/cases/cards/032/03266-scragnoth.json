@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Scragnoth",
+  "csvid": 3266,
+  "recipes": [
+    {
+      "family": "uncounterable_creature_casts",
+      "version": 2,
+      "oracle_text": "This spell can't be countered.\nProtection from blue",
+      "params": {
+        "model": "blue",
+        "cost": [
+          4,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "protection": [
+          "blue"
+        ],
+        "trample": false,
+        "flash": false
+      },
+      "variants": [
+        "cast_0",
+        "short_0",
+        "counter_0",
+        "exclude_0",
+        "ordinary_counter_0",
+        "ordinary_exclude_0",
+        "replay_0",
+        "target_blue_0",
+        "target_black_0",
+        "target_green_0",
+        "block_blue_0",
+        "block_black_0",
+        "block_green_0",
+        "damage_blue_0",
+        "damage_black_0",
+        "damage_green_0",
+        "aura_blue_0",
+        "aura_black_0",
+        "cast_1",
+        "short_1",
+        "counter_1",
+        "exclude_1",
+        "ordinary_counter_1",
+        "ordinary_exclude_1",
+        "replay_1",
+        "target_blue_1",
+        "target_black_1",
+        "target_green_1",
+        "block_blue_1",
+        "block_black_1",
+        "block_green_1",
+        "damage_blue_1",
+        "damage_black_1",
+        "damage_green_1",
+        "aura_blue_1",
+        "aura_black_1"
+      ]
+    }
+  ]
+}

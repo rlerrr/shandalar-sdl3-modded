@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Elvish Pioneer",
+  "csvid": 1026,
+  "recipes": [
+    {
+      "family": "remaining_entry_zone_and_permissions",
+      "version": 2,
+      "params": {
+        "csvid": 1026,
+        "cost": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, you may put a basic land card from your hand onto the battlefield tapped.",
+      "variants": [
+        "basic_tapped_0",
+        "basic_tapped_1",
+        "decline_0",
+        "decline_1",
+        "no_basic_0",
+        "no_basic_1"
+      ]
+    }
+  ]
+}

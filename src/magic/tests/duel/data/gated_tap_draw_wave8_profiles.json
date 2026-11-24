@@ -1,0 +1,289 @@
+{
+  "sources": {
+    "Library of Alexandria": {
+      "csvid": 438,
+      "handler": "manalinkeh_card_library_of_alexandria",
+      "oracle": {
+        "oracle_id": "2111588d-9af5-4a33-989e-b074d83f0463",
+        "name": "Library of Alexandria",
+        "oracle_text": "{T}: Add {C}.\n{T}: Draw a card. Activate only if you have exactly seven cards in hand.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/303/library-of-alexandria?utm_source=api"
+      },
+      "mana_label": "Produce mana"
+    },
+    "Magus of the Library": {
+      "csvid": 1284,
+      "handler": "manalinkeh_card_library_of_alexandria",
+      "oracle": {
+        "oracle_id": "69266cb7-50eb-43d2-96d6-fc3c85be49f7",
+        "name": "Magus of the Library",
+        "oracle_text": "{T}: Add {C}.\n{T}: Draw a card. Activate only if you have exactly seven cards in hand.",
+        "mana_cost": "{G}{G}",
+        "type_line": "Creature — Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/plc/134/magus-of-the-library?utm_source=api"
+      },
+      "mana_label": "Produce mana"
+    },
+    "Fool's Tome": {
+      "csvid": 3152,
+      "handler": "manalinkeh_card_fools_tome",
+      "oracle": {
+        "oracle_id": "65589538-d3c1-4dfd-a328-71f57f556212",
+        "name": "Fool's Tome",
+        "oracle_text": "{2}, {T}: Draw a card. Activate only if you have no cards in hand.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact — Book",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tmp/289/fools-tome?utm_source=api"
+      },
+      "mana_label": null
+    },
+    "Tapestry of the Ages": {
+      "csvid": 15050,
+      "handler": "manalinkeh_card_tapestry_of_the_ages",
+      "oracle": {
+        "oracle_id": "9248f9b9-ddaa-459c-91e6-9045a65b0f07",
+        "name": "Tapestry of the Ages",
+        "oracle_text": "{2}, {T}: Draw a card. Activate only if you've cast a noncreature spell this turn.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/246/tapestry-of-the-ages?utm_source=api"
+      },
+      "mana_label": null
+    },
+    "Sea Gate Wreckage": {
+      "csvid": 15674,
+      "handler": "manalinkeh_card_sea_gate_wreckage",
+      "oracle": {
+        "oracle_id": "91f34686-cb96-49c0-b4a7-49dd1fd076e2",
+        "name": "Sea Gate Wreckage",
+        "oracle_text": "{T}: Add {C}. ({C} represents colorless mana.)\n{2}{C}, {T}: Draw a card. Activate only if you have no cards in hand.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/1028/sea-gate-wreckage?utm_source=api"
+      },
+      "mana_label": "Get mana"
+    },
+    "Seeker of Insight": {
+      "csvid": 17018,
+      "handler": "manalinkeh_card_seeker_of_insight",
+      "oracle": {
+        "oracle_id": "a0b2d446-fe90-40f8-8674-7421c425b489",
+        "name": "Seeker of Insight",
+        "oracle_text": "{T}: Draw a card, then discard a card. Activate only if you've cast a noncreature spell this turn.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Human Wizard",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/akh/69/seeker-of-insight?utm_source=api"
+      },
+      "mana_label": null
+    }
+  },
+  "witnesses": {
+    "Fog": {
+      "csvid": 88,
+      "handler": "manalinkeh_card_fog",
+      "oracle": {
+        "oracle_id": "27e9db49-7af7-4bef-ad4c-bf5dfb92030d",
+        "name": "Fog",
+        "oracle_text": "Prevent all combat damage that would be dealt this turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/167/fog?utm_source=api"
+      }
+    },
+    "Counterspell": {
+      "csvid": 48,
+      "handler": "manalinkeh_card_counterspell",
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      }
+    },
+    "Grizzly Bears": {
+      "csvid": 106,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      }
+    },
+    "Plains": {
+      "csvid": 188,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      }
+    },
+    "Swamp": {
+      "csvid": 239,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      }
+    },
+    "Mountain": {
+      "csvid": 164,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      }
+    },
+    "Island": {
+      "csvid": 126,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      }
+    },
+    "Forest": {
+      "csvid": 91,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      }
+    }
+  },
+  "static_witnesses": [
+    "Grizzly Bears"
+  ]
+}

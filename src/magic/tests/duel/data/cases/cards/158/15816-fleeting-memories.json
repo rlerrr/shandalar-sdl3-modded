@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "csvid": 15816,
+  "card": "Fleeting Memories",
+  "recipes": [
+    {
+      "family": "mill_remaining_entry_and_token_riders",
+      "version": 2,
+      "params": {
+        "csvid": 15816,
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "stats": null
+      },
+      "oracle_text": "When this enchantment enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\nWhenever you sacrifice a Clue, target player mills three cards.",
+      "variants": [
+        "entry_0",
+        "entry_1",
+        "foe_0",
+        "foe_1",
+        "self_0",
+        "self_1",
+        "short_target_0",
+        "short_target_1",
+        "other_clue_0",
+        "other_clue_1",
+        "underpaid_0",
+        "underpaid_1"
+      ]
+    }
+  ]
+}

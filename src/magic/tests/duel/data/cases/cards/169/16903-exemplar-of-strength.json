@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "csvid": 16903,
+  "card": "Exemplar of Strength",
+  "recipes": [
+    {
+      "family": "attack_trigger_stat_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 16903,
+        "printed_cost": "{1}{G}"
+      },
+      "oracle_text": "When this creature enters, put three -1/-1 counters on target creature you control.\nWhenever this creature attacks, remove a -1/-1 counter from it. If you do, you gain 1 life.",
+      "variants": [
+        "self_entry_0",
+        "ally_entry_0",
+        "repeat_0",
+        "self_entry_1",
+        "ally_entry_1",
+        "repeat_1"
+      ]
+    }
+  ]
+}

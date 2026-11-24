@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Qarsi Sadist",
+  "csvid": 14985,
+  "recipes": [
+    {
+      "family": "exploit_entry_effects",
+      "version": 2,
+      "params": {
+        "reward": "drain",
+        "mana": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": [],
+        "power": 1,
+        "toughness": 3
+      },
+      "oracle_text": "Exploit (When this creature enters, you may sacrifice a creature.)\nWhen this creature exploits a creature, target opponent loses 2 life and you gain 2 life.",
+      "variants": [
+        "other_0",
+        "self_0",
+        "countered_0",
+        "wrong_color_0",
+        "snapshot_0",
+        "opponent_hexproof_0",
+        "prevention_0",
+        "other_1",
+        "self_1",
+        "countered_1",
+        "wrong_color_1",
+        "snapshot_1",
+        "opponent_hexproof_1",
+        "prevention_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

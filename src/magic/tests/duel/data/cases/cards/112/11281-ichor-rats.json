@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Ichor Rats",
+  "csvid": 11281,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "infect_combat_riders",
+      "version": 2,
+      "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nWhen this creature enters, each player gets a poison counter.",
+      "params": {
+        "rider": "entry_poison",
+        "mana": [
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 1,
+        "artifact": false
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "fresh_0",
+        "fresh_1",
+        "unblocked_0",
+        "unblocked_1",
+        "blocked_0",
+        "blocked_1",
+        "defending_0",
+        "defending_1",
+        "fogged_0",
+        "fogged_1",
+        "replay_0",
+        "replay_1",
+        "countered_0",
+        "countered_1",
+        "recast_0",
+        "recast_1"
+      ]
+    }
+  ]
+}

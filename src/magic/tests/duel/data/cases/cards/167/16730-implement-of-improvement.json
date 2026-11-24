@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Implement of Improvement",
+  "csvid": 16730,
+  "recipes": [
+    {
+      "family": "departure_resources",
+      "version": 2,
+      "params": {
+        "csvid": 16730,
+        "printed_mana": "{1}",
+        "rules": "{W}, Sacrifice this artifact: You gain 2 life.\nWhen this artifact is put into a graveyard from the battlefield, draw a card."
+      },
+      "oracle_text": "{W}, Sacrifice this artifact: You gain 2 life.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "destroy_draw_0",
+        "destroy_draw_1",
+        "exile_0",
+        "exile_1"
+      ]
+    }
+  ]
+}

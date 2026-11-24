@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Awakening Zone",
+  "csvid": 10873,
+  "recipes": [
+    {
+      "family": "upkeep_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 10873,
+        "mana_cost": "{2}{G}"
+      },
+      "oracle_text": "At the beginning of your upkeep, you may create a 0/1 colorless Eldrazi Spawn creature token. It has \"Sacrifice this token: Add {C}.\"",
+      "variants": [
+        "accept_0",
+        "accept_1",
+        "decline_0",
+        "spawn_mana_0",
+        "spawn_mana_1",
+        "removed_0",
+        "removed_1"
+      ]
+    }
+  ]
+}

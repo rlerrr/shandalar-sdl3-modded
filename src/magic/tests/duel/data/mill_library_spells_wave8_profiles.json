@@ -1,0 +1,640 @@
+{
+  "sources": {
+    "Archive Trap": {
+      "oracle": {
+        "oracle_id": "d412b175-2365-4b2c-a8f5-3e4e9d06280d",
+        "name": "Archive Trap",
+        "oracle_text": "If an opponent searched their library this turn, you may pay {0} rather than pay this spell's mana cost.\nTarget opponent mills thirteen cards.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Instant — Trap",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/41/archive-trap?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10494,
+        "iid": 560,
+        "name": "Archive Trap",
+        "handler": "manalinkeh_card_archive_trap",
+        "kind": "card"
+      }
+    },
+    "Dampen Thought": {
+      "oracle": {
+        "oracle_id": "fa0ef984-b4e0-4c48-978c-0648e49d53f5",
+        "name": "Dampen Thought",
+        "oracle_text": "Target player mills four cards.\nSplice onto Arcane {1}{U} (As you cast an Arcane spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card's effects to that spell.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant — Arcane",
+        "keywords": [
+          "Mill",
+          "Splice"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mma/39/dampen-thought?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7190,
+        "iid": 2205,
+        "name": "Dampen Thought",
+        "handler": "manalinkeh_card_dampen_thought",
+        "kind": "card"
+      }
+    },
+    "Coerced Confession": {
+      "oracle": {
+        "oracle_id": "49b84c50-ca0a-4947-8225-ae41aa08e1f1",
+        "name": "Coerced Confession",
+        "oracle_text": "Target player mills four cards. You draw a card for each creature card put into their graveyard this way.",
+        "mana_cost": "{4}{U/B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/217/coerced-confession?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12910,
+        "iid": 1851,
+        "name": "Coerced Confession",
+        "handler": "manalinkeh_card_coerced_confession",
+        "kind": "card"
+      }
+    },
+    "Dreadwaters": {
+      "oracle": {
+        "oracle_id": "e6e70eb3-3da5-4052-9f62-2960a30d4b41",
+        "name": "Dreadwaters",
+        "oracle_text": "Target player mills X cards, where X is the number of lands you control.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ori/56/dreadwaters?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12354,
+        "iid": 2729,
+        "name": "Dreadwaters",
+        "handler": "manalinkeh_card_dreadwaters",
+        "kind": "card"
+      }
+    },
+    "Increasing Confusion": {
+      "oracle": {
+        "oracle_id": "11293f96-3263-45e5-89fc-850df6b25a63",
+        "name": "Increasing Confusion",
+        "oracle_text": "Target player mills X cards. If this spell was cast from a graveyard, that player mills twice that many cards instead.\nFlashback {X}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{X}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Flashback",
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dka/41/increasing-confusion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12217,
+        "iid": 4835,
+        "name": "Increasing Confusion",
+        "handler": "manalinkeh_card_increasing_confusion",
+        "kind": "card"
+      }
+    },
+    "Traumatize": {
+      "oracle": {
+        "oracle_id": "e2ea7d01-6564-4a7f-b935-49a5e3978dac",
+        "name": "Traumatize",
+        "oracle_text": "Target player mills half their library, rounded down.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/77/traumatize?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5740,
+        "iid": 10164,
+        "name": "Traumatize",
+        "handler": "manalinkeh_card_traumatize",
+        "kind": "card"
+      }
+    },
+    "Fascination": {
+      "oracle": {
+        "oracle_id": "28f0765a-de09-4be3-b952-aee75b9ede03",
+        "name": "Fascination",
+        "oracle_text": "Choose one —\n• Each player draws X cards.\n• Each player mills X cards.",
+        "mana_cost": "{X}{U}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frf/34/fascination?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14546,
+        "iid": 11282,
+        "name": "Fascination",
+        "handler": "manalinkeh_card_fascination",
+        "kind": "card"
+      }
+    },
+    "Dread Summons": {
+      "oracle": {
+        "oracle_id": "642fa01d-025e-44dd-8360-5325e5a28282",
+        "name": "Dread Summons",
+        "oracle_text": "Each player mills X cards. For each creature card put into a graveyard this way, you create a tapped 2/2 black Zombie creature token. (To mill a card, a player puts the top card of their library into their graveyard.)",
+        "mana_cost": "{X}{B}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/604/dread-summons?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15511,
+        "iid": 12349,
+        "name": "Dread Summons",
+        "handler": "manalinkeh_card_dread_summons",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Boomerang": {
+      "oracle": {
+        "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+        "name": "Boomerang",
+        "oracle_text": "Return target permanent to its owner's hand.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+      },
+      "registry": {
+        "csvid": 585,
+        "iid": 1233,
+        "name": "Boomerang",
+        "handler": "manalinkeh_card_boomerang",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Darksteel Citadel": {
+      "oracle": {
+        "oracle_id": "8dc067bf-f78f-4ac4-b6e7-b305c42cf0bc",
+        "name": "Darksteel Citadel",
+        "oracle_text": "Indestructible\n{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Artifact Land",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c21/285/darksteel-citadel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6870,
+        "iid": 2248,
+        "name": "Darksteel Citadel",
+        "handler": "manalinkeh_card_darksteel_citadel",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Goblin Balloon Brigade": {
+      "oracle": {
+        "oracle_id": "10bc98b0-3fdc-46d1-8d3b-6d160e9dd62f",
+        "name": "Goblin Balloon Brigade",
+        "oracle_text": "{R}: This creature gains flying until end of turn.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cn2/159/goblin-balloon-brigade?utm_source=api"
+      },
+      "registry": {
+        "csvid": 101,
+        "iid": 3980,
+        "name": "Goblin Balloon Brigade",
+        "handler": "manalinkeh_card_goblin_balloon_brigade",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Reach Through Mists": {
+      "oracle": {
+        "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+        "name": "Reach Through Mists",
+        "oracle_text": "Draw a card.",
+        "mana_cost": "{U}",
+        "type_line": "Instant — Arcane",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/7/reach-through-mists?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7353,
+        "iid": 7720,
+        "name": "Reach Through Mists",
+        "handler": "manalinkeh_card_reach_through_mists",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Traveler's Amulet": {
+      "oracle": {
+        "oracle_id": "48b561dd-f23d-409a-87c8-e49902b2477b",
+        "name": "Traveler's Amulet",
+        "oracle_text": "{1}, Sacrifice this artifact: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/273/travelers-amulet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12102,
+        "iid": 10166,
+        "name": "Traveler's Amulet",
+        "handler": "manalinkeh_card_travelers_amulet",
+        "kind": "card"
+      }
+    },
+    "Zombie": {
+      "oracle": {
+        "oracle_id": "ec6e76e8-e80e-4534-990a-03c3bbeda53a",
+        "name": "Zombie",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Zombie",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tinr/12/zombie?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18860,
+        "iid": 11220,
+        "name": "Zombie",
+        "handler": "manalinkeh_card_zombie",
+        "kind": "card"
+      }
+    }
+  }
+}

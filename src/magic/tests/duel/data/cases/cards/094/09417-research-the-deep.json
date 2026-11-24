@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Research the Deep",
+  "csvid": 9417,
+  "recipes": [
+    {
+      "family": "clash_whole_cards",
+      "version": 2,
+      "oracle_text": "Draw a card. Clash with an opponent. If you win, return Research the Deep to its owner's hand. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",
+      "params": {
+        "effect": "draw",
+        "mana": "{1}{U}",
+        "type_line": "Sorcery",
+        "power": null,
+        "toughness": null
+      },
+      "variants": [
+        "win_0",
+        "tie_0",
+        "loss_0",
+        "human_bottom_0",
+        "snapshot_0",
+        "recast_0",
+        "win_1",
+        "tie_1",
+        "loss_1",
+        "human_bottom_1",
+        "snapshot_1",
+        "recast_1"
+      ]
+    }
+  ]
+}

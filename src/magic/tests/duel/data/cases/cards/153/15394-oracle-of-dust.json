@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Oracle of Dust",
+  "csvid": 15394,
+  "recipes": [
+    {
+      "family": "devoid_opponent_exile_costs",
+      "version": 2,
+      "params": {
+        "model": "loot",
+        "cost": [
+          4,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "fee": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "exile_cost": 1
+      },
+      "oracle_text": "Devoid (This card has no color.)\n{2}, Put a card an opponent owns from exile into that player's graveyard: Draw a card, then discard a card.",
+      "variants": [
+        "paid_0",
+        "own_exile_0",
+        "empty_0",
+        "mixed_0",
+        "replay_0",
+        "short_0",
+        "discard_old_0",
+        "paid_1",
+        "own_exile_1",
+        "empty_1",
+        "mixed_1",
+        "replay_1",
+        "short_1"
+      ]
+    }
+  ]
+}

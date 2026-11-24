@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Skywise Teachings",
+  "csvid": 15034,
+  "recipes": [
+    {
+      "family": "cast_noncreature_riders",
+      "version": 2,
+      "params": {
+        "role": "teachings",
+        "mana": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever you cast a noncreature spell, you may pay {1}{U}. If you do, create a 2/2 blue Djinn Monk creature token with flying.",
+      "variants": [
+        "own_0",
+        "creature_0",
+        "opponent_0",
+        "countered_0",
+        "unfunded_0",
+        "evasion_0",
+        "replay_0",
+        "own_1",
+        "creature_1",
+        "opponent_1",
+        "countered_1",
+        "unfunded_1",
+        "evasion_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

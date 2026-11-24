@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "card": "Orcish Captain",
+  "csvid": 1811,
+  "recipes": [
+    {
+      "family": "seeded_coin_riders",
+      "version": 2,
+      "params": {
+        "shape": "orc",
+        "mana": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "keywords": []
+      },
+      "oracle_text": "{1}: Flip a coin. If you win the flip, target Orc creature gets +2/+0 until end of turn. If you lose the flip, it gets -0/-2 until end of turn.",
+      "variants": [
+        "win_0",
+        "lose_0",
+        "replay_0",
+        "unfunded_0",
+        "own_expiry_0",
+        "enemy_expiry_0",
+        "win_1",
+        "lose_1",
+        "replay_1",
+        "unfunded_1",
+        "own_expiry_1",
+        "enemy_expiry_1"
+      ]
+    }
+  ]
+}

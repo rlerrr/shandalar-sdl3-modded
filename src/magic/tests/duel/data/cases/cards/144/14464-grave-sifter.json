@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Grave Sifter",
+  "csvid": 14464,
+  "recipes": [
+    {
+      "family": "remaining_entry_library_and_hand",
+      "version": 2,
+      "params": {
+        "csvid": 14464,
+        "printed_mana": "{5}{G}",
+        "rules": "When this creature enters, each player chooses a creature type and returns any number of cards of that type from their graveyard to their hand."
+      },
+      "oracle_text": "When this creature enters, each player chooses a creature type and returns any number of cards of that type from their graveyard to their hand.",
+      "variants": [
+        "both_return_two_0",
+        "both_return_two_1",
+        "both_partial_0",
+        "both_partial_1",
+        "kindred_goblin_0",
+        "kindred_goblin_1"
+      ]
+    }
+  ]
+}

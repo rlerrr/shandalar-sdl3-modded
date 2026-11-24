@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Varchild's War-Riders",
+  "csvid": 2376,
+  "recipes": [
+    {
+      "family": "cumulative_upkeep_special_payment_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 2376,
+        "mana": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Cumulative upkeep—Have an opponent create a 1/1 red Survivor creature token. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nTrample; rampage 1 (Whenever this creature becomes blocked, it gets +1/+1 until end of turn for each creature blocking it beyond the first.)",
+      "variants": [
+        "one_block_0",
+        "two_block_0",
+        "decline_0",
+        "one_block_1",
+        "two_block_1",
+        "decline_1"
+      ]
+    }
+  ]
+}

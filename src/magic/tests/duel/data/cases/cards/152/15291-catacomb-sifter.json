@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Catacomb Sifter",
+  "csvid": 15291,
+  "recipes": [
+    {
+      "family": "devoid_scions_and_sacrifice",
+      "version": 2,
+      "params": {
+        "role": "sifter",
+        "mana": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Devoid (This card has no color.)\nWhen this creature enters, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\"\nWhenever another creature you control dies, scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "variants": [
+        "entry_0",
+        "scry_mana_0",
+        "enemy_dies_0",
+        "own_dies_0",
+        "replay_0",
+        "entry_1",
+        "scry_mana_1",
+        "enemy_dies_1",
+        "own_dies_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

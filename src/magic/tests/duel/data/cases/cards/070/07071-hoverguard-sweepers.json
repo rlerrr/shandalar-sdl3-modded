@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Hoverguard Sweepers",
+  "csvid": 7071,
+  "recipes": [
+    {
+      "family": "entry_trigger_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 7071,
+        "cost": [
+          6,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, you may return up to two target creatures to their owners' hands.",
+      "variants": [
+        "two_0",
+        "two_1",
+        "one_0",
+        "one_1",
+        "zero_0",
+        "zero_1",
+        "self_0",
+        "self_1",
+        "borrowed_0",
+        "borrowed_1",
+        "flying_0",
+        "flying_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

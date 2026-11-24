@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Foriysian Brigade",
+  "csvid": 1397,
+  "recipes": [
+    {
+      "family": "additional_blocker",
+      "version": 2,
+      "params": {
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "power": 2,
+        "toughness": 4,
+        "reach": false,
+        "trample": false,
+        "additional": 1
+      },
+      "oracle_text": "This creature can block an additional creature each combat.",
+      "variants": [
+        "two_ground_0",
+        "reverse_0",
+        "third_rejected_0",
+        "duplicate_rejected_0",
+        "ordinary_limit_0",
+        "one_damage_0",
+        "tapped_0",
+        "leave_unblocked_0",
+        "flyer_second_0",
+        "after_blocks_replay_0",
+        "next_combat_0",
+        "cast_then_block_0",
+        "unfunded_0",
+        "wrong_color_0",
+        "two_ground_1",
+        "reverse_1",
+        "third_rejected_1",
+        "duplicate_rejected_1",
+        "ordinary_limit_1",
+        "one_damage_1",
+        "tapped_1",
+        "leave_unblocked_1",
+        "flyer_second_1",
+        "after_blocks_replay_1",
+        "next_combat_1",
+        "cast_then_block_1",
+        "unfunded_1",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

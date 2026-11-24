@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "card": "Shinen of Life's Roar",
+  "csvid": 7745,
+  "recipes": [
+    {
+      "family": "must_block_creature_spell",
+      "version": 2,
+      "params": {
+        "cost": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "mechanism": "channel",
+        "fee": [
+          2,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "All creatures able to block this creature do so.\nChannel — {2}{G}{G}, Discard this card: All creatures able to block target creature this turn do so.",
+      "variants": [
+        "force_one_0",
+        "force_two_0",
+        "decline_0",
+        "competing_0",
+        "all_tapped_0",
+        "illegal_blocker_0",
+        "idle_target_0",
+        "after_cleanup_0",
+        "channel_0",
+        "channel_unfunded_0",
+        "channel_no_target_0",
+        "channel_defending_0",
+        "cast_then_force_0",
+        "force_one_1",
+        "force_two_1",
+        "decline_1",
+        "competing_1",
+        "all_tapped_1",
+        "illegal_blocker_1",
+        "idle_target_1",
+        "after_cleanup_1",
+        "channel_1",
+        "channel_unfunded_1",
+        "channel_no_target_1",
+        "channel_defending_1",
+        "cast_then_force_1"
+      ]
+    }
+  ]
+}

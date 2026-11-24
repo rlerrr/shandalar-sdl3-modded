@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "csvid": 11134,
+  "card": "Inferno Titan",
+  "recipes": [
+    {
+      "family": "attack_damage_triggers",
+      "version": 2,
+      "oracle_text": "{R}: This creature gets +1/+0 until end of turn.\nWhenever this creature enters or attacks, it deals 3 damage divided as you choose among one, two, or three targets.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "kind": "titan",
+          "printed": [
+            4,
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          "equip": 0,
+          "creature": true,
+          "clauses": [
+            "{R}: This creature gets +1/+0 until end of turn.",
+            "Whenever this creature enters or attacks, it deals 3 damage divided as you choose among one, two, or three targets."
+          ]
+        }
+      },
+      "variants": [
+        "cast_0",
+        "cast_1",
+        "short_cast_0",
+        "short_cast_1",
+        "fresh_attack_0",
+        "fresh_attack_1",
+        "hit_0",
+        "hit_1",
+        "split_two_0",
+        "split_two_1",
+        "walker_target_0",
+        "walker_target_1",
+        "entry_split_0",
+        "entry_split_1",
+        "pump_attack_0",
+        "pump_attack_1",
+        "wrong_pump_0",
+        "wrong_pump_1",
+        "opponent_attack_0",
+        "opponent_attack_1",
+        "replay_0",
+        "replay_1",
+        "wrong_color_0",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

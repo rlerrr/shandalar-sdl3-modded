@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "card": "Tidebinder Mage",
+  "csvid": 13352,
+  "recipes": [
+    {
+      "family": "entry_follow_on_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 13352,
+        "cost": "{U}{U}",
+        "choices": [
+          "red_0",
+          "red_1",
+          "green_0",
+          "green_1",
+          "wrong_color_0",
+          "wrong_color_1",
+          "own_only_0",
+          "own_only_1",
+          "leaves_0",
+          "leaves_1",
+          "loses_control_0",
+          "loses_control_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, tap target red or green creature an opponent controls. That creature doesn't untap during its controller's untap step for as long as you control this creature.",
+      "variants": [
+        "red_0",
+        "red_1",
+        "green_0",
+        "green_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "own_only_0",
+        "own_only_1",
+        "leaves_0",
+        "leaves_1",
+        "loses_control_0",
+        "loses_control_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Embargo",
+  "csvid": 4458,
+  "recipes": [
+    {
+      "family": "upkeep_damage_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 4458
+      },
+      "oracle_text": "Nonland permanents don't untap during their controllers' untap steps.\nAt the beginning of your upkeep, you lose 2 life.",
+      "variants": [
+        "restriction_0",
+        "restriction_1",
+        "removed_0",
+        "removed_1",
+        "repeat_0",
+        "repeat_1"
+      ]
+    }
+  ]
+}

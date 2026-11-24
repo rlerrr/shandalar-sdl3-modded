@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Savage Punch",
+  "csvid": 14368,
+  "recipes": [
+    {
+      "family": "fight_targeted_spells",
+      "version": 2,
+      "params": {
+        "csvid": 14368,
+        "mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "timing": "Sorcery",
+        "boost": [
+          2,
+          2
+        ],
+        "clauses": [
+          "Target creature you control fights target creature you don't control.",
+          "Ferocious — The creature you control gets +2/+2 until end of turn before it fights if you control a creature with power 4 or greater."
+        ],
+        "modes": [
+          "mutual",
+          "enemy_bounced",
+          "own_bounced",
+          "no_opposing_target",
+          "ferocious_late",
+          "ferocious_removed",
+          "ferocious_opponent_only"
+        ]
+      },
+      "oracle_text": "Target creature you control fights target creature you don't control.\nFerocious — The creature you control gets +2/+2 until end of turn before it fights if you control a creature with power 4 or greater.",
+      "variants": [
+        "mutual_0",
+        "mutual_1",
+        "enemy_bounced_0",
+        "enemy_bounced_1",
+        "own_bounced_0",
+        "own_bounced_1",
+        "no_opposing_target_0",
+        "no_opposing_target_1",
+        "ferocious_late_0",
+        "ferocious_late_1",
+        "ferocious_removed_0",
+        "ferocious_removed_1",
+        "ferocious_opponent_only_0",
+        "ferocious_opponent_only_1"
+      ]
+    }
+  ]
+}

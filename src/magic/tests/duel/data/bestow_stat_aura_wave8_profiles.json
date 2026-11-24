@@ -1,0 +1,402 @@
+{
+  "version": 1,
+  "sources": {
+    "Nyxborn Eidolon": {
+      "oracle": {
+        "oracle_id": "bd7fd82f-154a-4001-bb8f-7fb50ac77b6b",
+        "name": "Nyxborn Eidolon",
+        "oracle_text": "Bestow {4}{B} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nEnchanted creature gets +2/+1.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Enchantment Creature — Spirit",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Bestow"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/78/nyxborn-eidolon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13761,
+        "iid": 6732,
+        "name": "Nyxborn Eidolon",
+        "handler": "manalinkeh_card_nyxborn_eidolon",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13762,
+        "iid": 6733,
+        "name": "Nyxborn Eidolon Bestowed",
+        "handler": "manalinkeh_card_nyxborn_eidolon",
+        "kind": "card"
+      }
+    },
+    "Nyxborn Rollicker": {
+      "oracle": {
+        "oracle_id": "ebf2974a-963e-425a-8f8c-55f0a36984c3",
+        "name": "Nyxborn Rollicker",
+        "oracle_text": "Bestow {1}{R} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nEnchanted creature gets +1/+1.",
+        "mana_cost": "{R}",
+        "type_line": "Enchantment Creature — Satyr",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Bestow"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/102/nyxborn-rollicker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13763,
+        "iid": 6734,
+        "name": "Nyxborn Rollicker",
+        "handler": "manalinkeh_card_nyxborn_rollicker",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13764,
+        "iid": 6735,
+        "name": "Nyxborn Rollicker Bestowed",
+        "handler": "manalinkeh_card_nyxborn_rollicker",
+        "kind": "card"
+      }
+    },
+    "Nyxborn Shieldmate": {
+      "oracle": {
+        "oracle_id": "a1012f33-7ebd-47c6-b670-1b0dc046fbce",
+        "name": "Nyxborn Shieldmate",
+        "oracle_text": "Bestow {2}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nEnchanted creature gets +1/+2.",
+        "mana_cost": "{W}",
+        "type_line": "Enchantment Creature — Human Soldier",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Bestow"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/21/nyxborn-shieldmate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13765,
+        "iid": 6736,
+        "name": "Nyxborn Shieldmate",
+        "handler": "manalinkeh_card_nyxborn_shieldmate",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13766,
+        "iid": 6737,
+        "name": "Nyxborn Shieldmate Bestowed",
+        "handler": "manalinkeh_card_nyxborn_shieldmate",
+        "kind": "card"
+      }
+    },
+    "Nyxborn Triton": {
+      "oracle": {
+        "oracle_id": "cdd37bbf-09db-4c1f-9947-312de48a0f4c",
+        "name": "Nyxborn Triton",
+        "oracle_text": "Bestow {4}{U} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nEnchanted creature gets +2/+3.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Enchantment Creature — Merfolk",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Bestow"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/46/nyxborn-triton?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13767,
+        "iid": 6738,
+        "name": "Nyxborn Triton",
+        "handler": "manalinkeh_card_nyxborn_triton",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13768,
+        "iid": 6739,
+        "name": "Nyxborn Triton Bestowed",
+        "handler": "manalinkeh_card_nyxborn_triton",
+        "kind": "card"
+      }
+    },
+    "Nyxborn Wolf": {
+      "oracle": {
+        "oracle_id": "3fa11a6a-a760-45db-8341-f83a0f69c17f",
+        "name": "Nyxborn Wolf",
+        "oracle_text": "Bestow {4}{G} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nEnchanted creature gets +3/+1.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment Creature — Wolf",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Bestow"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/131/nyxborn-wolf?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13769,
+        "iid": 6740,
+        "name": "Nyxborn Wolf",
+        "handler": "manalinkeh_card_nyxborn_wolf",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13770,
+        "iid": 6741,
+        "name": "Nyxborn Wolf Bestowed",
+        "handler": "manalinkeh_card_nyxborn_wolf",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Krosan Tusker": {
+      "oracle": {
+        "oracle_id": "82406175-63b3-4972-be8b-db0e70c908cb",
+        "name": "Krosan Tusker",
+        "oracle_text": "Cycling {2}{G} ({2}{G}, Discard this card: Draw a card.)\nWhen you cycle this card, you may search your library for a basic land card, reveal that card, put it into your hand, then shuffle. (Do this before you draw.)",
+        "mana_cost": "{5}{G}{G}",
+        "type_line": "Creature — Boar Beast",
+        "power": "6",
+        "toughness": "5",
+        "keywords": [
+          "Cycling"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/302/krosan-tusker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6196,
+        "iid": 5405,
+        "name": "Krosan Tusker",
+        "handler": "manalinkeh_card_krosan_tusker",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Naturalize": {
+      "oracle": {
+        "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+        "name": "Naturalize",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1096,
+        "iid": 6485,
+        "name": "Naturalize",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Boomerang": {
+      "oracle": {
+        "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+        "name": "Boomerang",
+        "oracle_text": "Return target permanent to its owner's hand.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+      },
+      "registry": {
+        "csvid": 585,
+        "iid": 1233,
+        "name": "Boomerang",
+        "handler": "manalinkeh_card_boomerang",
+        "kind": "card"
+      }
+    },
+    "Negate": {
+      "oracle": {
+        "oracle_id": "3407fe41-fdd3-4119-8f70-4bc4590a379f",
+        "name": "Negate",
+        "oracle_text": "Counter target noncreature spell.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tmt/47/negate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9395,
+        "iid": 6544,
+        "name": "Negate",
+        "handler": "manalinkeh_card_negate",
+        "kind": "card"
+      }
+    },
+    "Essence Scatter": {
+      "oracle": {
+        "oracle_id": "46665089-aa3d-44c3-964d-6638dfbb5782",
+        "name": "Essence Scatter",
+        "oracle_text": "Counter target creature spell.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sos/47/essence-scatter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10416,
+        "iid": 3131,
+        "name": "Essence Scatter",
+        "handler": "manalinkeh_card_remove_soul",
+        "kind": "card"
+      }
+    }
+  }
+}

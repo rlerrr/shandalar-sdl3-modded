@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Llanowar Sentinel",
+  "csvid": 3001,
+  "recipes": [
+    {
+      "family": "entry_interaction_choice_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 3001,
+        "mana_cost": "{2}{G}"
+      },
+      "oracle_text": "When this creature enters, you may pay {1}{G}. If you do, search your library for a card named Llanowar Sentinel, put that card onto the battlefield, then shuffle.",
+      "variants": [
+        "paid_fetch_0",
+        "paid_fetch_1",
+        "no_extra_mana_0",
+        "no_extra_mana_1",
+        "fail_to_find_0",
+        "fail_to_find_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "csvid": 14487,
+  "card": "Stitcher Geralf",
+  "recipes": [
+    {
+      "family": "mill_remaining_entry_and_token_riders",
+      "version": 2,
+      "params": {
+        "csvid": 14487,
+        "mana": [
+          3,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          3,
+          4
+        ]
+      },
+      "oracle_text": "{2}{U}, {T}: Each player mills three cards. Exile up to two creature cards put into graveyards this way. Create an X/X blue Zombie creature token, where X is the total power of the cards exiled this way.",
+      "variants": [
+        "two_0",
+        "two_1",
+        "one_0",
+        "one_1",
+        "zero_0",
+        "zero_1",
+        "foe_only_0",
+        "foe_only_1",
+        "short_0",
+        "short_1",
+        "sick_0",
+        "sick_1",
+        "underpaid_0",
+        "underpaid_1"
+      ]
+    }
+  ]
+}

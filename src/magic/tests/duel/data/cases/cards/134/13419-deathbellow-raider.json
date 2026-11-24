@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Deathbellow Raider",
+  "csvid": 13419,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "mandatory_attack_lifecycle_riders",
+      "version": 2,
+      "oracle_text": "This creature attacks each combat if able.\n{2}{B}: Regenerate this creature.",
+      "params": {
+        "mode": "regenerate",
+        "costs": {
+          "printed": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "regenerate": [
+            2,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "power": 2,
+        "toughness": 3,
+        "keywords": [
+          "Regenerate"
+        ],
+        "quantity": 0
+      },
+      "variants": [
+        "omitted_0",
+        "omitted_1",
+        "tapped_0",
+        "tapped_1",
+        "sick_0",
+        "sick_1",
+        "pacified_0",
+        "pacified_1",
+        "opponent_turn_0",
+        "opponent_turn_1",
+        "paid_fresh_0",
+        "paid_fresh_1",
+        "unfunded_0",
+        "unfunded_1",
+        "replay_0",
+        "replay_1",
+        "regenerate_paid_0",
+        "regenerate_paid_1",
+        "regenerate_short_0",
+        "regenerate_short_1",
+        "regenerate_wrong_color_0",
+        "regenerate_wrong_color_1",
+        "regenerate_proactive_0",
+        "regenerate_proactive_1"
+      ]
+    }
+  ]
+}

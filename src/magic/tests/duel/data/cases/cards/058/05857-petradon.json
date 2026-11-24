@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Petradon",
+  "csvid": 5857,
+  "recipes": [
+    {
+      "family": "entry_interaction_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 5857,
+        "cost": [
+          6,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, exile two target lands.\nWhen this creature leaves the battlefield, return the exiled cards to the battlefield under their owners' control.\n{R}: This creature gets +1/+0 until end of turn.",
+      "variants": [
+        "two_lands_0",
+        "two_lands_1",
+        "only_one_land_0",
+        "only_one_land_1",
+        "no_lands_0",
+        "no_lands_1",
+        "pump_0",
+        "pump_1"
+      ]
+    }
+  ]
+}

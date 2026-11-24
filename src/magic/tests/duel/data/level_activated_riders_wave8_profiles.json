@@ -1,0 +1,564 @@
+{
+  "sources": {
+    "Brimstone Mage": {
+      "oracle": {
+        "oracle_id": "81dcb85e-d61f-430b-9540-5a3bb1378d5a",
+        "name": "Brimstone Mage",
+        "oracle_text": "Level up {3}{R} ({3}{R}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 1-2\n2/3\n{T}: This creature deals 1 damage to any target.\nLEVEL 3+\n2/4\n{T}: This creature deals 3 damage to any target.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Human Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Level Up"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "leveler",
+        "scryfall_uri": "https://scryfall.com/card/roe/137/brimstone-mage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10883,
+        "iid": 1337,
+        "name": "Brimstone Mage",
+        "handler": "manalinkeh_card_brimstone_mage",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/rise_of_the_eldrazi.c",
+        "sha256": "9007b22dd36cb1a5a40a9b0eab59e944c96a0bf93d3cd342c3ae2f76898906ec",
+        "symbol": "card_brimstone_mage",
+        "line": 3483
+      }
+    },
+    "Echo Mage": {
+      "oracle": {
+        "oracle_id": "fb98f6b7-5986-4c5d-98fc-e5c4106f48bf",
+        "name": "Echo Mage",
+        "oracle_text": "Level up {1}{U} ({1}{U}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 2-3\n2/4\n{U}{U}, {T}: Copy target instant or sorcery spell. You may choose new targets for the copy.\nLEVEL 4+\n2/5\n{U}{U}, {T}: Copy target instant or sorcery spell twice. You may choose new targets for the copies.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Level Up"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "leveler",
+        "scryfall_uri": "https://scryfall.com/card/c13/43/echo-mage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10913,
+        "iid": 2883,
+        "name": "Echo Mage",
+        "handler": "manalinkeh_card_echo_mage",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/rise_of_the_eldrazi.c",
+        "sha256": "9007b22dd36cb1a5a40a9b0eab59e944c96a0bf93d3cd342c3ae2f76898906ec",
+        "symbol": "card_echo_mage",
+        "line": 1815
+      }
+    },
+    "Enclave Cryptologist": {
+      "oracle": {
+        "oracle_id": "bc0fc535-357a-4d83-8d64-34337222cc4b",
+        "name": "Enclave Cryptologist",
+        "oracle_text": "Level up {1}{U} ({1}{U}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 1-2\n0/1\n{T}: Draw a card, then discard a card.\nLEVEL 3+\n0/1\n{T}: Draw a card.",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Merfolk Wizard",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Level Up"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "leveler",
+        "scryfall_uri": "https://scryfall.com/card/roe/66/enclave-cryptologist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10922,
+        "iid": 3029,
+        "name": "Enclave Cryptologist",
+        "handler": "manalinkeh_card_enclave_cryptologist",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/rise_of_the_eldrazi.c",
+        "sha256": "9007b22dd36cb1a5a40a9b0eab59e944c96a0bf93d3cd342c3ae2f76898906ec",
+        "symbol": "card_enclave_cryptologist",
+        "line": 1907
+      }
+    },
+    "Guul Draz Assassin": {
+      "oracle": {
+        "oracle_id": "c6fb6971-112b-4c82-a0a3-4acdde970b30",
+        "name": "Guul Draz Assassin",
+        "oracle_text": "Level up {1}{B} ({1}{B}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 2-3\n2/2\n{B}, {T}: Target creature gets -2/-2 until end of turn.\nLEVEL 4+\n4/4\n{B}, {T}: Target creature gets -4/-4 until end of turn.",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Vampire Assassin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Level Up"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "leveler",
+        "scryfall_uri": "https://scryfall.com/card/roe/112/guul-draz-assassin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10945,
+        "iid": 4324,
+        "name": "Guul Draz Assassin",
+        "handler": "manalinkeh_card_guul_draz_assassin",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/rise_of_the_eldrazi.c",
+        "sha256": "9007b22dd36cb1a5a40a9b0eab59e944c96a0bf93d3cd342c3ae2f76898906ec",
+        "symbol": "card_guul_draz_assassin",
+        "line": 2919
+      }
+    },
+    "Kazandu Tuskcaller": {
+      "oracle": {
+        "oracle_id": "ee60ccae-b3ae-47a1-a0bb-2fe51645e95d",
+        "name": "Kazandu Tuskcaller",
+        "oracle_text": "Level up {1}{G} ({1}{G}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 2-5\n1/1\n{T}: Create a 3/3 green Elephant creature token.\nLEVEL 6+\n1/1\n{T}: Create two 3/3 green Elephant creature tokens.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Human Shaman",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Level Up"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "leveler",
+        "scryfall_uri": "https://scryfall.com/card/c21/196/kazandu-tuskcaller?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10966,
+        "iid": 5188,
+        "name": "Kazandu Tuskcaller",
+        "handler": "manalinkeh_card_kazandu_tuskcaller",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/rise_of_the_eldrazi.c",
+        "sha256": "9007b22dd36cb1a5a40a9b0eab59e944c96a0bf93d3cd342c3ae2f76898906ec",
+        "symbol": "card_kazandu_tuskcaller",
+        "line": 4811
+      }
+    },
+    "Null Champion": {
+      "oracle": {
+        "oracle_id": "dfd2846f-574b-475c-bf2a-dc3e87d13476",
+        "name": "Null Champion",
+        "oracle_text": "Level up {3} ({3}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 1-3\n4/2\nLEVEL 4+\n7/3\n{B}: Regenerate this creature.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Zombie Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Level Up",
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "leveler",
+        "scryfall_uri": "https://scryfall.com/card/roe/121/null-champion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11007,
+        "iid": 6709,
+        "name": "Null Champion",
+        "handler": "manalinkeh_card_null_champion",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/rise_of_the_eldrazi.c",
+        "sha256": "9007b22dd36cb1a5a40a9b0eab59e944c96a0bf93d3cd342c3ae2f76898906ec",
+        "symbol": "card_null_champion",
+        "line": 3156
+      }
+    }
+  },
+  "witnesses": {
+    "Elephant": {
+      "oracle": {
+        "oracle_id": "e543bedd-4667-4467-8e8b-161a5a82f7ac",
+        "name": "Elephant",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Elephant",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/ttdm/14/elephant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18729,
+        "iid": 2933,
+        "name": "Elephant",
+        "handler": "manalinkeh_card_elephant_token",
+        "kind": "card"
+      }
+    },
+    "Enormous Baloth": {
+      "oracle": {
+        "oracle_id": "6189cd17-61aa-420a-ba53-5ddaf2bbc2ba",
+        "name": "Enormous Baloth",
+        "oracle_text": "",
+        "mana_cost": "{6}{G}",
+        "type_line": "Creature — Beast",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/180/enormous-baloth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6374,
+        "iid": 3062,
+        "name": "Enormous Baloth",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Reach Through Mists": {
+      "oracle": {
+        "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+        "name": "Reach Through Mists",
+        "oracle_text": "Draw a card.",
+        "mana_cost": "{U}",
+        "type_line": "Instant — Arcane",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/7/reach-through-mists?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7353,
+        "iid": 7720,
+        "name": "Reach Through Mists",
+        "handler": "manalinkeh_card_reach_through_mists",
+        "kind": "card"
+      }
+    },
+    "Swords to Plowshares": {
+      "oracle": {
+        "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+        "name": "Swords to Plowshares",
+        "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+      },
+      "registry": {
+        "csvid": 240,
+        "iid": 9616,
+        "name": "Swords to Plowshares",
+        "handler": "manalinkeh_card_swords_to_plowshares",
+        "kind": "card"
+      }
+    }
+  }
+}

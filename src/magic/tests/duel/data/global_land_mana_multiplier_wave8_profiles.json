@@ -1,0 +1,475 @@
+{
+  "version": 1,
+  "sources": {
+    "Dictate of Karametra": {
+      "oracle": {
+        "oracle_id": "01cb56d7-f859-46fd-b6c9-40d2c4965b69",
+        "name": "Dictate of Karametra",
+        "oracle_text": "Flash\nWhenever a player taps a land for mana, that player adds one mana of any type that land produced.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/121/dictate-of-karametra?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13873,
+        "iid": 2525,
+        "name": "Dictate of Karametra",
+        "handler": "manalinkeh_card_dictate_of_karametra",
+        "kind": "card"
+      }
+    },
+    "Heartbeat of Spring": {
+      "oracle": {
+        "oracle_id": "f15911a5-f597-452e-a015-b115339f28fc",
+        "name": "Heartbeat of Spring",
+        "oracle_text": "Whenever a player taps a land for mana, that player adds one mana of any type that land produced.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/171/heartbeat-of-spring?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1248,
+        "iid": 4440,
+        "name": "Heartbeat of Spring",
+        "handler": "manalinkeh_card_mana_flare",
+        "kind": "card"
+      }
+    },
+    "Mana Flare": {
+      "oracle": {
+        "oracle_id": "97159138-c34b-416e-b079-5c952383a243",
+        "name": "Mana Flare",
+        "oracle_text": "Whenever a player taps a land for mana, that player adds one mana of any type that land produced.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me1/103/mana-flare?utm_source=api"
+      },
+      "registry": {
+        "csvid": 155,
+        "iid": 5846,
+        "name": "Mana Flare",
+        "handler": "manalinkeh_card_mana_flare",
+        "kind": "card"
+      }
+    },
+    "Overabundance": {
+      "oracle": {
+        "oracle_id": "b1ee0503-be92-4a06-89cd-5dfa937930d3",
+        "name": "Overabundance",
+        "oracle_text": "Whenever a player taps a land for mana, that player adds one mana of any type that land produced, and this enchantment deals 1 damage to the player.",
+        "mana_cost": "{1}{R}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inv/259/overabundance?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5054,
+        "iid": 6931,
+        "name": "Overabundance",
+        "handler": "manalinkeh_card_overabundance",
+        "kind": "card"
+      }
+    },
+    "Zhur-Taa Ancient": {
+      "oracle": {
+        "oracle_id": "6543b60c-12b0-4e69-9074-6a2b468c5234",
+        "name": "Zhur-Taa Ancient",
+        "oracle_text": "Whenever a player taps a land for mana, that player adds one mana of any type that land produced.",
+        "mana_cost": "{3}{R}{G}",
+        "type_line": "Creature — Beast",
+        "power": "7",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dgm/119/zhur-taa-ancient?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13250,
+        "iid": 11209,
+        "name": "Zhur-Taa Ancient",
+        "handler": "manalinkeh_card_mana_flare",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Savannah": {
+      "oracle": {
+        "oracle_id": "703243f0-8cb3-420f-958f-5fd4bde30293",
+        "name": "Savannah",
+        "oracle_text": "({T}: Add {G} or {W}.)",
+        "mana_cost": "",
+        "type_line": "Land — Forest Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/311/savannah?utm_source=api"
+      },
+      "registry": {
+        "csvid": 212,
+        "iid": 8,
+        "name": "Savannah",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Wastes": {
+      "oracle": {
+        "oracle_id": "05d24b0c-904a-46b6-b42a-96a4d91a0dd4",
+        "name": "Wastes",
+        "oracle_text": "{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Basic Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/191/wastes?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15719,
+        "iid": 15794,
+        "name": "Wastes",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "City of Traitors": {
+      "oracle": {
+        "oracle_id": "f161111d-9747-47b3-bb10-3c8bded32e21",
+        "name": "City of Traitors",
+        "oracle_text": "When you play another land, sacrifice this land.\n{T}: Add {C}{C}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/237/city-of-traitors?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3471,
+        "iid": 1769,
+        "name": "City of Traitors",
+        "handler": "manalinkeh_card_city_of_traitors",
+        "kind": "card"
+      }
+    },
+    "Mossfire Valley": {
+      "oracle": {
+        "oracle_id": "23bbd091-f6ff-4514-97aa-42c08164b4eb",
+        "name": "Mossfire Valley",
+        "oracle_text": "{1}, {T}: Add {R}{G}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/378/mossfire-valley?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5623,
+        "iid": 6348,
+        "name": "Mossfire Valley",
+        "handler": "manalinkeh_card_mossfire_valley",
+        "kind": "card"
+      }
+    },
+    "Elvish Mystic": {
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13284,
+        "iid": 2982,
+        "name": "Elvish Mystic",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Sol Ring": {
+      "oracle": {
+        "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+        "name": "Sol Ring",
+        "oracle_text": "{T}: Add {C}{C}.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+      },
+      "registry": {
+        "csvid": 230,
+        "iid": 8968,
+        "name": "Sol Ring",
+        "handler": "manalinkeh_card_sol_ring",
+        "kind": "card"
+      }
+    },
+    "Twiddle": {
+      "oracle": {
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "name": "Twiddle",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 256,
+        "iid": 10281,
+        "name": "Twiddle",
+        "handler": "manalinkeh_card_twiddle",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Safe Passage": {
+      "oracle": {
+        "oracle_id": "dfa459a1-b065-4488-88d3-4da388261b52",
+        "name": "Safe Passage",
+        "oracle_text": "Prevent all damage that would be dealt to you and creatures you control this turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/30/safe-passage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10462,
+        "iid": 8169,
+        "name": "Safe Passage",
+        "handler": "manalinkeh_card_safe_passage",
+        "kind": "card"
+      }
+    },
+    "Kalonian Tusker": {
+      "oracle": {
+        "oracle_id": "df7f697e-6886-4897-a024-61ae225c1b34",
+        "name": "Kalonian Tusker",
+        "oracle_text": "",
+        "mana_cost": "{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/182/kalonian-tusker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13307,
+        "iid": 5137,
+        "name": "Kalonian Tusker",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    }
+  }
+}

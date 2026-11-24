@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "card": "Rakdos, the Showstopper",
+  "csvid": 19703,
+  "recipes": [
+    {
+      "family": "coin_flip_upkeep_and_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 19703,
+        "price": [
+          4,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "clauses": [
+          "Flying, trample",
+          "When Rakdos enters, flip a coin for each creature that isn't a Demon, Devil, or Imp. Destroy each creature whose coin comes up tails."
+        ],
+        "modes": [
+          "both_tails",
+          "split",
+          "flying",
+          "trample",
+          "indestructible_tails"
+        ]
+      },
+      "oracle_text": "Flying, trample\nWhen Rakdos enters, flip a coin for each creature that isn't a Demon, Devil, or Imp. Destroy each creature whose coin comes up tails.",
+      "variants": [
+        "both_tails_0",
+        "both_tails_1",
+        "split_0",
+        "split_1",
+        "flying_0",
+        "flying_1",
+        "trample_0",
+        "trample_1",
+        "indestructible_tails_0",
+        "indestructible_tails_1"
+      ]
+    }
+  ]
+}

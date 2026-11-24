@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Nessian Game Warden",
+  "csvid": 13936,
+  "recipes": [
+    {
+      "family": "entry_rider_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 13936,
+        "printed_mana": "{3}{G}{G}",
+        "rules": "When this creature enters, look at the top X cards of your library, where X is the number of Forests you control. You may reveal a creature card from among them and put it into your hand. Put the rest on the bottom of your library in any order."
+      },
+      "oracle_text": "When this creature enters, look at the top X cards of your library, where X is the number of Forests you control. You may reveal a creature card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
+      "variants": [
+        "found_in_prefix_0",
+        "found_in_prefix_1",
+        "creature_outside_prefix_0",
+        "creature_outside_prefix_1"
+      ]
+    }
+  ]
+}

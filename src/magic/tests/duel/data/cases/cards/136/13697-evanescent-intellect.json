@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Evanescent Intellect",
+  "csvid": 13697,
+  "recipes": [
+    {
+      "family": "mill_remaining_costs_and_grants",
+      "version": 2,
+      "params": {
+        "csvid": 13697,
+        "mana": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature has \"{1}{U}, {T}: Target player mills three cards.\"",
+      "variants": [
+        "mill_foe_0",
+        "mill_foe_1",
+        "mill_self_0",
+        "mill_self_1",
+        "foreign_host_0",
+        "foreign_host_1",
+        "short_color_0",
+        "short_color_1",
+        "fresh_host_0",
+        "fresh_host_1",
+        "pending_removed_0",
+        "pending_removed_1",
+        "tapped_host_0",
+        "tapped_host_1"
+      ]
+    }
+  ]
+}

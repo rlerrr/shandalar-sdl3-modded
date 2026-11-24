@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "csvid": 12223,
+  "card": "Lambholt Elder",
+  "recipes": [
+    {
+      "family": "werewolf_triggered_riders",
+      "version": 2,
+      "params": {
+        "model": "elder",
+        "price": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "front": {
+          "name": "Lambholt Elder",
+          "power": 1,
+          "toughness": 2,
+          "color": 8,
+          "keywords": [],
+          "clauses": [
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Silverpelt Werewolf",
+          "power": 4,
+          "toughness": 5,
+          "color": 8,
+          "keywords": [],
+          "clauses": [
+            "Whenever this creature deals combat damage to a player, draw a card.",
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        }
+      },
+      "variants": [
+        "short_cast_0",
+        "short_cast_1",
+        "split_stays_0",
+        "split_stays_1",
+        "replay_0",
+        "replay_1",
+        "front_hit_0",
+        "front_hit_1",
+        "back_hit_0",
+        "back_hit_1",
+        "blocked_0",
+        "blocked_1",
+        "no_hit_0",
+        "no_hit_1"
+      ],
+      "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+    }
+  ]
+}

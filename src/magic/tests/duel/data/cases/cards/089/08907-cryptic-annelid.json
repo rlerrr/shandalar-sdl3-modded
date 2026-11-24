@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Cryptic Annelid",
+  "csvid": 8907,
+  "recipes": [
+    {
+      "family": "library_scry_before_draw",
+      "version": 2,
+      "params": {
+        "csvid": 8907,
+        "printed_cost": "{3}{U}",
+        "choices": [
+          "sequential_0",
+          "sequential_1",
+          "short_0",
+          "short_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, scry 1, then scry 2, then scry 3. (To scry X, look at the top X cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+      "variants": [
+        "sequential_0",
+        "sequential_1",
+        "short_0",
+        "short_1"
+      ]
+    }
+  ]
+}

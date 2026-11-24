@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "csvid": 15699,
+  "card": "Thought Harvester",
+  "recipes": [
+    {
+      "family": "devoid_cast_and_control",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\nFlying\nWhenever you cast a colorless spell, target opponent exiles the top card of their library.",
+      "params": {
+        "effect": "flying_exile",
+        "price": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 4,
+        "fee": null
+      },
+      "variants": [
+        "own_devoid_0",
+        "own_devoid_1",
+        "own_artifact_0",
+        "own_artifact_1",
+        "own_colored_0",
+        "own_colored_1",
+        "enemy_devoid_0",
+        "enemy_devoid_1",
+        "own_repeat_0",
+        "own_repeat_1",
+        "empty_library_0",
+        "empty_library_1",
+        "protected_opponent_0",
+        "protected_opponent_1",
+        "flight_ground_0",
+        "flight_ground_1",
+        "flight_reach_0",
+        "flight_reach_1"
+      ]
+    }
+  ]
+}

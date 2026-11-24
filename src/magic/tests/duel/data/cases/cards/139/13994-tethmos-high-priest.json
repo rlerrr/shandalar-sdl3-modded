@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Tethmos High Priest",
+  "csvid": 13994,
+  "recipes": [
+    {
+      "family": "heroic_target_control_riders",
+      "version": 2,
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, return target creature card with mana value 2 or less from your graveyard to the battlefield.",
+      "params": {
+        "effect": "return",
+        "price": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "power": 2,
+        "toughness": 3
+      },
+      "variants": [
+        "own_0",
+        "opponent_0",
+        "other_target_0",
+        "countered_0",
+        "replay_0",
+        "mv_two_0",
+        "mv_zero_0",
+        "no_target_0",
+        "own_1",
+        "opponent_1",
+        "other_target_1",
+        "countered_1",
+        "replay_1",
+        "mv_two_1",
+        "mv_zero_1",
+        "no_target_1"
+      ]
+    }
+  ]
+}

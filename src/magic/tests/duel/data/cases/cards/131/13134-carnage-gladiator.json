@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 13134,
+  "card": "Carnage Gladiator",
+  "recipes": [
+    {
+      "family": "regeneration_self_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 13134,
+        "printed_cost": "{2}{B}{R}"
+      },
+      "oracle_text": "Whenever a creature blocks, that creature's controller loses 1 life.\n{1}{B}{R}: Regenerate this creature.",
+      "variants": [
+        "regenerate_0",
+        "short_0",
+        "terminate_0",
+        "proactive_0",
+        "blocks_two_0",
+        "blocks_owner_0",
+        "unblocked_0",
+        "regenerate_1",
+        "short_1",
+        "terminate_1",
+        "proactive_1",
+        "blocks_two_1",
+        "blocks_owner_1",
+        "unblocked_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 16534,
+  "card": "Spontaneous Artist",
+  "recipes": [
+    {
+      "family": "entry_rider_energy_and_mana",
+      "version": 2,
+      "params": {
+        "csvid": 16534,
+        "printed_cost": "{3}{R}"
+      },
+      "oracle_text": "When this creature enters, you get {E} (an energy counter).\nPay {E}: Target creature gains haste until end of turn.",
+      "variants": [
+        "self_0",
+        "ally_0",
+        "foe_0",
+        "countered_0",
+        "self_1",
+        "ally_1",
+        "foe_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

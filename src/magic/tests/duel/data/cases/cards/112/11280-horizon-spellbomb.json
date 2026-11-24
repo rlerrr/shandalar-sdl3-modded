@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Horizon Spellbomb",
+  "csvid": 11280,
+  "recipes": [
+    {
+      "family": "spellbomb_death_draw",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "active_effect": "basic_search",
+        "activation_generic": 2,
+        "tap": true,
+        "sacrifice": true,
+        "draw_color": "G"
+      },
+      "oracle_text": "{2}, {T}, Sacrifice this artifact: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.\nWhen this artifact is put into a graveyard from the battlefield, you may pay {G}. If you do, draw a card.",
+      "variants": [
+        "activate_pay_0",
+        "activate_unfunded_0",
+        "activate_wrong_color_0",
+        "destroy_pay_0",
+        "destroy_wrong_color_0",
+        "exile_0",
+        "bounce_0",
+        "cast_then_activate_0",
+        "tapped_0",
+        "foreign_owned_destroy_0",
+        "pending_snapshot_0",
+        "no_basic_0",
+        "activate_pay_1",
+        "activate_unfunded_1",
+        "activate_wrong_color_1",
+        "destroy_pay_1",
+        "destroy_wrong_color_1",
+        "exile_1",
+        "bounce_1",
+        "cast_then_activate_1",
+        "tapped_1",
+        "foreign_owned_destroy_1",
+        "pending_snapshot_1",
+        "no_basic_1",
+        "activate_decline_0",
+        "destroy_decline_0",
+        "search_decline_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Phenax, God of Deception",
+  "csvid": 13780,
+  "recipes": [
+    {
+      "family": "mill_remaining_costs_and_grants",
+      "version": 2,
+      "params": {
+        "csvid": 13780,
+        "mana": [
+          3,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Indestructible\nAs long as your devotion to blue and black is less than seven, Phenax isn't a creature.\nCreatures you control have \"{T}: Target player mills X cards, where X is this creature's toughness.\"",
+      "variants": [
+        "grant_low_0",
+        "grant_low_1",
+        "change_toughness_0",
+        "change_toughness_1",
+        "devotion_threshold_0",
+        "devotion_threshold_1",
+        "opponent_only_0",
+        "opponent_only_1"
+      ]
+    }
+  ]
+}

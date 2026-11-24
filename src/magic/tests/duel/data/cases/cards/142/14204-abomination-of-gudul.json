@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "card": "Abomination of Gudul",
+  "csvid": 14204,
+  "recipes": [
+    {
+      "family": "damage_loot_creatures",
+      "version": 2,
+      "params": {
+        "mode": "morph",
+        "keywords": [
+          "Flying"
+        ],
+        "mana": [
+          3,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "morph": [
+          2,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "power": 3,
+        "toughness": 4,
+        "optional": true,
+        "combat_only": true
+      },
+      "oracle_text": "Flying\nWhenever this creature deals combat damage to a player, you may draw a card. If you do, discard a card.\nMorph {2}{B}{G}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+      "variants": [
+        "connect_0",
+        "blocked_0",
+        "evasion_0",
+        "prevented_0",
+        "noncombat_0",
+        "self_damage_0",
+        "source_blocks_0",
+        "snapshot_0",
+        "cast_short_0",
+        "hidden_hit_0",
+        "hidden_block_0",
+        "morph_hit_0",
+        "morph_short_0",
+        "morph_offturn_0",
+        "connect_1",
+        "blocked_1",
+        "evasion_1",
+        "prevented_1",
+        "noncombat_1",
+        "self_damage_1",
+        "source_blocks_1",
+        "snapshot_1",
+        "cast_short_1",
+        "hidden_hit_1",
+        "hidden_block_1",
+        "morph_hit_1",
+        "morph_short_1",
+        "morph_offturn_1",
+        "discard_drawn_0",
+        "discard_old_0",
+        "decline_0",
+        "decline_empty_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Thoughtcast",
+  "csvid": 1741,
+  "recipes": [
+    {
+      "family": "artifact_affinity",
+      "version": 2,
+      "params": {
+        "role": "draw",
+        "printed": [
+          4,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "draw_count": 2,
+        "flash": false,
+        "power_pump": 0,
+        "dynamic_artifact_size": false
+      },
+      "oracle_text": "Affinity for artifacts (This spell costs {1} less to cast for each artifact you control.)\nDraw two cards.",
+      "variants": [
+        "full_draw_0",
+        "reduced_draw_0",
+        "floor_draw_0",
+        "short_blue_0",
+        "opponent_only_0",
+        "two_draws_0",
+        "last_two_0",
+        "pending_snapshot_0",
+        "full_draw_1",
+        "reduced_draw_1",
+        "floor_draw_1",
+        "short_blue_1",
+        "opponent_only_1",
+        "two_draws_1",
+        "last_two_1",
+        "pending_snapshot_1"
+      ]
+    }
+  ]
+}

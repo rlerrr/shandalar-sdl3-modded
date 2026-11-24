@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Hedron Crab",
+  "csvid": 10563,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "landfall_targets_and_payment",
+      "version": 2,
+      "oracle_text": "Landfall — Whenever a land you control enters, target player mills three cards. (They put the top three cards of their library into their graveyard.)",
+      "params": {
+        "effect": "mill",
+        "mana": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "fee": [],
+        "stats": [
+          0,
+          2
+        ]
+      },
+      "variants": [
+        "own_0",
+        "own_1",
+        "enemy_0",
+        "enemy_1",
+        "offturn_0",
+        "offturn_1",
+        "repeat_0",
+        "repeat_1",
+        "replay_0",
+        "replay_1",
+        "removed_0",
+        "removed_1",
+        "self_target_0",
+        "self_target_1",
+        "short_library_0",
+        "short_library_1",
+        "empty_library_0",
+        "empty_library_1"
+      ]
+    }
+  ]
+}

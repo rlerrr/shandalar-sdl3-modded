@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "csvid": 15991,
+  "card": "Tireless Tracker",
+  "recipes": [
+    {
+      "family": "landfall_tokens_and_mana",
+      "version": 2,
+      "oracle_text": "Landfall — Whenever a land you control enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\nWhenever you sacrifice a Clue, put a +1/+1 counter on this creature.",
+      "params": {
+        "effect": "tracker",
+        "price": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "clauses": [
+          "Landfall — Whenever a land you control enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+          "Whenever you sacrifice a Clue, put a +1/+1 counter on this creature."
+        ]
+      },
+      "variants": [
+        "own_0",
+        "own_1",
+        "opponent_0",
+        "opponent_1",
+        "repeat_0",
+        "repeat_1",
+        "late_source_0",
+        "late_source_1",
+        "spend_clue_0",
+        "spend_clue_1",
+        "short_clue_0",
+        "short_clue_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

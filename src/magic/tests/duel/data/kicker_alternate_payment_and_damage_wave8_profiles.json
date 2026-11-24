@@ -1,0 +1,610 @@
+{
+  "version": 1,
+  "sources": {
+    "Blood Tribute": {
+      "oracle": {
+        "oracle_id": "aa2da79c-b36c-4120-8d7d-f5571e87e45e",
+        "name": "Blood Tribute",
+        "oracle_text": "Kicker—Tap an untapped Vampire you control. (You may tap a Vampire you control in addition to any other costs as you cast this spell.)\nTarget opponent loses half their life, rounded up. If this spell was kicked, you gain life equal to the life lost this way.",
+        "mana_cost": "{4}{B}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c17/100/blood-tribute?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10509,
+        "iid": 1123,
+        "name": "Blood Tribute",
+        "handler": "manalinkeh_card_blood_tribute",
+        "kind": "card"
+      }
+    },
+    "Dralnu's Pet": {
+      "oracle": {
+        "oracle_id": "ee626bd3-c18b-4d26-a9bd-8c23bdc02090",
+        "name": "Dralnu's Pet",
+        "oracle_text": "Kicker—{2}{B}, Discard a creature card. (You may pay {2}{B} and discard a creature card in addition to any other costs as you cast this spell.)\nIf this creature was kicked, it enters with flying and with X +1/+1 counters on it, where X is the discarded card's mana value.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Creature — Shapeshifter",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pls/23/dralnus-pet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5224,
+        "iid": 2713,
+        "name": "Dralnu's Pet",
+        "handler": "manalinkeh_card_dralnus_pet",
+        "kind": "card"
+      }
+    },
+    "Molten Disaster": {
+      "oracle": {
+        "oracle_id": "21390513-1ed0-48f2-a7fa-020da8f803c0",
+        "name": "Molten Disaster",
+        "oracle_text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nIf this spell was kicked, it has split second. (As long as this spell is on the stack, players can't cast spells or activate abilities that aren't mana abilities.)\nMolten Disaster deals X damage to each creature without flying and each player.",
+        "mana_cost": "{X}{R}{R}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c13/117/molten-disaster?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8977,
+        "iid": 6267,
+        "name": "Molten Disaster",
+        "handler": "manalinkeh_card_molten_disaster",
+        "kind": "card"
+      }
+    },
+    "Orim's Thunder": {
+      "oracle": {
+        "oracle_id": "380429d5-82db-449c-b9b9-3e82ab987972",
+        "name": "Orim's Thunder",
+        "oracle_text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nDestroy target artifact or enchantment. If this spell was kicked, it deals damage equal to that permanent's mana value to target creature.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Instant",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/18/orims-thunder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5411,
+        "iid": 6904,
+        "name": "Orim's Thunder",
+        "handler": "manalinkeh_card_orims_thunder",
+        "kind": "card"
+      }
+    },
+    "Unstable Footing": {
+      "oracle": {
+        "oracle_id": "fb901095-2ea4-4b9e-ad5a-2892894dc4c3",
+        "name": "Unstable Footing",
+        "oracle_text": "Kicker {3}{R} (You may pay an additional {3}{R} as you cast this spell.)\nDamage can't be prevented this turn. If this spell was kicked, it deals 5 damage to target player or planeswalker.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/153/unstable-footing?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10699,
+        "iid": 10383,
+        "name": "Unstable Footing",
+        "handler": "manalinkeh_card_unstable_footing",
+        "kind": "card"
+      }
+    },
+    "Urza's Rage": {
+      "oracle": {
+        "oracle_id": "363f8c66-fe0c-44b9-987d-1d160e3f9c54",
+        "name": "Urza's Rage",
+        "oracle_text": "Kicker {8}{R} (You may pay an additional {8}{R} as you cast this spell.)\nThis spell can't be countered.\nUrza's Rage deals 3 damage to any target. If this spell was kicked, instead it deals 10 damage to that permanent or player and the damage can't be prevented.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Instant",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh1/151/urzas-rage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5173,
+        "iid": 10431,
+        "name": "Urza's Rage",
+        "handler": "manalinkeh_card_urzas_rage",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Enormous Baloth": {
+      "oracle": {
+        "oracle_id": "6189cd17-61aa-420a-ba53-5ddaf2bbc2ba",
+        "name": "Enormous Baloth",
+        "oracle_text": "",
+        "mana_cost": "{6}{G}",
+        "type_line": "Creature — Beast",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/180/enormous-baloth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6374,
+        "iid": 3062,
+        "name": "Enormous Baloth",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Icy Manipulator": {
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 119,
+        "iid": 4775,
+        "name": "Icy Manipulator",
+        "handler": "manalinkeh_card_icy_manipulator",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Safe Passage": {
+      "oracle": {
+        "oracle_id": "dfa459a1-b065-4488-88d3-4da388261b52",
+        "name": "Safe Passage",
+        "oracle_text": "Prevent all damage that would be dealt to you and creatures you control this turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/30/safe-passage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10462,
+        "iid": 8169,
+        "name": "Safe Passage",
+        "handler": "manalinkeh_card_safe_passage",
+        "kind": "card"
+      }
+    },
+    "Sanguine Bond": {
+      "oracle": {
+        "oracle_id": "73089a39-a2f6-4aa2-a058-e6551475153d",
+        "name": "Sanguine Bond",
+        "oracle_text": "Whenever you gain life, target opponent loses that much life.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c21/153/sanguine-bond?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10463,
+        "iid": 8226,
+        "name": "Sanguine Bond",
+        "handler": "manalinkeh_card_sanguine_bond",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Vampire Lacerator": {
+      "oracle": {
+        "oracle_id": "dc261758-0982-4b7d-9986-042c03cc8366",
+        "name": "Vampire Lacerator",
+        "oracle_text": "At the beginning of your upkeep, you lose 1 life unless an opponent has 10 or less life.",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Vampire Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/a25/114/vampire-lacerator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10702,
+        "iid": 10456,
+        "name": "Vampire Lacerator",
+        "handler": "manalinkeh_card_vampire_lacerator",
+        "kind": "card"
+      }
+    },
+    "Wall of Fire": {
+      "oracle": {
+        "oracle_id": "f38c8b47-e8e0-4d2f-b1da-d8d986805a48",
+        "name": "Wall of Fire",
+        "oracle_text": "Defender (This creature can't attack.)\n{R}: This creature gets +1/+0 until end of turn.",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/167/wall-of-fire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 270,
+        "iid": 10761,
+        "name": "Wall of Fire",
+        "handler": "manalinkeh_card_furnace_whelp",
+        "kind": "card"
+      }
+    },
+    "Wind Drake": {
+      "oracle": {
+        "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+        "name": "Wind Drake",
+        "oracle_text": "Flying",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/70/wind-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1197,
+        "iid": 10989,
+        "name": "Wind Drake",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

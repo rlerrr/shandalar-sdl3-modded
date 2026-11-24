@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 8160,
+  "card": "Witch-Maw Nephilim",
+  "recipes": [
+    {
+      "family": "attack_trigger_stat_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 8160,
+        "printed_cost": "{G}{W}{U}{B}"
+      },
+      "oracle_text": "Whenever you cast a spell, you may put two +1/+1 counters on this creature.\nWhenever this creature attacks, it gains trample until end of turn if its power is 10 or greater.",
+      "variants": [
+        "take_0",
+        "decline_0",
+        "opponent_cast_0",
+        "threshold_0",
+        "below_0",
+        "take_1",
+        "opponent_cast_1",
+        "threshold_1",
+        "below_1"
+      ]
+    }
+  ]
+}

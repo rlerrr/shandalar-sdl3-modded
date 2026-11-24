@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Knollspine Dragon",
+  "csvid": 9583,
+  "recipes": [
+    {
+      "family": "entry_interaction_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 9583,
+        "printed_mana": "{5}{R}{R}",
+        "rules": "Flying\nWhen this creature enters, you may discard your hand and draw cards equal to the damage dealt to target opponent this turn."
+      },
+      "oracle_text": "Flying\nWhen this creature enters, you may discard your hand and draw cards equal to the damage dealt to target opponent this turn.",
+      "variants": [
+        "damage_draw_0",
+        "damage_draw_1",
+        "decline_after_damage_0",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "card": "Sheoldred, Whispering One",
+  "csvid": 11677,
+  "recipes": [
+    {
+      "family": "graveyard_return_cost_modes",
+      "version": 2,
+      "params": {
+        "model": "sheoldred",
+        "cost": [
+          5,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "destination": "battlefield"
+      },
+      "oracle_text": "Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)\nAt the beginning of your upkeep, return target creature card from your graveyard to the battlefield.\nAt the beginning of each opponent's upkeep, that player sacrifices a creature of their choice.",
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "opponent_grave_0",
+        "shroud_0",
+        "replay_0",
+        "repeat_0",
+        "empty_0",
+        "opponent_upkeep_0",
+        "sacrifice_alt_0",
+        "artifact_only_0",
+        "walk_swamp_0",
+        "walk_dual_0",
+        "walk_open_0",
+        "countered_0",
+        "underpaid_0",
+        "cross_owned_0",
+        "effect_1",
+        "alternate_1",
+        "opponent_grave_1",
+        "shroud_1",
+        "replay_1",
+        "repeat_1",
+        "empty_1",
+        "opponent_upkeep_1",
+        "sacrifice_alt_1",
+        "artifact_only_1",
+        "walk_swamp_1",
+        "walk_dual_1",
+        "walk_open_1",
+        "countered_1",
+        "underpaid_1",
+        "cross_owned_1"
+      ]
+    }
+  ]
+}

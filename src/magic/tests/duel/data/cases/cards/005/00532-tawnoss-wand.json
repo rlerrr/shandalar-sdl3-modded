@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "csvid": 532,
+  "card": "Tawnos's Wand",
+  "recipes": [
+    {
+      "family": "activated_unblockability",
+      "version": 2,
+      "params": {
+        "effect": "targeted",
+        "cast_mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "activation_mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power_limit": 2,
+        "haste": false,
+        "wall_exception": false,
+        "taps": true,
+        "untap_draw_fee": 0
+      },
+      "oracle_text": "{2}, {T}: Target creature with power 2 or less can't be blocked this turn.",
+      "variants": [
+        "effect_0",
+        "effect_1",
+        "baseline_0",
+        "baseline_1",
+        "expiry_0",
+        "expiry_1",
+        "replay_0",
+        "replay_1",
+        "enemy_target_0",
+        "enemy_target_1",
+        "offturn_0",
+        "offturn_1",
+        "target_leaves_pending_0",
+        "target_leaves_pending_1",
+        "source_leaves_pending_0",
+        "source_leaves_pending_1",
+        "cast_0",
+        "cast_1",
+        "cast_short_0",
+        "cast_short_1",
+        "no_creature_0",
+        "no_creature_1",
+        "fee_short_0",
+        "fee_short_1",
+        "cancel_0",
+        "cancel_1",
+        "initial_tapped_0",
+        "initial_tapped_1",
+        "power_boundary_0",
+        "power_boundary_1",
+        "high_only_0",
+        "high_only_1",
+        "power_increased_pending_0",
+        "power_increased_pending_1"
+      ]
+    }
+  ]
+}

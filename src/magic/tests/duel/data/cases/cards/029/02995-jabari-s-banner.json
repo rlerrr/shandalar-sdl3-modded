@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Jabari's Banner",
+  "csvid": 2995,
+  "recipes": [
+    {
+      "family": "combat_flanking_composition",
+      "version": 2,
+      "oracle_text": "{1}, {T}: Target creature gains flanking until end of turn. (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)",
+      "params": {
+        "role": "banner",
+        "printed_mana": "{2}",
+        "intrinsic_flanking": false,
+        "grant_cost": "{1}",
+        "grant_taps_source": true
+      },
+      "variants": [
+        "cast_payment_0",
+        "cast_unaffordable_0",
+        "countered_cast_0",
+        "grant_own_0",
+        "grant_opponent_0",
+        "grant_defender_0",
+        "grant_native_0",
+        "grant_repeat_0",
+        "grant_pending_snapshot_0",
+        "grant_expiry_0",
+        "tapped_0",
+        "insufficient_0",
+        "target_probe_0",
+        "source_removed_0",
+        "cast_payment_1",
+        "cast_unaffordable_1",
+        "countered_cast_1",
+        "grant_own_1",
+        "grant_opponent_1",
+        "grant_defender_1",
+        "grant_native_1",
+        "grant_repeat_1",
+        "grant_pending_snapshot_1",
+        "grant_expiry_1",
+        "tapped_1",
+        "insufficient_1",
+        "target_probe_1",
+        "source_removed_1"
+      ]
+    }
+  ]
+}

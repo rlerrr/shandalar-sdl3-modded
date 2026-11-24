@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Wurmcoil Engine",
+  "csvid": 11413,
+  "recipes": [
+    {
+      "family": "departure_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 11413,
+        "mana_cost": "{6}"
+      },
+      "oracle_text": "Deathtouch, lifelink\nWhen this creature dies, create a 3/3 colorless Phyrexian Wurm artifact creature token with deathtouch and a 3/3 colorless Phyrexian Wurm artifact creature token with lifelink.",
+      "variants": [
+        "source_combat_0",
+        "source_combat_1",
+        "token_combat_0",
+        "token_combat_1",
+        "bounce_0",
+        "bounce_1"
+      ]
+    }
+  ]
+}

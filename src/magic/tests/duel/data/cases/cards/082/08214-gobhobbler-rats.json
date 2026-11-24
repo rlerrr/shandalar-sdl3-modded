@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Gobhobbler Rats",
+  "csvid": 8214,
+  "recipes": [
+    {
+      "family": "regeneration_conditional",
+      "version": 2,
+      "params": {
+        "csvid": 8214,
+        "printed_mana": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "rules": "Hellbent — As long as you have no cards in hand, this creature gets +1/+0 and has \"{B}: Regenerate this creature.\" (The next time it would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)"
+      },
+      "oracle_text": "Hellbent — As long as you have no cards in hand, this creature gets +1/+0 and has \"{B}: Regenerate this creature.\" (The next time it would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "variants": [
+        "empty_hand_0",
+        "empty_hand_1",
+        "one_in_hand_0",
+        "one_in_hand_1",
+        "spent_last_card_0",
+        "spent_last_card_1",
+        "unfunded_0",
+        "unfunded_1"
+      ]
+    }
+  ]
+}

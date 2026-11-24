@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 15000,
+  "card": "Sandsteppe Scavenger",
+  "recipes": [
+    {
+      "family": "entry_interaction_counters",
+      "version": 2,
+      "params": {
+        "csvid": 15000,
+        "printed_cost": "{4}{G}"
+      },
+      "oracle_text": "When this creature enters, bolster 2. (Choose a creature with the least toughness among creatures you control and put two +1/+1 counters on it.)",
+      "variants": [
+        "solo_0",
+        "weak_0",
+        "tie_0",
+        "countered_0",
+        "solo_1",
+        "weak_1",
+        "tie_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

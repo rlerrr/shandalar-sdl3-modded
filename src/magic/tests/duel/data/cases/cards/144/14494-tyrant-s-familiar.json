@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Tyrant's Familiar",
+  "csvid": 14494,
+  "recipes": [
+    {
+      "family": "attack_follow_on_attack_riders",
+      "version": 2,
+      "params": {
+        "csvid": 14494,
+        "mana": [
+          5,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "oracle_text": "Flying, haste\nLieutenant — As long as you control your commander, this creature gets +2/+2 and has \"Whenever this creature attacks, it deals 7 damage to target creature defending player controls.\"",
+      "variants": [
+        "ordinary_attack_0",
+        "ordinary_attack_1",
+        "ordinary_legend_0",
+        "ordinary_legend_1",
+        "ordinary_idle_0",
+        "ordinary_idle_1"
+      ]
+    }
+  ]
+}

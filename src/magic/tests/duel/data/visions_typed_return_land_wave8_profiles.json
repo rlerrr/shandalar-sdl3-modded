@@ -1,0 +1,851 @@
+{
+  "version": 1,
+  "sources": {
+    "Coral Atoll": {
+      "registry": {
+        "csvid": 2683,
+        "iid": 1958,
+        "name": "Coral Atoll",
+        "handler": "manalinkeh_card_coral_atoll",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "3f347ebf-e0d2-4ae0-ad84-df7a460404e0",
+        "name": "Coral Atoll",
+        "oracle_text": "This land enters tapped.\nWhen this land enters, sacrifice it unless you return an untapped Island you control to its owner's hand.\n{T}: Add {C}{U}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/480/coral-atoll?utm_source=api"
+      },
+      "params": {
+        "subtype": "Island",
+        "output": [
+          "C",
+          "U"
+        ],
+        "entry_tapped": true,
+        "return_to": "owner",
+        "sacrifice_on_decline": true
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/visions.c",
+        "symbol": "card_coral_atoll",
+        "line": 434,
+        "sha256": "779d8e9064a0ae79ed619ebb25cd803622224fe040016197a0bd2ded5861f842"
+      }
+    },
+    "Dormant Volcano": {
+      "registry": {
+        "csvid": 2691,
+        "iid": 2652,
+        "name": "Dormant Volcano",
+        "handler": "manalinkeh_card_dormant_volcano",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "38ba1956-5505-4a7a-b6af-e75715b1401f",
+        "name": "Dormant Volcano",
+        "oracle_text": "This land enters tapped.\nWhen this land enters, sacrifice it unless you return an untapped Mountain you control to its owner's hand.\n{T}: Add {C}{R}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cm2/246/dormant-volcano?utm_source=api"
+      },
+      "params": {
+        "subtype": "Mountain",
+        "output": [
+          "C",
+          "R"
+        ],
+        "entry_tapped": true,
+        "return_to": "owner",
+        "sacrifice_on_decline": true
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/visions.c",
+        "symbol": "card_dormant_volcano",
+        "line": 686,
+        "sha256": "779d8e9064a0ae79ed619ebb25cd803622224fe040016197a0bd2ded5861f842"
+      }
+    },
+    "Everglades": {
+      "registry": {
+        "csvid": 2700,
+        "iid": 3162,
+        "name": "Everglades",
+        "handler": "manalinkeh_card_everglades",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "ef3b8b0c-cea7-4bae-934c-9c65fd64245d",
+        "name": "Everglades",
+        "oracle_text": "This land enters tapped.\nWhen this land enters, sacrifice it unless you return an untapped Swamp you control to its owner's hand.\n{T}: Add {C}{B}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c14/294/everglades?utm_source=api"
+      },
+      "params": {
+        "subtype": "Swamp",
+        "output": [
+          "C",
+          "B"
+        ],
+        "entry_tapped": true,
+        "return_to": "owner",
+        "sacrifice_on_decline": true
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/visions.c",
+        "symbol": "card_everglades",
+        "line": 982,
+        "sha256": "779d8e9064a0ae79ed619ebb25cd803622224fe040016197a0bd2ded5861f842"
+      }
+    },
+    "Jungle Basin": {
+      "registry": {
+        "csvid": 2728,
+        "iid": 5102,
+        "name": "Jungle Basin",
+        "handler": "manalinkeh_card_jungle_basin",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "f922f90a-b1a2-4630-9266-40726ca89f74",
+        "name": "Jungle Basin",
+        "oracle_text": "This land enters tapped.\nWhen this land enters, sacrifice it unless you return an untapped Forest you control to its owner's hand.\n{T}: Add {C}{G}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/484/jungle-basin?utm_source=api"
+      },
+      "params": {
+        "subtype": "Forest",
+        "output": [
+          "C",
+          "G"
+        ],
+        "entry_tapped": true,
+        "return_to": "owner",
+        "sacrifice_on_decline": true
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/visions.c",
+        "symbol": "card_jungle_basin",
+        "line": 2026,
+        "sha256": "779d8e9064a0ae79ed619ebb25cd803622224fe040016197a0bd2ded5861f842"
+      }
+    },
+    "Karoo": {
+      "registry": {
+        "csvid": 2730,
+        "iid": 5164,
+        "name": "Karoo",
+        "handler": "manalinkeh_card_karoo",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "d4e875d9-2245-470d-aa2f-1dfe66ce2d15",
+        "name": "Karoo",
+        "oracle_text": "This land enters tapped.\nWhen this land enters, sacrifice it unless you return an untapped Plains you control to its owner's hand.\n{T}: Add {C}{W}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c14/303/karoo?utm_source=api"
+      },
+      "params": {
+        "subtype": "Plains",
+        "output": [
+          "C",
+          "W"
+        ],
+        "entry_tapped": true,
+        "return_to": "owner",
+        "sacrifice_on_decline": true
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/visions.c",
+        "symbol": "card_karoo",
+        "line": 2087,
+        "sha256": "779d8e9064a0ae79ed619ebb25cd803622224fe040016197a0bd2ded5861f842"
+      }
+    }
+  },
+  "witnesses": {
+    "Badlands": {
+      "registry": {
+        "csvid": 9,
+        "iid": 5,
+        "name": "Badlands",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "13ff3222-91cb-4796-a34e-899ed817694c",
+        "name": "Badlands",
+        "oracle_text": "({T}: Add {B} or {R}.)",
+        "mana_cost": "",
+        "type_line": "Land — Swamp Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/291/badlands?utm_source=api"
+      }
+    },
+    "Bayou": {
+      "registry": {
+        "csvid": 12,
+        "iid": 6,
+        "name": "Bayou",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "b76d1ae6-ad1d-4bac-b4c3-2e03e0e84d9b",
+        "name": "Bayou",
+        "oracle_text": "({T}: Add {B} or {G}.)",
+        "mana_cost": "",
+        "type_line": "Land — Swamp Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/293/bayou?utm_source=api"
+      }
+    },
+    "Boomerang": {
+      "registry": {
+        "csvid": 585,
+        "iid": 1233,
+        "name": "Boomerang",
+        "handler": "manalinkeh_card_boomerang",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+        "name": "Boomerang",
+        "oracle_text": "Return target permanent to its owner's hand.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+      }
+    },
+    "Child of Night": {
+      "registry": {
+        "csvid": 10398,
+        "iid": 1694,
+        "name": "Child of Night",
+        "handler": "manalinkeh_card_child_of_night",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "c650a7bc-e350-44a0-a698-d4a233d66156",
+        "name": "Child of Night",
+        "oracle_text": "Lifelink",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Vampire",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Lifelink"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/218/child-of-night?utm_source=api"
+      }
+    },
+    "Forest": {
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      }
+    },
+    "Grizzly Bears": {
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      }
+    },
+    "Island": {
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      }
+    },
+    "Lightning Bolt": {
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      }
+    },
+    "Merfolk Looter": {
+      "registry": {
+        "csvid": 1565,
+        "iid": 6052,
+        "name": "Merfolk Looter",
+        "handler": "manalinkeh_card_merfolk_looter",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "67362406-b1ca-49e2-800d-9050bfe8742a",
+        "name": "Merfolk Looter",
+        "oracle_text": "{T}: Draw a card, then discard a card.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Merfolk Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/afc/86/merfolk-looter?utm_source=api"
+      }
+    },
+    "Mogg Flunkies": {
+      "registry": {
+        "csvid": 3397,
+        "iid": 6245,
+        "name": "Mogg Flunkies",
+        "handler": "manalinkeh_card_mogg_flunkies",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "b92fc9c1-7264-4894-90b8-a193039489c5",
+        "name": "Mogg Flunkies",
+        "oracle_text": "This creature can't attack or block alone.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/a25/143/mogg-flunkies?utm_source=api"
+      }
+    },
+    "Mountain": {
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      }
+    },
+    "Plains": {
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      }
+    },
+    "River Boa": {
+      "registry": {
+        "csvid": 1256,
+        "iid": 8014,
+        "name": "River Boa",
+        "handler": "manalinkeh_card_wall_of_brambles",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "86187aed-77ce-4b2d-aab0-0a8f807a9451",
+        "name": "River Boa",
+        "oracle_text": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)\n{G}: Regenerate this creature.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Snake",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Landwalk",
+          "Regenerate",
+          "Islandwalk"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddm/49/river-boa?utm_source=api"
+      }
+    },
+    "Samite Healer": {
+      "registry": {
+        "csvid": 211,
+        "iid": 8201,
+        "name": "Samite Healer",
+        "handler": "manalinkeh_card_samite_healer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "95a0ca48-d924-47f4-86ed-42c673ee778c",
+        "name": "Samite Healer",
+        "oracle_text": "{T}: Prevent the next 1 damage that would be dealt to any target this turn.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/38/samite-healer?utm_source=api"
+      }
+    },
+    "Savannah": {
+      "registry": {
+        "csvid": 212,
+        "iid": 8,
+        "name": "Savannah",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "703243f0-8cb3-420f-958f-5fd4bde30293",
+        "name": "Savannah",
+        "oracle_text": "({T}: Add {G} or {W}.)",
+        "mana_cost": "",
+        "type_line": "Land — Forest Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/311/savannah?utm_source=api"
+      }
+    },
+    "Snow-Covered Forest": {
+      "registry": {
+        "csvid": 2100,
+        "iid": 11401,
+        "name": "Snow-Covered Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "5f0d3be8-e63e-4ade-ae58-6b0c14f2ce6d",
+        "name": "Snow-Covered Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Snow Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/khm/284/snow-covered-forest?utm_source=api"
+      }
+    },
+    "Snow-Covered Island": {
+      "registry": {
+        "csvid": 2101,
+        "iid": 11400,
+        "name": "Snow-Covered Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "5b2460a5-6ae5-4cad-ba94-1a9e98e6e4c0",
+        "name": "Snow-Covered Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Snow Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/khm/278/snow-covered-island?utm_source=api"
+      }
+    },
+    "Snow-Covered Mountain": {
+      "registry": {
+        "csvid": 2102,
+        "iid": 11402,
+        "name": "Snow-Covered Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "ca9f660b-e07d-4f42-a46e-abd0ca72510c",
+        "name": "Snow-Covered Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Snow Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/khm/282/snow-covered-mountain?utm_source=api"
+      }
+    },
+    "Snow-Covered Plains": {
+      "registry": {
+        "csvid": 2103,
+        "iid": 11403,
+        "name": "Snow-Covered Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "ac8cc74d-e43b-4118-bba0-dfa8b9c04d45",
+        "name": "Snow-Covered Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Snow Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/khm/276/snow-covered-plains?utm_source=api"
+      }
+    },
+    "Snow-Covered Swamp": {
+      "registry": {
+        "csvid": 2104,
+        "iid": 11399,
+        "name": "Snow-Covered Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "d8239a86-7184-4005-ba1e-2dddcd756c47",
+        "name": "Snow-Covered Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Snow Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/khm/280/snow-covered-swamp?utm_source=api"
+      }
+    },
+    "Swamp": {
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      }
+    },
+    "Terra Eternal": {
+      "registry": {
+        "csvid": 10848,
+        "iid": 9815,
+        "name": "Terra Eternal",
+        "handler": "manalinkeh_card_terra_eternal",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "a5ce8125-da02-48b0-83cd-871c934352b0",
+        "name": "Terra Eternal",
+        "oracle_text": "All lands have indestructible.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/22/terra-eternal?utm_source=api"
+      }
+    },
+    "Tundra": {
+      "registry": {
+        "csvid": 254,
+        "iid": 12,
+        "name": "Tundra",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "02418479-9455-417f-a6a1-004356faff37",
+        "name": "Tundra",
+        "oracle_text": "({T}: Add {W} or {U}.)",
+        "mana_cost": "",
+        "type_line": "Land — Plains Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/322/tundra?utm_source=api"
+      }
+    },
+    "Underground Sea": {
+      "registry": {
+        "csvid": 258,
+        "iid": 13,
+        "name": "Underground Sea",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "4b22be3a-8ce1-47d1-b82e-6c3ccfb0548b",
+        "name": "Underground Sea",
+        "oracle_text": "({T}: Add {U} or {B}.)",
+        "mana_cost": "",
+        "type_line": "Land — Island Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/323/underground-sea?utm_source=api"
+      }
+    },
+    "Walking Atlas": {
+      "registry": {
+        "csvid": 10860,
+        "iid": 10746,
+        "name": "Walking Atlas",
+        "handler": "manalinkeh_card_sakura_tribe_scout",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "855a4837-7fc8-4b97-afbd-daa88e322c89",
+        "name": "Walking Atlas",
+        "oracle_text": "{T}: You may put a land card from your hand onto the battlefield.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/131/walking-atlas?utm_source=api"
+      }
+    }
+  },
+  "native_characteristics_only_witnesses": [
+    "Grizzly Bears"
+  ]
+}

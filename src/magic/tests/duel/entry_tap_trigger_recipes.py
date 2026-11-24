@@ -7,6 +7,7 @@ from pathlib import Path
 from library_search_recipes import wave6_exact as exact_pin
 from tap_spell_recipes import matches as target_matches
 from entry_trigger_value_selection_recipes import SelectionLedger
+from defensive_creature_recipes import reviewed_payment
 
 FAMILY='entry_tap_trigger'
 DATA=Path(__file__).parent/'data/entry_tap_trigger_wave8_profiles.json'
@@ -34,7 +35,6 @@ def mechanism(r):
 
 
 def spec(d,r):
-    from recipes import cost_from_oracle
     if d.get('family')!=FAMILY or type(d.get('version')) is not int or d['version']!=2 or not isinstance(d.get('variants'),list) or not d['variants'] or len(set(d['variants']))!=len(d['variants']):raise ValueError('explicit version2 entry tap variants required')
     q=d.get('params');parsed=mechanism(r);profile=pins()['sources'].get(r['name'])
     if not isinstance(q,dict) or set(q)!={'schema','mechanism','presentation'} or type(q['schema']) is not int or q['schema']!=1:raise ValueError('entry tap schema required')
@@ -42,7 +42,15 @@ def spec(d,r):
             or not exact_pin(q['mechanism'],parsed) or not exact_pin(q['presentation'],profile['presentation'])):raise ValueError('whole entry tap Oracle/profile changed')
     if set(q['presentation'])!={'human_optional_trigger','present_ai_twiddle'} or any(type(v) is not bool for v in q['presentation'].values()):raise ValueError('actual typed UI annotations required')
     if q['presentation']['present_ai_twiddle']!=(parsed['effect']=='twiddle'):raise ValueError('twiddle menu presentation must match actual effect')
-    return dict(parsed,family=FAMILY,csvid=profile['csvid'],source_name=r['name'],presentation=copy.deepcopy(q['presentation']),mana=cost_from_oracle(r),power=int(r['power']),toughness=int(r['toughness']))
+    payment_colors=profile.get('hybrid_colors')
+    payment={'payment_colors':payment_colors[:1]} if payment_colors else {}
+    mana,symbols=reviewed_payment(r,payment)
+    model=dict(parsed,family=FAMILY,csvid=profile['csvid'],source_name=r['name'],presentation=copy.deepcopy(q['presentation']),mana=mana,power=int(r['power']),toughness=int(r['toughness']))
+    if symbols:
+        if len(symbols)!=1 or len(payment_colors)!=2 or set(payment_colors)!=set(symbols[0]):
+            raise ValueError('both colors of a single hybrid symbol required')
+        model['alternate_mana'],_=reviewed_payment(r,{'payment_colors':payment_colors[1:]})
+    return model
 
 
 def variants(p):
@@ -57,6 +65,7 @@ def variants(p):
     if p['scope']=='permanent':modes+=['artifact_target','land_target','enchantment_target','artifact_function']
     if p['flash']:modes.append('offturn')
     if p['flying']:modes+=['block_flying','flying_evasion','flying_reach']
+    if 'alternate_mana' in p:modes+=['alternate_payment']
     result=[f'{m}_{owner}' for owner in (0,1) for m in modes]
     if p['presentation']['human_optional_trigger']:result.append('whole_decline_0')
     return result
@@ -110,7 +119,10 @@ def _case(name,csvid,d,p,variant,rows,oracle):
     if p['presentation']['present_ai_twiddle']:actions.append(step('present_ai_dialogs',value=1))
     if mode=='block_flying' and p['flash']:
         actions += [step('begin_attackers'),step('attack',ref=f'creature_{1-owner}',value=1),step('finish_attackers')];w.entities[f'creature_{1-owner}']['tapped']=True
-    def cost(n):return [0]*6 if oracle[n]['mana_cost']=='{0}' else cost_from_oracle(oracle[n])
+    source_cost=p['alternate_mana'] if mode=='alternate_payment' else p['mana']
+    def cost(n):
+        if n==name:return source_cost
+        return [0]*6 if oracle[n]['mana_cost']=='{0}' else cost_from_oracle(oracle[n])
     def funds(player,vector):
         pools[player]=list(vector);actions.extend(step('set_mana',player=player,color=i,value=n) for i,n in enumerate(vector))
     def pay(player,n):
@@ -162,10 +174,14 @@ def _case(name,csvid,d,p,variant,rows,oracle):
             if locks.get(ref,0):locks[ref]-=1
             else:e['tapped']=False
         actions.extend(receipt())
-    pool=list(p['mana'])
+    pool=list(source_cost)
     if mode=='insufficient_mana':pool=[0]*6
     if mode=='wrong_color':
-        c=next(i for i in range(1,6) if pool[i]);pool[1 if c!=1 else 2]+=pool[c];pool[c]=0
+        c=next(i for i in range(1,6) if pool[i])
+        other=1 if c!=1 else 2
+        if 'alternate_mana' in p:
+            other=next(i for i in range(1,6) if not pool[i] and not p['alternate_mana'][i])
+        pool[other]+=pool[c];pool[c]=0
     funds(owner,pool);funds(1-owner,cost('Counterspell') if mode=='countered' else [0]*6);actions.append(step('refresh'));ready=len(actions)
     if mode in ('insufficient_mana','wrong_color'):
         actions.append(step('cast',ref='source',value=0));pending=len(actions);actions.extend(receipt())
@@ -175,7 +191,7 @@ def _case(name,csvid,d,p,variant,rows,oracle):
             actions.append(step('announce_spell',ref='source'));cast('counter',response=True);actions.append(step('resolve_response'));w.move('source','graveyard');w.move('counter','graveyard');actions.extend(receipt())
         else:enter()
     if mode in ('source_bounced','source_departure_lock'):bounce_source()
-    if mode=='bounce_recast':bounce_source();funds(owner,p['mana']);cast('source');enter()
+    if mode=='bounce_recast':bounce_source();funds(owner,source_cost);cast('source');enter()
     if mode=='blink_source':
         funds(owner,cost('Cloudshift'));actions.append(step('choose_target',player=owner,ref='source'));cast('blink');w.move('blink','graveyard');w.entities['source']['tapped']=p['enters_tapped'];effect();actions.append(step('resolve'));actions.append(step('bind_permanent',player=owner,value=csvid,ref='source'));actions.extend(receipt())
     if mode=='source_destroyed':actions.append(step('destroy',ref='source'));w.move('source','graveyard');actions.extend(receipt())

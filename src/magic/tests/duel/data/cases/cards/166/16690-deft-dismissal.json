@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Deft Dismissal",
+  "csvid": 16690,
+  "recipes": [
+    {
+      "family": "divided_damage_spell",
+      "version": 2,
+      "oracle_text": "Deft Dismissal deals 3 damage divided as you choose among one, two, or three target attacking or blocking creatures.",
+      "params": {
+        "damage": 3,
+        "target_cap": 3,
+        "printed_mana": "{3}{W}",
+        "any_number": false,
+        "instant": true,
+        "target_scope": "combat",
+        "hybrid": false
+      },
+      "variants": [
+        "all_to_creature_0",
+        "split_0",
+        "max_distinct_0",
+        "late_bounce_0",
+        "late_hexproof_0",
+        "countered_0",
+        "pending_replay_0",
+        "cancel_first_0",
+        "unfunded_0",
+        "wrong_color_0",
+        "none_eligible_0",
+        "wrong_types_only_0",
+        "attacker_only_0",
+        "blocker_only_0",
+        "combat_idle_negative_0",
+        "late_leave_combat_0",
+        "all_to_creature_1",
+        "split_1",
+        "max_distinct_1",
+        "late_bounce_1",
+        "late_hexproof_1",
+        "countered_1",
+        "pending_replay_1",
+        "cancel_first_1",
+        "unfunded_1",
+        "wrong_color_1",
+        "none_eligible_1",
+        "wrong_types_only_1",
+        "attacker_only_1",
+        "blocker_only_1",
+        "combat_idle_negative_1",
+        "late_leave_combat_1"
+      ]
+    }
+  ]
+}

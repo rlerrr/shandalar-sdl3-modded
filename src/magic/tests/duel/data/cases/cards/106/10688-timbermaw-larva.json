@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "csvid": 10688,
+  "card": "Timbermaw Larva",
+  "recipes": [
+    {
+      "family": "attack_trigger_stat_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 10688,
+        "printed_cost": "{3}{G}"
+      },
+      "oracle_text": "Whenever this creature attacks, it gets +1/+1 until end of turn for each Forest you control.",
+      "variants": [
+        "forest_count_0",
+        "foe_only_0",
+        "land_after_0",
+        "forest_count_1",
+        "foe_only_1",
+        "land_after_1"
+      ]
+    }
+  ]
+}

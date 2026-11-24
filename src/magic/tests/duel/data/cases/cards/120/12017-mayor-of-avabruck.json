@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "csvid": 12017,
+  "card": "Mayor of Avabruck",
+  "recipes": [
+    {
+      "family": "werewolf_triggered_riders",
+      "version": 2,
+      "params": {
+        "model": "mayor",
+        "price": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "front": {
+          "name": "Mayor of Avabruck",
+          "power": 1,
+          "toughness": 1,
+          "color": 8,
+          "keywords": [],
+          "clauses": [
+            "Other Human creatures you control get +1/+1.",
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Howlpack Alpha",
+          "power": 3,
+          "toughness": 3,
+          "color": 8,
+          "keywords": [],
+          "clauses": [
+            "Each other creature you control that's a Werewolf or a Wolf gets +1/+1.",
+            "At the beginning of your end step, create a 2/2 green Wolf creature token.",
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        }
+      },
+      "variants": [
+        "short_cast_0",
+        "short_cast_1",
+        "split_stays_0",
+        "split_stays_1",
+        "replay_0",
+        "replay_1",
+        "buffs_0",
+        "buffs_1",
+        "back_tokens_0",
+        "back_tokens_1",
+        "own_end_again_0",
+        "own_end_again_1",
+        "revert_lords_0",
+        "revert_lords_1"
+      ],
+      "oracle_text": "Other Human creatures you control get +1/+1.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Goblin Dark-Dwellers",
+  "csvid": 15605,
+  "recipes": [
+    {
+      "family": "entry_rider_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 15605,
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nWhen this creature enters, you may cast target instant or sorcery card with mana value 3 or less from your graveyard without paying its mana cost. If that spell would be put into your graveyard, exile it instead.",
+      "variants": [
+        "free_three_0",
+        "free_three_1",
+        "free_targeted_0",
+        "free_targeted_1",
+        "decline_0",
+        "decline_1",
+        "above_limit_0",
+        "above_limit_1",
+        "menace_0",
+        "menace_1"
+      ]
+    }
+  ]
+}

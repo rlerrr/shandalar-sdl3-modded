@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Retreat to Coralhelm",
+  "csvid": 15411,
+  "recipes": [
+    {
+      "family": "landfall_modal_retreats",
+      "version": 2,
+      "params": {
+        "role": "coralhelm",
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Landfall — Whenever a land you control enters, choose one —\n• You may tap or untap target creature.\n• Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "variants": [
+        "opponent_land_0",
+        "opponent_land_1",
+        "before_source_0",
+        "before_source_1",
+        "second_denied_0",
+        "second_denied_1",
+        "replay_0",
+        "replay_1",
+        "tap_foe_0",
+        "tap_foe_1",
+        "untap_own_0",
+        "untap_own_1",
+        "pass_0",
+        "pass_1",
+        "scry_bottom_0",
+        "scry_bottom_1",
+        "scry_keep_0",
+        "scry_keep_1",
+        "scry_empty_0",
+        "scry_empty_1"
+      ]
+    }
+  ]
+}

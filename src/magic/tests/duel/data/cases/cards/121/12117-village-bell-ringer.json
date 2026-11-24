@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Village Bell-Ringer",
+  "csvid": 12117,
+  "recipes": [
+    {
+      "family": "flash_entry_untap_and_temporary_stats",
+      "version": 2,
+      "params": {
+        "csvid": 12117,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, untap all creatures you control.",
+      "variants": [
+        "mass_0",
+        "mass_1",
+        "reuse_mana_0",
+        "reuse_mana_1",
+        "combat_untap_0",
+        "combat_untap_1",
+        "solo_0",
+        "solo_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

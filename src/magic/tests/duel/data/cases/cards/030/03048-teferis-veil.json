@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Teferi's Veil",
+  "csvid": 3048,
+  "recipes": [
+    {
+      "family": "phase_untap_creature",
+      "version": 2,
+      "params": {
+        "mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "mechanism": "veil"
+      },
+      "oracle_text": "Whenever a creature you control attacks, it phases out at end of combat. (While it's phased out, it's treated as though it doesn't exist. It phases in before you untap during your next untap step.)",
+      "variants": [
+        "own_attack_0",
+        "two_attackers_0",
+        "opponent_attack_0",
+        "own_absent_0",
+        "attacker_dies_0",
+        "veil_removed_pending_0",
+        "combat_replay_0",
+        "own_attack_1",
+        "two_attackers_1",
+        "opponent_attack_1",
+        "own_absent_1",
+        "attacker_dies_1",
+        "veil_removed_pending_1",
+        "combat_replay_1"
+      ]
+    }
+  ]
+}

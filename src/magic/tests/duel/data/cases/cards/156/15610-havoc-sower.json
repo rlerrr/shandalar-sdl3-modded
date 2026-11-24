@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "csvid": 15610,
+  "card": "Havoc Sower",
+  "recipes": [
+    {
+      "family": "devoid_colorless_activations",
+      "version": 2,
+      "params": {
+        "price": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          3,
+          3
+        ],
+        "generic": 1,
+        "colorless": 1,
+        "effect": "pump",
+        "delta": [
+          2,
+          1
+        ],
+        "once": false
+      },
+      "oracle_text": "Devoid (This card has no color.)\n{1}{C}: This creature gets +2/+1 until end of turn. ({C} represents colorless mana.)",
+      "variants": [
+        "exact_0",
+        "exact_1",
+        "colored_only_0",
+        "colored_only_1",
+        "short_0",
+        "short_1",
+        "replay_0",
+        "replay_1",
+        "mixed_0",
+        "mixed_1",
+        "cleanup_0",
+        "cleanup_1",
+        "repeat_0",
+        "repeat_1"
+      ]
+    }
+  ]
+}

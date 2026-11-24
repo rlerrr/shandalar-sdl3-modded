@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Reality Acid",
+  "csvid": 8830,
+  "recipes": [
+    {
+      "family": "departure_linked_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 8830
+      },
+      "oracle_text": "Enchant permanent\nVanishing 3 (This Aura enters with three time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhen this Aura leaves the battlefield, enchanted permanent's controller sacrifices it.",
+      "variants": [
+        "bounce_0",
+        "bounce_1",
+        "vanish_0",
+        "vanish_1",
+        "own_target_0",
+        "own_target_1"
+      ]
+    }
+  ]
+}

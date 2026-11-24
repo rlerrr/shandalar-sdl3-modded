@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 12140,
+  "card": "Blood Feud",
+  "recipes": [
+    {
+      "family": "fight_two_target_and_granted",
+      "version": 2,
+      "params": {
+        "csvid": 12140,
+        "printed_cost": "{4}{R}{R}"
+      },
+      "oracle_text": "Target creature fights another target creature. (Each deals damage equal to its power to the other.)",
+      "variants": [
+        "opposed_0",
+        "same_foe_0",
+        "mutual_0",
+        "lose_first_0",
+        "lose_second_0",
+        "prevention_0",
+        "opposed_1",
+        "same_foe_1",
+        "mutual_1",
+        "lose_first_1",
+        "lose_second_1",
+        "prevention_1"
+      ]
+    }
+  ]
+}

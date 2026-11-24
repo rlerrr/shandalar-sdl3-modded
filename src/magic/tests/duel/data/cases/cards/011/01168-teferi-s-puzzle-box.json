@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Teferi's Puzzle Box",
+  "csvid": 1168,
+  "recipes": [
+    {
+      "family": "draw_step_discard_and_hand_size",
+      "version": 2,
+      "params": {
+        "csvid": 1168
+      },
+      "oracle_text": "At the beginning of each player's draw step, that player puts the cards in their hand on the bottom of their library in any order, then draws that many cards.",
+      "variants": [
+        "scope_0",
+        "scope_1",
+        "removed_0",
+        "removed_1",
+        "empty_hand_0",
+        "empty_hand_1",
+        "own_scope_0",
+        "own_scope_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

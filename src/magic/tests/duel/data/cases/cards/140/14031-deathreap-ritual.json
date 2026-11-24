@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Deathreap Ritual",
+  "csvid": 14031,
+  "recipes": [
+    {
+      "family": "each_end_step_history_trigger",
+      "version": 2,
+      "oracle_text": "Morbid — At the beginning of each end step, if a creature died this turn, you may draw a card.",
+      "params": {
+        "role": "draw",
+        "printed_mana": "{2}{B}{G}",
+        "flying": false
+      },
+      "variants": [
+        "cast_payment_0",
+        "cast_unaffordable_0",
+        "cast_wrong_color_0",
+        "cast_countered_0",
+        "no_history_0",
+        "own_history_0",
+        "opponent_history_0",
+        "before_end_0",
+        "removed_before_end_0",
+        "end_snapshot_0",
+        "enemy_death_0",
+        "two_deaths_0",
+        "exile_only_0",
+        "bounce_only_0",
+        "artifact_death_0",
+        "cast_payment_1",
+        "cast_unaffordable_1",
+        "cast_wrong_color_1",
+        "cast_countered_1",
+        "no_history_1",
+        "own_history_1",
+        "opponent_history_1",
+        "before_end_1",
+        "removed_before_end_1",
+        "end_snapshot_1",
+        "enemy_death_1",
+        "two_deaths_1",
+        "exile_only_1",
+        "bounce_only_1",
+        "artifact_death_1",
+        "decline_draw_0",
+        "decline_draw_on_opponent_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Trostani's Summoner",
+  "csvid": 13237,
+  "recipes": [
+    {
+      "family": "entry_follow_on_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 13237,
+        "mana_cost": "{5}{G}{W}"
+      },
+      "oracle_text": "When this creature enters, create a 2/2 white Knight creature token with vigilance, a 3/3 green Centaur creature token, and a 4/4 green Rhino creature token with trample.",
+      "variants": [
+        "combat_0",
+        "combat_1",
+        "rhino_type_0",
+        "rhino_type_1",
+        "source_removed_0",
+        "source_removed_1",
+        "reentry_0",
+        "reentry_1"
+      ]
+    }
+  ]
+}

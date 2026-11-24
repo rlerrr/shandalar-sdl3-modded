@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "White Ward",
+  "csvid": 284,
+  "recipes": [
+    {
+      "family": "ward_color_protection",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "color": "white",
+        "exempt_self": true
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature has protection from white. This effect doesn't remove this Aura.",
+      "variants": [
+        "own_attachment_0",
+        "foreign_attachment_0",
+        "no_creature_0",
+        "unfunded_0",
+        "colored_targeting_0",
+        "same_color_aura_0",
+        "matching_block_denied_0",
+        "other_color_block_0",
+        "colored_combat_damage_0",
+        "cleanup_0",
+        "ward_bounce_recast_0",
+        "host_leaves_0",
+        "pending_replay_0",
+        "host_lost_pending_0",
+        "independent_protection_0",
+        "multicolor_block_denied_0",
+        "own_attachment_1",
+        "foreign_attachment_1",
+        "no_creature_1",
+        "unfunded_1",
+        "colored_targeting_1",
+        "same_color_aura_1",
+        "matching_block_denied_1",
+        "other_color_block_1",
+        "colored_combat_damage_1",
+        "cleanup_1",
+        "ward_bounce_recast_1",
+        "host_leaves_1",
+        "pending_replay_1",
+        "host_lost_pending_1",
+        "independent_protection_1",
+        "multicolor_block_denied_1"
+      ]
+    }
+  ]
+}

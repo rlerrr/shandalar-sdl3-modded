@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Constant Mists",
+  "csvid": 3350,
+  "recipes": [
+    {
+      "family": "combat_wide_fog",
+      "version": 2,
+      "oracle_text": "Buyback—Sacrifice a land. (You may sacrifice a land in addition to any other costs as you cast this spell. If you do, put this card into your hand as it resolves.)\nPrevent all combat damage that would be dealt this turn.",
+      "params": {
+        "model": "land_buyback",
+        "cast_mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "activation_mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "defend_0",
+        "own_attack_0",
+        "no_effect_0",
+        "noncombat_0",
+        "insufficient_0",
+        "wrong_color_0",
+        "pending_snapshot_0",
+        "zero_attackers_0",
+        "after_turn_0",
+        "buyback_0",
+        "pass_buyback_0",
+        "foreign_land_only_0",
+        "defend_1",
+        "own_attack_1",
+        "no_effect_1",
+        "noncombat_1",
+        "insufficient_1",
+        "wrong_color_1",
+        "pending_snapshot_1",
+        "zero_attackers_1",
+        "after_turn_1",
+        "buyback_1",
+        "pass_buyback_1",
+        "foreign_land_only_1"
+      ]
+    }
+  ]
+}

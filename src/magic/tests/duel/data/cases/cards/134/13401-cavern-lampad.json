@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Cavern Lampad",
+  "csvid": 13401,
+  "recipes": [
+    {
+      "family": "bestow_evasion_and_blocking",
+      "version": 2,
+      "params": {
+        "csvid": 13401,
+        "normal": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "bestowed": [
+          5,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "creature": [
+          2,
+          2
+        ],
+        "bonus": [
+          2,
+          2
+        ]
+      },
+      "oracle_text": "Bestow {5}{B} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nIntimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)\nEnchanted creature gets +2/+2 and has intimidate.",
+      "variants": [
+        "regular_wrong_0",
+        "regular_wrong_1",
+        "regular_match_0",
+        "regular_match_1",
+        "bestowed_match_0",
+        "bestowed_match_1",
+        "bestowed_wrong_0",
+        "bestowed_wrong_1",
+        "bestowed_artifact_0",
+        "bestowed_artifact_1",
+        "pending_fallback_0",
+        "pending_fallback_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Mind Maggots",
+  "csvid": 3514,
+  "recipes": [
+    {
+      "family": "entry_interaction_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 3514,
+        "printed_mana": "{3}{B}",
+        "rules": "When this creature enters, discard any number of creature cards. For each card discarded this way, put two +1/+1 counters on this creature."
+      },
+      "oracle_text": "When this creature enters, discard any number of creature cards. For each card discarded this way, put two +1/+1 counters on this creature.",
+      "variants": [
+        "discard_creatures_0",
+        "discard_creatures_1",
+        "decline_0",
+        "decline_1"
+      ]
+    }
+  ]
+}

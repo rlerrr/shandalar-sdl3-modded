@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "csvid": 4012,
+  "card": "Jhoira's Toolbox",
+  "recipes": [
+    {
+      "family": "regeneration_targeted_abilities",
+      "version": 2,
+      "params": {
+        "csvid": 4012,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "activation": "{2}",
+        "tap": false,
+        "stats": [
+          1,
+          1
+        ]
+      },
+      "oracle_text": "{2}: Regenerate target artifact creature.",
+      "variants": [
+        "self_0",
+        "self_1",
+        "own_0",
+        "own_1",
+        "foreign_0",
+        "foreign_1",
+        "wrong_type_0",
+        "wrong_type_1",
+        "not_creature_0",
+        "not_creature_1",
+        "short_0",
+        "short_1",
+        "forbidden_0",
+        "forbidden_1",
+        "proactive_0",
+        "proactive_1"
+      ]
+    }
+  ]
+}

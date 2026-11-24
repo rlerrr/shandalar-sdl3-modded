@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Corpse Augur",
+  "csvid": 15506,
+  "recipes": [
+    {
+      "family": "departure_resources",
+      "version": 2,
+      "params": {
+        "csvid": 15506,
+        "printed_mana": "{3}{B}",
+        "rules": "When this creature dies, you draw X cards and you lose X life, where X is the number of creature cards in target player's graveyard."
+      },
+      "oracle_text": "When this creature dies, you draw X cards and you lose X life, where X is the number of creature cards in target player's graveyard.",
+      "variants": [
+        "own_graveyard_0",
+        "own_graveyard_1",
+        "foe_graveyard_0",
+        "foe_graveyard_1",
+        "empty_foe_0",
+        "empty_foe_1"
+      ]
+    }
+  ]
+}

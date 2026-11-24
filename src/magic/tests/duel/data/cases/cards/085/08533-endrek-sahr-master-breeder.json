@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "card": "Endrek Sahr, Master Breeder",
+  "csvid": 8533,
+  "recipes": [
+    {
+      "family": "cast_creature_riders",
+      "version": 2,
+      "oracle_text": "Whenever you cast a creature spell, create X 1/1 black Thrull creature tokens, where X is that spell's mana value.\nWhen you control seven or more Thrulls, sacrifice Endrek Sahr.",
+      "params": {
+        "effect": "thrull",
+        "price": [
+          4,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fee": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "own_0",
+        "opponent_0",
+        "noncreature_0",
+        "countered_0",
+        "replay_0",
+        "zero_0",
+        "below_threshold_0",
+        "threshold_0",
+        "opposing_thrulls_0",
+        "own_1",
+        "opponent_1",
+        "noncreature_1",
+        "countered_1",
+        "replay_1",
+        "zero_1",
+        "below_threshold_1",
+        "threshold_1",
+        "opposing_thrulls_1"
+      ]
+    }
+  ]
+}

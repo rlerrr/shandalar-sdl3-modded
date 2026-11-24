@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Lifebane Zombie",
+  "csvid": 13308,
+  "recipes": [
+    {
+      "family": "entry_trigger_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 13308,
+        "cost": [
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)\nWhen this creature enters, target opponent reveals their hand. You choose a green or white creature card from it and exile that card.",
+      "variants": [
+        "green_0",
+        "green_1",
+        "white_0",
+        "white_1",
+        "empty_0",
+        "empty_1",
+        "intimidate_0",
+        "intimidate_1"
+      ]
+    }
+  ]
+}

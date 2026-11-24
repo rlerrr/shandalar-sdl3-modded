@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Mistmoon Griffin",
+  "csvid": 3011,
+  "recipes": [
+    {
+      "family": "departure_graveyard_and_return",
+      "version": 2,
+      "params": {
+        "csvid": 3011,
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature dies, exile it, then return the top creature card of your graveyard to the battlefield.",
+      "variants": [
+        "top_creature_0",
+        "top_creature_1",
+        "no_creature_0",
+        "no_creature_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

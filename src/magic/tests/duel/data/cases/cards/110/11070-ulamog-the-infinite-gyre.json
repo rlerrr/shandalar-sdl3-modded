@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Ulamog, the Infinite Gyre",
+  "csvid": 11070,
+  "recipes": [
+    {
+      "family": "attack_trigger_follow_on_annihilator_and_myriad",
+      "version": 2,
+      "params": {
+        "csvid": 11070,
+        "printed_mana": "{11}",
+        "rules": "When you cast this spell, destroy target permanent.\nIndestructible\nAnnihilator 4 (Whenever this creature attacks, defending player sacrifices four permanents of their choice.)\nWhen Ulamog is put into a graveyard from anywhere, its owner shuffles their graveyard into their library."
+      },
+      "oracle_text": "When you cast this spell, destroy target permanent.\nIndestructible\nAnnihilator 4 (Whenever this creature attacks, defending player sacrifices four permanents of their choice.)\nWhen Ulamog is put into a graveyard from anywhere, its owner shuffles their graveyard into their library.",
+      "variants": [
+        "cast_destroy_attack_0",
+        "cast_destroy_attack_1",
+        "indestructible_0",
+        "indestructible_1",
+        "discard_shuffle_0",
+        "discard_shuffle_1",
+        "countered_cast_trigger_0",
+        "countered_cast_trigger_1"
+      ]
+    }
+  ]
+}

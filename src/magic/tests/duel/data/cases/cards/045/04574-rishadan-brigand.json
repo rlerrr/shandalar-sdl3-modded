@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 4574,
+  "card": "Rishadan Brigand",
+  "recipes": [
+    {
+      "family": "entry_follow_on_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 4574,
+        "printed_cost": "{4}{U}",
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, each opponent sacrifices a permanent of their choice unless they pay {3}.\nThis creature can block only creatures with flying.",
+      "variants": [
+        "paid_0",
+        "short_0",
+        "foe_empty_0",
+        "blocking_0",
+        "paid_1",
+        "short_1",
+        "foe_empty_1",
+        "blocking_1"
+      ]
+    }
+  ]
+}

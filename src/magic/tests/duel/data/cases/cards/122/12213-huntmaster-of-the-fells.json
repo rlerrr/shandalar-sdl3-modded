@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "csvid": 12213,
+  "card": "Huntmaster of the Fells",
+  "recipes": [
+    {
+      "family": "werewolf_triggered_riders",
+      "version": 2,
+      "params": {
+        "model": "huntmaster",
+        "price": [
+          2,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "front": {
+          "name": "Huntmaster of the Fells",
+          "power": 2,
+          "toughness": 2,
+          "color": 24,
+          "keywords": [],
+          "clauses": [
+            "Whenever this creature enters or transforms into Huntmaster of the Fells, create a 2/2 green Wolf creature token and you gain 2 life.",
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Ravager of the Fells",
+          "power": 4,
+          "toughness": 4,
+          "color": 24,
+          "keywords": [
+            "Trample"
+          ],
+          "clauses": [
+            "Trample",
+            "Whenever this creature transforms into Ravager of the Fells, it deals 2 damage to target opponent or planeswalker and 2 damage to up to one target creature that player or that planeswalker's controller controls.",
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        }
+      },
+      "variants": [
+        "short_cast_0",
+        "short_cast_1",
+        "split_stays_0",
+        "split_stays_1",
+        "replay_0",
+        "replay_1",
+        "entry_0",
+        "entry_1",
+        "flip_back_pair_0",
+        "flip_back_pair_1",
+        "walker_0",
+        "walker_1",
+        "no_creature_0",
+        "no_creature_1",
+        "decline_creature_0",
+        "decline_creature_1",
+        "trample_0",
+        "trample_1"
+      ],
+      "oracle_text": "Whenever this creature enters or transforms into Huntmaster of the Fells, create a 2/2 green Wolf creature token and you gain 2 life.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+    }
+  ]
+}

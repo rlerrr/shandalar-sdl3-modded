@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Offalsnout",
+  "csvid": 9401,
+  "recipes": [
+    {
+      "family": "flash_remaining_alternate_costs_and_modes",
+      "version": 2,
+      "params": {
+        "csvid": 9401,
+        "mana": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flash\nWhen this creature leaves the battlefield, exile target card from a graveyard.\nEvoke {B} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+      "variants": [
+        "evoke_foe_0",
+        "evoke_foe_1",
+        "evoke_own_0",
+        "evoke_own_1",
+        "normal_stays_0",
+        "normal_stays_1",
+        "normal_death_0",
+        "normal_death_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

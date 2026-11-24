@@ -1,0 +1,818 @@
+{
+  "sources": {
+    "Mistbind Clique": {
+      "oracle": {
+        "oracle_id": "d1946f91-0653-4647-b3de-95d78b9597c4",
+        "name": "Mistbind Clique",
+        "oracle_text": "Flash\nFlying\nChampion a Faerie (When this enters, sacrifice it unless you exile another Faerie you control. When this leaves the battlefield, that card returns to the battlefield.)\nWhen a Faerie is championed with this creature, tap all lands target player controls.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Faerie Wizard",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Champion",
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/75/mistbind-clique?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9213,
+        "iid": 6219,
+        "name": "Mistbind Clique",
+        "handler": "manalinkeh_card_mistbind_clique",
+        "kind": "card"
+      }
+    },
+    "Stunt Double": {
+      "oracle": {
+        "oracle_id": "a7ff1b64-8eab-4309-892c-17a619cd302e",
+        "name": "Stunt Double",
+        "oracle_text": "Flash\nYou may have this creature enter as a copy of any creature on the battlefield.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Shapeshifter",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/101/stunt-double?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16537,
+        "iid": 16623,
+        "name": "Stunt Double",
+        "handler": "manalinkeh_card_clone",
+        "kind": "card"
+      }
+    },
+    "Naru Meha, Master Wizard": {
+      "oracle": {
+        "oracle_id": "562c9c68-e5a7-45ab-b098-5b649d165ff5",
+        "name": "Naru Meha, Master Wizard",
+        "oracle_text": "Flash\nWhen Naru Meha enters, copy target instant or sorcery spell you control. You may choose new targets for the copy.\nOther Wizards you control get +1/+1.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Legendary Creature — Human Wizard",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c21/124/naru-meha-master-wizard?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18471,
+        "iid": 18578,
+        "name": "Naru Meha, Master Wizard",
+        "handler": "manalinkeh_card_naru_meha_master_wizard",
+        "kind": "card"
+      }
+    },
+    "Vendilion Clique": {
+      "oracle": {
+        "oracle_id": "244d4807-0802-41bc-9460-55ac38a28a72",
+        "name": "Vendilion Clique",
+        "oracle_text": "Flash\nFlying\nWhen Vendilion Clique enters, look at target player's hand. You may choose a nonland card from it. If you do, that player reveals the chosen card, puts it on the bottom of their library, then draws a card.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Creature — Faerie Wizard",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/a25/76/vendilion-clique?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9452,
+        "iid": 10513,
+        "name": "Vendilion Clique",
+        "handler": "manalinkeh_card_vendilion_clique",
+        "kind": "card"
+      }
+    },
+    "Nebelgast Herald": {
+      "oracle": {
+        "oracle_id": "cf336e4c-a0d3-43aa-ad23-b98effb2b751",
+        "name": "Nebelgast Herald",
+        "oracle_text": "Flash\nFlying\nWhenever this creature or another Spirit you control enters, tap target creature an opponent controls.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/78/nebelgast-herald?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16161,
+        "iid": 16250,
+        "name": "Nebelgast Herald",
+        "handler": "manalinkeh_card_nebelgast_herald",
+        "kind": "card"
+      }
+    },
+    "Garna, the Bloodflame": {
+      "oracle": {
+        "oracle_id": "97cb993c-90ae-49ff-8ccb-b4fe317a43ef",
+        "name": "Garna, the Bloodflame",
+        "oracle_text": "Flash\nWhen Garna enters, return to your hand all creature cards in your graveyard that were put there from anywhere this turn.\nOther creatures you control have haste.",
+        "mana_cost": "{3}{B}{R}",
+        "type_line": "Legendary Creature — Human Warrior",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmc/151/garna-the-bloodflame?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18411,
+        "iid": 18518,
+        "name": "Garna, the Bloodflame",
+        "handler": "manalinkeh_card_garna_the_bloodflame",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Ashcoat Bear": {
+      "oracle": {
+        "oracle_id": "e6d13c0d-23ed-41f5-a726-f18d4bb44c9a",
+        "name": "Ashcoat Bear",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsp/190/ashcoat-bear?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1663,
+        "iid": 648,
+        "name": "Ashcoat Bear",
+        "handler": "manalinkeh_card_ashcoat_bear",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Goblin Piker": {
+      "oracle": {
+        "oracle_id": "50608184-90d3-43d2-a221-deb186c78323",
+        "name": "Goblin Piker",
+        "oracle_text": "",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m12/141/goblin-piker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10423,
+        "iid": 4027,
+        "name": "Goblin Piker",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Think Twice": {
+      "oracle": {
+        "oracle_id": "fa85c5a2-8e83-4624-a35a-a0bbf17ecbb4",
+        "name": "Think Twice",
+        "oracle_text": "Draw a card.\nFlashback {2}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/787/think-twice?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8702,
+        "iid": 9890,
+        "name": "Think Twice",
+        "handler": "manalinkeh_card_think_twice",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Wall of Denial": {
+      "oracle": {
+        "oracle_id": "9cc092f9-e8f0-40ea-847d-813b70f889db",
+        "name": "Wall of Denial",
+        "oracle_text": "Defender, flying\nShroud (This creature can't be the target of spells or abilities.)",
+        "mana_cost": "{1}{W}{U}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "8",
+        "keywords": [
+          "Flying",
+          "Shroud",
+          "Defender"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/939/wall-of-denial?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10374,
+        "iid": 10757,
+        "name": "Wall of Denial",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Zephyr Sprite": {
+      "oracle": {
+        "oracle_id": "11f77158-0240-4882-94a4-6bd6b3d94bcc",
+        "name": "Zephyr Sprite",
+        "oracle_text": "Flying",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Faerie",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/82/zephyr-sprite?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10490,
+        "iid": 15591,
+        "name": "Zephyr Sprite",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Walking Corpse": {
+      "oracle": {
+        "oracle_id": "fea95888-e16a-4209-9cd4-623f7f4d2f67",
+        "name": "Walking Corpse",
+        "oracle_text": "",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/128/walking-corpse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12124,
+        "iid": 10747,
+        "name": "Walking Corpse",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Spirit of the Hunt": {
+      "oracle": {
+        "oracle_id": "3a81a3a6-4940-4d69-94c1-d431023b275c",
+        "name": "Spirit of the Hunt",
+        "oracle_text": "Flash\nWhen this creature enters, each other creature you control that's a Wolf or a Werewolf gets +0/+3 until end of turn.",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Creature — Wolf Spirit",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/emn/170/spirit-of-the-hunt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16193,
+        "iid": 16281,
+        "name": "Spirit of the Hunt",
+        "handler": "manalinkeh_card_spirit_of_the_hunt",
+        "kind": "card"
+      }
+    },
+    "Ornithopter": {
+      "oracle": {
+        "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+        "name": "Ornithopter",
+        "oracle_text": "Flying",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Thopter",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 514,
+        "iid": 6907,
+        "name": "Ornithopter",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Pyroclasm": {
+      "oracle": {
+        "oracle_id": "e4bcd4ea-e7cd-4471-8f3b-18bb51d3d70c",
+        "name": "Pyroclasm",
+        "oracle_text": "Pyroclasm deals 2 damage to each creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/149/pyroclasm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1121,
+        "iid": 7515,
+        "name": "Pyroclasm",
+        "handler": "manalinkeh_card_pyroclasm",
+        "kind": "card"
+      }
+    },
+    "Suntail Hawk": {
+      "oracle": {
+        "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+        "name": "Suntail Hawk",
+        "oracle_text": "Flying",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/40/suntail-hawk?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1195,
+        "iid": 9548,
+        "name": "Suntail Hawk",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Thought Scour": {
+      "oracle": {
+        "oracle_id": "83101ba8-a569-4827-8c53-9ca0dfcd59a7",
+        "name": "Thought Scour",
+        "oracle_text": "Target player mills two cards.\nDraw a card.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/65/thought-scour?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12276,
+        "iid": 9920,
+        "name": "Thought Scour",
+        "handler": "manalinkeh_card_thought_scour",
+        "kind": "card"
+      }
+    },
+    "Tortured Existence": {
+      "oracle": {
+        "oracle_id": "fa9dfcf7-069c-4441-9ea0-133de47ecada",
+        "name": "Tortured Existence",
+        "oracle_text": "{B}, Discard a creature card: Return target creature card from your graveyard to your hand.",
+        "mana_cost": "{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sth/74/tortured-existence?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3446,
+        "iid": 10103,
+        "name": "Tortured Existence",
+        "handler": "manalinkeh_card_tortured_existence",
+        "kind": "card"
+      }
+    }
+  }
+}

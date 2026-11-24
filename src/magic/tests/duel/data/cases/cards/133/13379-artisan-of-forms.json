@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Artisan of Forms",
+  "csvid": 13379,
+  "recipes": [
+    {
+      "family": "heroic_composition_riders",
+      "version": 2,
+      "params": {
+        "model": "copy",
+        "cost": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, you may have this creature become a copy of target creature, except it has this ability.",
+      "variants": [
+        "own_0",
+        "enemy_0",
+        "other_target_0",
+        "replay_0",
+        "decline_0",
+        "copy_again_0",
+        "own_1",
+        "enemy_1",
+        "other_target_1",
+        "replay_1",
+        "decline_1",
+        "copy_again_1"
+      ]
+    }
+  ]
+}

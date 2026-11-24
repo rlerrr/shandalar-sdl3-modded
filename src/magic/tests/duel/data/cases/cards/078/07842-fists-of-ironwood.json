@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Fists of Ironwood",
+  "csvid": 7842,
+  "recipes": [
+    {
+      "family": "entry_trigger_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 7842,
+        "mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Enchant creature\nWhen this Aura enters, create two 1/1 green Saproling creature tokens.\nEnchanted creature has trample.",
+      "variants": [
+        "trample_0",
+        "trample_1",
+        "foreign_host_0",
+        "foreign_host_1",
+        "removed_0",
+        "removed_1"
+      ]
+    }
+  ]
+}

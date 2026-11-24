@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 9383,
+  "card": "Meadowboon",
+  "recipes": [
+    {
+      "family": "departure_counters_and_search",
+      "version": 2,
+      "params": {
+        "csvid": 9383,
+        "printed_cost": "{2}{W}{W}"
+      },
+      "oracle_text": "When this creature leaves the battlefield, put a +1/+1 counter on each creature target player controls.\nEvoke {3}{W} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+      "variants": [
+        "normal_0",
+        "target_foe_0",
+        "bounce_0",
+        "exile_0",
+        "evoke_0",
+        "evoke_countered_0",
+        "normal_1",
+        "target_foe_1",
+        "bounce_1",
+        "exile_1",
+        "evoke_1",
+        "evoke_countered_1"
+      ]
+    }
+  ]
+}

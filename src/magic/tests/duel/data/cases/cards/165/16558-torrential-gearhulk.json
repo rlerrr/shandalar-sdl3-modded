@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Torrential Gearhulk",
+  "csvid": 16558,
+  "recipes": [
+    {
+      "family": "flash_entry_spell_access_and_protection",
+      "version": 2,
+      "params": {
+        "csvid": 16558,
+        "printed_mana": [
+          4,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "rules": "Flash\nWhen this creature enters, you may cast target instant card from your graveyard without paying its mana cost. If that spell would be put into your graveyard, exile it instead."
+      },
+      "oracle_text": "Flash\nWhen this creature enters, you may cast target instant card from your graveyard without paying its mana cost. If that spell would be put into your graveyard, exile it instead.",
+      "variants": [
+        "free_instant_0",
+        "free_instant_1",
+        "decline_0",
+        "decline_1"
+      ]
+    }
+  ]
+}

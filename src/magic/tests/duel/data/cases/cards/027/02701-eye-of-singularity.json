@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 2701,
+  "card": "Eye of Singularity",
+  "recipes": [
+    {
+      "family": "entry_interaction_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 2701,
+        "printed_cost": "{3}{W}",
+        "keywords": []
+      },
+      "oracle_text": "When this enchantment enters, destroy each permanent with the same name as another permanent, except for basic lands. They can't be regenerated.\nWhenever a permanent other than a basic land enters, destroy all other permanents with that name. They can't be regenerated.",
+      "variants": [
+        "initial_duplicates_0",
+        "later_0",
+        "basic_land_0",
+        "shield_0",
+        "initial_duplicates_1",
+        "later_1",
+        "basic_land_1",
+        "shield_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Citanul Woodreaders",
+  "csvid": 8757,
+  "recipes": [
+    {
+      "family": "kicker_card_flow",
+      "version": 2,
+      "oracle_text": "Kicker {2}{G} (You may pay an additional {2}{G} as you cast this spell.)\nWhen this creature enters, if it was kicked, draw two cards.",
+      "params": {
+        "effect": "draw_two",
+        "base_cost": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "kicker_cost": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "kicker_short_0",
+        "kicker_short_1",
+        "base_short_0",
+        "base_short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Gigapede",
+  "csvid": 6152,
+  "recipes": [
+    {
+      "family": "upkeep_draw_and_discard",
+      "version": 2,
+      "params": {
+        "csvid": 6152,
+        "printed_mana": "{3}{G}{G}",
+        "rules": "Shroud (This creature can't be the target of spells or abilities.)\nAt the beginning of your upkeep, if this card is in your graveyard, you may discard a card. If you do, return this card to your hand."
+      },
+      "oracle_text": "Shroud (This creature can't be the target of spells or abilities.)\nAt the beginning of your upkeep, if this card is in your graveyard, you may discard a card. If you do, return this card to your hand.",
+      "variants": [
+        "shroud_recover_0",
+        "shroud_recover_1",
+        "no_payment_0",
+        "no_payment_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

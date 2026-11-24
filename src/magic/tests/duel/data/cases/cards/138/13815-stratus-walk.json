@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Stratus Walk",
+  "csvid": 13815,
+  "recipes": [
+    {
+      "family": "aura_entry_draw",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "scope": "any",
+        "entry_draw": 1,
+        "attached_effect": "flying_defense_limit"
+      },
+      "oracle_text": "Enchant creature\nWhen this Aura enters, draw a card.\nEnchanted creature has flying. (It can't be blocked except by creatures with flying or reach.)\nEnchanted creature can block only creatures with flying.",
+      "variants": [
+        "entry_0",
+        "last_card_0",
+        "empty_library_0",
+        "insufficient_mana_0",
+        "countered_0",
+        "no_legal_host_0",
+        "target_lost_0",
+        "host_bounced_0",
+        "aura_removed_0",
+        "recast_0",
+        "pending_snapshot_0",
+        "foreign_owned_host_0",
+        "opposing_host_0",
+        "flying_ground_blocker_0",
+        "flying_reach_blocker_0",
+        "defend_ground_0",
+        "defend_flying_0",
+        "entry_1",
+        "last_card_1",
+        "empty_library_1",
+        "insufficient_mana_1",
+        "countered_1",
+        "no_legal_host_1",
+        "target_lost_1",
+        "host_bounced_1",
+        "aura_removed_1",
+        "recast_1",
+        "pending_snapshot_1",
+        "foreign_owned_host_1",
+        "opposing_host_1",
+        "flying_ground_blocker_1",
+        "flying_reach_blocker_1",
+        "defend_ground_1",
+        "defend_flying_1"
+      ]
+    }
+  ]
+}

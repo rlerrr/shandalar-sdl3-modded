@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 13356,
+  "card": "Vastwood Hydra",
+  "recipes": [
+    {
+      "family": "departure_counters_and_search",
+      "version": 2,
+      "params": {
+        "csvid": 13356,
+        "printed_cost": "{X}{G}{G}"
+      },
+      "oracle_text": "This creature enters with X +1/+1 counters on it.\nWhen this creature dies, you may distribute a number of +1/+1 counters equal to the number of +1/+1 counters on this creature among any number of creatures you control.",
+      "variants": [
+        "split_0",
+        "single_0",
+        "decline_0",
+        "bounce_0",
+        "split_1",
+        "single_1",
+        "bounce_1"
+      ]
+    }
+  ]
+}

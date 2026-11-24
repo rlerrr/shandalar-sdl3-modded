@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 5020,
+  "card": "Kangee, Aerie Keeper",
+  "recipes": [
+    {
+      "family": "kicker_variable_and_multikicker",
+      "version": 2,
+      "oracle_text": "Kicker {X}{2} (You may pay an additional {X}{2} as you cast this spell.)\nFlying\nWhen Kangee enters, if it was kicked, put X feather counters on it.\nOther Bird creatures get +1/+1 for each feather counter on Kangee.",
+      "params": {
+        "effect": "birds",
+        "kicker_cost": "{X}{2}",
+        "base_cost": "{2}{W}{U}",
+        "csvid": 5020
+      },
+      "variants": [
+        "declined_0",
+        "paid_0",
+        "once_0",
+        "short_base_0",
+        "countered_0",
+        "replay_0",
+        "declined_1",
+        "paid_1",
+        "once_1",
+        "short_base_1",
+        "countered_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

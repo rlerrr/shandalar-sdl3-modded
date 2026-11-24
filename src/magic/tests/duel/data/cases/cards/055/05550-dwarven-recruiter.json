@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Dwarven Recruiter",
+  "csvid": 5550,
+  "recipes": [
+    {
+      "family": "entry_rider_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 5550,
+        "printed_mana": "{2}{R}",
+        "rules": "When this creature enters, search your library for any number of Dwarf cards, reveal them, then shuffle and put those cards on top in any order."
+      },
+      "oracle_text": "When this creature enters, search your library for any number of Dwarf cards, reveal them, then shuffle and put those cards on top in any order.",
+      "variants": [
+        "one_dwarf_0",
+        "one_dwarf_1",
+        "zero_dwarf_0",
+        "zero_dwarf_1"
+      ]
+    }
+  ]
+}

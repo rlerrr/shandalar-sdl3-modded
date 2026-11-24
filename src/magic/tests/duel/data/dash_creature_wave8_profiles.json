@@ -1,0 +1,258 @@
+{
+  "sources": {
+    "Alesha's Vanguard": {
+      "oracle_id": "be662217-41c2-4caa-89da-ae7f6f817c34",
+      "name": "Alesha's Vanguard",
+      "oracle_text": "Dash {2}{B} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)",
+      "mana_cost": "{3}{B}",
+      "type_line": "Creature — Orc Warrior",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [
+        "Dash"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Mardu Scout": {
+      "oracle_id": "c18ab011-c5e0-4174-b623-d89e4d745ce6",
+      "name": "Mardu Scout",
+      "oracle_text": "Dash {1}{R} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)",
+      "mana_cost": "{R}{R}",
+      "type_line": "Creature — Goblin Scout",
+      "power": "3",
+      "toughness": "1",
+      "keywords": [
+        "Dash"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Kolaghan Skirmisher": {
+      "oracle_id": "ade4ffa5-6609-44eb-8f1a-45e7203d90e3",
+      "name": "Kolaghan Skirmisher",
+      "oracle_text": "Dash {2}{B} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Human Warrior",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Dash"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Screamreach Brawler": {
+      "oracle_id": "ffc84ff4-22eb-4652-9723-2f40d637a427",
+      "name": "Screamreach Brawler",
+      "oracle_text": "Dash {1}{R} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Orc Berserker",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [
+        "Dash"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    }
+  },
+  "witnesses": {
+    "Bazaar Trader": {
+      "oracle_id": "21ad7067-3210-42d6-9009-0784b2834227",
+      "name": "Bazaar Trader",
+      "oracle_text": "{T}: Target player gains control of target artifact, creature, or land you control.",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Goblin",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Cloudshift": {
+      "oracle_id": "6879f5ce-7a1b-4606-bad1-885779b0d456",
+      "name": "Cloudshift",
+      "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Essence Scatter": {
+      "oracle_id": "46665089-aa3d-44c3-964d-6638dfbb5782",
+      "name": "Essence Scatter",
+      "oracle_text": "Counter target creature spell.",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Swamp": {
+      "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    }
+  },
+  "handlers": {
+    "Alesha's Vanguard": "manalinkeh_card_aleshas_vanguard",
+    "Bazaar Trader": "manalinkeh_card_bazaar_trader",
+    "Cloudshift": "manalinkeh_card_cloudshift",
+    "Essence Scatter": "manalinkeh_card_remove_soul",
+    "Forest": "manalinkeh_plain_mana_producer",
+    "Grizzly Bears": "card_dummy",
+    "Hill Giant": "card_dummy",
+    "Island": "manalinkeh_plain_mana_producer",
+    "Kolaghan Skirmisher": "manalinkeh_card_aleshas_vanguard",
+    "Mardu Scout": "manalinkeh_card_mardu_scout",
+    "Mountain": "manalinkeh_plain_mana_producer",
+    "Plains": "manalinkeh_plain_mana_producer",
+    "Screamreach Brawler": "manalinkeh_card_mardu_scout",
+    "Swamp": "manalinkeh_plain_mana_producer"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 3747,
+  "card": "Discordant Dirge",
+  "recipes": [
+    {
+      "family": "upkeep_counters",
+      "version": 2,
+      "params": {
+        "csvid": 3747,
+        "printed_cost": "{3}{B}{B}"
+      },
+      "oracle_text": "At the beginning of your upkeep, you may put a verse counter on this enchantment.\n{B}, Sacrifice this enchantment: Look at target opponent's hand and choose up to X cards from it, where X is the number of verse counters on this enchantment. That player discards those cards.",
+      "variants": [
+        "zero_0",
+        "one_0",
+        "two_0",
+        "decline_0",
+        "zero_1",
+        "one_1",
+        "two_1"
+      ]
+    }
+  ]
+}

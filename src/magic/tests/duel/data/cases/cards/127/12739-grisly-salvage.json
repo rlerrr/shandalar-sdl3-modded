@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Grisly Salvage",
+  "csvid": 12739,
+  "recipes": [
+    {
+      "family": "top_library_selection",
+      "version": 2,
+      "params": {
+        "method": "typed",
+        "window": 5,
+        "cap": 1,
+        "required": false,
+        "eligible": [
+          "Creature",
+          "Land"
+        ],
+        "life_loss": 0,
+        "cost": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "instant": true
+      },
+      "oracle_text": "Reveal the top five cards of your library. You may put a creature or land card from among them into your hand. Put the rest into your graveyard.",
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "empty_0",
+        "short_0",
+        "outside_0",
+        "duplicates_0",
+        "wrong_mana_0",
+        "short_mana_0",
+        "countered_0",
+        "replay_0",
+        "decline_0",
+        "no_match_0",
+        "ineligible_0",
+        "off_turn_0",
+        "effect_1",
+        "alternate_1",
+        "empty_1",
+        "short_1",
+        "outside_1",
+        "duplicates_1",
+        "wrong_mana_1",
+        "short_mana_1",
+        "countered_1",
+        "replay_1",
+        "decline_1",
+        "no_match_1",
+        "ineligible_1",
+        "off_turn_1"
+      ]
+    }
+  ]
+}

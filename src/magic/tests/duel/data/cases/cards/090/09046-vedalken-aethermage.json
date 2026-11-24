@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Vedalken Aethermage",
+  "csvid": 9046,
+  "recipes": [
+    {
+      "family": "flash_entry_battlefield_targeting",
+      "version": 2,
+      "params": {
+        "csvid": 9046,
+        "cost": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          1,
+          2
+        ],
+        "clauses": [
+          "Flash (You may cast this spell any time you could cast an instant.)",
+          "When this creature enters, return target Sliver to its owner's hand.",
+          "Wizardcycling {3} ({3}, Discard this card: Search your library for a Wizard card, reveal it, put it into your hand, then shuffle.)"
+        ],
+        "modes": [
+          "own_sliver",
+          "foe_sliver",
+          "no_sliver",
+          "wizardcycling",
+          "cycle_short"
+        ]
+      },
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, return target Sliver to its owner's hand.\nWizardcycling {3} ({3}, Discard this card: Search your library for a Wizard card, reveal it, put it into your hand, then shuffle.)",
+      "variants": [
+        "own_sliver_0",
+        "own_sliver_1",
+        "foe_sliver_0",
+        "foe_sliver_1",
+        "no_sliver_0",
+        "no_sliver_1",
+        "wizardcycling_0",
+        "wizardcycling_1",
+        "cycle_short_0",
+        "cycle_short_1"
+      ]
+    }
+  ]
+}

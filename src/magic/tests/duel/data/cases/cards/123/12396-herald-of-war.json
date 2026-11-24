@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 12396,
+  "card": "Herald of War",
+  "recipes": [
+    {
+      "family": "attack_trigger_stat_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 12396,
+        "printed_cost": "{3}{W}{W}"
+      },
+      "oracle_text": "Flying\nWhenever this creature attacks, put a +1/+1 counter on it.\nAngel spells and Human spells you cast cost {1} less to cast for each +1/+1 counter on this creature.",
+      "variants": [
+        "flying_counter_0",
+        "own_costs_0",
+        "opponent_cost_0",
+        "two_counters_0",
+        "flying_counter_1",
+        "own_costs_1",
+        "opponent_cost_1",
+        "two_counters_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Vile Consumption",
+  "csvid": 5179,
+  "recipes": [
+    {
+      "family": "upkeep_life_tap",
+      "version": 2,
+      "params": {
+        "mode": "vile",
+        "life": 1,
+        "mana": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "oracle_text": "All creatures have \"At the beginning of your upkeep, sacrifice this creature unless you pay 1 life.\"",
+      "variants": [
+        "pay_0",
+        "decline_0",
+        "opponent_upkeep_0",
+        "countered_0",
+        "wrong_mana_0",
+        "short_0",
+        "snapshot_0",
+        "mixed_0",
+        "paid_attack_0",
+        "locked_life_0",
+        "exact_life_0",
+        "no_creature_0",
+        "pay_1",
+        "decline_1",
+        "opponent_upkeep_1",
+        "countered_1",
+        "wrong_mana_1",
+        "short_1",
+        "snapshot_1",
+        "mixed_1",
+        "paid_attack_1",
+        "locked_life_1",
+        "exact_life_1",
+        "no_creature_1"
+      ]
+    }
+  ]
+}

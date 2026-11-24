@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Aether Meltdown",
+  "csvid": 16271,
+  "recipes": [
+    {
+      "family": "flash_remaining_auras_and_enchantments",
+      "version": 2,
+      "params": {
+        "csvid": 16271,
+        "cost": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "clauses": [
+          "Flash (You may cast this spell any time you could cast an instant.)",
+          "Enchant creature or Vehicle",
+          "When this Aura enters, you get {E}{E} (two energy counters).",
+          "Enchanted creature gets -4/-0."
+        ],
+        "modes": [
+          "creature_energy",
+          "vehicle_energy",
+          "remove_aura",
+          "lost_target"
+        ]
+      },
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nEnchant creature or Vehicle\nWhen this Aura enters, you get {E}{E} (two energy counters).\nEnchanted creature gets -4/-0.",
+      "variants": [
+        "creature_energy_0",
+        "creature_energy_1",
+        "vehicle_energy_0",
+        "vehicle_energy_1",
+        "remove_aura_0",
+        "remove_aura_1",
+        "lost_target_0",
+        "lost_target_1"
+      ]
+    }
+  ]
+}

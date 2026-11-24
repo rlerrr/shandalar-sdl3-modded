@@ -1,0 +1,579 @@
+{
+  "sources": {
+    "Back to Basics": {
+      "csvid": 3701,
+      "handler": "manalinkeh_card_back_to_basics",
+      "oracle": {
+        "oracle_id": "05c2dec2-d2f7-4036-b91f-4fccba10a8bb",
+        "name": "Back to Basics",
+        "oracle_text": "Nonbasic lands don't untap during their controllers' untap steps.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/46/back-to-basics?utm_source=api"
+      }
+    },
+    "Choke": {
+      "csvid": 992,
+      "handler": "manalinkeh_card_choke",
+      "oracle": {
+        "oracle_id": "057fa60b-10b0-4612-be0d-157076c82241",
+        "name": "Choke",
+        "oracle_text": "Islands don't untap during their controllers' untap steps.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/237/choke?utm_source=api"
+      }
+    },
+    "Crackdown": {
+      "csvid": 4438,
+      "handler": "manalinkeh_card_crackdown",
+      "oracle": {
+        "oracle_id": "fa5a9083-e6f7-4f61-9327-a6b96db220c7",
+        "name": "Crackdown",
+        "oracle_text": "Nonwhite creatures with power 3 or greater don't untap during their controllers' untap steps.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/15/crackdown?utm_source=api"
+      }
+    },
+    "Juntu Stakes": {
+      "csvid": 5019,
+      "handler": "manalinkeh_card_juntu_stakes",
+      "oracle": {
+        "oracle_id": "efd73b8a-1caa-4fc8-855a-cad33ea54097",
+        "name": "Juntu Stakes",
+        "oracle_text": "Creatures with power 1 or less don't untap during their controllers' untap steps.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inv/304/juntu-stakes?utm_source=api"
+      }
+    },
+    "Marble Titan": {
+      "csvid": 3199,
+      "handler": "manalinkeh_card_marble_titan",
+      "oracle": {
+        "oracle_id": "62674cfd-f400-44d9-bfff-15bdfbd243fe",
+        "name": "Marble Titan",
+        "oracle_text": "Creatures with power 3 or greater don't untap during their controllers' untap steps.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/26/marble-titan?utm_source=api"
+      }
+    },
+    "Meekstone": {
+      "csvid": 159,
+      "handler": "manalinkeh_card_meekstone",
+      "oracle": {
+        "oracle_id": "5ba73182-30a7-4bad-9cb6-c0feecc2db33",
+        "name": "Meekstone",
+        "oracle_text": "Creatures with power 3 or greater don't untap during their controllers' untap steps.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/7ed/307/meekstone?utm_source=api"
+      }
+    },
+    "Curse of Marit Lage": {
+      "csvid": 1896,
+      "handler": "manalinkeh_card_curse_of_marit_lage",
+      "oracle": {
+        "oracle_id": "6fde4790-4186-4786-aa1a-b6a53bfadc1c",
+        "name": "Curse of Marit Lage",
+        "oracle_text": "When this enchantment enters, tap all Islands.\nIslands don't untap during their controllers' untap steps.",
+        "mana_cost": "{3}{R}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ice/181/curse-of-marit-lage?utm_source=api"
+      }
+    },
+    "Wrath of Marit Lage": {
+      "csvid": 1193,
+      "handler": "manalinkeh_card_wrath_of_marit_lage",
+      "oracle": {
+        "oracle_id": "740cafc6-9521-403a-ab5f-11582bf55af0",
+        "name": "Wrath of Marit Lage",
+        "oracle_text": "When this enchantment enters, tap all red creatures.\nRed creatures don't untap during their controllers' untap steps.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/115/wrath-of-marit-lage?utm_source=api"
+      }
+    }
+  },
+  "witnesses": {
+    "Boomerang": {
+      "csvid": 585,
+      "handler": "manalinkeh_card_boomerang",
+      "oracle": {
+        "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+        "name": "Boomerang",
+        "oracle_text": "Return target permanent to its owner's hand.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+      }
+    },
+    "Boros Reckoner": {
+      "csvid": 12902,
+      "handler": "manalinkeh_card_boros_reckoner",
+      "oracle": {
+        "oracle_id": "5f079a75-899e-467d-b443-3b87ce2fb548",
+        "name": "Boros Reckoner",
+        "oracle_text": "Whenever this creature is dealt damage, it deals that much damage to any target.\n{R/W}: This creature gains first strike until end of turn.",
+        "mana_cost": "{R/W}{R/W}{R/W}",
+        "type_line": "Creature — Minotaur Wizard",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mkc/201/boros-reckoner?utm_source=api"
+      }
+    },
+    "Counterspell": {
+      "csvid": 48,
+      "handler": "manalinkeh_card_counterspell",
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      }
+    },
+    "Darksteel Citadel": {
+      "csvid": 6870,
+      "handler": "manalinkeh_card_darksteel_citadel",
+      "oracle": {
+        "oracle_id": "8dc067bf-f78f-4ac4-b6e7-b305c42cf0bc",
+        "name": "Darksteel Citadel",
+        "oracle_text": "Indestructible\n{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Artifact Land",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c21/285/darksteel-citadel?utm_source=api"
+      }
+    },
+    "Dryad Arbor": {
+      "csvid": 8916,
+      "handler": "manalinkeh_card_dryad_arbor",
+      "oracle": {
+        "oracle_id": "e996cd67-739c-40f4-b276-0042acf26c71",
+        "name": "Dryad Arbor",
+        "oracle_text": "(This land isn't a spell, it's affected by summoning sickness, and it has \"{T}: Add {G}.\")",
+        "mana_cost": "",
+        "type_line": "Land Creature — Forest Dryad",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/273/dryad-arbor?utm_source=api"
+      }
+    },
+    "Forest": {
+      "csvid": 91,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      }
+    },
+    "Goblin Piker": {
+      "csvid": 10423,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "50608184-90d3-43d2-a221-deb186c78323",
+        "name": "Goblin Piker",
+        "oracle_text": "",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m12/141/goblin-piker?utm_source=api"
+      }
+    },
+    "Grizzly Bears": {
+      "csvid": 106,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      }
+    },
+    "Hill Giant": {
+      "csvid": 110,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      }
+    },
+    "Island": {
+      "csvid": 126,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      }
+    },
+    "Juggernaut": {
+      "csvid": 132,
+      "handler": "manalinkeh_card_juggernaut",
+      "oracle": {
+        "oracle_id": "4ac9116f-36bc-4d71-b696-d6ee064e1d58",
+        "name": "Juggernaut",
+        "oracle_text": "This creature attacks each combat if able.\nThis creature can't be blocked by Walls.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature — Juggernaut",
+        "power": "5",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/255/juggernaut?utm_source=api"
+      }
+    },
+    "Ornithopter": {
+      "csvid": 514,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+        "name": "Ornithopter",
+        "oracle_text": "Flying",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Thopter",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+      }
+    },
+    "Raging Goblin": {
+      "csvid": 1122,
+      "handler": "manalinkeh_card_ambush_party",
+      "oracle": {
+        "oracle_id": "30997b43-fc13-41d3-8064-1ccc2cb6fd2b",
+        "name": "Raging Goblin",
+        "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin Berserker",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/oana/43/raging-goblin?utm_source=api"
+      }
+    },
+    "Rancor": {
+      "csvid": 4046,
+      "handler": "manalinkeh_card_rancor",
+      "oracle": {
+        "oracle_id": "9d2d6479-531c-4ce1-b52b-00e36fa63b64",
+        "name": "Rancor",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +2/+0 and has trample.\nWhen this Aura is put into a graveyard from the battlefield, return it to its owner's hand.",
+        "mana_cost": "{G}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/156/rancor?utm_source=api"
+      }
+    },
+    "Serra Angel": {
+      "csvid": 221,
+      "handler": "manalinkeh_card_serra_angel",
+      "oracle": {
+        "oracle_id": "4b7ac066-e5c7-43e6-9e7e-2739b24a905d",
+        "name": "Serra Angel",
+        "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/740/serra-angel?utm_source=api"
+      }
+    },
+    "Sol Ring": {
+      "csvid": 230,
+      "handler": "manalinkeh_card_sol_ring",
+      "oracle": {
+        "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+        "name": "Sol Ring",
+        "oracle_text": "{T}: Add {C}{C}.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+      }
+    },
+    "Tropical Island": {
+      "csvid": 252,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "74b7fe23-5d3a-4092-8d78-7c0eba8f6f73",
+        "name": "Tropical Island",
+        "oracle_text": "({T}: Add {G} or {U}.)",
+        "mana_cost": "",
+        "type_line": "Land — Forest Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/321/tropical-island?utm_source=api"
+      }
+    },
+    "Twiddle": {
+      "csvid": 256,
+      "handler": "manalinkeh_card_twiddle",
+      "oracle": {
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "name": "Twiddle",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+      }
+    },
+    "Wastes": {
+      "csvid": 15719,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "05d24b0c-904a-46b6-b42a-96a4d91a0dd4",
+        "name": "Wastes",
+        "oracle_text": "{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Basic Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/191/wastes?utm_source=api"
+      }
+    }
+  },
+  "static_witnesses": [
+    "Goblin Piker",
+    "Grizzly Bears",
+    "Hill Giant",
+    "Ornithopter"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "card": "Ancestral Vision",
+  "csvid": 8477,
+  "recipes": [
+    {
+      "family": "suspend_paid_countdown",
+      "version": 2,
+      "params": {
+        "csvid": 8477,
+        "duration": 4,
+        "effect": "draw",
+        "suspend": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "normal": null
+      },
+      "oracle_text": "Suspend 4—{U} (Rather than cast this card from your hand, pay {U} and exile it with four time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost.)\nTarget player draws three cards.",
+      "variants": [
+        "parked_0",
+        "parked_1",
+        "countdown_0",
+        "countdown_1",
+        "unfunded_0",
+        "unfunded_1",
+        "replay_0",
+        "replay_1",
+        "removed_0",
+        "removed_1"
+      ]
+    }
+  ]
+}

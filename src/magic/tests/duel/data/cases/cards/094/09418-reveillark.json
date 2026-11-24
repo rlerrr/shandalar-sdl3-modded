@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Reveillark",
+  "csvid": 9418,
+  "recipes": [
+    {
+      "family": "departure_graveyard_and_return",
+      "version": 2,
+      "params": {
+        "csvid": 9418,
+        "cost": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature leaves the battlefield, return up to two target creature cards with power 2 or less from your graveyard to the battlefield.\nEvoke {5}{W} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+      "variants": [
+        "return_two_0",
+        "return_two_1",
+        "only_one_eligible_0",
+        "only_one_eligible_1",
+        "only_one_chosen_0",
+        "only_one_chosen_1",
+        "decline_0",
+        "decline_1",
+        "bounce_0",
+        "bounce_1",
+        "evoke_0",
+        "evoke_1",
+        "normal_with_evoke_mana_0",
+        "normal_with_evoke_mana_1",
+        "foreign_only_0",
+        "foreign_only_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

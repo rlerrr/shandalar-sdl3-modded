@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 16455,
+  "card": "Multiform Wonder",
+  "recipes": [
+    {
+      "family": "entry_rider_energy_and_mana",
+      "version": 2,
+      "params": {
+        "csvid": 16455,
+        "printed_cost": "{5}"
+      },
+      "oracle_text": "When this creature enters, you get {E}{E}{E} (three energy counters).\nPay {E}: This creature gains your choice of flying, vigilance, or lifelink until end of turn.\nPay {E}: This creature gets +2/-2 or -2/+2 until end of turn.",
+      "variants": [
+        "flying_0",
+        "vigilance_0",
+        "lifelink_0",
+        "expiry_0",
+        "power_0",
+        "toughness_0",
+        "countered_0",
+        "flying_1",
+        "vigilance_1",
+        "lifelink_1",
+        "expiry_1",
+        "power_1",
+        "toughness_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

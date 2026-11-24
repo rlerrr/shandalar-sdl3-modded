@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "csvid": 5959,
+  "card": "Hunting Grounds",
+  "recipes": [
+    {
+      "family": "threshold_conditional_entry",
+      "version": 2,
+      "oracle_text": "Threshold — As long as there are seven or more cards in your graveyard, this enchantment has \"Whenever an opponent casts a spell, you may put a creature card from your hand onto the battlefield.\"",
+      "params": {
+        "csvid": 5959,
+        "effect": "opponent_cast",
+        "printed": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "variants": [
+        "six_0",
+        "seven_0",
+        "opponent_only_0",
+        "wrong_color_0",
+        "crossing_0",
+        "replay_0",
+        "six_1",
+        "seven_1",
+        "opponent_only_1",
+        "wrong_color_1",
+        "crossing_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Carnage Tyrant",
+  "csvid": 17366,
+  "recipes": [
+    {
+      "family": "uncounterable_creature_casts",
+      "version": 2,
+      "oracle_text": "This spell can't be countered.\nTrample, hexproof",
+      "params": {
+        "model": "trample_hexproof",
+        "cost": [
+          4,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "protection": [],
+        "trample": true,
+        "flash": false
+      },
+      "variants": [
+        "cast_0",
+        "short_0",
+        "counter_0",
+        "exclude_0",
+        "ordinary_counter_0",
+        "ordinary_exclude_0",
+        "replay_0",
+        "own_spell_0",
+        "foe_spell_0",
+        "own_ability_0",
+        "foe_ability_0",
+        "trample_0",
+        "trample_full_0",
+        "cast_1",
+        "short_1",
+        "counter_1",
+        "exclude_1",
+        "ordinary_counter_1",
+        "ordinary_exclude_1",
+        "replay_1",
+        "own_spell_1",
+        "foe_spell_1",
+        "own_ability_1",
+        "foe_ability_1",
+        "trample_1",
+        "trample_full_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Infinite Reflection",
+  "csvid": 12403,
+  "recipes": [
+    {
+      "family": "remaining_entry_attachments",
+      "version": 2,
+      "params": {
+        "csvid": 12403,
+        "mana_cost": "{5}{U}"
+      },
+      "oracle_text": "Enchant creature\nWhen this Aura enters attached to a creature, each other nontoken creature you control becomes a copy of that creature.\nNontoken creatures you control enter as a copy of enchanted creature.",
+      "variants": [
+        "existing_0",
+        "existing_1",
+        "new_entrant_0",
+        "new_entrant_1",
+        "removed_0",
+        "removed_1"
+      ]
+    }
+  ]
+}

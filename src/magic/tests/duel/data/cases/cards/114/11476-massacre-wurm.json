@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 11476,
+  "card": "Massacre Wurm",
+  "recipes": [
+    {
+      "family": "entry_interaction_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 11476,
+        "printed_cost": "{3}{B}{B}{B}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, creatures your opponents control get -2/-2 until end of turn.\nWhenever a creature an opponent controls dies, that player loses 2 life.",
+      "variants": [
+        "scope_0",
+        "expiry_0",
+        "later_foe_0",
+        "later_own_0",
+        "source_gone_0",
+        "scope_1",
+        "expiry_1",
+        "later_foe_1",
+        "later_own_1",
+        "source_gone_1"
+      ]
+    }
+  ]
+}

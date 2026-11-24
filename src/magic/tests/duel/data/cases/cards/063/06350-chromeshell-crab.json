@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "csvid": 6350,
+  "card": "Chromeshell Crab",
+  "recipes": [
+    {
+      "family": "morph_turn_up_target",
+      "version": 2,
+      "params": {
+        "effect": "exchange",
+        "first_strike": false,
+        "cast_mana": [
+          4,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "flip_mana": [
+          4,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "power": 3,
+        "toughness": 3
+      },
+      "oracle_text": "Morph {4}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, you may exchange control of target creature you control and target creature an opponent controls.",
+      "variants": [
+        "hidden_0",
+        "faceup_0",
+        "hidden_choice_0",
+        "hidden_short_0",
+        "flip_0",
+        "flip_wrong_0",
+        "flip_short_0",
+        "offturn_0",
+        "pending_spell_0",
+        "target_changed_0",
+        "replay_0",
+        "decline_0",
+        "decline_second_0",
+        "no_foe_0",
+        "source_swap_0",
+        "hidden_1",
+        "faceup_1",
+        "hidden_choice_1",
+        "hidden_short_1",
+        "flip_1",
+        "flip_wrong_1",
+        "flip_short_1",
+        "offturn_1",
+        "pending_spell_1",
+        "target_changed_1",
+        "replay_1",
+        "decline_1",
+        "decline_second_1",
+        "no_foe_1",
+        "source_swap_1"
+      ]
+    }
+  ]
+}

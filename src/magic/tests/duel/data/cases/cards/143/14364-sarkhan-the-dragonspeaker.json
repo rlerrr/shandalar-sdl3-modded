@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Sarkhan, the Dragonspeaker",
+  "csvid": 14364,
+  "recipes": [
+    {
+      "family": "draw_step_return_control_and_board",
+      "version": 2,
+      "params": {
+        "csvid": 14364,
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "oracle_text": "+1: Until end of turn, Sarkhan becomes a legendary 4/4 red Dragon creature with flying, indestructible, and haste. (He doesn't lose loyalty while he's not a planeswalker.)\n−3: Sarkhan deals 4 damage to target creature.\n−6: You get an emblem with \"At the beginning of your draw step, draw two additional cards\" and \"At the beginning of your end step, discard your hand.\"",
+      "variants": [
+        "animation_0",
+        "animation_1",
+        "damage_lethal_0",
+        "damage_lethal_1",
+        "damage_marked_0",
+        "damage_marked_1",
+        "emblem_0",
+        "emblem_1"
+      ]
+    }
+  ]
+}

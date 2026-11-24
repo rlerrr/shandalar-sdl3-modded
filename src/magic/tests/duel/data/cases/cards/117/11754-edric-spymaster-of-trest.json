@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Edric, Spymaster of Trest",
+  "csvid": 11754,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "combat_damage_draw",
+      "version": 2,
+      "oracle_text": "Whenever a creature deals combat damage to one of your opponents, its controller may draw a card.",
+      "params": {
+        "mode": "edric",
+        "mana": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "keywords": [],
+        "power": 2,
+        "toughness": 2,
+        "morph": null
+      },
+      "variants": [
+        "hit_0",
+        "hit_1",
+        "prevented_0",
+        "prevented_1",
+        "blocked_0",
+        "blocked_1",
+        "noncombat_0",
+        "noncombat_1",
+        "other_controller_0",
+        "other_controller_1",
+        "source_removed_0",
+        "source_removed_1",
+        "unfunded_0",
+        "unfunded_1",
+        "replay_0",
+        "replay_1",
+        "two_packets_0",
+        "two_packets_1",
+        "two_steps_0",
+        "two_steps_1",
+        "edric_attacks_0",
+        "edric_attacks_1",
+        "decline_0",
+        "partial_packets_0"
+      ]
+    }
+  ]
+}

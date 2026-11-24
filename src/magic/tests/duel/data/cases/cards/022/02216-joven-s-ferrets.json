@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Joven's Ferrets",
+  "csvid": 2216,
+  "recipes": [
+    {
+      "family": "attack_trigger_block_and_target",
+      "version": 2,
+      "params": {
+        "csvid": 2216,
+        "cost": "{G}",
+        "choices": [
+          "blocker_0",
+          "blocker_1",
+          "lethal_0",
+          "lethal_1",
+          "unblocked_0",
+          "unblocked_1"
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks, it gets +0/+2 until end of turn.\nAt end of combat, tap all creatures that blocked this creature this turn. They don't untap during their controller's next untap step.",
+      "variants": [
+        "blocker_0",
+        "blocker_1",
+        "lethal_0",
+        "lethal_1",
+        "unblocked_0",
+        "unblocked_1"
+      ]
+    }
+  ]
+}

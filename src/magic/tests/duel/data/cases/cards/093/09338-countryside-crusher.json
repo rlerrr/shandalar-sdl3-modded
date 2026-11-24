@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Countryside Crusher",
+  "csvid": 9338,
+  "recipes": [
+    {
+      "family": "upkeep_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 9338,
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "oracle_text": "At the beginning of your upkeep, reveal the top card of your library. If it's a land card, put it into your graveyard and repeat this process.\nWhenever a land card is put into your graveyard from anywhere, put a +1/+1 counter on this creature.",
+      "variants": [
+        "repeat_prefix_0",
+        "repeat_prefix_1",
+        "only_lands_0",
+        "only_lands_1",
+        "empty_0",
+        "empty_1",
+        "nonland_first_0",
+        "nonland_first_1",
+        "own_land_destroyed_0",
+        "own_land_destroyed_1",
+        "foe_land_destroyed_0",
+        "foe_land_destroyed_1",
+        "nonland_destroyed_0",
+        "nonland_destroyed_1"
+      ]
+    }
+  ]
+}

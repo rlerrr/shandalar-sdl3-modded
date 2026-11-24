@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "card": "Ashcloud Phoenix",
+  "csvid": 14221,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "morph_turn_up_resources",
+      "version": 2,
+      "oracle_text": "Flying\nWhen this creature dies, return it to the battlefield face down under your control.\nMorph {4}{R}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, it deals 2 damage to each player.",
+      "params": {
+        "mode": "phoenix",
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "morph": [
+          4,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "power": 4,
+        "toughness": 1,
+        "keywords": [
+          "Flying"
+        ],
+        "color": 16
+      },
+      "variants": [
+        "printed_cast_0",
+        "printed_cast_1",
+        "hidden_cast_0",
+        "hidden_cast_1",
+        "hidden_choice_0",
+        "hidden_choice_1",
+        "short_cast_0",
+        "short_cast_1",
+        "paid_reveal_0",
+        "paid_reveal_1",
+        "reveal_short_0",
+        "reveal_short_1",
+        "reveal_offturn_0",
+        "reveal_offturn_1",
+        "reveal_replay_0",
+        "reveal_replay_1",
+        "hidden_countered_0",
+        "hidden_countered_1",
+        "hidden_hit_0",
+        "hidden_hit_1",
+        "prevent_damage_0",
+        "prevent_damage_1",
+        "dies_returns_0",
+        "dies_returns_1",
+        "hidden_death_0",
+        "hidden_death_1",
+        "returns_reveals_0",
+        "returns_reveals_1",
+        "flying_ground_0",
+        "flying_ground_1",
+        "flying_reach_0",
+        "flying_reach_1",
+        "reveal_wrong_color_0",
+        "reveal_wrong_color_1"
+      ]
+    }
+  ]
+}

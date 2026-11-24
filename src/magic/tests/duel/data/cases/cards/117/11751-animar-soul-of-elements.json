@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "card": "Animar, Soul of Elements",
+  "csvid": 11751,
+  "recipes": [
+    {
+      "family": "cast_creature_riders",
+      "version": 2,
+      "oracle_text": "Protection from white and from black\nWhenever you cast a creature spell, put a +1/+1 counter on Animar.\nCreature spells you cast cost {1} less to cast for each +1/+1 counter on Animar.",
+      "params": {
+        "effect": "counter",
+        "price": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "fee": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": [
+          "Protection"
+        ]
+      },
+      "variants": [
+        "own_0",
+        "opponent_0",
+        "noncreature_0",
+        "countered_0",
+        "replay_0",
+        "reduction_0",
+        "colored_floor_0",
+        "protection_0",
+        "own_1",
+        "opponent_1",
+        "noncreature_1",
+        "countered_1",
+        "replay_1",
+        "reduction_1",
+        "colored_floor_1",
+        "protection_1"
+      ]
+    }
+  ]
+}

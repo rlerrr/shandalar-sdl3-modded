@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Ravaging Riftwurm",
+  "csvid": 8999,
+  "recipes": [
+    {
+      "family": "kicker_entry_counters",
+      "version": 2,
+      "oracle_text": "Kicker {4} (You may pay an additional {4} as you cast this spell.)\nVanishing 2 (This creature enters with two time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nIf this creature was kicked, it enters with three additional time counters on it.",
+      "params": {
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "life": 0,
+        "returned_card": null,
+        "counter": "time",
+        "base": 2,
+        "extra": 3,
+        "rider": "vanishing"
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "kicker_short_0",
+        "kicker_short_1",
+        "base_short_0",
+        "base_short_1",
+        "countered_0",
+        "countered_1",
+        "blink_0",
+        "blink_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

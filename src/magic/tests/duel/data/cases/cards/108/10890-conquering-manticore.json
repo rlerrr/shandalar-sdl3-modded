@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Conquering Manticore",
+  "csvid": 10890,
+  "recipes": [
+    {
+      "family": "entry_rider_control",
+      "version": 2,
+      "params": {
+        "csvid": 10890,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, gain control of target creature an opponent controls until end of turn. Untap that creature. It gains haste until end of turn.",
+      "variants": [
+        "borrow_0",
+        "borrow_1",
+        "flying_0",
+        "flying_1",
+        "only_friendly_0",
+        "only_friendly_1"
+      ]
+    }
+  ]
+}

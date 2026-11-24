@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "csvid": 11990,
+  "card": "Instigator Gang",
+  "recipes": [
+    {
+      "family": "werewolf_face_ability_riders",
+      "version": 2,
+      "params": {
+        "effect": "team",
+        "price": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "front": {
+          "name": "Instigator Gang",
+          "power": 2,
+          "toughness": 3,
+          "color": 16,
+          "keywords": [],
+          "clauses": [
+            "Attacking creatures you control get +1/+0.",
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Wildblood Pack",
+          "power": 5,
+          "toughness": 5,
+          "color": 16,
+          "keywords": [
+            "Trample"
+          ],
+          "clauses": [
+            "Trample",
+            "Attacking creatures you control get +3/+0.",
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        }
+      },
+      "variants": [
+        "paid_front_0",
+        "paid_front_1",
+        "front_ready_0",
+        "front_ready_1",
+        "back_ready_0",
+        "back_ready_1",
+        "revert_replay_0",
+        "revert_replay_1",
+        "front_team_0",
+        "front_team_1",
+        "back_team_0",
+        "back_team_1",
+        "foe_attack_0",
+        "foe_attack_1"
+      ],
+      "oracle_text": "Attacking creatures you control get +1/+0.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+    }
+  ]
+}

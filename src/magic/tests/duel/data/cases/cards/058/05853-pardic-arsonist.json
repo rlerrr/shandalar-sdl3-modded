@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "csvid": 5853,
+  "card": "Pardic Arsonist",
+  "recipes": [
+    {
+      "family": "threshold_conditional_entry",
+      "version": 2,
+      "oracle_text": "Threshold — As long as there are seven or more cards in your graveyard, this creature has \"When this creature enters, it deals 3 damage to any target.\"",
+      "params": {
+        "csvid": 5853,
+        "effect": "damage",
+        "printed": [
+          2,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "variants": [
+        "six_0",
+        "seven_0",
+        "opponent_only_0",
+        "wrong_color_0",
+        "crossing_0",
+        "replay_0",
+        "seven_creature_0",
+        "seven_walker_0",
+        "six_1",
+        "seven_1",
+        "opponent_only_1",
+        "wrong_color_1",
+        "crossing_1",
+        "replay_1",
+        "seven_creature_1",
+        "seven_walker_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Seismic Elemental",
+  "csvid": 15211,
+  "recipes": [
+    {
+      "family": "entry_interaction_combat",
+      "version": 2,
+      "params": {
+        "csvid": 15211,
+        "cost": "{3}{R}{R}",
+        "choices": [
+          "ground_0",
+          "ground_1",
+          "flying_0",
+          "flying_1",
+          "leaves_0",
+          "leaves_1",
+          "expire_0",
+          "expire_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, creatures without flying can't block this turn.",
+      "variants": [
+        "ground_0",
+        "ground_1",
+        "flying_0",
+        "flying_1",
+        "leaves_0",
+        "leaves_1",
+        "expire_0",
+        "expire_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Restoration Angel",
+  "csvid": 12448,
+  "recipes": [
+    {
+      "family": "flash_entry_battlefield_targeting",
+      "version": 2,
+      "params": {
+        "csvid": 12448,
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "stats": [
+          3,
+          4
+        ],
+        "clauses": [
+          "Flash",
+          "Flying",
+          "When this creature enters, you may exile target non-Angel creature you control, then return that card to the battlefield under your control."
+        ],
+        "modes": [
+          "blink_reentry",
+          "no_nonangel",
+          "flying",
+          "short"
+        ]
+      },
+      "oracle_text": "Flash\nFlying\nWhen this creature enters, you may exile target non-Angel creature you control, then return that card to the battlefield under your control.",
+      "variants": [
+        "blink_reentry_0",
+        "blink_reentry_1",
+        "no_nonangel_0",
+        "no_nonangel_1",
+        "flying_0",
+        "flying_1",
+        "short_0",
+        "short_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "card": "Gempalm Polluter",
+  "csvid": 6381,
+  "recipes": [
+    {
+      "family": "gempalm_tribal_cycling",
+      "version": 2,
+      "oracle_text": "Cycling {B}{B} ({B}{B}, Discard this card: Draw a card.)\nWhen you cycle this card, you may have target player lose life equal to the number of Zombies on the battlefield.",
+      "params": {
+        "mana": [
+          5,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "cycling_mana": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 4,
+        "toughness": 3,
+        "effect": "life_loss",
+        "tribe": "Zombie",
+        "delta": [
+          0,
+          0
+        ],
+        "keyword": null
+      },
+      "variants": [
+        "effect_0",
+        "off_turn_0",
+        "repeated_0",
+        "pending_replay_0",
+        "cancel_cycle_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "source_cast_0",
+        "source_cast_denied_0",
+        "plain_discard_0",
+        "unrelated_cycle_0",
+        "zero_tribe_0",
+        "changeling_0",
+        "opponent_only_0",
+        "own_only_0",
+        "decline_effect_0",
+        "own_target_0",
+        "count_changes_pending_0",
+        "effect_1",
+        "off_turn_1",
+        "repeated_1",
+        "pending_replay_1",
+        "cancel_cycle_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "source_cast_1",
+        "source_cast_denied_1",
+        "plain_discard_1",
+        "unrelated_cycle_1",
+        "zero_tribe_1",
+        "changeling_1",
+        "opponent_only_1",
+        "own_only_1",
+        "decline_effect_1",
+        "own_target_1",
+        "count_changes_pending_1"
+      ]
+    }
+  ]
+}

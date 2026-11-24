@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "csvid": 5271,
+  "card": "Orim's Chant",
+  "recipes": [
+    {
+      "family": "kicker_combat_and_restrictions",
+      "version": 2,
+      "oracle_text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nTarget player can't cast spells this turn. If this spell was kicked, creatures can't attack this turn.",
+      "params": {
+        "effect": 5271,
+        "cast_price": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "fee": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "stats": null
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "base_only_0",
+        "base_only_1",
+        "wrong_kicker_color_0",
+        "wrong_kicker_color_1",
+        "countered_paid_0",
+        "countered_paid_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

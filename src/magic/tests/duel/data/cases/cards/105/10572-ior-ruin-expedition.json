@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Ior Ruin Expedition",
+  "csvid": 10572,
+  "recipes": [
+    {
+      "family": "landfall_quest_expedition",
+      "version": 2,
+      "params": {
+        "schema": 8,
+        "quest_cost": 3,
+        "effect": {
+          "kind": "draw",
+          "quantity": 2
+        }
+      },
+      "oracle_text": "Landfall — Whenever a land you control enters, you may put a quest counter on this enchantment.\nRemove three quest counters from this enchantment and sacrifice it: Draw two cards.",
+      "variants": [
+        "cast_0",
+        "unfunded_0",
+        "threshold_0",
+        "activate_0",
+        "extra_counter_0",
+        "pending_replay_0",
+        "opponent_land_0",
+        "removed_source_0",
+        "cleanup_0",
+        "offturn_0",
+        "cast_1",
+        "unfunded_1",
+        "threshold_1",
+        "activate_1",
+        "extra_counter_1",
+        "pending_replay_1",
+        "opponent_land_1",
+        "removed_source_1",
+        "cleanup_1",
+        "offturn_1",
+        "decline_0",
+        "decline_then_pay_0"
+      ]
+    }
+  ]
+}

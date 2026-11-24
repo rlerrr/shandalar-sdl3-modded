@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "csvid": 12107,
+  "card": "Ulvenwald Mystics",
+  "recipes": [
+    {
+      "family": "werewolf_face_ability_riders",
+      "version": 2,
+      "params": {
+        "effect": "regen",
+        "price": [
+          2,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "front": {
+          "name": "Ulvenwald Mystics",
+          "power": 3,
+          "toughness": 3,
+          "color": 8,
+          "keywords": [],
+          "clauses": [
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Ulvenwald Primordials",
+          "power": 5,
+          "toughness": 5,
+          "color": 8,
+          "keywords": [],
+          "clauses": [
+            "{G}: Regenerate this creature.",
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        }
+      },
+      "variants": [
+        "paid_front_0",
+        "paid_front_1",
+        "front_ready_0",
+        "front_ready_1",
+        "back_ready_0",
+        "back_ready_1",
+        "revert_replay_0",
+        "revert_replay_1",
+        "front_denied_0",
+        "front_denied_1",
+        "back_regen_0",
+        "back_regen_1",
+        "back_short_0",
+        "back_short_1",
+        "back_proactive_0",
+        "back_proactive_1"
+      ],
+      "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+    }
+  ]
+}

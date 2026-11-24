@@ -1,0 +1,456 @@
+{
+  "version": 1,
+  "sources": {
+    "Archwing Dragon": {
+      "oracle": {
+        "oracle_id": "a0a706b2-b237-4183-82fa-2140a23b89e3",
+        "name": "Archwing Dragon",
+        "oracle_text": "Flying, haste\nAt the beginning of the end step, return this creature to its owner's hand.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/126/archwing-dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12309,
+        "iid": 567,
+        "name": "Archwing Dragon",
+        "handler": "manalinkeh_card_viashino_cutthroath",
+        "kind": "card"
+      }
+    },
+    "Glitterfang": {
+      "oracle": {
+        "oracle_id": "226dca3d-9da3-4c3f-89d0-67264fd19c51",
+        "name": "Glitterfang",
+        "oracle_text": "Haste\nAt the beginning of the end step, return this creature to its owner's hand.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Spirit",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/100/glitterfang?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7649,
+        "iid": 3941,
+        "name": "Glitterfang",
+        "handler": "manalinkeh_card_viashino_cutthroath",
+        "kind": "card"
+      }
+    },
+    "Viashino Cutthroat": {
+      "oracle": {
+        "oracle_id": "6dc1305a-d6ca-4280-ba5d-5ed91f78ced0",
+        "name": "Viashino Cutthroat",
+        "oracle_text": "Haste\nAt the beginning of the end step, return this creature to its owner's hand.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Lizard",
+        "power": "5",
+        "toughness": "3",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ulg/94/viashino-cutthroat?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1697,
+        "iid": 10565,
+        "name": "Viashino Cutthroat",
+        "handler": "manalinkeh_card_viashino_cutthroath",
+        "kind": "card"
+      }
+    },
+    "Viashino Sandstalker": {
+      "oracle": {
+        "oracle_id": "cbfccfc0-3117-4ca0-b7ce-8e2d67ec49ab",
+        "name": "Viashino Sandstalker",
+        "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)\nAt the beginning of the end step, return this creature to its owner's hand. (Return it only if it's on the battlefield.)",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Lizard Warrior",
+        "power": "4",
+        "toughness": "2",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/225/viashino-sandstalker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1184,
+        "iid": 10570,
+        "name": "Viashino Sandstalker",
+        "handler": "manalinkeh_card_viashino_cutthroath",
+        "kind": "card"
+      }
+    },
+    "Viashino Sandscout": {
+      "oracle": {
+        "oracle_id": "f8d5a65c-382b-4277-9c08-5dec9e395b02",
+        "name": "Viashino Sandscout",
+        "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)\nAt the beginning of the end step, return this creature to its owner's hand. (Return it only if it's on the battlefield.)",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Lizard Scout",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/246/viashino-sandscout?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4082,
+        "iid": 15329,
+        "name": "Viashino Sandscout",
+        "handler": "manalinkeh_card_viashino_cutthroath",
+        "kind": "card"
+      }
+    },
+    "Dust Stalker": {
+      "oracle": {
+        "oracle_id": "69cd25d2-206c-4572-95e7-d66973c94358",
+        "name": "Dust Stalker",
+        "oracle_text": "Devoid (This card has no color.)\nHaste\nAt the beginning of each end step, if you control no other colorless creatures, return this creature to its owner's hand.",
+        "mana_cost": "{2}{B}{R}",
+        "type_line": "Creature — Eldrazi",
+        "power": "5",
+        "toughness": "3",
+        "keywords": [
+          "Devoid",
+          "Haste"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/202/dust-stalker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15314,
+        "iid": 12391,
+        "name": "Dust Stalker",
+        "handler": "manalinkeh_card_dust_stalker",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Deadly Recluse": {
+      "oracle": {
+        "oracle_id": "6b941291-1802-4ced-9869-39fa43825550",
+        "name": "Deadly Recluse",
+        "oracle_text": "Reach (This creature can block creatures with flying.)\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Spider",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Reach",
+          "Deathtouch"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/282/deadly-recluse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10402,
+        "iid": 2312,
+        "name": "Deadly Recluse",
+        "handler": "manalinkeh_card_deadly_recluse",
+        "kind": "card"
+      }
+    },
+    "Spire Golem": {
+      "oracle": {
+        "oracle_id": "bfdc6bbc-7402-40ae-91be-658afca2f145",
+        "name": "Spire Golem",
+        "oracle_text": "Affinity for Islands (This spell costs {1} less to cast for each Island you control.)\nFlying",
+        "mana_cost": "{6}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Affinity"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jvc/16/spire-golem?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6964,
+        "iid": 9187,
+        "name": "Spire Golem",
+        "handler": "manalinkeh_card_spire_golem",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Essence Scatter": {
+      "oracle": {
+        "oracle_id": "46665089-aa3d-44c3-964d-6638dfbb5782",
+        "name": "Essence Scatter",
+        "oracle_text": "Counter target creature spell.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sos/47/essence-scatter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10416,
+        "iid": 3131,
+        "name": "Essence Scatter",
+        "handler": "manalinkeh_card_remove_soul",
+        "kind": "card"
+      }
+    },
+    "Bazaar Trader": {
+      "oracle": {
+        "oracle_id": "21ad7067-3210-42d6-9009-0784b2834227",
+        "name": "Bazaar Trader",
+        "oracle_text": "{T}: Target player gains control of target artifact, creature, or land you control.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/72/bazaar-trader?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10729,
+        "iid": 930,
+        "name": "Bazaar Trader",
+        "handler": "manalinkeh_card_bazaar_trader",
+        "kind": "card"
+      }
+    },
+    "Walking Atlas": {
+      "oracle": {
+        "oracle_id": "855a4837-7fc8-4b97-afbd-daa88e322c89",
+        "name": "Walking Atlas",
+        "oracle_text": "{T}: You may put a land card from your hand onto the battlefield.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/131/walking-atlas?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10860,
+        "iid": 10746,
+        "name": "Walking Atlas",
+        "handler": "manalinkeh_card_sakura_tribe_scout",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Kozilek's Sentinel": {
+      "oracle": {
+        "oracle_id": "86ae05d6-f1ba-456d-bbc0-f35cd0d0537d",
+        "name": "Kozilek's Sentinel",
+        "oracle_text": "Devoid (This card has no color.)\nWhenever you cast a colorless spell, this creature gets +1/+0 until end of turn.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/129/kozileks-sentinel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15363,
+        "iid": 13319,
+        "name": "Kozilek's Sentinel",
+        "handler": "manalinkeh_card_kozileks_sentinel",
+        "kind": "card"
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Rimebound Dead",
+  "csvid": 8428,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_conditional_costs",
+      "version": 2,
+      "params": {
+        "csvid": 8428,
+        "printed_mana": "{B}",
+        "rules": "{S}: Regenerate this creature. ({S} can be paid with one mana from a snow source.)"
+      },
+      "oracle_text": "{S}: Regenerate this creature. ({S} can be paid with one mana from a snow source.)",
+      "variants": [
+        "snow_land_0",
+        "snow_land_1",
+        "ordinary_land_0",
+        "ordinary_land_1",
+        "ordinary_pool_0",
+        "ordinary_pool_1",
+        "snow_already_floated_0",
+        "snow_already_floated_1"
+      ]
+    }
+  ]
+}

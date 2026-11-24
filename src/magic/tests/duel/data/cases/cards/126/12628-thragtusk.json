@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 12628,
+  "card": "Thragtusk",
+  "recipes": [
+    {
+      "family": "remaining_entry_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 12628,
+        "printed_cost": "{4}{G}"
+      },
+      "oracle_text": "When this creature enters, you gain 5 life.\nWhen this creature leaves the battlefield, create a 3/3 green Beast creature token.",
+      "variants": [
+        "entry_0",
+        "destroy_0",
+        "bounce_0",
+        "exile_0",
+        "countered_0",
+        "entry_1",
+        "destroy_1",
+        "bounce_1",
+        "exile_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

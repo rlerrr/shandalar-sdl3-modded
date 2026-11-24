@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Declaration in Stone",
+  "csvid": 15783,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "same_name_sweep",
+      "version": 2,
+      "oracle_text": "Exile target creature and all other creatures its controller controls with the same name as that creature. That player investigates for each nontoken creature exiled this way.",
+      "params": {
+        "mode": "declaration",
+        "mana": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "power": 0,
+        "toughness": 0,
+        "keywords": []
+      },
+      "variants": [
+        "effect_0",
+        "effect_1",
+        "own_target_0",
+        "own_target_1",
+        "single_0",
+        "single_1",
+        "target_lost_0",
+        "target_lost_1",
+        "countered_0",
+        "countered_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "short_0",
+        "short_1",
+        "no_target_0",
+        "no_target_1",
+        "replay_0",
+        "replay_1",
+        "token_population_0",
+        "token_population_1",
+        "mixed_nontoken_anchor_0",
+        "mixed_nontoken_anchor_1",
+        "mixed_token_anchor_0",
+        "mixed_token_anchor_1",
+        "borrowed_target_0",
+        "borrowed_target_1",
+        "clue_use_0",
+        "clue_use_1"
+      ]
+    }
+  ]
+}

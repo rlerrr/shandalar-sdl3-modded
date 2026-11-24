@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Transgress the Mind",
+  "csvid": 15466,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "devoid_zone_and_spell_choices",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\nTarget player reveals their hand. You choose a card from it with mana value 3 or greater and exile that card.",
+      "params": {
+        "model": "threshold",
+        "mana": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "kind": "sorcery"
+      },
+      "variants": [
+        "boundary_0",
+        "boundary_1",
+        "alternate_card_0",
+        "alternate_card_1",
+        "no_qualifying_0",
+        "no_qualifying_1",
+        "empty_hand_0",
+        "empty_hand_1",
+        "own_target_0",
+        "own_target_1",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

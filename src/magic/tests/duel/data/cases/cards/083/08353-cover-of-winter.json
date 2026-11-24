@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Cover of Winter",
+  "csvid": 8353,
+  "recipes": [
+    {
+      "family": "cumulative_upkeep_alternative_and_snow",
+      "version": 2,
+      "params": {
+        "csvid": 8353,
+        "fee": "{S}",
+        "price": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "clauses": [
+          "Cumulative upkeep {S} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it. {S} can be paid with one mana from a snow source.)",
+          "If a creature would deal combat damage to you and/or one or more creatures you control, prevent X of that damage, where X is the number of age counters on this enchantment.",
+          "{S}: Put an age counter on this enchantment."
+        ]
+      },
+      "oracle_text": "Cumulative upkeep {S} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it. {S} can be paid with one mana from a snow source.)\nIf a creature would deal combat damage to you and/or one or more creatures you control, prevent X of that damage, where X is the number of age counters on this enchantment.\n{S}: Put an age counter on this enchantment.",
+      "variants": [
+        "zero_age_0",
+        "zero_age_1",
+        "age_one_player_0",
+        "age_one_player_1",
+        "age_two_creature_0",
+        "age_two_creature_1",
+        "activated_prevent_0",
+        "activated_prevent_1",
+        "nonsnow_0",
+        "nonsnow_1",
+        "noncombat_0",
+        "noncombat_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Whiptongue Hydra",
+  "csvid": 19130,
+  "recipes": [
+    {
+      "family": "entry_follow_on_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 19130,
+        "cost": "{5}{G}",
+        "choices": [
+          "scope_0",
+          "scope_1",
+          "indestructible_0",
+          "indestructible_1",
+          "none_0",
+          "none_1",
+          "reach_0",
+          "reach_1"
+        ]
+      },
+      "oracle_text": "Reach\nWhen this creature enters, destroy all creatures with flying. Put a +1/+1 counter on this creature for each creature destroyed this way.",
+      "variants": [
+        "scope_0",
+        "scope_1",
+        "indestructible_0",
+        "indestructible_1",
+        "none_0",
+        "none_1",
+        "reach_0",
+        "reach_1"
+      ]
+    }
+  ]
+}

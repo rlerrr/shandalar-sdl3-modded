@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Mystic Speculation",
+  "csvid": 8979,
+  "recipes": [
+    {
+      "family": "buyback_spell",
+      "version": 2,
+      "oracle_text": "Buyback {2} (You may pay an additional {2} as you cast this spell. If you do, put this card into your hand as it resolves.)\nScry 3. (Look at the top three cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+      "params": {
+        "mana": "{U}",
+        "fee": "{2}",
+        "effect": "scry",
+        "instant": false
+      },
+      "variants": [
+        "paid_0",
+        "ordinary_0",
+        "decline_0",
+        "short_fee_0",
+        "countered_0",
+        "recast_0",
+        "repeat_paid_0",
+        "pending_replay_0",
+        "wrong_base_0",
+        "scry_empty_0",
+        "scry_keep_0",
+        "paid_1",
+        "ordinary_1",
+        "decline_1",
+        "short_fee_1",
+        "countered_1",
+        "recast_1",
+        "repeat_paid_1",
+        "pending_replay_1",
+        "wrong_base_1",
+        "scry_empty_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Jace, the Living Guildpact",
+  "csvid": 14120,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "loyalty_library_effects",
+      "version": 2,
+      "oracle_text": "+1: Look at the top two cards of your library. Put one of them into your graveyard.\n−3: Return another target nonland permanent to its owner's hand.\n−8: Each player shuffles their hand and graveyard into their library. You draw seven cards.",
+      "params": {
+        "mode": "wheel",
+        "mana": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "start": 5,
+        "costs": [
+          1,
+          -3,
+          -8
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "once_per_turn_0",
+        "once_per_turn_1",
+        "opposing_turn_0",
+        "opposing_turn_1",
+        "top_two_0",
+        "top_two_1",
+        "one_card_0",
+        "one_card_1",
+        "empty_library_0",
+        "empty_library_1",
+        "bounce_own_0",
+        "bounce_own_1",
+        "bounce_foe_0",
+        "bounce_foe_1",
+        "wheel_0",
+        "wheel_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 8441,
+  "card": "Shape of the Wiitigo",
+  "recipes": [
+    {
+      "family": "remaining_entry_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 8441,
+        "printed_cost": "{3}{G}{G}{G}"
+      },
+      "oracle_text": "Enchant creature\nWhen this Aura enters, put six +1/+1 counters on enchanted creature.\nAt the beginning of your upkeep, put a +1/+1 counter on enchanted creature if it attacked or blocked since your last upkeep. Otherwise, remove a +1/+1 counter from it.",
+      "variants": [
+        "idle_0",
+        "attacked_0",
+        "blocked_0",
+        "opposing_host_0",
+        "noncombat_0",
+        "countered_0",
+        "idle_1",
+        "attacked_1",
+        "blocked_1",
+        "opposing_host_1",
+        "noncombat_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

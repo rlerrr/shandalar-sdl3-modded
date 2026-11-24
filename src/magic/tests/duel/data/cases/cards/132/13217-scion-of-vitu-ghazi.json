@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Scion of Vitu-Ghazi",
+  "csvid": 13217,
+  "recipes": [
+    {
+      "family": "entry_trigger_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 13217,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "When this creature enters, if you cast it from your hand, create a 1/1 white Bird creature token with flying, then populate. (Create a token that's a copy of a creature token you control.)",
+      "variants": [
+        "populate_existing_0",
+        "populate_existing_1",
+        "blink_0",
+        "blink_1",
+        "bird_only_1"
+      ]
+    }
+  ]
+}

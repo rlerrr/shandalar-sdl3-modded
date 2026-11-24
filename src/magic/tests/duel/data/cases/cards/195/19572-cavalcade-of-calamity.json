@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "csvid": 19572,
+  "card": "Cavalcade of Calamity",
+  "recipes": [
+    {
+      "family": "attack_damage_triggers",
+      "version": 2,
+      "oracle_text": "Whenever a creature you control with power 1 or less attacks, this enchantment deals 1 damage to the player or planeswalker that creature is attacking.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "kind": "cavalcade",
+          "printed": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "equip": 0,
+          "creature": false,
+          "clauses": [
+            "Whenever a creature you control with power 1 or less attacks, this enchantment deals 1 damage to the player or planeswalker that creature is attacking."
+          ]
+        }
+      },
+      "variants": [
+        "cast_0",
+        "cast_1",
+        "short_cast_0",
+        "short_cast_1",
+        "hit_0",
+        "hit_1",
+        "idle_0",
+        "idle_1",
+        "opponent_attack_0",
+        "opponent_attack_1",
+        "replay_0",
+        "replay_1",
+        "walker_attack_0",
+        "walker_attack_1",
+        "zero_power_0",
+        "zero_power_1",
+        "above_threshold_0",
+        "above_threshold_1",
+        "higher_power_0",
+        "higher_power_1",
+        "multiple_0",
+        "multiple_1",
+        "blocked_0",
+        "blocked_1",
+        "wrong_color_0",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

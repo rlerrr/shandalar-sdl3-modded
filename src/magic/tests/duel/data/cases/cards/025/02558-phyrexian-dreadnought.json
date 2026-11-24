@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 2558,
+  "card": "Phyrexian Dreadnought",
+  "recipes": [
+    {
+      "family": "entry_trigger_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 2558,
+        "printed_cost": "{1}",
+        "keywords": [
+          "Trample"
+        ]
+      },
+      "oracle_text": "Trample\nWhen this creature enters, sacrifice it unless you sacrifice any number of creatures with total power 12 or greater.",
+      "variants": [
+        "exact_twelve_0",
+        "below_twelve_0",
+        "no_creatures_0",
+        "trample_0",
+        "exact_twelve_1",
+        "below_twelve_1",
+        "no_creatures_1",
+        "trample_1"
+      ]
+    }
+  ]
+}

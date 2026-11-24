@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Eager Construct",
+  "csvid": 16357,
+  "recipes": [
+    {
+      "family": "library_scry_before_draw",
+      "version": 2,
+      "params": {
+        "csvid": 16357,
+        "printed_cost": "{2}",
+        "choices": [
+          "both_bottom_0",
+          "both_bottom_1",
+          "opposing_empty_0",
+          "opposing_empty_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, each player may scry 1. (To scry 1, look at the top card of your library, then you may put that card on the bottom.)",
+      "variants": [
+        "both_bottom_0",
+        "both_bottom_1",
+        "opposing_empty_0",
+        "opposing_empty_1"
+      ]
+    }
+  ]
+}

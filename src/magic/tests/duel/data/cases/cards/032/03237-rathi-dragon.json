@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Rathi Dragon",
+  "csvid": 3237,
+  "recipes": [
+    {
+      "family": "creature_entry_sacrifices",
+      "version": 2,
+      "params": {
+        "mode": "typed_unless",
+        "resource": "Mountain",
+        "quantity": 2,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "keywords": [
+          "Flying"
+        ],
+        "power": 5,
+        "toughness": 5
+      },
+      "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhen this creature enters, sacrifice it unless you sacrifice two Mountains.",
+      "variants": [
+        "paid_0",
+        "unavailable_0",
+        "snapshot_0",
+        "countered_0",
+        "wrong_color_0",
+        "nonbasic_0",
+        "combat_0",
+        "reach_0",
+        "paid_1",
+        "unavailable_1",
+        "snapshot_1",
+        "countered_1",
+        "wrong_color_1",
+        "nonbasic_1",
+        "combat_1",
+        "reach_1",
+        "decline_0",
+        "short_1"
+      ]
+    }
+  ]
+}

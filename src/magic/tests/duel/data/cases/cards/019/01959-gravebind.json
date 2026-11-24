@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Gravebind",
+  "csvid": 1959,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "next_upkeep_cantrip_riders",
+      "version": 2,
+      "oracle_text": "Target creature can't be regenerated this turn.\nDraw a card at the beginning of the next turn's upkeep.",
+      "params": {
+        "mode": "no_regen",
+        "instant": true,
+        "cost": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "effect_0",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "replay_0",
+        "repeat_0",
+        "offturn_0",
+        "prevent_0",
+        "unrelated_0",
+        "expiry_0",
+        "lost_target_0"
+      ]
+    }
+  ]
+}

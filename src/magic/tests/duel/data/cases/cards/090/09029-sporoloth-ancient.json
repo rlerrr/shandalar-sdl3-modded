@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "csvid": 9029,
+  "card": "Sporoloth Ancient",
+  "recipes": [
+    {
+      "family": "spore_upkeep_additional_riders",
+      "version": 2,
+      "params": {
+        "shape": "grant",
+        "mana": [
+          3,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "keywords": [],
+        "power": 4,
+        "toughness": 4
+      },
+      "variants": [
+        "threshold_0",
+        "threshold_1",
+        "ally_paid_0",
+        "ally_paid_1",
+        "grant_bearer_0",
+        "grant_bearer_1",
+        "enemy_only_0",
+        "enemy_only_1",
+        "removed_grant_0",
+        "removed_grant_1",
+        "replay_0",
+        "replay_1"
+      ],
+      "oracle_text": "At the beginning of your upkeep, put a spore counter on this creature.\nCreatures you control have \"Remove two spore counters from this creature: Create a 1/1 green Saproling creature token.\""
+    }
+  ]
+}

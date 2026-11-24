@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "card": "Light Up the Stage",
+  "csvid": 19672,
+  "recipes": [
+    {
+      "family": "play_own_exile_effects",
+      "version": 2,
+      "params": {
+        "model": "spectacle",
+        "count": 2,
+        "next_turn": true,
+        "cost": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Spectacle {R} (You may cast this spell for its spectacle cost rather than its mana cost if an opponent lost life this turn.)\nExile the top two cards of your library. Until the end of your next turn, you may play those cards.",
+      "variants": [
+        "grant_0",
+        "empty_0",
+        "play_land_0",
+        "play_spell_0",
+        "wrong_spell_mana_0",
+        "wrong_seat_0",
+        "wrong_card_0",
+        "spent_land_drop_0",
+        "expiry_0",
+        "offturn_land_0",
+        "replay_0",
+        "source_wrong_mana_0",
+        "source_countered_0",
+        "shallow_0",
+        "second_land_0",
+        "spectacle_0",
+        "normal_when_eligible_0",
+        "own_life_loss_0",
+        "old_life_loss_0",
+        "next_turn_play_0",
+        "offturn_spell_0",
+        "grant_1",
+        "empty_1",
+        "play_land_1",
+        "play_spell_1",
+        "wrong_spell_mana_1",
+        "wrong_seat_1",
+        "wrong_card_1",
+        "spent_land_drop_1",
+        "expiry_1",
+        "offturn_land_1",
+        "replay_1",
+        "source_wrong_mana_1",
+        "source_countered_1",
+        "shallow_1",
+        "second_land_1",
+        "spectacle_1",
+        "normal_when_eligible_1",
+        "own_life_loss_1",
+        "old_life_loss_1",
+        "next_turn_play_1",
+        "offturn_spell_1",
+        "spectacle_enabled_0",
+        "spectacle_enabled_1"
+      ]
+    }
+  ]
+}

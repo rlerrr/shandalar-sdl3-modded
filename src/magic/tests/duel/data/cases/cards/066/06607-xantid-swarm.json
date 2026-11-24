@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Xantid Swarm",
+  "csvid": 6607,
+  "recipes": [
+    {
+      "family": "attack_follow_on_requirements_and_legality",
+      "version": 2,
+      "params": {
+        "csvid": 6607,
+        "cost": "{G}",
+        "choices": [
+          "spell_lock_0",
+          "spell_lock_1",
+          "own_spell_0",
+          "own_spell_1",
+          "flyer_blocks_0",
+          "flyer_blocks_1",
+          "idle_0",
+          "idle_1"
+        ]
+      },
+      "oracle_text": "Flying\nWhenever this creature attacks, defending player can't cast spells this turn.",
+      "variants": [
+        "spell_lock_0",
+        "spell_lock_1",
+        "own_spell_0",
+        "own_spell_1",
+        "flyer_blocks_0",
+        "flyer_blocks_1",
+        "idle_0",
+        "idle_1"
+      ]
+    }
+  ]
+}

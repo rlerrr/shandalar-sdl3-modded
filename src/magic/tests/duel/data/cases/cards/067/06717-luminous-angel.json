@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Luminous Angel",
+  "csvid": 6717,
+  "recipes": [
+    {
+      "family": "upkeep_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 6717,
+        "mana_cost": "{4}{W}{W}{W}"
+      },
+      "oracle_text": "Flying\nAt the beginning of your upkeep, you may create a 1/1 white Spirit creature token with flying.",
+      "variants": [
+        "spirit_flying_0",
+        "spirit_flying_1",
+        "source_flying_0",
+        "source_flying_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

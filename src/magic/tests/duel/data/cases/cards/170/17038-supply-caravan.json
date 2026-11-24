@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Supply Caravan",
+  "csvid": 17038,
+  "recipes": [
+    {
+      "family": "entry_trigger_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 17038,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "When this creature enters, if you control a tapped creature, create a 1/1 white Warrior creature token with vigilance.",
+      "variants": [
+        "own_attacked_0",
+        "own_attacked_1",
+        "foe_tapped_0",
+        "foe_tapped_1",
+        "only_land_0",
+        "only_land_1",
+        "untapped_0",
+        "untapped_1"
+      ]
+    }
+  ]
+}

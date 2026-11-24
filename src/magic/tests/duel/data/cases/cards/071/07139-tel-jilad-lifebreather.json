@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "csvid": 7139,
+  "card": "Tel-Jilad Lifebreather",
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_targeted_costs",
+      "version": 2,
+      "params": {
+        "csvid": 7139,
+        "mana": [
+          4,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "activation": "{G}",
+        "stats": [
+          3,
+          2
+        ]
+      },
+      "oracle_text": "{G}, {T}, Sacrifice a Forest: Regenerate target creature.",
+      "variants": [
+        "basic_0",
+        "basic_1",
+        "nonbasic_0",
+        "nonbasic_1",
+        "from_forest_0",
+        "from_forest_1",
+        "foreign_0",
+        "foreign_1",
+        "foe_forest_0",
+        "foe_forest_1",
+        "sick_0",
+        "sick_1",
+        "tapped_0",
+        "tapped_1",
+        "proactive_0",
+        "proactive_1"
+      ]
+    }
+  ]
+}

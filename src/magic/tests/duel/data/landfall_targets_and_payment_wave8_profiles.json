@@ -1,0 +1,494 @@
+{
+  "version": 1,
+  "sources": {
+    "Hedron Crab": {
+      "oracle": {
+        "oracle_id": "7216f974-3c84-40ef-b904-82019900c204",
+        "name": "Hedron Crab",
+        "oracle_text": "Landfall — Whenever a land you control enters, target player mills three cards. (They put the top three cards of their library into their graveyard.)",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Crab",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Mill",
+          "Landfall"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/155/hedron-crab?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10563,
+        "iid": 4464,
+        "name": "Hedron Crab",
+        "handler": "manalinkeh_card_hedron_crab",
+        "kind": "card"
+      }
+    },
+    "Ob Nixilis, the Fallen": {
+      "oracle": {
+        "oracle_id": "154104b7-4125-4276-8bc7-9a6edfe48cb9",
+        "name": "Ob Nixilis, the Fallen",
+        "oracle_text": "Landfall — Whenever a land you control enters, you may have target player lose 3 life. If you do, put three +1/+1 counters on Ob Nixilis.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Legendary Creature — Demon",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/192/ob-nixilis-the-fallen?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10623,
+        "iid": 6756,
+        "name": "Ob Nixilis, the Fallen",
+        "handler": "manalinkeh_card_ob_nixilis_the_fallen",
+        "kind": "card"
+      }
+    },
+    "Seer's Sundial": {
+      "oracle": {
+        "oracle_id": "9929d7ba-cdc5-4099-a0ee-3a15073336f3",
+        "name": "Seer's Sundial",
+        "oracle_text": "Landfall — Whenever a land you control enters, you may pay {2}. If you do, draw a card.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/470/seers-sundial?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10827,
+        "iid": 8448,
+        "name": "Seer's Sundial",
+        "handler": "manalinkeh_card_seer_sundial",
+        "kind": "card"
+      }
+    },
+    "Stone-Seeder Hierophant": {
+      "oracle": {
+        "oracle_id": "ccaea194-4b21-4485-ba08-d8d030c9418d",
+        "name": "Stone-Seeder Hierophant",
+        "oracle_text": "Landfall — Whenever a land you control enters, untap this creature.\n{T}: Untap target land.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Human Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rav/184/stone-seeder-hierophant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7968,
+        "iid": 9382,
+        "name": "Stone-Seeder Hierophant",
+        "handler": "manalinkeh_card_stoneseeder_hierophant",
+        "kind": "card"
+      }
+    },
+    "Tideforce Elemental": {
+      "oracle": {
+        "oracle_id": "bda87ca2-91d0-48fa-bb82-a3396f0438ac",
+        "name": "Tideforce Elemental",
+        "oracle_text": "{U}, {T}: You may tap or untap another target creature.\nLandfall — Whenever a land you control enters, you may untap this creature.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/41/tideforce-elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10850,
+        "iid": 10007,
+        "name": "Tideforce Elemental",
+        "handler": "manalinkeh_card_tideforce_elemental",
+        "kind": "card"
+      }
+    },
+    "Murasa Ranger": {
+      "oracle": {
+        "oracle_id": "84ba3598-a2d2-46d4-b73c-ab139cac37c4",
+        "name": "Murasa Ranger",
+        "oracle_text": "Landfall — Whenever a land you control enters, you may pay {3}{G}. If you do, put two +1/+1 counters on this creature.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Human Warrior Ranger",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/178/murasa-ranger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15380,
+        "iid": 13717,
+        "name": "Murasa Ranger",
+        "handler": "manalinkeh_card_murasa_ranger",
+        "kind": "card"
+      }
+    },
+    "Tunneling Geopede": {
+      "oracle": {
+        "oracle_id": "78cd6d20-033f-471f-a86e-59ec8307ae1f",
+        "name": "Tunneling Geopede",
+        "oracle_text": "Landfall — Whenever a land you control enters, this creature deals 1 damage to each opponent.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Insect",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/158/tunneling-geopede?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15467,
+        "iid": 15209,
+        "name": "Tunneling Geopede",
+        "handler": "manalinkeh_card_tunneling_geopede",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Barren Moor": {
+      "oracle": {
+        "oracle_id": "326ba371-124c-4949-a048-3a0c8962e567",
+        "name": "Barren Moor",
+        "oracle_text": "This land enters tapped.\n{T}: Add {B}.\nCycling {B} ({B}, Discard this card: Draw a card.)",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [
+          "Cycling"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/262/barren-moor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6063,
+        "iid": 876,
+        "name": "Barren Moor",
+        "handler": "manalinkeh_card_barren_moor",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Growth Spiral": {
+      "oracle": {
+        "oracle_id": "34bcc217-dd91-45a0-90d7-a94d02f1f317",
+        "name": "Growth Spiral",
+        "oracle_text": "Draw a card. You may put a land card from your hand onto the battlefield.",
+        "mana_cost": "{G}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/88/growth-spiral?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19642,
+        "iid": 19576,
+        "name": "Growth Spiral",
+        "handler": "manalinkeh_card_growth_spiral",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Safe Passage": {
+      "oracle": {
+        "oracle_id": "dfa459a1-b065-4488-88d3-4da388261b52",
+        "name": "Safe Passage",
+        "oracle_text": "Prevent all damage that would be dealt to you and creatures you control this turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/30/safe-passage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10462,
+        "iid": 8169,
+        "name": "Safe Passage",
+        "handler": "manalinkeh_card_safe_passage",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Twiddle": {
+      "oracle": {
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "name": "Twiddle",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 256,
+        "iid": 10281,
+        "name": "Twiddle",
+        "handler": "manalinkeh_card_twiddle",
+        "kind": "card"
+      }
+    }
+  }
+}

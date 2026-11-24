@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Orim's Thunder",
+  "csvid": 5411,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "kicker_alternate_payment_and_damage",
+      "version": 2,
+      "oracle_text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nDestroy target artifact or enchantment. If this spell was kicked, it deals damage equal to that permanent's mana value to target creature.",
+      "params": {
+        "model": 5411,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "kicker_mana": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "x": null
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "enchantment_0",
+        "enchantment_1",
+        "no_creature_0",
+        "no_creature_1"
+      ]
+    }
+  ]
+}

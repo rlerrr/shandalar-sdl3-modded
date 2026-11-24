@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Goblin Kaboomist",
+  "csvid": 14108,
+  "recipes": [
+    {
+      "family": "coin_flip_upkeep_and_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 14108,
+        "price": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "clauses": [
+          "At the beginning of your upkeep, create a colorless artifact token named Land Mine with \"{R}, Sacrifice this token: This token deals 2 damage to target attacking creature without flying.\" Then flip a coin. If you lose the flip, this creature deals 2 damage to itself."
+        ],
+        "modes": [
+          "win",
+          "lose",
+          "mine_ground",
+          "mine_flyer_only",
+          "mine_nonlethal"
+        ]
+      },
+      "oracle_text": "At the beginning of your upkeep, create a colorless artifact token named Land Mine with \"{R}, Sacrifice this token: This token deals 2 damage to target attacking creature without flying.\" Then flip a coin. If you lose the flip, this creature deals 2 damage to itself.",
+      "variants": [
+        "win_0",
+        "win_1",
+        "lose_0",
+        "lose_1",
+        "mine_ground_0",
+        "mine_ground_1",
+        "mine_flyer_only_0",
+        "mine_flyer_only_1",
+        "mine_nonlethal_0",
+        "mine_nonlethal_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "csvid": 1779,
+  "card": "Feral Thallid",
+  "recipes": [
+    {
+      "family": "spore_upkeep_additional_riders",
+      "version": 2,
+      "params": {
+        "shape": "self_regen",
+        "mana": [
+          3,
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        "keywords": [
+          "Regenerate"
+        ],
+        "power": 6,
+        "toughness": 3
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "threshold_0",
+        "threshold_1",
+        "bank_0",
+        "bank_1",
+        "proactive_0",
+        "proactive_1",
+        "replay_0",
+        "replay_1",
+        "recast_0",
+        "recast_1"
+      ],
+      "oracle_text": "At the beginning of your upkeep, put a spore counter on this creature.\nRemove three spore counters from this creature: Regenerate this creature."
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "sources": {
+    "Fiery Gambit": {
+      "oracle": {
+        "oracle_id": "78497c54-7179-41b7-9454-7b915fd96cd5",
+        "name": "Fiery Gambit",
+        "oracle_text": "Flip a coin until you lose a flip or choose to stop flipping. If you lose a flip, Fiery Gambit has no effect. If you win one or more flips, Fiery Gambit deals 3 damage to target creature. If you win two or more flips, Fiery Gambit deals 6 damage to each opponent. If you win three or more flips, draw nine cards and untap all lands you control.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mrd/90/fiery-gambit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6664,
+        "iid": 3391,
+        "name": "Fiery Gambit",
+        "handler": "manalinkeh_card_fiery_gambit",
+        "kind": "card"
+      }
+    },
+    "Mana Clash": {
+      "oracle": {
+        "oracle_id": "a2f5a5fd-14dc-48e8-bdb0-984a83288023",
+        "name": "Mana Clash",
+        "oracle_text": "You and target opponent each flip a coin. Mana Clash deals 1 damage to each player whose coin comes up tails. Repeat this process until both players' coins come up heads on the same flip.",
+        "mana_cost": "{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/203/mana-clash?utm_source=api"
+      },
+      "registry": {
+        "csvid": 343,
+        "iid": 5841,
+        "name": "Mana Clash",
+        "handler": "manalinkeh_card_mana_clash",
+        "kind": "card"
+      }
+    },
+    "Squee's Revenge": {
+      "oracle": {
+        "oracle_id": "3c9f3f26-339e-459e-9847-4e33aafb6f9b",
+        "name": "Squee's Revenge",
+        "oracle_text": "Choose a number. Flip a coin that many times or until you lose a flip, whichever comes first. If you win all the flips, draw two cards for each flip.",
+        "mana_cost": "{1}{U}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/apc/123/squees-revenge?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5437,
+        "iid": 9270,
+        "name": "Squee's Revenge",
+        "handler": "manalinkeh_card_squees_revenge",
+        "kind": "card"
+      }
+    },
+    "Krark's Thumb": {
+      "oracle": {
+        "oracle_id": "a97c8482-775c-4f11-9872-25b4f9bfcb1a",
+        "name": "Krark's Thumb",
+        "oracle_text": "If you would flip a coin, instead flip two coins and ignore one.",
+        "mana_cost": "{2}",
+        "type_line": "Legendary Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mrd/190/krarks-thumb?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6693,
+        "iid": 5387,
+        "name": "Krark's Thumb",
+        "handler": "manalinkeh_card_barktooth_warbeard",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mana Clash": {
+      "oracle": {
+        "oracle_id": "a2f5a5fd-14dc-48e8-bdb0-984a83288023",
+        "name": "Mana Clash",
+        "oracle_text": "You and target opponent each flip a coin. Mana Clash deals 1 damage to each player whose coin comes up tails. Repeat this process until both players' coins come up heads on the same flip.",
+        "mana_cost": "{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/203/mana-clash?utm_source=api"
+      },
+      "registry": {
+        "csvid": 343,
+        "iid": 5841,
+        "name": "Mana Clash",
+        "handler": "manalinkeh_card_mana_clash",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Squee's Revenge": {
+      "oracle": {
+        "oracle_id": "3c9f3f26-339e-459e-9847-4e33aafb6f9b",
+        "name": "Squee's Revenge",
+        "oracle_text": "Choose a number. Flip a coin that many times or until you lose a flip, whichever comes first. If you win all the flips, draw two cards for each flip.",
+        "mana_cost": "{1}{U}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/apc/123/squees-revenge?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5437,
+        "iid": 9270,
+        "name": "Squee's Revenge",
+        "handler": "manalinkeh_card_squees_revenge",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Urza's Armor": {
+      "oracle": {
+        "oracle_id": "e5fa232a-c8f2-4532-88bf-60d1223181b0",
+        "name": "Urza's Armor",
+        "oracle_text": "If a source would deal damage to you, prevent 1 of that damage.",
+        "mana_cost": "{6}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/318/urzas-armor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1179,
+        "iid": 10419,
+        "name": "Urza's Armor",
+        "handler": "manalinkeh_card_urzas_armor",
+        "kind": "card"
+      }
+    },
+    "Witchbane Orb": {
+      "oracle": {
+        "oracle_id": "7411a8f4-b736-482f-886e-5fa671e94e0d",
+        "name": "Witchbane Orb",
+        "oracle_text": "When this artifact enters, destroy all Curses attached to you.\nYou have hexproof. (You can't be the target of spells or abilities your opponents control, including Aura spells.)",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/isd/236/witchbane-orb?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12125,
+        "iid": 11040,
+        "name": "Witchbane Orb",
+        "handler": "manalinkeh_card_witchbane_orb",
+        "kind": "card"
+      }
+    }
+  }
+}

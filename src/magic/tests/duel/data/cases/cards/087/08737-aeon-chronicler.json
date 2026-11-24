@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "csvid": 8737,
+  "card": "Aeon Chronicler",
+  "recipes": [
+    {
+      "family": "suspend_variable_countdown",
+      "version": 2,
+      "oracle_text": "Aeon Chronicler's power and toughness are each equal to the number of cards in your hand.\nSuspend X—{X}{3}{U}. X can't be 0.\nWhenever a time counter is removed from this card while it's exiled, draw a card.",
+      "params": {
+        "csvid": 8737,
+        "effect": "draw",
+        "suspend": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "printed": [
+          3,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "unfunded_0",
+        "x1_0",
+        "x2_0",
+        "x3_0",
+        "wrong_color_0",
+        "replay_0",
+        "unfunded_1",
+        "x1_1",
+        "x2_1",
+        "x3_1",
+        "wrong_color_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

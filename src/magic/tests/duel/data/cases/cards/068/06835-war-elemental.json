@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "War Elemental",
+  "csvid": 6835,
+  "recipes": [
+    {
+      "family": "remaining_entry_combat",
+      "version": 2,
+      "params": {
+        "csvid": 6835,
+        "cost": "{R}{R}{R}",
+        "choices": [
+          "no_damage_0",
+          "no_damage_1",
+          "foe_damage_0",
+          "foe_damage_1",
+          "self_damage_0",
+          "self_damage_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, sacrifice it unless an opponent was dealt damage this turn.\nWhenever an opponent is dealt damage, put that many +1/+1 counters on this creature.",
+      "variants": [
+        "no_damage_0",
+        "no_damage_1",
+        "foe_damage_0",
+        "foe_damage_1",
+        "self_damage_0",
+        "self_damage_1"
+      ]
+    }
+  ]
+}

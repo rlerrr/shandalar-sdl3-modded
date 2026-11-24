@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "csvid": 11073,
+  "card": "Valakut Fireboar",
+  "recipes": [
+    {
+      "family": "attack_trigger_stat_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 11073,
+        "printed_cost": "{4}{R}"
+      },
+      "oracle_text": "Whenever this creature attacks, switch its power and toughness until end of turn.",
+      "variants": [
+        "switch_0",
+        "asymmetric_0",
+        "blocked_0",
+        "switch_1",
+        "asymmetric_1",
+        "blocked_1"
+      ]
+    }
+  ]
+}

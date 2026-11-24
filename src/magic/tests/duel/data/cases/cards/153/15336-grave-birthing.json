@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Grave Birthing",
+  "csvid": 15336,
+  "recipes": [
+    {
+      "family": "devoid_scions_and_sacrifice",
+      "version": 2,
+      "params": {
+        "role": "birth",
+        "mana": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Devoid (This card has no color.)\nTarget opponent exiles a card from their graveyard. You create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\"\nDraw a card.",
+      "variants": [
+        "opponent_choice_0",
+        "empty_grave_0",
+        "offturn_0",
+        "spend_0",
+        "replay_0",
+        "opponent_choice_1",
+        "empty_grave_1",
+        "offturn_1",
+        "spend_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

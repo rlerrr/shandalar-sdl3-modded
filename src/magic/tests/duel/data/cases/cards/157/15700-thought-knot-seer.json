@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Thought-Knot Seer",
+  "csvid": 15700,
+  "recipes": [
+    {
+      "family": "entry_interaction_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 15700,
+        "printed_mana": "{3}{C}",
+        "rules": "({C} represents colorless mana.)\nWhen this creature enters, target opponent reveals their hand. You choose a nonland card from it and exile that card.\nWhen this creature leaves the battlefield, target opponent draws a card."
+      },
+      "oracle_text": "({C} represents colorless mana.)\nWhen this creature enters, target opponent reveals their hand. You choose a nonland card from it and exile that card.\nWhen this creature leaves the battlefield, target opponent draws a card.",
+      "variants": [
+        "exile_and_bounce_0",
+        "exile_and_bounce_1",
+        "lands_only_0",
+        "lands_only_1",
+        "colored_short_0",
+        "colored_short_1"
+      ]
+    }
+  ]
+}

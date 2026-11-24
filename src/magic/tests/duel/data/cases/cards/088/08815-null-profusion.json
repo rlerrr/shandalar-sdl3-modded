@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Null Profusion",
+  "csvid": 8815,
+  "recipes": [
+    {
+      "family": "draw_step_skip_and_trigger",
+      "version": 2,
+      "params": {
+        "csvid": 8815,
+        "casting_cost": [
+          4,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "clauses": [
+          "Skip your draw step.",
+          "Whenever you play a card, draw a card.",
+          "Your maximum hand size is two."
+        ]
+      },
+      "oracle_text": "Skip your draw step.\nWhenever you play a card, draw a card.\nYour maximum hand size is two.",
+      "variants": [
+        "own_spell_0",
+        "own_spell_1",
+        "own_land_0",
+        "own_land_1",
+        "opposing_spell_0",
+        "opposing_spell_1"
+      ]
+    }
+  ]
+}

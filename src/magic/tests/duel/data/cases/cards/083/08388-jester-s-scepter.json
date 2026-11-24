@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "card": "Jester's Scepter",
+  "csvid": 8388,
+  "recipes": [
+    {
+      "family": "remaining_entry_library_and_hand",
+      "version": 2,
+      "params": {
+        "csvid": 8388,
+        "printed_mana": "{3}",
+        "rules": "When this artifact enters, exile the top five cards of target player's library face down. You may look at those cards for as long as they remain exiled.\n{2}, {T}, Put a card exiled with this artifact into its owner's graveyard: Counter target spell if it has the same name as that card."
+      },
+      "oracle_text": "When this artifact enters, exile the top five cards of target player's library face down. You may look at those cards for as long as they remain exiled.\n{2}, {T}, Put a card exiled with this artifact into its owner's graveyard: Counter target spell if it has the same name as that card.",
+      "variants": [
+        "matching_counter_0",
+        "matching_counter_1",
+        "mismatching_cost_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Lotus Bloom",
+  "csvid": 8599,
+  "recipes": [
+    {
+      "family": "suspend_paid_countdown",
+      "version": 2,
+      "params": {
+        "csvid": 8599,
+        "duration": 3,
+        "effect": "lotus",
+        "suspend": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "normal": null
+      },
+      "oracle_text": "Suspend 3—{0} (Rather than cast this card from your hand, pay {0} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost.)\n{T}, Sacrifice this artifact: Add three mana of any one color.",
+      "variants": [
+        "parked_0",
+        "parked_1",
+        "countdown_0",
+        "countdown_1",
+        "replay_0",
+        "replay_1",
+        "removed_0",
+        "removed_1"
+      ]
+    }
+  ]
+}

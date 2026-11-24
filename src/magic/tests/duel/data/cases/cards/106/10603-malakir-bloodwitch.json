@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 10603,
+  "card": "Malakir Bloodwitch",
+  "recipes": [
+    {
+      "family": "remaining_entry_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 10603,
+        "printed_cost": "{3}{B}{B}"
+      },
+      "oracle_text": "Flying, protection from white\nWhen this creature enters, each opponent loses life equal to the number of Vampires you control. You gain life equal to the life lost this way.",
+      "variants": [
+        "alone_0",
+        "scale_0",
+        "flying_0",
+        "protection_0",
+        "countered_0",
+        "alone_1",
+        "scale_1",
+        "flying_1",
+        "protection_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

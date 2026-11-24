@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Regeneration",
+  "csvid": 201,
+  "recipes": [
+    {
+      "family": "regeneration_spells_and_auras",
+      "version": 2,
+      "params": {
+        "csvid": 201,
+        "printed_cost": "{1}{G}",
+        "choices": [
+          "proactive_0",
+          "proactive_1",
+          "wounded_0",
+          "wounded_1",
+          "foreign_0",
+          "foreign_1",
+          "short_0",
+          "short_1",
+          "detach_0",
+          "detach_1"
+        ]
+      },
+      "oracle_text": "Enchant creature (Target a creature as you cast this. This card enters attached to that creature.)\n{G}: Regenerate enchanted creature. (The next time that creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "variants": [
+        "proactive_0",
+        "proactive_1",
+        "wounded_0",
+        "wounded_1",
+        "foreign_0",
+        "foreign_1",
+        "short_0",
+        "short_1",
+        "detach_0",
+        "detach_1"
+      ]
+    }
+  ]
+}

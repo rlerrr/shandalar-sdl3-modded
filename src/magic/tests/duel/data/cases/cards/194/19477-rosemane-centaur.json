@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 19477,
+  "card": "Rosemane Centaur",
+  "recipes": [
+    {
+      "family": "convoke_prevention_and_vigilance",
+      "version": 2,
+      "params": {
+        "csvid": 19477,
+        "printed_cost": "{3}{G}{W}"
+      },
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nVigilance",
+      "variants": [
+        "vigilance_0",
+        "colored_0",
+        "mixed_0",
+        "normal_0",
+        "short_0",
+        "vigilance_1",
+        "colored_1",
+        "mixed_1",
+        "normal_1",
+        "short_1"
+      ]
+    }
+  ]
+}

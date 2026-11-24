@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Gibbering Descent",
+  "csvid": 8932,
+  "recipes": [
+    {
+      "family": "madness_upkeep_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 8932,
+        "normal": [
+          4,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "madness": [
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "At the beginning of each player's upkeep, that player loses 1 life and discards a card.\nHellbent — Skip your upkeep step if you have no cards in hand.\nMadness {2}{B}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "short_0",
+        "short_1",
+        "normal_0",
+        "normal_1",
+        "skip_owner_0",
+        "skip_owner_1",
+        "removed_0",
+        "removed_1",
+        "normal_countered_0",
+        "normal_countered_1"
+      ]
+    }
+  ]
+}

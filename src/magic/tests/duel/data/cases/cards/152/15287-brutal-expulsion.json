@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Brutal Expulsion",
+  "csvid": 15287,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "devoid_zone_and_spell_choices",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\nChoose one or both —\n• Return target spell or creature to its owner's hand.\n• Brutal Expulsion deals 2 damage to target creature or planeswalker. If that creature or planeswalker would die this turn, exile it instead.",
+      "params": {
+        "model": "modal",
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "kind": "instant"
+      },
+      "variants": [
+        "both_0",
+        "both_1",
+        "bounce_0",
+        "bounce_1",
+        "stack_bounce_0",
+        "stack_bounce_1",
+        "planeswalker_0",
+        "planeswalker_1",
+        "survivor_0",
+        "survivor_1",
+        "later_death_0",
+        "later_death_1",
+        "expiry_0",
+        "expiry_1",
+        "countered_0",
+        "countered_1",
+        "short_0",
+        "short_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

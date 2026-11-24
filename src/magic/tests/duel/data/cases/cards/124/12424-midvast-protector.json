@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "card": "Midvast Protector",
+  "csvid": 12424,
+  "recipes": [
+    {
+      "family": "chosen_color_protection",
+      "version": 2,
+      "oracle_text": "When this creature enters, target creature you control gains protection from the color of your choice until end of turn.",
+      "params": {
+        "action": "entry",
+        "scope": "own",
+        "scry": 0,
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "variants": [
+        "effect_0",
+        "without_effect_0",
+        "probe_red_0",
+        "probe_blue_0",
+        "aura_drop_0",
+        "after_turn_0",
+        "pending_snapshot_0",
+        "wrong_cast_color_0",
+        "insufficient_cast_mana_0",
+        "block_other_0",
+        "block_black_0",
+        "block_blue_0",
+        "block_green_0",
+        "block_red_0",
+        "block_white_0",
+        "self_target_0",
+        "effect_1",
+        "without_effect_1",
+        "probe_red_1",
+        "probe_blue_1",
+        "aura_drop_1",
+        "after_turn_1",
+        "pending_snapshot_1",
+        "wrong_cast_color_1",
+        "insufficient_cast_mana_1",
+        "block_other_1",
+        "block_black_1",
+        "block_blue_1",
+        "block_green_1",
+        "block_red_1",
+        "block_white_1",
+        "self_target_1"
+      ]
+    }
+  ]
+}

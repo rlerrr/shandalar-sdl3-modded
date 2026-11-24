@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "card": "Stinkweed Imp",
+  "csvid": 7967,
+  "recipes": [
+    {
+      "family": "mill_remaining_dredge_and_graveyard",
+      "version": 2,
+      "params": {
+        "csvid": 7967,
+        "cost": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "dredge": 5
+      },
+      "oracle_text": "Flying\nWhenever this creature deals combat damage to a creature, destroy that creature.\nDredge 5 (If you would draw a card, you may mill five cards instead. If you do, return this card from your graveyard to your hand.)",
+      "variants": [
+        "exact_0",
+        "exact_1",
+        "pass_0",
+        "pass_1",
+        "short_0",
+        "short_1",
+        "flying_0",
+        "flying_1",
+        "attack_destroy_0",
+        "attack_destroy_1",
+        "defend_destroy_0",
+        "defend_destroy_1",
+        "combat_prevented_0",
+        "combat_prevented_1",
+        "noncombat_0",
+        "noncombat_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "csvid": 13932,
+  "card": "Mogis's Warhound",
+  "recipes": [
+    {
+      "family": "mandatory_attack_additional_riders",
+      "version": 2,
+      "params": {
+        "shape": "bestow",
+        "keywords": [
+          "Bestow"
+        ],
+        "costs": {
+          "printed": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "bestowed": [
+            2,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        "power": 2,
+        "toughness": 2,
+        "bonus": [
+          2,
+          2
+        ]
+      },
+      "variants": [
+        "normal_fresh_0",
+        "normal_aged_0",
+        "bestow_own_0",
+        "bestow_enemy_0",
+        "detach_0",
+        "pending_target_0",
+        "unfunded_0",
+        "normal_fresh_1",
+        "normal_aged_1",
+        "bestow_own_1",
+        "bestow_enemy_1",
+        "detach_1",
+        "pending_target_1",
+        "unfunded_1"
+      ],
+      "oracle_text": "Bestow {2}{R} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nThis creature attacks each combat if able.\nEnchanted creature gets +2/+2 and attacks each combat if able."
+    }
+  ]
+}

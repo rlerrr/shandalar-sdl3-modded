@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "card": "Nivix Cyclops",
+  "csvid": 13185,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "cast_instant_or_sorcery_riders",
+      "version": 2,
+      "oracle_text": "Defender\nWhenever you cast an instant or sorcery spell, this creature gets +3/+0 until end of turn and can attack this turn as though it didn't have defender.",
+      "params": {
+        "effect": "cyclops",
+        "mana": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "hybrid": [],
+        "stats": [
+          1,
+          4
+        ],
+        "keywords": [
+          "Defender"
+        ]
+      },
+      "variants": [
+        "instant_0",
+        "instant_1",
+        "sorcery_0",
+        "sorcery_1",
+        "own_creature_0",
+        "own_creature_1",
+        "enemy_instant_0",
+        "enemy_instant_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "attack_enabled_0",
+        "attack_enabled_1",
+        "defender_only_0",
+        "defender_only_1",
+        "attack_expiry_0",
+        "attack_expiry_1"
+      ]
+    }
+  ]
+}

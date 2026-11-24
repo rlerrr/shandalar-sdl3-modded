@@ -1,0 +1,587 @@
+{
+  "version": 1,
+  "sources": {
+    "Call the Scions": {
+      "oracle": {
+        "oracle_id": "731a70e8-40d6-47b9-b2b3-b16c818e1935",
+        "name": "Call the Scions",
+        "oracle_text": "Devoid (This card has no color.)\nCreate two 1/1 colorless Eldrazi Scion creature tokens. They have \"Sacrifice this token: Add {C}.\"",
+        "mana_cost": "{2}{G}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/165/call-the-scions?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15288,
+        "iid": 11875,
+        "name": "Call the Scions",
+        "handler": "manalinkeh_card_call_the_scions",
+        "kind": "card"
+      }
+    },
+    "Catacomb Sifter": {
+      "oracle": {
+        "oracle_id": "4c2c5f3b-61f3-4772-9ade-f5be80719e9f",
+        "name": "Catacomb Sifter",
+        "oracle_text": "Devoid (This card has no color.)\nWhen this creature enters, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\"\nWhenever another creature you control dies, scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+        "mana_cost": "{1}{B}{G}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Devoid",
+          "Scry"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/201/catacomb-sifter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15291,
+        "iid": 11908,
+        "name": "Catacomb Sifter",
+        "handler": "manalinkeh_card_catacomb_sifter",
+        "kind": "card"
+      }
+    },
+    "From Beyond": {
+      "oracle": {
+        "oracle_id": "31b27775-196b-4022-bff5-25b34290ff7f",
+        "name": "From Beyond",
+        "oracle_text": "Devoid (This card has no color.)\nAt the beginning of your upkeep, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\"\n{1}{G}, Sacrifice this enchantment: Search your library for an Eldrazi card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/167/from-beyond?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15330,
+        "iid": 12717,
+        "name": "From Beyond",
+        "handler": "manalinkeh_card_from_beyond",
+        "kind": "card"
+      }
+    },
+    "Grave Birthing": {
+      "oracle": {
+        "oracle_id": "b25962ab-21b5-47f9-bdef-35b911b45671",
+        "name": "Grave Birthing",
+        "oracle_text": "Devoid (This card has no color.)\nTarget opponent exiles a card from their graveyard. You create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\"\nDraw a card.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Instant",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/93/grave-birthing?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15336,
+        "iid": 12879,
+        "name": "Grave Birthing",
+        "handler": "manalinkeh_card_grave_birthing",
+        "kind": "card"
+      }
+    },
+    "Smothering Abomination": {
+      "oracle": {
+        "oracle_id": "c3db28e5-6162-4642-a1c9-a7ace0737950",
+        "name": "Smothering Abomination",
+        "oracle_text": "Devoid (This card has no color.)\nFlying\nAt the beginning of your upkeep, sacrifice a creature.\nWhenever you sacrifice a creature, draw a card.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Creature — Eldrazi",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/226/smothering-abomination?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15447,
+        "iid": 14709,
+        "name": "Smothering Abomination",
+        "handler": "manalinkeh_card_smothering_abomination",
+        "kind": "card"
+      }
+    },
+    "Flayer Drone": {
+      "oracle": {
+        "oracle_id": "9e275428-3562-4ed6-8a49-3bb202a5130a",
+        "name": "Flayer Drone",
+        "oracle_text": "Devoid (This card has no color.)\nFirst strike\nWhenever another colorless creature you control enters, target opponent loses 1 life.",
+        "mana_cost": "{1}{B}{R}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Devoid",
+          "First strike"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/148/flayer-drone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15600,
+        "iid": 15675,
+        "name": "Flayer Drone",
+        "handler": "manalinkeh_card_flayer_drone",
+        "kind": "card"
+      }
+    },
+    "Barrage Tyrant": {
+      "oracle": {
+        "oracle_id": "f3b70d61-e33e-4243-aac9-e7bd9ba40acb",
+        "name": "Barrage Tyrant",
+        "oracle_text": "Devoid (This card has no color.)\n{2}{R}, Sacrifice another colorless creature: This creature deals damage equal to the sacrificed creature's power to any target.",
+        "mana_cost": "{4}{R}",
+        "type_line": "Creature — Eldrazi",
+        "power": "5",
+        "toughness": "3",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/127/barrage-tyrant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15268,
+        "iid": 11664,
+        "name": "Barrage Tyrant",
+        "handler": "manalinkeh_card_barrage_tyrant",
+        "kind": "card"
+      }
+    },
+    "Vile Redeemer": {
+      "oracle": {
+        "oracle_id": "a7a88bcc-eac2-4f74-804f-b49d16560184",
+        "name": "Vile Redeemer",
+        "oracle_text": "Devoid (This card has no color.)\nFlash\nWhen you cast this spell, you may pay {C}. If you do, create a 1/1 colorless Eldrazi Scion creature token for each nontoken creature that died under your control this turn. Those tokens have \"Sacrifice this token: Add {C}.\"",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Eldrazi",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Devoid",
+          "Flash"
+        ],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/125/vile-redeemer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15709,
+        "iid": 15784,
+        "name": "Vile Redeemer",
+        "handler": "manalinkeh_card_vile_redeemer",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "All Is Dust": {
+      "oracle": {
+        "oracle_id": "14693689-d087-43b6-9c3f-63ab0648fc20",
+        "name": "All Is Dust",
+        "oracle_text": "Each player sacrifices all permanents they control that are one or more colors.",
+        "mana_cost": "{7}",
+        "type_line": "Kindred Sorcery — Eldrazi",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/800/all-is-dust?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10866,
+        "iid": 359,
+        "name": "All Is Dust",
+        "handler": "manalinkeh_card_all_is_dust",
+        "kind": "card"
+      }
+    },
+    "Call the Scions": {
+      "oracle": {
+        "oracle_id": "731a70e8-40d6-47b9-b2b3-b16c818e1935",
+        "name": "Call the Scions",
+        "oracle_text": "Devoid (This card has no color.)\nCreate two 1/1 colorless Eldrazi Scion creature tokens. They have \"Sacrifice this token: Add {C}.\"",
+        "mana_cost": "{2}{G}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/165/call-the-scions?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15288,
+        "iid": 11875,
+        "name": "Call the Scions",
+        "handler": "manalinkeh_card_call_the_scions",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Eldrazi Scion": {
+      "oracle": {
+        "oracle_id": "0eb3cd4b-c34e-448c-a9ab-e7b0b4524833",
+        "name": "Eldrazi Scion",
+        "oracle_text": "Sacrifice this creature: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Eldrazi Scion",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tm3c/3/eldrazi-scion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18724,
+        "iid": 12425,
+        "name": "Eldrazi Scion",
+        "handler": "manalinkeh_card_eldrazi_spawn",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Kozilek's Pathfinder": {
+      "oracle": {
+        "oracle_id": "de5a8edb-c41a-4f3a-9231-c54486ba7739",
+        "name": "Kozilek's Pathfinder",
+        "oracle_text": "{C}: Target creature can't block this creature this turn. ({C} represents colorless mana.)",
+        "mana_cost": "{6}",
+        "type_line": "Creature — Eldrazi",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/5/kozileks-pathfinder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15627,
+        "iid": 15702,
+        "name": "Kozilek's Pathfinder",
+        "handler": "manalinkeh_card_kozileks_pathfinder",
+        "kind": "card"
+      }
+    },
+    "Mogg Fanatic": {
+      "oracle": {
+        "oracle_id": "7efd5d62-6da2-428a-98e3-5b842f668656",
+        "name": "Mogg Fanatic",
+        "oracle_text": "Sacrifice this creature: It deals 1 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/138/mogg-fanatic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1354,
+        "iid": 6244,
+        "name": "Mogg Fanatic",
+        "handler": "manalinkeh_card_mogg_fanatic",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Steel Wall": {
+      "oracle": {
+        "oracle_id": "5ccb57e1-ca94-4b5a-8e5f-b8b5e692cfb9",
+        "name": "Steel Wall",
+        "oracle_text": "Defender (This creature can't attack.)",
+        "mana_cost": "{1}",
+        "type_line": "Artifact Creature — Wall",
+        "power": "0",
+        "toughness": "4",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/td2/3/steel-wall?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1300,
+        "iid": 9342,
+        "name": "Steel Wall",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Suntail Hawk": {
+      "oracle": {
+        "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+        "name": "Suntail Hawk",
+        "oracle_text": "Flying",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/40/suntail-hawk?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1195,
+        "iid": 9548,
+        "name": "Suntail Hawk",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

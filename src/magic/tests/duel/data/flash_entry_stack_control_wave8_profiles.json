@@ -1,0 +1,601 @@
+{
+  "sources": {
+    "Draining Whelk": {
+      "oracle": {
+        "oracle_id": "8ce7f05c-6352-49e8-95b3-8ab87106b75e",
+        "name": "Draining Whelk",
+        "oracle_text": "Flash\nFlying\nWhen this creature enters, counter target spell. Put X +1/+1 counters on this creature, where X is that spell's mana value.",
+        "mana_cost": "{4}{U}{U}",
+        "type_line": "Creature — Illusion",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/62/draining-whelk?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8522,
+        "iid": 2704,
+        "name": "Draining Whelk",
+        "handler": "manalinkeh_card_draining_whelk",
+        "kind": "card"
+      }
+    },
+    "Mystic Snake": {
+      "oracle": {
+        "oracle_id": "161b6d06-e6a7-488e-9f9c-d266c1402a3a",
+        "name": "Mystic Snake",
+        "oracle_text": "Flash\nWhen this creature enters, counter target spell.",
+        "mana_cost": "{1}{G}{U}{U}",
+        "type_line": "Creature — Snake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/a25/208/mystic-snake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5405,
+        "iid": 6444,
+        "name": "Mystic Snake",
+        "handler": "manalinkeh_card_mystic_snake",
+        "kind": "card"
+      }
+    },
+    "Spellstutter Sprite": {
+      "oracle": {
+        "oracle_id": "32e60fb4-e841-4f82-9c83-5e63766e8e6f",
+        "name": "Spellstutter Sprite",
+        "oracle_text": "Flash\nFlying\nWhen this creature enters, counter target spell with mana value X or less, where X is the number of Faeries you control.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Faerie Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mma/65/spellstutter-sprite?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9265,
+        "iid": 9126,
+        "name": "Spellstutter Sprite",
+        "handler": "manalinkeh_card_spellstutter_sprite",
+        "kind": "card"
+      }
+    },
+    "Spell Queller": {
+      "oracle": {
+        "oracle_id": "135135f2-1643-40db-91f2-bb7b956d212c",
+        "name": "Spell Queller",
+        "oracle_text": "Flash\nFlying\nWhen this creature enters, exile target spell with mana value 4 or less.\nWhen this creature leaves the battlefield, the exiled card's owner may cast that card without paying its mana cost.",
+        "mana_cost": "{1}{W}{U}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Flash"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/248/spell-queller?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16192,
+        "iid": 16280,
+        "name": "Spell Queller",
+        "handler": "manalinkeh_card_spell_queller",
+        "kind": "card"
+      }
+    },
+    "Frilled Mystic": {
+      "oracle": {
+        "oracle_id": "724bc69c-cd09-4ff8-91e7-70500b9474e1",
+        "name": "Frilled Mystic",
+        "oracle_text": "Flash\nWhen this creature enters, you may counter target spell.",
+        "mana_cost": "{G}{G}{U}{U}",
+        "type_line": "Creature — Elf Lizard Wizard",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/183/frilled-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19629,
+        "iid": 19563,
+        "name": "Frilled Mystic",
+        "handler": "manalinkeh_card_frilled_mystic",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Bitterblossom": {
+      "oracle": {
+        "oracle_id": "fb868840-09fa-49b1-85cb-b08ad065e972",
+        "name": "Bitterblossom",
+        "oracle_text": "At the beginning of your upkeep, you lose 1 life and create a 1/1 black Faerie Rogue creature token with flying.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Kindred Enchantment — Faerie",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/69/bitterblossom?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1440,
+        "iid": 1015,
+        "name": "Bitterblossom",
+        "handler": "manalinkeh_card_bitterblossom",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Dazzling Ramparts": {
+      "oracle": {
+        "oracle_id": "0527fc47-2bfc-4d02-90fa-5a1284f89a0a",
+        "name": "Dazzling Ramparts",
+        "oracle_text": "Defender\n{1}{W}, {T}: Tap target creature.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "7",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/6/dazzling-ramparts?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14247,
+        "iid": 2299,
+        "name": "Dazzling Ramparts",
+        "handler": "manalinkeh_card_dazzling_ramparts",
+        "kind": "card"
+      }
+    },
+    "Drift of Phantasms": {
+      "oracle": {
+        "oracle_id": "6ee51134-c4ad-4101-8ce2-23dde9359cd4",
+        "name": "Drift of Phantasms",
+        "oracle_text": "Defender (This creature can't attack.)\nFlying\nTransmute {1}{U}{U} ({1}{U}{U}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Spirit",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Defender",
+          "Transmute"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/42/drift-of-phantasms?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7828,
+        "iid": 2753,
+        "name": "Drift of Phantasms",
+        "handler": "manalinkeh_card_drift_of_phantasms",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Great Sable Stag": {
+      "oracle": {
+        "oracle_id": "d6dbb83d-3215-4446-8480-8f1bf8cf2938",
+        "name": "Great Sable Stag",
+        "oracle_text": "This spell can't be countered.\nProtection from blue and from black (This creature can't be blocked, targeted, dealt damage, or enchanted by anything blue or black.)",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Creature — Elk",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Protection"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/186/great-sable-stag?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10425,
+        "iid": 4183,
+        "name": "Great Sable Stag",
+        "handler": "manalinkeh_card_terra_stomper",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Jace's Ingenuity": {
+      "oracle": {
+        "oracle_id": "ce588fd3-642e-4df9-8061-6fcfc6e81270",
+        "name": "Jace's Ingenuity",
+        "oracle_text": "Draw three cards.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/63/jaces-ingenuity?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11137,
+        "iid": 5003,
+        "name": "Jace's Ingenuity",
+        "handler": "manalinkeh_card_concentrate",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Oona's Gatewarden": {
+      "oracle": {
+        "oracle_id": "439f7ac8-19f0-4227-82a7-48294adc2114",
+        "name": "Oona's Gatewarden",
+        "oracle_text": "Defender, flying\nWither (This deals damage to creatures in the form of -1/-1 counters.)",
+        "mana_cost": "{U/B}",
+        "type_line": "Creature — Faerie Soldier",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Defender",
+          "Wither"
+        ],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/shm/173/oonas-gatewarden?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9618,
+        "iid": 13860,
+        "name": "Oona's Gatewarden",
+        "handler": "manalinkeh_card_scuzzback_scrapper",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Reach Through Mists": {
+      "oracle": {
+        "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+        "name": "Reach Through Mists",
+        "oracle_text": "Draw a card.",
+        "mana_cost": "{U}",
+        "type_line": "Instant — Arcane",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/7/reach-through-mists?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7353,
+        "iid": 7720,
+        "name": "Reach Through Mists",
+        "handler": "manalinkeh_card_reach_through_mists",
+        "kind": "card"
+      }
+    },
+    "Terra Stomper": {
+      "oracle": {
+        "oracle_id": "d688baac-0574-4d88-b7eb-a7384c298ef5",
+        "name": "Terra Stomper",
+        "oracle_text": "This spell can't be countered.\nTrample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)",
+        "mana_cost": "{3}{G}{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "8",
+        "toughness": "8",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ori/288/terra-stomper?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10686,
+        "iid": 9817,
+        "name": "Terra Stomper",
+        "handler": "manalinkeh_card_terra_stomper",
+        "kind": "card"
+      }
+    },
+    "Think Twice": {
+      "oracle": {
+        "oracle_id": "fa85c5a2-8e83-4624-a35a-a0bbf17ecbb4",
+        "name": "Think Twice",
+        "oracle_text": "Draw a card.\nFlashback {2}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/787/think-twice?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8702,
+        "iid": 9890,
+        "name": "Think Twice",
+        "handler": "manalinkeh_card_think_twice",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Weave Fate": {
+      "oracle": {
+        "oracle_id": "ff568a29-e31a-4bc3-b8a3-8fa56f91d52d",
+        "name": "Weave Fate",
+        "oracle_text": "Draw two cards.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ori/279/weave-fate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14429,
+        "iid": 10885,
+        "name": "Weave Fate",
+        "handler": "manalinkeh_card_divination",
+        "kind": "card"
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "csvid": 6796,
+  "card": "Sword of Kaldra",
+  "recipes": [
+    {
+      "family": "equipment_combat_damage_board_effects",
+      "version": 2,
+      "params": {
+        "csvid": 6796,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "equip": 4,
+        "bonus": [
+          5,
+          5
+        ]
+      },
+      "oracle_text": "Equipped creature gets +5/+5.\nWhenever equipped creature deals damage to a creature, exile that creature. (Exile it only if it's still on the battlefield.)\nEquip {4} ({4}: Attach to target creature you control. Equip only as a sorcery.)",
+      "variants": [
+        "blocked_exile_0",
+        "blocked_exile_1",
+        "noncombat_exile_0",
+        "noncombat_exile_1",
+        "lethal_dies_0",
+        "lethal_dies_1",
+        "face_0",
+        "face_1",
+        "bare_ping_0",
+        "bare_ping_1"
+      ]
+    }
+  ]
+}

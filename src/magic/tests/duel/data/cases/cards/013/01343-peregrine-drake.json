@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 1343,
+  "card": "Peregrine Drake",
+  "recipes": [
+    {
+      "family": "entry_rider_energy_and_mana",
+      "version": 2,
+      "params": {
+        "csvid": 1343,
+        "printed_cost": "{4}{U}"
+      },
+      "oracle_text": "Flying\nWhen this creature enters, untap up to five lands.",
+      "variants": [
+        "empty_0",
+        "countered_0",
+        "capped_0",
+        "partial_0",
+        "opposing_0",
+        "flying_0",
+        "empty_1",
+        "countered_1",
+        "capped_1",
+        "partial_1",
+        "opposing_1",
+        "flying_1"
+      ]
+    }
+  ]
+}

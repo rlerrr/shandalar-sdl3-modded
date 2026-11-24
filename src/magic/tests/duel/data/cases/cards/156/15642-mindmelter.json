@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "csvid": 15642,
+  "card": "Mindmelter",
+  "recipes": [
+    {
+      "family": "devoid_colorless_activations",
+      "version": 2,
+      "params": {
+        "price": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          2,
+          2
+        ],
+        "effect": "exile_hand",
+        "generic": 3,
+        "colorless": 1,
+        "once": false
+      },
+      "oracle_text": "Devoid (This card has no color.)\nThis creature can't be blocked.\n{3}{C}: Target opponent exiles a card from their hand. Activate only as a sorcery. ({C} represents colorless mana.)",
+      "variants": [
+        "exact_0",
+        "exact_1",
+        "colored_only_0",
+        "colored_only_1",
+        "short_0",
+        "short_1",
+        "replay_0",
+        "replay_1",
+        "mixed_0",
+        "mixed_1",
+        "unblockable_0",
+        "unblockable_1",
+        "empty_hand_0",
+        "empty_hand_1",
+        "offturn_denied_0",
+        "offturn_denied_1"
+      ]
+    }
+  ]
+}

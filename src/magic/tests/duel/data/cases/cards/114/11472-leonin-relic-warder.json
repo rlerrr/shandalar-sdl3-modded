@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Leonin Relic-Warder",
+  "csvid": 11472,
+  "recipes": [
+    {
+      "family": "entry_follow_on_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 11472,
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "When this creature enters, you may exile target artifact or enchantment.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+      "variants": [
+        "artifact_0",
+        "artifact_1",
+        "enchantment_0",
+        "enchantment_1",
+        "decline_0",
+        "decline_1",
+        "empty_0",
+        "empty_1"
+      ]
+    }
+  ]
+}

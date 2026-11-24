@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Artisan of Kozilek",
+  "csvid": 10870,
+  "recipes": [
+    {
+      "family": "attack_trigger_follow_on_annihilator_and_myriad",
+      "version": 2,
+      "params": {
+        "csvid": 10870,
+        "printed_mana": "{9}",
+        "rules": "When you cast this spell, you may return target creature card from your graveyard to the battlefield.\nAnnihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents of their choice.)"
+      },
+      "oracle_text": "When you cast this spell, you may return target creature card from your graveyard to the battlefield.\nAnnihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents of their choice.)",
+      "variants": [
+        "return_cast_attack_0",
+        "return_cast_attack_1",
+        "short_defender_0",
+        "short_defender_1",
+        "no_creature_0",
+        "no_creature_1",
+        "decline_return_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "card": "Mirror March",
+  "csvid": 19678,
+  "recipes": [
+    {
+      "family": "coin_flip_upkeep_and_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 19678,
+        "price": [
+          5,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "clauses": [
+          "Whenever a nontoken creature you control enters, flip a coin until you lose a flip. For each flip you won, create a token that's a copy of that creature. Those tokens gain haste. Exile them at the beginning of the next end step."
+        ],
+        "modes": [
+          "zero",
+          "one",
+          "two",
+          "opponent_enters",
+          "token_enters",
+          "source_gone"
+        ]
+      },
+      "oracle_text": "Whenever a nontoken creature you control enters, flip a coin until you lose a flip. For each flip you won, create a token that's a copy of that creature. Those tokens gain haste. Exile them at the beginning of the next end step.",
+      "variants": [
+        "zero_0",
+        "zero_1",
+        "one_0",
+        "one_1",
+        "two_0",
+        "two_1",
+        "opponent_enters_0",
+        "opponent_enters_1",
+        "token_enters_0",
+        "token_enters_1",
+        "source_gone_0",
+        "source_gone_1"
+      ]
+    }
+  ]
+}

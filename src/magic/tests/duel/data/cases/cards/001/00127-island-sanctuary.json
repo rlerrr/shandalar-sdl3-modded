@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Island Sanctuary",
+  "csvid": 127,
+  "recipes": [
+    {
+      "family": "draw_step_skip_and_trigger",
+      "version": 2,
+      "params": {
+        "csvid": 127,
+        "casting_cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "clauses": [
+          "If you would draw a card during your draw step, instead you may skip that draw. If you do, until your next turn, you can't be attacked except by creatures with flying and/or islandwalk."
+        ]
+      },
+      "oracle_text": "If you would draw a card during your draw step, instead you may skip that draw. If you do, until your next turn, you can't be attacked except by creatures with flying and/or islandwalk.",
+      "variants": [
+        "protect_expires_0",
+        "protect_expires_1",
+        "outside_draw_0",
+        "outside_draw_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

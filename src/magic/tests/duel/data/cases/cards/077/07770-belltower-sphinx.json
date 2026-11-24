@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 7770,
+  "card": "Belltower Sphinx",
+  "recipes": [
+    {
+      "family": "mill_combat_and_draw",
+      "version": 2,
+      "params": {
+        "csvid": 7770,
+        "printed_cost": "{4}{U}"
+      },
+      "oracle_text": "Flying\nWhenever a source deals damage to this creature, that source's controller mills that many cards.",
+      "variants": [
+        "opponent_spell_0",
+        "own_spell_0",
+        "combat_0",
+        "lethal_0",
+        "flight_0",
+        "prevented_0",
+        "opponent_spell_1",
+        "own_spell_1",
+        "combat_1",
+        "lethal_1",
+        "flight_1",
+        "prevented_1"
+      ]
+    }
+  ]
+}

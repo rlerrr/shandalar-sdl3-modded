@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 19412,
+  "card": "Knight of Autumn",
+  "recipes": [
+    {
+      "family": "entry_rider_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 19412,
+        "printed_cost": "{1}{G}{W}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, choose one —\n• Put two +1/+1 counters on this creature.\n• Destroy target artifact or enchantment.\n• You gain 4 life.",
+      "variants": [
+        "counters_0",
+        "artifact_0",
+        "enchantment_0",
+        "life_0",
+        "indestructible_0",
+        "no_destruction_targets_0",
+        "counters_1",
+        "artifact_1",
+        "enchantment_1",
+        "life_1",
+        "indestructible_1",
+        "no_destruction_targets_1"
+      ]
+    }
+  ]
+}

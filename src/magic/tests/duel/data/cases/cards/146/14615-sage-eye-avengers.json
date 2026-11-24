@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Sage-Eye Avengers",
+  "csvid": 14615,
+  "recipes": [
+    {
+      "family": "attack_trigger_zones_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 14615,
+        "cost": [
+          4,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhenever this creature attacks, you may return target creature to its owner's hand if its power is less than this creature's power.",
+      "variants": [
+        "smaller_0",
+        "smaller_1",
+        "equal_0",
+        "equal_1",
+        "own_0",
+        "own_1",
+        "prowess_0",
+        "prowess_1",
+        "decline_0",
+        "decline_1"
+      ]
+    }
+  ]
+}

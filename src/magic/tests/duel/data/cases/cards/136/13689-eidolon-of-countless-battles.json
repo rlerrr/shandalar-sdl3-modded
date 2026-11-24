@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "card": "Eidolon of Countless Battles",
+  "csvid": 13689,
+  "recipes": [
+    {
+      "family": "bestow_dynamic_and_control",
+      "version": 2,
+      "params": {
+        "csvid": 13689,
+        "normal": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "bestowed": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "creature": [
+          0,
+          0
+        ],
+        "riders": [
+          "This creature and enchanted creature each get +1/+1 for each creature you control and +1/+1 for each Aura you control."
+        ]
+      },
+      "oracle_text": "Bestow {2}{W}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nThis creature and enchanted creature each get +1/+1 for each creature you control and +1/+1 for each Aura you control.",
+      "variants": [
+        "regular_growth_0",
+        "regular_growth_1",
+        "foreign_dynamic_detach_0",
+        "foreign_dynamic_detach_1",
+        "pending_host_lost_0",
+        "pending_host_lost_1",
+        "enemy_aura_ignored_0",
+        "enemy_aura_ignored_1"
+      ]
+    }
+  ]
+}

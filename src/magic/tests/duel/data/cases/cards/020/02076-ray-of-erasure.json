@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Ray of Erasure",
+  "csvid": 2076,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "next_upkeep_cantrip_riders",
+      "version": 2,
+      "oracle_text": "Target player mills a card.\nDraw a card at the beginning of the next turn's upkeep.",
+      "params": {
+        "mode": "mill",
+        "instant": true,
+        "cost": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "effect_0",
+        "effect_1",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "repeat_0",
+        "repeat_1",
+        "offturn_0",
+        "offturn_1",
+        "own_library_0",
+        "own_library_1",
+        "empty_target_0",
+        "empty_target_1"
+      ]
+    }
+  ]
+}

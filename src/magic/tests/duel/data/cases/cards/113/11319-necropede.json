@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 11319,
+  "card": "Necropede",
+  "recipes": [
+    {
+      "family": "departure_counters_and_search",
+      "version": 2,
+      "params": {
+        "csvid": 11319,
+        "printed_cost": "{2}"
+      },
+      "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nWhen this creature dies, you may put a -1/-1 counter on target creature.",
+      "variants": [
+        "dies_0",
+        "decline_0",
+        "bounce_0",
+        "infect_player_0",
+        "infect_block_0",
+        "dies_1",
+        "bounce_1",
+        "infect_player_1",
+        "infect_block_1"
+      ]
+    }
+  ]
+}

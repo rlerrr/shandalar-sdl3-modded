@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Growing Ranks",
+  "csvid": 12741,
+  "recipes": [
+    {
+      "family": "upkeep_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 12741,
+        "mana_cost": "{2}{G/W}{G/W}"
+      },
+      "oracle_text": "At the beginning of your upkeep, populate. (Create a token that's a copy of a creature token you control.)",
+      "variants": [
+        "copy_0",
+        "copy_1",
+        "foe_token_0",
+        "foe_token_1",
+        "none_0",
+        "none_1"
+      ]
+    }
+  ]
+}

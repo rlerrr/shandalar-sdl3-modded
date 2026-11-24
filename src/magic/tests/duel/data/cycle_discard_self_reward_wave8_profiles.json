@@ -1,0 +1,294 @@
+{
+  "sources": {
+    "Flameblade Adept": {
+      "oracle_id": "b1c721e6-d0b1-4443-937d-89f7c3a459e6",
+      "name": "Flameblade Adept",
+      "oracle_text": "Menace\nWhenever you cycle or discard a card, this creature gets +1/+0 until end of turn.",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Jackal Warrior",
+      "power": "1",
+      "toughness": "2",
+      "keywords": [
+        "Menace"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Hekma Sentinels": {
+      "oracle_id": "90ea758d-3783-47a5-bb18-9ff9377113fb",
+      "name": "Hekma Sentinels",
+      "oracle_text": "Whenever you cycle or discard a card, this creature gets +1/+1 until end of turn.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Human Cleric",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Horror of the Broken Lands": {
+      "oracle_id": "6de20c2c-b8a8-4f12-897b-a2f55d7eed87",
+      "name": "Horror of the Broken Lands",
+      "oracle_text": "Whenever you cycle or discard another card, this creature gets +2/+1 until end of turn.\nCycling {B} ({B}, Discard this card: Draw a card.)",
+      "mana_cost": "{4}{B}",
+      "type_line": "Creature — Horror",
+      "power": "4",
+      "toughness": "4",
+      "keywords": [
+        "Cycling"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 5.0,
+      "layout": "normal"
+    },
+    "Pitiless Vizier": {
+      "oracle_id": "340e1078-5158-4199-ab43-976741780b2b",
+      "name": "Pitiless Vizier",
+      "oracle_text": "Whenever you cycle or discard a card, this creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it. If its toughness is 0 or less, it still dies.)",
+      "mana_cost": "{3}{B}",
+      "type_line": "Creature — Minotaur Cleric",
+      "power": "4",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Cunning Survivor": {
+      "oracle_id": "e6dfac7c-72ed-4db8-97b0-371ed9108b00",
+      "name": "Cunning Survivor",
+      "oracle_text": "Whenever you cycle or discard a card, this creature gets +1/+0 until end of turn and can't be blocked this turn.",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Human Warrior",
+      "power": "1",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Grisly Survivor": {
+      "oracle_id": "8fe1e619-f827-43f5-acaf-3b79aa671d1d",
+      "name": "Grisly Survivor",
+      "oracle_text": "Whenever you cycle or discard a card, this creature gets +2/+0 until end of turn.",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Minotaur Warrior",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    }
+  },
+  "witnesses": {
+    "Expunge": {
+      "oracle_id": "4b1fee86-360d-41d8-9238-eff216376732",
+      "name": "Expunge",
+      "oracle_text": "Destroy target nonartifact, nonblack creature. It can't be regenerated.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "mana_cost": "{2}{B}",
+      "type_line": "Instant",
+      "keywords": [
+        "Cycling"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Grasp of Darkness": {
+      "oracle_id": "494c819d-7d73-432b-8c96-4cb9dcd31094",
+      "name": "Grasp of Darkness",
+      "oracle_text": "Target creature gets -4/-4 until end of turn.",
+      "mana_cost": "{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature — Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Reach Through Mists": {
+      "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+      "name": "Reach Through Mists",
+      "oracle_text": "Draw a card.",
+      "mana_cost": "{U}",
+      "type_line": "Instant — Arcane",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Tireless Tribe": {
+      "oracle_id": "5dfbcdb4-d2ad-477d-b37d-db4725410b27",
+      "name": "Tireless Tribe",
+      "oracle_text": "Discard a card: This creature gets +0/+4 until end of turn.",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Nomad",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    }
+  },
+  "handlers": {
+    "Cunning Survivor": "manalinkeh_card_cunning_survivor",
+    "Expunge": "manalinkeh_card_expunge",
+    "Flameblade Adept": "manalinkeh_card_flameblade_adept",
+    "Forest": "manalinkeh_plain_mana_producer",
+    "Grasp of Darkness": "manalinkeh_card_grasp_of_darkness",
+    "Grizzly Bears": "card_dummy",
+    "Hekma Sentinels": "manalinkeh_card_hekma_sentinels",
+    "Horror of the Broken Lands": "manalinkeh_card_horror_of_the_broken_lands",
+    "Island": "manalinkeh_plain_mana_producer",
+    "Mountain": "manalinkeh_plain_mana_producer",
+    "Ornithopter": "card_dummy",
+    "Pitiless Vizier": "manalinkeh_card_pitiless_vizier",
+    "Plains": "manalinkeh_plain_mana_producer",
+    "Reach Through Mists": "manalinkeh_card_reach_through_mists",
+    "Tireless Tribe": "manalinkeh_card_tireless_tribe",
+    "Grisly Survivor": "manalinkeh_card_grisly_survivor"
+  }
+}

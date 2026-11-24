@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Sedraxis Alchemist",
+  "csvid": 10203,
+  "recipes": [
+    {
+      "family": "entry_trigger_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 10203,
+        "cost": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, if you control a blue permanent, return target nonland permanent to its owner's hand.",
+      "variants": [
+        "own_blue_0",
+        "own_blue_1",
+        "opponent_blue_0",
+        "opponent_blue_1",
+        "land_foil_0",
+        "land_foil_1"
+      ]
+    }
+  ]
+}

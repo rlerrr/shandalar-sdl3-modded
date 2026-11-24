@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Banshee of the Dread Choir",
+  "csvid": 15498,
+  "recipes": [
+    {
+      "family": "attack_trigger_follow_on_annihilator_and_myriad",
+      "version": 2,
+      "params": {
+        "csvid": 15498,
+        "printed_mana": "{3}{B}{B}",
+        "rules": "Myriad (Whenever this creature attacks, for each opponent other than defending player, you may create a token copy that's tapped and attacking that player or a planeswalker they control. Exile the tokens at end of combat.)\nWhenever this creature deals combat damage to a player, that player discards a card."
+      },
+      "oracle_text": "Myriad (Whenever this creature attacks, for each opponent other than defending player, you may create a token copy that's tapped and attacking that player or a planeswalker they control. Exile the tokens at end of combat.)\nWhenever this creature deals combat damage to a player, that player discards a card.",
+      "variants": [
+        "hit_discard_0",
+        "hit_discard_1",
+        "blocked_0",
+        "blocked_1",
+        "empty_hand_0",
+        "empty_hand_1",
+        "other_attacker_0",
+        "other_attacker_1"
+      ]
+    }
+  ]
+}

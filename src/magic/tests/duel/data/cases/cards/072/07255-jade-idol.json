@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "csvid": 7255,
+  "card": "Jade Idol",
+  "recipes": [
+    {
+      "family": "cast_spirit_or_arcane_riders",
+      "version": 2,
+      "oracle_text": "Whenever you cast a Spirit or Arcane spell, this artifact becomes a 4/4 Spirit artifact creature until end of turn.",
+      "params": {
+        "effect": "animation",
+        "price": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "flying": false,
+        "power": null,
+        "toughness": null,
+        "extra": [
+          "attack_animated",
+          "expires"
+        ],
+        "human": []
+      },
+      "variants": [
+        "own_spirit_0",
+        "own_spirit_1",
+        "own_arcane_0",
+        "own_arcane_1",
+        "own_other_creature_0",
+        "own_other_creature_1",
+        "own_other_instant_0",
+        "own_other_instant_1",
+        "enemy_spirit_0",
+        "enemy_spirit_1",
+        "enemy_arcane_0",
+        "enemy_arcane_1",
+        "attack_animated_0",
+        "attack_animated_1",
+        "expires_0",
+        "expires_1"
+      ]
+    }
+  ]
+}

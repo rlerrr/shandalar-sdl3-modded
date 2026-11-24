@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "csvid": 373,
+  "card": "Niall Silvain",
+  "recipes": [
+    {
+      "family": "regeneration_targeted_abilities",
+      "version": 2,
+      "params": {
+        "csvid": 373,
+        "mana": [
+          0,
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        "activation": "{G}{G}{G}{G}",
+        "tap": true,
+        "stats": [
+          2,
+          2
+        ]
+      },
+      "oracle_text": "{G}{G}{G}{G}, {T}: Regenerate target creature.",
+      "variants": [
+        "own_0",
+        "own_1",
+        "foreign_0",
+        "foreign_1",
+        "sick_0",
+        "sick_1",
+        "tapped_0",
+        "tapped_1",
+        "short_0",
+        "short_1",
+        "proactive_0",
+        "proactive_1"
+      ]
+    }
+  ]
+}

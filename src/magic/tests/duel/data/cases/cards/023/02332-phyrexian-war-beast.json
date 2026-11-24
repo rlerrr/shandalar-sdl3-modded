@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Phyrexian War Beast",
+  "csvid": 2332,
+  "recipes": [
+    {
+      "family": "departure_linked_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 2332
+      },
+      "oracle_text": "When this creature leaves the battlefield, sacrifice a land and this creature deals 1 damage to you.",
+      "variants": [
+        "bounce_0",
+        "bounce_1",
+        "destroy_0",
+        "destroy_1",
+        "no_land_0",
+        "no_land_1"
+      ]
+    }
+  ]
+}

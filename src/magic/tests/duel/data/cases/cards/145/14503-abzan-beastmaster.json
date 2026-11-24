@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Abzan Beastmaster",
+  "csvid": 14503,
+  "recipes": [
+    {
+      "family": "upkeep_draw_and_discard",
+      "version": 2,
+      "params": {
+        "csvid": 14503,
+        "printed_mana": "{2}{G}",
+        "rules": "At the beginning of your upkeep, draw a card if you control the creature with the greatest toughness or tied for the greatest toughness."
+      },
+      "oracle_text": "At the beginning of your upkeep, draw a card if you control the creature with the greatest toughness or tied for the greatest toughness.",
+      "variants": [
+        "greater_toughness_0",
+        "greater_toughness_1",
+        "tied_toughness_0",
+        "tied_toughness_1",
+        "smaller_toughness_0",
+        "smaller_toughness_1"
+      ]
+    }
+  ]
+}

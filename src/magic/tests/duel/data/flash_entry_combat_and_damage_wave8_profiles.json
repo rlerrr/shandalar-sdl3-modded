@@ -1,0 +1,418 @@
+{
+  "sources": {
+    "Angel of the Dire Hour": {
+      "oracle": {
+        "oracle_id": "8b1e6b7c-892d-4058-b183-9121cdd623f0",
+        "name": "Angel of the Dire Hour",
+        "oracle_text": "Flash\nFlying\nWhen this creature enters, if you cast it from your hand, exile all attacking creatures.",
+        "mana_cost": "{5}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Flash"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/85/angel-of-the-dire-hour?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14439,
+        "iid": 444,
+        "name": "Angel of the Dire Hour",
+        "handler": "manalinkeh_card_angel_of_the_dire_hour",
+        "kind": "card"
+      }
+    },
+    "Bogardan Hellkite": {
+      "oracle": {
+        "oracle_id": "699bc130-2f1f-4bc8-a25f-9329e40efbb1",
+        "name": "Bogardan Hellkite",
+        "oracle_text": "Flash\nFlying\nWhen this creature enters, it deals 5 damage divided as you choose among any number of targets.",
+        "mana_cost": "{6}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Flash"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/afc/115/bogardan-hellkite?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1539,
+        "iid": 1190,
+        "name": "Bogardan Hellkite",
+        "handler": "manalinkeh_card_bogardan_hellkite",
+        "kind": "card"
+      }
+    },
+    "Cloudthresher": {
+      "oracle": {
+        "oracle_id": "ab0e2aa0-1ddd-4a4c-b7cd-4063caaa8bcd",
+        "name": "Cloudthresher",
+        "oracle_text": "Flash\nReach\nWhen this creature enters, it deals 2 damage to each creature with flying and each player.\nEvoke {2}{G}{G} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+        "mana_cost": "{2}{G}{G}{G}{G}",
+        "type_line": "Creature — Elemental",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [
+          "Reach",
+          "Evoke",
+          "Flash"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cma/96/cloudthresher?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9099,
+        "iid": 1831,
+        "name": "Cloudthresher",
+        "handler": "manalinkeh_card_cloudthresher",
+        "kind": "card"
+      }
+    },
+    "Hollowhenge Spirit": {
+      "oracle": {
+        "oracle_id": "b34449d1-eab2-4be1-8351-568dc5ced7c3",
+        "name": "Hollowhenge Spirit",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nFlying\nWhen this creature enters, remove target attacking or blocking creature from combat.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Flash"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cn2/92/hollowhenge-spirit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12211,
+        "iid": 4603,
+        "name": "Hollowhenge Spirit",
+        "handler": "manalinkeh_card_hollowhenge_spirit",
+        "kind": "card"
+      }
+    },
+    "Nivix Barrier": {
+      "oracle": {
+        "oracle_id": "aa4cb5fb-e81c-410f-8986-645671b0a1d3",
+        "name": "Nivix Barrier",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nDefender (This creature can't attack.)\nWhen this creature enters, target attacking creature gets -4/-0 until end of turn.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Illusion Wall",
+        "power": "0",
+        "toughness": "4",
+        "keywords": [
+          "Flash",
+          "Defender"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ori/66/nivix-barrier?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15190,
+        "iid": 13793,
+        "name": "Nivix Barrier",
+        "handler": "manalinkeh_card_nivix_barrier",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Air Elemental": {
+      "oracle": {
+        "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+        "name": "Air Elemental",
+        "oracle_text": "Flying",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/44/air-elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 0,
+        "iid": 298,
+        "name": "Air Elemental",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Cloudshift": {
+      "oracle": {
+        "oracle_id": "6879f5ce-7a1b-4606-bad1-885779b0d456",
+        "name": "Cloudshift",
+        "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tle/152/cloudshift?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12330,
+        "iid": 1828,
+        "name": "Cloudshift",
+        "handler": "manalinkeh_card_cloudshift",
+        "kind": "card"
+      }
+    },
+    "Eager Cadet": {
+      "oracle": {
+        "oracle_id": "39780477-01ba-40c6-8fe6-2178efb10b92",
+        "name": "Eager Cadet",
+        "oracle_text": "",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/S1/eager-cadet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4363,
+        "iid": 12406,
+        "name": "Eager Cadet",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Wall of Wood": {
+      "oracle": {
+        "oracle_id": "aa5e6894-8c97-46f8-a0fd-07c6db51e9a7",
+        "name": "Wall of Wood",
+        "oracle_text": "Defender (This creature can't attack.)",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "3",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/309/wall-of-wood?utm_source=api"
+      },
+      "registry": {
+        "csvid": 275,
+        "iid": 10793,
+        "name": "Wall of Wood",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Wind Drake": {
+      "oracle": {
+        "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+        "name": "Wind Drake",
+        "oracle_text": "Flying",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/70/wind-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1197,
+        "iid": 10989,
+        "name": "Wind Drake",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Krosan Tusker": {
+      "oracle": {
+        "oracle_id": "82406175-63b3-4972-be8b-db0e70c908cb",
+        "name": "Krosan Tusker",
+        "oracle_text": "Cycling {2}{G} ({2}{G}, Discard this card: Draw a card.)\nWhen you cycle this card, you may search your library for a basic land card, reveal that card, put it into your hand, then shuffle. (Do this before you draw.)",
+        "mana_cost": "{5}{G}{G}",
+        "type_line": "Creature — Boar Beast",
+        "power": "6",
+        "toughness": "5",
+        "keywords": [
+          "Cycling"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/302/krosan-tusker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6196,
+        "iid": 5405,
+        "name": "Krosan Tusker",
+        "handler": "manalinkeh_card_krosan_tusker",
+        "kind": "card"
+      }
+    }
+  }
+}

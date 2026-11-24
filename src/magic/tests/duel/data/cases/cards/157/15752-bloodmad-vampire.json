@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Bloodmad Vampire",
+  "csvid": 15752,
+  "recipes": [
+    {
+      "family": "madness_combat_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 15752,
+        "normal": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "madness": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "clauses": [
+          "Whenever this creature deals combat damage to a player, put a +1/+1 counter on it.",
+          "Madness {1}{R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)"
+        ]
+      },
+      "oracle_text": "Whenever this creature deals combat damage to a player, put a +1/+1 counter on it.\nMadness {1}{R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "normal_0",
+        "normal_1",
+        "short_0",
+        "short_1",
+        "blocked_0",
+        "blocked_1",
+        "offturn_paid_0",
+        "offturn_paid_1",
+        "normal_countered_0",
+        "normal_countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

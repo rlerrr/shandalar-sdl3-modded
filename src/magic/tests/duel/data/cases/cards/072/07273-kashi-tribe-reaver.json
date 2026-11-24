@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 7273,
+  "card": "Kashi-Tribe Reaver",
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_self_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 7273,
+        "printed_cost": "{3}{G}"
+      },
+      "oracle_text": "Whenever this creature deals combat damage to a creature, tap that creature and it doesn't untap during its controller's next untap step.\n{1}{G}: Regenerate this creature.",
+      "variants": [
+        "regenerate_0",
+        "short_0",
+        "terminate_0",
+        "proactive_0",
+        "freeze_0",
+        "fight_0",
+        "fog_0",
+        "regenerate_1",
+        "short_1",
+        "terminate_1",
+        "proactive_1",
+        "freeze_1",
+        "fight_1",
+        "fog_1"
+      ]
+    }
+  ]
+}

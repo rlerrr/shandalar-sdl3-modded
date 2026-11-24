@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 3539,
+  "card": "Pygmy Troll",
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_self_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 3539,
+        "printed_cost": "{1}{G}"
+      },
+      "oracle_text": "Whenever this creature becomes blocked by a creature, this creature gets +1/+1 until end of turn.\n{G}: Regenerate this creature.",
+      "variants": [
+        "regenerate_0",
+        "short_0",
+        "terminate_0",
+        "proactive_0",
+        "blocked_0",
+        "unblocked_0",
+        "defending_0",
+        "regenerate_1",
+        "short_1",
+        "terminate_1",
+        "proactive_1",
+        "blocked_1",
+        "unblocked_1",
+        "defending_1"
+      ]
+    }
+  ]
+}

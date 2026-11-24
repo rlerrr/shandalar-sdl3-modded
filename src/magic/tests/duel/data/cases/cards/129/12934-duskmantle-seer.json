@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Duskmantle Seer",
+  "csvid": 12934,
+  "recipes": [
+    {
+      "family": "upkeep_damage_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 12934
+      },
+      "oracle_text": "Flying\nAt the beginning of your upkeep, each player reveals the top card of their library, loses life equal to that card's mana value, then puts it into their hand.",
+      "variants": [
+        "both_high_0",
+        "both_high_1",
+        "zero_and_high_0",
+        "zero_and_high_1",
+        "flying_0",
+        "flying_1",
+        "empty_owner_0",
+        "empty_owner_1"
+      ]
+    }
+  ]
+}

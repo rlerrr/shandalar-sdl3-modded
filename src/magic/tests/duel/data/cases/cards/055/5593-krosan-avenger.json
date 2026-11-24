@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "csvid": 5593,
+  "card": "Krosan Avenger",
+  "recipes": [
+    {
+      "family": "threshold_combat_activated",
+      "version": 2,
+      "oracle_text": "Trample\nThreshold — {1}{G}: Regenerate this creature. Activate only if there are seven or more cards in your graveyard.",
+      "params": {
+        "csvid": 5593,
+        "delta": 0,
+        "clauses": [
+          "Trample",
+          "Threshold — {1}{G}: Regenerate this creature. Activate only if there are seven or more cards in your graveyard."
+        ],
+        "price": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "base": [
+          3,
+          1
+        ]
+      },
+      "variants": [
+        "six_0",
+        "six_1",
+        "seven_0",
+        "seven_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "countered_0",
+        "countered_1",
+        "lose_threshold_0",
+        "lose_threshold_1",
+        "replay_0",
+        "replay_1",
+        "crossing_0",
+        "crossing_1",
+        "regen_wrong_mana_0",
+        "regen_wrong_mana_1"
+      ]
+    }
+  ]
+}

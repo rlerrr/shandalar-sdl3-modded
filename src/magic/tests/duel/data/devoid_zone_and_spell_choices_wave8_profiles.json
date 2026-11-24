@@ -1,0 +1,725 @@
+{
+  "version": 1,
+  "sources": {
+    "Brutal Expulsion": {
+      "oracle": {
+        "oracle_id": "71d178b3-e5ca-4576-83f7-8dce74758acd",
+        "name": "Brutal Expulsion",
+        "oracle_text": "Devoid (This card has no color.)\nChoose one or both —\n• Return target spell or creature to its owner's hand.\n• Brutal Expulsion deals 2 damage to target creature or planeswalker. If that creature or planeswalker would die this turn, exile it instead.",
+        "mana_cost": "{2}{U}{R}",
+        "type_line": "Instant",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/200/brutal-expulsion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15287,
+        "iid": 11838,
+        "name": "Brutal Expulsion",
+        "handler": "manalinkeh_card_brutal_expulsion",
+        "kind": "card"
+      }
+    },
+    "Salvage Drone": {
+      "oracle": {
+        "oracle_id": "9b18bbf3-3b1c-4010-bc6f-e7eacb2ffb70",
+        "name": "Salvage Drone",
+        "oracle_text": "Devoid (This card has no color.)\nIngest (Whenever this creature deals combat damage to a player, that player exiles the top card of their library.)\nWhen this creature dies, you may draw a card. If you do, discard a card.",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Devoid",
+          "Ingest"
+        ],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/65/salvage-drone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15425,
+        "iid": 14371,
+        "name": "Salvage Drone",
+        "handler": "manalinkeh_card_salvage_drone",
+        "kind": "card"
+      }
+    },
+    "Sire of Stagnation": {
+      "oracle": {
+        "oracle_id": "ed6607f4-20ab-4d3f-a8af-bcc148423336",
+        "name": "Sire of Stagnation",
+        "oracle_text": "Devoid (This card has no color.)\nWhenever a land an opponent controls enters, that player exiles the top two cards of their library and you draw two cards.",
+        "mana_cost": "{4}{U}{B}",
+        "type_line": "Creature — Eldrazi",
+        "power": "5",
+        "toughness": "7",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/206/sire-of-stagnation?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15440,
+        "iid": 14638,
+        "name": "Sire of Stagnation",
+        "handler": "manalinkeh_card_sire_of_stagnation",
+        "kind": "card"
+      }
+    },
+    "Transgress the Mind": {
+      "oracle": {
+        "oracle_id": "9a9bc316-9652-46d9-9448-57b8902f5d6f",
+        "name": "Transgress the Mind",
+        "oracle_text": "Devoid (This card has no color.)\nTarget player reveals their hand. You choose a card from it with mana value 3 or greater and exile that card.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/101/transgress-the-mind?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15466,
+        "iid": 15170,
+        "name": "Transgress the Mind",
+        "handler": "manalinkeh_card_transgress_the_mind",
+        "kind": "card"
+      }
+    },
+    "Unnatural Aggression": {
+      "oracle": {
+        "oracle_id": "597d1dce-67e8-4c37-9781-eeaeb7c2d7b7",
+        "name": "Unnatural Aggression",
+        "oracle_text": "Devoid (This card has no color.)\nTarget creature you control fights target creature an opponent controls. If the creature an opponent controls would die this turn, exile it instead.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Devoid",
+          "Fight"
+        ],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/168/unnatural-aggression?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15476,
+        "iid": 15244,
+        "name": "Unnatural Aggression",
+        "handler": "manalinkeh_card_unnatural_aggression",
+        "kind": "card"
+      }
+    },
+    "Ruin in Their Wake": {
+      "oracle": {
+        "oracle_id": "68adbc52-34dd-47c4-bb1c-0c51033fe7cc",
+        "name": "Ruin in Their Wake",
+        "oracle_text": "Devoid (This card has no color.)\nSearch your library for a basic land card and reveal it. You may put that card onto the battlefield tapped if you control a land named Wastes. Otherwise, put that card into your hand. Then shuffle.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/122/ruin-in-their-wake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15670,
+        "iid": 15745,
+        "name": "Ruin in Their Wake",
+        "handler": "manalinkeh_card_ruin_on_their_wake",
+        "kind": "card"
+      }
+    },
+    "Witness the End": {
+      "oracle": {
+        "oracle_id": "340d2261-9454-4ab0-827c-49c7e76c7781",
+        "name": "Witness the End",
+        "oracle_text": "Devoid (This card has no color.)\nTarget opponent exiles two cards from their hand and loses 2 life.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/82/witness-the-end?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15721,
+        "iid": 15796,
+        "name": "Witness the End",
+        "handler": "manalinkeh_card_witness_the_end",
+        "kind": "card"
+      }
+    },
+    "Serpentine Spike": {
+      "oracle": {
+        "oracle_id": "c983644d-6741-4aa1-aa68-a6e680c26bb6",
+        "name": "Serpentine Spike",
+        "oracle_text": "Devoid (This card has no color.)\nSerpentine Spike deals 2 damage to target creature, 3 damage to another target creature, and 4 damage to a third target creature. If a creature dealt damage this way would die this turn, exile it instead.",
+        "mana_cost": "{5}{R}{R}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/133/serpentine-spike?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15433,
+        "iid": 14513,
+        "name": "Serpentine Spike",
+        "handler": "manalinkeh_card_serpentine_spike",
+        "kind": "card"
+      }
+    },
+    "Inverter of Truth": {
+      "oracle": {
+        "oracle_id": "941350ba-30e2-4549-865f-ca1bd7626782",
+        "name": "Inverter of Truth",
+        "oracle_text": "Devoid (This card has no color.)\nFlying\nWhen this creature enters, exile all cards from your library face down, then shuffle all cards from your graveyard into your library.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Creature — Eldrazi",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Flying",
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/72/inverter-of-truth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15617,
+        "iid": 15692,
+        "name": "Inverter of Truth",
+        "handler": "manalinkeh_card_inverter_of_truth",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Darksteel Citadel": {
+      "oracle": {
+        "oracle_id": "8dc067bf-f78f-4ac4-b6e7-b305c42cf0bc",
+        "name": "Darksteel Citadel",
+        "oracle_text": "Indestructible\n{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Artifact Land",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c21/285/darksteel-citadel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6870,
+        "iid": 2248,
+        "name": "Darksteel Citadel",
+        "handler": "manalinkeh_card_darksteel_citadel",
+        "kind": "card"
+      }
+    },
+    "Divination": {
+      "oracle": {
+        "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+        "name": "Divination",
+        "oracle_text": "Draw two cards.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/51/divination?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10405,
+        "iid": 2609,
+        "name": "Divination",
+        "handler": "manalinkeh_card_divination",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Wastes": {
+      "oracle": {
+        "oracle_id": "05d24b0c-904a-46b6-b42a-96a4d91a0dd4",
+        "name": "Wastes",
+        "oracle_text": "{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Basic Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/191/wastes?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15719,
+        "iid": 15794,
+        "name": "Wastes",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Dazzling Ramparts": {
+      "oracle": {
+        "oracle_id": "0527fc47-2bfc-4d02-90fa-5a1284f89a0a",
+        "name": "Dazzling Ramparts",
+        "oracle_text": "Defender\n{1}{W}, {T}: Tap target creature.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "7",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/6/dazzling-ramparts?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14247,
+        "iid": 2299,
+        "name": "Dazzling Ramparts",
+        "handler": "manalinkeh_card_dazzling_ramparts",
+        "kind": "card"
+      }
+    },
+    "Oracle of Dust": {
+      "oracle": {
+        "oracle_id": "6e5f50b2-0acc-42be-b9fd-32ea390c07fc",
+        "name": "Oracle of Dust",
+        "oracle_text": "Devoid (This card has no color.)\n{2}, Put a card an opponent owns from exile into that player's graveyard: Draw a card, then discard a card.",
+        "mana_cost": "{4}{U}",
+        "type_line": "Creature — Eldrazi Processor",
+        "power": "3",
+        "toughness": "5",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/63/oracle-of-dust?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15394,
+        "iid": 13867,
+        "name": "Oracle of Dust",
+        "handler": "manalinkeh_card_oracle_of_dust",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Wind Drake": {
+      "oracle": {
+        "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+        "name": "Wind Drake",
+        "oracle_text": "Flying",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/70/wind-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1197,
+        "iid": 10989,
+        "name": "Wind Drake",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

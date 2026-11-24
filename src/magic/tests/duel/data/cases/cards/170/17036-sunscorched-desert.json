@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Sunscorched Desert",
+  "csvid": 17036,
+  "recipes": [
+    {
+      "family": "entry_trigger_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 17036,
+        "cost": "",
+        "choices": [
+          "opponent_0",
+          "opponent_1",
+          "self_0",
+          "self_1",
+          "planeswalker_0",
+          "planeswalker_1",
+          "mana_0",
+          "mana_1"
+        ]
+      },
+      "oracle_text": "When this land enters, it deals 1 damage to target player or planeswalker.\n{T}: Add {C}.",
+      "variants": [
+        "opponent_0",
+        "opponent_1",
+        "self_0",
+        "self_1",
+        "planeswalker_0",
+        "planeswalker_1",
+        "mana_0",
+        "mana_1"
+      ]
+    }
+  ]
+}

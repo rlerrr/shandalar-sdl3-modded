@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Stunt Double",
+  "csvid": 16537,
+  "recipes": [
+    {
+      "family": "flash_remaining_triggers_and_copy",
+      "version": 2,
+      "params": {
+        "csvid": 16537,
+        "cost": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flash\nYou may have this creature enter as a copy of any creature on the battlefield.",
+      "variants": [
+        "copy_own_0",
+        "copy_own_1",
+        "copy_foe_0",
+        "copy_foe_1",
+        "copy_shroud_0",
+        "copy_shroud_1",
+        "decline_0",
+        "decline_1"
+      ]
+    }
+  ]
+}

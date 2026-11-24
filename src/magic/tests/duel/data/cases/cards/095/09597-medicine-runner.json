@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 9597,
+  "card": "Medicine Runner",
+  "recipes": [
+    {
+      "family": "entry_trigger_life_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 9597,
+        "printed_cost": "{1}{G/W}"
+      },
+      "oracle_text": "When this creature enters, you may remove a counter from target permanent.",
+      "variants": [
+        "white_charge_0",
+        "green_enemy_0",
+        "decline_0",
+        "countered_0",
+        "white_charge_1",
+        "green_enemy_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

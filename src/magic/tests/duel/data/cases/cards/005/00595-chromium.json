@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 595,
+  "card": "Chromium",
+  "recipes": [
+    {
+      "family": "upkeep_payment_and_sacrifice",
+      "version": 2,
+      "params": {
+        "csvid": 595,
+        "printed_cost": "{2}{W}{W}{U}{U}{B}{B}",
+        "keywords": [
+          "Flying",
+          "Rampage"
+        ]
+      },
+      "oracle_text": "Flying\nRampage 2 (Whenever this creature becomes blocked, it gets +2/+2 until end of turn for each creature blocking it beyond the first.)\nAt the beginning of your upkeep, sacrifice Chromium unless you pay {W}{U}{B}.",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "short_0",
+        "short_1",
+        "rampage_0",
+        "rampage_1"
+      ]
+    }
+  ]
+}

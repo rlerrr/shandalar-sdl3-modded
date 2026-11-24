@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 12556,
+  "card": "Crimson Muckwader",
+  "recipes": [
+    {
+      "family": "regeneration_self_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 12556,
+        "printed_cost": "{1}{R}"
+      },
+      "oracle_text": "This creature gets +1/+1 as long as you control a Swamp.\n{2}{B}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "variants": [
+        "regenerate_0",
+        "short_0",
+        "terminate_0",
+        "proactive_0",
+        "type_control_0",
+        "type_enter_leave_0",
+        "two_types_0",
+        "regenerate_1",
+        "short_1",
+        "terminate_1",
+        "proactive_1",
+        "type_control_1",
+        "type_enter_leave_1",
+        "two_types_1"
+      ]
+    }
+  ]
+}

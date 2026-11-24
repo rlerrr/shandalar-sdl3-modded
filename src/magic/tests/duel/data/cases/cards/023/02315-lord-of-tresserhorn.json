@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 2315,
+  "card": "Lord of Tresserhorn",
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_self_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 2315,
+        "printed_cost": "{1}{U}{B}{R}"
+      },
+      "oracle_text": "When Lord of Tresserhorn enters, you lose 2 life, you sacrifice two creatures, and target opponent draws two cards.\n{B}: Regenerate Lord of Tresserhorn.",
+      "variants": [
+        "regenerate_0",
+        "short_0",
+        "terminate_0",
+        "proactive_0",
+        "one_fodder_0",
+        "zero_fodder_0",
+        "protected_0",
+        "regenerate_1",
+        "short_1",
+        "terminate_1",
+        "proactive_1",
+        "one_fodder_1",
+        "zero_fodder_1",
+        "protected_1"
+      ]
+    }
+  ]
+}

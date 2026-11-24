@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "csvid": 15216,
+  "card": "Shaman of the Pack",
+  "recipes": [
+    {
+      "family": "remaining_entry_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 15216,
+        "printed_cost": "{1}{B}{G}"
+      },
+      "oracle_text": "When this creature enters, target opponent loses life equal to the number of Elves you control.",
+      "variants": [
+        "alone_0",
+        "scale_0",
+        "countered_0",
+        "alone_1",
+        "scale_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

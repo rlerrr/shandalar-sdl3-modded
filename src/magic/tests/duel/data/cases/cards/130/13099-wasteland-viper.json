@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "csvid": 13099,
+  "card": "Wasteland Viper",
+  "recipes": [
+    {
+      "family": "bloodrush_creature",
+      "version": 2,
+      "oracle_text": "Deathtouch\nBloodrush — {G}, Discard this card: Target attacking creature gets +1/+2 and gains deathtouch until end of turn.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "cast": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "fee": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "power": 1,
+          "toughness": 2,
+          "power_bonus": 1,
+          "toughness_bonus": 2,
+          "keyword": "Deathtouch",
+          "clauses": [
+            "Deathtouch",
+            "Bloodrush — {G}, Discard this card: Target attacking creature gets +1/+2 and gains deathtouch until end of turn."
+          ]
+        }
+      },
+      "variants": [
+        "cast_payment_0",
+        "cast_short_0",
+        "cast_wrong_color_0",
+        "cast_countered_0",
+        "printed_keyword_0",
+        "main_no_attack_0",
+        "combat_no_attack_0",
+        "hand_short_0",
+        "hand_wrong_color_0",
+        "activation_cancel_0",
+        "paid_own_0",
+        "paid_opposing_0",
+        "post_block_0",
+        "pending_bounced_0",
+        "pending_replay_0",
+        "keyword_expires_0",
+        "cast_payment_1",
+        "cast_short_1",
+        "cast_wrong_color_1",
+        "cast_countered_1",
+        "printed_keyword_1",
+        "main_no_attack_1",
+        "combat_no_attack_1",
+        "hand_short_1",
+        "hand_wrong_color_1",
+        "activation_cancel_1",
+        "paid_own_1",
+        "paid_opposing_1",
+        "post_block_1",
+        "pending_bounced_1",
+        "pending_replay_1",
+        "keyword_expires_1"
+      ]
+    }
+  ]
+}

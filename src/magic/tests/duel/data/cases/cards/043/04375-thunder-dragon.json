@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Thunder Dragon",
+  "csvid": 4375,
+  "recipes": [
+    {
+      "family": "entry_trigger_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 4375,
+        "cost": "{5}{R}{R}",
+        "choices": [
+          "scope_0",
+          "scope_1",
+          "ground_block_0",
+          "ground_block_1",
+          "flying_block_0",
+          "flying_block_1"
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, it deals 3 damage to each creature without flying.",
+      "variants": [
+        "scope_0",
+        "scope_1",
+        "ground_block_0",
+        "ground_block_1",
+        "flying_block_0",
+        "flying_block_1"
+      ]
+    }
+  ]
+}

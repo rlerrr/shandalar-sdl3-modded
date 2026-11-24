@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "card": "Den Protector",
+  "csvid": 14883,
+  "recipes": [
+    {
+      "family": "megamorph_zone_effects",
+      "version": 2,
+      "params": {
+        "effect": "den",
+        "cast_mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "flip_mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 1
+      },
+      "oracle_text": "Creatures with power less than this creature's power can't block it.\nMegamorph {1}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\nWhen this creature is turned face up, return target card from your graveyard to your hand.",
+      "variants": [
+        "hidden_0",
+        "faceup_0",
+        "hidden_choice_0",
+        "hidden_short_0",
+        "flip_0",
+        "flip_short_0",
+        "flip_wrong_0",
+        "offturn_0",
+        "replay_0",
+        "recover_land_0",
+        "recover_spell_0",
+        "empty_grave_0",
+        "foe_grave_0",
+        "shroud_0",
+        "lower_blocker_0",
+        "equal_blocker_0",
+        "higher_blocker_0",
+        "hidden_blocker_0",
+        "printed_blocker_0",
+        "hidden_1",
+        "faceup_1",
+        "hidden_choice_1",
+        "hidden_short_1",
+        "flip_1",
+        "flip_short_1",
+        "flip_wrong_1",
+        "offturn_1",
+        "replay_1",
+        "recover_land_1",
+        "recover_spell_1",
+        "empty_grave_1",
+        "foe_grave_1",
+        "shroud_1",
+        "lower_blocker_1",
+        "equal_blocker_1",
+        "higher_blocker_1",
+        "hidden_blocker_1",
+        "printed_blocker_1"
+      ]
+    }
+  ]
+}

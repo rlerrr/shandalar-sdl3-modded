@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Mournwhelk",
+  "csvid": 9216,
+  "recipes": [
+    {
+      "family": "entry_interaction_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 9216,
+        "printed_mana": "{6}{B}",
+        "rules": "When this creature enters, target player discards two cards.\nEvoke {3}{B} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)"
+      },
+      "oracle_text": "When this creature enters, target player discards two cards.\nEvoke {3}{B} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+      "variants": [
+        "ordinary_0",
+        "ordinary_1",
+        "evoke_0",
+        "evoke_1"
+      ]
+    }
+  ]
+}

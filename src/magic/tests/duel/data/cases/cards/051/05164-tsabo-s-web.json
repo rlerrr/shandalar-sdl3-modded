@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Tsabo's Web",
+  "csvid": 5164,
+  "recipes": [
+    {
+      "family": "entry_follow_on_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 5164,
+        "printed_mana": "{2}",
+        "rules": "When this artifact enters, draw a card.\nEach land with an activated ability that isn't a mana ability doesn't untap during its controller's untap step."
+      },
+      "oracle_text": "When this artifact enters, draw a card.\nEach land with an activated ability that isn't a mana ability doesn't untap during its controller's untap step.",
+      "variants": [
+        "nonmana_untap_0",
+        "nonmana_untap_1",
+        "restored_untap_0",
+        "restored_untap_1"
+      ]
+    }
+  ]
+}

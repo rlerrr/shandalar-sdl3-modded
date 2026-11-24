@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Ghostly Touch",
+  "csvid": 12379,
+  "recipes": [
+    {
+      "family": "attack_trigger_block_and_target",
+      "version": 2,
+      "params": {
+        "csvid": 12379,
+        "cost": "{1}{U}",
+        "choices": [
+          "tap_0",
+          "tap_1",
+          "untap_0",
+          "untap_1",
+          "decline_0",
+          "decline_1",
+          "ally_attacks_0",
+          "ally_attacks_1"
+        ]
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature has \"Whenever this creature attacks, you may tap or untap target permanent.\"",
+      "variants": [
+        "tap_0",
+        "tap_1",
+        "untap_0",
+        "untap_1",
+        "decline_0",
+        "decline_1",
+        "ally_attacks_0",
+        "ally_attacks_1"
+      ]
+    }
+  ]
+}

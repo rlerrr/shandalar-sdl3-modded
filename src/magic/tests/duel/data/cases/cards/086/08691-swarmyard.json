@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Swarmyard",
+  "csvid": 8691,
+  "recipes": [
+    {
+      "family": "regeneration_land_and_grants",
+      "version": 2,
+      "params": {
+        "csvid": 8691,
+        "mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{T}: Add {C}.\n{T}: Regenerate target Insect, Rat, Spider, or Squirrel. (The next time it would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "variants": [
+        "mana_0",
+        "mana_1",
+        "insect_0",
+        "insect_1",
+        "rat_0",
+        "rat_1",
+        "spider_0",
+        "spider_1",
+        "squirrel_0",
+        "squirrel_1",
+        "foreign_spider_0",
+        "foreign_spider_1",
+        "non_tribe_0",
+        "non_tribe_1",
+        "combat_0",
+        "combat_1"
+      ]
+    }
+  ]
+}

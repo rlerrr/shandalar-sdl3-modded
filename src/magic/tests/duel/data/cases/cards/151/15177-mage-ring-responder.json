@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "csvid": 15177,
+  "card": "Mage-Ring Responder",
+  "recipes": [
+    {
+      "family": "attack_damage_triggers",
+      "version": 2,
+      "oracle_text": "This creature doesn't untap during your untap step.\n{7}: Untap this creature.\nWhenever this creature attacks, it deals 7 damage to target creature defending player controls.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "kind": "responder",
+          "printed": [
+            7,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "equip": 0,
+          "creature": true,
+          "clauses": [
+            "This creature doesn't untap during your untap step.",
+            "{7}: Untap this creature.",
+            "Whenever this creature attacks, it deals 7 damage to target creature defending player controls."
+          ]
+        }
+      },
+      "variants": [
+        "cast_0",
+        "cast_1",
+        "short_cast_0",
+        "short_cast_1",
+        "fresh_attack_0",
+        "fresh_attack_1",
+        "hit_0",
+        "hit_1",
+        "own_only_0",
+        "own_only_1",
+        "locked_next_turn_0",
+        "locked_next_turn_1",
+        "paid_reentry_0",
+        "paid_reentry_1",
+        "short_untap_0",
+        "short_untap_1",
+        "opponent_attack_0",
+        "opponent_attack_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

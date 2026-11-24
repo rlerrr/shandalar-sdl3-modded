@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 11637,
+  "card": "Mindcrank",
+  "recipes": [
+    {
+      "family": "mill_combat_and_draw",
+      "version": 2,
+      "params": {
+        "csvid": 11637,
+        "printed_cost": "{2}"
+      },
+      "oracle_text": "Whenever an opponent loses life, that player mills that many cards. (Damage causes loss of life.)",
+      "variants": [
+        "combat_0",
+        "loss_0",
+        "own_loss_0",
+        "prevented_0",
+        "short_library_0",
+        "combat_1",
+        "loss_1",
+        "own_loss_1",
+        "prevented_1",
+        "short_library_1"
+      ]
+    }
+  ]
+}

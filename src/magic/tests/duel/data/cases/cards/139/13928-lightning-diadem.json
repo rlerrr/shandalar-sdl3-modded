@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Lightning Diadem",
+  "csvid": 13928,
+  "recipes": [
+    {
+      "family": "entry_trigger_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 13928,
+        "cost": "{5}{R}",
+        "choices": [
+          "player_0",
+          "player_1",
+          "lethal_0",
+          "lethal_1",
+          "detach_0",
+          "detach_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "Enchant creature\nWhen this Aura enters, it deals 2 damage to any target.\nEnchanted creature gets +2/+2.",
+      "variants": [
+        "player_0",
+        "player_1",
+        "lethal_0",
+        "lethal_1",
+        "detach_0",
+        "detach_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

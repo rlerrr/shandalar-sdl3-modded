@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Quarry Colossus",
+  "csvid": 13955,
+  "recipes": [
+    {
+      "family": "entry_interaction_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 13955,
+        "cost": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "When this creature enters, put target creature into its owner's library just beneath the top X cards of that library, where X is the number of Plains you control.",
+      "variants": [
+        "top_0",
+        "top_1",
+        "beneath_one_0",
+        "beneath_one_1",
+        "short_library_0",
+        "short_library_1",
+        "borrowed_owner_0",
+        "borrowed_owner_1"
+      ]
+    }
+  ]
+}

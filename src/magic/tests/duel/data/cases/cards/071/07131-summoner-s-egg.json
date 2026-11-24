@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Summoner's Egg",
+  "csvid": 7131,
+  "recipes": [
+    {
+      "family": "departure_linked_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 7131
+      },
+      "oracle_text": "Imprint — When this creature enters, you may exile a card from your hand face down.\nWhen this creature dies, turn the exiled card face up. If it's a creature card, put it onto the battlefield under your control.",
+      "variants": [
+        "creature_0",
+        "creature_1",
+        "noncreature_0",
+        "noncreature_1",
+        "decline_0",
+        "decline_1"
+      ]
+    }
+  ]
+}

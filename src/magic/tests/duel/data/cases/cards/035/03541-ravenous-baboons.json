@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 3541,
+  "card": "Ravenous Baboons",
+  "recipes": [
+    {
+      "family": "entry_trigger_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 3541,
+        "printed_cost": "{3}{R}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, destroy target nonbasic land.",
+      "variants": [
+        "own_nonbasic_0",
+        "foe_nonbasic_0",
+        "typed_nonbasic_0",
+        "basic_only_0",
+        "indestructible_0",
+        "own_nonbasic_1",
+        "foe_nonbasic_1",
+        "typed_nonbasic_1",
+        "basic_only_1",
+        "indestructible_1"
+      ]
+    }
+  ]
+}

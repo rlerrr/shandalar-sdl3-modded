@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "csvid": 10167,
+  "card": "Magister Sphinx",
+  "recipes": [
+    {
+      "family": "entry_trigger_life_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 10167,
+        "printed_cost": "{4}{W}{U}{B}"
+      },
+      "oracle_text": "Flying\nWhen this creature enters, target player's life total becomes 10.",
+      "variants": [
+        "short_0",
+        "countered_0",
+        "opponent_down_0",
+        "self_down_0",
+        "opponent_up_0",
+        "self_up_0",
+        "flying_0",
+        "reach_0",
+        "short_1",
+        "countered_1",
+        "opponent_down_1",
+        "self_down_1",
+        "opponent_up_1",
+        "self_up_1",
+        "flying_1",
+        "reach_1"
+      ]
+    }
+  ]
+}

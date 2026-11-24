@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Elephant Graveyard",
+  "csvid": 414,
+  "recipes": [
+    {
+      "family": "regeneration_land_and_grants",
+      "version": 2,
+      "params": {
+        "csvid": 414,
+        "mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{T}: Add {C}.\n{T}: Regenerate target Elephant.",
+      "variants": [
+        "mana_0",
+        "mana_1",
+        "own_elephant_0",
+        "own_elephant_1",
+        "foreign_elephant_0",
+        "foreign_elephant_1",
+        "heal_0",
+        "heal_1",
+        "double_destroy_0",
+        "double_destroy_1",
+        "non_elephant_0",
+        "non_elephant_1"
+      ]
+    }
+  ]
+}

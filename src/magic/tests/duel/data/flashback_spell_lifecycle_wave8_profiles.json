@@ -1,0 +1,368 @@
+{
+  "sources": {
+    "Cackling Counterpart": {
+      "oracle_id": "9e2adca5-f39c-4a09-bcce-8238ebac2c4a",
+      "name": "Cackling Counterpart",
+      "oracle_text": "Create a token that's a copy of target creature you control.\nFlashback {5}{U}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{1}{U}{U}",
+      "type_line": "Instant",
+      "keywords": [
+        "Flashback"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Divine Reckoning": {
+      "oracle_id": "15d8b339-7520-43c9-b2dc-4a936357042b",
+      "name": "Divine Reckoning",
+      "oracle_text": "Each player chooses a creature they control. Destroy the rest.\nFlashback {5}{W}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Flashback"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Parallel Evolution": {
+      "oracle_id": "963cfdbe-775c-4267-a617-66f10e9d7f4f",
+      "name": "Parallel Evolution",
+      "oracle_text": "For each creature token on the battlefield, its controller creates a token that's a copy of that creature.\nFlashback {4}{G}{G}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{3}{G}{G}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Flashback"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 5.0,
+      "layout": "normal"
+    },
+    "Tracker's Instincts": {
+      "oracle_id": "1bc7c38b-9571-4395-be90-922f92816987",
+      "name": "Tracker's Instincts",
+      "oracle_text": "Reveal the top four cards of your library. Put a creature card from among them into your hand and the rest into your graveyard.\nFlashback {2}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{1}{G}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Flashback"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    }
+  },
+  "witnesses": {
+    "Clue": {
+      "oracle_id": "496e1083-c792-40a4-adf4-fec1d559cd5e",
+      "name": "Clue",
+      "oracle_text": "{2}, Sacrifice this token: Draw a card.",
+      "mana_cost": "",
+      "type_line": "Token Artifact — Clue",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "token"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Darksteel Myr": {
+      "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+      "name": "Darksteel Myr",
+      "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature — Myr",
+      "power": "0",
+      "toughness": "1",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature — Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Servo": {
+      "oracle_id": "b6ca7bd1-d72e-4260-8b52-997ee1377279",
+      "name": "Servo",
+      "oracle_text": "",
+      "mana_cost": "",
+      "type_line": "Token Artifact Creature — Servo",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "token"
+    },
+    "Silent Gravestone": {
+      "oracle_id": "803815c5-12be-48b3-a101-f416c1ef9b7b",
+      "name": "Silent Gravestone",
+      "oracle_text": "Cards in graveyards can't be the targets of spells or abilities.\n{4}, {T}: Exile this artifact and all cards from all graveyards. Draw a card.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Soldier": {
+      "oracle_id": "eac25f12-6459-438c-a09e-93e23d2cf80d",
+      "name": "Soldier",
+      "oracle_text": "",
+      "mana_cost": "",
+      "type_line": "Token Creature — Soldier",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "token"
+    },
+    "Suntail Hawk": {
+      "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+      "name": "Suntail Hawk",
+      "oracle_text": "Flying",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Bird",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Tormod's Crypt": {
+      "oracle_id": "1573f7f9-672c-421a-b1ac-3d0d8aea59ca",
+      "name": "Tormod's Crypt",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Dovescape": {
+      "oracle_id": "d9f4af37-c85e-44ab-9fea-3c67e2f3cf27",
+      "name": "Dovescape",
+      "oracle_text": "({W/U} can be paid with either {W} or {U}.)\nWhenever a player casts a noncreature spell, counter that spell. That player creates X 1/1 white and blue Bird creature tokens with flying, where X is the spell's mana value.",
+      "mana_cost": "{3}{W/U}{W/U}{W/U}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 6.0,
+      "layout": "normal"
+    },
+    "Bird": {
+      "oracle_id": "f50b144c-021a-4025-9dc7-1639fdc65505",
+      "name": "Bird",
+      "oracle_text": "Flying\nThis creature can block only creatures with flying.",
+      "mana_cost": "",
+      "type_line": "Token Creature — Bird",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "token"
+    }
+  },
+  "handlers": {
+    "Cackling Counterpart": "manalinkeh_card_cackling_counterpart",
+    "Clue": "manalinkeh_card_clue",
+    "Counterspell": "manalinkeh_card_counterspell",
+    "Darksteel Myr": "manalinkeh_card_darksteel_myr",
+    "Divine Reckoning": "manalinkeh_card_divine_reckoning",
+    "Forest": "manalinkeh_plain_mana_producer",
+    "Grizzly Bears": "card_dummy",
+    "Hill Giant": "card_dummy",
+    "Island": "manalinkeh_plain_mana_producer",
+    "Mountain": "manalinkeh_plain_mana_producer",
+    "Ornithopter": "card_dummy",
+    "Parallel Evolution": "manalinkeh_card_parallel_evolution",
+    "Plains": "manalinkeh_plain_mana_producer",
+    "Servo": "manalinkeh_card_rhino_token",
+    "Silent Gravestone": "manalinkeh_card_silent_gravestone",
+    "Soldier": "manalinkeh_card_rhino_token",
+    "Suntail Hawk": "card_dummy",
+    "Tormod's Crypt": "manalinkeh_card_tormods_crypt",
+    "Tracker's Instincts": "manalinkeh_card_trackers_instict",
+    "Dovescape": "manalinkeh_card_dovescape",
+    "Bird": "manalinkeh_card_bird_token"
+  }
+}

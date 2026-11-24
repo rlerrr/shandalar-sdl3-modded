@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Mogis's Marauder",
+  "csvid": 13487,
+  "recipes": [
+    {
+      "family": "entry_interaction_combat",
+      "version": 2,
+      "params": {
+        "csvid": 13487,
+        "cost": "{2}{B}",
+        "choices": [
+          "wrong_color_0",
+          "wrong_color_1",
+          "same_color_0",
+          "same_color_1",
+          "artifact_0",
+          "artifact_1",
+          "two_0",
+          "two_1",
+          "decline_0",
+          "decline_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, up to X target creatures each gain intimidate and haste until end of turn, where X is your devotion to black. (A creature with intimidate can't be blocked except by artifact creatures and/or creatures that share a color with it. Each {B} in the mana costs of permanents you control counts toward your devotion to black.)",
+      "variants": [
+        "wrong_color_0",
+        "wrong_color_1",
+        "same_color_0",
+        "same_color_1",
+        "artifact_0",
+        "artifact_1",
+        "two_0",
+        "two_1",
+        "decline_0",
+        "decline_1"
+      ]
+    }
+  ]
+}

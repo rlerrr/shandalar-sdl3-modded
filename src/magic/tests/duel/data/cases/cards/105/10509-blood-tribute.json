@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Blood Tribute",
+  "csvid": 10509,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "kicker_alternate_payment_and_damage",
+      "version": 2,
+      "oracle_text": "Kicker—Tap an untapped Vampire you control. (You may tap a Vampire you control in addition to any other costs as you cast this spell.)\nTarget opponent loses half their life, rounded up. If this spell was kicked, you gain life equal to the life lost this way.",
+      "params": {
+        "model": 10509,
+        "mana": [
+          4,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "kicker_mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "x": null
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "no_vampire_0",
+        "no_vampire_1",
+        "paid_even_0",
+        "paid_even_1"
+      ]
+    }
+  ]
+}

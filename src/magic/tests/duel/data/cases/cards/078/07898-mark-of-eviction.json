@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Mark of Eviction",
+  "csvid": 7898,
+  "recipes": [
+    {
+      "family": "upkeep_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 7898,
+        "cost": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Enchant creature\nAt the beginning of your upkeep, return enchanted creature and all Auras attached to that creature to their owners' hands.",
+      "variants": [
+        "own_host_0",
+        "own_host_1",
+        "foreign_host_0",
+        "foreign_host_1",
+        "foreign_auras_0",
+        "foreign_auras_1"
+      ]
+    }
+  ]
+}

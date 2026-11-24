@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Polar Kraken",
+  "csvid": 2067,
+  "recipes": [
+    {
+      "family": "cumulative_upkeep_nonmana_payment",
+      "version": 2,
+      "params": {
+        "csvid": 2067,
+        "payment": "Sacrifice a land.",
+        "casting_cost": [
+          8,
+          0,
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Trample\nThis creature enters tapped.\nCumulative upkeep—Sacrifice a land. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)",
+      "variants": [
+        "pay_twice_trample_0",
+        "pay_twice_trample_1",
+        "decline_after_one_0",
+        "decline_after_one_1",
+        "short_two_0",
+        "short_two_1"
+      ]
+    }
+  ]
+}

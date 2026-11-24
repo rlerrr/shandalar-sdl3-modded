@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 14999,
+  "card": "Sandcrafter Mage",
+  "recipes": [
+    {
+      "family": "entry_follow_on_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 14999,
+        "printed_cost": "{2}{W}"
+      },
+      "oracle_text": "When this creature enters, bolster 1. (Choose a creature with the least toughness among creatures you control and put a +1/+1 counter on it.)",
+      "variants": [
+        "alone_0",
+        "weak_0",
+        "tie_0",
+        "countered_0",
+        "alone_1",
+        "weak_1",
+        "tie_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

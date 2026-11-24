@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Loxodon Hierarch",
+  "csvid": 1368,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_sacrifice_and_team",
+      "version": 2,
+      "params": {
+        "csvid": 1368,
+        "printed_cost": "{2}{G}{W}",
+        "choices": [
+          "team_shields_0",
+          "team_shields_1",
+          "short_0",
+          "short_1",
+          "expires_0",
+          "expires_1",
+          "entry_0",
+          "entry_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, you gain 4 life.\n{G}{W}, Sacrifice this creature: Regenerate each creature you control.",
+      "variants": [
+        "team_shields_0",
+        "team_shields_1",
+        "short_0",
+        "short_1",
+        "expires_0",
+        "expires_1",
+        "entry_0",
+        "entry_1"
+      ]
+    }
+  ]
+}

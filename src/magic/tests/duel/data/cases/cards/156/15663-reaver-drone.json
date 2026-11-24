@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "csvid": 15663,
+  "card": "Reaver Drone",
+  "recipes": [
+    {
+      "family": "devoid_cast_and_control",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\nAt the beginning of your upkeep, you lose 1 life unless you control another colorless creature.",
+      "params": {
+        "effect": "upkeep",
+        "price": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 1,
+        "fee": null
+      },
+      "variants": [
+        "alone_0",
+        "alone_1",
+        "ally_devoid_0",
+        "ally_devoid_1",
+        "ally_artifact_0",
+        "ally_artifact_1",
+        "ally_colored_0",
+        "ally_colored_1",
+        "enemy_only_0",
+        "enemy_only_1",
+        "noncreature_0",
+        "noncreature_1",
+        "lose_ally_0",
+        "lose_ally_1",
+        "late_gain_0",
+        "late_gain_1"
+      ]
+    }
+  ]
+}

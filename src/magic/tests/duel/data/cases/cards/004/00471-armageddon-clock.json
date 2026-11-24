@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Armageddon Clock",
+  "csvid": 471,
+  "recipes": [
+    {
+      "family": "draw_step_damage_and_upkeep",
+      "version": 2,
+      "params": {
+        "csvid": 471,
+        "printed_cost": "{6}"
+      },
+      "oracle_text": "At the beginning of your upkeep, put a doom counter on this artifact.\nAt the beginning of your draw step, this artifact deals damage equal to the number of doom counters on it to each player.\n{4}: Remove a doom counter from this artifact. Any player may activate this ability but only during any upkeep step.",
+      "variants": [
+        "scales_0",
+        "removed_0",
+        "replay_0",
+        "prevention_0",
+        "upkeep_payment_0",
+        "scales_1",
+        "removed_1",
+        "replay_1",
+        "prevention_1"
+      ]
+    }
+  ]
+}

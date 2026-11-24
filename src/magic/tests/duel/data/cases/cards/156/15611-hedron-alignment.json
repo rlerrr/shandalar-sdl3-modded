@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 15611,
+  "card": "Hedron Alignment",
+  "recipes": [
+    {
+      "family": "library_scry_modes_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 15611,
+        "printed_cost": "{2}{U}"
+      },
+      "oracle_text": "Hexproof\nAt the beginning of your upkeep, you may reveal your hand. If you do, you win the game if you own a card named Hedron Alignment in exile, in your hand, in your graveyard, and on the battlefield.\n{1}{U}: Scry 1.",
+      "variants": [
+        "scry_0",
+        "hexproof_0",
+        "aligned_0",
+        "missing_exile_0",
+        "scry_1",
+        "hexproof_1",
+        "aligned_1",
+        "missing_exile_1"
+      ]
+    }
+  ]
+}

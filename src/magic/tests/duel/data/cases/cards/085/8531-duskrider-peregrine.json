@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "csvid": 8531,
+  "card": "Duskrider Peregrine",
+  "recipes": [
+    {
+      "family": "suspend_creature_combat",
+      "version": 2,
+      "oracle_text": "Flying, protection from black\nSuspend 3—{1}{W} (Rather than cast this card from your hand, you may pay {1}{W} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost. It has haste.)",
+      "params": {
+        "csvid": 8531,
+        "duration": 3,
+        "fee": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "printed": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "pt": [
+          3,
+          3
+        ],
+        "clauses": [
+          "Flying, protection from black",
+          "Suspend 3—{1}{W} (Rather than cast this card from your hand, you may pay {1}{W} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost. It has haste.)"
+        ]
+      },
+      "variants": [
+        "parked_0",
+        "parked_1",
+        "countdown_0",
+        "countdown_1",
+        "unfunded_0",
+        "unfunded_1",
+        "wrong_suspend_0",
+        "wrong_suspend_1",
+        "normal_0",
+        "normal_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

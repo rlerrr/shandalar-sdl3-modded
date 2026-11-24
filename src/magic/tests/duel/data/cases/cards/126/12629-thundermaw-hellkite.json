@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Thundermaw Hellkite",
+  "csvid": 12629,
+  "recipes": [
+    {
+      "family": "entry_follow_on_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 12629,
+        "cost": "{3}{R}{R}",
+        "choices": [
+          "scope_0",
+          "scope_1",
+          "lethal_0",
+          "lethal_1",
+          "haste_0",
+          "haste_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "Flying\nHaste (This creature can attack and {T} as soon as it comes under your control.)\nWhen this creature enters, it deals 1 damage to each creature with flying your opponents control. Tap those creatures.",
+      "variants": [
+        "scope_0",
+        "scope_1",
+        "lethal_0",
+        "lethal_1",
+        "haste_0",
+        "haste_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

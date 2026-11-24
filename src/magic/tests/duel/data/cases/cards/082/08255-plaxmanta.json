@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Plaxmanta",
+  "csvid": 8255,
+  "recipes": [
+    {
+      "family": "flash_entry_spell_access_and_protection",
+      "version": 2,
+      "params": {
+        "csvid": 8255,
+        "printed_mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "rules": "Flash\nWhen this creature enters, creatures you control gain shroud until end of turn. (They can't be the targets of spells or abilities.)\nWhen this creature enters, sacrifice it unless {G} was spent to cast it."
+      },
+      "oracle_text": "Flash\nWhen this creature enters, creatures you control gain shroud until end of turn. (They can't be the targets of spells or abilities.)\nWhen this creature enters, sacrifice it unless {G} was spent to cast it.",
+      "variants": [
+        "green_paid_0",
+        "green_paid_1",
+        "sacrifice_0",
+        "sacrifice_1"
+      ]
+    }
+  ]
+}

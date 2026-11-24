@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Prescient Chimera",
+  "csvid": 13518,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "cast_instant_or_sorcery_riders",
+      "version": 2,
+      "oracle_text": "Flying\nWhenever you cast an instant or sorcery spell, scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "params": {
+        "effect": "scry_one",
+        "mana": [
+          3,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "hybrid": [],
+        "stats": [
+          3,
+          4
+        ],
+        "keywords": [
+          "Flying",
+          "Scry"
+        ]
+      },
+      "variants": [
+        "instant_0",
+        "instant_1",
+        "sorcery_0",
+        "sorcery_1",
+        "own_creature_0",
+        "own_creature_1",
+        "enemy_instant_0",
+        "enemy_instant_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

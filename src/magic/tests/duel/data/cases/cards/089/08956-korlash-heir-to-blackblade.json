@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "csvid": 8956,
+  "card": "Korlash, Heir to Blackblade",
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_self_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 8956,
+        "printed_cost": "{2}{B}{B}"
+      },
+      "oracle_text": "Korlash's power and toughness are each equal to the number of Swamps you control.\n{1}{B}: Regenerate Korlash.\nGrandeur — Discard another card named Korlash, Heir to Blackblade: Search your library for up to two Swamp cards, put them onto the battlefield tapped, then shuffle.",
+      "variants": [
+        "regenerate_0",
+        "short_0",
+        "terminate_0",
+        "proactive_0",
+        "grandeur_two_0",
+        "grandeur_one_0",
+        "count_change_0",
+        "without_copy_0",
+        "regenerate_1",
+        "short_1",
+        "terminate_1",
+        "proactive_1",
+        "grandeur_two_1",
+        "grandeur_one_1",
+        "count_change_1",
+        "without_copy_1"
+      ]
+    }
+  ]
+}

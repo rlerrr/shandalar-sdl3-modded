@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "card": "Quicksilver Dagger",
+  "csvid": 5424,
+  "recipes": [
+    {
+      "family": "additional_damage_auras",
+      "version": 2,
+      "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to target player or planeswalker. You draw a card.\"",
+      "params": {
+        "effect": "draw",
+        "cast_mana": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "no_creature_0",
+        "no_creature_1",
+        "foreign_gate_0",
+        "foreign_gate_1",
+        "replay_0",
+        "replay_1",
+        "pending_replay_0",
+        "pending_replay_1",
+        "aura_removed_pending_0",
+        "aura_removed_pending_1",
+        "player_0",
+        "player_1",
+        "self_player_0",
+        "self_player_1",
+        "walker_0",
+        "walker_1",
+        "walker_lethal_0",
+        "walker_lethal_1",
+        "walker_leaves_0",
+        "walker_leaves_1",
+        "creature_denied_0",
+        "creature_denied_1",
+        "changed_control_0",
+        "changed_control_1",
+        "host_lifelink_0",
+        "host_lifelink_1",
+        "fresh_0",
+        "fresh_1",
+        "tapped_0",
+        "tapped_1",
+        "repeat_0",
+        "repeat_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Day of the Dragons",
+  "csvid": 6500,
+  "recipes": [
+    {
+      "family": "entry_interaction_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 6500,
+        "cost": [
+          4,
+          0,
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this enchantment enters, exile all creatures you control. Then create that many 5/5 red Dragon creature tokens with flying.\nWhen this enchantment leaves the battlefield, sacrifice all Dragons you control. Then return the exiled cards to the battlefield under your control.",
+      "variants": [
+        "both_controllers_0",
+        "both_controllers_1",
+        "borrowed_owner_0",
+        "borrowed_owner_1",
+        "sacrifice_unrelated_dragon_0",
+        "sacrifice_unrelated_dragon_1",
+        "empty_0",
+        "empty_1",
+        "tokens_fly_0",
+        "tokens_fly_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Dakmor Salvage",
+  "csvid": 8910,
+  "recipes": [
+    {
+      "family": "mill_remaining_dredge_and_graveyard",
+      "version": 2,
+      "params": {
+        "csvid": 8910,
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "dredge": 2
+      },
+      "oracle_text": "This land enters tapped.\n{T}: Add {B}.\nDredge 2 (If you would draw a card, you may mill two cards instead. If you do, return this card from your graveyard to your hand.)",
+      "variants": [
+        "exact_0",
+        "exact_1",
+        "pass_0",
+        "pass_1",
+        "short_0",
+        "short_1",
+        "dredge_land_0",
+        "dredge_land_1"
+      ]
+    }
+  ]
+}

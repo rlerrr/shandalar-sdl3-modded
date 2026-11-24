@@ -24,6 +24,7 @@ PROPERTIES = {"csvid", "power", "toughness", "tapped", "sick", "attacking", "in_
 OPS |= {"refresh", "choose_zone_card", "choose_payment", "can_activate_hand", "require_can_activate_hand", "activate_hand", "require_can_activate", "can_target_creature"}
 OPS.add("probe_activation_target")
 OPS.add("choose_x")
+OPS.add("choose_done_target")
 OPS.add("assert_zone_multiplicity")
 OPS |= {"assert_zone_multiplicity_max", "discard_policy", "assert_discard_choices", "present_ai_dialogs"}
 OPS |= {"choose_optional_zone", "assert_forced_zone_choices"}
@@ -32,16 +33,22 @@ OPS |= {"assert_matching_permanents", "bind_permanent_copy", "bind_hand_copy", "
 OPS |= {"record_library", "assert_scry_result"}
 OPS |= {"observe_search_filters", "assert_offered_legal_card"}
 OPS.add("assert_offered_selection_required")
-OPS |= {"cast_response", "resolve_response", "reset_death_history"}
+OPS |= {"cast_response", "activate_response", "resolve_response", "reset_death_history"}
+OPS.add("resolve_duel_result")
 OPS.add("announce_spell")
 OPS |= {"can_activate_graveyard", "require_can_activate_graveyard", "activate_graveyard", "prepare_graveyard_abilities"}
 OPS.add("untap_step")
 OPS.add("upkeep_step")
+OPS.add("draw_step")
+OPS |= {"choose_card_name", "end_combat_step"}
 OPS |= {"can_cast_graveyard", "require_can_cast_graveyard", "cast_graveyard"}
+EXILED_PLAY_OPS = {"can_play_exiled", "play_exiled"}
+OPS |= EXILED_PLAY_OPS
 OPS.add("assert_shuffle_count")
 OPS.add("assert_counter")
 COUNTER_KINDS = {"plus1", "minus1", "charge", "loyalty", "knowledge", "elixir",
-                 "divinity", "quest", "blood", "gold", "study", "growth", "ki", "lore", "age", "fade", "time"}
+                 "divinity", "quest", "blood", "gold", "study", "growth", "ki", "lore", "age", "fade", "time",
+                 "depletion", "storage", "velocity"}
 
 def validate_counter_observation(step):
     if (set(step) != {'op', 'ref', 'counter_kind', 'value'}
@@ -59,12 +66,17 @@ TOKEN_PROPERTIES = {"token", "color", "artifact"} | {"subtype_"+n for n in (
 REF_OPS = {"choose_regeneration", "choose_target", "choose_damage_target", "choose_trigger", "can_activate", "activate", "can_cast", "require_can_cast", "cast", "remove_from_combat", "destroy", "attack", "block", "assert_card", "require_card", "assert_card_name"}
 REF_OPS |= {"can_activate_hand", "require_can_activate_hand", "activate_hand", "require_can_activate", "can_target_creature"}
 REF_OPS.add("probe_activation_target")
-REF_OPS.add("cast_response")
+REF_OPS.update(("cast_response", "activate_response"))
 REF_OPS.add("announce_spell")
 REF_OPS.add("assert_counter")
+OPS.add("play_land")
+REF_OPS.add("play_land")
+OPS.update(("begin_required_attackers", "can_finish_attackers"))
+OPS.update(("attack_with_tax", "advance_scheduled_turn"))
+REF_OPS.add("attack_with_tax")
 OPS |= {"choose_trigger_source", "choose_optional_target", "assert_forced_target_choices"}
 REF_OPS |= {"choose_trigger_source", "choose_optional_target"}
-OPS |= {"choose_activation_mode", "require_activation_mode"}
+OPS |= {"choose_activation_mode", "choose_mode_payment", "require_activation_mode"}
 REF_OPS.add("choose_activation_mode")
 OPS |= {"choose_mana_source", "can_activate_granted_mana", "activate_granted_mana"}
 REF_OPS |= {"choose_mana_source", "can_activate_granted_mana", "activate_granted_mana"}
@@ -81,6 +93,20 @@ def validate_granted_mana_action(step):
             or not isinstance(step.get('other'),str) or not step['other']
             or type(step.get('value')) is not int or step['value'] not in (0,1)):
         raise ValueError('granted mana actions require actual host/provider references and a boolean integer receipt')
+
+
+GRANTED_LEGACY_ACTIONS = {"can_activate_granted_legacy", "activate_granted_legacy"}
+OPS |= GRANTED_LEGACY_ACTIONS
+REF_OPS |= GRANTED_LEGACY_ACTIONS
+
+
+def validate_granted_legacy_action(step, registered_csvids):
+    if (set(step) != {'op', 'ref', 'index', 'value'}
+            or step.get('op') not in GRANTED_LEGACY_ACTIONS
+            or not isinstance(step.get('ref'), str) or not step['ref']
+            or type(step.get('index')) is not int or step['index'] not in registered_csvids
+            or type(step.get('value')) is not int or step['value'] not in (0, 1)):
+        raise ValueError('granted legacy actions require a named recipient, registered source ID and boolean receipt')
 
 def validate_activation_mode_choice(step):
     label = step.get('mode_label')
@@ -131,6 +157,10 @@ def validate_untap_step(step):
 def validate_upkeep_step(step):
     if type(step.get('player')) is not int or step['player'] not in (0,1) or set(step) != {'op','player'}:
         raise ValueError('upkeep_step requires only an explicit player zero or one')
+
+def validate_draw_step(step):
+    if type(step.get('player')) is not int or step['player'] not in (0, 1) or set(step) != {'op', 'player'}:
+        raise ValueError('draw_step requires only an explicit player zero or one')
 
 def read(path):
     value = json.loads(path.read_text(encoding="utf-8"))
@@ -225,18 +255,64 @@ def build(data, output, legacy_fingerprints=False, *, case_files=None, csvids=No
         recorded_libraries = set()
         for step in case["steps"]:
             op = step["op"]
+            zone = ZONES.get(step.get("zone", "hand"), 0)
+            if op in EXILED_PLAY_OPS:
+                if (set(step) - {"owner"} != {"op", "player", "index", "value"}
+                        or type(step["player"]) is not int or step["player"] not in (0, 1)
+                        or type(step["index"]) is not int or step["index"] not in registered_csvids
+                        or type(step["value"]) is not int or step["value"] not in (0, 1)):
+                    raise ValueError('exiled play requires a player, registered exiled card ID and boolean receipt')
+                if "owner" in step:
+                    if type(step["owner"]) is not int or step["owner"] not in (0, 1):
+                        raise ValueError('an explicit exile owner must be a player seat')
+                    # Zero retains the original archive encoding for the acting player's exile.
+                    zone = step["owner"] + 1
+            if op == "activate_response" and (set(step) != {"op", "ref", "value"}
+                    or type(step.get("value")) is not int or step["value"] not in (0, 1)):
+                raise ValueError('response activation requires a named source and boolean receipt')
+            if op == "resolve_duel_result" and (set(step) != {"op", "value"}
+                    or type(step.get("value")) is not int or step["value"] not in (-1, 0, 1)):
+                raise ValueError('duel resolution requires a losing seat or -1 for continued play')
             if op == 'choose_mana_source':
                 validate_mana_source_choice(step)
             if op in ('can_activate_granted_mana','activate_granted_mana'):
                 validate_granted_mana_action(step)
+            if op in GRANTED_LEGACY_ACTIONS:
+                validate_granted_legacy_action(step, registered_csvids)
             if op == 'assert_counter':
                 validate_counter_observation(step)
+            if op == 'play_land' and (set(step) != {'op', 'ref', 'value'}
+                    or type(step.get('value')) is not int or step['value'] not in (0, 1)):
+                raise ValueError('land play requires a named hand card and an explicit success expectation')
+            if op == 'begin_required_attackers' and set(step) != {'op'}:
+                raise ValueError('beginning an attacker declaration takes no arguments')
+            if op == 'choose_card_name' and (set(step) != {'op', 'player', 'value'}
+                    or type(step['player']) is not int or step['player'] not in (0, 1)
+                    or type(step['value']) is not int
+                    or step['value'] != -1 and step['value'] not in registered_csvids):
+                raise ValueError('card name choice requires a player and a registered card or cancellation')
+            if op == 'end_combat_step' and (set(step) != {'op', 'value'}
+                    or type(step['value']) is not int or step['value'] not in (0, 1)):
+                raise ValueError('combat end requires an explicit extra combat expectation')
+            if op == 'can_finish_attackers' and (set(step) != {'op', 'value'}
+                    or type(step.get('value')) is not int or step['value'] not in (0, 1)):
+                raise ValueError('attacker declaration requires an explicit completion expectation')
+            if op == 'attack_with_tax' and (set(step) != {'op', 'ref', 'value'}
+                    or type(step.get('value')) is not int or step['value'] not in (0, 1)):
+                raise ValueError('paid attacker declaration requires a named attacker and an explicit success expectation')
+            if op == 'advance_scheduled_turn' and (set(step) != {'op', 'value'}
+                    or type(step.get('value')) is not int or step['value'] not in (-1, 0, 1)):
+                raise ValueError('scheduled turn requires the expected active player or -1 for a finished duel')
             if op in ('choose_trigger_source', 'choose_optional_target'):
                 validate_named_choice(step)
             if op == 'assert_forced_target_choices':
                 validate_forced_target_observation(step)
             if op == 'choose_activation_mode':
                 validate_activation_mode_choice(step)
+            if op == 'choose_mode_payment' and (type(step.get('player')) is not int or
+                    step['player'] not in (0, 1) or type(step.get('value')) is not int or
+                    not 0 <= step['value'] <= 0xffffff):
+                raise ValueError('activation payment requires a player and packed mana vector')
             if op == 'require_activation_mode':
                 validate_activation_mode_observation(step)
             if op == 'assert_shuffle_count':
@@ -245,6 +321,8 @@ def build(data, output, legacy_fingerprints=False, *, case_files=None, csvids=No
                 validate_untap_step(step)
             if op == 'upkeep_step':
                 validate_upkeep_step(step)
+            if op == 'draw_step':
+                validate_draw_step(step)
             if op == 'present_ai_dialogs' and (type(step.get('value')) is not int or step['value'] not in (0,1)):
                 raise ValueError(f'Invalid AI dialog input policy in {name}: {step}')
             if op == 'discard_policy' and (type(step.get('value')) is not int or step['value'] not in (0,1,2)):
@@ -259,7 +337,12 @@ def build(data, output, legacy_fingerprints=False, *, case_files=None, csvids=No
                 raise ValueError('search filter observations require a registered card identity')
             if op not in OPS or (op in REF_OPS and step.get("ref") not in refs):
                 raise ValueError(f"Invalid action in {name}: {step}")
-            if step.get("property", "power") not in PROPERTIES | (TOKEN_PROPERTIES if op=="assert_matching_permanents" else set()):
+            extra_properties = TOKEN_PROPERTIES if op == 'assert_matching_permanents' else set()
+            if op == 'assert_card':
+                extra_properties = {'color'}
+                if step.get('property') == 'color' and (type(step.get('value')) is not int or step['value'] & ~0x3e):
+                    raise ValueError(f'Invalid card color mask in {name}: {step}')
+            if step.get("property", "power") not in PROPERTIES | extra_properties:
                 raise ValueError(f"Invalid observation in {name}: {step}")
             if "other" in step and step["other"] not in refs:
                 raise ValueError(f"Unknown reference: {step}")
@@ -275,6 +358,10 @@ def build(data, output, legacy_fingerprints=False, *, case_files=None, csvids=No
                 raise ValueError(f"Invalid damage chooser in {name}: {step}")
             if op == "choose_cancel_target" and step.get("player", -1) not in (-1, 0, 1):
                 raise ValueError(f"Invalid target cancellation in {name}: {step}")
+            if op == "choose_done_target" and (
+                set(step) != {"op", "player"} or type(step["player"]) is not int or step["player"] not in (0, 1)
+            ):
+                raise ValueError(f"Completing target selection requires an explicit player in {name}: {step}")
             if op == "choose_cancel_mana" and step.get("player", 0) not in (-1, 0, 1):
                 raise ValueError(f"Invalid mana cancellation in {name}: {step}")
             if op == "set_budget" and (type(step.get("value")) is not int or not 200000 <= step["value"] <= 2000000):
@@ -342,7 +429,7 @@ def build(data, output, legacy_fingerprints=False, *, case_files=None, csvids=No
                 raise ValueError(f"Record a result before comparing it in {name}")
             step_rows.append((op,step.get("ref", ""),step.get("other", ""),
                 step['mode_label'] if op=='choose_activation_mode' else step.get("counter_kind", "") if op == 'assert_counter' else step.get("property", ""),
-                step.get("player",0),int(step['allow_auto_nonmana']) if op=='choose_activation_mode' else step.get("value",0),ZONES.get(step.get("zone","hand"),0),
+                step.get("player",0),int(step['allow_auto_nonmana']) if op=='choose_activation_mode' else step.get("value",0),zone,
                 step.get("index",-1 if op in {"bind_permanent","bind_hand"} else 0),step['fallback_color'] if op=='choose_activation_mode' else step.get("color",0)))
         metadata=(name,case["card"],o["oracle_id"],text,case["fixture"],case.get("seed",123))
         card_rows=[(c["ref"],c["player"],ZONES[c["zone"]],by_name[c["name"]]["csvid"],sum(STATES[x] for x in c.get("state",[]))) for c in case.get("setup",[])]

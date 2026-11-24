@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 4529,
+  "card": "Megatherium",
+  "recipes": [
+    {
+      "family": "entry_trigger_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 4529,
+        "printed_cost": "{2}{G}",
+        "keywords": [
+          "Trample"
+        ]
+      },
+      "oracle_text": "Trample\nWhen this creature enters, sacrifice it unless you pay {1} for each card in your hand.",
+      "variants": [
+        "zero_hand_0",
+        "two_paid_0",
+        "one_short_0",
+        "trample_0",
+        "zero_hand_1",
+        "two_paid_1",
+        "one_short_1",
+        "trample_1"
+      ]
+    }
+  ]
+}

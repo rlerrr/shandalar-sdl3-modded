@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Magus of the Arena",
+  "csvid": 1266,
+  "recipes": [
+    {
+      "family": "fight_battlefield_activations",
+      "version": 2,
+      "params": {
+        "csvid": 1266,
+        "fee": "{3}",
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "oracle_text": "{3}, {T}: Tap target creature you control and target creature of an opponent's choice they control. Those creatures fight each other. (Each deals damage equal to its power to the other.)",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "fresh_0",
+        "fresh_1",
+        "target_leaves_0",
+        "target_leaves_1",
+        "power_changed_0",
+        "power_changed_1"
+      ]
+    }
+  ]
+}

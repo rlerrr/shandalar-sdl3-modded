@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 16276,
+  "card": "Aetherstorm Roc",
+  "recipes": [
+    {
+      "family": "attack_follow_on_counters_and_dethrone",
+      "version": 2,
+      "params": {
+        "csvid": 16276,
+        "printed_cost": "{2}{W}{W}"
+      },
+      "oracle_text": "Flying\nWhenever this creature or another creature you control enters, you get {E} (an energy counter).\nWhenever this creature attacks, you may pay {E}{E}. If you do, put a +1/+1 counter on it and tap up to one target creature defending player controls.",
+      "variants": [
+        "flying_unfunded_0",
+        "pay_target_0",
+        "no_target_0",
+        "decline_0",
+        "skip_target_0",
+        "foe_entry_0",
+        "flying_unfunded_1",
+        "pay_target_1",
+        "no_target_1",
+        "foe_entry_1"
+      ]
+    }
+  ]
+}

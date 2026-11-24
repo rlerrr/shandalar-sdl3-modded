@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Ghostblade Eidolon",
+  "csvid": 13720,
+  "recipes": [
+    {
+      "family": "bestow_combined_keywords",
+      "version": 2,
+      "params": {
+        "csvid": 13720,
+        "normal": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "bestowed": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "bonus": [
+          1,
+          1
+        ],
+        "creature": [
+          1,
+          1
+        ]
+      },
+      "oracle_text": "Bestow {5}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nDouble strike (This creature deals both first-strike and regular combat damage.)\nEnchanted creature gets +1/+1 and has double strike.",
+      "variants": [
+        "regular_combat_0",
+        "regular_combat_1",
+        "bestowed_combat_0",
+        "bestowed_combat_1",
+        "detach_combat_0",
+        "detach_combat_1",
+        "pending_host_lost_0",
+        "pending_host_lost_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Mitotic Slime",
+  "csvid": 11150,
+  "recipes": [
+    {
+      "family": "departure_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 11150,
+        "mana_cost": "{4}{G}"
+      },
+      "oracle_text": "When this creature dies, create two 2/2 green Ooze creature tokens. They have \"When this token dies, create two 1/1 green Ooze creature tokens.\"",
+      "variants": [
+        "split_0",
+        "split_1",
+        "sweep_0",
+        "sweep_1",
+        "large_exile_0",
+        "large_exile_1",
+        "source_bounce_0",
+        "source_bounce_1",
+        "typed_0",
+        "typed_1"
+      ]
+    }
+  ]
+}

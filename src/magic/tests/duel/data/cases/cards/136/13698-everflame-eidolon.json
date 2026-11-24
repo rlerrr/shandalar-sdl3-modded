@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "csvid": 13698,
+  "card": "Everflame Eidolon",
+  "recipes": [
+    {
+      "family": "bestow_activated_and_tempo",
+      "version": 2,
+      "params": {
+        "csvid": 13698,
+        "normal_cost": "{1}{R}",
+        "bestow_cost": "{2}{R}",
+        "bonus": [
+          1,
+          1
+        ],
+        "creature": [
+          1,
+          1
+        ]
+      },
+      "oracle_text": "Bestow {2}{R} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\n{R}: This creature gets +1/+0 until end of turn. If it's an Aura, enchanted creature gets +1/+0 until end of turn instead.\nEnchanted creature gets +1/+1.",
+      "variants": [
+        "creature_ability_0",
+        "aura_own_ability_0",
+        "aura_foreign_ability_0",
+        "detach_ability_0",
+        "creature_ability_1",
+        "aura_own_ability_1",
+        "aura_foreign_ability_1",
+        "detach_ability_1"
+      ]
+    }
+  ]
+}

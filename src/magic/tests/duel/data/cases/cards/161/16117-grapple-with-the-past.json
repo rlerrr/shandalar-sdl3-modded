@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Grapple with the Past",
+  "csvid": 16117,
+  "recipes": [
+    {
+      "family": "mill_recursion_and_zones",
+      "version": 2,
+      "params": {
+        "csvid": 16117,
+        "cost": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Mill three cards, then you may return a creature or land card from your graveyard to your hand. (To mill three cards, put the top three cards of your library into your graveyard.)",
+      "variants": [
+        "creature_0",
+        "creature_1",
+        "land_0",
+        "land_1",
+        "decline_0",
+        "decline_1",
+        "short_neither_0",
+        "short_neither_1"
+      ]
+    }
+  ]
+}

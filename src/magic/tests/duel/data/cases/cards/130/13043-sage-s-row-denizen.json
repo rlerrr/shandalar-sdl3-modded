@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "csvid": 13043,
+  "card": "Sage's Row Denizen",
+  "recipes": [
+    {
+      "family": "mill_death_and_entry",
+      "version": 2,
+      "params": {
+        "csvid": 13043,
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          2,
+          3
+        ]
+      },
+      "oracle_text": "Whenever another blue creature you control enters, target player mills two cards.",
+      "variants": [
+        "blue_0",
+        "blue_1",
+        "multicolor_0",
+        "multicolor_1",
+        "foe_blue_0",
+        "foe_blue_1",
+        "nonblue_0",
+        "nonblue_1",
+        "noncreature_0",
+        "noncreature_1"
+      ]
+    }
+  ]
+}

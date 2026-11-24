@@ -119,6 +119,7 @@ class BehaviorTest:public testing::Test {
     else if(op=="choose_damage_target")duel_test_damage_decision(s.player,ref);
     else if(op=="choose_damage_player")duel_test_damage_decision(s.player,DuelTestRef{s.value,-1});
     else if(op=="choose_cancel_target")duel_test_decision(DUEL_CHOICE_TARGET,s.player,-1,-1);
+    else if(op=="choose_done_target")duel_test_decision(DUEL_CHOICE_TARGET,s.player,-1,-2);
     else if(op=="assert_offered_count")EXPECT_EQ(duel_test_offered_count(),s.value);
     else if(op=="assert_offered_selection_required")EXPECT_EQ(duel_test_offered_selection_required(),s.value);
     else if(op=="observe_search_filters")duel_host_observe_zone_legality(s.value);
@@ -142,6 +143,7 @@ class BehaviorTest:public testing::Test {
     else if(op=="choose_payment")duel_test_decision(DUEL_CHOICE_DIALOG,s.player,-4,s.value);
     else if(op=="choose_number")duel_test_decision(DUEL_CHOICE_NUMBER,s.player,s.value,-1);
     else if(op=="choose_x")duel_test_decision(DUEL_CHOICE_X,s.player,s.value,-1);
+    else if(op=="choose_card_name")duel_test_decision(DUEL_CHOICE_CARD_NAME,s.player,s.value,-1);
     else if(op=="choose_color")duel_test_decision(DUEL_CHOICE_COLOR,s.player,s.value,-1);
     else if(op=="choose_mana")duel_test_decision(DUEL_CHOICE_MANA,s.player,-3,s.color);
     else if(op=="choose_cancel_mana")duel_test_decision(DUEL_CHOICE_MANA,s.player,-2,-1);
@@ -152,9 +154,16 @@ class BehaviorTest:public testing::Test {
     else if(op=="choose_optional_target")duel_test_optional_target_decision(s.player,ref);
     else if(op=="assert_forced_target_choices")EXPECT_EQ(duel_test_forced_target_choices(),s.value);
     else if(op=="choose_activation_mode")duel_test_activation_mode_decision(s.player,ref,s.property,s.color,s.value);
+    else if(op=="choose_mode_payment")duel_test_activation_mode_payment(s.player,static_cast<unsigned>(s.value));
     else if(op=="require_activation_mode")ASSERT_EQ(duel_test_finish_activation_mode(),s.value);
     else if(op=="can_activate")EXPECT_EQ(!!duel_test_can_activate(ref),s.value);
     else if(op=="require_can_activate")ASSERT_EQ(!!duel_test_can_activate(ref),s.value);
+    else if(op=="can_play_exiled" || op=="play_exiled") {
+      const int owner = s.zone == 0 ? s.player : s.zone - 1;
+      const int result = op=="can_play_exiled" ? duel_test_can_play_exiled(s.player,owner,s.index)
+                                             : duel_test_play_exiled(s.player,owner,s.index);
+      EXPECT_EQ(!!result,s.value);
+    }
     else if(op=="activate")EXPECT_EQ(!!duel_test_activate(ref),s.value);
     else if(op=="can_activate_hand")EXPECT_EQ(!!duel_test_can_activate_hand(ref),s.value);
     else if(op=="require_can_activate_hand")ASSERT_EQ(!!duel_test_can_activate_hand(ref),s.value);
@@ -176,35 +185,54 @@ class BehaviorTest:public testing::Test {
       ASSERT_EQ(legal,s.value);
     }
     else if(op=="cast")EXPECT_EQ(!!duel_test_cast(ref),s.value);
+    else if(op=="play_land")EXPECT_EQ(!!duel_test_play_land(ref),s.value);
     else if(op=="cast_response")EXPECT_EQ(!!duel_test_cast_response(ref),s.value);
+    else if(op=="activate_response")EXPECT_EQ(!!duel_test_activate_response(ref),s.value);
     else if(op=="announce_spell")EXPECT_TRUE(duel_test_announce_spell(ref));
     else if(op=="reset_death_history")duel_test_reset_death_history();
     else if(op=="discard_policy")duel_test_set_discard_policy(s.value);
     else if(op=="assert_discard_choices")EXPECT_EQ(duel_test_discard_choice_count(),s.value);
     else if(op=="refresh")duel_test_refresh();
     else if(op=="resolve")duel_test_resolve();
+    else if(op=="resolve_duel_result") {
+      const int result=duel_test_resolve_duel_result();
+      EXPECT_EQ(result,s.value);
+      if(result!=-1) break;
+    }
     else if(op=="resolve_response")duel_test_resolve_response();
     else if(op=="cleanup")duel_test_cleanup();
     else if(op=="remove_from_combat")duel_test_remove_from_combat(ref);
     else if(op=="destroy")duel_test_destroy(ref);
     else if(op=="attack")EXPECT_EQ(!!duel_test_attack(ref),s.value);
+    else if(op=="attack_with_tax")EXPECT_EQ(duel_test_attack_with_tax(ref),s.value);
     else if(op=="begin_attackers")duel_test_begin_attackers();
+    else if(op=="begin_required_attackers")duel_test_begin_required_attackers();
+    else if(op=="can_finish_attackers")EXPECT_EQ(duel_test_can_finish_attackers(),s.value);
     else if(op=="finish_attackers")duel_test_finish_attackers();
     else if(op=="begin_blockers")duel_test_begin_blockers();
     else if(op=="block")EXPECT_EQ(!!duel_test_block(ref,refs.at(s.other)),s.value);
     else if(op=="combat_damage")duel_test_combat_damage();
     else if(op=="end_combat")duel_test_end_combat();
+    else if(op=="end_combat_step")EXPECT_EQ(duel_test_end_combat_step(),s.value);
     else if(op=="advance_combat")duel_test_advance_combat();
     else if(op=="turn")duel_test_set_turn(s.player,s.value);
     else if(op=="advance_turn")duel_test_advance_turn();
+    else if(op=="advance_scheduled_turn")EXPECT_EQ(duel_test_advance_scheduled_turn(),s.value);
     else if(op=="untap_step")ASSERT_TRUE(duel_test_untap_step(s.player));
     else if(op=="upkeep_step")ASSERT_TRUE(duel_test_upkeep_step(s.player));
+    else if(op=="draw_step")ASSERT_TRUE(duel_test_draw_step(s.player));
     else if(op=="set_mana")duel_test_set_mana(s.player,s.color,s.value);
     else if(op=="set_life")duel_test_set_life(s.player,s.value);
     else if(op=="set_budget")duel_test_set_budget(s.value);
     else if(op=="assert_card_name")EXPECT_STREQ(duel_test_card_name(ref),spec->card);
     else if(op=="assert_payment_source")EXPECT_NE(std::string(duel_test_payment_prompt()).find(spec->card),std::string::npos);
-    else if(op=="assert_card")EXPECT_EQ(property(duel_test_inspect(ref),s.property),s.value);
+    else if(op=="assert_card") {
+      if (!std::strcmp(s.property,"color")) {
+        EXPECT_EQ(duel_test_color(ref),s.value);
+      } else {
+        EXPECT_EQ(property(duel_test_inspect(ref),s.property),s.value);
+      }
+    }
     else if(op=="assert_counter")EXPECT_EQ(duel_test_counter(ref,s.property),s.value);
     else if(op=="require_card")ASSERT_EQ(property(duel_test_inspect(ref),s.property),s.value);
     else if(op=="assert_zone")EXPECT_EQ(duel_test_zone_count(s.player,s.zone),s.value);
@@ -296,6 +324,8 @@ class BehaviorTest:public testing::Test {
     else if(op=="choose_mana_source")duel_test_decision(DUEL_CHOICE_MANA,ref.player,ref.card,-1);
     else if(op=="can_activate_granted_mana")EXPECT_EQ(!!duel_test_can_activate_granted_mana(ref,refs.at(s.other)),s.value);
     else if(op=="activate_granted_mana")EXPECT_EQ(!!duel_test_activate_granted_mana(ref,refs.at(s.other)),s.value);
+    else if(op=="can_activate_granted_legacy")EXPECT_EQ(!!duel_test_can_activate_granted_legacy(ref,s.index),s.value);
+    else if(op=="activate_granted_legacy")EXPECT_EQ(!!duel_test_activate_granted_legacy(ref,s.index),s.value);
     else FAIL()<<"Unimplemented action "<<op;
     duel_test_check_invariants();
     if(HasFailure())duel_test_dump();
@@ -303,6 +333,23 @@ class BehaviorTest:public testing::Test {
   duel_test_finish_decisions();
  }
 };
+TEST(DuelExit, ObservesBothLosingSeatsFromLichDeparture) {
+  for(int player:{0,1}) {
+    SCOPED_TRACE(player);
+    Refs refs;
+    load_fixture(refs,"empty_main",123);
+    duel_test_set_turn(player,0);
+    auto lich=duel_test_add(player,DUEL_ZONE_BATTLEFIELD,141,0);
+    auto disenchant=duel_test_add(player,DUEL_ZONE_HAND,64,0);
+    duel_test_prepare_fixture();
+    for(int color=0;color<6;++color)duel_test_set_mana(player,color,color==0 || color==5 ? 1 : 0);
+    EXPECT_EQ(duel_test_resolve_duel_result(),-1);
+    duel_test_decision(DUEL_CHOICE_TARGET,player,lich.player,lich.card);
+    ASSERT_TRUE(duel_test_cast(disenchant));
+    EXPECT_EQ(duel_test_resolve_duel_result(),player);
+    EXPECT_EQ(duel_test_finish_choice_plan(),0);
+  }
+}
 TEST(ScryObservation, AcceptsTopBottomAndReorderingOfInspectedCards) {
   const std::vector<int> before={1,2,3,4,5};
   EXPECT_TRUE(valid_scry_result(before,{1,2,3,4,5},2));
@@ -929,6 +976,211 @@ TEST(UpkeepStep, RealSkippedUntapStillPreparesUpkeepAndMainPhaseActionsCannotRew
     EXPECT_EQ(duel_test_life(owner),20);EXPECT_EQ(duel_test_finish_choice_plan(),0);duel_test_check_invariants();
   }
 }
+
+TEST(GrantedLegacy, SetessanFindsEachRealRecipientAndExpires) {
+  constexpr int tactics_id = 13971;
+  for (int owner : {0, 1}) {
+    SCOPED_TRACE(owner);
+    duel_test_reset(2633);
+    duel_test_set_turn(owner, 0);
+    const int foe = 1 - owner;
+    auto first = duel_test_add(owner, DUEL_ZONE_BATTLEFIELD, 106, 0);  // Grizzly Bears.
+    auto second = duel_test_add(owner, DUEL_ZONE_BATTLEFIELD, 110, 0); // Hill Giant.
+    auto absent = duel_test_add(owner, DUEL_ZONE_BATTLEFIELD, 948, 0); // Squire.
+    auto sick = duel_test_add(owner, DUEL_ZONE_HAND, 106, 0);
+    auto spell = duel_test_add(owner, DUEL_ZONE_HAND, tactics_id, 0);
+    auto target_one = duel_test_add(foe, DUEL_ZONE_BATTLEFIELD, 948, 0);
+    auto target_two = duel_test_add(foe, DUEL_ZONE_BATTLEFIELD, 275, 0); // Wall of Wood.
+    duel_test_prepare_fixture();
+
+    auto target = [owner](DuelTestRef chosen) {
+      duel_test_decision(DUEL_CHOICE_TARGET, owner, chosen.player, chosen.card);
+    };
+    for (int player : {0, 1})
+      for (int color = 0; color < 6; ++color) duel_test_set_mana(player, color, 0);
+    duel_test_set_mana(owner, 0, 1);
+    duel_test_set_mana(owner, 3, 1);
+    duel_test_refresh();
+    ASSERT_TRUE(duel_test_cast(sick));
+    duel_test_resolve();
+    ASSERT_TRUE(duel_test_inspect(sick).sick);
+    EXPECT_FALSE(duel_test_can_activate_granted_legacy(first, tactics_id));
+
+    duel_test_set_mana(owner, 0, 1);
+    duel_test_set_mana(owner, 3, 3);
+    duel_test_refresh();
+    target(first);
+    target(second);
+    target(sick);
+    ASSERT_TRUE(duel_test_cast(spell));
+    EXPECT_EQ(duel_test_mana(owner, 0), 0);
+    EXPECT_EQ(duel_test_mana(owner, 3), 0);
+    EXPECT_EQ(duel_test_stack_size(), 1);
+    duel_test_resolve();
+    duel_test_refresh();
+    EXPECT_EQ(duel_test_finish_choice_plan(), 0);
+
+    EXPECT_EQ(duel_test_inspect(first).power, 3);
+    EXPECT_EQ(duel_test_inspect(second).power, 4);
+    EXPECT_EQ(duel_test_inspect(sick).power, 3);
+    ASSERT_TRUE(duel_test_can_activate_granted_legacy(first, tactics_id));
+    ASSERT_TRUE(duel_test_can_activate_granted_legacy(second, tactics_id));
+    EXPECT_FALSE(duel_test_can_activate_granted_legacy(absent, tactics_id));
+    EXPECT_FALSE(duel_test_can_activate_granted_legacy(first, 12140)); // Wrong source.
+    EXPECT_FALSE(duel_test_can_activate_granted_legacy(sick, tactics_id));
+    EXPECT_FALSE(duel_test_activate_granted_legacy(sick, tactics_id));
+    EXPECT_EQ(duel_test_stack_size(), 0);
+    target(target_one);
+    ASSERT_TRUE(duel_test_activate_granted_legacy(first, tactics_id));
+    EXPECT_EQ(duel_test_stack_size(), 1);
+    EXPECT_TRUE(duel_test_inspect(first).tapped);
+    EXPECT_FALSE(duel_test_inspect(second).tapped);
+    EXPECT_TRUE(duel_test_inspect(target_one).in_play);
+    duel_test_resolve();
+    duel_test_refresh();
+    EXPECT_EQ(duel_test_finish_choice_plan(), 0);
+    // The card cases assert the result of the fight.
+    EXPECT_EQ(duel_test_stack_size(), 0);
+    EXPECT_FALSE(duel_test_can_activate_granted_legacy(first, tactics_id));
+    EXPECT_FALSE(duel_test_activate_granted_legacy(first, tactics_id));
+    ASSERT_TRUE(duel_test_can_activate_granted_legacy(second, tactics_id));
+    target(target_two);
+    ASSERT_TRUE(duel_test_activate_granted_legacy(second, tactics_id));
+    EXPECT_TRUE(duel_test_inspect(second).tapped);
+    duel_test_resolve();
+    duel_test_refresh();
+    EXPECT_EQ(duel_test_finish_choice_plan(), 0);
+    EXPECT_EQ(duel_test_stack_size(), 0);
+
+    duel_test_advance_turn();
+    ASSERT_TRUE(duel_test_untap_step(foe));
+    duel_test_advance_turn();
+    ASSERT_TRUE(duel_test_untap_step(owner));
+    EXPECT_FALSE(duel_test_inspect(first).tapped);
+    EXPECT_FALSE(duel_test_inspect(second).tapped);
+    EXPECT_EQ(duel_test_inspect(first).power, 2);
+    EXPECT_EQ(duel_test_inspect(second).power, 3);
+    EXPECT_FALSE(duel_test_can_activate_granted_legacy(first, tactics_id));
+    EXPECT_FALSE(duel_test_can_activate_granted_legacy(second, tactics_id));
+    EXPECT_FALSE(duel_test_activate_granted_legacy(first, tactics_id));
+    EXPECT_EQ(duel_test_stack_size(), 0);
+  }
+}
+
+TEST(DrawStep, ProductionDrawAndHowlingMineApplyOnceForEachActivePlayer) {
+  for (int owner : {0, 1}) {
+    for (bool tapped : {false, true}) {
+      Refs refs;
+      load_fixture(refs, "empty_main", 123);
+      duel_test_set_turn(1 - owner, 0);
+      duel_test_add(1 - owner, DUEL_ZONE_BATTLEFIELD, 114, tapped ? DUEL_STATE_TAPPED : 0);
+      for (int player : {0, 1}) {
+        for (int i = 0; i < 6; ++i) duel_test_add(player, DUEL_ZONE_LIBRARY, 91, 0);
+        for (int color = 0; color < 6; ++color) duel_test_set_mana(player, color, 0);
+      }
+      duel_test_prepare_fixture();
+      duel_test_advance_turn();
+      ASSERT_TRUE(duel_test_untap_step(owner));
+      EXPECT_FALSE(duel_test_draw_step(owner));
+      ASSERT_TRUE(duel_test_upkeep_step(owner));
+      auto ready = std::unique_ptr<DuelTestSnapshot, decltype(&duel_test_free_snapshot)>(
+          duel_test_capture(), duel_test_free_snapshot);
+      auto before = observable_state();
+      for (int player : {-1, 2, 1 - owner}) EXPECT_FALSE(duel_test_draw_step(player));
+      EXPECT_EQ(observable_state(), before);
+      duel_test_ai_roundtrip();
+      ASSERT_TRUE(duel_test_draw_step(owner));
+      EXPECT_EQ(g_current_phase, 0xa); // PHASE_DRAW.
+      int drawn = tapped ? 1 : 2;
+      EXPECT_EQ(duel_test_zone_count(owner, DUEL_ZONE_HAND), drawn);
+      EXPECT_EQ(duel_test_zone_count(owner, DUEL_ZONE_LIBRARY), 6 - drawn);
+      EXPECT_EQ(duel_test_zone_count(1 - owner, DUEL_ZONE_HAND), 0);
+      EXPECT_EQ(duel_test_zone_count(1 - owner, DUEL_ZONE_LIBRARY), 6);
+      auto completed = observable_state();
+      auto consumed = std::unique_ptr<DuelTestSnapshot, decltype(&duel_test_free_snapshot)>(
+          duel_test_capture(), duel_test_free_snapshot);
+      EXPECT_FALSE(duel_test_draw_step(owner));
+      EXPECT_EQ(observable_state(), completed);
+      duel_test_restore(ready.get());
+      ASSERT_TRUE(duel_test_draw_step(owner));
+      EXPECT_EQ(observable_state(), completed);
+      duel_test_restore(consumed.get());
+      EXPECT_FALSE(duel_test_draw_step(owner));
+      EXPECT_EQ(duel_test_finish_choice_plan(), 0);
+      duel_test_check_invariants();
+    }
+  }
+}
+TEST(DrawStep, FixtureResetAndSnapshotRestorePerSeatDrawLimits) {
+  auto prepare_draw = [](int owner, bool limit) {
+    Refs refs;
+    load_fixture(refs, "empty_main", 123);
+    duel_test_set_turn(1 - owner, 0);
+    if (limit) {
+      duel_test_add(1 - owner, DUEL_ZONE_BATTLEFIELD, 114, 0); // Howling Mine.
+      duel_test_add(1 - owner, DUEL_ZONE_BATTLEFIELD, 13811, 0); // Spirit of the Labyrinth.
+    }
+    for (int player : {0, 1}) {
+      for (int i = 0; i < 6; ++i) duel_test_add(player, DUEL_ZONE_LIBRARY, 126, 0);
+      for (int color = 0; color < 6; ++color) duel_test_set_mana(player, color, 0);
+    }
+    duel_test_prepare_fixture();
+    duel_test_advance_turn();
+    return duel_test_untap_step(owner) && duel_test_upkeep_step(owner);
+  };
+  for (int owner : {0, 1}) {
+    ASSERT_TRUE(prepare_draw(owner, false));
+    ASSERT_TRUE(duel_test_draw_step(owner));
+    ASSERT_EQ(duel_test_zone_count(owner, DUEL_ZONE_HAND), 1);
+
+    ASSERT_TRUE(prepare_draw(owner, true));
+    auto ready = std::unique_ptr<DuelTestSnapshot, decltype(&duel_test_free_snapshot)>(
+        duel_test_capture(), duel_test_free_snapshot);
+    ASSERT_TRUE(duel_test_draw_step(owner));
+    EXPECT_EQ(duel_test_zone_count(owner, DUEL_ZONE_HAND), 1);
+    EXPECT_EQ(duel_test_zone_count(owner, DUEL_ZONE_LIBRARY), 5);
+    EXPECT_EQ(duel_test_zone_count(1 - owner, DUEL_ZONE_HAND), 0);
+    auto completed = observable_state();
+    duel_test_restore(ready.get());
+    ASSERT_TRUE(duel_test_draw_step(owner));
+    EXPECT_EQ(observable_state(), completed);
+    EXPECT_EQ(duel_test_finish_choice_plan(), 0);
+    duel_test_check_invariants();
+  }
+}
+TEST(DrawStep, PoolsAndPendingSpellsCannotBypassPhasePreparation) {
+  for (int owner : {0, 1}) {
+    ASSERT_TRUE(prepare_upkeep_control_fixture(owner, 1110));
+    auto bolt = duel_test_add(owner, DUEL_ZONE_HAND, 145, 0);
+    duel_test_set_turn(1 - owner, 0);
+    duel_test_advance_turn();
+    ASSERT_TRUE(duel_test_untap_step(owner));
+    ASSERT_TRUE(duel_test_upkeep_step(owner));
+    auto ready = std::unique_ptr<DuelTestSnapshot, decltype(&duel_test_free_snapshot)>(
+        duel_test_capture(), duel_test_free_snapshot);
+    for (int player : {0, 1}) {
+      duel_test_set_mana(player, 4, 1);
+      auto funded = observable_state();
+      EXPECT_FALSE(duel_test_draw_step(owner));
+      EXPECT_EQ(observable_state(), funded);
+      duel_test_set_mana(player, 4, 0);
+    }
+    ASSERT_TRUE(duel_test_draw_step(owner));
+    duel_test_restore(ready.get());
+    duel_test_set_mana(owner, 4, 1);
+    duel_test_decision(DUEL_CHOICE_TARGET, owner, 1 - owner, -1);
+    ASSERT_TRUE(duel_test_cast(bolt));
+    ASSERT_EQ(duel_test_stack_size(), 1);
+    auto pending = observable_state();
+    EXPECT_FALSE(duel_test_draw_step(owner));
+    EXPECT_EQ(observable_state(), pending);
+    duel_test_resolve();
+    EXPECT_FALSE(duel_test_draw_step(owner));
+    duel_test_restore(ready.get());
+    duel_test_set_turn(owner, 0);
+    EXPECT_FALSE(duel_test_draw_step(owner));
+  }
+}
 static bool prepare_declaration_control_fixture(Refs &refs, int defender, int source_id, int victim_id, int damage_spell=0) {
   load_fixture(refs,"empty_main",123);duel_test_set_turn(defender,0);
   refs["source"]=duel_test_add(defender,DUEL_ZONE_HAND,source_id,0);
@@ -1465,6 +1717,38 @@ TEST(OptionalTargetReceipt, RealCancellationAndMandatoryFallbackRetainPolicyAndS
     }
   }
 }
+TEST(OptionalTargetReceipt, DoneFinishesStriveWithoutCancelOrExtraPayment) {
+  for (int owner : {0, 1}) for (bool choose_first : {false, true}) {
+    SCOPED_TRACE(owner);
+    SCOPED_TRACE(choose_first);
+    Refs refs;
+    load_fixture(refs, "empty_main", 123);
+    duel_test_set_turn(owner, 0);
+    auto first = duel_test_add(owner, DUEL_ZONE_BATTLEFIELD, 106, 0);
+    auto other = duel_test_add(owner, DUEL_ZONE_BATTLEFIELD, 106, 0);
+    auto formation = duel_test_add(owner, DUEL_ZONE_HAND, 13836, 0);
+    duel_test_prepare_fixture();
+    duel_test_set_mana(owner, 0, 2);
+    duel_test_set_mana(owner, 2, 2);
+    duel_test_refresh();
+
+    if (choose_first)
+      duel_test_decision(DUEL_CHOICE_TARGET, owner, owner, first.card);
+    duel_test_decision(DUEL_CHOICE_TARGET, owner, -1, -2);
+    ASSERT_TRUE(duel_test_cast(formation));
+    EXPECT_EQ(duel_test_finish_choice_plan(), 0);
+    duel_test_resolve();
+    duel_test_refresh();
+
+    EXPECT_EQ(duel_test_mana(owner, 0), 2);
+    EXPECT_EQ(duel_test_mana(owner, 2), 1);
+    EXPECT_EQ(duel_test_inspect(first).power, choose_first ? 3 : 2);
+    EXPECT_EQ(duel_test_inspect(other).power, 2);
+    EXPECT_EQ(duel_test_zone_count(owner, DUEL_ZONE_GRAVEYARD), 1);
+    EXPECT_EQ(duel_test_zone_csvid(owner, DUEL_ZONE_GRAVEYARD, 0), 13836);
+    duel_test_check_invariants();
+  }
+}
 TEST(AuraEntry, RealDirectPositiveAuraEntryAttachesWithoutManaAndReplaysForBothControllers) {
   for(int owner:{0,1})for(int receiver:{0,1}) {
     Refs refs;load_fixture(refs,"empty_main",123);duel_test_set_turn(owner,0);
@@ -1553,6 +1837,44 @@ TEST(ActivationModeIntent, MenusAutomaticValuesAndManaFallbacksStayDistinctAcros
     EXPECT_TRUE(duel_test_inspect(victim).in_play);EXPECT_EQ(duel_test_finish_choice_plan(),0);
     duel_test_check_invariants();
   }
+}
+TEST(ActivationModeIntent, OptionalHybridPaymentSelectsActualVectorOrCancels) {
+  Refs refs;
+  load_fixture(refs,"empty_main",123);
+  duel_test_set_turn(0,0);
+  auto source=duel_test_add(0,DUEL_ZONE_BATTLEFIELD,19335,0); // Dimir Locket.
+  duel_test_add(0,DUEL_ZONE_LIBRARY,91,0);
+  duel_test_add(0,DUEL_ZONE_LIBRARY,188,0);
+  duel_test_prepare_fixture();
+  for(int color=0;color<6;++color)duel_test_set_mana(0,color,color==2?5:0);
+  duel_test_refresh();
+  auto funded=std::unique_ptr<DuelTestSnapshot,decltype(&duel_test_free_snapshot)>(
+      duel_test_capture(),duel_test_free_snapshot);
+
+  duel_test_activation_mode_decision(0,source,"Draw 2 cards",2,1);
+  duel_test_activation_mode_payment(0,4u<<(4*2));
+  ASSERT_TRUE(duel_test_activate(source));
+  EXPECT_EQ(duel_test_finish_activation_mode(),1);
+  EXPECT_EQ(duel_test_stack_size(),1);
+  EXPECT_EQ(duel_test_mana(0,2),1);
+  EXPECT_EQ(duel_test_mana(0,1),0);
+  EXPECT_FALSE(duel_test_inspect(source).in_play);
+  duel_test_resolve();
+  EXPECT_EQ(duel_test_zone_count(0,DUEL_ZONE_HAND),2);
+  EXPECT_EQ(duel_test_finish_choice_plan(),0);
+
+  duel_test_restore(funded.get());
+  duel_test_activation_mode_decision(0,source,"Draw 2 cards",2,1);
+  duel_test_activation_mode_payment(0,4u<<(4*5)); // Deliberately absent observer control.
+  EXPECT_FALSE(duel_test_activate(source));
+  EXPECT_LT(duel_test_finish_activation_mode(),-1);
+  EXPECT_EQ(duel_test_stack_size(),0);
+  EXPECT_TRUE(duel_test_inspect(source).in_play);
+  EXPECT_FALSE(duel_test_inspect(source).tapped);
+  EXPECT_EQ(duel_test_mana(0,2),5);
+  EXPECT_EQ(duel_test_zone_count(0,DUEL_ZONE_LIBRARY),2);
+  EXPECT_EQ(duel_test_finish_choice_plan(),0);
+  duel_test_check_invariants();
 }
 TEST(ActivationHeuristics, ManaMarkerDoesNotResolveNonmanaModesAcrossResetAndSnapshots) {
   for(int owner:{0,1}) {
@@ -1733,6 +2055,50 @@ TEST(CastAnnouncement, RealResponseParentContextSupportsRecursiveCounterCopiesAn
       if(!replay)completed=observable_state();else EXPECT_EQ(observable_state(),completed);
       duel_test_ai_roundtrip();EXPECT_EQ(observable_state(),completed);
     }
+  }
+}
+TEST(CastAnnouncement, ActivationResponseUsesTheHeldSpellAndRealMorphPayment) {
+  for (int owner : {0, 1}) {
+    const int opponent = 1 - owner;
+    Refs refs;
+    load_fixture(refs, "empty_main", 123);
+    auto source = duel_test_add(owner, DUEL_ZONE_HAND, 6457, 0); // Voidmage Apprentice.
+    auto parent = duel_test_add(opponent, DUEL_ZONE_HAND, 106, 0); // Grizzly Bears.
+    duel_test_prepare_fixture();
+    duel_host_present_ai_dialogs(1);
+    duel_test_set_turn(owner, 0);
+    duel_test_set_mana(owner, 0, 3);
+    duel_test_set_mana(owner, 2, 1);
+    duel_test_decision(DUEL_CHOICE_DIALOG, owner, 0, -1);
+    ASSERT_TRUE(duel_test_cast(source));
+    duel_test_resolve();
+    ASSERT_EQ(duel_test_finish_choice_plan(), 0);
+    ASSERT_EQ(duel_test_inspect(source).power, 2);
+
+    duel_test_set_turn(opponent, 0);
+    duel_test_set_mana(opponent, 0, 1);
+    duel_test_set_mana(opponent, 3, 1);
+    ASSERT_TRUE(duel_test_cast(parent));
+    ASSERT_EQ(duel_test_stack_size(), 1);
+    duel_test_set_mana(owner, 0, 2);
+    duel_test_set_mana(owner, 2, 1);
+    duel_test_refresh();
+    EXPECT_FALSE(duel_test_activate_response(source));
+    ASSERT_EQ(duel_test_stack_size(), 1);
+    EXPECT_EQ(duel_test_inspect(source).power, 2);
+    EXPECT_EQ(duel_test_mana(owner, 2), 1);
+
+    duel_test_set_mana(owner, 2, 2);
+    duel_test_refresh();
+    ASSERT_TRUE(duel_test_activate_response(source));
+    duel_test_resolve();
+    EXPECT_EQ(duel_test_stack_size(), 0);
+    EXPECT_EQ(duel_test_inspect(source).power, 1);
+    EXPECT_EQ(duel_test_mana(owner, 0), 0);
+    EXPECT_EQ(duel_test_mana(owner, 2), 0);
+    ASSERT_EQ(duel_test_zone_count(opponent, DUEL_ZONE_GRAVEYARD), 1);
+    EXPECT_EQ(duel_test_zone_csvid(opponent, DUEL_ZONE_GRAVEYARD, 0), 106);
+    EXPECT_EQ(duel_test_finish_choice_plan(), 0);
   }
 }
 TEST(CastAnnouncement, StackObserverKeepsAbilityAfterSourceSacrifice) {
@@ -2539,6 +2905,273 @@ TEST(CountdownCounterObservation, VanishingLastRemovalSacrificesOnSameUpkeep) {
     scenario.TestBody();
     ASSERT_FALSE(HasFatalFailure());
   }
+}
+
+TEST(OrdinaryLandPlay, OneLandPerTurnWithSnapshotAndNewTurn) {
+  for (int player : {0, 1}) {
+    Refs refs;
+    load_fixture(refs, "empty_main", 123);
+    auto first = duel_test_add(player, DUEL_ZONE_HAND, 91, 0);
+    auto second = duel_test_add(player, DUEL_ZONE_HAND, 126, 0);
+    duel_test_prepare_fixture();
+    duel_test_set_turn(player, 0);
+    ASSERT_TRUE(duel_test_play_land(first));
+    EXPECT_TRUE(duel_test_inspect(first).in_play);
+    EXPECT_EQ(duel_test_stack_size(), 0);
+
+    std::unique_ptr<DuelTestSnapshot, decltype(&duel_test_free_snapshot)> played(
+        duel_test_capture(), duel_test_free_snapshot);
+    EXPECT_FALSE(duel_test_play_land(second));
+    EXPECT_TRUE(duel_test_inspect(second).in_hand);
+    duel_test_advance_turn();
+    duel_test_advance_turn();
+    ASSERT_TRUE(duel_test_play_land(second));
+    EXPECT_TRUE(duel_test_inspect(second).in_play);
+    EXPECT_EQ(duel_test_stack_size(), 0);
+
+    duel_test_restore(played.get());
+    EXPECT_FALSE(duel_test_play_land(second));
+    EXPECT_TRUE(duel_test_inspect(second).in_hand);
+  }
+}
+
+TEST(OrdinaryLandPlay, RejectsWrongActorPhaseStackAndCardWithoutUsingAllowance) {
+  Refs refs;
+  load_fixture(refs, "empty_main", 123);
+  auto forest = duel_test_add(0, DUEL_ZONE_HAND, 91, 0);
+  auto bear = duel_test_add(0, DUEL_ZONE_HAND, 106, 0);
+  duel_test_prepare_fixture();
+  duel_test_set_turn(1, 0);
+  EXPECT_FALSE(duel_test_play_land(forest));
+  duel_test_set_turn(0, 1);
+  EXPECT_FALSE(duel_test_play_land(forest));
+  duel_test_set_turn(0, 0);
+  EXPECT_FALSE(duel_test_play_land(bear));
+  duel_test_set_mana(0, 0, 1);
+  duel_test_set_mana(0, 3, 1);
+  ASSERT_TRUE(duel_test_cast(bear));
+  ASSERT_EQ(duel_test_stack_size(), 1);
+  EXPECT_FALSE(duel_test_play_land(forest));
+  EXPECT_TRUE(duel_test_inspect(forest).in_hand);
+  duel_test_resolve();
+  ASSERT_TRUE(duel_test_play_land(forest));
+  EXPECT_TRUE(duel_test_inspect(forest).in_play);
+  EXPECT_EQ(duel_test_stack_size(), 0);
+}
+
+static void resolve_impulse_with_real_exile(int owner) {
+  Refs refs;
+  load_fixture(refs, "empty_main", 123);
+  auto impulse = duel_test_add(owner, DUEL_ZONE_HAND, 14063, 0);
+  for (int csvid : {106, 91, 126}) duel_test_add(owner, DUEL_ZONE_LIBRARY, csvid, 0);
+  duel_test_add(owner, DUEL_ZONE_EXILE, 188, 0);
+  duel_test_prepare_fixture();
+  duel_test_set_turn(owner, 0);
+  for (int color = 0; color < 6; ++color) duel_test_set_mana(owner, color, 0);
+  duel_test_set_mana(owner, 0, 2);
+  duel_test_set_mana(owner, 4, 1);
+  ASSERT_TRUE(duel_test_cast(impulse));
+  duel_test_resolve();
+  ASSERT_EQ(duel_test_stack_size(), 0);
+  ASSERT_EQ(duel_test_zone_count(owner, DUEL_ZONE_EXILE), 4);
+  EXPECT_EQ(duel_test_zone_csvid(owner, DUEL_ZONE_EXILE, 0), 188);
+  EXPECT_EQ(duel_test_zone_count(owner, DUEL_ZONE_LIBRARY), 0);
+}
+
+TEST(ExiledPlayPermission, UsesLiveSpellPermissionAndRealCostsAcrossReplay) {
+  for (int owner : {0, 1}) {
+    ASSERT_NO_FATAL_FAILURE(resolve_impulse_with_real_exile(owner));
+    EXPECT_FALSE(duel_test_can_play_exiled(owner, owner, 106));
+    EXPECT_FALSE(duel_test_play_exiled(owner, owner, 106));
+    EXPECT_EQ(duel_test_zone_count(owner, DUEL_ZONE_EXILE), 4);
+    duel_test_set_mana(owner, 0, 1);
+    duel_test_set_mana(owner, 3, 1);
+    duel_test_refresh();
+    auto start = observable_state();
+    EXPECT_FALSE(duel_test_can_play_exiled(1 - owner, 1 - owner, 106));
+    EXPECT_FALSE(duel_test_can_play_exiled(owner, 1 - owner, 106));
+    EXPECT_FALSE(duel_test_play_exiled(1 - owner, owner, 106));
+    EXPECT_FALSE(duel_test_play_exiled(owner, owner, 188));
+    ASSERT_TRUE(duel_test_can_play_exiled(owner, owner, 106));
+    EXPECT_EQ(observable_state(), start);
+    std::unique_ptr<DuelTestSnapshot, decltype(&duel_test_free_snapshot)> ready(
+        duel_test_capture(), duel_test_free_snapshot);
+    std::string result;
+    for (int attempt = 0; attempt < 2; ++attempt) {
+      ASSERT_TRUE(duel_test_play_exiled(owner, owner, 106));
+      duel_test_resolve();
+      EXPECT_FALSE(duel_test_can_play_exiled(owner, owner, 106));
+      ASSERT_EQ(duel_test_zone_count(owner, DUEL_ZONE_BATTLEFIELD), 1);
+      EXPECT_EQ(duel_test_zone_csvid(owner, DUEL_ZONE_BATTLEFIELD, 0), 106);
+      EXPECT_EQ(duel_test_zone_count(owner, DUEL_ZONE_EXILE), 3);
+      EXPECT_EQ(duel_test_mana(owner, 0), 0);
+      EXPECT_EQ(duel_test_mana(owner, 3), 0);
+      if (attempt == 0) {
+        result = observable_state();
+        duel_test_restore(ready.get());
+      } else {
+        EXPECT_EQ(observable_state(), result);
+      }
+    }
+    duel_test_finish_decisions();
+  }
+}
+
+TEST(ExiledPlayPermission, UsesActualLandAllowanceAndExpiresAtCleanup) {
+  for (int owner : {0, 1}) {
+    ASSERT_NO_FATAL_FAILURE(resolve_impulse_with_real_exile(owner));
+    ASSERT_TRUE(duel_test_can_play_exiled(owner, owner, 91));
+    ASSERT_TRUE(duel_test_play_exiled(owner, owner, 91));
+    duel_test_resolve();
+    ASSERT_EQ(duel_test_zone_count(owner, DUEL_ZONE_BATTLEFIELD), 1);
+    EXPECT_EQ(duel_test_zone_csvid(owner, DUEL_ZONE_BATTLEFIELD, 0), 91);
+    EXPECT_FALSE(duel_test_can_play_exiled(owner, owner, 126));
+    EXPECT_FALSE(duel_test_play_exiled(owner, owner, 126));
+    duel_test_set_mana(owner, 0, 1);
+    duel_test_set_mana(owner, 3, 1);
+    duel_test_refresh();
+    ASSERT_TRUE(duel_test_can_play_exiled(owner, owner, 106));
+    duel_test_cleanup();
+    duel_test_set_mana(owner, 0, 1);
+    duel_test_set_mana(owner, 3, 1);
+    duel_test_refresh();
+    EXPECT_FALSE(duel_test_can_play_exiled(owner, owner, 106));
+    EXPECT_FALSE(duel_test_play_exiled(owner, owner, 106));
+    EXPECT_EQ(duel_test_zone_count(owner, DUEL_ZONE_EXILE), 3);
+    EXPECT_EQ(duel_test_mana(owner, 0), 1);
+    EXPECT_EQ(duel_test_mana(owner, 3), 1);
+    duel_test_finish_decisions();
+  }
+}
+
+TEST(LandCounterObservation, DepletionComesFromLiveManaActivation) {
+  Refs refs;
+  load_fixture(refs, "empty_main", 123);
+  auto land = duel_test_add(1, DUEL_ZONE_HAND, 2012, 0);  // Land Cap.
+  duel_test_prepare_fixture();
+  duel_test_set_turn(1, 0);
+  EXPECT_EQ(duel_test_counter(land, "depletion"), -1);
+  ASSERT_TRUE(duel_test_play_land(land));
+  EXPECT_FALSE(duel_test_inspect(land).tapped);
+  EXPECT_EQ(duel_test_counter(land, "depletion"), 0);
+  duel_test_set_mana(1, 5, 0);
+  duel_test_decision(DUEL_CHOICE_COLOR, 1, 5, -1);
+  ASSERT_TRUE(duel_test_activate(land));
+  EXPECT_EQ(duel_test_finish_choice_plan(), 0);
+  EXPECT_EQ(duel_test_mana(1, 5), 1);
+  EXPECT_TRUE(duel_test_inspect(land).tapped);
+  EXPECT_EQ(duel_test_stack_size(), 0);
+  EXPECT_EQ(duel_test_counter(land, "depletion"), 1);
+  EXPECT_EQ(duel_test_counter(land, "storage"), 0);
+}
+
+TEST(LandCounterObservation, StorageComesFromTappedLandOwnUpkeep) {
+  Refs refs;
+  load_fixture(refs, "empty_main", 123);
+  auto land = duel_test_add(0, DUEL_ZONE_HAND, 1791, 0);  // Hollow Trees.
+  duel_test_prepare_fixture();
+  for (int player : {0, 1})
+    for (int color = 0; color < 6; ++color)
+      duel_test_set_mana(player, color, 0);
+  duel_test_set_turn(0, 0);
+  EXPECT_EQ(duel_test_counter(land, "storage"), -1);
+  ASSERT_TRUE(duel_test_play_land(land));
+  EXPECT_TRUE(duel_test_inspect(land).tapped);
+  EXPECT_EQ(duel_test_counter(land, "storage"), 0);
+  duel_test_advance_turn();
+  ASSERT_TRUE(duel_test_untap_step(1));
+  ASSERT_TRUE(duel_test_upkeep_step(1));
+  EXPECT_EQ(duel_test_counter(land, "storage"), 0);
+  duel_test_advance_turn();
+  ASSERT_TRUE(duel_test_untap_step(0));
+  ASSERT_TRUE(duel_test_upkeep_step(0));
+  EXPECT_EQ(duel_test_counter(land, "storage"), 1);
+  EXPECT_EQ(duel_test_counter(land, "depletion"), 0);
+}
+
+TEST(RequiredAttackDeclaration, DeclinesDoneUntilTheRequiredCreatureAttacks) {
+  for (int player : {0, 1}) {
+    Refs refs;
+    load_fixture(refs, "empty_main", 123);
+    auto required = duel_test_add(player, DUEL_ZONE_BATTLEFIELD, 6868, DUEL_STATE_UNTAPPED);
+    auto other = duel_test_add(player, DUEL_ZONE_BATTLEFIELD, 106, DUEL_STATE_UNTAPPED);
+    duel_test_prepare_fixture();
+    duel_test_set_turn(player, 0);
+    duel_test_begin_required_attackers();
+    EXPECT_FALSE(duel_test_can_finish_attackers());
+    EXPECT_FALSE(duel_test_inspect(required).attacking);
+    ASSERT_TRUE(duel_test_attack(other));
+    EXPECT_FALSE(duel_test_can_finish_attackers());
+    ASSERT_TRUE(duel_test_attack(required));
+    EXPECT_TRUE(duel_test_can_finish_attackers());
+    duel_test_finish_attackers();
+    EXPECT_TRUE(duel_test_inspect(required).attacking);
+    EXPECT_TRUE(duel_test_inspect(required).tapped);
+    EXPECT_TRUE(duel_test_inspect(other).attacking);
+  }
+}
+
+TEST(RequiredAttackDeclaration, TappedOrNewCreaturesDoNotBlockCompletion) {
+  const int unavailable[] = {DUEL_STATE_TAPPED, DUEL_STATE_SICK | DUEL_STATE_UNTAPPED};
+  for (int state : unavailable) {
+    Refs refs;
+    load_fixture(refs, "empty_main", 123);
+    auto required = duel_test_add(0, DUEL_ZONE_BATTLEFIELD, 6868, state);
+    duel_test_prepare_fixture();
+    duel_test_set_turn(0, 0);
+    duel_test_begin_required_attackers();
+    EXPECT_TRUE(duel_test_can_finish_attackers());
+    EXPECT_FALSE(duel_test_attack(required));
+    duel_test_finish_attackers();
+    EXPECT_FALSE(duel_test_inspect(required).attacking);
+  }
+}
+
+TEST(ScheduledTurn, ExtraTurnPreservesTheNormalRotationAcrossRestore) {
+  for (int player : {0, 1}) {
+    Refs refs;
+    load_fixture(refs, "empty_main", 123);
+    auto spell = duel_test_add(player, DUEL_ZONE_HAND, 249, 0);  // Time Walk.
+    duel_test_prepare_fixture();
+    duel_test_set_turn(player, 0);
+    for (int seat = 0; seat < 2; ++seat)
+      for (int color = 0; color < 6; ++color)
+        duel_test_set_mana(seat, color, 0);
+    duel_test_set_mana(player, 0, 1);
+    duel_test_set_mana(player, 2, 1);
+    ASSERT_TRUE(duel_test_cast(spell));
+    duel_test_resolve();
+    ASSERT_EQ(duel_test_advance_scheduled_turn(), player);
+    auto *extra_turn = duel_test_capture();
+    EXPECT_EQ(duel_test_advance_scheduled_turn(), 1-player);
+    EXPECT_EQ(duel_test_advance_scheduled_turn(), player);
+    duel_test_restore(extra_turn);
+    EXPECT_EQ(duel_test_advance_scheduled_turn(), 1-player);
+    duel_test_free_snapshot(extra_turn);
+  }
+}
+
+TEST(PaidAttackDeclaration, RequiresActualPaymentBeforeAnAttackerTaps) {
+  Refs refs;
+  load_fixture(refs, "empty_main", 123);
+  auto bear = duel_test_add(0, DUEL_ZONE_BATTLEFIELD, 106, DUEL_STATE_UNTAPPED);
+  duel_test_add(1, DUEL_ZONE_BATTLEFIELD, 3233, 0);  // Propaganda.
+  duel_test_prepare_fixture();
+  duel_test_set_turn(0, 0);
+  for (int seat = 0; seat < 2; ++seat)
+    for (int color = 0; color < 6; ++color)
+      duel_test_set_mana(seat, color, 0);
+  duel_test_begin_attackers();
+  EXPECT_FALSE(duel_test_attack_with_tax(bear));
+  EXPECT_FALSE(duel_test_inspect(bear).attacking);
+  EXPECT_FALSE(duel_test_inspect(bear).tapped);
+  duel_test_set_mana(0, 0, 2);
+  duel_test_decision(DUEL_CHOICE_DIALOG, 0, 0, -1);
+  ASSERT_TRUE(duel_test_attack_with_tax(bear));
+  EXPECT_EQ(duel_test_mana(0, 0), 0);
+  EXPECT_EQ(duel_test_finish_choice_plan(), 0);
+  EXPECT_TRUE(duel_test_inspect(bear).attacking);
+  EXPECT_TRUE(duel_test_inspect(bear).tapped);
 }
 
 int main(int argc,char**argv) {

@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Violent Eruption",
+  "csvid": 5897,
+  "recipes": [
+    {
+      "family": "madness_targeted_removal",
+      "version": 2,
+      "params": {
+        "csvid": 5897,
+        "kind": "Instant",
+        "normal": [
+          1,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        "madness": [
+          1,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "oracle_text": "Violent Eruption deals 4 damage divided as you choose among any number of targets.\nMadness {1}{R}{R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "short_0",
+        "short_1",
+        "normal_0",
+        "normal_1",
+        "paid_walker_0",
+        "paid_walker_1",
+        "offturn_paid_0",
+        "offturn_paid_1",
+        "replay_0",
+        "replay_1",
+        "uneven_paid_0",
+        "uneven_paid_1"
+      ]
+    }
+  ]
+}

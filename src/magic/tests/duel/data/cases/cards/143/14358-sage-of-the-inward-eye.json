@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Sage of the Inward Eye",
+  "csvid": 14358,
+  "recipes": [
+    {
+      "family": "cast_noncreature_riders",
+      "version": 2,
+      "params": {
+        "role": "sage",
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          1,
+          1
+        ]
+      },
+      "oracle_text": "Flying\nWhenever you cast a noncreature spell, creatures you control gain lifelink until end of turn.",
+      "variants": [
+        "own_0",
+        "creature_0",
+        "opponent_0",
+        "countered_0",
+        "combat_0",
+        "ally_lifelink_0",
+        "expiry_0",
+        "own_1",
+        "creature_1",
+        "opponent_1",
+        "countered_1",
+        "combat_1",
+        "ally_lifelink_1",
+        "expiry_1"
+      ]
+    }
+  ]
+}

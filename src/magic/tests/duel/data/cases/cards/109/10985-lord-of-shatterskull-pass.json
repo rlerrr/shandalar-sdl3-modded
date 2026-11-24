@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Lord of Shatterskull Pass",
+  "csvid": 10985,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "level_resource_riders",
+      "version": 2,
+      "oracle_text": "Level up {1}{R} ({1}{R}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 1-5\n6/6\nLEVEL 6+\n6/6\nWhenever this creature attacks, it deals 6 damage to each creature defending player controls.",
+      "params": {
+        "price": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "activation": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "base": [
+          3,
+          3
+        ],
+        "first": [
+          1,
+          6,
+          6
+        ],
+        "second": [
+          6,
+          6,
+          6
+        ],
+        "first_riders": [],
+        "second_riders": [
+          "Whenever this creature attacks, it deals 6 damage to each creature defending player controls."
+        ],
+        "rider": "sweep"
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "opponent_timing_0",
+        "opponent_timing_1",
+        "before_tier_0",
+        "before_tier_1",
+        "attack_trigger_0",
+        "attack_trigger_1",
+        "ally_attacks_0",
+        "ally_attacks_1",
+        "source_blocks_0",
+        "source_blocks_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

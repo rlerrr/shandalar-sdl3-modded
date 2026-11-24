@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Ixalan's Binding",
+  "csvid": 17441,
+  "recipes": [
+    {
+      "family": "entry_follow_on_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 17441,
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.\nYour opponents can't cast spells with the same name as the exiled card.",
+      "variants": [
+        "cast_lock_0",
+        "cast_lock_1",
+        "no_enemy_nonland_0",
+        "no_enemy_nonland_1",
+        "own_named_spell_0",
+        "own_named_spell_1"
+      ]
+    }
+  ]
+}

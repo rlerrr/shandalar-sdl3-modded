@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Sin Collector",
+  "csvid": 13221,
+  "recipes": [
+    {
+      "family": "entry_trigger_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 13221,
+        "cost": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "When this creature enters, target opponent reveals their hand. You choose an instant or sorcery card from it and exile that card.",
+      "variants": [
+        "instant_0",
+        "instant_1",
+        "sorcery_0",
+        "sorcery_1",
+        "empty_0",
+        "empty_1"
+      ]
+    }
+  ]
+}

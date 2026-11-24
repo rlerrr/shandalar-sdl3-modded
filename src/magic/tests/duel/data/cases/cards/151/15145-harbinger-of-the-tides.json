@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Harbinger of the Tides",
+  "csvid": 15145,
+  "recipes": [
+    {
+      "family": "entry_interaction_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 15145,
+        "cost": [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "You may cast this spell as though it had flash if you pay {2} more to cast it. (You may cast it any time you could cast an instant.)\nWhen this creature enters, you may return target tapped creature an opponent controls to its owner's hand.",
+      "variants": [
+        "normal_0",
+        "normal_1",
+        "flash_0",
+        "flash_1",
+        "flash_short_0",
+        "flash_short_1",
+        "decline_0",
+        "decline_1",
+        "untapped_only_0",
+        "untapped_only_1"
+      ]
+    }
+  ]
+}

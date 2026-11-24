@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "card": "Scattering Stroke",
+  "csvid": 9249,
+  "recipes": [
+    {
+      "family": "pending_spell_composition",
+      "version": 2,
+      "oracle_text": "Counter target spell. Clash with an opponent. If you win, at the beginning of your next main phase, you may add an amount of {C} equal to that spell's mana value. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",
+      "params": {
+        "effect": "delayed",
+        "mana": "{2}{U}{U}"
+      },
+      "variants": [
+        "win_0",
+        "win_1",
+        "tie_0",
+        "tie_1",
+        "loss_0",
+        "loss_1",
+        "human_bottom_0",
+        "human_bottom_1",
+        "snapshot_0",
+        "snapshot_1",
+        "optional_decline_0",
+        "optional_decline_1",
+        "own_spell_0",
+        "own_spell_1",
+        "no_spell_0",
+        "no_spell_1",
+        "uncounterable_0",
+        "uncounterable_1",
+        "x_value_0",
+        "x_value_1"
+      ]
+    }
+  ]
+}

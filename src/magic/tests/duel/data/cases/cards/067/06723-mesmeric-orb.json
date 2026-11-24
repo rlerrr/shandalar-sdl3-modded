@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Mesmeric Orb",
+  "csvid": 6723,
+  "recipes": [
+    {
+      "family": "mill_remaining_phase_and_mill_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 6723,
+        "printed_mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "rules": "Whenever a permanent becomes untapped, that permanent's controller mills a card."
+      },
+      "oracle_text": "Whenever a permanent becomes untapped, that permanent's controller mills a card.",
+      "variants": [
+        "scheduled_both_0",
+        "scheduled_both_1",
+        "manual_repeat_0",
+        "manual_repeat_1"
+      ]
+    }
+  ]
+}

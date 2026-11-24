@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "card": "Captain's Claws",
+  "csvid": 15566,
+  "recipes": [
+    {
+      "family": "equipment_combat_attack_board_effects",
+      "version": 2,
+      "params": {
+        "csvid": 15566,
+        "cast_mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "equip_generic": 1,
+        "bonus": [
+          1,
+          0
+        ],
+        "clauses": [
+          "Equipped creature gets +1/+0.",
+          "Whenever equipped creature attacks, create a 1/1 white Kor Ally creature token that's tapped and attacking.",
+          "Equip {1}"
+        ],
+        "modes": [
+          "own_attack",
+          "other_attack",
+          "reequip_attack",
+          "unfunded",
+          "detached",
+          "block_the_token",
+          "token_later_attacks"
+        ]
+      },
+      "oracle_text": "Equipped creature gets +1/+0.\nWhenever equipped creature attacks, create a 1/1 white Kor Ally creature token that's tapped and attacking.\nEquip {1}",
+      "variants": [
+        "own_attack_0",
+        "own_attack_1",
+        "other_attack_0",
+        "other_attack_1",
+        "reequip_attack_0",
+        "reequip_attack_1",
+        "unfunded_0",
+        "unfunded_1",
+        "detached_0",
+        "detached_1",
+        "block_the_token_0",
+        "block_the_token_1",
+        "token_later_attacks_0",
+        "token_later_attacks_1"
+      ]
+    }
+  ]
+}

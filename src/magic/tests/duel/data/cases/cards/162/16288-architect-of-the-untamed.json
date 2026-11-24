@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "csvid": 16288,
+  "card": "Architect of the Untamed",
+  "recipes": [
+    {
+      "family": "landfall_tokens_and_mana",
+      "version": 2,
+      "oracle_text": "Landfall — Whenever a land you control enters, you get {E} (an energy counter).\nPay eight {E}: Create a 6/6 colorless Beast artifact creature token.",
+      "params": {
+        "effect": "architect",
+        "price": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "clauses": [
+          "Landfall — Whenever a land you control enters, you get {E} (an energy counter).",
+          "Pay eight {E}: Create a 6/6 colorless Beast artifact creature token."
+        ]
+      },
+      "variants": [
+        "own_0",
+        "own_1",
+        "opponent_0",
+        "opponent_1",
+        "repeat_0",
+        "repeat_1",
+        "late_source_0",
+        "late_source_1",
+        "energy_eight_0",
+        "energy_eight_1",
+        "energy_short_0",
+        "energy_short_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

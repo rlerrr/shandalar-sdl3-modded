@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Triton Cavalry",
+  "csvid": 13999,
+  "recipes": [
+    {
+      "family": "heroic_target_control_riders",
+      "version": 2,
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, you may return target enchantment to its owner's hand.",
+      "params": {
+        "effect": "bounce",
+        "price": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 4
+      },
+      "variants": [
+        "own_0",
+        "opponent_0",
+        "other_target_0",
+        "countered_0",
+        "replay_0",
+        "foreign_owner_0",
+        "own_victim_0",
+        "no_target_0",
+        "own_1",
+        "opponent_1",
+        "other_target_1",
+        "countered_1",
+        "replay_1",
+        "foreign_owner_1",
+        "own_victim_1",
+        "no_target_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Chained to the Rocks",
+  "csvid": 13406,
+  "recipes": [
+    {
+      "family": "entry_trigger_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 13406,
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Enchant Mountain you control\nWhen this Aura enters, exile target creature an opponent controls until this Aura leaves the battlefield. (That creature returns under its owner's control.)",
+      "variants": [
+        "return_creature_0",
+        "return_creature_1",
+        "host_destroyed_0",
+        "host_destroyed_1",
+        "no_enemy_creature_0",
+        "no_enemy_creature_1",
+        "wrong_mountain_0",
+        "wrong_mountain_1"
+      ]
+    }
+  ]
+}

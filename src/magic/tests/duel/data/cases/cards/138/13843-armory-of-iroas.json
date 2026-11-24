@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Armory of Iroas",
+  "csvid": 13843,
+  "recipes": [
+    {
+      "family": "equipment_combat_counters_and_copies",
+      "version": 2,
+      "params": {
+        "csvid": 13843,
+        "fee": 2,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever equipped creature attacks, put a +1/+1 counter on it.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+      "variants": [
+        "alone_0",
+        "alone_1",
+        "group_0",
+        "group_1",
+        "other_attacker_0",
+        "other_attacker_1",
+        "move_0",
+        "move_1",
+        "offturn_0",
+        "offturn_1"
+      ]
+    }
+  ]
+}

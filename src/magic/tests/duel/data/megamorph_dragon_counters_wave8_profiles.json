@@ -1,0 +1,377 @@
+{
+  "sources": {
+    "Acid-Spewer Dragon": {
+      "oracle": {
+        "oracle_id": "f4378682-359f-48b0-adb7-b996b8d972db",
+        "name": "Acid-Spewer Dragon",
+        "oracle_text": "Flying, deathtouch\nMegamorph {5}{B}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\nWhen this creature is turned face up, put a +1/+1 counter on each other Dragon creature you control.",
+        "mana_cost": "{5}{B}",
+        "type_line": "Creature — Dragon",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Deathtouch",
+          "Flying",
+          "Megamorph"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/86/acid-spewer-dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14663,
+        "iid": 11438,
+        "name": "Acid-Spewer Dragon",
+        "handler": "manalinkeh_card_acid_spewer_dragon",
+        "kind": "card"
+      }
+    },
+    "Belltoll Dragon": {
+      "oracle": {
+        "oracle_id": "d0e529e3-0f77-4a55-ba35-46591f48d960",
+        "name": "Belltoll Dragon",
+        "oracle_text": "Flying, hexproof\nMegamorph {5}{U}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\nWhen this creature is turned face up, put a +1/+1 counter on each other Dragon creature you control.",
+        "mana_cost": "{5}{U}",
+        "type_line": "Creature — Dragon",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Hexproof",
+          "Megamorph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/46/belltoll-dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14856,
+        "iid": 11690,
+        "name": "Belltoll Dragon",
+        "handler": "manalinkeh_card_belltoll_dragon",
+        "kind": "card"
+      }
+    },
+    "Herdchaser Dragon": {
+      "oracle": {
+        "oracle_id": "9c7073e9-c676-4629-814c-a96e7af905cf",
+        "name": "Herdchaser Dragon",
+        "oracle_text": "Flying, trample\nMegamorph {5}{G}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\nWhen this creature is turned face up, put a +1/+1 counter on each other Dragon creature you control.",
+        "mana_cost": "{5}{G}",
+        "type_line": "Creature — Dragon",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Trample",
+          "Megamorph"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/190/herdchaser-dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14936,
+        "iid": 13019,
+        "name": "Herdchaser Dragon",
+        "handler": "manalinkeh_card_herdchaser_dragon",
+        "kind": "card"
+      }
+    },
+    "Shieldhide Dragon": {
+      "oracle": {
+        "oracle_id": "4f5fee21-bf29-4873-baf4-04911c309d81",
+        "name": "Shieldhide Dragon",
+        "oracle_text": "Flying, lifelink\nMegamorph {5}{W}{W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\nWhen this creature is turned face up, put a +1/+1 counter on each other Dragon creature you control.",
+        "mana_cost": "{5}{W}",
+        "type_line": "Creature — Dragon",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Lifelink",
+          "Megamorph"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/37/shieldhide-dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15019,
+        "iid": 14557,
+        "name": "Shieldhide Dragon",
+        "handler": "manalinkeh_card_shieldhide_dragon",
+        "kind": "card"
+      }
+    },
+    "Stormwing Dragon": {
+      "oracle": {
+        "oracle_id": "10796fe6-edf8-427b-986c-e7666a72ec8d",
+        "name": "Stormwing Dragon",
+        "oracle_text": "Flying, first strike\nMegamorph {5}{R}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\nWhen this creature is turned face up, put a +1/+1 counter on each other Dragon creature you control.",
+        "mana_cost": "{5}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "First strike",
+          "Megamorph"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/159/stormwing-dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15039,
+        "iid": 14904,
+        "name": "Stormwing Dragon",
+        "handler": "manalinkeh_card_stormwing_dragon",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Shivan Dragon": {
+      "oracle": {
+        "oracle_id": "711eea87-0fa3-46e0-a42b-fa5a86455f04",
+        "name": "Shivan Dragon",
+        "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/763/shivan-dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 224,
+        "iid": 8648,
+        "name": "Shivan Dragon",
+        "handler": "manalinkeh_card_furnace_whelp",
+        "kind": "card"
+      }
+    },
+    "Dragon Whelp": {
+      "oracle": {
+        "oracle_id": "705a1985-ed39-4a4b-812e-a677170b596e",
+        "name": "Dragon Whelp",
+        "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn. If this ability has been activated four or more times this turn, sacrifice this creature at the beginning of the next end step.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/plst/DMR-116/dragon-whelp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 67,
+        "iid": 2689,
+        "name": "Dragon Whelp",
+        "handler": "manalinkeh_card_dragon_whelp",
+        "kind": "card"
+      }
+    },
+    "Imperial Hellkite": {
+      "oracle": {
+        "oracle_id": "99642419-ab24-4770-9f1c-84d2806441b5",
+        "name": "Imperial Hellkite",
+        "oracle_text": "Flying\nMorph {6}{R}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, you may search your library for a Dragon card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{5}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Flying",
+          "Morph"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mkc/155/imperial-hellkite?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6401,
+        "iid": 4811,
+        "name": "Imperial Hellkite",
+        "handler": "manalinkeh_card_imperial_hellkite",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Serra Angel": {
+      "oracle": {
+        "oracle_id": "4b7ac066-e5c7-43e6-9e7e-2739b24a905d",
+        "name": "Serra Angel",
+        "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/740/serra-angel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 221,
+        "iid": 8519,
+        "name": "Serra Angel",
+        "handler": "manalinkeh_card_serra_angel",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Bazaar Trader": {
+      "oracle": {
+        "oracle_id": "21ad7067-3210-42d6-9009-0784b2834227",
+        "name": "Bazaar Trader",
+        "oracle_text": "{T}: Target player gains control of target artifact, creature, or land you control.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/72/bazaar-trader?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10729,
+        "iid": 930,
+        "name": "Bazaar Trader",
+        "handler": "manalinkeh_card_bazaar_trader",
+        "kind": "card"
+      }
+    }
+  },
+  "hidden_observer": {
+    "csvid": 13252,
+    "iid": 3230,
+    "name": "Face-Down Creature",
+    "handler": "manalinkeh_card_face_down_creature",
+    "kind": "card"
+  }
+}

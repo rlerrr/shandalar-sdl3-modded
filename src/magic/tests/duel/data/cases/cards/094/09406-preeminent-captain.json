@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 9406,
+  "card": "Preeminent Captain",
+  "recipes": [
+    {
+      "family": "attack_trigger_tokens_and_combat",
+      "version": 2,
+      "params": {
+        "csvid": 9406,
+        "printed_cost": "{2}{W}",
+        "keywords": [
+          "First strike"
+        ]
+      },
+      "oracle_text": "First strike (This creature deals combat damage before creatures without first strike.)\nWhenever this creature attacks, you may put a Soldier creature card from your hand onto the battlefield tapped and attacking.",
+      "variants": [
+        "soldier_0",
+        "decline_0",
+        "foe_soldier_0",
+        "non_soldier_0",
+        "first_strike_0",
+        "soldier_1",
+        "foe_soldier_1",
+        "non_soldier_1",
+        "first_strike_1"
+      ]
+    }
+  ]
+}

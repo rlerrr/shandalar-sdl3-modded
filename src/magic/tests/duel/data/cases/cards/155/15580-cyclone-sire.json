@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Cyclone Sire",
+  "csvid": 15580,
+  "recipes": [
+    {
+      "family": "departure_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 15580,
+        "mana_cost": "{4}{U}"
+      },
+      "oracle_text": "Flying\nWhen this creature dies, you may put three +1/+1 counters on target land you control. If you do, that land becomes a 0/0 Elemental creature with haste that's still a land.",
+      "variants": [
+        "animate_0",
+        "animate_1",
+        "foe_land_0",
+        "foe_land_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

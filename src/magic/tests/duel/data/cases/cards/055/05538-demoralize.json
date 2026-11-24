@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "card": "Demoralize",
+  "csvid": 5538,
+  "recipes": [
+    {
+      "family": "threshold_global_effects",
+      "version": 2,
+      "params": {
+        "csvid": 5538,
+        "branch": "demoralize",
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "All creatures gain menace until end of turn. (They can't be blocked except by two or more creatures.)\nThreshold — If there are seven or more cards in your graveyard, creatures can't block this turn.",
+      "variants": [
+        "six_0",
+        "six_1",
+        "seven_0",
+        "seven_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "pair_0",
+        "pair_1",
+        "offturn_seven_0",
+        "offturn_seven_1",
+        "expires_0",
+        "expires_1",
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "countered_0",
+        "countered_1",
+        "gain_seventh_0",
+        "gain_seventh_1"
+      ]
+    }
+  ]
+}

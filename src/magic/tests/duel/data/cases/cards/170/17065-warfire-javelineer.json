@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 17065,
+  "card": "Warfire Javelineer",
+  "recipes": [
+    {
+      "family": "entry_interaction_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 17065,
+        "printed_cost": "{3}{R}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, it deals X damage to target creature an opponent controls, where X is the number of instant and sorcery cards in your graveyard.",
+      "variants": [
+        "mixed_types_0",
+        "foe_grave_0",
+        "own_only_0",
+        "lethal_0",
+        "mixed_types_1",
+        "foe_grave_1",
+        "own_only_1",
+        "lethal_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Trial of Zeal",
+  "csvid": 17054,
+  "recipes": [
+    {
+      "family": "entry_follow_on_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 17054,
+        "cost": "{2}{R}",
+        "choices": [
+          "player_0",
+          "player_1",
+          "lethal_0",
+          "lethal_1",
+          "own_cartouche_0",
+          "own_cartouche_1",
+          "foe_cartouche_0",
+          "foe_cartouche_1"
+        ]
+      },
+      "oracle_text": "When this enchantment enters, it deals 3 damage to any target.\nWhen a Cartouche you control enters, return this enchantment to its owner's hand.",
+      "variants": [
+        "player_0",
+        "player_1",
+        "lethal_0",
+        "lethal_1",
+        "own_cartouche_0",
+        "own_cartouche_1",
+        "foe_cartouche_0",
+        "foe_cartouche_1"
+      ]
+    }
+  ]
+}

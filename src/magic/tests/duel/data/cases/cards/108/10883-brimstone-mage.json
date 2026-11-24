@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "card": "Brimstone Mage",
+  "csvid": 10883,
+  "recipes": [
+    {
+      "family": "level_activated_riders",
+      "version": 2,
+      "oracle_text": "Level up {3}{R} ({3}{R}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 1-2\n2/3\n{T}: This creature deals 1 damage to any target.\nLEVEL 3+\n2/4\n{T}: This creature deals 3 damage to any target.",
+      "params": {
+        "price": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "activation": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "base": [
+          2,
+          2
+        ],
+        "first": [
+          1,
+          2,
+          3
+        ],
+        "second": [
+          3,
+          2,
+          4
+        ],
+        "first_riders": [
+          "{T}: This creature deals 1 damage to any target."
+        ],
+        "second_riders": [
+          "{T}: This creature deals 3 damage to any target."
+        ],
+        "effect": "damage",
+        "rider_mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "below_0",
+        "first_0",
+        "last_lower_0",
+        "upper_0",
+        "fresh_0",
+        "walker_0",
+        "creature_0",
+        "replay_0",
+        "below_1",
+        "first_1",
+        "last_lower_1",
+        "upper_1",
+        "fresh_1",
+        "walker_1",
+        "creature_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

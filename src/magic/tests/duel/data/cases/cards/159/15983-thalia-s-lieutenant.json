@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 15983,
+  "card": "Thalia's Lieutenant",
+  "recipes": [
+    {
+      "family": "entry_follow_on_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 15983,
+        "printed_cost": "{1}{W}"
+      },
+      "oracle_text": "When this creature enters, put a +1/+1 counter on each other Human you control.\nWhenever another Human you control enters, put a +1/+1 counter on this creature.",
+      "variants": [
+        "entry_0",
+        "own_entry_0",
+        "foe_entry_0",
+        "nonhuman_0",
+        "countered_0",
+        "entry_1",
+        "own_entry_1",
+        "foe_entry_1",
+        "nonhuman_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Hellkite Hatchling",
+  "csvid": 10155,
+  "recipes": [
+    {
+      "family": "devour_permanent_rewards",
+      "version": 2,
+      "params": {
+        "reward": "conditional",
+        "multiplier": 1,
+        "keywords": [],
+        "mana": [
+          2,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "power": 2,
+        "toughness": 2
+      },
+      "oracle_text": "Devour 1 (As this creature enters, you may sacrifice any number of creatures. It enters with that many +1/+1 counters on it.)\nThis creature has flying and trample if it devoured a creature.",
+      "variants": [
+        "none_0",
+        "paid_one_0",
+        "wrong_color_0",
+        "countered_0",
+        "snapshot_0",
+        "paid_ground_0",
+        "none_ground_0",
+        "paid_trample_0",
+        "none_trample_0",
+        "none_1",
+        "paid_one_1",
+        "wrong_color_1",
+        "countered_1",
+        "snapshot_1",
+        "paid_ground_1",
+        "none_ground_1",
+        "paid_trample_1",
+        "none_trample_1",
+        "paid_two_0",
+        "partial_0",
+        "decline_0"
+      ]
+    }
+  ]
+}

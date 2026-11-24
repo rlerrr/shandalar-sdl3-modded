@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 13537,
+  "card": "Reverent Hunter",
+  "recipes": [
+    {
+      "family": "entry_follow_on_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 13537,
+        "printed_cost": "{2}{G}"
+      },
+      "oracle_text": "When this creature enters, put a number of +1/+1 counters on it equal to your devotion to green. (Each {G} in the mana costs of permanents you control counts toward your devotion to green.)",
+      "variants": [
+        "alone_0",
+        "owner_0",
+        "foe_0",
+        "mixed_0",
+        "recast_0",
+        "countered_0",
+        "alone_1",
+        "owner_1",
+        "foe_1",
+        "mixed_1",
+        "recast_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

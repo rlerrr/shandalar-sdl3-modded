@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Gerrard Capashen",
+  "csvid": 5374,
+  "recipes": [
+    {
+      "family": "upkeep_damage_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 5374
+      },
+      "oracle_text": "At the beginning of your upkeep, you gain 1 life for each card in target opponent's hand.\n{3}{W}: Tap target creature. Activate only if Gerrard Capashen is attacking.",
+      "variants": [
+        "two_cards_0",
+        "two_cards_1",
+        "empty_hand_0",
+        "empty_hand_1",
+        "tap_attack_0",
+        "tap_attack_1"
+      ]
+    }
+  ]
+}

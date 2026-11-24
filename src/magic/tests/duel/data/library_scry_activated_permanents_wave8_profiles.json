@@ -1,0 +1,727 @@
+{
+  "sources": {
+    "Crystal Ball": {
+      "oracle": {
+        "oracle_id": "bd85fe4d-1d62-416f-ac2d-e287911c84e3",
+        "name": "Crystal Ball",
+        "oracle_text": "{1}, {T}: Scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c18/201/crystal-ball?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11109,
+        "iid": 2120,
+        "name": "Crystal Ball",
+        "handler": "manalinkeh_card_crystal_ball",
+        "kind": "card"
+      }
+    },
+    "Darksteel Pendant": {
+      "oracle": {
+        "oracle_id": "431838a8-f020-4e4e-a6f4-2d4ca27c56df",
+        "name": "Darksteel Pendant",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)\n{1}, {T}: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible",
+          "Scry"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dst/113/darksteel-pendant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6874,
+        "iid": 2256,
+        "name": "Darksteel Pendant",
+        "handler": "manalinkeh_card_darksteel_pendant",
+        "kind": "card"
+      }
+    },
+    "Sigiled Starfish": {
+      "oracle": {
+        "oracle_id": "94a4f70a-8aac-412a-99f0-933e3ff87fe0",
+        "name": "Sigiled Starfish",
+        "oracle_text": "{T}: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Starfish",
+        "power": "0",
+        "toughness": "3",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/177/sigiled-starfish?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13975,
+        "iid": 8728,
+        "name": "Sigiled Starfish",
+        "handler": "manalinkeh_card_sigiled_starfish",
+        "kind": "card"
+      }
+    },
+    "Stormcaller of Keranos": {
+      "oracle": {
+        "oracle_id": "16a66bbe-90f6-4c29-a69d-6ff254082956",
+        "name": "Stormcaller of Keranos",
+        "oracle_text": "Haste\n{1}{U}: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Human Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Haste",
+          "Scry"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/112/stormcaller-of-keranos?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13814,
+        "iid": 9414,
+        "name": "Stormcaller of Keranos",
+        "handler": "manalinkeh_card_stormcaller_of_keranos",
+        "kind": "card"
+      }
+    },
+    "Stormchaser Chimera": {
+      "oracle": {
+        "oracle_id": "fccc57f6-2555-4ab3-b85a-83b524abe892",
+        "name": "Stormchaser Chimera",
+        "oracle_text": "Flying\n{2}{U}{R}: Scry 1, then reveal the top card of your library. This creature gets +X/+0 until end of turn, where X is that card's mana value. (To scry 1, look at the top card of your library, then you may put that card on the bottom.)",
+        "mana_cost": "{2}{U}{R}",
+        "type_line": "Creature — Chimera",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Scry",
+          "Flying"
+        ],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cn2/207/stormchaser-chimera?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13988,
+        "iid": 9415,
+        "name": "Stormchaser Chimera",
+        "handler": "manalinkeh_card_stormchaser_chimera",
+        "kind": "card"
+      }
+    },
+    "Viscera Seer": {
+      "oracle": {
+        "oracle_id": "f82a4e85-526d-4456-b700-7760043a31be",
+        "name": "Viscera Seer",
+        "oracle_text": "Sacrifice a creature: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Vampire Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/229/viscera-seer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11187,
+        "iid": 10629,
+        "name": "Viscera Seer",
+        "handler": "manalinkeh_card_viscera_seer",
+        "kind": "card"
+      }
+    },
+    "Prism Array": {
+      "oracle": {
+        "oracle_id": "8856d849-dad8-41b8-8212-bb839f2b359c",
+        "name": "Prism Array",
+        "oracle_text": "Converge — This enchantment enters with a crystal counter on it for each color of mana spent to cast it.\nRemove a crystal counter from this enchantment: Tap target creature.\n{W}{U}{B}{R}{G}: Scry 3.",
+        "mana_cost": "{4}{U}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Converge",
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "G",
+          "R",
+          "U",
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/81/prism-array?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15404,
+        "iid": 14040,
+        "name": "Prism Array",
+        "handler": "manalinkeh_card_prism_array",
+        "kind": "card"
+      }
+    },
+    "Seer's Lantern": {
+      "oracle": {
+        "oracle_id": "4b3dd7e5-e0b5-4773-bb16-37b757ae74d8",
+        "name": "Seer's Lantern",
+        "oracle_text": "{T}: Add {C}.\n{2}, {T}: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/338/seers-lantern?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15677,
+        "iid": 15752,
+        "name": "Seer's Lantern",
+        "handler": "manalinkeh_card_seers_lanter",
+        "kind": "card"
+      }
+    },
+    "Aether Theorist": {
+      "oracle": {
+        "oracle_id": "b07ef53e-46db-457e-a5a2-846bb9805b70",
+        "name": "Aether Theorist",
+        "oracle_text": "When this creature enters, you get {E}{E}{E} (three energy counters).\n{T}, Pay {E}: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Vedalken Rogue",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/37/aether-theorist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16272,
+        "iid": 16361,
+        "name": "Aether Theorist",
+        "handler": "manalinkeh_card_aether_theorist",
+        "kind": "card"
+      }
+    },
+    "Thrasios, Triton Hero": {
+      "oracle": {
+        "oracle_id": "3d867016-2601-4a37-a73d-308898d3bd37",
+        "name": "Thrasios, Triton Hero",
+        "oracle_text": "{4}: Scry 1, then reveal the top card of your library. If it's a land card, put it onto the battlefield tapped. Otherwise, draw a card.\nPartner (You can have two commanders if both have partner.)",
+        "mana_cost": "{G}{U}",
+        "type_line": "Legendary Creature — Merfolk Wizard",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [
+          "Partner",
+          "Scry"
+        ],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c16/46/thrasios-triton-hero?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16635,
+        "iid": 16726,
+        "name": "Thrasios, Triton Hero",
+        "handler": "manalinkeh_card_thrasios_triton_hero",
+        "kind": "card"
+      }
+    },
+    "Hidden Stockpile": {
+      "oracle": {
+        "oracle_id": "f5ded323-75c8-471e-a516-238b9d6b06d3",
+        "name": "Hidden Stockpile",
+        "oracle_text": "Revolt — At the beginning of your end step, if a permanent left the battlefield under your control this turn, create a 1/1 colorless Servo artifact creature token.\n{1}, Sacrifice a creature: Scry 1.",
+        "mana_cost": "{W}{B}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Revolt",
+          "Scry"
+        ],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/201/hidden-stockpile?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16720,
+        "iid": 16813,
+        "name": "Hidden Stockpile",
+        "handler": "manalinkeh_card_hidden_stockpile",
+        "kind": "card"
+      }
+    },
+    "Watchful Automaton": {
+      "oracle": {
+        "oracle_id": "6f5e6799-cb0f-4403-9c2a-69abeac08b79",
+        "name": "Watchful Automaton",
+        "oracle_text": "{2}{U}: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/aer/182/watchful-automaton?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16823,
+        "iid": 16917,
+        "name": "Watchful Automaton",
+        "handler": "manalinkeh_card_watchful_automaton",
+        "kind": "card"
+      }
+    },
+    "Bontu the Glorified": {
+      "oracle": {
+        "oracle_id": "c2679c32-a23d-4953-bb48-b46580439ce2",
+        "name": "Bontu the Glorified",
+        "oracle_text": "Menace, indestructible\nBontu can't attack or block unless a creature died under your control this turn.\n{1}{B}, Sacrifice another creature: Scry 1. Each opponent loses 1 life and you gain 1 life.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Legendary Creature — God",
+        "power": "4",
+        "toughness": "6",
+        "keywords": [
+          "Indestructible",
+          "Menace",
+          "Scry"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/akh/82/bontu-the-glorified?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16853,
+        "iid": 16947,
+        "name": "Bontu the Glorified",
+        "handler": "manalinkeh_card_bontu_the_glorified",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Return to Dust": {
+      "oracle": {
+        "oracle_id": "3029df1d-d02a-4fed-8ab4-000a2096f823",
+        "name": "Return to Dust",
+        "oracle_text": "Exile target artifact or enchantment. If you cast this spell during your main phase, you may exile up to one other target artifact or enchantment.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/102/return-to-dust?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8647,
+        "iid": 7883,
+        "name": "Return to Dust",
+        "handler": "manalinkeh_card_return_to_dust",
+        "kind": "card"
+      }
+    },
+    "Shatter": {
+      "oracle": {
+        "oracle_id": "84d32e68-72b9-432d-a023-7bc6a26b8ad0",
+        "name": "Shatter",
+        "oracle_text": "Destroy target artifact.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rix/114/shatter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 223,
+        "iid": 8597,
+        "name": "Shatter",
+        "handler": "manalinkeh_card_shatter",
+        "kind": "card"
+      }
+    },
+    "Squire": {
+      "oracle": {
+        "oracle_id": "aa6cdcc7-f5ea-47bf-9448-1c63e36b18d1",
+        "name": "Squire",
+        "oracle_text": "",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsb/15/squire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 948,
+        "iid": 9275,
+        "name": "Squire",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    }
+  },
+  "tokens": {
+    "Servo": {
+      "oracle": {
+        "oracle_id": "b6ca7bd1-d72e-4260-8b52-997ee1377279",
+        "name": "Servo",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Artifact Creature — Servo",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmh3/33/servo?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18816,
+        "iid": 16669,
+        "name": "Servo",
+        "handler": "manalinkeh_card_rhino_token",
+        "kind": "card"
+      }
+    }
+  }
+}

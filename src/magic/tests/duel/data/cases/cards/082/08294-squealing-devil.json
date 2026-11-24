@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 8294,
+  "card": "Squealing Devil",
+  "recipes": [
+    {
+      "family": "remaining_entry_turn_and_choices",
+      "version": 2,
+      "params": {
+        "csvid": 8294,
+        "printed_cost": "{1}{R}",
+        "keywords": [
+          "Fear"
+        ]
+      },
+      "oracle_text": "Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)\nWhen this creature enters, you may pay {X}. If you do, target creature gets +X/+0 until end of turn.\nWhen this creature enters, sacrifice it unless {B} was spent to cast it.",
+      "variants": [
+        "black_0",
+        "red_0",
+        "paid_x_0",
+        "x_without_black_0",
+        "fear_0",
+        "black_1",
+        "red_1",
+        "paid_x_1",
+        "x_without_black_1",
+        "fear_1"
+      ]
+    }
+  ]
+}

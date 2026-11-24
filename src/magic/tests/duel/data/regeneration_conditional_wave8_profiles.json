@@ -1,0 +1,559 @@
+{
+  "sources": {
+    "Clergy of the Holy Nimbus": {
+      "oracle": {
+        "oracle_id": "66566999-f70a-4f14-9bf0-23325295a977",
+        "name": "Clergy of the Holy Nimbus",
+        "oracle_text": "If this creature would be destroyed, regenerate it.\n{1}: This creature can't be regenerated this turn. Only your opponents may activate this ability.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/leg/6/clergy-of-the-holy-nimbus?utm_source=api"
+      },
+      "registry": {
+        "csvid": 597,
+        "iid": 1790,
+        "name": "Clergy of the Holy Nimbus",
+        "handler": "manalinkeh_card_clergy_of_the_holy_nimbus",
+        "kind": "card"
+      }
+    },
+    "Knight of the Holy Nimbus": {
+      "oracle": {
+        "oracle_id": "4e92c705-19c2-42df-ad12-808d272c505e",
+        "name": "Knight of the Holy Nimbus",
+        "oracle_text": "Flanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)\nIf this creature would be destroyed, regenerate it. (Tap it, remove it from combat, and heal all damage on it.)\n{2}: This creature can't be regenerated this turn. Only your opponents may activate this ability.",
+        "mana_cost": "{W}{W}",
+        "type_line": "Creature — Human Rebel Knight",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flanking",
+          "Heal",
+          "Regenerate"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/23/knight-of-the-holy-nimbus?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8591,
+        "iid": 5320,
+        "name": "Knight of the Holy Nimbus",
+        "handler": "manalinkeh_card_knight_of_the_holy_nimbus",
+        "kind": "card"
+      }
+    },
+    "Mossbridge Troll": {
+      "oracle": {
+        "oracle_id": "87aa466e-7985-40ff-bef6-dcae35fe0106",
+        "name": "Mossbridge Troll",
+        "oracle_text": "If this creature would be destroyed, regenerate it.\nTap any number of untapped creatures you control other than this creature with total power 10 or greater: This creature gets +20/+20 until end of turn.",
+        "mana_cost": "{5}{G}{G}",
+        "type_line": "Creature — Troll",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/shm/123/mossbridge-troll?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9610,
+        "iid": 6346,
+        "name": "Mossbridge Troll",
+        "handler": "manalinkeh_card_mossbridge_troll",
+        "kind": "card"
+      }
+    },
+    "Villainous Ogre": {
+      "oracle": {
+        "oracle_id": "30b54308-73c7-4352-a62c-10f69ab6ff22",
+        "name": "Villainous Ogre",
+        "oracle_text": "This creature can't block.\nAs long as you control a Demon, this creature has \"{B}: Regenerate this creature.\"",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Ogre Warrior",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/148/villainous-ogre?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7423,
+        "iid": 10601,
+        "name": "Villainous Ogre",
+        "handler": "manalinkeh_card_villainous_ogre",
+        "kind": "card"
+      }
+    },
+    "Dragon-Scarred Bear": {
+      "oracle": {
+        "oracle_id": "2f6f49a4-f2ea-4147-a6d3-69cf875c302e",
+        "name": "Dragon-Scarred Bear",
+        "oracle_text": "Formidable — {1}{G}: Regenerate this creature. Activate only if creatures you control have total power 8 or greater.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Bear",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Regenerate",
+          "Formidable"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/183/dragon-scarred-bear?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14892,
+        "iid": 12331,
+        "name": "Dragon-Scarred Bear",
+        "handler": "manalinkeh_card_dragon_scarred_bear",
+        "kind": "card"
+      }
+    },
+    "Sea Troll": {
+      "oracle": {
+        "oracle_id": "feabe30a-3c28-43a1-b538-b0207758520c",
+        "name": "Sea Troll",
+        "oracle_text": "{U}: Regenerate this creature. Activate only if this creature blocked or was blocked by a blue creature this turn.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Troll",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hml/39/sea-troll?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2239,
+        "iid": 14470,
+        "name": "Sea Troll",
+        "handler": "manalinkeh_card_sea_troll",
+        "kind": "card"
+      }
+    },
+    "Gobhobbler Rats": {
+      "oracle": {
+        "oracle_id": "aa254e74-583d-4681-8169-5ac0dbdb10e5",
+        "name": "Gobhobbler Rats",
+        "oracle_text": "Hellbent — As long as you have no cards in hand, this creature gets +1/+0 and has \"{B}: Regenerate this creature.\" (The next time it would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+        "mana_cost": "{B}{R}",
+        "type_line": "Creature — Rat",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Heal",
+          "Regenerate",
+          "Hellbent"
+        ],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/185/gobhobbler-rats?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8214,
+        "iid": 3974,
+        "name": "Gobhobbler Rats",
+        "handler": "manalinkeh_card_gobhobbler_rats",
+        "kind": "card"
+      }
+    },
+    "Marrow Bats": {
+      "oracle": {
+        "oracle_id": "f20d96cc-3949-4888-a909-c7d67c4d31c7",
+        "name": "Marrow Bats",
+        "oracle_text": "Flying\nPay 4 life: Regenerate this creature.",
+        "mana_cost": "{4}{B}",
+        "type_line": "Creature — Bat Skeleton",
+        "power": "4",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c13/82/marrow-bats?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12420,
+        "iid": 5914,
+        "name": "Marrow Bats",
+        "handler": "manalinkeh_card_marrow_bats",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Demon of Death's Gate": {
+      "oracle": {
+        "oracle_id": "be465805-1a37-4212-acf1-5dfec890b338",
+        "name": "Demon of Death's Gate",
+        "oracle_text": "You may pay 6 life and sacrifice three black creatures rather than pay this spell's mana cost.\nFlying, trample",
+        "mana_cost": "{6}{B}{B}{B}",
+        "type_line": "Creature — Demon",
+        "power": "9",
+        "toughness": "9",
+        "keywords": [
+          "Flying",
+          "Trample"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 9.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m11/92/demon-of-deaths-gate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11113,
+        "iid": 2423,
+        "name": "Demon of Death's Gate",
+        "handler": "manalinkeh_card_demon_of_deaths_gate",
+        "kind": "card"
+      }
+    },
+    "Eager Cadet": {
+      "oracle": {
+        "oracle_id": "39780477-01ba-40c6-8fe6-2178efb10b92",
+        "name": "Eager Cadet",
+        "oracle_text": "",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/S1/eager-cadet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4363,
+        "iid": 12406,
+        "name": "Eager Cadet",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Merfolk of the Pearl Trident": {
+      "oracle": {
+        "oracle_id": "218d9277-c179-4de3-9c7f-79b5a6d4fa38",
+        "name": "Merfolk of the Pearl Trident",
+        "oracle_text": "",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Merfolk",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/60/merfolk-of-the-pearl-trident?utm_source=api"
+      },
+      "registry": {
+        "csvid": 160,
+        "iid": 6055,
+        "name": "Merfolk of the Pearl Trident",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Scaled Wurm": {
+      "oracle": {
+        "oracle_id": "009a8e38-74d0-4b4a-b8ca-62c9f3183531",
+        "name": "Scaled Wurm",
+        "oracle_text": "",
+        "mana_cost": "{7}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "7",
+        "toughness": "6",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/178/scaled-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2085,
+        "iid": 8287,
+        "name": "Scaled Wurm",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Spellbook": {
+      "oracle": {
+        "oracle_id": "83133f51-bfbd-4db5-9be0-f660e3b66435",
+        "name": "Spellbook",
+        "oracle_text": "You have no maximum hand size.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact — Book",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/220/spellbook?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1154,
+        "iid": 9121,
+        "name": "Spellbook",
+        "handler": "manalinkeh_card_spellbook",
+        "kind": "card"
+      }
+    },
+    "Spined Wurm": {
+      "oracle": {
+        "oracle_id": "05425f2f-7228-4bf5-8fe1-6fe99107e8e0",
+        "name": "Spined Wurm",
+        "oracle_text": "",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/198/spined-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1156,
+        "iid": 9179,
+        "name": "Spined Wurm",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Terminate": {
+      "oracle": {
+        "oracle_id": "6257c2fd-005f-41e3-8a72-af76df1eb134",
+        "name": "Terminate",
+        "oracle_text": "Destroy target creature. It can't be regenerated.",
+        "mana_cost": "{B}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/189/terminate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1471,
+        "iid": 9812,
+        "name": "Terminate",
+        "handler": "manalinkeh_card_terminate",
+        "kind": "card"
+      }
+    },
+    "Wall of Mist": {
+      "oracle": {
+        "oracle_id": "b2ca8824-6bd8-4aa3-b156-618118eb98a4",
+        "name": "Wall of Mist",
+        "oracle_text": "Defender",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/grn/58/wall-of-mist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19050,
+        "iid": 18983,
+        "name": "Wall of Mist",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

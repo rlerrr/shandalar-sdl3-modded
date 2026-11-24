@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Anvil of Bogardan",
+  "csvid": 2670,
+  "recipes": [
+    {
+      "family": "draw_step_discard_and_hand_size",
+      "version": 2,
+      "params": {
+        "csvid": 2670
+      },
+      "oracle_text": "Players have no maximum hand size.\nAt the beginning of each player's draw step, that player draws an additional card, then discards a card.",
+      "variants": [
+        "scope_0",
+        "scope_1",
+        "removed_0",
+        "removed_1",
+        "empty_before_draw_0",
+        "empty_before_draw_1"
+      ]
+    }
+  ]
+}

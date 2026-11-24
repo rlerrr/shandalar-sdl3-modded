@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Umezawa's Jitte",
+  "csvid": 7587,
+  "recipes": [
+    {
+      "family": "equipment_combat_counters_and_copies",
+      "version": 2,
+      "params": {
+        "csvid": 7587,
+        "fee": 2,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever equipped creature deals combat damage, put two charge counters on Umezawa's Jitte.\nRemove a charge counter from Umezawa's Jitte: Choose one —\n• Equipped creature gets +2/+2 until end of turn.\n• Target creature gets -1/-1 until end of turn.\n• You gain 2 life.\nEquip {2}",
+      "variants": [
+        "pump_life_0",
+        "pump_life_1",
+        "shrink_0",
+        "shrink_1",
+        "blocked_0",
+        "blocked_1",
+        "noncombat_0",
+        "noncombat_1",
+        "offturn_0",
+        "offturn_1"
+      ]
+    }
+  ]
+}

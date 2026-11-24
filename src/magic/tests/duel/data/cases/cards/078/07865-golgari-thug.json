@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "card": "Golgari Thug",
+  "csvid": 7865,
+  "recipes": [
+    {
+      "family": "mill_remaining_dredge_and_graveyard",
+      "version": 2,
+      "params": {
+        "csvid": 7865,
+        "cost": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "dredge": 4
+      },
+      "oracle_text": "When this creature dies, put target creature card from your graveyard on top of your library.\nDredge 4 (If you would draw a card, you may mill four cards instead. If you do, return this card from your graveyard to your hand.)",
+      "variants": [
+        "exact_0",
+        "exact_1",
+        "pass_0",
+        "pass_1",
+        "short_0",
+        "short_1",
+        "death_old_0",
+        "death_old_1",
+        "death_self_0",
+        "death_self_1",
+        "death_shroud_0",
+        "death_shroud_1"
+      ]
+    }
+  ]
+}

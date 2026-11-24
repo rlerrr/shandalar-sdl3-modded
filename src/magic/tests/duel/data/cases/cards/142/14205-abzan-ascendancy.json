@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 14205,
+  "card": "Abzan Ascendancy",
+  "recipes": [
+    {
+      "family": "entry_follow_on_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 14205,
+        "printed_cost": "{W}{B}{G}"
+      },
+      "oracle_text": "When this enchantment enters, put a +1/+1 counter on each creature you control.\nWhenever a nontoken creature you control dies, create a 1/1 white Spirit creature token with flying.",
+      "variants": [
+        "entry_0",
+        "own_death_0",
+        "enemy_death_0",
+        "token_death_0",
+        "countered_0",
+        "entry_1",
+        "own_death_1",
+        "enemy_death_1",
+        "token_death_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

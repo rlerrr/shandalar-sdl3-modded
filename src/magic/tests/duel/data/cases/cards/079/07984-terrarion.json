@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Terrarion",
+  "csvid": 7984,
+  "recipes": [
+    {
+      "family": "departure_resources",
+      "version": 2,
+      "params": {
+        "csvid": 7984,
+        "printed_mana": "{1}",
+        "rules": "This artifact enters tapped.\n{2}, {T}, Sacrifice this artifact: Add two mana in any combination of colors.\nWhen this artifact is put into a graveyard from the battlefield, draw a card."
+      },
+      "oracle_text": "This artifact enters tapped.\n{2}, {T}, Sacrifice this artifact: Add two mana in any combination of colors.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+      "variants": [
+        "mixed_mana_0",
+        "mixed_mana_1",
+        "two_same_0",
+        "two_same_1",
+        "tapped_short_0",
+        "tapped_short_1",
+        "destroy_draw_0",
+        "destroy_draw_1",
+        "exile_0",
+        "exile_1"
+      ]
+    }
+  ]
+}

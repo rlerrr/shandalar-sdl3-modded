@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "card": "Shared Trauma",
+  "csvid": 11735,
+  "recipes": [
+    {
+      "family": "mill_remaining_spells_and_modes",
+      "version": 2,
+      "params": {
+        "csvid": 11735,
+        "printed_cost": "{B}",
+        "clauses": [
+          "Join forces — Starting with you, each player may pay any amount of mana. Each player mills X cards, where X is the total amount of mana paid this way."
+        ],
+        "modes": [
+          "split",
+          "owner_only",
+          "foe_only",
+          "decline",
+          "short_split",
+          "colored"
+        ],
+        "human_modes": []
+      },
+      "oracle_text": "Join forces — Starting with you, each player may pay any amount of mana. Each player mills X cards, where X is the total amount of mana paid this way.",
+      "variants": [
+        "split_0",
+        "split_1",
+        "owner_only_0",
+        "owner_only_1",
+        "foe_only_0",
+        "foe_only_1",
+        "decline_0",
+        "decline_1",
+        "short_split_0",
+        "short_split_1",
+        "colored_0",
+        "colored_1"
+      ]
+    }
+  ]
+}

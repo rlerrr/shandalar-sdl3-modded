@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "card": "Ire Shaman",
+  "csvid": 14942,
+  "recipes": [
+    {
+      "family": "megamorph_zone_effects",
+      "version": 2,
+      "params": {
+        "effect": "ire",
+        "cast_mana": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "flip_mana": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "power": 2,
+        "toughness": 1
+      },
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nMegamorph {R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\nWhen this creature is turned face up, exile the top card of your library. Until end of turn, you may play that card.",
+      "variants": [
+        "hidden_0",
+        "faceup_0",
+        "hidden_choice_0",
+        "hidden_short_0",
+        "flip_0",
+        "flip_short_0",
+        "flip_wrong_0",
+        "offturn_0",
+        "replay_0",
+        "play_land_0",
+        "play_spell_0",
+        "spent_land_drop_0",
+        "wrong_player_0",
+        "wrong_card_0",
+        "expiry_0",
+        "offturn_land_0",
+        "offturn_spell_0",
+        "short_spell_0",
+        "empty_library_0",
+        "menace_single_0",
+        "menace_pair_0",
+        "hidden_blocker_0",
+        "hidden_1",
+        "faceup_1",
+        "hidden_choice_1",
+        "hidden_short_1",
+        "flip_1",
+        "flip_short_1",
+        "flip_wrong_1",
+        "offturn_1",
+        "replay_1",
+        "play_land_1",
+        "play_spell_1",
+        "spent_land_drop_1",
+        "wrong_player_1",
+        "wrong_card_1",
+        "expiry_1",
+        "offturn_land_1",
+        "offturn_spell_1",
+        "short_spell_1",
+        "empty_library_1",
+        "menace_single_1",
+        "menace_pair_1",
+        "hidden_blocker_1"
+      ]
+    }
+  ]
+}

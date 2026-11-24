@@ -1,0 +1,438 @@
+{
+  "sources": {
+    "Argentum Armor": {
+      "oracle": {
+        "oracle_id": "d0a1f39b-cda4-4925-83f8-2161f575edfb",
+        "name": "Argentum Armor",
+        "oracle_text": "Equipped creature gets +6/+6.\nWhenever equipped creature attacks, destroy target permanent.\nEquip {6}",
+        "mana_cost": "{6}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/afc/198/argentum-armor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11200,
+        "iid": 583,
+        "name": "Argentum Armor",
+        "handler": "manalinkeh_card_argentum_armor",
+        "kind": "card"
+      }
+    },
+    "Moonsilver Spear": {
+      "oracle": {
+        "oracle_id": "d99bcf62-db93-40db-8844-3d0af0756a0c",
+        "name": "Moonsilver Spear",
+        "oracle_text": "Equipped creature has first strike.\nWhenever equipped creature attacks, create a 4/4 white Angel creature token with flying.\nEquip {4}",
+        "mana_cost": "{4}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/afc/212/moonsilver-spear?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12428,
+        "iid": 6307,
+        "name": "Moonsilver Spear",
+        "handler": "manalinkeh_card_moonsilver_spear",
+        "kind": "card"
+      }
+    },
+    "Throwing Knife": {
+      "oracle": {
+        "oracle_id": "c3973121-ed59-48b3-8efa-754a1b2c704d",
+        "name": "Throwing Knife",
+        "oracle_text": "Equipped creature gets +2/+0.\nWhenever equipped creature attacks, you may sacrifice this Equipment. If you do, this Equipment deals 2 damage to any target.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+        "mana_cost": "{2}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ori/241/throwing-knife?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15236,
+        "iid": 15086,
+        "name": "Throwing Knife",
+        "handler": "manalinkeh_card_throwing_knife",
+        "kind": "card"
+      }
+    },
+    "Captain's Claws": {
+      "oracle": {
+        "oracle_id": "4cacd7de-83ac-4767-b6f2-f5a89f04a0b9",
+        "name": "Captain's Claws",
+        "oracle_text": "Equipped creature gets +1/+0.\nWhenever equipped creature attacks, create a 1/1 white Kor Ally creature token that's tapped and attacking.\nEquip {1}",
+        "mana_cost": "{2}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/162/captains-claws?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15566,
+        "iid": 15641,
+        "name": "Captain's Claws",
+        "handler": "manalinkeh_card_captains_claws",
+        "kind": "card"
+      }
+    },
+    "Stitcher's Graft": {
+      "oracle": {
+        "oracle_id": "2b73a5ec-c52e-4074-a7cb-78d6eb2adef0",
+        "name": "Stitcher's Graft",
+        "oracle_text": "Equipped creature gets +3/+3.\nWhenever equipped creature attacks, it doesn't untap during its controller's next untap step.\nWhenever this Equipment becomes unattached from a permanent, sacrifice that permanent.\nEquip {2}",
+        "mana_cost": "{1}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/271/stitchers-graft?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16201,
+        "iid": 16289,
+        "name": "Stitcher's Graft",
+        "handler": "manalinkeh_card_stitchers_graft",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Angel": {
+      "oracle": {
+        "oracle_id": "835fdf98-b2ca-4e08-8dc0-4294bc0744ad",
+        "name": "Angel",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Angel",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/ptdmu/2/angel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18687,
+        "iid": 435,
+        "name": "Angel",
+        "handler": "manalinkeh_card_angel_token",
+        "kind": "card"
+      }
+    },
+    "Boomerang": {
+      "oracle": {
+        "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+        "name": "Boomerang",
+        "oracle_text": "Return target permanent to its owner's hand.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+      },
+      "registry": {
+        "csvid": 585,
+        "iid": 1233,
+        "name": "Boomerang",
+        "handler": "manalinkeh_card_boomerang",
+        "kind": "card"
+      }
+    },
+    "Darksteel Myr": {
+      "oracle": {
+        "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+        "name": "Darksteel Myr",
+        "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11238,
+        "iid": 2255,
+        "name": "Darksteel Myr",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Elvish Mystic": {
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13284,
+        "iid": 2982,
+        "name": "Elvish Mystic",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Goblin Balloon Brigade": {
+      "oracle": {
+        "oracle_id": "10bc98b0-3fdc-46d1-8d3b-6d160e9dd62f",
+        "name": "Goblin Balloon Brigade",
+        "oracle_text": "{R}: This creature gains flying until end of turn.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cn2/159/goblin-balloon-brigade?utm_source=api"
+      },
+      "registry": {
+        "csvid": 101,
+        "iid": 3980,
+        "name": "Goblin Balloon Brigade",
+        "handler": "manalinkeh_card_goblin_balloon_brigade",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Icy Manipulator": {
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 119,
+        "iid": 4775,
+        "name": "Icy Manipulator",
+        "handler": "manalinkeh_card_icy_manipulator",
+        "kind": "card"
+      }
+    },
+    "Kor Ally": {
+      "oracle": {
+        "oracle_id": "df5630cc-9b85-4761-af90-4f5c9d902127",
+        "name": "Kor Ally",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Kor Ally",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tcmm/64/kor-ally?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18778,
+        "iid": 13309,
+        "name": "Kor Ally",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Traveler's Amulet": {
+      "oracle": {
+        "oracle_id": "48b561dd-f23d-409a-87c8-e49902b2477b",
+        "name": "Traveler's Amulet",
+        "oracle_text": "{1}, Sacrifice this artifact: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/273/travelers-amulet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12102,
+        "iid": 10166,
+        "name": "Traveler's Amulet",
+        "handler": "manalinkeh_card_travelers_amulet",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Lamplighter of Selhoff",
+  "csvid": 15881,
+  "recipes": [
+    {
+      "family": "entry_trigger_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 15881,
+        "printed_mana": "{4}{U}",
+        "rules": "When this creature enters, if you control another Zombie, you may draw a card. If you do, discard a card."
+      },
+      "oracle_text": "When this creature enters, if you control another Zombie, you may draw a card. If you do, discard a card.",
+      "variants": [
+        "draw_discard_0",
+        "draw_discard_1",
+        "no_other_zombie_0",
+        "no_other_zombie_1",
+        "decline_draw_0"
+      ]
+    }
+  ]
+}

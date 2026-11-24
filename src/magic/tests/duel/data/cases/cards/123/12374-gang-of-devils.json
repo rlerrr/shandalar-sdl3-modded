@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 12374,
+  "card": "Gang of Devils",
+  "recipes": [
+    {
+      "family": "departure_damage_and_removal",
+      "version": 2,
+      "params": {
+        "csvid": 12374,
+        "printed_cost": "{5}{R}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature dies, it deals 3 damage divided as you choose among one, two, or three targets.",
+      "variants": [
+        "one_0",
+        "two_0",
+        "three_0",
+        "bounce_0",
+        "exile_0",
+        "one_1",
+        "two_1",
+        "three_1",
+        "bounce_1",
+        "exile_1"
+      ]
+    }
+  ]
+}

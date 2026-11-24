@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Spreading Flames",
+  "csvid": 16196,
+  "recipes": [
+    {
+      "family": "divided_damage_spell",
+      "version": 2,
+      "oracle_text": "Spreading Flames deals 6 damage divided as you choose among any number of target creatures.",
+      "params": {
+        "damage": 6,
+        "target_cap": 6,
+        "printed_mana": "{6}{R}",
+        "any_number": true,
+        "instant": true,
+        "target_scope": "creature",
+        "hybrid": false
+      },
+      "variants": [
+        "all_to_creature_0",
+        "split_0",
+        "max_distinct_0",
+        "late_bounce_0",
+        "late_hexproof_0",
+        "countered_0",
+        "pending_replay_0",
+        "cancel_first_0",
+        "unfunded_0",
+        "wrong_color_0",
+        "none_eligible_0",
+        "wrong_types_only_0",
+        "own_only_0",
+        "all_to_creature_1",
+        "split_1",
+        "max_distinct_1",
+        "late_bounce_1",
+        "late_hexproof_1",
+        "countered_1",
+        "pending_replay_1",
+        "cancel_first_1",
+        "unfunded_1",
+        "wrong_color_1",
+        "none_eligible_1",
+        "wrong_types_only_1",
+        "own_only_1"
+      ]
+    }
+  ]
+}

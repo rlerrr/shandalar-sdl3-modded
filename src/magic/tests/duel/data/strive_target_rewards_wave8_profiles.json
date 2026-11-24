@@ -1,0 +1,557 @@
+{
+  "sources": {
+    "Aerial Formation": {
+      "oracle": {
+        "oracle_id": "b0168b7e-a8b8-4ce3-af12-a43f3818b6a1",
+        "name": "Aerial Formation",
+        "oracle_text": "Strive — This spell costs {2}{U} more to cast for each target beyond the first.\nAny number of target creatures each get +1/+1 and gain flying until end of turn.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Strive"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/30/aerial-formation?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13836,
+        "iid": 250,
+        "name": "Aerial Formation",
+        "handler": "manalinkeh_card_aerial_formation",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/journey_into_nyx.c",
+        "sha256": "7b00e6514c699cf3ef029f88abac0f8579bbe2846ad94b4097469ac2329ab6a3",
+        "symbol": "card_aerial_formation",
+        "line": 911
+      }
+    },
+    "Ajani's Presence": {
+      "oracle": {
+        "oracle_id": "925a0b9b-a1fa-4aad-89d9-e2698ac3582f",
+        "name": "Ajani's Presence",
+        "oracle_text": "Strive — This spell costs {2}{W} more to cast for each target beyond the first.\nAny number of target creatures each get +1/+1 and gain indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy them.)",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [
+          "Strive"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/2/ajanis-presence?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13839,
+        "iid": 310,
+        "name": "Ajani's Presence",
+        "handler": "manalinkeh_card_ajanis_presence",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/journey_into_nyx.c",
+        "sha256": "7b00e6514c699cf3ef029f88abac0f8579bbe2846ad94b4097469ac2329ab6a3",
+        "symbol": "card_ajanis_presence",
+        "line": 113
+      }
+    },
+    "Cruel Feeding": {
+      "oracle": {
+        "oracle_id": "ef60bb5b-7cf5-4b4d-a725-4531fc0c852a",
+        "name": "Cruel Feeding",
+        "oracle_text": "Strive — This spell costs {2}{B} more to cast for each target beyond the first.\nAny number of target creatures each get +1/+0 and gain lifelink until end of turn. (Damage dealt by a creature with lifelink also causes its controller to gain that much life.)",
+        "mana_cost": "{B}",
+        "type_line": "Instant",
+        "keywords": [
+          "Strive"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/64/cruel-feeding?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13860,
+        "iid": 2090,
+        "name": "Cruel Feeding",
+        "handler": "manalinkeh_card_cruel_feeding",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/journey_into_nyx.c",
+        "sha256": "7b00e6514c699cf3ef029f88abac0f8579bbe2846ad94b4097469ac2329ab6a3",
+        "symbol": "card_cruel_feeding",
+        "line": 1864
+      }
+    },
+    "Phalanx Formation": {
+      "oracle": {
+        "oracle_id": "799e7bb4-b03c-4568-b321-7810868bdcd7",
+        "name": "Phalanx Formation",
+        "oracle_text": "Strive — This spell costs {1}{W} more to cast for each target beyond the first.\nAny number of target creatures each gain double strike until end of turn. (They deal both first-strike and regular combat damage.)",
+        "mana_cost": "{2}{W}",
+        "type_line": "Instant",
+        "keywords": [
+          "Strive"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/21/phalanx-formation?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13945,
+        "iid": 7111,
+        "name": "Phalanx Formation",
+        "handler": "manalinkeh_card_phalanx_formation",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/journey_into_nyx.c",
+        "sha256": "7b00e6514c699cf3ef029f88abac0f8579bbe2846ad94b4097469ac2329ab6a3",
+        "symbol": "card_phalanx_formation",
+        "line": 741
+      }
+    },
+    "Rouse the Mob": {
+      "oracle": {
+        "oracle_id": "bc8b2b89-7118-4662-beda-9108cd08491b",
+        "name": "Rouse the Mob",
+        "oracle_text": "Strive — This spell costs {2}{R} more to cast for each target beyond the first.\nAny number of target creatures each get +2/+0 and gain trample until end of turn.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [
+          "Strive"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/109/rouse-the-mob?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13966,
+        "iid": 8084,
+        "name": "Rouse the Mob",
+        "handler": "manalinkeh_card_rouse_the_mob",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/journey_into_nyx.c",
+        "sha256": "7b00e6514c699cf3ef029f88abac0f8579bbe2846ad94b4097469ac2329ab6a3",
+        "symbol": "card_rouse_the_mob",
+        "line": 2780
+      }
+    },
+    "Hour of Need": {
+      "oracle": {
+        "oracle_id": "2002dd67-2347-4869-98de-299074206684",
+        "name": "Hour of Need",
+        "oracle_text": "Strive — This spell costs {1}{U} more to cast for each target beyond the first.\nExile any number of target creatures. For each creature exiled this way, its controller creates a 4/4 blue Sphinx creature token with flying.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Strive"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/40/hour-of-need?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13908,
+        "iid": 4673,
+        "name": "Hour of Need",
+        "handler": "manalinkeh_card_hour_of_need",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/journey_into_nyx.c",
+        "sha256": "7b00e6514c699cf3ef029f88abac0f8579bbe2846ad94b4097469ac2329ab6a3",
+        "symbol": "card_hour_of_need",
+        "line": 1167
+      }
+    }
+  },
+  "witnesses": {
+    "Blurred Mongoose": {
+      "oracle": {
+        "oracle_id": "588a5bac-dcad-410e-8878-0230500c2e3a",
+        "name": "Blurred Mongoose",
+        "oracle_text": "This spell can't be countered.\nShroud (This creature can't be the target of spells or abilities.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Mongoose",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Shroud"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inv/183/blurred-mongoose?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4952,
+        "iid": 1174,
+        "name": "Blurred Mongoose",
+        "handler": "manalinkeh_card_blurred_mangoose",
+        "kind": "card"
+      }
+    },
+    "Centaur Courser": {
+      "oracle": {
+        "oracle_id": "2f5bf099-2e01-4e1c-9ebf-0ce0ac66939e",
+        "name": "Centaur Courser",
+        "oracle_text": "",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Centaur Warrior",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/168/centaur-courser?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10397,
+        "iid": 1596,
+        "name": "Centaur Courser",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Sphinx": {
+      "oracle": {
+        "oracle_id": "814c8e0b-694e-4b65-a0b6-518ac005b218",
+        "name": "Sphinx",
+        "oracle_text": "Flying, vigilance",
+        "mana_cost": "",
+        "type_line": "Token Creature — Sphinx",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Vigilance"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/trvr/17/sphinx?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18826,
+        "iid": 9134,
+        "name": "Sphinx",
+        "handler": "manalinkeh_card_rhino_token",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    }
+  }
+}

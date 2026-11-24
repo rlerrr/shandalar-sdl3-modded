@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Death of a Thousand Stings",
+  "csvid": 7620,
+  "recipes": [
+    {
+      "family": "upkeep_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 7620,
+        "cost": [
+          4,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Target player loses 1 life and you gain 1 life.\nAt the beginning of your upkeep, if you have more cards in hand than each opponent, you may return this card from your graveyard to your hand.",
+      "variants": [
+        "cast_return_0",
+        "cast_return_1",
+        "self_cast_0",
+        "self_cast_1",
+        "repeat_0",
+        "repeat_1",
+        "decline_0",
+        "decline_1",
+        "tie_0",
+        "tie_1",
+        "less_0",
+        "less_1",
+        "foe_upkeep_0",
+        "foe_upkeep_1"
+      ]
+    }
+  ]
+}

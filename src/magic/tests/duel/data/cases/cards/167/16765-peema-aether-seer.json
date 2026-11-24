@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Peema Aether-Seer",
+  "csvid": 16765,
+  "recipes": [
+    {
+      "family": "entry_interaction_choice_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 16765,
+        "mana_cost": "{3}{G}"
+      },
+      "oracle_text": "When this creature enters, you get an amount of {E} (energy counters) equal to the greatest power among creatures you control.\nPay {E}{E}{E}: Target creature blocks this turn if able.",
+      "variants": [
+        "self_power_0",
+        "self_power_1",
+        "greatest_power_0",
+        "greatest_power_1",
+        "force_block_0",
+        "force_block_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,751 @@
+{
+  "sources": {
+    "Reya Dawnbringer": {
+      "oracle_id": "08d1a5d1-141d-48e3-ac22-c2529191cb13",
+      "name": "Reya Dawnbringer",
+      "oracle_text": "Flying\nAt the beginning of your upkeep, you may return target creature card from your graveyard to the battlefield.",
+      "mana_cost": "{6}{W}{W}{W}",
+      "type_line": "Legendary Creature — Angel",
+      "power": "4",
+      "toughness": "6",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 9.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/uma/32/reya-dawnbringer?utm_source=api"
+    },
+    "Oversold Cemetery": {
+      "oracle_id": "ed4cd3a1-688b-4c05-948d-39d3336e00c0",
+      "name": "Oversold Cemetery",
+      "oracle_text": "At the beginning of your upkeep, if you have four or more creature cards in your graveyard, you may return target creature card from your graveyard to your hand.",
+      "mana_cost": "{1}{B}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/96/oversold-cemetery?utm_source=api"
+    },
+    "Bringer of the White Dawn": {
+      "oracle_id": "d6ee95a9-e518-49fd-bc11-02453c3220cd",
+      "name": "Bringer of the White Dawn",
+      "oracle_text": "You may pay {W}{U}{B}{R}{G} rather than pay this spell's mana cost.\nTrample\nAt the beginning of your upkeep, you may return target artifact card from your graveyard to the battlefield.",
+      "mana_cost": "{7}{W}{W}",
+      "type_line": "Creature — Bringer",
+      "power": "5",
+      "toughness": "5",
+      "keywords": [
+        "Trample"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "G",
+        "R",
+        "U",
+        "W"
+      ],
+      "cmc": 9.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/5dn/7/bringer-of-the-white-dawn?utm_source=api"
+    },
+    "Emeria, the Sky Ruin": {
+      "oracle_id": "cc999cf2-c99b-4911-8c52-6cc4a99fcc7b",
+      "name": "Emeria, the Sky Ruin",
+      "oracle_text": "This land enters tapped.\nAt the beginning of your upkeep, if you control seven or more Plains, you may return target creature card from your graveyard to the battlefield.\n{T}: Add {W}.",
+      "mana_cost": "",
+      "type_line": "Land",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/soc/368/emeria-the-sky-ruin?utm_source=api"
+    },
+    "Angel of Flight Alabaster": {
+      "oracle_id": "9b6a74fb-c48f-4d85-b4b3-96eb80b9efc7",
+      "name": "Angel of Flight Alabaster",
+      "oracle_text": "Flying\nAt the beginning of your upkeep, return target Spirit card from your graveyard to your hand.",
+      "mana_cost": "{4}{W}",
+      "type_line": "Creature — Angel",
+      "power": "4",
+      "toughness": "4",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/voc/77/angel-of-flight-alabaster?utm_source=api"
+    },
+    "Driver of the Dead": {
+      "oracle_id": "7c179e54-3beb-4761-bddf-41fa98b082db",
+      "name": "Driver of the Dead",
+      "oracle_text": "When this creature dies, return target creature card with mana value 2 or less from your graveyard to the battlefield.",
+      "mana_cost": "{3}{B}",
+      "type_line": "Creature — Vampire",
+      "power": "3",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fdn/605/driver-of-the-dead?utm_source=api"
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Darksteel Relic": {
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "name": "Darksteel Relic",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+    },
+    "Fervor": {
+      "oracle_id": "8e0cea9c-3110-4728-9378-76849e33bb90",
+      "name": "Fervor",
+      "oracle_text": "Creatures you control have haste. (They can attack and {T} as soon as they come under your control.)",
+      "mana_cost": "{2}{R}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m13/129/fervor?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Giant Spider": {
+      "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+      "name": "Giant Spider",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Spider",
+      "power": "2",
+      "toughness": "4",
+      "keywords": [
+        "Reach"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Hana Kami": {
+      "oracle_id": "7ac433a7-c107-46de-b36b-d7419c9ec565",
+      "name": "Hana Kami",
+      "oracle_text": "{1}{G}, Sacrifice this creature: Return target Arcane card from your graveyard to your hand.",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Spirit",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mma/147/hana-kami?utm_source=api"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Kami of Ancient Law": {
+      "oracle_id": "e937e0f5-ca35-4dce-9f05-8f2075731628",
+      "name": "Kami of Ancient Law",
+      "oracle_text": "Sacrifice this creature: Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Spirit",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/soc/150/kami-of-ancient-law?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Murder": {
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "name": "Murder",
+      "oracle_text": "Destroy target creature.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature — Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Reach Through Mists": {
+      "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+      "name": "Reach Through Mists",
+      "oracle_text": "Draw a card.",
+      "mana_cost": "{U}",
+      "type_line": "Instant — Arcane",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dds/7/reach-through-mists?utm_source=api"
+    },
+    "Scathe Zombies": {
+      "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+      "name": "Scathe Zombies",
+      "oracle_text": "",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Zombie",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/175/scathe-zombies?utm_source=api"
+    },
+    "Silent Gravestone": {
+      "oracle_id": "803815c5-12be-48b3-a101-f416c1ef9b7b",
+      "name": "Silent Gravestone",
+      "oracle_text": "Cards in graveyards can't be the targets of spells or abilities.\n{4}, {T}: Exile this artifact and all cards from all graveyards. Draw a card.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/rix/182/silent-gravestone?utm_source=api"
+    },
+    "Skirk Prospector": {
+      "oracle_id": "c18013e4-0b99-44e3-a2b2-027ace68723a",
+      "name": "Skirk Prospector",
+      "oracle_text": "Sacrifice a Goblin: Add {R}.",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Goblin",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/137/skirk-prospector?utm_source=api"
+    },
+    "Stone Rain": {
+      "oracle_id": "6e880df6-fc00-43d2-a9c8-f575f40b78c6",
+      "name": "Stone Rain",
+      "oracle_text": "Destroy target land.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/9ed/221/stone-rain?utm_source=api"
+    },
+    "Suntail Hawk": {
+      "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+      "name": "Suntail Hawk",
+      "oracle_text": "Flying",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Bird",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m14/40/suntail-hawk?utm_source=api"
+    },
+    "Swords to Plowshares": {
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "name": "Swords to Plowshares",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+    },
+    "Tundra": {
+      "oracle_id": "02418479-9455-417f-a6a1-004356faff37",
+      "name": "Tundra",
+      "oracle_text": "({T}: Add {W} or {U}.)",
+      "mana_cost": "",
+      "type_line": "Land — Plains Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/vma/322/tundra?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    },
+    "Walking Corpse": {
+      "oracle_id": "fea95888-e16a-4209-9cd4-623f7f4d2f67",
+      "name": "Walking Corpse",
+      "oracle_text": "",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Zombie",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m21/128/walking-corpse?utm_source=api"
+    }
+  },
+  "registry": {
+    "Angel of Flight Alabaster": {
+      "csvid": 11873,
+      "iid": 438,
+      "name": "Angel of Flight Alabaster",
+      "handler": "manalinkeh_card_angel_of_flight_alabaster",
+      "kind": "card"
+    },
+    "Bringer of the White Dawn": {
+      "csvid": 7024,
+      "iid": 1350,
+      "name": "Bringer of the White Dawn",
+      "handler": "manalinkeh_card_bringer_of_the_white_dawn",
+      "kind": "card"
+    },
+    "Counterspell": {
+      "csvid": 48,
+      "iid": 1996,
+      "name": "Counterspell",
+      "handler": "manalinkeh_card_counterspell",
+      "kind": "card"
+    },
+    "Darksteel Relic": {
+      "csvid": 11586,
+      "iid": 2259,
+      "name": "Darksteel Relic",
+      "handler": "manalinkeh_card_darksteel_myr",
+      "kind": "card"
+    },
+    "Driver of the Dead": {
+      "csvid": 12355,
+      "iid": 2760,
+      "name": "Driver of the Dead",
+      "handler": "manalinkeh_card_driver_of_the_dead",
+      "kind": "card"
+    },
+    "Emeria, the Sky Ruin": {
+      "csvid": 10535,
+      "iid": 3012,
+      "name": "Emeria, the Sky Ruin",
+      "handler": "manalinkeh_card_emeria_the_sky_ruin",
+      "kind": "card"
+    },
+    "Fervor": {
+      "csvid": 1604,
+      "iid": 3365,
+      "name": "Fervor",
+      "handler": "manalinkeh_card_fervor",
+      "kind": "card"
+    },
+    "Forest": {
+      "csvid": 91,
+      "iid": 2,
+      "name": "Forest",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Giant Spider": {
+      "csvid": 98,
+      "iid": 3868,
+      "name": "Giant Spider",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Grizzly Bears": {
+      "csvid": 106,
+      "iid": 4259,
+      "name": "Grizzly Bears",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Hana Kami": {
+      "csvid": 7225,
+      "iid": 4364,
+      "name": "Hana Kami",
+      "handler": "manalinkeh_card_hana_kami",
+      "kind": "card"
+    },
+    "Hill Giant": {
+      "csvid": 110,
+      "iid": 4570,
+      "name": "Hill Giant",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Island": {
+      "csvid": 126,
+      "iid": 1,
+      "name": "Island",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Kami of Ancient Law": {
+      "csvid": 7264,
+      "iid": 5142,
+      "name": "Kami of Ancient Law",
+      "handler": "manalinkeh_card_kami_of_ancient_law",
+      "kind": "card"
+    },
+    "Mountain": {
+      "csvid": 164,
+      "iid": 3,
+      "name": "Mountain",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Murder": {
+      "csvid": 12594,
+      "iid": 6382,
+      "name": "Murder",
+      "handler": "manalinkeh_card_murder2",
+      "kind": "card"
+    },
+    "Ornithopter": {
+      "csvid": 514,
+      "iid": 6907,
+      "name": "Ornithopter",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Oversold Cemetery": {
+      "csvid": 6219,
+      "iid": 6946,
+      "name": "Oversold Cemetery",
+      "handler": "manalinkeh_card_oversold_cemetery",
+      "kind": "card"
+    },
+    "Plains": {
+      "csvid": 188,
+      "iid": 4,
+      "name": "Plains",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Reach Through Mists": {
+      "csvid": 7353,
+      "iid": 7720,
+      "name": "Reach Through Mists",
+      "handler": "manalinkeh_card_reach_through_mists",
+      "kind": "card"
+    },
+    "Reya Dawnbringer": {
+      "csvid": 5091,
+      "iid": 7912,
+      "name": "Reya Dawnbringer",
+      "handler": "manalinkeh_card_reya_dawnbringer",
+      "kind": "card"
+    },
+    "Scathe Zombies": {
+      "csvid": 214,
+      "iid": 8302,
+      "name": "Scathe Zombies",
+      "handler": "card_scathe_zombies",
+      "kind": "card"
+    },
+    "Silent Gravestone": {
+      "csvid": 18287,
+      "iid": 18392,
+      "name": "Silent Gravestone",
+      "handler": "manalinkeh_card_silent_gravestone",
+      "kind": "card"
+    },
+    "Skirk Prospector": {
+      "csvid": 6265,
+      "iid": 8825,
+      "name": "Skirk Prospector",
+      "handler": "manalinkeh_card_skirk_prospector",
+      "kind": "card"
+    },
+    "Stone Rain": {
+      "csvid": 236,
+      "iid": 9381,
+      "name": "Stone Rain",
+      "handler": "manalinkeh_card_ice_storm",
+      "kind": "card"
+    },
+    "Suntail Hawk": {
+      "csvid": 1195,
+      "iid": 9548,
+      "name": "Suntail Hawk",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Swords to Plowshares": {
+      "csvid": 240,
+      "iid": 9616,
+      "name": "Swords to Plowshares",
+      "handler": "manalinkeh_card_swords_to_plowshares",
+      "kind": "card"
+    },
+    "Tundra": {
+      "csvid": 254,
+      "iid": 12,
+      "name": "Tundra",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Unsummon": {
+      "csvid": 260,
+      "iid": 10388,
+      "name": "Unsummon",
+      "handler": "manalinkeh_card_unsummon",
+      "kind": "card"
+    },
+    "Walking Corpse": {
+      "csvid": 12124,
+      "iid": 10747,
+      "name": "Walking Corpse",
+      "handler": "card_dummy",
+      "kind": "card"
+    }
+  }
+}

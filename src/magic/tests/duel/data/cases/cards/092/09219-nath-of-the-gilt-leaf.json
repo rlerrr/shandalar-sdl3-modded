@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Nath of the Gilt-Leaf",
+  "csvid": 9219,
+  "recipes": [
+    {
+      "family": "upkeep_draw_and_discard",
+      "version": 2,
+      "params": {
+        "csvid": 9219,
+        "printed_mana": "{3}{B}{G}",
+        "rules": "At the beginning of your upkeep, you may have target opponent discard a card at random.\nWhenever an opponent discards a card, you may create a 1/1 green Elf Warrior creature token."
+      },
+      "oracle_text": "At the beginning of your upkeep, you may have target opponent discard a card at random.\nWhenever an opponent discards a card, you may create a 1/1 green Elf Warrior creature token.",
+      "variants": [
+        "random_upkeep_0",
+        "random_upkeep_1",
+        "external_discard_0",
+        "external_discard_1",
+        "decline_upkeep_0"
+      ]
+    }
+  ]
+}

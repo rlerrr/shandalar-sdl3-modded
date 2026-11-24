@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 11811,
+  "card": "Goblin Bangchuckers",
+  "recipes": [
+    {
+      "family": "coin_flip_activated_outcomes",
+      "version": 2,
+      "params": {
+        "csvid": 11811,
+        "printed_cost": "{2}{R}{R}"
+      },
+      "oracle_text": "{T}: Flip a coin. If you win the flip, this creature deals 2 damage to any target. If you lose the flip, this creature deals 2 damage to itself.",
+      "variants": [
+        "win_player_0",
+        "win_creature_0",
+        "lose_0",
+        "win_own_0",
+        "win_prevented_0",
+        "win_player_1",
+        "win_creature_1",
+        "lose_1",
+        "win_own_1",
+        "win_prevented_1"
+      ]
+    }
+  ]
+}

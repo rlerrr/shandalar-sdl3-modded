@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Wingmate Roc",
+  "csvid": 14433,
+  "recipes": [
+    {
+      "family": "attack_follow_on_attack_riders",
+      "version": 2,
+      "params": {
+        "csvid": 14433,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "Flying\nRaid — When this creature enters, if you attacked this turn, create a 3/4 white Bird creature token with flying.\nWhenever this creature attacks, you gain 1 life for each attacking creature.",
+      "variants": [
+        "raid_0",
+        "raid_1",
+        "raid_no_damage_0",
+        "raid_no_damage_1",
+        "no_raid_0",
+        "no_raid_1",
+        "foe_attacked_0",
+        "foe_attacked_1",
+        "gain_team_0",
+        "gain_team_1",
+        "gain_single_0",
+        "gain_single_1",
+        "raid_expired_0",
+        "raid_expired_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Molting Skin",
+  "csvid": 7697,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_sacrifice_and_team",
+      "version": 2,
+      "params": {
+        "csvid": 7697,
+        "printed_cost": "{2}{G}",
+        "choices": [
+          "proactive_0",
+          "proactive_1",
+          "friendly_0",
+          "friendly_1",
+          "foreign_0",
+          "foreign_1"
+        ]
+      },
+      "oracle_text": "Return this enchantment to its owner's hand: Regenerate target creature.",
+      "variants": [
+        "proactive_0",
+        "proactive_1",
+        "friendly_0",
+        "friendly_1",
+        "foreign_0",
+        "foreign_1"
+      ]
+    }
+  ]
+}

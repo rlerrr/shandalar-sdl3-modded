@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Heavenly Qilin",
+  "csvid": 18672,
+  "recipes": [
+    {
+      "family": "attack_trigger_team_keywords",
+      "version": 2,
+      "params": {
+        "csvid": 18672,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever this creature attacks, another target creature you control gains flying until end of turn.",
+      "variants": [
+        "companion_0",
+        "companion_1",
+        "resting_0",
+        "resting_1",
+        "no_other_0",
+        "no_other_1",
+        "late_0",
+        "late_1",
+        "expires_0",
+        "expires_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 6894,
+  "card": "Gemini Engine",
+  "recipes": [
+    {
+      "family": "attack_trigger_tokens_and_combat",
+      "version": 2,
+      "params": {
+        "csvid": 6894,
+        "printed_cost": "{6}",
+        "keywords": []
+      },
+      "oracle_text": "Whenever this creature attacks, create a colorless Construct artifact creature token named Twin that's attacking. Its power is equal to this creature's power and its toughness is equal to this creature's toughness. Sacrifice the token at end of combat.",
+      "variants": [
+        "ordinary_0",
+        "boosted_0",
+        "later_growth_0",
+        "blocked_source_0",
+        "other_only_0",
+        "ordinary_1",
+        "boosted_1",
+        "later_growth_1",
+        "blocked_source_1",
+        "other_only_1"
+      ]
+    }
+  ]
+}

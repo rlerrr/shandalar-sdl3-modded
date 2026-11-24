@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Sinister Concoction",
+  "csvid": 15955,
+  "recipes": [
+    {
+      "family": "mill_remaining_costs_and_grants",
+      "version": 2,
+      "params": {
+        "csvid": 15955,
+        "mana": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{B}, Pay 1 life, Mill a card, Discard a card, Sacrifice this enchantment: Destroy target creature.",
+      "variants": [
+        "destroy_0",
+        "destroy_1",
+        "target_leaves_0",
+        "target_leaves_1",
+        "empty_deck_0",
+        "empty_deck_1",
+        "empty_hand_0",
+        "empty_hand_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "no_target_0",
+        "no_target_1"
+      ]
+    }
+  ]
+}

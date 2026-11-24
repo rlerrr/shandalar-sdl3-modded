@@ -1,0 +1,1034 @@
+{
+  "sources": {
+    "Journey to Nowhere": {
+      "oracle": {
+        "oracle_id": "2bfec482-be0d-4768-84e7-1c2c74ea1373",
+        "name": "Journey to Nowhere",
+        "oracle_text": "When this enchantment enters, exile target creature.\nWhen this enchantment leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmd/17/journey-to-nowhere?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10574,
+        "iid": 5086,
+        "name": "Journey to Nowhere",
+        "handler": "manalinkeh_card_journey_to_nowhere",
+        "kind": "card"
+      }
+    },
+    "Fiend Hunter": {
+      "oracle": {
+        "oracle_id": "cb9d557a-fc06-428c-8be6-7d28add33028",
+        "name": "Fiend Hunter",
+        "oracle_text": "When this creature enters, you may exile another target creature.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/167/fiend-hunter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11948,
+        "iid": 3385,
+        "name": "Fiend Hunter",
+        "handler": "manalinkeh_card_fiend_hunter",
+        "kind": "card"
+      }
+    },
+    "Flickerwisp": {
+      "oracle": {
+        "oracle_id": "b23a3d30-6b8e-4aad-890f-db0c3af43ace",
+        "name": "Flickerwisp",
+        "oracle_text": "Flying\nWhen this creature enters, exile another target permanent. Return that card to the battlefield under its owner's control at the beginning of the next end step.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Creature — Elemental",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/11/flickerwisp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9788,
+        "iid": 3522,
+        "name": "Flickerwisp",
+        "handler": "manalinkeh_card_flickerwhisp",
+        "kind": "card"
+      }
+    },
+    "Riftsweeper": {
+      "oracle": {
+        "oracle_id": "1ba0dce5-e767-47cc-9967-174e52bce120",
+        "name": "Riftsweeper",
+        "oracle_text": "When this creature enters, choose target face-up exiled card. Its owner shuffles it into their library.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Elf Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mma/159/riftsweeper?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9003,
+        "iid": 7938,
+        "name": "Riftsweeper",
+        "handler": "manalinkeh_card_riftsweeper",
+        "kind": "card"
+      }
+    },
+    "Faceless Butcher": {
+      "oracle": {
+        "oracle_id": "5237a105-60c4-4597-b24e-84c12ce7b01f",
+        "name": "Faceless Butcher",
+        "oracle_text": "When this creature enters, exile another target creature.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Creature — Nightmare Horror",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/84/faceless-butcher?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5805,
+        "iid": 3231,
+        "name": "Faceless Butcher",
+        "handler": "manalinkeh_card_faceless_butcher",
+        "kind": "card"
+      }
+    },
+    "Leonin Relic-Warder": {
+      "oracle": {
+        "oracle_id": "8e720216-a980-4a34-8aef-62ac3ef15a6e",
+        "name": "Leonin Relic-Warder",
+        "oracle_text": "When this creature enters, you may exile target artifact or enchantment.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+        "mana_cost": "{W}{W}",
+        "type_line": "Creature — Cat Cleric",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c17/65/leonin-relic-warder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11472,
+        "iid": 5535,
+        "name": "Leonin Relic-Warder",
+        "handler": "manalinkeh_card_leonin_relic_warder",
+        "kind": "card"
+      }
+    },
+    "Glimmerpoint Stag": {
+      "oracle": {
+        "oracle_id": "9620c8a2-63a8-4151-b4fd-a15db191a7b0",
+        "name": "Glimmerpoint Stag",
+        "oracle_text": "Vigilance\nWhen this creature enters, exile another target permanent. Return that card to the battlefield under its owner's control at the beginning of the next end step.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Creature — Elk",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/12/glimmerpoint-stag?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11263,
+        "iid": 3926,
+        "name": "Glimmerpoint Stag",
+        "handler": "manalinkeh_card_glimmerpoint_stag",
+        "kind": "card"
+      }
+    },
+    "Brain Maggot": {
+      "oracle": {
+        "oracle_id": "419b5b4f-cac7-44bf-b1e2-655b5a5d37b1",
+        "name": "Brain Maggot",
+        "oracle_text": "When this creature enters, target opponent reveals their hand and you choose a nonland card from it. Exile that card until this creature leaves the battlefield.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Enchantment Creature — Insect",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/62/brain-maggot?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13853,
+        "iid": 1284,
+        "name": "Brain Maggot",
+        "handler": "manalinkeh_card_brain_maggot",
+        "kind": "card"
+      }
+    },
+    "Tidehollow Sculler": {
+      "oracle": {
+        "oracle_id": "51b55057-8b14-4277-894b-4813b4f7eb39",
+        "name": "Tidehollow Sculler",
+        "oracle_text": "When this creature enters, target opponent reveals their hand and you choose a nonland card from it. Exile that card.\nWhen this creature leaves the battlefield, return the exiled card to its owner's hand.",
+        "mana_cost": "{W}{B}",
+        "type_line": "Artifact Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mma/184/tidehollow-sculler?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10088,
+        "iid": 10008,
+        "name": "Tidehollow Sculler",
+        "handler": "manalinkeh_card_tidehollow_sculler",
+        "kind": "card"
+      }
+    },
+    "Mesmeric Fiend": {
+      "oracle": {
+        "oracle_id": "fb46b300-8a39-40d2-8bc7-31b90c822e22",
+        "name": "Mesmeric Fiend",
+        "oracle_text": "When this creature enters, target opponent reveals their hand and you choose a nonland card from it. Exile that card.\nWhen this creature leaves the battlefield, return the exiled card to its owner's hand.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Nightmare Horror",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/a25/97/mesmeric-fiend?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5837,
+        "iid": 6073,
+        "name": "Mesmeric Fiend",
+        "handler": "manalinkeh_card_mesmeric_fiend",
+        "kind": "card"
+      }
+    },
+    "Detention Sphere": {
+      "oracle": {
+        "oracle_id": "0a0b376d-7824-4ba5-8bc9-bc0be12800c5",
+        "name": "Detention Sphere",
+        "oracle_text": "When this enchantment enters, you may exile target nonland permanent not named Detention Sphere and all other permanents with the same name as that permanent.\nWhen this enchantment leaves the battlefield, return the exiled cards to the battlefield under their owner's control.",
+        "mana_cost": "{1}{W}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rtr/155/detention-sphere?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12704,
+        "iid": 2484,
+        "name": "Detention Sphere",
+        "handler": "manalinkeh_card_detention_sphere",
+        "kind": "card"
+      }
+    },
+    "Ixalan's Binding": {
+      "oracle": {
+        "oracle_id": "5a2d0df9-950e-4c3d-8a08-275f179e33c7",
+        "name": "Ixalan's Binding",
+        "oracle_text": "When this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.\nYour opponents can't cast spells with the same name as the exiled card.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/xln/17/ixalans-binding?utm_source=api"
+      },
+      "registry": {
+        "csvid": 17441,
+        "iid": 17537,
+        "name": "Ixalan's Binding",
+        "handler": "manalinkeh_card_ixalans_binding",
+        "kind": "card"
+      }
+    },
+    "Kitesail Freebooter": {
+      "oracle": {
+        "oracle_id": "8aa1bbc9-b047-4d68-93f4-728e40dafc5e",
+        "name": "Kitesail Freebooter",
+        "oracle_text": "Flying\nWhen this creature enters, target opponent reveals their hand. You choose a noncreature, nonland card from it. Exile that card until this creature leaves the battlefield.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Human Pirate",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/107/kitesail-freebooter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 17451,
+        "iid": 17547,
+        "name": "Kitesail Freebooter",
+        "handler": "manalinkeh_card_kitesail_freebooter",
+        "kind": "card"
+      }
+    },
+    "Baffling End": {
+      "oracle": {
+        "oracle_id": "03c35670-84ac-4825-b395-cefb76ceb89a",
+        "name": "Baffling End",
+        "oracle_text": "When this enchantment enters, exile target creature an opponent controls with mana value 3 or less.\nWhen this enchantment leaves the battlefield, target opponent creates a 3/3 green Dinosaur creature token with trample.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rix/1/baffling-end?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18163,
+        "iid": 18270,
+        "name": "Baffling End",
+        "handler": "manalinkeh_card_baffling_end",
+        "kind": "card"
+      }
+    },
+    "Deputy of Detention": {
+      "oracle": {
+        "oracle_id": "0e4150db-ac43-48b4-9791-0d874906acf5",
+        "name": "Deputy of Detention",
+        "oracle_text": "When this creature enters, exile target nonland permanent an opponent controls and all other nonland permanents that player controls with the same name as that permanent until this creature leaves the battlefield.",
+        "mana_cost": "{1}{W}{U}",
+        "type_line": "Creature — Vedalken Wizard",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rna/165/deputy-of-detention?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19600,
+        "iid": 19534,
+        "name": "Deputy of Detention",
+        "handler": "manalinkeh_card_deputy_of_detention",
+        "kind": "card"
+      }
+    },
+    "Felidar Guardian": {
+      "oracle": {
+        "oracle_id": "33869ba6-13e5-4e48-8963-92f7965648fb",
+        "name": "Felidar Guardian",
+        "oracle_text": "When this creature enters, you may exile another target permanent you control, then return that card to the battlefield under its owner's control.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Cat Beast",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/aer/19/felidar-guardian?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16700,
+        "iid": 16792,
+        "name": "Felidar Guardian",
+        "handler": "manalinkeh_card_felidar_guardian",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Dinosaur": {
+      "oracle": {
+        "oracle_id": "fede3b66-1380-4b18-986a-27a9a145a3a0",
+        "name": "Dinosaur",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Dinosaur",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmom/7/dinosaur?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18717,
+        "iid": 17689,
+        "name": "Dinosaur",
+        "handler": "manalinkeh_card_dinosaur_token",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Act of Treason": {
+      "oracle": {
+        "oracle_id": "9d08af23-9f4a-4097-9abc-3b17475ab744",
+        "name": "Act of Treason",
+        "oracle_text": "Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn. (It can attack and {T} this turn.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/99/act-of-treason?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10381,
+        "iid": 224,
+        "name": "Act of Treason",
+        "handler": "manalinkeh_card_act_of_treason",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Cathedral Sanctifier": {
+      "oracle": {
+        "oracle_id": "1050f029-60d4-4769-b39f-9100c949a822",
+        "name": "Cathedral Sanctifier",
+        "oracle_text": "When this creature enters, you gain 3 life.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddq/3/cathedral-sanctifier?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12327,
+        "iid": 1554,
+        "name": "Cathedral Sanctifier",
+        "handler": "manalinkeh_card_angel_of_mercy",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Boomerang": {
+      "oracle": {
+        "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+        "name": "Boomerang",
+        "oracle_text": "Return target permanent to its owner's hand.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+      },
+      "registry": {
+        "csvid": 585,
+        "iid": 1233,
+        "name": "Boomerang",
+        "handler": "manalinkeh_card_boomerang",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Bomat Courier": {
+      "oracle": {
+        "oracle_id": "a88f3881-4f43-4473-965f-f5c24ae5752f",
+        "name": "Bomat Courier",
+        "oracle_text": "Haste\nWhenever this creature attacks, exile the top card of your library face down. (You can't look at it.)\n{R}, Discard your hand, Sacrifice this creature: Put all cards exiled with this creature into their owners' hands.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/199/bomat-courier?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16300,
+        "iid": 16389,
+        "name": "Bomat Courier",
+        "handler": "manalinkeh_card_bomat_courier",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Fervor": {
+      "oracle": {
+        "oracle_id": "8e0cea9c-3110-4728-9378-76849e33bb90",
+        "name": "Fervor",
+        "oracle_text": "Creatures you control have haste. (They can attack and {T} as soon as they come under your control.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/129/fervor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1604,
+        "iid": 3365,
+        "name": "Fervor",
+        "handler": "manalinkeh_card_fervor",
+        "kind": "card"
+      }
+    },
+    "Detention Sphere": {
+      "oracle": {
+        "oracle_id": "0a0b376d-7824-4ba5-8bc9-bc0be12800c5",
+        "name": "Detention Sphere",
+        "oracle_text": "When this enchantment enters, you may exile target nonland permanent not named Detention Sphere and all other permanents with the same name as that permanent.\nWhen this enchantment leaves the battlefield, return the exiled cards to the battlefield under their owner's control.",
+        "mana_cost": "{1}{W}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rtr/155/detention-sphere?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12704,
+        "iid": 2484,
+        "name": "Detention Sphere",
+        "handler": "manalinkeh_card_detention_sphere",
+        "kind": "card"
+      }
+    },
+    "Goblin Chariot": {
+      "oracle": {
+        "oracle_id": "6ef0dd51-31df-4fd3-8153-49a427a7fdcf",
+        "name": "Goblin Chariot",
+        "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/191/goblin-chariot?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1047,
+        "iid": 3992,
+        "name": "Goblin Chariot",
+        "handler": "manalinkeh_card_ambush_party",
+        "kind": "card"
+      }
+    }
+  }
+}

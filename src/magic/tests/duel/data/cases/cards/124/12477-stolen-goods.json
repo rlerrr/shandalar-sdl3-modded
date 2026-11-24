@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Stolen Goods",
+  "csvid": 12477,
+  "recipes": [
+    {
+      "family": "opponent_exile_permissions",
+      "version": 2,
+      "oracle_text": "Target opponent exiles cards from the top of their library until they exile a nonland card. Until end of turn, you may cast that card without paying its mana cost.",
+      "params": {
+        "model": "land_prefix",
+        "cost": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "payment": "free",
+        "expiry": "turn"
+      },
+      "variants": [
+        "free_0",
+        "land_prefix_0",
+        "wrong_seat_0",
+        "wrong_owner_0",
+        "expiry_0",
+        "all_lands_0",
+        "empty_0",
+        "countered_0",
+        "replay_0",
+        "free_1",
+        "land_prefix_1",
+        "wrong_seat_1",
+        "wrong_owner_1",
+        "expiry_1",
+        "all_lands_1",
+        "empty_1",
+        "countered_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

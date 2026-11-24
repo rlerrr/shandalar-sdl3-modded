@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "csvid": 2191,
+  "card": "Clockwork Gnomes",
+  "recipes": [
+    {
+      "family": "regeneration_targeted_abilities",
+      "version": 2,
+      "params": {
+        "csvid": 2191,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "activation": "{3}",
+        "tap": true,
+        "stats": [
+          2,
+          2
+        ]
+      },
+      "oracle_text": "{3}, {T}: Regenerate target artifact creature.",
+      "variants": [
+        "own_0",
+        "own_1",
+        "foreign_0",
+        "foreign_1",
+        "self_0",
+        "self_1",
+        "sick_0",
+        "sick_1",
+        "tapped_0",
+        "tapped_1",
+        "short_0",
+        "short_1",
+        "wrong_type_0",
+        "wrong_type_1",
+        "not_creature_0",
+        "not_creature_1",
+        "proactive_0",
+        "proactive_1"
+      ]
+    }
+  ]
+}

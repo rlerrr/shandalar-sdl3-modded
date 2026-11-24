@@ -1,0 +1,929 @@
+{
+  "sources": {
+    "Armament Corps": {
+      "oracle": {
+        "oracle_id": "3b93427c-5b40-4119-96ae-7dce3ca2bbb9",
+        "name": "Armament Corps",
+        "oracle_text": "When this creature enters, distribute two +1/+1 counters among one or two target creatures you control.",
+        "mana_cost": "{2}{W}{B}{G}",
+        "type_line": "Creature — Human Soldier",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "G",
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/165/armament-corps?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14219,
+        "iid": 600,
+        "name": "Armament Corps",
+        "handler": "manalinkeh_card_armament_corps",
+        "kind": "card"
+      }
+    },
+    "Hunting Moa": {
+      "oracle": {
+        "oracle_id": "102d73bc-94ed-4a57-9872-6f7b9bf282f9",
+        "name": "Hunting Moa",
+        "oracle_text": "Echo {2}{G} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters or dies, put a +1/+1 counter on target creature.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Bird Beast",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Echo"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/arc/60/hunting-moa?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4140,
+        "iid": 4718,
+        "name": "Hunting Moa",
+        "handler": "manalinkeh_card_hunting_moa",
+        "kind": "card"
+      }
+    },
+    "Sandsteppe Mastodon": {
+      "oracle": {
+        "oracle_id": "99fa202b-052c-4627-b78c-f0b323f7bdf3",
+        "name": "Sandsteppe Mastodon",
+        "oracle_text": "Reach\nWhen this creature enters, bolster 5. (Choose a creature with the least toughness among creatures you control and put five +1/+1 counters on it.)",
+        "mana_cost": "{5}{G}{G}",
+        "type_line": "Creature — Elephant",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Reach",
+          "Bolster"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frf/137/sandsteppe-mastodon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14618,
+        "iid": 11353,
+        "name": "Sandsteppe Mastodon",
+        "handler": "manalinkeh_card_sandsteppe_mastodon",
+        "kind": "card"
+      }
+    },
+    "Venerated Teacher": {
+      "oracle": {
+        "oracle_id": "be118a2d-a27e-4174-86db-d9a2d304da2f",
+        "name": "Venerated Teacher",
+        "oracle_text": "When this creature enters, put two level counters on each creature you control with level up.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/roe/93/venerated-teacher?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11074,
+        "iid": 10516,
+        "name": "Venerated Teacher",
+        "handler": "manalinkeh_card_venerated_teacher",
+        "kind": "card"
+      }
+    },
+    "Contagion Clasp": {
+      "oracle": {
+        "oracle_id": "43f2d81e-aa01-4fa9-9046-6a27a05dbd2d",
+        "name": "Contagion Clasp",
+        "oracle_text": "When this artifact enters, put a -1/-1 counter on target creature.\n{4}, {T}: Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Proliferate"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ecc/140/contagion-clasp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11225,
+        "iid": 1929,
+        "name": "Contagion Clasp",
+        "handler": "manalinkeh_card_contagion_clasp",
+        "kind": "card"
+      }
+    },
+    "Contagion Engine": {
+      "oracle": {
+        "oracle_id": "482bd55a-ba73-4722-8643-94fa12818515",
+        "name": "Contagion Engine",
+        "oracle_text": "When this artifact enters, put a -1/-1 counter on each creature target player controls.\n{4}, {T}: Proliferate twice. (Choose any number of permanents and/or players, then give each another counter of each kind already there. Then do it again.)",
+        "mana_cost": "{6}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Proliferate"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/145/contagion-engine?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11226,
+        "iid": 1930,
+        "name": "Contagion Engine",
+        "handler": "manalinkeh_card_contagion_engine",
+        "kind": "card"
+      }
+    },
+    "Elite Scaleguard": {
+      "oracle": {
+        "oracle_id": "b90af42d-edb6-4654-b7dc-10f0f272c883",
+        "name": "Elite Scaleguard",
+        "oracle_text": "When this creature enters, bolster 2. (Choose a creature with the least toughness among creatures you control and put two +1/+1 counters on it.)\nWhenever a creature you control with a +1/+1 counter on it attacks, tap target creature defending player controls.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Bolster"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/22/elite-scaleguard?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14543,
+        "iid": 11279,
+        "name": "Elite Scaleguard",
+        "handler": "manalinkeh_card_elite_scaleguard",
+        "kind": "card"
+      }
+    },
+    "Aven Tactician": {
+      "oracle": {
+        "oracle_id": "f2d5949b-3cdc-4efd-9841-7d450e12dbbe",
+        "name": "Aven Tactician",
+        "oracle_text": "Flying\nWhen this creature enters, bolster 1. (Choose a creature with the least toughness among creatures you control and put a +1/+1 counter on it.)",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Bird Soldier",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Bolster",
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/6/aven-tactician?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14855,
+        "iid": 11614,
+        "name": "Aven Tactician",
+        "handler": "manalinkeh_card_aven_tactician",
+        "kind": "card"
+      }
+    },
+    "Sandsteppe Scavenger": {
+      "oracle": {
+        "oracle_id": "747ee321-f2dc-4d27-90cd-c4e610086958",
+        "name": "Sandsteppe Scavenger",
+        "oracle_text": "When this creature enters, bolster 2. (Choose a creature with the least toughness among creatures you control and put two +1/+1 counters on it.)",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Dog Scout",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Bolster"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/200/sandsteppe-scavenger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15000,
+        "iid": 14388,
+        "name": "Sandsteppe Scavenger",
+        "handler": "manalinkeh_card_sandsteppe_scavenger",
+        "kind": "card"
+      }
+    },
+    "Expedition Raptor": {
+      "oracle": {
+        "oracle_id": "0a44da1d-7914-4592-a00f-7e40e0d07f91",
+        "name": "Expedition Raptor",
+        "oracle_text": "Flying\nWhen this creature enters, support 2. (Put a +1/+1 counter on each of up to two other target creatures.)",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Bird",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Support"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bbd/92/expedition-raptor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15598,
+        "iid": 15673,
+        "name": "Expedition Raptor",
+        "handler": "manalinkeh_card_expedition_raptor",
+        "kind": "card"
+      }
+    },
+    "Gladehart Cavalry": {
+      "oracle": {
+        "oracle_id": "4d937ea3-bfd4-4cdf-b722-08f2b99ea2a5",
+        "name": "Gladehart Cavalry",
+        "oracle_text": "When this creature enters, support 6. (Put a +1/+1 counter on each of up to six other target creatures.)\nWhenever a creature you control with a +1/+1 counter on it dies, you gain 2 life.",
+        "mana_cost": "{5}{G}{G}",
+        "type_line": "Creature — Elf Knight",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Support"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddu/11/gladehart-cavalry?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15604,
+        "iid": 15679,
+        "name": "Gladehart Cavalry",
+        "handler": "manalinkeh_card_gladehart_cavalry",
+        "kind": "card"
+      }
+    },
+    "Aetherborn Marauder": {
+      "oracle": {
+        "oracle_id": "ff6427f6-d2b1-4e33-984d-c06bd15d7c2c",
+        "name": "Aetherborn Marauder",
+        "oracle_text": "Flying, lifelink\nWhen this creature enters, move any number of +1/+1 counters from other permanents you control onto this creature.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Aetherborn Rogue",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Lifelink"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/otc/125/aetherborn-marauder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16273,
+        "iid": 16362,
+        "name": "Aetherborn Marauder",
+        "handler": "manalinkeh_card_aetherborn_marauder",
+        "kind": "card"
+      }
+    },
+    "Verdurous Gearhulk": {
+      "oracle": {
+        "oracle_id": "3765e8bb-e70d-4503-b8dc-1e684e434c18",
+        "name": "Verdurous Gearhulk",
+        "oracle_text": "Trample\nWhen this creature enters, distribute four +1/+1 counters among any number of target creatures you control.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mic/145/verdurous-gearhulk?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16564,
+        "iid": 16650,
+        "name": "Verdurous Gearhulk",
+        "handler": "manalinkeh_card_verdurous_gearhulk",
+        "kind": "card"
+      }
+    },
+    "Deepglow Skate": {
+      "oracle": {
+        "oracle_id": "debce64a-18bd-42f5-9e85-158c2242e9e9",
+        "name": "Deepglow Skate",
+        "oracle_text": "When this creature enters, double the number of each kind of counter on any number of target permanents.",
+        "mana_cost": "{4}{U}",
+        "type_line": "Creature — Fish",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Double"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/70/deepglow-skate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16600,
+        "iid": 16691,
+        "name": "Deepglow Skate",
+        "handler": "manalinkeh_card_deepglow_skate",
+        "kind": "card"
+      }
+    },
+    "Defiant Greatmaw": {
+      "oracle": {
+        "oracle_id": "ee152ffa-9c39-48ed-9aca-e53c8ebb0231",
+        "name": "Defiant Greatmaw",
+        "oracle_text": "When this creature enters, put two -1/-1 counters on target creature you control.\nWhenever you put one or more -1/-1 counters on this creature, remove a -1/-1 counter from another target creature you control.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Hippo",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/akh/163/defiant-greatmaw?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16885,
+        "iid": 16979,
+        "name": "Defiant Greatmaw",
+        "handler": "manalinkeh_card_defiant_greatmaw",
+        "kind": "card"
+      }
+    },
+    "Quarry Hauler": {
+      "oracle": {
+        "oracle_id": "a55bdb73-e17a-414d-b27f-dc53af2f345c",
+        "name": "Quarry Hauler",
+        "oracle_text": "When this creature enters, for each kind of counter on target permanent, put another counter of that kind on it or remove one from it.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Camel",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/akh/181/quarry-hauler?utm_source=api"
+      },
+      "registry": {
+        "csvid": 17001,
+        "iid": 17095,
+        "name": "Quarry Hauler",
+        "handler": "manalinkeh_card_quarry_hauler",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hada Spy Patrol": {
+      "oracle": {
+        "oracle_id": "8db3152a-11b1-4c59-a745-1c40a9b235b7",
+        "name": "Hada Spy Patrol",
+        "oracle_text": "Level up {2}{U} ({2}{U}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 1-2\n2/2\nThis creature can't be blocked.\nLEVEL 3+\n3/3\nShroud (This creature can't be the target of spells or abilities.)\nThis creature can't be blocked.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Human Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Shroud",
+          "Level Up"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "leveler",
+        "scryfall_uri": "https://scryfall.com/card/cma/40/hada-spy-patrol?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10946,
+        "iid": 4334,
+        "name": "Hada Spy Patrol",
+        "handler": "manalinkeh_card_hada_spy_patrol",
+        "kind": "card"
+      }
+    },
+    "Kobolds of Kher Keep": {
+      "oracle": {
+        "oracle_id": "badf0669-9f65-44e3-bf91-6c57ac2fecff",
+        "name": "Kobolds of Kher Keep",
+        "oracle_text": "",
+        "mana_cost": "{0}",
+        "type_line": "Creature — Kobold",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/107/kobolds-of-kher-keep?utm_source=api"
+      },
+      "registry": {
+        "csvid": 704,
+        "iid": 5341,
+        "name": "Kobolds of Kher Keep",
+        "handler": "card_crimson_kobolds",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Nimble Mongoose": {
+      "oracle": {
+        "oracle_id": "1059f089-2693-4c89-92c5-39fe49beebb3",
+        "name": "Nimble Mongoose",
+        "oracle_text": "Shroud (This creature can't be the target of spells or abilities.)\nThreshold — This creature gets +2/+2 as long as there are seven or more cards in your graveyard.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Mongoose",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Shroud",
+          "Threshold"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh1/174/nimble-mongoose?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5637,
+        "iid": 6641,
+        "name": "Nimble Mongoose",
+        "handler": "manalinkeh_card_nimble_mongoose",
+        "kind": "card"
+      }
+    },
+    "Rumbling Baloth": {
+      "oracle": {
+        "oracle_id": "3191c6ca-4d25-4ba3-bfe1-4aeab1295573",
+        "name": "Rumbling Baloth",
+        "oracle_text": "",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/426/rumbling-baloth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13328,
+        "iid": 8108,
+        "name": "Rumbling Baloth",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Serra Angel": {
+      "oracle": {
+        "oracle_id": "4b7ac066-e5c7-43e6-9e7e-2739b24a905d",
+        "name": "Serra Angel",
+        "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/740/serra-angel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 221,
+        "iid": 8519,
+        "name": "Serra Angel",
+        "handler": "manalinkeh_card_serra_angel",
+        "kind": "card"
+      }
+    },
+    "Student of Warfare": {
+      "oracle": {
+        "oracle_id": "0bc2875b-3a5a-4885-86b9-16ab7330ac10",
+        "name": "Student of Warfare",
+        "oracle_text": "Level up {W} ({W}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 2-6\n3/3\nFirst strike\nLEVEL 7+\n4/4\nDouble strike",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Knight",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "First strike",
+          "Level Up",
+          "Double strike"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "leveler",
+        "scryfall_uri": "https://scryfall.com/card/roe/47/student-of-warfare?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11056,
+        "iid": 9465,
+        "name": "Student of Warfare",
+        "handler": "manalinkeh_card_student_of_warfare",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Wastes": {
+      "oracle": {
+        "oracle_id": "05d24b0c-904a-46b6-b42a-96a4d91a0dd4",
+        "name": "Wastes",
+        "oracle_text": "{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Basic Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/191/wastes?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15719,
+        "iid": 15794,
+        "name": "Wastes",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Sage of Shaila's Claim": {
+      "oracle": {
+        "oracle_id": "a0b413cc-b16f-4112-8061-2ccded7f481d",
+        "name": "Sage of Shaila's Claim",
+        "oracle_text": "When this creature enters, you get {E}{E}{E} (three energy counters).",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/168/sage-of-shailas-claim?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16502,
+        "iid": 16588,
+        "name": "Sage of Shaila's Claim",
+        "handler": "manalinkeh_card_sage_of_shailas_claim",
+        "kind": "card"
+      }
+    },
+    "Sphere of the Suns": {
+      "oracle": {
+        "oracle_id": "7c709413-dacf-48af-8ac9-8f61b2699bf1",
+        "name": "Sphere of the Suns",
+        "oracle_text": "This artifact enters tapped and with three charge counters on it.\n{T}, Remove a charge counter from this artifact: Add one mana of any color.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm2/231/sphere-of-the-suns?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11528,
+        "iid": 9133,
+        "name": "Sphere of the Suns",
+        "handler": "manalinkeh_card_sphere_of_the_suns",
+        "kind": "card"
+      }
+    },
+    "Clockwork Beetle": {
+      "oracle": {
+        "oracle_id": "7b9ddff4-82f5-4068-8105-116b8a6180d5",
+        "name": "Clockwork Beetle",
+        "oracle_text": "This creature enters with two +1/+1 counters on it.\nWhenever this creature attacks or blocks, remove a +1/+1 counter from it at end of combat.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact Creature — Insect",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mrd/153/clockwork-beetle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6633,
+        "iid": 1805,
+        "name": "Clockwork Beetle",
+        "handler": "manalinkeh_card_clockwork_beetle",
+        "kind": "card"
+      }
+    },
+    "Coretapper": {
+      "oracle": {
+        "oracle_id": "66e37011-f3d2-41ed-8e09-7bba9464e8c3",
+        "name": "Coretapper",
+        "oracle_text": "{T}: Put a charge counter on target artifact.\nSacrifice this creature: Put two charge counters on target artifact.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/132/coretapper?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6867,
+        "iid": 1966,
+        "name": "Coretapper",
+        "handler": "manalinkeh_card_coretapper",
+        "kind": "card"
+      }
+    },
+    "Contagion Clasp": {
+      "oracle": {
+        "oracle_id": "43f2d81e-aa01-4fa9-9046-6a27a05dbd2d",
+        "name": "Contagion Clasp",
+        "oracle_text": "When this artifact enters, put a -1/-1 counter on target creature.\n{4}, {T}: Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Proliferate"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ecc/140/contagion-clasp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11225,
+        "iid": 1929,
+        "name": "Contagion Clasp",
+        "handler": "manalinkeh_card_contagion_clasp",
+        "kind": "card"
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "csvid": 15585,
+  "card": "Dimensional Infiltrator",
+  "recipes": [
+    {
+      "family": "devoid_colorless_activations",
+      "version": 2,
+      "params": {
+        "price": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          2,
+          1
+        ],
+        "effect": "exile_top",
+        "generic": 1,
+        "colorless": 1,
+        "once": false
+      },
+      "oracle_text": "Devoid (This card has no color.)\nFlash\nFlying\n{1}{C}: Target opponent exiles the top card of their library. If it's a land card, you may return this creature to its owner's hand. ({C} represents colorless mana.)",
+      "variants": [
+        "exact_0",
+        "exact_1",
+        "colored_only_0",
+        "colored_only_1",
+        "short_0",
+        "short_1",
+        "replay_0",
+        "replay_1",
+        "mixed_0",
+        "mixed_1",
+        "flash_0",
+        "flash_1",
+        "flying_0",
+        "flying_1",
+        "return_0",
+        "return_1",
+        "decline_0",
+        "decline_1",
+        "empty_library_0",
+        "empty_library_1"
+      ]
+    }
+  ]
+}

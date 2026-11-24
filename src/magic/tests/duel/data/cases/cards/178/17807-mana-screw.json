@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 17807,
+  "card": "Mana Screw",
+  "recipes": [
+    {
+      "family": "coin_flip_activated_outcomes",
+      "version": 2,
+      "params": {
+        "csvid": 17807,
+        "printed_cost": "{1}"
+      },
+      "oracle_text": "{1}: Flip a coin. If you win the flip, add {C}{C}. Activate only as an instant.",
+      "variants": [
+        "win_0",
+        "lose_0",
+        "short_0",
+        "response_win_0",
+        "colored_fee_0",
+        "payment_gate_0",
+        "win_1",
+        "lose_1",
+        "short_1",
+        "response_win_1",
+        "colored_fee_1",
+        "payment_gate_1"
+      ]
+    }
+  ]
+}

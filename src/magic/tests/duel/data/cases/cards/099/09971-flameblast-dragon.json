@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Flameblast Dragon",
+  "csvid": 9971,
+  "recipes": [
+    {
+      "family": "attack_trigger_costs_and_damage",
+      "version": 2,
+      "params": {
+        "csvid": 9971,
+        "printed_mana": "{4}{R}{R}",
+        "rules": "Flying\nWhenever this creature attacks, you may pay {X}{R}. If you do, it deals X damage to any target."
+      },
+      "oracle_text": "Flying\nWhenever this creature attacks, you may pay {X}{R}. If you do, it deals X damage to any target.",
+      "variants": [
+        "x_creature_0",
+        "x_creature_1",
+        "x_player_0",
+        "x_player_1",
+        "x_planeswalker_0",
+        "x_planeswalker_1",
+        "no_red_0",
+        "no_red_1"
+      ]
+    }
+  ]
+}

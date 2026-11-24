@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Skullmulcher",
+  "csvid": 10070,
+  "recipes": [
+    {
+      "family": "devour_entry_rewards",
+      "version": 2,
+      "params": {
+        "reward": "draw",
+        "multiplier": 1,
+        "mana": [
+          4,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "keywords": [],
+        "power": 3,
+        "toughness": 3
+      },
+      "oracle_text": "Devour 1 (As this creature enters, you may sacrifice any number of creatures. It enters with that many +1/+1 counters on it.)\nWhen this creature enters, draw a card for each creature it devoured.",
+      "variants": [
+        "none_0",
+        "paid_one_0",
+        "countered_0",
+        "wrong_color_0",
+        "snapshot_0",
+        "none_1",
+        "paid_one_1",
+        "countered_1",
+        "wrong_color_1",
+        "snapshot_1",
+        "paid_two_0",
+        "partial_0",
+        "decline_0",
+        "borrowed_meal_0"
+      ]
+    }
+  ]
+}

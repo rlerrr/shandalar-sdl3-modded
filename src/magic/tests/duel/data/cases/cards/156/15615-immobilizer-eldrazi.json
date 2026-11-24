@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Immobilizer Eldrazi",
+  "csvid": 15615,
+  "recipes": [
+    {
+      "family": "devoid_cast_payments_and_targets",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\n{2}{C}: Each creature with toughness greater than its power can't block this turn. ({C} represents colorless mana.)",
+      "params": {
+        "effect": "block",
+        "price": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "power": 2,
+        "toughness": 1
+      },
+      "variants": [
+        "wrong_base_0",
+        "tall_0",
+        "equal_0",
+        "other_attacker_0",
+        "own_defender_0",
+        "colored_only_0",
+        "short_0",
+        "expiry_0",
+        "replay_0",
+        "wrong_base_1",
+        "tall_1",
+        "equal_1",
+        "other_attacker_1",
+        "own_defender_1",
+        "colored_only_1",
+        "short_1",
+        "expiry_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

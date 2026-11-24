@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Leaf-Crowned Elder",
+  "csvid": 9377,
+  "recipes": [
+    {
+      "family": "library_kinship_upkeep",
+      "version": 2,
+      "params": {
+        "csvid": 9377,
+        "printed_mana": [
+          2,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "rules": "Kinship — At the beginning of your upkeep, you may look at the top card of your library. If it shares a creature type with this creature, you may reveal it. If you do, you may play that card without paying its mana cost."
+      },
+      "oracle_text": "Kinship — At the beginning of your upkeep, you may look at the top card of your library. If it shares a creature type with this creature, you may reveal it. If you do, you may play that card without paying its mana cost.",
+      "variants": [
+        "cast_creature_0",
+        "cast_creature_1",
+        "cast_kindred_0",
+        "cast_kindred_1",
+        "pass_after_reveal_0",
+        "pass_after_reveal_1",
+        "nonmatch_0",
+        "nonmatch_1"
+      ]
+    }
+  ]
+}

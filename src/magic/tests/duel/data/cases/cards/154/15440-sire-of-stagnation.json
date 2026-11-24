@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Sire of Stagnation",
+  "csvid": 15440,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "devoid_zone_and_spell_choices",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\nWhenever a land an opponent controls enters, that player exiles the top two cards of their library and you draw two cards.",
+      "params": {
+        "model": "land",
+        "mana": [
+          4,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "kind": "creature"
+      },
+      "variants": [
+        "opposing_land_0",
+        "opposing_land_1",
+        "own_land_0",
+        "own_land_1",
+        "opposing_nonland_0",
+        "opposing_nonland_1",
+        "opposing_short_library_0",
+        "opposing_short_library_1",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

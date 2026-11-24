@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Wolf-Skull Shaman",
+  "csvid": 9465,
+  "recipes": [
+    {
+      "family": "library_kinship_upkeep",
+      "version": 2,
+      "params": {
+        "csvid": 9465,
+        "printed_mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "rules": "Kinship — At the beginning of your upkeep, you may look at the top card of your library. If it shares a creature type with this creature, you may reveal it. If you do, create a 2/2 green Wolf creature token."
+      },
+      "oracle_text": "Kinship — At the beginning of your upkeep, you may look at the top card of your library. If it shares a creature type with this creature, you may reveal it. If you do, create a 2/2 green Wolf creature token.",
+      "variants": [
+        "create_wolf_0",
+        "create_wolf_1",
+        "nonmatch_0",
+        "nonmatch_1",
+        "decline_reveal_0"
+      ]
+    }
+  ]
+}

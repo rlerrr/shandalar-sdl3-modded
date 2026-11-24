@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Retreat to Valakut",
+  "csvid": 15415,
+  "recipes": [
+    {
+      "family": "landfall_modal_retreats",
+      "version": 2,
+      "params": {
+        "role": "valakut",
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Landfall — Whenever a land you control enters, choose one —\n• Target creature gets +2/+0 until end of turn.\n• Target creature can't block this turn.",
+      "variants": [
+        "opponent_land_0",
+        "opponent_land_1",
+        "before_source_0",
+        "before_source_1",
+        "second_denied_0",
+        "second_denied_1",
+        "replay_0",
+        "replay_1",
+        "own_pump_0",
+        "own_pump_1",
+        "foe_pump_0",
+        "foe_pump_1",
+        "no_block_0",
+        "no_block_1",
+        "block_expiry_0",
+        "block_expiry_1",
+        "other_blocks_0",
+        "other_blocks_1",
+        "no_targets_0",
+        "no_targets_1"
+      ]
+    }
+  ]
+}

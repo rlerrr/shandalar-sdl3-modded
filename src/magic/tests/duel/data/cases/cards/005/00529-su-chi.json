@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "csvid": 529,
+  "card": "Su-Chi",
+  "recipes": [
+    {
+      "family": "departure_counters_and_search",
+      "version": 2,
+      "params": {
+        "csvid": 529,
+        "printed_cost": "{4}"
+      },
+      "oracle_text": "When this creature dies, add {C}{C}{C}{C}.",
+      "variants": [
+        "dies_0",
+        "bounce_0",
+        "exile_0",
+        "dies_1",
+        "bounce_1",
+        "exile_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Trench Gorger",
+  "csvid": 11764,
+  "recipes": [
+    {
+      "family": "remaining_entry_library_and_hand",
+      "version": 2,
+      "params": {
+        "csvid": 11764,
+        "printed_mana": "{6}{U}{U}",
+        "rules": "Trample\nWhen this creature enters, you may search your library for any number of land cards, exile them, then shuffle. If you do, this creature has base power and base toughness each equal to the number of cards exiled this way."
+      },
+      "oracle_text": "Trample\nWhen this creature enters, you may search your library for any number of land cards, exile them, then shuffle. If you do, this creature has base power and base toughness each equal to the number of cards exiled this way.",
+      "variants": [
+        "two_lands_trample_0",
+        "two_lands_trample_1",
+        "decline_0",
+        "accept_zero_0",
+        "accept_zero_1"
+      ]
+    }
+  ]
+}

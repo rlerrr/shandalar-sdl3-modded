@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Spinebiter",
+  "csvid": 11689,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "infect_combat_riders",
+      "version": 2,
+      "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nYou may have this creature assign its combat damage as though it weren't blocked.",
+      "params": {
+        "rider": "bypass",
+        "mana": [
+          4,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "power": 3,
+        "toughness": 4,
+        "artifact": false
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "unblocked_0",
+        "unblocked_1",
+        "blocked_0",
+        "blocked_1",
+        "defending_0",
+        "defending_1",
+        "replay_0",
+        "replay_1",
+        "bypass_0",
+        "bypass_1",
+        "normal_0",
+        "normal_1"
+      ]
+    }
+  ]
+}

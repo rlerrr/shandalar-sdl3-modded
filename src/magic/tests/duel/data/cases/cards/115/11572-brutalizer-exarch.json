@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Brutalizer Exarch",
+  "csvid": 11572,
+  "recipes": [
+    {
+      "family": "remaining_entry_library_and_hand",
+      "version": 2,
+      "params": {
+        "csvid": 11572,
+        "printed_mana": "{5}{G}",
+        "rules": "When this creature enters, choose one —\n• Search your library for a creature card, reveal it, then shuffle and put that card on top.\n• Put target noncreature permanent on the bottom of its owner's library."
+      },
+      "oracle_text": "When this creature enters, choose one —\n• Search your library for a creature card, reveal it, then shuffle and put that card on top.\n• Put target noncreature permanent on the bottom of its owner's library.",
+      "variants": [
+        "search_auto_0",
+        "search_auto_1",
+        "search_modal_0",
+        "search_modal_1",
+        "bottom_borrowed_0",
+        "bottom_borrowed_1"
+      ]
+    }
+  ]
+}

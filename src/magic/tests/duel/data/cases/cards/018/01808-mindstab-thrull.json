@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Mindstab Thrull",
+  "csvid": 1808,
+  "recipes": [
+    {
+      "family": "blocked_discard",
+      "version": 2,
+      "params": {
+        "mana": [
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 2,
+        "blocked": false,
+        "effect": "sacrifice",
+        "keywords": []
+      },
+      "oracle_text": "Whenever this creature attacks and isn't blocked, you may sacrifice it. If you do, defending player discards three cards.",
+      "variants": [
+        "blocked_0",
+        "unblocked_0",
+        "multi_blockers_0",
+        "empty_hand_0",
+        "short_hand_0",
+        "late_blocker_bounced_0",
+        "source_blocks_0",
+        "pending_block_snapshot_0",
+        "countered_0",
+        "wrong_color_0",
+        "insufficient_mana_0",
+        "decline_0",
+        "blocked_1",
+        "unblocked_1",
+        "multi_blockers_1",
+        "empty_hand_1",
+        "short_hand_1",
+        "late_blocker_bounced_1",
+        "source_blocks_1",
+        "pending_block_snapshot_1",
+        "countered_1",
+        "wrong_color_1",
+        "insufficient_mana_1",
+        "decline_1",
+        "human_discard_high_1"
+      ]
+    }
+  ]
+}

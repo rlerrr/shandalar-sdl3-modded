@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Crypt Sliver",
+  "csvid": 6357,
+  "recipes": [
+    {
+      "family": "regeneration_land_and_grants",
+      "version": 2,
+      "params": {
+        "csvid": 6357,
+        "mana": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "All Slivers have \"{T}: Regenerate target Sliver.\"",
+      "variants": [
+        "cast_0",
+        "cast_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "sick_source_0",
+        "sick_source_1"
+      ]
+    }
+  ]
+}

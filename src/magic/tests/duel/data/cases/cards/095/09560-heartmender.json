@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Heartmender",
+  "csvid": 9560,
+  "recipes": [
+    {
+      "family": "recurrence_entry_upkeep",
+      "version": 2,
+      "params": {
+        "schema": 8,
+        "mechanism": "persist",
+        "enters_tapped": false,
+        "effect": {
+          "kind": "own_upkeep_minus1"
+        },
+        "payment_colors": [
+          "G",
+          "G"
+        ]
+      },
+      "oracle_text": "At the beginning of your upkeep, remove a -1/-1 counter from each creature you control.\nPersist (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)",
+      "variants": [
+        "entry_0",
+        "cycle_0",
+        "destroy_0",
+        "countered_0",
+        "bounce_0",
+        "excluded_counter_0",
+        "death_replay_0",
+        "cast_replay_0",
+        "zero_mana_0",
+        "real_reset_0",
+        "upkeep_scope_0",
+        "upkeep_replay_0",
+        "upkeep_empty_0",
+        "hybrid_alternate_0",
+        "hybrid_mixed_0",
+        "entry_1",
+        "cycle_1",
+        "destroy_1",
+        "countered_1",
+        "bounce_1",
+        "excluded_counter_1",
+        "death_replay_1",
+        "cast_replay_1",
+        "zero_mana_1",
+        "real_reset_1",
+        "upkeep_scope_1",
+        "upkeep_replay_1",
+        "upkeep_empty_1",
+        "hybrid_alternate_1",
+        "hybrid_mixed_1"
+      ]
+    }
+  ]
+}

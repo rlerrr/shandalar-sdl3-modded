@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Prized Unicorn",
+  "csvid": 10455,
+  "recipes": [
+    {
+      "family": "required_block_creature",
+      "version": 2,
+      "oracle_text": "All creatures able to block this creature do so.",
+      "params": {
+        "mana": [
+          3,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 2
+      },
+      "variants": [
+        "single_0",
+        "refused_0",
+        "two_eligible_0",
+        "two_reverse_0",
+        "legal_and_tapped_0",
+        "all_tapped_0",
+        "cannot_block_0",
+        "noncreature_0",
+        "second_attacker_0",
+        "reassign_0",
+        "idle_lure_0",
+        "idle_lure_block_other_0",
+        "shrouded_blocker_0",
+        "flying_unblocked_0",
+        "flying_reach_0",
+        "fresh_0",
+        "paid_next_turn_0",
+        "unfunded_0",
+        "after_block_replay_0",
+        "wrong_color_0",
+        "single_1",
+        "refused_1",
+        "two_eligible_1",
+        "two_reverse_1",
+        "legal_and_tapped_1",
+        "all_tapped_1",
+        "cannot_block_1",
+        "noncreature_1",
+        "second_attacker_1",
+        "reassign_1",
+        "idle_lure_1",
+        "idle_lure_block_other_1",
+        "shrouded_blocker_1",
+        "flying_unblocked_1",
+        "flying_reach_1",
+        "fresh_1",
+        "paid_next_turn_1",
+        "unfunded_1",
+        "after_block_replay_1",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

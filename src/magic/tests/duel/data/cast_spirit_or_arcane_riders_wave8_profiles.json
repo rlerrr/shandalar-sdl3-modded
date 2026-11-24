@@ -1,0 +1,1000 @@
+{
+  "sources": {
+    "Celestial Kirin": {
+      "registry": {
+        "csvid": 7612,
+        "iid": 1580,
+        "name": "Celestial Kirin",
+        "handler": "manalinkeh_card_celestial_kirin",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "a5f7967e-d357-4ab6-96ac-77262864f280",
+        "name": "Celestial Kirin",
+        "oracle_text": "Flying\nWhenever you cast a Spirit or Arcane spell, destroy all permanents with that spell's mana value.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Legendary Creature — Kirin Spirit",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/3/celestial-kirin?utm_source=api"
+      }
+    },
+    "Cloudhoof Kirin": {
+      "registry": {
+        "csvid": 7615,
+        "iid": 1825,
+        "name": "Cloudhoof Kirin",
+        "handler": "manalinkeh_card_cloudhoof_kirin",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "82d8732b-8246-4fbf-96aa-e192daf527f1",
+        "name": "Cloudhoof Kirin",
+        "oracle_text": "Flying\nWhenever you cast a Spirit or Arcane spell, you may have target player mill X cards, where X is that spell's mana value.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Legendary Creature — Kirin Spirit",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/31/cloudhoof-kirin?utm_source=api"
+      }
+    },
+    "Earthshaker": {
+      "registry": {
+        "csvid": 7200,
+        "iid": 2866,
+        "name": "Earthshaker",
+        "handler": "manalinkeh_card_earthshaker",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "944904a4-aab6-4ad9-96d7-6a3e47c118ca",
+        "name": "Earthshaker",
+        "oracle_text": "Whenever you cast a Spirit or Arcane spell, this creature deals 2 damage to each creature without flying.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature — Spirit",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/165/earthshaker?utm_source=api"
+      }
+    },
+    "Kodama of the South Tree": {
+      "registry": {
+        "csvid": 7285,
+        "iid": 5343,
+        "name": "Kodama of the South Tree",
+        "handler": "manalinkeh_card_kodama_of_the_south_tree",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "655ff78d-3e77-4c97-a1e2-bd6a3c65cd77",
+        "name": "Kodama of the South Tree",
+        "oracle_text": "Whenever you cast a Spirit or Arcane spell, each other creature you control gets +1/+1 and gains trample until end of turn.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Legendary Creature — Spirit",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/223/kodama-of-the-south-tree?utm_source=api"
+      }
+    },
+    "Tallowisp": {
+      "registry": {
+        "csvid": 7572,
+        "iid": 9685,
+        "name": "Tallowisp",
+        "handler": "manalinkeh_card_tallowisp",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "25187c05-ed6a-4690-b92b-89c532fdb780",
+        "name": "Tallowisp",
+        "oracle_text": "Whenever you cast a Spirit or Arcane spell, you may search your library for an Aura card with enchant creature, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Spirit",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bok/25/tallowisp?utm_source=api"
+      }
+    },
+    "Haru-Onna": {
+      "oracle": {
+        "oracle_id": "fead5048-3ce5-46d9-9c04-0a52f1554030",
+        "name": "Haru-Onna",
+        "oracle_text": "When this creature enters, draw a card.\nWhenever you cast a Spirit or Arcane spell, you may return this creature to its owner's hand.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/132/haru-onna?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7655,
+        "iid": 4392,
+        "name": "Haru-Onna",
+        "handler": "manalinkeh_card_haru_onna",
+        "kind": "card"
+      }
+    },
+    "Hikari, Twilight Guardian": {
+      "oracle": {
+        "oracle_id": "98a89d5c-871c-4da6-a502-9fdb7bdfccff",
+        "name": "Hikari, Twilight Guardian",
+        "oracle_text": "Flying\nWhenever you cast a Spirit or Arcane spell, you may exile Hikari. If you do, return it to the battlefield under its owner's control at the beginning of the next end step.",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Legendary Creature — Spirit",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm2/18/hikari-twilight-guardian?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7232,
+        "iid": 4569,
+        "name": "Hikari, Twilight Guardian",
+        "handler": "manalinkeh_card_hikari_twilight_guardian",
+        "kind": "card"
+      }
+    },
+    "Infernal Kirin": {
+      "oracle": {
+        "oracle_id": "4f07a2e6-692b-4d8c-9ecf-4d94b03706a0",
+        "name": "Infernal Kirin",
+        "oracle_text": "Flying\nWhenever you cast a Spirit or Arcane spell, target player reveals their hand and discards all cards with that spell's mana value.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Legendary Creature — Kirin Spirit",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/72/infernal-kirin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7662,
+        "iid": 4860,
+        "name": "Infernal Kirin",
+        "handler": "manalinkeh_card_infernal_kirin",
+        "kind": "card"
+      }
+    },
+    "Jade Idol": {
+      "oracle": {
+        "oracle_id": "36b4daf5-6568-402b-a4f9-fe3ffddc847c",
+        "name": "Jade Idol",
+        "oracle_text": "Whenever you cast a Spirit or Arcane spell, this artifact becomes a 4/4 Spirit artifact creature until end of turn.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/256/jade-idol?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7255,
+        "iid": 5011,
+        "name": "Jade Idol",
+        "handler": "manalinkeh_card_jade_idol",
+        "kind": "card"
+      }
+    },
+    "Kami of Fire's Roar": {
+      "oracle": {
+        "oracle_id": "c247382f-821e-4f3c-9d34-450794ce74c3",
+        "name": "Kami of Fire's Roar",
+        "oracle_text": "Whenever you cast a Spirit or Arcane spell, target creature can't block this turn.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/174/kami-of-fires-roar?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7265,
+        "iid": 5144,
+        "name": "Kami of Fire's Roar",
+        "handler": "manalinkeh_card_kami_of_fires_roar",
+        "kind": "card"
+      }
+    },
+    "Kami of the Waning Moon": {
+      "oracle": {
+        "oracle_id": "c42e3df9-b9e1-4b36-bc9d-05351f87d707",
+        "name": "Kami of the Waning Moon",
+        "oracle_text": "Flying\nWhenever you cast a Spirit or Arcane spell, target creature gains fear until end of turn. (It can't be blocked except by artifact creatures and/or black creatures.)",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Spirit",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/120/kami-of-the-waning-moon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7271,
+        "iid": 5148,
+        "name": "Kami of the Waning Moon",
+        "handler": "manalinkeh_card_kami_of_waning_moon",
+        "kind": "card"
+      }
+    },
+    "Kemuri-Onna": {
+      "oracle": {
+        "oracle_id": "54db986e-cf8a-4d2c-8ce9-13da11b11464",
+        "name": "Kemuri-Onna",
+        "oracle_text": "When this creature enters, target player discards a card.\nWhenever you cast a Spirit or Arcane spell, you may return this creature to its owner's hand.",
+        "mana_cost": "{4}{B}",
+        "type_line": "Creature — Spirit",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/76/kemuri-onna?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7676,
+        "iid": 5223,
+        "name": "Kemuri-Onna",
+        "handler": "manalinkeh_card_kemuri_onna",
+        "kind": "card"
+      }
+    },
+    "Kyoki, Sanity's Eclipse": {
+      "oracle": {
+        "oracle_id": "f5240f9a-597b-43e7-9876-74559df1354e",
+        "name": "Kyoki, Sanity's Eclipse",
+        "oracle_text": "Whenever you cast a Spirit or Arcane spell, target opponent exiles a card from their hand.",
+        "mana_cost": "{4}{B}{B}",
+        "type_line": "Legendary Creature — Demon Spirit",
+        "power": "6",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bok/72/kyoki-sanitys-eclipse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7508,
+        "iid": 5433,
+        "name": "Kyoki, Sanity's Eclipse",
+        "handler": "manalinkeh_card_kyoki_sanitys_eclipse",
+        "kind": "card"
+      }
+    },
+    "Skyfire Kirin": {
+      "oracle": {
+        "oracle_id": "169c468e-0e17-450b-8954-df47d78ad8f8",
+        "name": "Skyfire Kirin",
+        "oracle_text": "Flying\nWhenever you cast a Spirit or Arcane spell, you may gain control of target creature with that spell's mana value until end of turn.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Legendary Creature — Kirin Spirit",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/113/skyfire-kirin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7749,
+        "iid": 8861,
+        "name": "Skyfire Kirin",
+        "handler": "manalinkeh_card_skyfire_kirin",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Bronze Sable": {
+      "registry": {
+        "csvid": 13398,
+        "iid": 1360,
+        "name": "Bronze Sable",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "f27e5e11-0ad0-448b-8760-75ed1b97e7d8",
+        "name": "Bronze Sable",
+        "oracle_text": "",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Sable",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cn2/208/bronze-sable?utm_source=api"
+      }
+    },
+    "Flickering Spirit": {
+      "registry": {
+        "csvid": 8548,
+        "iid": 3520,
+        "name": "Flickering Spirit",
+        "handler": "manalinkeh_card_flickering_spirit",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "ee679e57-4f0b-4ad4-9bfd-f331f4a5fba5",
+        "name": "Flickering Spirit",
+        "oracle_text": "Flying\n{3}{W}: Exile this creature, then return it to the battlefield under its owner's control.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsp/17/flickering-spirit?utm_source=api"
+      }
+    },
+    "Forest": {
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      }
+    },
+    "Glorious Anthem": {
+      "registry": {
+        "csvid": 966,
+        "iid": 3948,
+        "name": "Glorious Anthem",
+        "handler": "manalinkeh_card_gaeas_anthem",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "e3886fe8-9b76-4613-8891-4ec74657c087",
+        "name": "Glorious Anthem",
+        "oracle_text": "Creatures you control get +1/+1.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/21/glorious-anthem?utm_source=api"
+      }
+    },
+    "Grizzly Bears": {
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      }
+    },
+    "Hill Giant": {
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      }
+    },
+    "Island": {
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      }
+    },
+    "Kami of Ancient Law": {
+      "registry": {
+        "csvid": 7264,
+        "iid": 5142,
+        "name": "Kami of Ancient Law",
+        "handler": "manalinkeh_card_kami_of_ancient_law",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "e937e0f5-ca35-4dce-9f05-8f2075731628",
+        "name": "Kami of Ancient Law",
+        "oracle_text": "Sacrifice this creature: Destroy target enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/150/kami-of-ancient-law?utm_source=api"
+      }
+    },
+    "Lava Spike": {
+      "registry": {
+        "csvid": 1290,
+        "iid": 5491,
+        "name": "Lava Spike",
+        "handler": "manalinkeh_card_lava_spike",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "2837888c-bfa8-4955-9334-0605ad409f7e",
+        "name": "Lava Spike",
+        "oracle_text": "Lava Spike deals 3 damage to target player or planeswalker.",
+        "mana_cost": "{R}",
+        "type_line": "Sorcery — Arcane",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/136/lava-spike?utm_source=api"
+      }
+    },
+    "Merfolk of the Pearl Trident": {
+      "registry": {
+        "csvid": 160,
+        "iid": 6055,
+        "name": "Merfolk of the Pearl Trident",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "218d9277-c179-4de3-9c7f-79b5a6d4fa38",
+        "name": "Merfolk of the Pearl Trident",
+        "oracle_text": "",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Merfolk",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/60/merfolk-of-the-pearl-trident?utm_source=api"
+      }
+    },
+    "Mons's Goblin Raiders": {
+      "registry": {
+        "csvid": 163,
+        "iid": 6293,
+        "name": "Mons's Goblin Raiders",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "a37159df-f6d7-4db6-85de-0ea77f425993",
+        "name": "Mons's Goblin Raiders",
+        "oracle_text": "",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/s00/32/monss-goblin-raiders?utm_source=api"
+      }
+    },
+    "Pacifism": {
+      "registry": {
+        "csvid": 968,
+        "iid": 6961,
+        "name": "Pacifism",
+        "handler": "manalinkeh_card_pacifism",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "5f5e0b10-c8cf-450c-bfd3-bcb0528ec330",
+        "name": "Pacifism",
+        "oracle_text": "Enchant creature\nEnchanted creature can't attack or block.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/575/pacifism?utm_source=api"
+      }
+    },
+    "Plains": {
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      }
+    },
+    "Reach Through Mists": {
+      "registry": {
+        "csvid": 7353,
+        "iid": 7720,
+        "name": "Reach Through Mists",
+        "handler": "manalinkeh_card_reach_through_mists",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+        "name": "Reach Through Mists",
+        "oracle_text": "Draw a card.",
+        "mana_cost": "{U}",
+        "type_line": "Instant — Arcane",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/7/reach-through-mists?utm_source=api"
+      }
+    },
+    "Spreading Seas": {
+      "registry": {
+        "csvid": 10675,
+        "iid": 9253,
+        "name": "Spreading Seas",
+        "handler": "manalinkeh_card_spreading_seas",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "af32757c-9d3c-4f6c-a6fa-d5729a440382",
+        "name": "Spreading Seas",
+        "oracle_text": "Enchant land\nWhen this Aura enters, draw a card.\nEnchanted land is an Island.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/70/spreading-seas?utm_source=api"
+      }
+    },
+    "Suntail Hawk": {
+      "registry": {
+        "csvid": 1195,
+        "iid": 9548,
+        "name": "Suntail Hawk",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+        "name": "Suntail Hawk",
+        "oracle_text": "Flying",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/40/suntail-hawk?utm_source=api"
+      }
+    },
+    "Swamp": {
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      }
+    },
+    "Think Twice": {
+      "registry": {
+        "csvid": 8702,
+        "iid": 9890,
+        "name": "Think Twice",
+        "handler": "manalinkeh_card_think_twice",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "fa85c5a2-8e83-4624-a35a-a0bbf17ecbb4",
+        "name": "Think Twice",
+        "oracle_text": "Draw a card.\nFlashback {2}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/787/think-twice?utm_source=api"
+      }
+    },
+    "Wall of Vines": {
+      "registry": {
+        "csvid": 11189,
+        "iid": 10790,
+        "name": "Wall of Vines",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "51ce0158-c9a5-4fa5-9704-46ab02f01b86",
+        "name": "Wall of Vines",
+        "oracle_text": "Defender (This creature can't attack.)\nReach (This creature can block creatures with flying.)",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Plant Wall",
+        "power": "0",
+        "toughness": "3",
+        "keywords": [
+          "Reach",
+          "Defender"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/443/wall-of-vines?utm_source=api"
+      }
+    },
+    "Leyline of Sanctity": {
+      "oracle": {
+        "oracle_id": "492e0e6c-8c27-4376-938b-f8a8b6205810",
+        "name": "Leyline of Sanctity",
+        "oracle_text": "If this card is in your opening hand, you may begin the game with it on the battlefield.\nYou have hexproof. (You can't be the target of spells or abilities your opponents control.)",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/26/leyline-of-sanctity?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11141,
+        "iid": 5551,
+        "name": "Leyline of Sanctity",
+        "handler": "manalinkeh_card_leyline_of_sanctity",
+        "kind": "card"
+      }
+    },
+    "Scathe Zombies": {
+      "oracle": {
+        "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+        "name": "Scathe Zombies",
+        "oracle_text": "",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/175/scathe-zombies?utm_source=api"
+      },
+      "registry": {
+        "csvid": 214,
+        "iid": 8302,
+        "name": "Scathe Zombies",
+        "handler": "card_scathe_zombies",
+        "kind": "card"
+      }
+    },
+    "Wall of Tanglecord": {
+      "oracle": {
+        "oracle_id": "423bebcc-8fa0-49c4-aa22-728bf51a535b",
+        "name": "Wall of Tanglecord",
+        "oracle_text": "Defender\n{G}: This creature gains reach until end of turn. (It can block creatures with flying.)",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Wall",
+        "power": "0",
+        "toughness": "6",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/222/wall-of-tanglecord?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11409,
+        "iid": 10785,
+        "name": "Wall of Tanglecord",
+        "handler": "manalinkeh_card_wall_of_tanglecord",
+        "kind": "card"
+      }
+    }
+  }
+}

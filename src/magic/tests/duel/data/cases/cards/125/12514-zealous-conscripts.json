@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Zealous Conscripts",
+  "csvid": 12514,
+  "recipes": [
+    {
+      "family": "entry_rider_control",
+      "version": 2,
+      "params": {
+        "csvid": 12514,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Haste\nWhen this creature enters, gain control of target permanent until end of turn. Untap that permanent. It gains haste until end of turn.",
+      "variants": [
+        "creature_0",
+        "creature_1",
+        "land_0",
+        "land_1",
+        "fresh_own_0",
+        "fresh_own_1",
+        "source_dies_0",
+        "source_dies_1"
+      ]
+    }
+  ]
+}

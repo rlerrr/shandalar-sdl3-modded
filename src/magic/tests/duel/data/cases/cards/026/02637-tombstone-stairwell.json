@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Tombstone Stairwell",
+  "csvid": 2637,
+  "recipes": [
+    {
+      "family": "cumulative_upkeep_phase_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 2637,
+        "cast_cost": [
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "upkeep": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Cumulative upkeep {1}{B} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nAt the beginning of each upkeep, if this enchantment is on the battlefield, each player creates a 2/2 black Zombie creature token with haste named Tombspawn for each creature card in their graveyard.\nAt the beginning of each end step and when this enchantment leaves the battlefield, destroy all tokens created with this enchantment. They can't be regenerated.",
+      "variants": [
+        "tokens_lifecycle_0",
+        "tokens_lifecycle_1",
+        "empty_graves_0",
+        "empty_graves_1",
+        "destroy_stairwell_0",
+        "destroy_stairwell_1",
+        "haste_attack_0",
+        "haste_attack_1"
+      ]
+    }
+  ]
+}

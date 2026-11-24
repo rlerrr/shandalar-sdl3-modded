@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 371,
+  "card": "Murk Dwellers",
+  "recipes": [
+    {
+      "family": "attack_follow_on_sabotage_and_poison",
+      "version": 2,
+      "params": {
+        "csvid": 371,
+        "printed_cost": "{3}{B}",
+        "keywords": []
+      },
+      "oracle_text": "Whenever this creature attacks and isn't blocked, it gets +2/+0 until end of combat.",
+      "variants": [
+        "unblocked_0",
+        "blocked_0",
+        "blocked_then_bounced_0",
+        "other_attack_0",
+        "unblocked_1",
+        "blocked_1",
+        "blocked_then_bounced_1",
+        "other_attack_1"
+      ]
+    }
+  ]
+}

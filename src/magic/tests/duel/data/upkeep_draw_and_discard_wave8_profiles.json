@@ -1,0 +1,1076 @@
+{
+  "sources": {
+    "Bottomless Pit": {
+      "oracle": {
+        "oracle_id": "91e6fb47-59e4-4616-b8dd-3a7e30070074",
+        "name": "Bottomless Pit",
+        "oracle_text": "At the beginning of each player's upkeep, that player discards a card at random.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sth/51/bottomless-pit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3341,
+        "iid": 1267,
+        "name": "Bottomless Pit",
+        "handler": "manalinkeh_card_bottomless_pit",
+        "kind": "card"
+      }
+    },
+    "Bringer of the Blue Dawn": {
+      "oracle": {
+        "oracle_id": "7d4676fa-4bfe-43b4-9241-c2a33214852a",
+        "name": "Bringer of the Blue Dawn",
+        "oracle_text": "You may pay {W}{U}{B}{R}{G} rather than pay this spell's mana cost.\nTrample\nAt the beginning of your upkeep, you may draw two cards.",
+        "mana_cost": "{7}{U}{U}",
+        "type_line": "Creature — Bringer",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "G",
+          "R",
+          "U",
+          "W"
+        ],
+        "cmc": 9.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5dn/26/bringer-of-the-blue-dawn?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7021,
+        "iid": 1347,
+        "name": "Bringer of the Blue Dawn",
+        "handler": "manalinkeh_card_bringer_of_the_blue_dawn",
+        "kind": "card"
+      }
+    },
+    "Ceta Sanctuary": {
+      "oracle": {
+        "oracle_id": "45c4e67c-e452-41c5-8baa-050819a1321f",
+        "name": "Ceta Sanctuary",
+        "oracle_text": "At the beginning of your upkeep, if you control a red or green permanent, draw a card, then discard a card. If you control a red permanent and a green permanent, instead draw two cards, then discard a card.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/apc/20/ceta-sanctuary?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5343,
+        "iid": 1617,
+        "name": "Ceta Sanctuary",
+        "handler": "manalinkeh_card_ceta_sanctuary",
+        "kind": "card"
+      }
+    },
+    "Convalescent Care": {
+      "oracle": {
+        "oracle_id": "162407d9-3e3c-440f-a7a9-22936d99fc8a",
+        "name": "Convalescent Care",
+        "oracle_text": "At the beginning of your upkeep, if you have 5 or less life, you gain 3 life and draw a card.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ons/14/convalescent-care?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6093,
+        "iid": 1943,
+        "name": "Convalescent Care",
+        "handler": "manalinkeh_card_convalescent_care",
+        "kind": "card"
+      }
+    },
+    "Cunning Lethemancer": {
+      "oracle": {
+        "oracle_id": "d696aba9-ef3e-4f81-821a-c1df51431b8a",
+        "name": "Cunning Lethemancer",
+        "oracle_text": "At the beginning of your upkeep, each player discards a card.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ala/69/cunning-lethemancer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9943,
+        "iid": 2140,
+        "name": "Cunning Lethemancer",
+        "handler": "manalinkeh_card_cunning_lethemancer",
+        "kind": "card"
+      }
+    },
+    "Ephara, God of the Polis": {
+      "oracle": {
+        "oracle_id": "5968ecb5-5728-429f-9324-0c108820ebe8",
+        "name": "Ephara, God of the Polis",
+        "oracle_text": "Indestructible\nAs long as your devotion to white and blue is less than seven, Ephara isn't a creature.\nAt the beginning of each upkeep, if you had another creature enter the battlefield under your control last turn, draw a card.",
+        "mana_cost": "{2}{W}{U}",
+        "type_line": "Legendary Enchantment Creature — God",
+        "power": "6",
+        "toughness": "5",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/145/ephara-god-of-the-polis?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13692,
+        "iid": 3081,
+        "name": "Ephara, God of the Polis",
+        "handler": "manalinkeh_card_ephara_god_of_the_polis",
+        "kind": "card"
+      }
+    },
+    "Gigapede": {
+      "oracle": {
+        "oracle_id": "9be31785-2975-424f-aada-25ee2a0bf6d8",
+        "name": "Gigapede",
+        "oracle_text": "Shroud (This creature can't be the target of spells or abilities.)\nAt the beginning of your upkeep, if this card is in your graveyard, you may discard a card. If you do, return this card to your hand.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Insect",
+        "power": "6",
+        "toughness": "1",
+        "keywords": [
+          "Shroud"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/214/gigapede?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6152,
+        "iid": 3892,
+        "name": "Gigapede",
+        "handler": "manalinkeh_card_gigapede",
+        "kind": "card"
+      }
+    },
+    "Gravestorm": {
+      "oracle": {
+        "oracle_id": "c815d510-73c9-4a8b-9947-f478a2f5297d",
+        "name": "Gravestorm",
+        "oracle_text": "At the beginning of your upkeep, target opponent may exile a card from their graveyard. If that player doesn't, you may draw a card.",
+        "mana_cost": "{B}{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ody/141/gravestorm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5573,
+        "iid": 4171,
+        "name": "Gravestorm",
+        "handler": "manalinkeh_card_gravestorm",
+        "kind": "card"
+      }
+    },
+    "Gutwrencher Oni": {
+      "oracle": {
+        "oracle_id": "73af8406-4447-41b2-9cec-1b471759f09c",
+        "name": "Gutwrencher Oni",
+        "oracle_text": "Trample\nAt the beginning of your upkeep, discard a card if you don't control an Ogre.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Creature — Demon Spirit",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/113/gutwrencher-oni?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7222,
+        "iid": 4323,
+        "name": "Gutwrencher Oni",
+        "handler": "manalinkeh_card_gutwrencher_oni",
+        "kind": "card"
+      }
+    },
+    "Mishra's War Machine": {
+      "oracle": {
+        "oracle_id": "18b1f96f-de35-4f0a-8b0e-81576471fd15",
+        "name": "Mishra's War Machine",
+        "oracle_text": "Banding (Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are blocking or being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's being blocked by or is blocking.)\nAt the beginning of your upkeep, this creature deals 3 damage to you unless you discard a card. If it deals damage to you this way, tap it.",
+        "mana_cost": "{7}",
+        "type_line": "Artifact Creature — Juggernaut",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Banding"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/4ed/337/mishras-war-machine?utm_source=api"
+      },
+      "registry": {
+        "csvid": 509,
+        "iid": 6213,
+        "name": "Mishra's War Machine",
+        "handler": "manalinkeh_card_mishras_war_machine",
+        "kind": "card"
+      }
+    },
+    "Nath of the Gilt-Leaf": {
+      "oracle": {
+        "oracle_id": "87a44a87-a2a5-4193-a163-e4846e5b8387",
+        "name": "Nath of the Gilt-Leaf",
+        "oracle_text": "At the beginning of your upkeep, you may have target opponent discard a card at random.\nWhenever an opponent discards a card, you may create a 1/1 green Elf Warrior creature token.",
+        "mana_cost": "{3}{B}{G}",
+        "type_line": "Legendary Creature — Elf Warrior",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c16/213/nath-of-the-gilt-leaf?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9219,
+        "iid": 6479,
+        "name": "Nath of the Gilt-Leaf",
+        "handler": "manalinkeh_card_nath_of_the_gilt_leaf",
+        "kind": "card"
+      }
+    },
+    "Necrogen Mists": {
+      "oracle": {
+        "oracle_id": "db25d48e-e5eb-4364-9d7a-f9757ee4ccbe",
+        "name": "Necrogen Mists",
+        "oracle_text": "At the beginning of each player's upkeep, that player discards a card.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mrd/69/necrogen-mists?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6737,
+        "iid": 6512,
+        "name": "Necrogen Mists",
+        "handler": "manalinkeh_card_necrogen_mists",
+        "kind": "card"
+      }
+    },
+    "Oath of Scholars": {
+      "oracle": {
+        "oracle_id": "da4a5129-b005-4fc6-b175-0416627881db",
+        "name": "Oath of Scholars",
+        "oracle_text": "At the beginning of each player's upkeep, that player chooses target player who has more cards in hand than they do and is their opponent. The first player may discard their hand and draw three cards.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/exo/42/oath-of-scholars?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3526,
+        "iid": 6751,
+        "name": "Oath of Scholars",
+        "handler": "manalinkeh_card_oath_of_scholars",
+        "kind": "card"
+      }
+    },
+    "Staff of Nin": {
+      "oracle": {
+        "oracle_id": "48d9f488-4ebb-4fdb-a568-6930fc2f5416",
+        "name": "Staff of Nin",
+        "oracle_text": "At the beginning of your upkeep, draw a card.\n{T}: This artifact deals 1 damage to any target.",
+        "mana_cost": "{6}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cm2/221/staff-of-nin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12623,
+        "iid": 9284,
+        "name": "Staff of Nin",
+        "handler": "manalinkeh_card_staff_of_nin",
+        "kind": "card"
+      }
+    },
+    "Triumph of Cruelty": {
+      "oracle": {
+        "oracle_id": "87e88311-dbd2-42f7-a166-138f1d271686",
+        "name": "Triumph of Cruelty",
+        "oracle_text": "At the beginning of your upkeep, target opponent discards a card if you control the creature with the greatest power or tied for the greatest power.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/122/triumph-of-cruelty?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12492,
+        "iid": 10228,
+        "name": "Triumph of Cruelty",
+        "handler": "manalinkeh_card_triumph_of_cruelty",
+        "kind": "card"
+      }
+    },
+    "Triumph of Ferocity": {
+      "oracle": {
+        "oracle_id": "eabcbaca-6df9-455a-85e5-32d6ad4d1b44",
+        "name": "Triumph of Ferocity",
+        "oracle_text": "At the beginning of your upkeep, draw a card if you control the creature with the greatest power or tied for the greatest power.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/198/triumph-of-ferocity?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12493,
+        "iid": 10229,
+        "name": "Triumph of Ferocity",
+        "handler": "manalinkeh_card_triumph_of_ferocity",
+        "kind": "card"
+      }
+    },
+    "Zedruu the Greathearted": {
+      "oracle": {
+        "oracle_id": "514179c0-a50b-4565-8e71-9dad256edd85",
+        "name": "Zedruu the Greathearted",
+        "oracle_text": "At the beginning of your upkeep, you gain X life and draw X cards, where X is the number of permanents you own that your opponents control.\n{U}{R}{W}: Target opponent gains control of target permanent you control.",
+        "mana_cost": "{1}{U}{R}{W}",
+        "type_line": "Legendary Creature — Minotaur Monk",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "R",
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "U",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c16/231/zedruu-the-greathearted?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11766,
+        "iid": 11194,
+        "name": "Zedruu the Greathearted",
+        "handler": "manalinkeh_card_zedruu_the_greathearted",
+        "kind": "card"
+      }
+    },
+    "Abzan Beastmaster": {
+      "oracle": {
+        "oracle_id": "aab463bb-e790-403b-a88d-06ef81c7302b",
+        "name": "Abzan Beastmaster",
+        "oracle_text": "At the beginning of your upkeep, draw a card if you control the creature with the greatest toughness or tied for the greatest toughness.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Dog Shaman",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frf/119/abzan-beastmaster?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14503,
+        "iid": 11240,
+        "name": "Abzan Beastmaster",
+        "handler": "manalinkeh_card_abzan_beastmaster",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Air Elemental": {
+      "oracle": {
+        "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+        "name": "Air Elemental",
+        "oracle_text": "Flying",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/44/air-elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 0,
+        "iid": 298,
+        "name": "Air Elemental",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Elf Warrior": {
+      "oracle": {
+        "oracle_id": "dac8a765-6845-4b57-bb79-4ec463436f92",
+        "name": "Elf Warrior",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Elf Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tecc/4/elf-warrior?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18732,
+        "iid": 2942,
+        "name": "Elf Warrior",
+        "handler": "manalinkeh_card_rhino_token",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Ghor-Clan Rampager": {
+      "oracle": {
+        "oracle_id": "ec7a9e7f-742b-4344-983e-73372c6a1760",
+        "name": "Ghor-Clan Rampager",
+        "oracle_text": "Trample\nBloodrush — {R}{G}, Discard this card: Target attacking creature gets +4/+4 and gains trample until end of turn.",
+        "mana_cost": "{2}{R}{G}",
+        "type_line": "Creature — Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Bloodrush",
+          "Trample"
+        ],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/198/ghor-clan-rampager?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12953,
+        "iid": 3829,
+        "name": "Ghor-Clan Rampager",
+        "handler": "manalinkeh_card_ghor_clan_rampager",
+        "kind": "card"
+      }
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mind Rot": {
+      "oracle": {
+        "oracle_id": "ad44cf74-b717-48fb-9fa2-77512024d76a",
+        "name": "Mind Rot",
+        "oracle_text": "Target player discards two cards.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/115/mind-rot?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1087,
+        "iid": 6132,
+        "name": "Mind Rot",
+        "handler": "manalinkeh_card_mind_rot",
+        "kind": "card"
+      }
+    },
+    "Mons's Goblin Raiders": {
+      "oracle": {
+        "oracle_id": "a37159df-f6d7-4db6-85de-0ea77f425993",
+        "name": "Mons's Goblin Raiders",
+        "oracle_text": "",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/s00/32/monss-goblin-raiders?utm_source=api"
+      },
+      "registry": {
+        "csvid": 163,
+        "iid": 6293,
+        "name": "Mons's Goblin Raiders",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Ogre Taskmaster": {
+      "oracle": {
+        "oracle_id": "5604f04e-fd72-41bf-906f-eb89d4a3475d",
+        "name": "Ogre Taskmaster",
+        "oracle_text": "This creature can't block.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Ogre",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/128/ogre-taskmaster?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1101,
+        "iid": 6798,
+        "name": "Ogre Taskmaster",
+        "handler": "manalinkeh_card_vampire_interloper",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Purity": {
+      "oracle": {
+        "oracle_id": "23ef92b0-2298-4e8d-bf64-46d096c84a9d",
+        "name": "Purity",
+        "oracle_text": "Flying\nIf noncombat damage would be dealt to you, prevent that damage. You gain life equal to the damage prevented this way.\nWhen Purity is put into a graveyard from anywhere, shuffle it into its owner's library.",
+        "mana_cost": "{3}{W}{W}{W}",
+        "type_line": "Creature — Elemental Incarnation",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/37/purity?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9241,
+        "iid": 7490,
+        "name": "Purity",
+        "handler": "manalinkeh_card_purity",
+        "kind": "card"
+      }
+    },
+    "Spellbook": {
+      "oracle": {
+        "oracle_id": "83133f51-bfbd-4db5-9be0-f660e3b66435",
+        "name": "Spellbook",
+        "oracle_text": "You have no maximum hand size.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact — Book",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/220/spellbook?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1154,
+        "iid": 9121,
+        "name": "Spellbook",
+        "handler": "manalinkeh_card_spellbook",
+        "kind": "card"
+      }
+    },
+    "Suntail Hawk": {
+      "oracle": {
+        "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+        "name": "Suntail Hawk",
+        "oracle_text": "Flying",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/40/suntail-hawk?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1195,
+        "iid": 9548,
+        "name": "Suntail Hawk",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "White Knight": {
+      "oracle": {
+        "oracle_id": "ddb021df-ae4a-4ac1-8353-d0b375761714",
+        "name": "White Knight",
+        "oracle_text": "First strike (This creature deals combat damage before creatures without first strike.)\nProtection from black (This creature can't be blocked, targeted, dealt damage, or enchanted by anything black.)",
+        "mana_cost": "{W}{W}",
+        "type_line": "Creature — Human Knight",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "First strike",
+          "Protection"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddg/9/white-knight?utm_source=api"
+      },
+      "registry": {
+        "csvid": 283,
+        "iid": 10939,
+        "name": "White Knight",
+        "handler": "manalinkeh_card_white_knight",
+        "kind": "card"
+      }
+    },
+    "Wrath of God": {
+      "oracle": {
+        "oracle_id": "34515b16-c9a4-4f98-8c77-416a7a523407",
+        "name": "Wrath of God",
+        "oracle_text": "Destroy all creatures. They can't be regenerated.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/70/wrath-of-god?utm_source=api"
+      },
+      "registry": {
+        "csvid": 290,
+        "iid": 11121,
+        "name": "Wrath of God",
+        "handler": "manalinkeh_card_wrath_of_god",
+        "kind": "card"
+      }
+    }
+  }
+}

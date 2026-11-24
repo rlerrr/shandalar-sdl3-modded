@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Sanitarium Skeleton",
+  "csvid": 15941,
+  "recipes": [
+    {
+      "family": "activated_graveyard_returns_to_hand",
+      "version": 2,
+      "oracle_text": "{2}{B}: Return this card from your graveyard to your hand.",
+      "params": {
+        "model": "skeleton",
+        "fee": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "printed": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "paid_0",
+        "opponent_turn_0",
+        "replay_0",
+        "short_0",
+        "wrong_color_0",
+        "recast_0",
+        "paid_1",
+        "opponent_turn_1",
+        "replay_1",
+        "short_1",
+        "wrong_color_1",
+        "recast_1"
+      ]
+    }
+  ]
+}

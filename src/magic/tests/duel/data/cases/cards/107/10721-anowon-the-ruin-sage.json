@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 10721,
+  "card": "Anowon, the Ruin Sage",
+  "recipes": [
+    {
+      "family": "upkeep_payment_and_sacrifice",
+      "version": 2,
+      "params": {
+        "csvid": 10721,
+        "printed_cost": "{3}{B}{B}",
+        "keywords": []
+      },
+      "oracle_text": "At the beginning of your upkeep, each player sacrifices a non-Vampire creature of their choice.",
+      "variants": [
+        "both_sacrifice_0",
+        "both_sacrifice_1",
+        "one_ineligible_0",
+        "one_ineligible_1",
+        "vampires_only_0",
+        "vampires_only_1"
+      ]
+    }
+  ]
+}

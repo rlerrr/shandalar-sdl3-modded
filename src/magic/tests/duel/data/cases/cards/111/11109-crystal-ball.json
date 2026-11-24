@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "card": "Crystal Ball",
+  "csvid": 11109,
+  "recipes": [
+    {
+      "family": "library_scry_activated_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 11109,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{1}, {T}: Scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+      "variants": [
+        "choose_one_0",
+        "choose_one_1",
+        "bottom_both_0",
+        "bottom_both_1",
+        "keep_0",
+        "keep_1",
+        "one_card_0",
+        "one_card_1",
+        "empty_0",
+        "empty_1",
+        "short_mana_0",
+        "short_mana_1",
+        "tapped_0",
+        "tapped_1",
+        "removed_pending_0",
+        "removed_pending_1",
+        "reorder_0"
+      ]
+    }
+  ]
+}

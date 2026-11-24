@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 10695,
+  "card": "Turntimber Basilisk",
+  "recipes": [
+    {
+      "family": "landfall_combat_and_animation",
+      "version": 2,
+      "oracle_text": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\nLandfall — Whenever a land you control enters, you may have target creature block this creature this turn if able.",
+      "params": {
+        "effect": "lure"
+      },
+      "variants": [
+        "opponent_land_0",
+        "cleanup_0",
+        "forced_block_0",
+        "tapped_target_0",
+        "before_land_0",
+        "expired_block_0",
+        "opponent_land_1",
+        "cleanup_1",
+        "forced_block_1",
+        "tapped_target_1",
+        "before_land_1",
+        "expired_block_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

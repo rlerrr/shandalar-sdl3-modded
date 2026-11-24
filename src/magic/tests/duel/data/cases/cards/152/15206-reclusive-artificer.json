@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 15206,
+  "card": "Reclusive Artificer",
+  "recipes": [
+    {
+      "family": "entry_rider_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 15206,
+        "printed_cost": "{2}{U}{R}",
+        "keywords": [
+          "Haste"
+        ]
+      },
+      "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)\nWhen this creature enters, you may have it deal damage to target creature equal to the number of artifacts you control.",
+      "variants": [
+        "three_types_0",
+        "own_target_0",
+        "foe_only_0",
+        "decline_0",
+        "fresh_attack_0",
+        "three_types_1",
+        "own_target_1",
+        "foe_only_1",
+        "decline_1",
+        "fresh_attack_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Trepanation Blade",
+  "csvid": 12104,
+  "recipes": [
+    {
+      "family": "equipment_combat_attack_land_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 12104,
+        "spell_fee": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "equip_fee": 2,
+        "static_bonus": [
+          0,
+          0
+        ],
+        "rules": "Whenever equipped creature attacks, defending player reveals cards from the top of their library until they reveal a land card. The creature gets +1/+0 until end of turn for each card revealed this way. That player puts the revealed cards into their graveyard.\nEquip {2}"
+      },
+      "oracle_text": "Whenever equipped creature attacks, defending player reveals cards from the top of their library until they reveal a land card. The creature gets +1/+0 until end of turn for each card revealed this way. That player puts the revealed cards into their graveyard.\nEquip {2}",
+      "variants": [
+        "deep_land_0",
+        "deep_land_1",
+        "first_land_0",
+        "first_land_1",
+        "no_land_0",
+        "no_land_1",
+        "empty_0",
+        "empty_1"
+      ]
+    }
+  ]
+}

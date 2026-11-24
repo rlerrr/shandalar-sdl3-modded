@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Symbiotic Deployment",
+  "csvid": 5443,
+  "recipes": [
+    {
+      "family": "draw_step_skip_and_trigger",
+      "version": 2,
+      "params": {
+        "csvid": 5443,
+        "casting_cost": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "clauses": [
+          "Skip your draw step.",
+          "{1}, Tap two untapped creatures you control: Draw a card."
+        ]
+      },
+      "oracle_text": "Skip your draw step.\n{1}, Tap two untapped creatures you control: Draw a card.",
+      "variants": [
+        "activation_0",
+        "activation_1",
+        "one_creature_0",
+        "one_creature_1",
+        "fresh_payment_0",
+        "fresh_payment_1"
+      ]
+    }
+  ]
+}

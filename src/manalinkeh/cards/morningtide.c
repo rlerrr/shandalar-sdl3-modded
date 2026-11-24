@@ -127,7 +127,7 @@ static int kinship(int player, int card, event_t event){
 	if( event == EVENT_UPKEEP_TRIGGER_ABILITY ){
 		int *deck = deck_ptr[player];
 		if( deck[0] != -1 ){
-			if( shares_creature_subtype(-1, deck[0], player, card) ){
+			if( shares_creature_subtype_by_iid(player, card, player, deck[0]) ){
 				if (reveal_card_optional_iid(player, card, deck[0], NULL)){
 					return 1;
 				}

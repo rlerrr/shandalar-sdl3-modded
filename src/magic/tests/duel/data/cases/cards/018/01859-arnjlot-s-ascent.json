@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Arnjlot's Ascent",
+  "csvid": 1859,
+  "recipes": [
+    {
+      "family": "cumulative_upkeep_combat_and_auras",
+      "version": 2,
+      "params": {
+        "csvid": 1859,
+        "mana": [
+          1,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "upkeep": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Cumulative upkeep {U} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\n{1}: Target creature gains flying until end of turn.",
+      "variants": [
+        "paid_one_0",
+        "paid_one_1",
+        "paid_two_0",
+        "paid_two_1",
+        "decline_two_0",
+        "decline_two_1",
+        "flight_expires_0",
+        "flight_expires_1"
+      ]
+    }
+  ]
+}

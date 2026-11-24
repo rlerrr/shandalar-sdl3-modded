@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 9289,
+  "card": "Thundercloud Shaman",
+  "recipes": [
+    {
+      "family": "entry_rider_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 9289,
+        "printed_cost": "{3}{R}{R}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, it deals damage equal to the number of Giants you control to each non-Giant creature.",
+      "variants": [
+        "self_count_0",
+        "two_giants_0",
+        "lethal_0",
+        "self_count_1",
+        "two_giants_1",
+        "lethal_1"
+      ]
+    }
+  ]
+}

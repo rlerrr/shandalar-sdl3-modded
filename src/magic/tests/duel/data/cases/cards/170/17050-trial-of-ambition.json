@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 17050,
+  "card": "Trial of Ambition",
+  "recipes": [
+    {
+      "family": "entry_follow_on_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 17050,
+        "printed_cost": "{1}{B}",
+        "keywords": []
+      },
+      "oracle_text": "When this enchantment enters, target opponent sacrifices a creature of their choice.\nWhen a Cartouche you control enters, return this enchantment to its owner's hand.",
+      "variants": [
+        "choose_0",
+        "indestructible_0",
+        "no_creatures_0",
+        "own_cartouche_0",
+        "foe_cartouche_0",
+        "owner_return_0",
+        "choose_1",
+        "indestructible_1",
+        "no_creatures_1",
+        "own_cartouche_1",
+        "foe_cartouche_1",
+        "owner_return_1"
+      ]
+    }
+  ]
+}

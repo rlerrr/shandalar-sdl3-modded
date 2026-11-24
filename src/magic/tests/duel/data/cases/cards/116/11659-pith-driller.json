@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 11659,
+  "card": "Pith Driller",
+  "recipes": [
+    {
+      "family": "entry_follow_on_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 11659,
+        "printed_cost": "{4}{B/P}"
+      },
+      "oracle_text": "({B/P} can be paid with either {B} or 2 life.)\nWhen this creature enters, put a -1/-1 counter on target creature.",
+      "variants": [
+        "black_0",
+        "life_0",
+        "own_0",
+        "self_0",
+        "countered_0",
+        "black_1",
+        "life_1",
+        "own_1",
+        "self_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

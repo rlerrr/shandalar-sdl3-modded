@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 1132,
+  "card": "Rhox",
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_self_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 1132,
+        "printed_cost": "{4}{G}{G}"
+      },
+      "oracle_text": "You may have this creature assign its combat damage as though it weren't blocked.\n{2}{G}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "variants": [
+        "regenerate_0",
+        "short_0",
+        "terminate_0",
+        "proactive_0",
+        "normal_0",
+        "bypass_0",
+        "unblocked_0",
+        "regenerate_1",
+        "short_1",
+        "terminate_1",
+        "proactive_1",
+        "normal_1",
+        "bypass_1",
+        "unblocked_1"
+      ]
+    }
+  ]
+}

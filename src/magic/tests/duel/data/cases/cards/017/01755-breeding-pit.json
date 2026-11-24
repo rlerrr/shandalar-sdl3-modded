@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 1755,
+  "card": "Breeding Pit",
+  "recipes": [
+    {
+      "family": "upkeep_payment_and_sacrifice",
+      "version": 2,
+      "params": {
+        "csvid": 1755,
+        "printed_cost": "{3}{B}",
+        "keywords": []
+      },
+      "oracle_text": "At the beginning of your upkeep, sacrifice this enchantment unless you pay {B}{B}.\nAt the beginning of your end step, create a 0/1 black Thrull creature token.",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "short_0",
+        "short_1",
+        "decline_0",
+        "decline_1"
+      ]
+    }
+  ]
+}

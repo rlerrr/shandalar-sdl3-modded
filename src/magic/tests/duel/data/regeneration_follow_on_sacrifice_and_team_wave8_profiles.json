@@ -1,0 +1,805 @@
+{
+  "sources": {
+    "Full Moon's Rise": {
+      "oracle": {
+        "oracle_id": "3aef097b-711a-4463-a59c-831e4dd5e69a",
+        "name": "Full Moon's Rise",
+        "oracle_text": "Werewolf creatures you control get +1/+0 and have trample.\nSacrifice this enchantment: Regenerate all Werewolf creatures you control.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/isd/180/full-moons-rise?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11952,
+        "iid": 3671,
+        "name": "Full Moon's Rise",
+        "handler": "manalinkeh_card_full_moons_rise",
+        "kind": "card"
+      }
+    },
+    "Loxodon Hierarch": {
+      "oracle": {
+        "oracle_id": "2df404eb-fbfb-4902-b52b-71225b898dd4",
+        "name": "Loxodon Hierarch",
+        "oracle_text": "When this creature enters, you gain 4 life.\n{G}{W}, Sacrifice this creature: Regenerate each creature you control.",
+        "mana_cost": "{2}{G}{W}",
+        "type_line": "Creature — Elephant Cleric",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddh/15/loxodon-hierarch?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1368,
+        "iid": 5715,
+        "name": "Loxodon Hierarch",
+        "handler": "manalinkeh_card_loxodon_hierarch",
+        "kind": "card"
+      }
+    },
+    "Molting Skin": {
+      "oracle": {
+        "oracle_id": "8262dbb3-7abb-4de8-9a1d-edee71906a10",
+        "name": "Molting Skin",
+        "oracle_text": "Return this enchantment to its owner's hand: Regenerate target creature.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/138/molting-skin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7697,
+        "iid": 6277,
+        "name": "Molting Skin",
+        "handler": "manalinkeh_card_molting_skin",
+        "kind": "card"
+      }
+    },
+    "Welding Jar": {
+      "oracle": {
+        "oracle_id": "e4a6c421-bef1-4360-a2dc-ae9c61d86b2f",
+        "name": "Welding Jar",
+        "oracle_text": "Sacrifice this artifact: Regenerate target artifact.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/307/welding-jar?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6836,
+        "iid": 10899,
+        "name": "Welding Jar",
+        "handler": "manalinkeh_card_welding_jar",
+        "kind": "card"
+      }
+    },
+    "Fanatical Devotion": {
+      "oracle": {
+        "oracle_id": "34e56412-4649-481d-be51-357b331d0b75",
+        "name": "Fanatical Devotion",
+        "oracle_text": "Sacrifice a creature: Regenerate target creature.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nem/8/fanatical-devotion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4689,
+        "iid": 3279,
+        "name": "Fanatical Devotion",
+        "handler": "manalinkeh_card_fanatical_devotion",
+        "kind": "card"
+      }
+    },
+    "Gore Vassal": {
+      "oracle": {
+        "oracle_id": "e4f44a37-1e66-4f60-9af2-1e67ba58445b",
+        "name": "Gore Vassal",
+        "oracle_text": "Sacrifice this creature: Put a -1/-1 counter on target creature. Then if that creature's toughness is 1 or greater, regenerate it.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Phyrexian Dog",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbs/7/gore-vassal?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11453,
+        "iid": 4117,
+        "name": "Gore Vassal",
+        "handler": "manalinkeh_card_gore_vassal",
+        "kind": "card"
+      }
+    },
+    "Horror of Horrors": {
+      "oracle": {
+        "oracle_id": "b2e1a1c4-9147-4dfc-b202-c3d3f9c2d3dc",
+        "name": "Horror of Horrors",
+        "oracle_text": "Sacrifice a Swamp: Regenerate target black creature. (The next time that creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Heal",
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/140/horror-of-horrors?utm_source=api"
+      },
+      "registry": {
+        "csvid": 675,
+        "iid": 4665,
+        "name": "Horror of Horrors",
+        "handler": "manalinkeh_card_horror_of_horrors",
+        "kind": "card"
+      }
+    },
+    "Pteron Ghost": {
+      "oracle": {
+        "oracle_id": "783c48b8-a760-4334-ac70-557af7802f33",
+        "name": "Pteron Ghost",
+        "oracle_text": "Flying\nSacrifice this creature: Regenerate target artifact.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Dinosaur Spirit",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Regenerate"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dst/10/pteron-ghost?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6933,
+        "iid": 7456,
+        "name": "Pteron Ghost",
+        "handler": "manalinkeh_card_pteron_ghost",
+        "kind": "card"
+      }
+    },
+    "Vigilant Martyr": {
+      "oracle": {
+        "oracle_id": "122dfe9f-e0e2-4f69-9637-289c956fd54a",
+        "name": "Vigilant Martyr",
+        "oracle_text": "Sacrifice this creature: Regenerate target creature.\n{W}{W}, {T}, Sacrifice this creature: Counter target spell that targets an enchantment.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/45/vigilant-martyr?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2651,
+        "iid": 10587,
+        "name": "Vigilant Martyr",
+        "handler": "manalinkeh_card_vigilant_martyr",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Day of Judgment": {
+      "oracle": {
+        "oracle_id": "d057289d-5e28-43d5-8ff3-4a1bc723477d",
+        "name": "Day of Judgment",
+        "oracle_text": "Destroy all creatures.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/140/day-of-judgment?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10527,
+        "iid": 2294,
+        "name": "Day of Judgment",
+        "handler": "manalinkeh_card_day_of_judgment",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Grizzled Outcasts": {
+      "oracle": {
+        "oracle_id": "abcfcc71-77c0-46e7-93c3-726967946b12",
+        "name": "Grizzled Outcasts // Krallenhorde Wantons",
+        "type_line": "Creature — Human Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/isd/185/grizzled-outcasts-krallenhorde-wantons?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Grizzled Outcasts",
+            "mana_cost": "{4}{G}",
+            "type_line": "Creature — Human Werewolf",
+            "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "G"
+            ],
+            "power": "4",
+            "toughness": "4",
+            "flavor_text": "Seen as unsavory, the hunters were never allowed in town—until one night they vanished.",
+            "artist": "Randy Gallegos",
+            "artist_id": "a5048cc7-438a-4378-98e4-da99b78e1db0",
+            "illustration_id": "b6996fb1-58ed-4004-9d98-766f9e1febc8",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.jpg?1783940923",
+              "normal": "https://cards.scryfall.io/normal/front/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.jpg?1783940923",
+              "large": "https://cards.scryfall.io/large/front/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.jpg?1783940923",
+              "png": "https://cards.scryfall.io/png/front/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.png?1783940923",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.jpg?1783940923",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.jpg?1783940923",
+              "thumb": "https://cards.scryfall.io/thumb/front/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.webp?1783940923",
+              "grid": "https://cards.scryfall.io/grid/front/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.webp?1783940923",
+              "display": "https://cards.scryfall.io/display/front/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.webp?1783940923",
+              "art": "https://cards.scryfall.io/art/front/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.webp?1783940923",
+              "crop": "https://cards.scryfall.io/crop/front/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.webp?1783940923"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Krallenhorde Wantons",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "G"
+            ],
+            "color_indicator": [
+              "G"
+            ],
+            "power": "7",
+            "toughness": "7",
+            "flavor_text": "The boot prints became paw prints, and they led right back into town.",
+            "artist": "Randy Gallegos",
+            "artist_id": "a5048cc7-438a-4378-98e4-da99b78e1db0",
+            "illustration_id": "18e030c2-6e5e-4391-ba2e-a20535a84cf4",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.jpg?1783940923",
+              "normal": "https://cards.scryfall.io/normal/back/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.jpg?1783940923",
+              "large": "https://cards.scryfall.io/large/back/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.jpg?1783940923",
+              "png": "https://cards.scryfall.io/png/back/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.png?1783940923",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.jpg?1783940923",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.jpg?1783940923",
+              "thumb": "https://cards.scryfall.io/thumb/back/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.webp?1783940923",
+              "grid": "https://cards.scryfall.io/grid/back/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.webp?1783940923",
+              "display": "https://cards.scryfall.io/display/back/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.webp?1783940923",
+              "art": "https://cards.scryfall.io/art/back/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.webp?1783940923",
+              "crop": "https://cards.scryfall.io/crop/back/4/b/4b43b0cb-a5a3-47b4-9b6b-9d2638222bb6.webp?1783940923"
+            }
+          }
+        ],
+        "engine_face": "Grizzled Outcasts",
+        "selected_face": {
+          "name": "Grizzled Outcasts",
+          "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+          "mana_cost": "{4}{G}",
+          "type_line": "Creature — Human Werewolf",
+          "power": "4",
+          "toughness": "4",
+          "colors": [
+            "G"
+          ]
+        }
+      },
+      "registry": {
+        "csvid": 11975,
+        "iid": 4258,
+        "name": "Grizzled Outcasts",
+        "handler": "manalinkeh_card_gastaf_shepherd",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Rites of Flourishing": {
+      "oracle": {
+        "oracle_id": "7080fb43-5d93-41f5-87d3-bc1801805ea0",
+        "name": "Rites of Flourishing",
+        "oracle_text": "At the beginning of each player's draw step, that player draws an additional card.\nEach player may play an additional land on each of their turns.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/znc/80/rites-of-flourishing?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9004,
+        "iid": 8002,
+        "name": "Rites of Flourishing",
+        "handler": "manalinkeh_card_rites_of_flourishing",
+        "kind": "card"
+      }
+    },
+    "Royal Assassin": {
+      "oracle": {
+        "oracle_id": "9ed6f28f-a3db-48c5-9ab0-b90a7fba5f57",
+        "name": "Royal Assassin",
+        "oracle_text": "{T}: Destroy target tapped creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Human Assassin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/101/royal-assassin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 209,
+        "iid": 8088,
+        "name": "Royal Assassin",
+        "handler": "manalinkeh_card_royal_assassin",
+        "kind": "card"
+      }
+    },
+    "Serra Angel": {
+      "oracle": {
+        "oracle_id": "4b7ac066-e5c7-43e6-9e7e-2739b24a905d",
+        "name": "Serra Angel",
+        "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/740/serra-angel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 221,
+        "iid": 8519,
+        "name": "Serra Angel",
+        "handler": "manalinkeh_card_serra_angel",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Terminate": {
+      "oracle": {
+        "oracle_id": "6257c2fd-005f-41e3-8a72-af76df1eb134",
+        "name": "Terminate",
+        "oracle_text": "Destroy target creature. It can't be regenerated.",
+        "mana_cost": "{B}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/189/terminate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1471,
+        "iid": 9812,
+        "name": "Terminate",
+        "handler": "manalinkeh_card_terminate",
+        "kind": "card"
+      }
+    },
+    "Tormented Pariah": {
+      "oracle": {
+        "oracle_id": "bbcc2d2d-b29c-410f-bee7-5ef1609a5b32",
+        "name": "Tormented Pariah // Rampaging Werewolf",
+        "type_line": "Creature — Human Warrior Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/isd/165/tormented-pariah-rampaging-werewolf?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Tormented Pariah",
+            "mana_cost": "{3}{R}",
+            "type_line": "Creature — Human Warrior Werewolf",
+            "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "R"
+            ],
+            "power": "3",
+            "toughness": "2",
+            "flavor_text": "\"Hey lads, the moon's rising. All the better to watch him beg for mercy.\"",
+            "artist": "Bud Cook",
+            "artist_id": "4c3be2d4-73e6-4005-b897-8ac65b9c8660",
+            "illustration_id": "babd129b-01e3-4384-8bbb-e7a7d2a269d0",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/6/1/6151cae7-92a4-4891-a952-21def412d3e4.jpg?1783940934",
+              "normal": "https://cards.scryfall.io/normal/front/6/1/6151cae7-92a4-4891-a952-21def412d3e4.jpg?1783940934",
+              "large": "https://cards.scryfall.io/large/front/6/1/6151cae7-92a4-4891-a952-21def412d3e4.jpg?1783940934",
+              "png": "https://cards.scryfall.io/png/front/6/1/6151cae7-92a4-4891-a952-21def412d3e4.png?1783940934",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/6/1/6151cae7-92a4-4891-a952-21def412d3e4.jpg?1783940934",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/6/1/6151cae7-92a4-4891-a952-21def412d3e4.jpg?1783940934",
+              "thumb": "https://cards.scryfall.io/thumb/front/6/1/6151cae7-92a4-4891-a952-21def412d3e4.webp?1783940934",
+              "grid": "https://cards.scryfall.io/grid/front/6/1/6151cae7-92a4-4891-a952-21def412d3e4.webp?1783940934",
+              "display": "https://cards.scryfall.io/display/front/6/1/6151cae7-92a4-4891-a952-21def412d3e4.webp?1783940934",
+              "art": "https://cards.scryfall.io/art/front/6/1/6151cae7-92a4-4891-a952-21def412d3e4.webp?1783940934",
+              "crop": "https://cards.scryfall.io/crop/front/6/1/6151cae7-92a4-4891-a952-21def412d3e4.webp?1783940934"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Rampaging Werewolf",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "R"
+            ],
+            "color_indicator": [
+              "R"
+            ],
+            "power": "6",
+            "toughness": "4",
+            "flavor_text": "\"Just look at him, groveling on all fours! What a pathetic—uh-oh.\"",
+            "artist": "Bud Cook",
+            "artist_id": "4c3be2d4-73e6-4005-b897-8ac65b9c8660",
+            "illustration_id": "4d872d6d-fb0b-4e89-84bf-f2a5abdfdf8c",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/6/1/6151cae7-92a4-4891-a952-21def412d3e4.jpg?1783940934",
+              "normal": "https://cards.scryfall.io/normal/back/6/1/6151cae7-92a4-4891-a952-21def412d3e4.jpg?1783940934",
+              "large": "https://cards.scryfall.io/large/back/6/1/6151cae7-92a4-4891-a952-21def412d3e4.jpg?1783940934",
+              "png": "https://cards.scryfall.io/png/back/6/1/6151cae7-92a4-4891-a952-21def412d3e4.png?1783940934",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/6/1/6151cae7-92a4-4891-a952-21def412d3e4.jpg?1783940934",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/6/1/6151cae7-92a4-4891-a952-21def412d3e4.jpg?1783940934",
+              "thumb": "https://cards.scryfall.io/thumb/back/6/1/6151cae7-92a4-4891-a952-21def412d3e4.webp?1783940934",
+              "grid": "https://cards.scryfall.io/grid/back/6/1/6151cae7-92a4-4891-a952-21def412d3e4.webp?1783940934",
+              "display": "https://cards.scryfall.io/display/back/6/1/6151cae7-92a4-4891-a952-21def412d3e4.webp?1783940934",
+              "art": "https://cards.scryfall.io/art/back/6/1/6151cae7-92a4-4891-a952-21def412d3e4.webp?1783940934",
+              "crop": "https://cards.scryfall.io/crop/back/6/1/6151cae7-92a4-4891-a952-21def412d3e4.webp?1783940934"
+            }
+          }
+        ],
+        "engine_face": "Tormented Pariah",
+        "selected_face": {
+          "name": "Tormented Pariah",
+          "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+          "mana_cost": "{3}{R}",
+          "type_line": "Creature — Human Warrior Werewolf",
+          "power": "3",
+          "toughness": "2",
+          "colors": [
+            "R"
+          ]
+        }
+      },
+      "registry": {
+        "csvid": 12098,
+        "iid": 10088,
+        "name": "Tormented Pariah",
+        "handler": "manalinkeh_card_gastaf_shepherd",
+        "kind": "card"
+      }
+    },
+    "Traveler's Amulet": {
+      "oracle": {
+        "oracle_id": "48b561dd-f23d-409a-87c8-e49902b2477b",
+        "name": "Traveler's Amulet",
+        "oracle_text": "{1}, Sacrifice this artifact: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/273/travelers-amulet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12102,
+        "iid": 10166,
+        "name": "Traveler's Amulet",
+        "handler": "manalinkeh_card_travelers_amulet",
+        "kind": "card"
+      }
+    },
+    "Yotian Soldier": {
+      "oracle": {
+        "oracle_id": "645571f1-a775-4834-8b79-8852d38c9587",
+        "name": "Yotian Soldier",
+        "oracle_text": "Vigilance",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Soldier",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Vigilance"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bbd/249/yotian-soldier?utm_source=api"
+      },
+      "registry": {
+        "csvid": 550,
+        "iid": 11183,
+        "name": "Yotian Soldier",
+        "handler": "manalinkeh_card_serra_angel",
+        "kind": "card"
+      }
+    }
+  }
+}

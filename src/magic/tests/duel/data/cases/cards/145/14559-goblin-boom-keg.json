@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 14559,
+  "card": "Goblin Boom Keg",
+  "recipes": [
+    {
+      "family": "departure_damage_and_removal",
+      "version": 2,
+      "params": {
+        "csvid": 14559,
+        "printed_cost": "{4}",
+        "keywords": []
+      },
+      "oracle_text": "At the beginning of your upkeep, sacrifice this artifact.\nWhen this artifact is put into a graveyard from the battlefield, it deals 3 damage to any target.",
+      "variants": [
+        "own_upkeep_0",
+        "destroyed_0",
+        "walker_0",
+        "own_player_0",
+        "bounce_0",
+        "exile_0",
+        "own_upkeep_1",
+        "destroyed_1",
+        "walker_1",
+        "own_player_1",
+        "bounce_1",
+        "exile_1"
+      ]
+    }
+  ]
+}

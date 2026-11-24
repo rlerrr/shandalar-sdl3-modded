@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Knightly Valor",
+  "csvid": 12762,
+  "recipes": [
+    {
+      "family": "entry_trigger_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 12762,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Enchant creature\nWhen this Aura enters, create a 2/2 white Knight creature token with vigilance. (Attacking doesn't cause it to tap.)\nEnchanted creature gets +2/+2 and has vigilance.",
+      "variants": [
+        "vigilance_0",
+        "vigilance_1",
+        "foreign_host_0",
+        "foreign_host_1",
+        "removed_0",
+        "removed_1"
+      ]
+    }
+  ]
+}

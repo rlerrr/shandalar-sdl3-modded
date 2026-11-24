@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Seasoned Marshal",
+  "csvid": 1141,
+  "recipes": [
+    {
+      "family": "attack_tap_creatures",
+      "version": 2,
+      "oracle_text": "Whenever this creature attacks, you may tap target creature.",
+      "params": {
+        "mana": "{2}{W}{W}",
+        "flying": false,
+        "target_type": "creature",
+        "target_controller": "any",
+        "optional": true,
+        "power": 2,
+        "toughness": 2
+      },
+      "variants": [
+        "foe_tap_0",
+        "own_target_0",
+        "self_target_0",
+        "already_tapped_0",
+        "decline_trigger_0",
+        "decline_target_0",
+        "one_of_two_0",
+        "target_type_0",
+        "tapped_denied_0",
+        "fresh_cast_denied_0",
+        "other_attacks_0",
+        "repeat_turns_0",
+        "two_sources_0",
+        "snapshot_0",
+        "foe_tap_1",
+        "own_target_1",
+        "self_target_1",
+        "already_tapped_1",
+        "decline_target_1",
+        "one_of_two_1",
+        "target_type_1",
+        "tapped_denied_1",
+        "fresh_cast_denied_1",
+        "other_attacks_1",
+        "repeat_turns_1",
+        "two_sources_1",
+        "snapshot_1"
+      ]
+    }
+  ]
+}

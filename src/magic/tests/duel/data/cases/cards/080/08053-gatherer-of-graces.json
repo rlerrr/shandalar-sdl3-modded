@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Gatherer of Graces",
+  "csvid": 8053,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_sacrifice_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 8053,
+        "cost": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "This creature gets +1/+1 for each Aura attached to it.\nSacrifice an Aura: Regenerate this creature.",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "denied_cost_0",
+        "denied_cost_1",
+        "proactive_0",
+        "proactive_1",
+        "cannot_regenerate_0",
+        "cannot_regenerate_1",
+        "other_attachment_0",
+        "other_attachment_1",
+        "two_attachments_0",
+        "two_attachments_1"
+      ]
+    }
+  ]
+}

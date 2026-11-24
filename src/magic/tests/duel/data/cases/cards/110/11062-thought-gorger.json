@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Thought Gorger",
+  "csvid": 11062,
+  "recipes": [
+    {
+      "family": "entry_interaction_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 11062,
+        "printed_mana": "{2}{B}{B}",
+        "rules": "Trample\nWhen this creature enters, put a +1/+1 counter on it for each card in your hand. If you do, discard your hand.\nWhen this creature leaves the battlefield, draw a card for each +1/+1 counter on it."
+      },
+      "oracle_text": "Trample\nWhen this creature enters, put a +1/+1 counter on it for each card in your hand. If you do, discard your hand.\nWhen this creature leaves the battlefield, draw a card for each +1/+1 counter on it.",
+      "variants": [
+        "trample_then_exile_0",
+        "trample_then_exile_1",
+        "counter_then_bounce_0",
+        "counter_then_bounce_1",
+        "empty_then_bounce_0",
+        "empty_then_bounce_1"
+      ]
+    }
+  ]
+}

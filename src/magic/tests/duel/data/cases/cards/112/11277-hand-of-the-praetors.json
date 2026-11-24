@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Hand of the Praetors",
+  "csvid": 11277,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "infect_combat_riders",
+      "version": 2,
+      "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nOther creatures you control with infect get +1/+1.\nWhenever you cast a creature spell with infect, target player gets a poison counter.",
+      "params": {
+        "rider": "infect_lord",
+        "mana": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 3,
+        "toughness": 2,
+        "artifact": false
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "unblocked_0",
+        "unblocked_1",
+        "blocked_0",
+        "blocked_1",
+        "defending_0",
+        "defending_1",
+        "replay_0",
+        "replay_1",
+        "lord_scope_0",
+        "lord_scope_1",
+        "cast_enemy_poison_0",
+        "cast_enemy_poison_1",
+        "cast_self_poison_0",
+        "cast_self_poison_1",
+        "infect_countered_0",
+        "infect_countered_1",
+        "noninfect_0",
+        "noninfect_1"
+      ]
+    }
+  ]
+}

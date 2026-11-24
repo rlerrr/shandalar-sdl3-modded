@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "card": "Guul Draz Assassin",
+  "csvid": 10945,
+  "recipes": [
+    {
+      "family": "level_activated_riders",
+      "version": 2,
+      "oracle_text": "Level up {1}{B} ({1}{B}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 2-3\n2/2\n{B}, {T}: Target creature gets -2/-2 until end of turn.\nLEVEL 4+\n4/4\n{B}, {T}: Target creature gets -4/-4 until end of turn.",
+      "params": {
+        "price": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "activation": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          1,
+          1
+        ],
+        "first": [
+          2,
+          2,
+          2
+        ],
+        "second": [
+          4,
+          4,
+          4
+        ],
+        "first_riders": [
+          "{B}, {T}: Target creature gets -2/-2 until end of turn."
+        ],
+        "second_riders": [
+          "{B}, {T}: Target creature gets -4/-4 until end of turn."
+        ],
+        "effect": "shrink",
+        "rider_mana": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "below_0",
+        "first_0",
+        "upper_0",
+        "short_0",
+        "expiry_0",
+        "lethal_0",
+        "fresh_0",
+        "replay_0",
+        "below_1",
+        "first_1",
+        "upper_1",
+        "short_1",
+        "expiry_1",
+        "lethal_1",
+        "fresh_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

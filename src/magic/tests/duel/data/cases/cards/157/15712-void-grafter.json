@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Void Grafter",
+  "csvid": 15712,
+  "recipes": [
+    {
+      "family": "devoid_cast_payments_and_targets",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\nFlash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, another target creature you control gains hexproof until end of turn.",
+      "params": {
+        "effect": "ward",
+        "price": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 4
+      },
+      "variants": [
+        "wrong_base_0",
+        "own_target_0",
+        "offturn_0",
+        "foe_only_0",
+        "response_0",
+        "expiry_0",
+        "self_only_0",
+        "replay_0",
+        "wrong_base_1",
+        "own_target_1",
+        "offturn_1",
+        "foe_only_1",
+        "response_1",
+        "expiry_1",
+        "self_only_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

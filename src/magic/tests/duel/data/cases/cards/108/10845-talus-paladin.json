@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "card": "Talus Paladin",
+  "csvid": 10845,
+  "recipes": [
+    {
+      "family": "ally_entry_counter",
+      "version": 2,
+      "params": {
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "power": 2,
+        "toughness": 3,
+        "keywords": [],
+        "compound": "talus"
+      },
+      "oracle_text": "Whenever this creature or another Ally you control enters, you may have Allies you control gain lifelink until end of turn, and you may put a +1/+1 counter on this creature.",
+      "variants": [
+        "self_take_0",
+        "friendly_ally_0",
+        "opposing_ally_0",
+        "nonally_creature_0",
+        "noncreature_0",
+        "changeling_0",
+        "sequence_0",
+        "countered_entry_0",
+        "wrong_color_0",
+        "insufficient_mana_0",
+        "bounce_reset_0",
+        "pending_replay_0",
+        "talus_both_0",
+        "talus_expiry_0",
+        "talus_later_0",
+        "self_decline_0",
+        "friendly_decline_0",
+        "take_after_decline_0",
+        "talus_lifelink_0",
+        "talus_counter_0",
+        "talus_neither_0",
+        "talus_two_choices_0",
+        "self_take_1",
+        "friendly_ally_1",
+        "opposing_ally_1",
+        "nonally_creature_1",
+        "noncreature_1",
+        "changeling_1",
+        "sequence_1",
+        "countered_entry_1",
+        "wrong_color_1",
+        "insufficient_mana_1",
+        "bounce_reset_1",
+        "pending_replay_1",
+        "talus_both_1",
+        "talus_expiry_1",
+        "talus_later_1"
+      ]
+    }
+  ]
+}

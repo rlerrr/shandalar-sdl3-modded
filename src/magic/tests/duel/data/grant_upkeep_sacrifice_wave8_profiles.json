@@ -1,0 +1,390 @@
+{
+  "sources": {
+    "Energy Flux": {
+      "oracle_id": "7a756cd1-29a8-4edf-bb74-fbb5b4020022",
+      "name": "Energy Flux",
+      "oracle_text": "All artifacts have \"At the beginning of your upkeep, sacrifice this artifact unless you pay {2}.\"",
+      "mana_cost": "{2}{U}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/me4/48/energy-flux?utm_source=api"
+    },
+    "The Tabernacle at Pendrell Vale": {
+      "oracle_id": "69b409b3-fa16-4c79-8b46-215a7036ed46",
+      "name": "The Tabernacle at Pendrell Vale",
+      "oracle_text": "All creatures have \"At the beginning of your upkeep, destroy this creature unless you pay {1}.\"",
+      "mana_cost": "",
+      "type_line": "Legendary Land",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/me3/212/the-tabernacle-at-pendrell-vale?utm_source=api"
+    },
+    "Magus of the Tabernacle": {
+      "oracle_id": "8ab4d31e-7187-4ba1-97cb-1a0a11ab28bf",
+      "name": "Magus of the Tabernacle",
+      "oracle_text": "All creatures have \"At the beginning of your upkeep, sacrifice this creature unless you pay {1}.\"",
+      "mana_cost": "{3}{W}",
+      "type_line": "Creature — Human Wizard",
+      "power": "2",
+      "toughness": "6",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/plc/8/magus-of-the-tabernacle?utm_source=api"
+    },
+    "Pendrell Mists": {
+      "oracle_id": "b18b8415-a0b1-459d-8c6b-896381184935",
+      "name": "Pendrell Mists",
+      "oracle_text": "All creatures have \"At the beginning of your upkeep, sacrifice this creature unless you pay {1}.\"",
+      "mana_cost": "{3}{U}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/wth/47/pendrell-mists?utm_source=api"
+    },
+    "Aura Flux": {
+      "oracle_id": "128304af-4555-4276-bf26-638017beb3ff",
+      "name": "Aura Flux",
+      "oracle_text": "Other enchantments have \"At the beginning of your upkeep, sacrifice this enchantment unless you pay {2}.\"",
+      "mana_cost": "{2}{U}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ulg/27/aura-flux?utm_source=api"
+    },
+    "Kataki, War's Wage": {
+      "oracle_id": "27ffa6e9-c161-4f53-8b41-7fae5f199f41",
+      "name": "Kataki, War's Wage",
+      "oracle_text": "All artifacts have \"At the beginning of your upkeep, sacrifice this artifact unless you pay {1}.\"",
+      "mana_cost": "{1}{W}",
+      "type_line": "Legendary Creature — Spirit",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mma/20/kataki-wars-wage?utm_source=api"
+    }
+  },
+  "witnesses": {
+    "Darksteel Myr": {
+      "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+      "name": "Darksteel Myr",
+      "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature — Myr",
+      "power": "0",
+      "toughness": "1",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+    },
+    "Darksteel Relic": {
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "name": "Darksteel Relic",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+    },
+    "Fervor": {
+      "oracle_id": "8e0cea9c-3110-4728-9378-76849e33bb90",
+      "name": "Fervor",
+      "oracle_text": "Creatures you control have haste. (They can attack and {T} as soon as they come under your control.)",
+      "mana_cost": "{2}{R}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m13/129/fervor?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Murder": {
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "name": "Murder",
+      "oracle_text": "Destroy target creature.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+    },
+    "Naturalize": {
+      "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+      "name": "Naturalize",
+      "oracle_text": "Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+    },
+    "Nyxborn Shieldmate": {
+      "oracle_id": "a1012f33-7ebd-47c6-b670-1b0dc046fbce",
+      "name": "Nyxborn Shieldmate",
+      "oracle_text": "Bestow {2}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nEnchanted creature gets +1/+2.",
+      "mana_cost": "{W}",
+      "type_line": "Enchantment Creature — Human Soldier",
+      "power": "1",
+      "toughness": "2",
+      "keywords": [
+        "Bestow"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/bng/21/nyxborn-shieldmate?utm_source=api"
+    },
+    "Stone Rain": {
+      "oracle_id": "6e880df6-fc00-43d2-a9c8-f575f40b78c6",
+      "name": "Stone Rain",
+      "oracle_text": "Destroy target land.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/9ed/221/stone-rain?utm_source=api"
+    },
+    "Wastes": {
+      "oracle_id": "05d24b0c-904a-46b6-b42a-96a4d91a0dd4",
+      "name": "Wastes",
+      "oracle_text": "{T}: Add {C}.",
+      "mana_cost": "",
+      "type_line": "Basic Land",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/eoc/191/wastes?utm_source=api"
+    }
+  },
+  "registry": {
+    "Aura Flux": {
+      "csvid": 3969,
+      "iid": 704,
+      "name": "Aura Flux",
+      "handler": "manalinkeh_card_aura_flux",
+      "kind": "card"
+    },
+    "Darksteel Myr": {
+      "csvid": 11238,
+      "iid": 2255,
+      "name": "Darksteel Myr",
+      "handler": "manalinkeh_card_darksteel_myr",
+      "kind": "card"
+    },
+    "Darksteel Relic": {
+      "csvid": 11586,
+      "iid": 2259,
+      "name": "Darksteel Relic",
+      "handler": "manalinkeh_card_darksteel_myr",
+      "kind": "card"
+    },
+    "Energy Flux": {
+      "csvid": 494,
+      "iid": 3050,
+      "name": "Energy Flux",
+      "handler": "manalinkeh_card_energy_flux",
+      "kind": "card"
+    },
+    "Fervor": {
+      "csvid": 1604,
+      "iid": 3365,
+      "name": "Fervor",
+      "handler": "manalinkeh_card_fervor",
+      "kind": "card"
+    },
+    "Forest": {
+      "csvid": 91,
+      "iid": 2,
+      "name": "Forest",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Grizzly Bears": {
+      "csvid": 106,
+      "iid": 4259,
+      "name": "Grizzly Bears",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Kataki, War's Wage": {
+      "csvid": 7675,
+      "iid": 5175,
+      "name": "Kataki, War's Wage",
+      "handler": "manalinkeh_card_kitaki_wars_wage",
+      "kind": "card"
+    },
+    "Magus of the Tabernacle": {
+      "csvid": 1287,
+      "iid": 5819,
+      "name": "Magus of the Tabernacle",
+      "handler": "manalinkeh_card_magus_of_the_tabernacle",
+      "kind": "card"
+    },
+    "Murder": {
+      "csvid": 12594,
+      "iid": 6382,
+      "name": "Murder",
+      "handler": "manalinkeh_card_murder2",
+      "kind": "card"
+    },
+    "Naturalize": {
+      "csvid": 1096,
+      "iid": 6485,
+      "name": "Naturalize",
+      "handler": "manalinkeh_card_disenchant",
+      "kind": "card"
+    },
+    "Nyxborn Shieldmate": {
+      "csvid": 13765,
+      "iid": 6736,
+      "name": "Nyxborn Shieldmate",
+      "handler": "manalinkeh_card_nyxborn_shieldmate",
+      "kind": "card"
+    },
+    "Pendrell Mists": {
+      "csvid": 3024,
+      "iid": 7071,
+      "name": "Pendrell Mists",
+      "handler": "manalinkeh_card_pendrell_mists",
+      "kind": "card"
+    },
+    "Stone Rain": {
+      "csvid": 236,
+      "iid": 9381,
+      "name": "Stone Rain",
+      "handler": "manalinkeh_card_ice_storm",
+      "kind": "card"
+    },
+    "The Tabernacle at Pendrell Vale": {
+      "csvid": 806,
+      "iid": 9867,
+      "name": "The Tabernacle at Pendrell Vale",
+      "handler": "manalinkeh_card_the_tabernacle_at_pendrell_vale",
+      "kind": "card"
+    },
+    "Wastes": {
+      "csvid": 15719,
+      "iid": 15794,
+      "name": "Wastes",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    }
+  }
+}

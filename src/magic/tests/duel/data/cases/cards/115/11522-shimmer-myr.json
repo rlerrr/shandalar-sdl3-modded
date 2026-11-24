@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "csvid": 11522,
+  "card": "Shimmer Myr",
+  "recipes": [
+    {
+      "family": "flash_remaining_casting_and_counterability",
+      "version": 2,
+      "params": {
+        "csvid": 11522,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          2,
+          2
+        ]
+      },
+      "oracle_text": "Flash\nYou may cast artifact spells as though they had flash.",
+      "variants": [
+        "artifact_0",
+        "artifact_1",
+        "artifact_creature_0",
+        "artifact_creature_1",
+        "wrong_type_0",
+        "wrong_type_1",
+        "removed_0",
+        "removed_1",
+        "live_parent_0",
+        "live_parent_1"
+      ]
+    }
+  ]
+}

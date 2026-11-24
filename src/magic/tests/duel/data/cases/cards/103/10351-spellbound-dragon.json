@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Spellbound Dragon",
+  "csvid": 10351,
+  "recipes": [
+    {
+      "family": "attack_trigger_zones_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 10351,
+        "cost": [
+          3,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Flying\nWhenever this creature attacks, draw a card, then discard a card. This creature gets +X/+0 until end of turn, where X is the discarded card's mana value.",
+      "variants": [
+        "large_discard_0",
+        "large_discard_1",
+        "discard_drawn_0",
+        "discard_drawn_1",
+        "zero_discard_0",
+        "zero_discard_1",
+        "flight_0",
+        "flight_1"
+      ]
+    }
+  ]
+}

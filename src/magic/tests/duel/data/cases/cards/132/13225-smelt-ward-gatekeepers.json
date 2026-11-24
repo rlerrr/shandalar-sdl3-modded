@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Smelt-Ward Gatekeepers",
+  "csvid": 13225,
+  "recipes": [
+    {
+      "family": "entry_rider_control",
+      "version": 2,
+      "params": {
+        "csvid": 13225,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, if you control two or more Gates, gain control of target creature an opponent controls until end of turn. Untap that creature. It gains haste until end of turn.",
+      "variants": [
+        "two_gates_0",
+        "two_gates_1",
+        "one_gate_0",
+        "one_gate_1",
+        "foreign_gate_0",
+        "foreign_gate_1"
+      ]
+    }
+  ]
+}

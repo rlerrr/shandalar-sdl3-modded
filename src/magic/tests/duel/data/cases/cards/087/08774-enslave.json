@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Enslave",
+  "csvid": 8774,
+  "recipes": [
+    {
+      "family": "upkeep_damage_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 8774
+      },
+      "oracle_text": "Enchant creature\nYou control enchanted creature.\nAt the beginning of your upkeep, enchanted creature deals 1 damage to its owner.",
+      "variants": [
+        "foreign_owner_0",
+        "foreign_owner_1",
+        "self_owner_0",
+        "self_owner_1",
+        "removed_0",
+        "removed_1"
+      ]
+    }
+  ]
+}

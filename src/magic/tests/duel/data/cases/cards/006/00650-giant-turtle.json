@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Giant Turtle",
+  "csvid": 650,
+  "recipes": [
+    {
+      "family": "creature_cast_attack_gates",
+      "version": 2,
+      "oracle_text": "This creature can't attack if it attacked during your last turn.",
+      "params": {
+        "effect": "last_attack",
+        "cast_mana": [
+          1,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 4
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "fresh_0",
+        "fresh_1",
+        "ready_0",
+        "ready_1",
+        "consecutive_0",
+        "consecutive_1",
+        "skip_then_resume_0",
+        "skip_then_resume_1",
+        "other_attacked_0",
+        "other_attacked_1",
+        "failed_attack_0",
+        "failed_attack_1",
+        "blocking_0",
+        "blocking_1",
+        "snapshot_0",
+        "snapshot_1"
+      ]
+    }
+  ]
+}

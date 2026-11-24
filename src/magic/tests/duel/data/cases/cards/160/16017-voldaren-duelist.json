@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Voldaren Duelist",
+  "csvid": 16017,
+  "recipes": [
+    {
+      "family": "remaining_entry_combat",
+      "version": 2,
+      "params": {
+        "csvid": 16017,
+        "cost": "{3}{R}",
+        "choices": [
+          "haste_0",
+          "haste_1",
+          "other_blocks_0",
+          "other_blocks_1",
+          "own_target_0",
+          "own_target_1",
+          "expire_0",
+          "expire_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "Haste\nWhen this creature enters, target creature can't block this turn.",
+      "variants": [
+        "haste_0",
+        "haste_1",
+        "other_blocks_0",
+        "other_blocks_1",
+        "own_target_0",
+        "own_target_1",
+        "expire_0",
+        "expire_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Robber Fly",
+  "csvid": 4579,
+  "recipes": [
+    {
+      "family": "blocked_discard",
+      "version": 2,
+      "params": {
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "power": 1,
+        "toughness": 1,
+        "blocked": true,
+        "effect": "redraw",
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "oracle_text": "Flying\nWhenever this creature becomes blocked, defending player discards all the cards in their hand, then draws that many cards.",
+      "variants": [
+        "blocked_0",
+        "unblocked_0",
+        "multi_blockers_0",
+        "empty_hand_0",
+        "short_hand_0",
+        "late_blocker_bounced_0",
+        "source_blocks_0",
+        "pending_block_snapshot_0",
+        "countered_0",
+        "wrong_color_0",
+        "insufficient_mana_0",
+        "flying_ground_0",
+        "flying_blocker_0",
+        "blocked_1",
+        "unblocked_1",
+        "multi_blockers_1",
+        "empty_hand_1",
+        "short_hand_1",
+        "late_blocker_bounced_1",
+        "source_blocks_1",
+        "pending_block_snapshot_1",
+        "countered_1",
+        "wrong_color_1",
+        "insufficient_mana_1",
+        "flying_ground_1",
+        "flying_blocker_1"
+      ]
+    }
+  ]
+}

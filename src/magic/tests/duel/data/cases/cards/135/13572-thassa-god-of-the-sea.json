@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "csvid": 13572,
+  "card": "Thassa, God of the Sea",
+  "recipes": [
+    {
+      "family": "library_scry_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 13572,
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          5,
+          5
+        ]
+      },
+      "oracle_text": "Indestructible\nAs long as your devotion to blue is less than five, Thassa isn't a creature. (Each {U} in the mana costs of permanents you control counts toward your devotion to blue.)\nAt the beginning of your upkeep, scry 1.\n{1}{U}: Target creature you control can't be blocked this turn.",
+      "variants": [
+        "upkeep_0",
+        "upkeep_1",
+        "devotion_0",
+        "devotion_1",
+        "unblockable_0",
+        "unblockable_1",
+        "foe_only_0",
+        "foe_only_1",
+        "indestructible_0",
+        "indestructible_1"
+      ]
+    }
+  ]
+}

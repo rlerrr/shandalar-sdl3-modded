@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Possessed Nomad",
+  "csvid": 5864,
+  "recipes": [
+    {
+      "family": "threshold_possessed_creatures",
+      "version": 2,
+      "params": {
+        "csvid": 5864,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "fee": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Vigilance\nThreshold — As long as there are seven or more cards in your graveyard, this creature gets +1/+1, is black, and has \"{2}{B}, {T}: Destroy target white creature.\"",
+      "variants": [
+        "six_0",
+        "six_1",
+        "seven_0",
+        "seven_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "seven_ability_0",
+        "seven_ability_1",
+        "wrong_black_0",
+        "wrong_black_1",
+        "gain_threshold_0",
+        "gain_threshold_1",
+        "lose_threshold_0",
+        "lose_threshold_1",
+        "pending_loss_0",
+        "pending_loss_1",
+        "countered_0",
+        "countered_1",
+        "short_generic_0",
+        "short_generic_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

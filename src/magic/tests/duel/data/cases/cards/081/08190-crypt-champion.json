@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "card": "Crypt Champion",
+  "csvid": 8190,
+  "recipes": [
+    {
+      "family": "reanimation_additional_riders",
+      "version": 2,
+      "params": {
+        "rider": "red",
+        "cost": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "threshold": 3
+      },
+      "oracle_text": "Double strike\nWhen this creature enters, each player puts a creature card with mana value 3 or less from their graveyard onto the battlefield.\nWhen this creature enters, sacrifice it unless {R} was spent to cast it.",
+      "variants": [
+        "effect_0",
+        "underpaid_0",
+        "countered_0",
+        "replay_0",
+        "empty_0",
+        "wrong_type_0",
+        "red_0",
+        "red_empty_0",
+        "own_only_0",
+        "enemy_only_0",
+        "shroud_0",
+        "double_strike_0",
+        "boundary_0",
+        "effect_1",
+        "underpaid_1",
+        "countered_1",
+        "replay_1",
+        "empty_1",
+        "wrong_type_1",
+        "red_1",
+        "red_empty_1",
+        "own_only_1",
+        "enemy_only_1",
+        "shroud_1",
+        "double_strike_1",
+        "boundary_1"
+      ]
+    }
+  ]
+}

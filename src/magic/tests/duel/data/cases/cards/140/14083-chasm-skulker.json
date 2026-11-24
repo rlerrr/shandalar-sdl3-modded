@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Chasm Skulker",
+  "csvid": 14083,
+  "recipes": [
+    {
+      "family": "departure_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 14083,
+        "mana_cost": "{2}{U}"
+      },
+      "oracle_text": "Whenever you draw a card, put a +1/+1 counter on this creature.\nWhen this creature dies, create X 1/1 blue Squid creature tokens with islandwalk, where X is the number of +1/+1 counters on this creature. (They can't be blocked as long as defending player controls an Island.)",
+      "variants": [
+        "zero_0",
+        "zero_1",
+        "seat_draw_0",
+        "seat_draw_1",
+        "typed_0",
+        "typed_1",
+        "islandwalk_0",
+        "islandwalk_1",
+        "nonisland_0",
+        "nonisland_1",
+        "bounce_0",
+        "bounce_1"
+      ]
+    }
+  ]
+}

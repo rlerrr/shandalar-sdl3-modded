@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Mogg Conscripts",
+  "csvid": 3207,
+  "recipes": [
+    {
+      "family": "creature_cast_attack_gates",
+      "version": 2,
+      "oracle_text": "This creature can't attack unless you've cast a creature spell this turn.",
+      "params": {
+        "effect": "creature",
+        "cast_mana": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "power": 2,
+        "toughness": 2
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "fresh_0",
+        "fresh_1",
+        "no_cast_0",
+        "no_cast_1",
+        "match_0",
+        "match_1",
+        "mismatch_0",
+        "mismatch_1",
+        "countered_match_0",
+        "countered_match_1",
+        "opponent_cast_0",
+        "opponent_cast_1",
+        "prior_turn_0",
+        "prior_turn_1",
+        "failed_cast_0",
+        "failed_cast_1",
+        "land_0",
+        "land_1",
+        "creature_land_0",
+        "creature_land_1",
+        "self_cast_haste_0",
+        "self_cast_haste_1",
+        "blocking_0",
+        "blocking_1",
+        "snapshot_0",
+        "snapshot_1"
+      ]
+    }
+  ]
+}

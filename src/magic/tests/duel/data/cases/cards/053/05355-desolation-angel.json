@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "card": "Desolation Angel",
+  "csvid": 5355,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "kicker_sweepers",
+      "version": 2,
+      "oracle_text": "Kicker {W}{W} (You may pay an additional {W}{W} as you cast this spell.)\nFlying\nWhen this creature enters, destroy all lands you control. If it was kicked, destroy all lands instead.",
+      "params": {
+        "effect": "lands",
+        "flight": null,
+        "mana": [
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "kicker_mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "keywords": [
+          "Flying"
+        ],
+        "stats": [
+          5,
+          4
+        ]
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "base_only_0",
+        "base_only_1",
+        "fee_short_0",
+        "fee_short_1",
+        "cast_short_0",
+        "cast_short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "wrong_white_0",
+        "wrong_white_1"
+      ]
+    }
+  ]
+}

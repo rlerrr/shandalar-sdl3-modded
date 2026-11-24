@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "csvid": 3217,
+  "card": "Nurturing Licid",
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_targeted_costs",
+      "version": 2,
+      "params": {
+        "csvid": 3217,
+        "mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "activation": "{G}",
+        "stats": [
+          1,
+          1
+        ]
+      },
+      "oracle_text": "{G}, {T}: This creature loses this ability and becomes an Aura enchantment with enchant creature. Attach it to target creature. You may pay {G} to end this effect.\n{G}: Regenerate enchanted creature.",
+      "variants": [
+        "own_0",
+        "own_1",
+        "foreign_0",
+        "foreign_1",
+        "revert_0",
+        "revert_1",
+        "sick_0",
+        "sick_1",
+        "short_0",
+        "short_1",
+        "unattached_0",
+        "unattached_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "csvid": 16199,
+  "card": "Stensia Banquet",
+  "recipes": [
+    {
+      "family": "counted_damage_composition",
+      "version": 2,
+      "oracle_text": "Stensia Banquet deals damage to target opponent or planeswalker equal to the number of Vampires you control.\nDraw a card.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "scope": "Vampire",
+          "recipient": "opponent_walker",
+          "draw": true,
+          "printed": [
+            2,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "instant": false,
+          "clauses": [
+            "Stensia Banquet deals damage to target opponent or planeswalker equal to the number of Vampires you control.",
+            "Draw a card."
+          ]
+        }
+      },
+      "variants": [
+        "zero_0",
+        "zero_1",
+        "own_mixed_0",
+        "own_mixed_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "other_zones_0",
+        "other_zones_1",
+        "no_legal_target_0",
+        "no_legal_target_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "unfunded_0",
+        "unfunded_1",
+        "gain_own_0",
+        "gain_own_1",
+        "gain_opponent_0",
+        "gain_opponent_1",
+        "lose_own_0",
+        "lose_own_1",
+        "lose_opponent_0",
+        "lose_opponent_1",
+        "replay_update_0",
+        "replay_update_1",
+        "target_bounced_0",
+        "target_bounced_1",
+        "countered_0",
+        "countered_1",
+        "walker_0",
+        "walker_1",
+        "own_walker_0",
+        "own_walker_1",
+        "walker_lethal_0",
+        "walker_lethal_1",
+        "lose_type_0",
+        "lose_type_1"
+      ]
+    }
+  ]
+}

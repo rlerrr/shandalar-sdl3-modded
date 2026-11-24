@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "csvid": 12065,
+  "card": "Selhoff Occultist",
+  "recipes": [
+    {
+      "family": "mill_death_and_entry",
+      "version": 2,
+      "params": {
+        "csvid": 12065,
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          2,
+          3
+        ]
+      },
+      "oracle_text": "Whenever this creature or another creature dies, target player mills a card.",
+      "variants": [
+        "self_death_0",
+        "self_death_1",
+        "own_death_0",
+        "own_death_1",
+        "foe_death_0",
+        "foe_death_1",
+        "noncreature_0",
+        "noncreature_1",
+        "bounce_0",
+        "bounce_1",
+        "exile_0",
+        "exile_1"
+      ]
+    }
+  ]
+}

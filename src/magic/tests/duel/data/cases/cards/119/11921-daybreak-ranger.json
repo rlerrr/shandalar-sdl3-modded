@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "csvid": 11921,
+  "card": "Daybreak Ranger",
+  "recipes": [
+    {
+      "family": "werewolf_face_ability_riders",
+      "version": 2,
+      "params": {
+        "effect": "fight",
+        "price": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "front": {
+          "name": "Daybreak Ranger",
+          "power": 2,
+          "toughness": 2,
+          "color": 8,
+          "keywords": [],
+          "clauses": [
+            "{T}: This creature deals 2 damage to target creature with flying.",
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Nightfall Predator",
+          "power": 4,
+          "toughness": 4,
+          "color": 8,
+          "keywords": [],
+          "clauses": [
+            "{R}, {T}: This creature fights target creature. (Each deals damage equal to its power to the other.)",
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        }
+      },
+      "variants": [
+        "paid_front_0",
+        "paid_front_1",
+        "front_ready_0",
+        "front_ready_1",
+        "back_ready_0",
+        "back_ready_1",
+        "revert_replay_0",
+        "revert_replay_1",
+        "front_ping_0",
+        "front_ping_1",
+        "front_scope_0",
+        "front_scope_1",
+        "back_fight_0",
+        "back_fight_1",
+        "back_short_0",
+        "back_short_1",
+        "back_target_gone_0",
+        "back_target_gone_1"
+      ],
+      "oracle_text": "{T}: This creature deals 2 damage to target creature with flying.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+    }
+  ]
+}

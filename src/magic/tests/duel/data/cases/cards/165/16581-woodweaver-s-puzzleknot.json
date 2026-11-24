@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 16581,
+  "card": "Woodweaver's Puzzleknot",
+  "recipes": [
+    {
+      "family": "entry_rider_energy_and_mana",
+      "version": 2,
+      "params": {
+        "csvid": 16581,
+        "printed_cost": "{2}"
+      },
+      "oracle_text": "When this artifact enters, you gain 3 life and get {E}{E}{E} (three energy counters).\n{2}{G}, Sacrifice this artifact: You gain 3 life and get {E}{E}{E}.",
+      "variants": [
+        "entry_0",
+        "countered_0",
+        "sacrifice_0",
+        "wrong_green_0",
+        "short_0",
+        "snapshot_0",
+        "entry_1",
+        "countered_1",
+        "sacrifice_1",
+        "wrong_green_1",
+        "short_1",
+        "snapshot_1"
+      ]
+    }
+  ]
+}

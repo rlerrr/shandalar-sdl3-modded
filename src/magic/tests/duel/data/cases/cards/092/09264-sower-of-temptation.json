@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Sower of Temptation",
+  "csvid": 9264,
+  "recipes": [
+    {
+      "family": "entry_rider_control",
+      "version": 2,
+      "params": {
+        "csvid": 9264,
+        "mana": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, gain control of target creature for as long as this creature remains on the battlefield.",
+      "variants": [
+        "flying_0",
+        "flying_1",
+        "dies_0",
+        "dies_1",
+        "stolen_source_0",
+        "stolen_source_1",
+        "protected_0",
+        "protected_1"
+      ]
+    }
+  ]
+}

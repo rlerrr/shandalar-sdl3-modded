@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "card": "Thelon of Havenwood",
+  "csvid": 8699,
+  "recipes": [
+    {
+      "family": "spore_synergy_riders",
+      "version": 2,
+      "params": {
+        "shape": "exile_team",
+        "mana": [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "keywords": [],
+        "power": 2,
+        "toughness": 2
+      },
+      "oracle_text": "Each Fungus creature gets +1/+1 for each spore counter on it.\n{B}{G}, Exile a Fungus card from a graveyard: Put a spore counter on each Fungus on the battlefield.",
+      "variants": [
+        "own_grave_0",
+        "enemy_grave_0",
+        "wrong_mana_0",
+        "no_fungus_grave_0",
+        "exile_replay_0",
+        "own_grave_1",
+        "enemy_grave_1",
+        "wrong_mana_1",
+        "no_fungus_grave_1",
+        "exile_replay_1"
+      ]
+    }
+  ]
+}

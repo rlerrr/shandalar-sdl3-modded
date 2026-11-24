@@ -1,0 +1,417 @@
+{
+  "sources": {
+    "Canyon Lurkers": {
+      "csvid": 14240,
+      "handler": "manalinkeh_card_canyon_lurker",
+      "oracle": {
+        "oracle_id": "a744c5d7-c903-446a-bb30-30788058d9db",
+        "name": "Canyon Lurkers",
+        "oracle_text": "Morph {3}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+        "mana_cost": "{4}{R}",
+        "type_line": "Creature — Human Rogue",
+        "power": "5",
+        "toughness": "2",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/105/canyon-lurkers?utm_source=api"
+      }
+    },
+    "Glacial Stalker": {
+      "csvid": 14275,
+      "handler": "manalinkeh_card_glacial_stalker",
+      "oracle": {
+        "oracle_id": "49d06291-c8cb-4e22-b178-d0598582b2ee",
+        "name": "Glacial Stalker",
+        "oracle_text": "Morph {4}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+        "mana_cost": "{5}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/41/glacial-stalker?utm_source=api"
+      }
+    },
+    "Krumar Bond-Kin": {
+      "csvid": 14309,
+      "handler": "manalinkeh_card_krumar_bond_kin",
+      "oracle": {
+        "oracle_id": "8e34f487-aa75-4afb-af75-3349de456c79",
+        "name": "Krumar Bond-Kin",
+        "oracle_text": "Morph {4}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Creature — Orc Warrior",
+        "power": "5",
+        "toughness": "3",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/77/krumar-bond-kin?utm_source=api"
+      }
+    },
+    "War Behemoth": {
+      "csvid": 14424,
+      "handler": "manalinkeh_card_war_behemoth",
+      "oracle": {
+        "oracle_id": "4792a05e-b557-4132-8303-235feefe0d99",
+        "name": "War Behemoth",
+        "oracle_text": "Morph {4}{W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+        "mana_cost": "{5}{W}",
+        "type_line": "Creature — Beast",
+        "power": "3",
+        "toughness": "6",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/29/war-behemoth?utm_source=api"
+      }
+    },
+    "Woolly Loxodon": {
+      "csvid": 14436,
+      "handler": "manalinkeh_card_wolly_loxodon",
+      "oracle": {
+        "oracle_id": "b588df7a-64d8-449e-b573-13badc8cdf56",
+        "name": "Woolly Loxodon",
+        "oracle_text": "Morph {5}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+        "mana_cost": "{5}{G}{G}",
+        "type_line": "Creature — Elephant Warrior",
+        "power": "6",
+        "toughness": "7",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/a25/195/woolly-loxodon?utm_source=api"
+      }
+    },
+    "Treespring Lorian": {
+      "csvid": 6301,
+      "handler": "manalinkeh_card_wolly_loxodon",
+      "oracle": {
+        "oracle_id": "6f3ed8a1-ff5f-411b-9d87-0cce52f42344",
+        "name": "Treespring Lorian",
+        "oracle_text": "Morph {5}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+        "mana_cost": "{5}{G}",
+        "type_line": "Creature — Beast",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ons/293/treespring-lorian?utm_source=api"
+      }
+    },
+    "Krosan Colossus": {
+      "csvid": 6194,
+      "handler": "manalinkeh_card_krosan_colossus",
+      "oracle": {
+        "oracle_id": "703ab192-7e0a-4f02-8381-568ad2d999ca",
+        "name": "Krosan Colossus",
+        "oracle_text": "Morph {6}{G}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+        "mana_cost": "{6}{G}{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "9",
+        "toughness": "9",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 9.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mkc/176/krosan-colossus?utm_source=api"
+      }
+    },
+    "Scornful Egotist": {
+      "csvid": 6575,
+      "handler": "manalinkeh_card_monastery_flock",
+      "oracle": {
+        "oracle_id": "455cbf35-f340-4f1f-a331-5b082c9034ec",
+        "name": "Scornful Egotist",
+        "oracle_text": "Morph {U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+        "mana_cost": "{7}{U}",
+        "type_line": "Creature — Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/scg/50/scornful-egotist?utm_source=api"
+      }
+    },
+    "Witness of the Ages": {
+      "csvid": 14435,
+      "handler": "manalinkeh_card_witness_of_the_ages",
+      "oracle": {
+        "oracle_id": "afeb9de8-7030-4797-a9c8-5a99de3c410f",
+        "name": "Witness of the Ages",
+        "oracle_text": "Morph {5} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+        "mana_cost": "{6}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/228/witness-of-the-ages?utm_source=api"
+      }
+    }
+  },
+  "witnesses": {
+    "Coat of Arms": {
+      "csvid": 996,
+      "handler": "manalinkeh_card_coat_of_arms",
+      "oracle": {
+        "oracle_id": "5f7f133e-58ea-41ab-b1be-be4b400fac4c",
+        "name": "Coat of Arms",
+        "oracle_text": "Each creature gets +1/+1 for each other creature on the battlefield that shares at least one creature type with it. (For example, if two Goblin Warriors and a Goblin Shaman are on the battlefield, each gets +2/+2.)",
+        "mana_cost": "{5}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/58/coat-of-arms?utm_source=api"
+      }
+    },
+    "Counterspell": {
+      "csvid": 48,
+      "handler": "manalinkeh_card_counterspell",
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      }
+    },
+    "Forest": {
+      "csvid": 91,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      }
+    },
+    "Loxodon Mystic": {
+      "csvid": 6912,
+      "handler": "manalinkeh_card_squall_drifter",
+      "oracle": {
+        "oracle_id": "f3e22884-a9ca-4479-b400-df1c1d2fd153",
+        "name": "Loxodon Mystic",
+        "oracle_text": "{W}, {T}: Tap target creature.",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Elephant Cleric",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/26/loxodon-mystic?utm_source=api"
+      }
+    },
+    "Mountain": {
+      "csvid": 164,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      }
+    },
+    "Orcish Spy": {
+      "csvid": 1104,
+      "handler": "manalinkeh_card_orcish_spy",
+      "oracle": {
+        "oracle_id": "0d058991-3751-4afe-80c9-79f0c6e10282",
+        "name": "Orcish Spy",
+        "oracle_text": "{T}: Look at the top three cards of target player's library.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Orc Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/208/orcish-spy?utm_source=api"
+      }
+    },
+    "Shock": {
+      "csvid": 1147,
+      "handler": "manalinkeh_card_shock2",
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      }
+    },
+    "Smother": {
+      "csvid": 6270,
+      "handler": "manalinkeh_card_smother",
+      "oracle": {
+        "oracle_id": "acdf9fb0-96eb-4520-bd4b-b6480c7c9b29",
+        "name": "Smother",
+        "oracle_text": "Destroy target creature with mana value 3 or less. It can't be regenerated.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddp/57/smother?utm_source=api"
+      }
+    },
+    "Unsummon": {
+      "csvid": 260,
+      "handler": "manalinkeh_card_unsummon",
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      }
+    }
+  },
+  "hidden_observer": {
+    "name": "Face-Down Creature",
+    "csvid": 13252,
+    "handler": "manalinkeh_card_face_down_creature"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "card": "Jace, Architect of Thought",
+  "csvid": 12757,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "loyalty_library_effects",
+      "version": 2,
+      "oracle_text": "+1: Until your next turn, whenever a creature an opponent controls attacks, it gets -1/-0 until end of turn.\n−2: Reveal the top three cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other on the bottom of your library in any order.\n−8: For each player, search that player's library for a nonland card and exile it, then that player shuffles. You may cast those cards without paying their mana costs.",
+      "params": {
+        "mode": "piles",
+        "mana": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "start": 4,
+        "costs": [
+          1,
+          -2,
+          -8
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "once_per_turn_0",
+        "once_per_turn_1",
+        "opposing_turn_0",
+        "opposing_turn_1",
+        "pick_pile_0",
+        "pick_pile_1",
+        "empty_library_0",
+        "empty_library_1",
+        "one_card_0",
+        "one_card_1",
+        "weaken_0",
+        "weaken_1",
+        "weaken_own_0",
+        "weaken_own_1",
+        "search_decline_0",
+        "search_decline_1",
+        "search_cast_0",
+        "search_cast_1",
+        "no_nonland_0",
+        "no_nonland_1"
+      ]
+    }
+  ]
+}

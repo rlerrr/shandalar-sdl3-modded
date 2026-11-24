@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Sporecrown Thallid",
+  "csvid": 18515,
+  "recipes": [
+    {
+      "family": "spore_synergy_riders",
+      "version": 2,
+      "params": {
+        "shape": "tribal_lord",
+        "mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "keywords": [],
+        "power": 2,
+        "toughness": 2
+      },
+      "oracle_text": "Each other creature you control that's a Fungus or Saproling gets +1/+1.",
+      "variants": [
+        "own_saproling_0",
+        "enemy_saproling_0",
+        "no_lord_0",
+        "own_saproling_1",
+        "enemy_saproling_1",
+        "no_lord_1"
+      ]
+    }
+  ]
+}

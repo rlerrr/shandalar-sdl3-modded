@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Taj-Nar Swordsmith",
+  "csvid": 6798,
+  "recipes": [
+    {
+      "family": "entry_interaction_choice_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 6798,
+        "mana_cost": "{3}{W}"
+      },
+      "oracle_text": "When this creature enters, you may pay {X}. If you do, search your library for an Equipment card with mana value X or less, put that card onto the battlefield, then shuffle.",
+      "variants": [
+        "zero_x_0",
+        "zero_x_1",
+        "paid_x_0",
+        "paid_x_1",
+        "decline_search_0"
+      ]
+    }
+  ]
+}

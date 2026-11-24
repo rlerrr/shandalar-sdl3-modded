@@ -1,0 +1,751 @@
+{
+  "sources": {
+    "Indomitable Will": {
+      "oracle": {
+        "oracle_id": "cca60afe-b044-4401-8322-170aa015873c",
+        "name": "Indomitable Will",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nEnchant creature\nEnchanted creature gets +1/+2.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant",
+          "Flash"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/109/indomitable-will?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7251,
+        "iid": 4847,
+        "name": "Indomitable Will",
+        "handler": "manalinkeh_card_indomitable_will",
+        "kind": "card"
+      }
+    },
+    "Talons of Falkenrath": {
+      "oracle": {
+        "oracle_id": "e79b1224-1baf-460f-bf12-92b51cd8071f",
+        "name": "Talons of Falkenrath",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nEnchant creature\nEnchanted creature has \"{1}{R}: This creature gets +2/+0 until end of turn.\"",
+        "mana_cost": "{1}{R}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant",
+          "Flash"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dka/105/talons-of-falkenrath?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12274,
+        "iid": 9688,
+        "name": "Talons of Falkenrath",
+        "handler": "manalinkeh_card_talons_of_falkenrath",
+        "kind": "card"
+      }
+    },
+    "Temporal Isolation": {
+      "oracle": {
+        "oracle_id": "cb5ab978-d9b1-4f2f-bf3a-5e28e96b9e2e",
+        "name": "Temporal Isolation",
+        "oracle_text": "Flash\nEnchant creature\nEnchanted creature has shadow. (It can block or be blocked by only creatures with shadow.)\nPrevent all damage that would be dealt by enchanted creature.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant",
+          "Flash"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/48/temporal-isolation?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8696,
+        "iid": 9784,
+        "name": "Temporal Isolation",
+        "handler": "manalinkeh_card_temporal_isolation",
+        "kind": "card"
+      }
+    },
+    "Spontaneous Mutation": {
+      "oracle": {
+        "oracle_id": "ab78fa13-f599-4d08-bd27-d3d8740ae58f",
+        "name": "Spontaneous Mutation",
+        "oracle_text": "Flash\nEnchant creature\nEnchanted creature gets -X/-0, where X is the number of cards in your graveyard.",
+        "mana_cost": "{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant",
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/86/spontaneous-mutation?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16195,
+        "iid": 16283,
+        "name": "Spontaneous Mutation",
+        "handler": "manalinkeh_card_spontaneous_mutation",
+        "kind": "card"
+      }
+    },
+    "Maggot Therapy": {
+      "oracle": {
+        "oracle_id": "ab4887e6-f71b-462d-9243-9ebe54da98f4",
+        "name": "Maggot Therapy",
+        "oracle_text": "Flash\nEnchant creature\nEnchanted creature gets +2/-2.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant",
+          "Flash"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/145/maggot-therapy?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4526,
+        "iid": 13493,
+        "name": "Maggot Therapy",
+        "handler": "manalinkeh_card_immolation",
+        "kind": "card"
+      }
+    },
+    "Aether Meltdown": {
+      "oracle": {
+        "oracle_id": "433a2880-d989-4c40-99fa-0896de341b88",
+        "name": "Aether Meltdown",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nEnchant creature or Vehicle\nWhen this Aura enters, you get {E}{E} (two energy counters).\nEnchanted creature gets -4/-0.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant",
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/36/aether-meltdown?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16271,
+        "iid": 16360,
+        "name": "Aether Meltdown",
+        "handler": "manalinkeh_card_aether_meltdown",
+        "kind": "card"
+      }
+    },
+    "Howlpack Resurgence": {
+      "oracle": {
+        "oracle_id": "614c3f71-e231-4c12-9e6b-cb8ea1d100bf",
+        "name": "Howlpack Resurgence",
+        "oracle_text": "Flash\nEach creature you control that's a Wolf or a Werewolf gets +1/+1 and has trample.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/204/howlpack-resurgence?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15856,
+        "iid": 15924,
+        "name": "Howlpack Resurgence",
+        "handler": "manalinkeh_card_howlpack_resurgence",
+        "kind": "card"
+      }
+    },
+    "Dictate of the Twin Gods": {
+      "oracle": {
+        "oracle_id": "3d960d33-623a-4415-ae00-f8cffbc15f5a",
+        "name": "Dictate of the Twin Gods",
+        "oracle_text": "Flash\nIf a source would deal damage to a permanent or player, it deals double that damage to that permanent or player instead.",
+        "mana_cost": "{3}{R}{R}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Flash",
+          "Double"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/93/dictate-of-the-twin-gods?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13875,
+        "iid": 2527,
+        "name": "Dictate of the Twin Gods",
+        "handler": "manalinkeh_card_dictate_of_the_twin_gods",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Darkthicket Wolf": {
+      "oracle": {
+        "oracle_id": "a78ab15e-72e7-4d2b-bc42-b2960147ea7b",
+        "name": "Darkthicket Wolf",
+        "oracle_text": "{2}{G}: This creature gets +2/+2 until end of turn. Activate only once each turn.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Wolf",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/isd/175/darkthicket-wolf?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11920,
+        "iid": 2261,
+        "name": "Darkthicket Wolf",
+        "handler": "manalinkeh_card_darkthicket_wolf",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Goblin Balloon Brigade": {
+      "oracle": {
+        "oracle_id": "10bc98b0-3fdc-46d1-8d3b-6d160e9dd62f",
+        "name": "Goblin Balloon Brigade",
+        "oracle_text": "{R}: This creature gains flying until end of turn.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cn2/159/goblin-balloon-brigade?utm_source=api"
+      },
+      "registry": {
+        "csvid": 101,
+        "iid": 3980,
+        "name": "Goblin Balloon Brigade",
+        "handler": "manalinkeh_card_goblin_balloon_brigade",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Kessig Prowler": {
+      "oracle": {
+        "oracle_id": "d2aff0ea-5474-4329-ae6a-80ee4908ee8d",
+        "name": "Kessig Prowler // Sinuous Predator",
+        "type_line": "Creature — Werewolf Horror // Creature — Eldrazi Werewolf",
+        "keywords": [
+          "Transform"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/emn/163/kessig-prowler-sinuous-predator?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Kessig Prowler",
+            "mana_cost": "{G}",
+            "type_line": "Creature — Werewolf Horror",
+            "oracle_text": "{4}{G}: Transform this creature.",
+            "colors": [
+              "G"
+            ],
+            "power": "2",
+            "toughness": "1",
+            "flavor_text": "In the wake of Emrakul, some werewolves' human forms were lost forever.",
+            "artist": "Slawomir Maniak",
+            "artist_id": "d887bc66-2779-416c-a1ff-d8720242063e",
+            "illustration_id": "0a124ffc-abe3-4c21-bca2-c9bd58ac4a70",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.jpg?1783937448",
+              "normal": "https://cards.scryfall.io/normal/front/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.jpg?1783937448",
+              "large": "https://cards.scryfall.io/large/front/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.jpg?1783937448",
+              "png": "https://cards.scryfall.io/png/front/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.png?1783937448",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.jpg?1783937448",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.jpg?1783937448",
+              "thumb": "https://cards.scryfall.io/thumb/front/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.webp?1783937448",
+              "grid": "https://cards.scryfall.io/grid/front/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.webp?1783937448",
+              "display": "https://cards.scryfall.io/display/front/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.webp?1783937448",
+              "art": "https://cards.scryfall.io/art/front/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.webp?1783937448",
+              "crop": "https://cards.scryfall.io/crop/front/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.webp?1783937448"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Sinuous Predator",
+            "mana_cost": "",
+            "type_line": "Creature — Eldrazi Werewolf",
+            "oracle_text": "This creature can't be blocked by more than one creature.",
+            "colors": [],
+            "power": "4",
+            "toughness": "4",
+            "flavor_text": "A different kind of transformation has taken place.",
+            "artist": "Slawomir Maniak",
+            "artist_id": "d887bc66-2779-416c-a1ff-d8720242063e",
+            "illustration_id": "90a0f956-59b0-4892-9ca5-1d816223a592",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.jpg?1783937448",
+              "normal": "https://cards.scryfall.io/normal/back/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.jpg?1783937448",
+              "large": "https://cards.scryfall.io/large/back/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.jpg?1783937448",
+              "png": "https://cards.scryfall.io/png/back/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.png?1783937448",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.jpg?1783937448",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.jpg?1783937448",
+              "thumb": "https://cards.scryfall.io/thumb/back/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.webp?1783937448",
+              "grid": "https://cards.scryfall.io/grid/back/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.webp?1783937448",
+              "display": "https://cards.scryfall.io/display/back/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.webp?1783937448",
+              "art": "https://cards.scryfall.io/art/back/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.webp?1783937448",
+              "crop": "https://cards.scryfall.io/crop/back/f/8/f89f116a-1e8e-4ae7-be39-552e4954f229.webp?1783937448"
+            }
+          }
+        ],
+        "engine_face": "Kessig Prowler",
+        "selected_face": {
+          "name": "Kessig Prowler",
+          "oracle_text": "{4}{G}: Transform this creature.",
+          "mana_cost": "{G}",
+          "type_line": "Creature — Werewolf Horror",
+          "power": "2",
+          "toughness": "1",
+          "colors": [
+            "G"
+          ]
+        }
+      },
+      "registry": {
+        "csvid": 16138,
+        "iid": 16230,
+        "name": "Kessig Prowler",
+        "handler": "manalinkeh_card_kessig_prowler",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Reach Through Mists": {
+      "oracle": {
+        "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+        "name": "Reach Through Mists",
+        "oracle_text": "Draw a card.",
+        "mana_cost": "{U}",
+        "type_line": "Instant — Arcane",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/7/reach-through-mists?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7353,
+        "iid": 7720,
+        "name": "Reach Through Mists",
+        "handler": "manalinkeh_card_reach_through_mists",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Sky Skiff": {
+      "oracle": {
+        "oracle_id": "f2c43b85-8c42-4b23-84c2-bec8d6230039",
+        "name": "Sky Skiff",
+        "oracle_text": "Flying\nCrew 1 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)",
+        "mana_cost": "{2}",
+        "type_line": "Artifact — Vehicle",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Crew"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/233/sky-skiff?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16518,
+        "iid": 16604,
+        "name": "Sky Skiff",
+        "handler": "manalinkeh_card_sky_stiff",
+        "kind": "card"
+      }
+    },
+    "Soltari Foot Soldier": {
+      "oracle": {
+        "oracle_id": "6ccb3ac8-0509-431b-a196-d3cbf4fa80ae",
+        "name": "Soltari Foot Soldier",
+        "oracle_text": "Shadow (This creature can block or be blocked by only creatures with shadow.)",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Soltari Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Shadow"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tmp/43/soltari-foot-soldier?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3287,
+        "iid": 8990,
+        "name": "Soltari Foot Soldier",
+        "handler": "manalinkeh_card_dauthi_marauder",
+        "kind": "card"
+      }
+    },
+    "Traveler's Amulet": {
+      "oracle": {
+        "oracle_id": "48b561dd-f23d-409a-87c8-e49902b2477b",
+        "name": "Traveler's Amulet",
+        "oracle_text": "{1}, Sacrifice this artifact: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/273/travelers-amulet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12102,
+        "iid": 10166,
+        "name": "Traveler's Amulet",
+        "handler": "manalinkeh_card_travelers_amulet",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Wall of Roots": {
+      "oracle": {
+        "oracle_id": "3a21a6ae-b2f2-4f0c-acfd-5f3e8d63fd2f",
+        "name": "Wall of Roots",
+        "oracle_text": "Defender\nPut a -0/-1 counter on this creature: Add {G}. Activate only once each turn.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Plant Wall",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/278/wall-of-roots?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2656,
+        "iid": 10778,
+        "name": "Wall of Roots",
+        "handler": "manalinkeh_card_wall_of_roots",
+        "kind": "card"
+      }
+    }
+  }
+}

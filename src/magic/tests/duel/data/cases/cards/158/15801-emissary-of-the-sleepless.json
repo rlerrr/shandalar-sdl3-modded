@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Emissary of the Sleepless",
+  "csvid": 15801,
+  "recipes": [
+    {
+      "family": "entry_trigger_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 15801,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, if a creature died this turn, create a 1/1 white Spirit creature token with flying.",
+      "variants": [
+        "enemy_death_0",
+        "enemy_death_1",
+        "own_death_0",
+        "own_death_1",
+        "past_turn_0",
+        "past_turn_1",
+        "artifact_only_0",
+        "artifact_only_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Pollen Lullaby",
+  "csvid": 9236,
+  "recipes": [
+    {
+      "family": "combat_wide_fog",
+      "version": 2,
+      "oracle_text": "Prevent all combat damage that would be dealt this turn. Clash with an opponent. If you win, creatures that player controls don't untap during the player's next untap step. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",
+      "params": {
+        "model": "clash_untap",
+        "cast_mana": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "activation_mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "defend_0",
+        "own_attack_0",
+        "no_effect_0",
+        "noncombat_0",
+        "insufficient_0",
+        "wrong_color_0",
+        "pending_snapshot_0",
+        "zero_attackers_0",
+        "clash_win_0",
+        "clash_lose_0",
+        "clash_tie_0",
+        "human_bottom_0",
+        "defend_1",
+        "own_attack_1",
+        "no_effect_1",
+        "noncombat_1",
+        "insufficient_1",
+        "wrong_color_1",
+        "pending_snapshot_1",
+        "zero_attackers_1",
+        "clash_win_1",
+        "clash_lose_1",
+        "clash_tie_1",
+        "human_bottom_1"
+      ]
+    }
+  ]
+}

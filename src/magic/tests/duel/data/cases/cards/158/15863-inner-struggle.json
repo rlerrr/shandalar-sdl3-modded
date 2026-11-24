@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "card": "Inner Struggle",
+  "csvid": 15863,
+  "recipes": [
+    {
+      "family": "power_based_self_damage",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "target": "creature",
+        "amount": "power_on_resolution",
+        "damage_source": "target",
+        "timing": "instant"
+      },
+      "oracle_text": "Target creature deals damage to itself equal to its power.",
+      "variants": [
+        "survives_0",
+        "lethal_0",
+        "own_target_0",
+        "lifelink_0",
+        "foreign_lifelink_0",
+        "deathtouch_0",
+        "indestructible_0",
+        "own_color_protection_0",
+        "zero_power_0",
+        "power_up_pending_0",
+        "negative_power_pending_0",
+        "target_bounced_0",
+        "target_hexproof_0",
+        "countered_0",
+        "no_creature_0",
+        "shroud_only_0",
+        "insufficient_mana_0",
+        "pending_snapshot_0",
+        "off_turn_0",
+        "instant_response_0",
+        "survives_1",
+        "lethal_1",
+        "own_target_1",
+        "lifelink_1",
+        "foreign_lifelink_1",
+        "deathtouch_1",
+        "indestructible_1",
+        "own_color_protection_1",
+        "zero_power_1",
+        "power_up_pending_1",
+        "negative_power_pending_1",
+        "target_bounced_1",
+        "target_hexproof_1",
+        "countered_1",
+        "no_creature_1",
+        "shroud_only_1",
+        "insufficient_mana_1",
+        "pending_snapshot_1",
+        "off_turn_1",
+        "instant_response_1"
+      ]
+    }
+  ]
+}

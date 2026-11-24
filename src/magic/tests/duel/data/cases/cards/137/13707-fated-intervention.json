@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 13707,
+  "card": "Fated Intervention",
+  "recipes": [
+    {
+      "family": "library_scry_modes_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 13707,
+        "printed_cost": "{2}{G}{G}{G}"
+      },
+      "oracle_text": "Create two 3/3 green Centaur enchantment creature tokens. If it's your turn, scry 2.",
+      "variants": [
+        "own_0",
+        "off_turn_0",
+        "countered_0",
+        "enchantment_0",
+        "partial_0",
+        "own_1",
+        "off_turn_1",
+        "countered_1",
+        "enchantment_1",
+        "partial_1"
+      ]
+    }
+  ]
+}

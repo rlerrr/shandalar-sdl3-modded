@@ -1,0 +1,273 @@
+{
+  "sources": {
+    "Seraph of the Masses": {
+      "oracle": {
+        "oracle_id": "5d6f75f1-dd9c-4d94-aea8-3bdec41eaa29",
+        "name": "Seraph of the Masses",
+        "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nFlying\nSeraph of the Masses's power and toughness are each equal to the number of creatures you control.",
+        "mana_cost": "{5}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [
+          "Flying",
+          "Convoke"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/moc/205/seraph-of-the-masses?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14169,
+        "iid": 8502,
+        "name": "Seraph of the Masses",
+        "handler": "manalinkeh_card_seraph_of_the_masses",
+        "kind": "card"
+      }
+    },
+    "Chief Engineer": {
+      "oracle": {
+        "oracle_id": "02dbb6f8-ef84-4156-87dc-34033e64fdb7",
+        "name": "Chief Engineer",
+        "oracle_text": "Artifact spells you cast have convoke. (Your creatures can help cast those spells. Each creature you tap while casting an artifact spell pays for {1} or one mana of that creature's color.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Vedalken Artificer",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c16/86/chief-engineer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14084,
+        "iid": 1688,
+        "name": "Chief Engineer",
+        "handler": "manalinkeh_card_chief_engineer",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Eager Cadet": {
+      "oracle": {
+        "oracle_id": "39780477-01ba-40c6-8fe6-2178efb10b92",
+        "name": "Eager Cadet",
+        "oracle_text": "",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/S1/eager-cadet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4363,
+        "iid": 12406,
+        "name": "Eager Cadet",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Flying Men": {
+      "oracle": {
+        "oracle_id": "b5666c68-059d-4e32-9b04-548b3058430d",
+        "name": "Flying Men",
+        "oracle_text": "Flying",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Human",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsb/20/flying-men?utm_source=api"
+      },
+      "registry": {
+        "csvid": 420,
+        "iid": 3560,
+        "name": "Flying Men",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Ornithopter": {
+      "oracle": {
+        "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+        "name": "Ornithopter",
+        "oracle_text": "Flying",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Thopter",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 514,
+        "iid": 6907,
+        "name": "Ornithopter",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Sol Ring": {
+      "oracle": {
+        "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+        "name": "Sol Ring",
+        "oracle_text": "{T}: Add {C}{C}.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+      },
+      "registry": {
+        "csvid": 230,
+        "iid": 8968,
+        "name": "Sol Ring",
+        "handler": "manalinkeh_card_sol_ring",
+        "kind": "card"
+      }
+    },
+    "Tormod's Crypt": {
+      "oracle": {
+        "oracle_id": "1573f7f9-672c-421a-b1ac-3d0d8aea59ca",
+        "name": "Tormod's Crypt",
+        "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/235/tormods-crypt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 368,
+        "iid": 10094,
+        "name": "Tormod's Crypt",
+        "handler": "manalinkeh_card_tormods_crypt",
+        "kind": "card"
+      }
+    }
+  }
+}

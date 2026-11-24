@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Liege of the Hollows",
+  "csvid": 2999,
+  "recipes": [
+    {
+      "family": "departure_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 2999,
+        "mana_cost": "{2}{G}{G}"
+      },
+      "oracle_text": "When this creature dies, each player may pay any amount of mana. Then each player creates a number of 1/1 green Squirrel creature tokens equal to the amount of mana they paid this way.",
+      "variants": [
+        "own_pay_0",
+        "own_pay_1",
+        "foe_pay_0",
+        "foe_pay_1",
+        "both_pay_0",
+        "both_pay_1",
+        "neither_pay_0",
+        "neither_pay_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Rhys the Exiled",
+  "csvid": 9420,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_sacrifice_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 9420,
+        "cost": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever Rhys attacks, you gain 1 life for each Elf you control.\n{B}, Sacrifice an Elf: Regenerate Rhys.",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "denied_cost_0",
+        "denied_cost_1",
+        "proactive_0",
+        "proactive_1",
+        "cannot_regenerate_0",
+        "cannot_regenerate_1",
+        "attack_count_0",
+        "attack_count_1",
+        "other_attacks_0",
+        "other_attacks_1",
+        "attack_self_0",
+        "attack_self_1"
+      ]
+    }
+  ]
+}

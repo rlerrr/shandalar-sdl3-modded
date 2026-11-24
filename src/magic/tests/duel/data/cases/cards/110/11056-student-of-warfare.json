@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "csvid": 11056,
+  "card": "Student of Warfare",
+  "recipes": [
+    {
+      "family": "level_keyword_combat",
+      "version": 2,
+      "oracle_text": "Level up {W} ({W}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 2-6\n3/3\nFirst strike\nLEVEL 7+\n4/4\nDouble strike",
+      "params": {
+        "price": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "activation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "base": [
+          1,
+          1
+        ],
+        "first": [
+          2,
+          3,
+          3
+        ],
+        "second": [
+          7,
+          4,
+          4
+        ],
+        "first_riders": [
+          "First strike"
+        ],
+        "second_riders": [
+          "Double strike"
+        ],
+        "rider": "strikes"
+      },
+      "variants": [
+        "thresholds_0",
+        "thresholds_1",
+        "short_payment_0",
+        "short_payment_1",
+        "offturn_0",
+        "offturn_1",
+        "pending_spell_0",
+        "pending_spell_1",
+        "base_block_0",
+        "base_block_1",
+        "first_block_0",
+        "first_block_1",
+        "second_attack_0",
+        "second_attack_1",
+        "second_block_0",
+        "second_block_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Whispering Specter",
+  "csvid": 11717,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "infect_combat_riders",
+      "version": 2,
+      "oracle_text": "Flying\nInfect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nWhenever this creature deals combat damage to a player, you may sacrifice it. If you do, that player discards a card for each poison counter they have.",
+      "params": {
+        "rider": "specter",
+        "mana": [
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 1,
+        "toughness": 1,
+        "artifact": false
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "unblocked_0",
+        "unblocked_1",
+        "blocked_0",
+        "blocked_1",
+        "defending_0",
+        "defending_1",
+        "replay_0",
+        "replay_1",
+        "discard_two_0",
+        "discard_two_1",
+        "decline_0",
+        "decline_1",
+        "short_hand_0",
+        "short_hand_1",
+        "flying_blocked_0",
+        "flying_blocked_1"
+      ]
+    }
+  ]
+}

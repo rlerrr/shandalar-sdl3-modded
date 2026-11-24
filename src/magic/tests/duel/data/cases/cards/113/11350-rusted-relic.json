@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "csvid": 11350,
+  "card": "Rusted Relic",
+  "recipes": [
+    {
+      "family": "metalcraft_artifact",
+      "version": 2,
+      "params": {
+        "effect": "animate",
+        "flying": false,
+        "artifact": true,
+        "cast_mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 0,
+        "toughness": 0
+      },
+      "oracle_text": "Metalcraft — This artifact is a 5/5 Golem artifact creature as long as you control three or more artifacts.",
+      "variants": [
+        "cast_below_0",
+        "cast_threshold_0",
+        "unfunded_0",
+        "enemy_scope_0",
+        "gain_0",
+        "drop_0",
+        "old_attack_0",
+        "fresh_attack_0",
+        "replay_0",
+        "cast_below_1",
+        "cast_threshold_1",
+        "unfunded_1",
+        "enemy_scope_1",
+        "gain_1",
+        "drop_1",
+        "old_attack_1",
+        "fresh_attack_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

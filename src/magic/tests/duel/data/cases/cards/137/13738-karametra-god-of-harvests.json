@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Karametra, God of Harvests",
+  "csvid": 13738,
+  "recipes": [
+    {
+      "family": "cast_creature_riders",
+      "version": 2,
+      "oracle_text": "Indestructible\nAs long as your devotion to green and white is less than seven, Karametra isn't a creature.\nWhenever you cast a creature spell, you may search your library for a Forest or Plains card, put it onto the battlefield tapped, then shuffle.",
+      "params": {
+        "effect": "land",
+        "price": [
+          3,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "fee": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": [
+          "Indestructible"
+        ]
+      },
+      "variants": [
+        "own_0",
+        "opponent_0",
+        "noncreature_0",
+        "countered_0",
+        "replay_0",
+        "typed_land_0",
+        "plains_0",
+        "devotion_low_0",
+        "devotion_high_0",
+        "indestructible_0",
+        "own_1",
+        "opponent_1",
+        "noncreature_1",
+        "countered_1",
+        "replay_1",
+        "typed_land_1",
+        "plains_1",
+        "devotion_low_1",
+        "devotion_high_1",
+        "indestructible_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Pharagax Giant",
+  "csvid": 13779,
+  "recipes": [
+    {
+      "family": "entry_trigger_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 13779,
+        "cost": "{4}{R}",
+        "choices": [
+          "tribute_paid_0",
+          "tribute_paid_1",
+          "tribute_declined_0",
+          "tribute_declined_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "Tribute 2 (As this creature enters, an opponent of your choice may put two +1/+1 counters on it.)\nWhen this creature enters, if tribute wasn't paid, this creature deals 5 damage to each opponent.",
+      "variants": [
+        "tribute_paid_0",
+        "tribute_paid_1",
+        "tribute_declined_0",
+        "tribute_declined_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

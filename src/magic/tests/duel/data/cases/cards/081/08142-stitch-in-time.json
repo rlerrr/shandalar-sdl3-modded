@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Stitch in Time",
+  "csvid": 8142,
+  "recipes": [
+    {
+      "family": "seeded_coin_riders",
+      "version": 2,
+      "params": {
+        "shape": "stitch",
+        "mana": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "keywords": []
+      },
+      "oracle_text": "Flip a coin. If you win the flip, take an extra turn after this one.",
+      "variants": [
+        "win_0",
+        "lose_0",
+        "replay_0",
+        "unfunded_0",
+        "win_1",
+        "lose_1",
+        "replay_1",
+        "unfunded_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Ornitharch",
+  "csvid": 13775,
+  "recipes": [
+    {
+      "family": "entry_trigger_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 13775,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "Flying\nTribute 2 (As this creature enters, an opponent of your choice may put two +1/+1 counters on it.)\nWhen this creature enters, if tribute wasn't paid, create two 1/1 white Bird creature tokens with flying.",
+      "variants": [
+        "tribute_paid_0",
+        "tribute_paid_1",
+        "tribute_declined_0",
+        "tribute_declined_1"
+      ]
+    }
+  ]
+}

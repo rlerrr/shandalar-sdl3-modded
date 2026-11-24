@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Gorilla War Cry",
+  "csvid": 2293,
+  "recipes": [
+    {
+      "family": "next_upkeep_cantrip_additional_riders",
+      "version": 2,
+      "params": {
+        "mode": "menace",
+        "instant": true,
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "keywords": []
+      },
+      "oracle_text": "Cast this spell only during combat before blockers are declared.\nAll creatures gain menace until end of turn. (They can't be blocked except by two or more creatures.)\nDraw a card at the beginning of the next turn's upkeep.",
+      "variants": [
+        "one_block_0",
+        "pair_blocks_0",
+        "offturn_0",
+        "expiry_0",
+        "main_denied_0",
+        "after_blocks_0",
+        "one_block_1",
+        "pair_blocks_1",
+        "offturn_1",
+        "expiry_1",
+        "main_denied_1",
+        "after_blocks_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "card": "Geyser Glider",
+  "csvid": 10543,
+  "recipes": [
+    {
+      "family": "landfall_self_change",
+      "version": 2,
+      "params": {
+        "schema": 8,
+        "change": {
+          "kind": "gain_keyword",
+          "keyword": "flying"
+        },
+        "passive": ""
+      },
+      "oracle_text": "Landfall — Whenever a land you control enters, this creature gains flying until end of turn.",
+      "variants": [
+        "cast_0",
+        "unfunded_0",
+        "own_land_0",
+        "opponent_land_0",
+        "consecutive_lands_0",
+        "cleanup_0",
+        "empty_search_0",
+        "nonland_spell_0",
+        "late_source_0",
+        "removed_source_0",
+        "countered_search_0",
+        "pending_replay_0",
+        "fresh_source_0",
+        "other_source_0",
+        "combat_before_0",
+        "combat_after_0",
+        "combat_expired_0",
+        "flying_blocker_0",
+        "cast_1",
+        "unfunded_1",
+        "own_land_1",
+        "opponent_land_1",
+        "consecutive_lands_1",
+        "cleanup_1",
+        "empty_search_1",
+        "nonland_spell_1",
+        "late_source_1",
+        "removed_source_1",
+        "countered_search_1",
+        "pending_replay_1",
+        "fresh_source_1",
+        "other_source_1",
+        "combat_before_1",
+        "combat_after_1",
+        "combat_expired_1",
+        "flying_blocker_1"
+      ]
+    }
+  ]
+}

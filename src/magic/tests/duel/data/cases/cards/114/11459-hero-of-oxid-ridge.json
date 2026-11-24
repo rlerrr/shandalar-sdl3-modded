@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Hero of Oxid Ridge",
+  "csvid": 11459,
+  "recipes": [
+    {
+      "family": "attack_trigger_block_and_target",
+      "version": 2,
+      "params": {
+        "csvid": 11459,
+        "cost": "{2}{R}{R}",
+        "choices": [
+          "haste_0",
+          "haste_1",
+          "battle_cry_0",
+          "battle_cry_1",
+          "block_power_0",
+          "block_power_1"
+        ]
+      },
+      "oracle_text": "Haste\nBattle cry (Whenever this creature attacks, each other attacking creature gets +1/+0 until end of turn.)\nWhenever this creature attacks, creatures with power 1 or less can't block this turn.",
+      "variants": [
+        "haste_0",
+        "haste_1",
+        "battle_cry_0",
+        "battle_cry_1",
+        "block_power_0",
+        "block_power_1"
+      ]
+    }
+  ]
+}

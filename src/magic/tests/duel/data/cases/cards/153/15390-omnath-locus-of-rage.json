@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "csvid": 15390,
+  "card": "Omnath, Locus of Rage",
+  "recipes": [
+    {
+      "family": "landfall_tokens_and_mana",
+      "version": 2,
+      "oracle_text": "Landfall — Whenever a land you control enters, create a 5/5 red and green Elemental creature token.\nWhenever Omnath or another Elemental you control dies, Omnath deals 3 damage to any target.",
+      "params": {
+        "effect": "omnath",
+        "price": [
+          3,
+          0,
+          0,
+          2,
+          2,
+          0
+        ],
+        "clauses": [
+          "Landfall — Whenever a land you control enters, create a 5/5 red and green Elemental creature token.",
+          "Whenever Omnath or another Elemental you control dies, Omnath deals 3 damage to any target."
+        ]
+      },
+      "variants": [
+        "own_0",
+        "own_1",
+        "opponent_0",
+        "opponent_1",
+        "repeat_0",
+        "repeat_1",
+        "late_source_0",
+        "late_source_1",
+        "token_dies_0",
+        "token_dies_1",
+        "source_dies_0",
+        "source_dies_1",
+        "own_non_elemental_0",
+        "own_non_elemental_1",
+        "foreign_elemental_0",
+        "foreign_elemental_1"
+      ]
+    }
+  ]
+}

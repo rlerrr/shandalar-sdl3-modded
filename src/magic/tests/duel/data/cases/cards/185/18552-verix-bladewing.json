@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "csvid": 18552,
+  "card": "Verix Bladewing",
+  "recipes": [
+    {
+      "family": "kicker_tokens_and_copies",
+      "version": 2,
+      "oracle_text": "Kicker {3} (You may pay an additional {3} as you cast this spell.)\nFlying\nWhen Verix Bladewing enters, if it was kicked, create Karox Bladewing, a legendary 4/4 red Dragon creature token with flying.",
+      "params": {
+        "effect": "flying_entry",
+        "identity": "Karox Bladewing",
+        "counts": [
+          0,
+          1
+        ],
+        "pt": [
+          4,
+          4
+        ],
+        "color": 16,
+        "subtypes": [
+          "Dragon"
+        ],
+        "price": [
+          2,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "fee": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "clauses": [
+          "Kicker {3} (You may pay an additional {3} as you cast this spell.)",
+          "Flying",
+          "When Verix Bladewing enters, if it was kicked, create Karox Bladewing, a legendary 4/4 red Dragon creature token with flying."
+        ],
+        "source_pt": [
+          4,
+          4
+        ]
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

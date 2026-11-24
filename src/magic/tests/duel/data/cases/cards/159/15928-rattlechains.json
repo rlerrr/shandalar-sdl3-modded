@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Rattlechains",
+  "csvid": 15928,
+  "recipes": [
+    {
+      "family": "flash_entry_tribal_and_team",
+      "version": 2,
+      "params": {
+        "csvid": 15928,
+        "cost": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flash\nFlying\nWhen this creature enters, target Spirit gains hexproof until end of turn.\nYou may cast Spirit spells as though they had flash.",
+      "variants": [
+        "own_spirit_0",
+        "own_spirit_1",
+        "foreign_spirit_0",
+        "foreign_spirit_1",
+        "self_flight_0",
+        "self_flight_1",
+        "spirit_permission_0",
+        "spirit_permission_1",
+        "nonspirit_denied_0",
+        "nonspirit_denied_1"
+      ]
+    }
+  ]
+}

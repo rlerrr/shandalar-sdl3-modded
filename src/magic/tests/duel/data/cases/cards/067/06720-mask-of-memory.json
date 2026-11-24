@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 6720,
+  "card": "Mask of Memory",
+  "recipes": [
+    {
+      "family": "equipment_combat_damage_hand_and_cast",
+      "version": 2,
+      "params": {
+        "csvid": 6720,
+        "equip_generic": 1,
+        "printed_cost": "{2}"
+      },
+      "oracle_text": "Whenever equipped creature deals combat damage to a player, you may draw two cards. If you do, discard a card.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "variants": [
+        "hit_0",
+        "noncombat_0",
+        "blocked_0",
+        "bare_0",
+        "short_equip_0",
+        "selected_discard_0",
+        "decline_0",
+        "hit_1",
+        "noncombat_1",
+        "blocked_1",
+        "bare_1",
+        "short_equip_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Azorius Herald",
+  "csvid": 8173,
+  "recipes": [
+    {
+      "family": "creature_entry_sacrifices",
+      "version": 2,
+      "params": {
+        "mode": "blue_life",
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "keywords": [],
+        "power": 2,
+        "toughness": 1
+      },
+      "oracle_text": "This creature can't be blocked.\nWhen this creature enters, you gain 4 life.\nWhen this creature enters, sacrifice it unless {U} was spent to cast it.",
+      "variants": [
+        "ordinary_0",
+        "blue_0",
+        "blink_0",
+        "combat_0",
+        "countered_0",
+        "wrong_color_0",
+        "snapshot_0",
+        "ordinary_1",
+        "blue_1",
+        "blink_1",
+        "combat_1",
+        "countered_1",
+        "wrong_color_1",
+        "snapshot_1",
+        "blue_left_unspent_0"
+      ]
+    }
+  ]
+}

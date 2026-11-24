@@ -1,4 +1,5 @@
 #include "duel_test_api.h"
+#include "magic/src/duel_runtime.h"
 #include "magic/src/game_support.h"
 #include "magic/src/global_state.h"
 #include "magic/src/global_other.h"
@@ -40,14 +41,20 @@ extern void reset_duel_globals(void), cleanup_phase(unsigned int);
 extern int reset_timestamp_players(void);
 extern int end_turn_phase(unsigned int);
 extern int TENTATIVE_start_turn(int);
+extern int init_turn(int), check_duel_finished(void);
+extern int duel_select_scheduled_turn(int normal_player, int *is_extra);
+extern int duel_finish_scheduled_turn(int normal_player, int was_extra);
+extern int duel_pay_to_declare_attacker(int player, int card);
 extern void shandalar_initialize_modded_card_database(void);
 extern void InitializeDuelUiGlobalIds(void);
 extern void save_ai_search_state(void), restore_ai_search_state(void);
 extern void manalinkeh_backup_data_for_ai_0(void), manalinkeh_restore_data_for_ai_0(void);
 extern int choose_ai_main_phase_action(int), can_attack(int, int);
+extern int update_attacker_count_and_check_combat_done(int), legal_attacker_count;
 extern void run_duel_turn(unsigned int);
 extern int assign_blocker_to_attacker(int, int, int, int);
 extern void resolve_combat_damage(int);
+extern void manalinkeh_phase_changed(int player, phase_t phase);
 extern int cleanup_combat_state(int);
 extern void mark_blocked_attackers(int);
 extern int manalinkeh_count_creatures_this_is_blocking(int, int), manalinkeh_is_unblocked(int, int);
@@ -82,6 +89,8 @@ typedef struct {
   uint32_t source_stamp;
   int fallback_color, allow_auto_nonmana, label_result, unknown_menu_result, result;
   int followups_begin, followups_end, stack_before;
+  int payment_armed, payment_result;
+  unsigned payment;
   char label[128];
 } ModeIntent;
 static ModeIntent mode_intent;
@@ -93,8 +102,11 @@ static int forced_target_choices;
 static int discard_policy, discard_choice_count;
 static int untap_prepared_player = -1, untap_prepared_turn = -1;
 static int upkeep_prepared_player = -1, upkeep_prepared_turn = -1, upkeep_prepared_phase = -1;
-static void invalidate_upkeep_preparation(void) {
+static int draw_prepared_player = -1, draw_prepared_turn = -1;
+static int scheduled_normal_player, scheduled_turn_is_extra;
+static void invalidate_phase_preparation(void) {
   upkeep_prepared_player = upkeep_prepared_turn = upkeep_prepared_phase = -1;
+  draw_prepared_player = draw_prepared_turn = -1;
 }
 /* Opt-in phase markers belong to the test driver, not normal gameplay state. */
 static unsigned char announced_spells[2][151];
@@ -112,6 +124,8 @@ struct DuelTestSnapshot {
   int discard_policy, discard_choice_count;
   int untap_prepared_player, untap_prepared_turn;
   int upkeep_prepared_player, upkeep_prepared_turn, upkeep_prepared_phase;
+  int draw_prepared_player, draw_prepared_turn;
+  int scheduled_normal_player, scheduled_turn_is_extra;
   int bridge_mana_color;
   unsigned char announced_spells[2][151];
   int unlocked[50];
@@ -149,6 +163,10 @@ DuelTestSnapshot *duel_test_capture(void)
   s->untap_prepared_player = untap_prepared_player; s->untap_prepared_turn = untap_prepared_turn;
   s->upkeep_prepared_player = upkeep_prepared_player; s->upkeep_prepared_turn = upkeep_prepared_turn;
   s->upkeep_prepared_phase = upkeep_prepared_phase;
+  s->draw_prepared_player = draw_prepared_player;
+  s->draw_prepared_turn = draw_prepared_turn;
+  s->scheduled_normal_player = scheduled_normal_player;
+  s->scheduled_turn_is_extra = scheduled_turn_is_extra;
   s->bridge_mana_color = tapped_for_mana_color;
   memcpy(s->announced_spells, announced_spells, sizeof(announced_spells));
   memcpy(s->unlocked, unlocked, sizeof(s->unlocked));
@@ -178,6 +196,10 @@ void duel_test_restore(const DuelTestSnapshot *s)
   untap_prepared_player = s->untap_prepared_player; untap_prepared_turn = s->untap_prepared_turn;
   upkeep_prepared_player = s->upkeep_prepared_player; upkeep_prepared_turn = s->upkeep_prepared_turn;
   upkeep_prepared_phase = s->upkeep_prepared_phase;
+  draw_prepared_player = s->draw_prepared_player;
+  draw_prepared_turn = s->draw_prepared_turn;
+  scheduled_normal_player = s->scheduled_normal_player;
+  scheduled_turn_is_extra = s->scheduled_turn_is_extra;
   tapped_for_mana_color = s->bridge_mana_color;
   memcpy(announced_spells, s->announced_spells, sizeof(announced_spells));
   memcpy(unlocked, s->unlocked, sizeof(s->unlocked));
@@ -207,6 +229,58 @@ static int mode_label_index(const char *options, const char *wanted, int *cancel
   }
   return found;
 }
+static int payment_option(const char *line, unsigned wanted)
+{
+  int index = 0, found = -1;
+  while (line && *line) {
+    const char *end = strchr(line,'\n');
+    if (!end) end = line + strlen(line);
+    const char *at = line;
+    while (at < end && (*at == ' ' || *at == '\t')) ++at;
+    if (end-at >= 4 && !strncmp(at,"Pay ",4)) {
+      int counts[6] = {0}, valid = 1;
+      at += 4;
+      if (at < end && *at >= '0' && *at <= '9') {
+        while (at < end && *at >= '0' && *at <= '9') {
+          if (counts[0] <= 15) counts[0] = counts[0]*10 + *at - '0';
+          else valid = 0;
+          ++at;
+        }
+      }
+      const char *colors = "BUGRW";
+      for (; at < end; ++at) {
+        const char *color = strchr(colors,*at);
+        if (color) ++counts[1+color-colors];
+        else if (*at != ' ' && *at != '\r' && *at != '\t') valid = 0;
+      }
+      unsigned packed = 0;
+      for (int color=0;color<6;++color) {
+        if (counts[color] > 15) valid = 0;
+        packed |= (unsigned)counts[color] << (4*color);
+      }
+      if (valid && packed == wanted) {
+        if (found != -1) duel_host_fail("ambiguous scripted payment");
+        found = index;
+      }
+    }
+    ++index;
+    line = *end ? end+1 : end;
+  }
+  return found;
+}
+static int payment_submenu(const char *prompt)
+{
+  if (!prompt) return 0;
+  while (*prompt == ' ' || *prompt == '\t') ++prompt;
+  return !strncmp(prompt,"Cancel\n Pay ",12) || !strncmp(prompt,"Cancel\r\n Pay ",13);
+}
+static int unavailable_menu_receipt(const char *prompt)
+{
+  uint32_t hash=2166136261u;
+  const unsigned char *text=(const unsigned char *)(prompt?prompt:"");
+  while (*text) { hash^=*text++; hash*=16777619u; }
+  return -2-(int)(hash & 0x3fffffffu);
+}
 static int choose_mode_intent(const DuelChoiceRequest *request, DuelChoiceAnswer *answer)
 {
   if (!mode_intent.active || !mode_intent.in_activation || request->player!=mode_intent.player)
@@ -219,12 +293,17 @@ static int choose_mode_intent(const DuelChoiceRequest *request, DuelChoiceAnswer
     if (found<0) {
       /* Preserve the actual offered-menu identity in the receipt. A renamed
          value menu must not match an old mana-only-menu failure signature. */
-      uint32_t hash=2166136261u;
-      const unsigned char *text=(const unsigned char *)(request->prompt?request->prompt:"");
-      while (*text) { hash^=*text++; hash*=16777619u; }
-      mode_intent.unknown_menu_result=-2-(int)(hash & 0x3fffffffu);
+      mode_intent.unknown_menu_result=unavailable_menu_receipt(request->prompt);
     }
     answer->value=found>=0 ? found : cancel>=0 ? cancel : 0;
+    answer->card=-1;
+    return 1;
+  }
+  if (request->kind==DUEL_CHOICE_DIALOG && mode_intent.label_result==1 &&
+      mode_intent.payment_armed && !mode_intent.payment_result && payment_submenu(request->prompt)) {
+    int found=payment_option(request->prompt,mode_intent.payment);
+    mode_intent.payment_result=found>=0 ? 1 : unavailable_menu_receipt(request->prompt);
+    answer->value=found>=0 ? found : 0; /* The offered first entry is Cancel. */
     answer->card=-1;
     return 1;
   }
@@ -258,6 +337,14 @@ void duel_test_activation_mode_decision(int player, DuelTestRef source, const ch
   mode_intent.followups_begin=decision_count;
   memcpy(mode_intent.label,label,strlen(label)+1);
 }
+void duel_test_activation_mode_payment(int player, unsigned payment)
+{
+  if (!mode_intent.active || mode_intent.in_activation || mode_intent.completed ||
+      mode_intent.player!=player || mode_intent.payment_armed || payment>0xffffffu)
+    duel_host_fail("activation payment requires a fresh matching mode intent");
+  mode_intent.payment_armed=1;
+  mode_intent.payment=payment;
+}
 static void begin_mode_activation(DuelTestRef source)
 {
   if (!mode_intent.active) return;
@@ -282,6 +369,7 @@ static void complete_mode_activation(int activated)
   }
   mode_intent.result=mode_intent.label_result==-1 ? mode_intent.unknown_menu_result :
     activated && (mode_intent.label_result==1 || (mode_intent.allow_auto_nonmana && pending==1));
+  if (mode_intent.payment_result<0) mode_intent.result=mode_intent.payment_result;
   mode_intent.in_activation=0; mode_intent.completed=1;
   if (getenv("DUEL_TEST_TRACE")) fprintf(stderr,"MODE_RESULT source=%d/%d label_result=%d pending=%d activated=%d result=%d\n",
       mode_intent.player,mode_intent.source_card,mode_intent.label_result,pending,activated,mode_intent.result);
@@ -471,42 +559,7 @@ static int choose(void *context, const DuelChoiceRequest *request, DuelChoiceAns
   if (request->kind == DUEL_CHOICE_DIALOG && d->value == -4) {
     /* Select the explicitly scripted mana vector from the real payment menu,
        without depending on option ordering or which alternatives are affordable. */
-    const char *line = request->prompt;
-    int index = 0, found = -1;
-    while (line && *line) {
-      const char *end = strchr(line,'\n');
-      if (!end) end = line + strlen(line);
-      const char *at = line;
-      while (at < end && (*at == ' ' || *at == '\t')) ++at;
-      if (end-at >= 4 && !strncmp(at,"Pay ",4)) {
-        int counts[6] = {0}, valid = 1;
-        at += 4;
-        if (at < end && *at >= '0' && *at <= '9') {
-          while (at < end && *at >= '0' && *at <= '9') {
-            if (counts[0] <= 15) counts[0] = counts[0]*10 + *at - '0';
-            else valid = 0;
-            ++at;
-          }
-        }
-        const char *colors = "BUGRW";
-        for (; at < end; ++at) {
-          const char *color = strchr(colors,*at);
-          if (color) ++counts[1+color-colors];
-          else if (*at != ' ' && *at != '\r' && *at != '\t') valid = 0;
-        }
-        unsigned packed = 0;
-        for (int color=0;color<6;++color) {
-          if (counts[color] > 15) valid = 0;
-          packed |= (unsigned)counts[color] << (4*color);
-        }
-        if (valid && packed == (unsigned)d->card) {
-          if (found != -1) duel_host_fail("ambiguous scripted payment");
-          found = index;
-        }
-      }
-      ++index;
-      line = *end ? end+1 : end;
-    }
+    int found = payment_option(request->prompt,(unsigned)d->card);
     if (found == -1) duel_host_fail("scripted payment is not offered");
     answer->value = found; answer->card = -1;
   }
@@ -684,7 +737,9 @@ void duel_test_set_life(int p, int amount) { g_life[p] = amount; }
 void duel_test_set_turn(int p, int combat) {
   /* Selecting an arbitrary fixture phase is not a new untap step. */
   untap_prepared_player = -1;
-  invalidate_upkeep_preparation();
+  invalidate_phase_preparation();
+  scheduled_normal_player = p;
+  scheduled_turn_is_extra = 0;
   g_current_turn = g_current_player = p;
   g_current_phase = combat ? PHASE_DECLARE_BLOCKERS : PHASE_MAIN1;
   manalinkeh_recalculate_all_cards_in_play();
@@ -775,7 +830,7 @@ int duel_test_activate_granted_mana(DuelTestRef host, DuelTestRef provider) {
   if (!valid_granted_mana_pair(host,provider)) return 0;
   begin_mode_activation(provider);
   if (!duel_test_can_activate(provider)) { complete_mode_activation(0); return 0; }
-  invalidate_upkeep_preparation();
+  invalidate_phase_preparation();
   int mana_before[6];
   for (int color=0;color<6;++color) mana_before[color]=g_raw_mana_available[host.player][color];
   if (mode_intent.active) mode_intent.in_activation=1;
@@ -794,7 +849,7 @@ int duel_test_activate_granted_mana(DuelTestRef host, DuelTestRef provider) {
 int duel_test_activate(DuelTestRef s) {
   begin_mode_activation(s);
   if (!duel_test_can_activate(s)) { complete_mode_activation(0); return 0; }
-  invalidate_upkeep_preparation();
+  invalidate_phase_preparation();
   int mana_before[6];
   for (int color = 0; color < 6; ++color)
     mana_before[color] = g_raw_mana_available[s.player][color];
@@ -819,6 +874,77 @@ int duel_test_activate(DuelTestRef s) {
   complete_mode_activation(result);
   return result;
 }
+extern int manalinkeh_legacy_effect_activated(int, int, event_t);
+extern int effect_may_play_card_from_exile(int, int, event_t);
+
+extern int LEGACY_EFFECT_ACTIVATED;
+
+/* Re-resolve the production attachment on every call. The source may have
+ * left the stack. Only use this for effects that preserve the creating-card
+ * CSVID copied at initialization. The original source slot is recyclable. */
+static DuelTestRef attached_activated_legacy(DuelTestRef host, int source_csvid) {
+  DuelTestRef effect = {host.player, -1};
+  if (host.player < 0 || host.player > 1 || host.card < 0 ||
+      host.card >= g_active_cards_count[host.player] ||
+      source_csvid < 0 || source_csvid > UINT16_MAX ||
+      !manalinkeh_in_play(host.player, host.card)) return effect;
+
+  for (int player = 0; player < 2; ++player) {
+    for (int card = 0; card < g_active_cards_count[player]; ++card) {
+      card_instance_t *candidate = &global_card_instances[player][card];
+      if (candidate->internal_card_id != LEGACY_EFFECT_ACTIVATED ||
+          global_cards_data[candidate->internal_card_id].code_pointer != manalinkeh_legacy_effect_activated ||
+          !candidate->info_slot_fn || !manalinkeh_in_play(player, card) ||
+          candidate->display_pic_csv_id != source_csvid ||
+          candidate->damage_target_player != host.player || candidate->damage_target_card != host.card)
+        continue;
+      if (effect.card >= 0) duel_host_fail("ambiguous attached activated legacy for source and recipient");
+      effect = (DuelTestRef){player, card};
+    }
+  }
+  /* The ordinary direct activation bridge uses one controller for the card
+   * and action. Keep cross-controller priority selection outside this API. */
+  if (effect.card >= 0 && effect.player != host.player)
+    duel_host_fail("attached activated legacy has a different controller from its recipient");
+  return effect;
+}
+
+int duel_test_can_activate_granted_legacy(DuelTestRef host, int source_csvid) {
+  DuelTestRef effect = attached_activated_legacy(host, source_csvid);
+  return effect.card >= 0 && duel_test_can_activate(effect);
+}
+
+int duel_test_activate_granted_legacy(DuelTestRef host, int source_csvid) {
+  DuelTestRef effect = attached_activated_legacy(host, source_csvid);
+  return effect.card >= 0 && duel_test_activate(effect);
+}
+
+static DuelTestRef exiled_play_permission(int player, int owner, int csvid) {
+  DuelTestRef permission = {player, -1};
+  if (player < 0 || player > 1 || owner < 0 || owner > 1) return permission;
+  for (int card = 0; card < 150; ++card) {
+    const card_instance_t *instance = &global_card_instances[player][card];
+    int internal_id = instance->internal_card_id;
+    if (internal_id < 0 || global_cards_data[internal_id].code_pointer != manalinkeh_legacy_effect_activated ||
+        instance->info_slot_fn != effect_may_play_card_from_exile || !manalinkeh_in_play(player, card) ||
+        instance->targets[0].player != owner || instance->targets[0].card != csvid ||
+        (instance->targets[1].player & MPCFE_FACE_DOWN)) continue;
+    if (permission.card >= 0) duel_host_fail("ambiguous play-from-exile permission");
+    permission.card = card;
+  }
+  return permission;
+}
+
+int duel_test_can_play_exiled(int player, int owner, int csvid) {
+  DuelTestRef permission = exiled_play_permission(player, owner, csvid);
+  return permission.card >= 0 && duel_test_can_activate(permission);
+}
+
+int duel_test_play_exiled(int player, int owner, int csvid) {
+  DuelTestRef permission = exiled_play_permission(player, owner, csvid);
+  return permission.card >= 0 && duel_test_activate(permission);
+}
+
 int duel_test_can_cast(DuelTestRef s) { return manalinkeh_dispatch_event_to_single_card(s.player,s.card,EVENT_CAN_CAST,1-s.player,-1); }
 extern int manalinkeh_get_base_power_iid(int, int), manalinkeh_get_base_toughness_iid(int, int);
 int duel_test_base_power(int player, int csvid) { return manalinkeh_get_base_power_iid(player, iid(csvid)); }
@@ -892,6 +1018,8 @@ static int graveyard_ability_iid(DuelTestRef source) {
         global_cards_data[id].id == CARD_ID_VISCERA_DRAGGER)) return -1;
   return id;
 }
+static const int graveyard_activation_modes = GA_BASIC | GA_UNEARTH | GA_RETURN_TO_HAND;
+
 static int graveyard_ability_modes(DuelTestRef source) {
   int id = graveyard_ability_iid(source);
   if (getenv("DUEL_TEST_TRACE")) fprintf(stderr,"GY_PROBE player=%d pos=%d iid=%d flags=%x phase=%d turn=%d\n",source.player,source.card,id,source.player>=0&&source.player<2?player_bits[source.player]:0,g_current_phase,g_current_turn);
@@ -908,7 +1036,7 @@ static int graveyard_ability_modes(DuelTestRef source) {
   int available = manalinkeh_call_card_function(source.player, fake, EVENT_GRAVEYARD_ABILITY);
   manalinkeh_obliterate_card_and_recycle(source.player, fake);
   int proxy_available = duel_test_can_activate(proxy);
-  int modes = available & (GA_BASIC | GA_UNEARTH | GA_PLAYABLE_FROM_GRAVE);
+  int modes = available & (graveyard_activation_modes | GA_PLAYABLE_FROM_GRAVE);
   /* Match the real menu's creature-return restriction, even if another card
      makes the same shared RulesEngine proxy available. */
   if ((modes & GA_UNEARTH) &&
@@ -925,11 +1053,11 @@ static int graveyard_ability_modes(DuelTestRef source) {
   return result;
 }
 int duel_test_can_activate_graveyard(DuelTestRef source) {
-  return (graveyard_ability_modes(source) & (GA_BASIC | GA_UNEARTH)) != 0;
+  return (graveyard_ability_modes(source) & graveyard_activation_modes) != 0;
 }
 int duel_test_activate_graveyard(DuelTestRef source) {
   int id = graveyard_ability_iid(source);
-  int modes = graveyard_ability_modes(source) & (GA_BASIC | GA_UNEARTH);
+  int modes = graveyard_ability_modes(source) & graveyard_activation_modes;
   if (id < 0 || !modes) return 0;
   DuelTestRef proxy = hand_ability_proxy(source.player);
   int before = g_stack_size;
@@ -980,8 +1108,28 @@ static void prune_announced_spells(void) {
 int duel_test_cast(DuelTestRef s) {
   prune_announced_spells();
   if (!put_card_on_stack(s.player,s.card,0)) return 0;
-  invalidate_upkeep_preparation();
+  invalidate_phase_preparation();
   return put_card_on_stack(s.player,s.card,1);
+}
+int duel_test_play_land(DuelTestRef source) {
+  if (source.player < 0 || source.player > 1 || source.card < 0 || source.card >= 150 ||
+      source.player != g_current_turn || source.player != g_current_player ||
+      (g_current_phase != PHASE_MAIN1 && g_current_phase != PHASE_MAIN2) ||
+      g_stack_size || (g_land_can_be_played & LCBP_LAND_HAS_BEEN_PLAYED)) return 0;
+
+  const card_instance_t *instance = &global_card_instances[source.player][source.card];
+  if (instance->internal_card_id < 0 || !manalinkeh_in_hand(source.player, source.card) ||
+      !(global_cards_data[instance->internal_card_id].type & TYPE_LAND)) return 0;
+
+  /* Take the ordinary main-phase path through payment, callbacks and entry.
+     The production phase loop commits its land-play flag after that action. */
+  prune_announced_spells();
+  invalidate_phase_preparation();
+  g_x_value = 0;
+  g_current_spell_player = -1;
+  if (!resolve_cast_card(source.player, source.card)) return 0;
+  g_land_can_be_played |= LCBP_LAND_HAS_BEEN_PLAYED;
+  return 1;
 }
 int duel_test_announce_spell(DuelTestRef source) {
   if (source.player<0 || source.player>1 || source.card<0 || source.card>=151 || g_stack_size<=0)
@@ -992,7 +1140,7 @@ int duel_test_announce_spell(DuelTestRef source) {
     duel_host_fail("announce_spell requires the top pending spell outside a casting callback");
   if (announced_spells[source.player][source.card])
     duel_host_fail("spell was already announced");
-  invalidate_upkeep_preparation();
+  invalidate_phase_preparation();
   int previous_player=g_current_spell_player, previous_card=g_current_spell_card;
   card_instance_t* pending=NULL;
   int pending_iid=-1, just_cast=0;
@@ -1013,27 +1161,35 @@ int duel_test_announce_spell(DuelTestRef source) {
   if (result) announced_spells[source.player][source.card]=1;
   return result;
 }
-int duel_test_cast_response(DuelTestRef source) {
-  if (g_stack_size <= 0 || g_current_spell_player >= 0)
-    duel_host_fail("cast_response requires a pending spell outside a casting callback");
+static int respond_to_pending_spell(DuelTestRef source, int (*action)(DuelTestRef),
+                                   const char *missing_parent, const char *wrong_parent) {
+  if (g_stack_size <= 0 || g_current_spell_player >= 0) duel_host_fail(missing_parent);
   int top = g_stack_size - 1;
-  if ((((unsigned)g_stack_data[top] >> 16) & 255) != EVENT_RESOLVE_SPELL)
-    duel_host_fail("cast_response requires a pending spell, not an activation");
+  if ((((unsigned)g_stack_data[top] >> 16) & 255) != EVENT_RESOLVE_SPELL) duel_host_fail(wrong_parent);
   int previous_player = g_current_spell_player, previous_card = g_current_spell_card;
-  /* The response UI normally supplies this context while casting is nested.
-     Preserve the same real stack target for an explicit scripted response.
-     The ordinary handler, targeting, legality and mana payment still run. */
+  /* Supply the response UI's actual spell context for the ordinary action,
+     including its legality, targeting and payment callbacks. */
   g_current_spell_player = global_stack_cards[top].player;
   g_current_spell_card = global_stack_cards[top].card;
   card_instance_t* pending = &global_card_instances[g_current_spell_player][g_current_spell_card];
   int pending_iid = pending->internal_card_id;
   int just_cast = pending->state & STATE_JUST_CAST;
   pending->state &= ~STATE_JUST_CAST;
-  int result = duel_test_cast(source);
+  int result = action(source);
   if (pending->internal_card_id == pending_iid) pending->state |= just_cast;
   g_current_spell_player = previous_player;
   g_current_spell_card = previous_card;
   return result;
+}
+int duel_test_cast_response(DuelTestRef source) {
+  return respond_to_pending_spell(source, duel_test_cast,
+      "cast_response requires a pending spell outside a casting callback",
+      "cast_response requires a pending spell, not an activation");
+}
+int duel_test_activate_response(DuelTestRef source) {
+  return respond_to_pending_spell(source, duel_test_activate,
+      "activate_response requires a pending spell outside a casting callback",
+      "activate_response requires a pending spell, not an activation");
 }
 extern void manalinkeh_reset_dead_count(void);
 void duel_test_reset_death_history(void) {
@@ -1061,6 +1217,10 @@ void duel_test_resolve(void) {
   }
   prune_announced_spells();
 }
+int duel_test_resolve_duel_result(void) {
+  DWORD result;
+  return capture_headless_duel_exit(duel_test_resolve, &result) ? (int)result : -1;
+}
 void duel_test_resolve_response(void) {
   if (g_stack_size < 2 || g_current_spell_player >= 0)
     duel_host_fail("resolve_response requires a response and its pending parent spell");
@@ -1081,7 +1241,7 @@ void duel_test_resolve_response(void) {
   g_current_spell_player = previous_player;
   g_current_spell_card = previous_card;
 }
-void duel_test_cleanup(void) { invalidate_upkeep_preparation(); g_current_phase=PHASE_CLEANUP; cleanup_phase(g_current_turn); end_turn_phase(g_current_turn); }
+void duel_test_cleanup(void) { invalidate_phase_preparation(); g_current_phase=PHASE_CLEANUP; cleanup_phase(g_current_turn); end_turn_phase(g_current_turn); }
 void duel_test_remove_from_combat(DuelTestRef r) {
   manalinkeh_remove_from_combat(r.player, r.card);
   manalinkeh_recalculate_all_cards_in_play();
@@ -1092,8 +1252,9 @@ void duel_test_destroy(DuelTestRef r) {
      death pipeline before the script starts its next action. */
   regenerate_or_graveyard_triggers();
 }
-int duel_test_attack(DuelTestRef r) {
+static int declare_attacker(DuelTestRef r, int pay_tax) {
   if (!can_attack(r.player,r.card)) return 0;
+  if (pay_tax && !duel_pay_to_declare_attacker(r.player, r.card)) return 0;
   global_card_instances[r.player][r.card].state |= STATE_ATTACKING;
   /* The combat fixture can preload STATE_ATTACKING without completing a
      declaration. Preserve its explicit attack step and apply the tap obligation.
@@ -1106,10 +1267,29 @@ int duel_test_attack(DuelTestRef r) {
     manalinkeh_dispatch_event_to_single_card(r.player,r.card,EVENT_DECLARE_ATTACKERS,1-r.player,-1);
   return 1;
 }
-void duel_test_begin_attackers(void) {
+int duel_test_attack(DuelTestRef r) { return declare_attacker(r, 0); }
+int duel_test_attack_with_tax(DuelTestRef r) {
+  if (g_current_phase != PHASE_DECLARE_ATTACKERS)
+    duel_host_fail("attack_with_tax requires attacker declaration");
+  if (r.player != g_current_turn || r.card < 0 || r.card >= 150 ||
+      (global_card_instances[r.player][r.card].state & STATE_ATTACKING)) return 0;
+  return declare_attacker(r, 1);
+}
+static void begin_attackers(int enforce_requirements) {
   if (g_current_phase != PHASE_MAIN1)
     duel_host_fail("begin_attackers requires first main phase");
+  if (enforce_requirements && (g_battlefield_extra_ability_flags & EA_FORCE_ATTACK))
+    C_dispatch_event_raw(EVENT_MUST_ATTACK);
   g_current_phase = PHASE_DECLARE_ATTACKERS;
+}
+void duel_test_begin_attackers(void) { begin_attackers(0); }
+void duel_test_begin_required_attackers(void) { begin_attackers(1); }
+int duel_test_can_finish_attackers(void) {
+  if (g_current_phase != PHASE_DECLARE_ATTACKERS)
+    duel_host_fail("can_finish_attackers requires attacker declaration");
+  /* The gameplay Done action retries while there is a legal omitted attacker. */
+  update_attacker_count_and_check_combat_done(g_current_turn);
+  return legal_attacker_count == 0;
 }
 void duel_test_finish_attackers(void) {
   if (g_current_phase != PHASE_DECLARE_ATTACKERS)
@@ -1178,16 +1358,34 @@ void duel_test_combat_damage(void) {
     duel_host_fail("advance_combat before combat damage");
   resolve_combat_damage(g_current_turn);
 }
-void duel_test_end_combat(void) {
+static void finish_combat(int run_phase_transition) {
   if (g_current_phase != PHASE_NORMAL_COMBAT_DAMAGE)
     duel_host_fail("end_combat requires completed combat damage");
-  /* The game's combat loop resolves this trigger before clearing assignments.
-     Leave the fixture's mana pools intact, as other phase helpers do. */
+  /* The game's combat loop resolves this trigger before clearing assignments. */
+  if (run_phase_transition)
+    g_land_can_be_played |= TENTATIVE_LCBP_DURING_COMBAT;
   g_response_processing_flags = 1;
   dispatch_trigger_twice_once_with_each_player_as_reason(g_current_turn, TRIGGER_END_COMBAT, gs_end_of_combat_008b43a0, 0);
   cleanup_combat_state(g_current_turn);
+}
+void duel_test_end_combat(void) {
+  finish_combat(0);
   g_current_phase = PHASE_MAIN2;
   manalinkeh_recalculate_all_cards_in_play();
+}
+int duel_test_end_combat_step(void) {
+  if (g_stack_size)
+    duel_host_fail("end_combat_step requires an empty stack");
+  invalidate_phase_preparation();
+  finish_combat(1);
+  resolve_mana_burn();
+  g_attacking_creature_count = 0;
+  g_current_phase = PHASE_MAIN2;
+  /* The ordinary phase edge lets scheduled extra combat effects redirect
+     the phase to attacker declaration. */
+  manalinkeh_phase_changed(g_current_turn, g_current_phase);
+  manalinkeh_recalculate_all_cards_in_play();
+  return g_current_phase == PHASE_DECLARE_ATTACKERS;
 }
 void duel_test_advance_turn(void) {
   if (g_stack_size != 0) duel_host_fail("advance_turn requires an empty stack");
@@ -1207,6 +1405,38 @@ void duel_test_advance_turn(void) {
   manalinkeh_recalculate_all_cards_in_play();
   untap_prepared_player=g_current_turn;
   untap_prepared_turn=turn_count;
+  scheduled_normal_player = g_current_turn;
+  scheduled_turn_is_extra = 0;
+}
+int duel_test_advance_scheduled_turn(void) {
+  if (g_stack_size != 0) duel_host_fail("advance_scheduled_turn requires an empty stack");
+  if (check_duel_finished()) return -1;
+  duel_test_cleanup();
+  untap_prepared_player = -1;
+  scheduled_normal_player = duel_finish_scheduled_turn(scheduled_normal_player, scheduled_turn_is_extra);
+
+  while (!g_adventure_world_exit_requested && !check_duel_finished()) {
+    duel_host_checkpoint("execution budget exhausted while selecting the next scheduled turn");
+    int player = duel_select_scheduled_turn(scheduled_normal_player, &scheduled_turn_is_extra);
+    g_current_turn = player;
+    ++turn_count;
+    init_turn(player);
+    /* Use the real start gate without the production autosave. A skipped turn
+       ends in that gate, before upkeep or an end step. */
+    int previous_network_flags = g_duel_network_flags;
+    g_duel_network_flags |= 2;
+    int skipped = TENTATIVE_start_turn(player);
+    g_duel_network_flags = previous_network_flags;
+    if (!skipped) {
+      g_current_phase = PHASE_MAIN1;
+      manalinkeh_recalculate_all_cards_in_play();
+      untap_prepared_player = player;
+      untap_prepared_turn = turn_count;
+      return player;
+    }
+    scheduled_normal_player = duel_finish_scheduled_turn(scheduled_normal_player, scheduled_turn_is_extra);
+  }
+  return -1;
 }
 extern int manalinkeh_untap_phase(int);
 int duel_test_untap_step(int player) {
@@ -1248,7 +1478,7 @@ int duel_test_upkeep_step(int player) {
   for (int p=0; p<2; ++p)
     for (int color=0; color<6; ++color)
       if (duel_test_mana(p,color)) return 0;
-  invalidate_upkeep_preparation();
+  invalidate_phase_preparation();
   char flags[2][2];
   const int phases[2]={PHASE_BEGIN_UPKEEP,PHASE_UPKEEP};
   for (int p=0; p<2; ++p) for (int i=0; i<2; ++i) {
@@ -1262,20 +1492,55 @@ int duel_test_upkeep_step(int player) {
     g_previous_stop_phase=g_previous_stop_phase_player=-1;
   /* Keep the complete gameplay phase: phase_changed, upkeep and end-upkeep
      triggers, real choices/priority, damage, mana and death processing. No draw. */
-  manalinkeh_upkeep_phase(player);
+  int finished = manalinkeh_upkeep_phase(player);
   for (int p=0; p<2; ++p) for (int i=0; i<2; ++i)
     g_duel_phase_stop_settings[p].phase_flags[phases[i]]=flags[p][i];
   g_stop_phase=stop; g_stop_phase_player=stop_player;
   g_previous_stop_phase=previous; g_previous_stop_phase_player=previous_player;
+  if (!finished) {
+    draw_prepared_player = player;
+    draw_prepared_turn = turn_count;
+  }
+  return 1;
+}
+extern int draw_phase(unsigned int player);
+int duel_test_draw_step(int player) {
+  if (player < 0 || player > 1 || player != g_current_turn || player != g_current_player ||
+      g_stack_size || g_current_phase != PHASE_UPKEEP || (g_duel_network_flags & 2) ||
+      draw_prepared_player != player || draw_prepared_turn != turn_count) return 0;
+  for (int p = 0; p < 2; ++p)
+    for (int color = 0; color < 6; ++color)
+      if (duel_test_mana(p, color)) return 0;
+
+  draw_prepared_player = draw_prepared_turn = -1;
+  char flags[2] = {g_duel_phase_stop_settings[0].phase_flags[PHASE_DRAW],
+                   g_duel_phase_stop_settings[1].phase_flags[PHASE_DRAW]};
+  int stop = g_stop_phase, stop_player = g_stop_phase_player;
+  int previous = g_previous_stop_phase, previous_player = g_previous_stop_phase_player;
+  for (int p = 0; p < 2; ++p) g_duel_phase_stop_settings[p].phase_flags[PHASE_DRAW] = 0;
+  if (stop == PHASE_DRAW) g_stop_phase = g_stop_phase_player = -1;
+  if (previous == PHASE_DRAW) g_previous_stop_phase = g_previous_stop_phase_player = -1;
+  draw_phase((unsigned int)player);
+  for (int p = 0; p < 2; ++p) g_duel_phase_stop_settings[p].phase_flags[PHASE_DRAW] = flags[p];
+  g_stop_phase = stop;
+  g_stop_phase_player = stop_player;
+  g_previous_stop_phase = previous;
+  g_previous_stop_phase_player = previous_player;
   return 1;
 }
 int duel_test_shuffle_count(int player) {
   return player >= 0 && player < 2 ? (int)duel_host_capture().shuffle_count[player] : -1;
 }
+int duel_test_color(DuelTestRef ref)
+{
+  if (ref.player < 0 || ref.player > 1 || ref.card < 0 || ref.card >= 150 ||
+      global_card_instances[ref.player][ref.card].internal_card_id < 0) return -1;
+  return manalinkeh_get_color(ref.player, ref.card) & 0x3e;
+}
 int duel_test_token_characteristic(DuelTestRef r, const char *property)
 {
   if (!strcmp(property,"token")) return !!(global_card_instances[r.player][r.card].token_status & 0x10); /* STATUS_TOKEN */
-  if (!strcmp(property,"color")) return manalinkeh_get_color(r.player,r.card) & 0x3e; /* colored bits; colorless is absence */
+  if (!strcmp(property,"color")) return duel_test_color(r);
   if (!strcmp(property,"artifact")) return !!(manalinkeh_get_type(r.player,r.card) & TYPE_ARTIFACT);
   static const struct { const char *name; subtype_t code; } subtypes[] = {
 #define TOKEN_SUBTYPE(name, code) {"subtype_" name, SUBTYPE_##code}
@@ -1315,7 +1580,8 @@ int duel_test_counter(DuelTestRef r, const char *kind)
     {"divinity",COUNTER_DIVINITY}, {"quest",COUNTER_QUEST}, {"blood",COUNTER_BLOOD},
     {"gold",COUNTER_GOLD}, {"study",COUNTER_STUDY}, {"growth",COUNTER_GROWTH},
     {"ki",COUNTER_KI}, {"lore",COUNTER_LORE},
-    {"age",COUNTER_AGE}, {"fade",COUNTER_FADE}, {"time",COUNTER_TIME}
+    {"age",COUNTER_AGE}, {"fade",COUNTER_FADE}, {"time",COUNTER_TIME},
+    {"depletion",COUNTER_DEPLETION}, {"storage",COUNTER_STORAGE}, {"velocity",COUNTER_VELOCITY}
   };
   for (unsigned n=0; n<sizeof(kinds)/sizeof(kinds[0]); ++n)
     if (!strcmp(kind,kinds[n].name)) return manalinkeh_count_counters(r.player,r.card,kinds[n].code);

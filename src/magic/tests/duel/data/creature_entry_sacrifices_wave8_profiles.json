@@ -1,0 +1,879 @@
+{
+  "version": 1,
+  "sources": {
+    "Azorius Herald": {
+      "oracle": {
+        "oracle_id": "a0476da9-51b1-4cd3-90c4-ad01d0e4c3d6",
+        "name": "Azorius Herald",
+        "oracle_text": "This creature can't be blocked.\nWhen this creature enters, you gain 4 life.\nWhen this creature enters, sacrifice it unless {U} was spent to cast it.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c13/6/azorius-herald?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8173,
+        "iid": 789,
+        "name": "Azorius Herald",
+        "handler": "manalinkeh_card_azorius_herald",
+        "kind": "card"
+      }
+    },
+    "Demonlord of Ashmouth": {
+      "oracle": {
+        "oracle_id": "049777d0-910d-46d2-9ca1-10277b2fb845",
+        "name": "Demonlord of Ashmouth",
+        "oracle_text": "Flying\nWhen this creature enters, exile it unless you sacrifice another creature.\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Creature — Demon",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Undying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/96/demonlord-of-ashmouth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12345,
+        "iid": 2436,
+        "name": "Demonlord of Ashmouth",
+        "handler": "manalinkeh_card_demonlord_of_ashmouth",
+        "kind": "card"
+      }
+    },
+    "Disciple of Bolas": {
+      "oracle": {
+        "oracle_id": "8f2c8498-5b10-4ec7-8678-598c90987556",
+        "name": "Disciple of Bolas",
+        "oracle_text": "When this creature enters, sacrifice another creature. You gain X life and draw X cards, where X is that creature's power.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/178/disciple-of-bolas?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12560,
+        "iid": 2562,
+        "name": "Disciple of Bolas",
+        "handler": "manalinkeh_card_disciple_of_bolas",
+        "kind": "card"
+      }
+    },
+    "Gatekeeper of Malakir": {
+      "oracle": {
+        "oracle_id": "6781f8ae-2a86-4e3d-bc43-48809c9d6c26",
+        "name": "Gatekeeper of Malakir",
+        "oracle_text": "Kicker {B} (You may pay an additional {B} as you cast this spell.)\nWhen this creature enters, if it was kicked, target player sacrifices a creature of their choice.",
+        "mana_cost": "{B}{B}",
+        "type_line": "Creature — Vampire Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/752/gatekeeper-of-malakir?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10542,
+        "iid": 3753,
+        "name": "Gatekeeper of Malakir",
+        "handler": "manalinkeh_card_gatekeeper_of_malakir",
+        "kind": "card"
+      }
+    },
+    "Kuldotha Flamefiend": {
+      "oracle": {
+        "oracle_id": "e93089b1-e790-402b-a994-69a7e422e4f2",
+        "name": "Kuldotha Flamefiend",
+        "oracle_text": "When this creature enters, you may sacrifice an artifact. If you do, this creature deals 4 damage divided as you choose among any number of targets.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/134/kuldotha-flamefiend?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11469,
+        "iid": 5422,
+        "name": "Kuldotha Flamefiend",
+        "handler": "manalinkeh_card_kuldotha_flamefiend",
+        "kind": "card"
+      }
+    },
+    "Patagia Viper": {
+      "oracle": {
+        "oracle_id": "b9985370-d908-431c-ad33-ec532fe07d1f",
+        "name": "Patagia Viper",
+        "oracle_text": "Flying\nWhen this creature enters, create two 1/1 green and blue Snake creature tokens.\nWhen this creature enters, sacrifice it unless {U} was spent to cast it.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Snake",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c15/197/patagia-viper?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8252,
+        "iid": 7026,
+        "name": "Patagia Viper",
+        "handler": "manalinkeh_card_patagia_viper",
+        "kind": "card"
+      }
+    },
+    "Plant Elemental": {
+      "oracle": {
+        "oracle_id": "e822bf3d-3a29-4a02-9ae8-e2830ce70f15",
+        "name": "Plant Elemental",
+        "oracle_text": "When this creature enters, sacrifice it unless you sacrifice a Forest.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Plant Elemental",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/por/181/plant-elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2870,
+        "iid": 7257,
+        "name": "Plant Elemental",
+        "handler": "manalinkeh_card_plant_elemental",
+        "kind": "card"
+      }
+    },
+    "Mold Demon": {
+      "oracle": {
+        "oracle_id": "7ce9513e-50f3-4d36-889b-b180a8a16252",
+        "name": "Mold Demon",
+        "oracle_text": "When this creature enters, sacrifice it unless you sacrifice two Swamps.",
+        "mana_cost": "{5}{B}{B}",
+        "type_line": "Creature — Fungus Demon",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/leg/112/mold-demon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 727,
+        "iid": 6258,
+        "name": "Mold Demon",
+        "handler": "manalinkeh_card_mold_demon",
+        "kind": "card"
+      }
+    },
+    "Rathi Dragon": {
+      "oracle": {
+        "oracle_id": "6a180f07-7afa-4605-9c58-4521a5f3fcc1",
+        "name": "Rathi Dragon",
+        "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhen this creature enters, sacrifice it unless you sacrifice two Mountains.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/150/rathi-dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3237,
+        "iid": 7679,
+        "name": "Rathi Dragon",
+        "handler": "manalinkeh_card_rathi_dragon",
+        "kind": "card"
+      }
+    },
+    "Scythe Tiger": {
+      "oracle": {
+        "oracle_id": "4d0fa514-87fc-46ff-bf49-4cd332396978",
+        "name": "Scythe Tiger",
+        "oracle_text": "Shroud (This creature can't be the target of spells or abilities.)\nWhen this creature enters, sacrifice it unless you sacrifice a land.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Cat",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Shroud"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/183/scythe-tiger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10656,
+        "iid": 8381,
+        "name": "Scythe Tiger",
+        "handler": "manalinkeh_card_scythe_tiger",
+        "kind": "card"
+      }
+    },
+    "Vulshok War Boar": {
+      "oracle": {
+        "oracle_id": "4641e86f-5370-4b25-bd76-07bea856c032",
+        "name": "Vulshok War Boar",
+        "oracle_text": "When this creature enters, sacrifice it unless you sacrifice an artifact.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Boar Beast",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dst/72/vulshok-war-boar?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6993,
+        "iid": 10733,
+        "name": "Vulshok War Boar",
+        "handler": "manalinkeh_card_vulshok_war_boar",
+        "kind": "card"
+      }
+    },
+    "Rogue Elephant": {
+      "oracle": {
+        "oracle_id": "bed7ac55-fe40-46d0-bc22-1c8d11f41459",
+        "name": "Rogue Elephant",
+        "oracle_text": "When this creature enters, sacrifice it unless you sacrifice a Forest.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elephant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/139/rogue-elephant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3033,
+        "iid": 8040,
+        "name": "Rogue Elephant",
+        "handler": "manalinkeh_card_rogue_elephant",
+        "kind": "card"
+      }
+    },
+    "Primeval Force": {
+      "oracle": {
+        "oracle_id": "f4170db0-3adf-4744-b0ec-e889c713bb93",
+        "name": "Primeval Force",
+        "oracle_text": "When this creature enters, sacrifice it unless you sacrifice three Forests.",
+        "mana_cost": "{2}{G}{G}{G}",
+        "type_line": "Creature — Elemental",
+        "power": "8",
+        "toughness": "8",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/273/primeval-force?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1118,
+        "iid": 7378,
+        "name": "Primeval Force",
+        "handler": "manalinkeh_card_primeval_force",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Cloudshift": {
+      "oracle": {
+        "oracle_id": "6879f5ce-7a1b-4606-bad1-885779b0d456",
+        "name": "Cloudshift",
+        "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tle/152/cloudshift?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12330,
+        "iid": 1828,
+        "name": "Cloudshift",
+        "handler": "manalinkeh_card_cloudshift",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Darksteel Myr": {
+      "oracle": {
+        "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+        "name": "Darksteel Myr",
+        "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11238,
+        "iid": 2255,
+        "name": "Darksteel Myr",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Squire": {
+      "oracle": {
+        "oracle_id": "aa6cdcc7-f5ea-47bf-9448-1c63e36b18d1",
+        "name": "Squire",
+        "oracle_text": "",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsb/15/squire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 948,
+        "iid": 9275,
+        "name": "Squire",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Badlands": {
+      "oracle": {
+        "oracle_id": "13ff3222-91cb-4796-a34e-899ed817694c",
+        "name": "Badlands",
+        "oracle_text": "({T}: Add {B} or {R}.)",
+        "mana_cost": "",
+        "type_line": "Land — Swamp Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/291/badlands?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9,
+        "iid": 5,
+        "name": "Badlands",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Bayou": {
+      "oracle": {
+        "oracle_id": "b76d1ae6-ad1d-4bac-b4c3-2e03e0e84d9b",
+        "name": "Bayou",
+        "oracle_text": "({T}: Add {B} or {G}.)",
+        "mana_cost": "",
+        "type_line": "Land — Swamp Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/293/bayou?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12,
+        "iid": 6,
+        "name": "Bayou",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Taiga": {
+      "oracle": {
+        "oracle_id": "22e3cf1d-3559-4ce1-954c-8dc815342979",
+        "name": "Taiga",
+        "oracle_text": "({T}: Add {R} or {G}.)",
+        "mana_cost": "",
+        "type_line": "Land — Mountain Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/317/taiga?utm_source=api"
+      },
+      "registry": {
+        "csvid": 241,
+        "iid": 10,
+        "name": "Taiga",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    }
+  },
+  "tokens": {
+    "Snake": {
+      "oracle": {
+        "oracle_id": "e3863ec2-e8ce-43d2-ab7e-ec99dfa381b6",
+        "name": "Snake",
+        "oracle_text": "Deathtouch",
+        "mana_cost": "",
+        "type_line": "Token Creature — Snake",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Deathtouch"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tecc/8/snake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18821,
+        "iid": 8951,
+        "name": "Snake",
+        "handler": "manalinkeh_card_snake_token",
+        "kind": "card"
+      }
+    }
+  }
+}

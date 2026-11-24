@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Knowledge Vault",
+  "csvid": 700,
+  "recipes": [
+    {
+      "family": "departure_linked_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 700
+      },
+      "oracle_text": "{2}, {T}: Exile the top card of your library face down.\n{0}: Sacrifice this artifact. If you do, discard your hand, then put all cards exiled with this artifact into their owner's hand.\nWhen this artifact leaves the battlefield, put all cards exiled with it into their owner's graveyard.",
+      "variants": [
+        "return_0",
+        "return_1",
+        "graveyard_0",
+        "graveyard_1",
+        "empty_0",
+        "empty_1"
+      ]
+    }
+  ]
+}

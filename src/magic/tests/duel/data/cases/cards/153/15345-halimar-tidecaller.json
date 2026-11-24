@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Halimar Tidecaller",
+  "csvid": 15345,
+  "recipes": [
+    {
+      "family": "entry_trigger_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 15345,
+        "cost": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, you may return target card with awaken from your graveyard to your hand.\nLand creatures you control have flying.",
+      "variants": [
+        "awaken_0",
+        "awaken_1",
+        "wrong_grave_0",
+        "wrong_grave_1",
+        "own_land_flying_0",
+        "own_land_flying_1",
+        "opponent_land_ground_0",
+        "opponent_land_ground_1"
+      ]
+    }
+  ]
+}

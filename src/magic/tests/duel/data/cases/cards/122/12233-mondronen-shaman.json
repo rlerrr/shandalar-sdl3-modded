@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "csvid": 12233,
+  "card": "Mondronen Shaman",
+  "recipes": [
+    {
+      "family": "werewolf_triggered_riders",
+      "version": 2,
+      "params": {
+        "model": "magehunter",
+        "price": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "front": {
+          "name": "Mondronen Shaman",
+          "power": 3,
+          "toughness": 2,
+          "color": 16,
+          "keywords": [],
+          "clauses": [
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Tovolar's Magehunter",
+          "power": 5,
+          "toughness": 5,
+          "color": 16,
+          "keywords": [],
+          "clauses": [
+            "Whenever an opponent casts a spell, this creature deals 2 damage to that player.",
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        }
+      },
+      "variants": [
+        "short_cast_0",
+        "short_cast_1",
+        "split_stays_0",
+        "split_stays_1",
+        "replay_0",
+        "replay_1",
+        "front_foe_0",
+        "front_foe_1",
+        "back_owner_0",
+        "back_owner_1",
+        "back_enemy_0",
+        "back_enemy_1",
+        "offturn_enemy_0",
+        "offturn_enemy_1",
+        "countered_0",
+        "countered_1"
+      ],
+      "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+    }
+  ]
+}

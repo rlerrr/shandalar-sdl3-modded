@@ -327,6 +327,38 @@
         "human_optional_trigger": false,
         "present_ai_twiddle": false
       }
+    },
+    "Somnomancer": {
+      "csvid": 9679,
+      "oracle": {
+        "oracle_id": "c819ebc8-feb5-48fa-81d2-a4f5aaa4fdbb",
+        "name": "Somnomancer",
+        "oracle_text": "When this creature enters, you may tap target creature.",
+        "mana_cost": "{1}{W/U}",
+        "type_line": "Creature \u2014 Kithkin Wizard",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/shm/149/somnomancer?utm_source=api"
+      },
+      "presentation": {
+        "human_optional_trigger": true,
+        "present_ai_twiddle": false
+      },
+      "hybrid_colors": [
+        "U",
+        "W"
+      ]
     }
   },
   "witnesses": {

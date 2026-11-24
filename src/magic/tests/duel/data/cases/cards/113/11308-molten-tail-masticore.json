@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Molten-Tail Masticore",
+  "csvid": 11308,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_grants_and_modes",
+      "version": 2,
+      "params": {
+        "csvid": 11308,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "At the beginning of your upkeep, sacrifice this creature unless you discard a card.\n{4}, Exile a creature card from your graveyard: This creature deals 4 damage to any target.\n{2}: Regenerate this creature.",
+      "variants": [
+        "creature_0",
+        "creature_1",
+        "player_0",
+        "player_1",
+        "walker_0",
+        "walker_1",
+        "no_creature_0",
+        "no_creature_1",
+        "upkeep_pay_0",
+        "upkeep_pay_1",
+        "upkeep_decline_0",
+        "upkeep_decline_1",
+        "regen_0",
+        "regen_1"
+      ]
+    }
+  ]
+}

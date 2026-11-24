@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Alchemist's Vial",
+  "csvid": 15074,
+  "recipes": [
+    {
+      "family": "entry_trigger_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 15074,
+        "printed_mana": "{2}",
+        "rules": "When this artifact enters, draw a card.\n{1}, {T}, Sacrifice this artifact: Target creature can't attack or block this turn."
+      },
+      "oracle_text": "When this artifact enters, draw a card.\n{1}, {T}, Sacrifice this artifact: Target creature can't attack or block this turn.",
+      "variants": [
+        "deny_attack_0",
+        "deny_attack_1",
+        "deny_block_0",
+        "deny_block_1"
+      ]
+    }
+  ]
+}

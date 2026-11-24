@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Krark's Thumb",
+  "csvid": 6693,
+  "recipes": [
+    {
+      "family": "coin_flip_repeated_flips",
+      "version": 2,
+      "params": {
+        "csvid": 6693,
+        "casting_cost": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "rules": "If you would flip a coin, instead flip two coins and ignore one."
+      },
+      "oracle_text": "If you would flip a coin, instead flip two coins and ignore one.",
+      "variants": [
+        "keep_second_win_0",
+        "keep_second_win_1",
+        "keep_first_loss_0",
+        "keep_first_loss_1",
+        "foe_not_replaced_0",
+        "foe_not_replaced_1",
+        "target_owns_thumb_0",
+        "target_owns_thumb_1",
+        "keep_twice_0",
+        "keep_twice_1"
+      ]
+    }
+  ]
+}

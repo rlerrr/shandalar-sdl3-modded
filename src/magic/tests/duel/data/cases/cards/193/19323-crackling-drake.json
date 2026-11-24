@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Crackling Drake",
+  "csvid": 19323,
+  "recipes": [
+    {
+      "family": "entry_follow_on_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 19323,
+        "printed_mana": "{U}{U}{R}{R}",
+        "rules": "Flying\nCrackling Drake's power is equal to the total number of instant and sorcery cards you own in exile and in your graveyard.\nWhen this creature enters, draw a card."
+      },
+      "oracle_text": "Flying\nCrackling Drake's power is equal to the total number of instant and sorcery cards you own in exile and in your graveyard.\nWhen this creature enters, draw a card.",
+      "variants": [
+        "own_zones_flying_0",
+        "own_zones_flying_1",
+        "actual_spell_changes_power_0",
+        "actual_spell_changes_power_1"
+      ]
+    }
+  ]
+}

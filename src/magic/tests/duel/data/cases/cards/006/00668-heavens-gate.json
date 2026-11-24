@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Heaven's Gate",
+  "csvid": 668,
+  "recipes": [
+    {
+      "family": "multi_creature_recolor",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "target": "creature",
+        "minimum": 1,
+        "color": "W",
+        "color_operation": "replace",
+        "duration": "until_end_of_turn"
+      },
+      "oracle_text": "One or more target creatures become white until end of turn.",
+      "variants": [
+        "sole_target_0",
+        "one_and_stop_0",
+        "two_and_stop_0",
+        "all_three_0",
+        "eleven_0",
+        "partial_hexproof_0",
+        "all_hexproof_0",
+        "cleanup_0",
+        "hibernation_0",
+        "hibernation_expired_0",
+        "colorless_target_0",
+        "no_creature_0",
+        "shroud_only_0",
+        "insufficient_mana_0",
+        "off_turn_0",
+        "pending_snapshot_0",
+        "countered_0",
+        "sole_target_1",
+        "one_and_stop_1",
+        "two_and_stop_1",
+        "all_three_1",
+        "eleven_1",
+        "partial_hexproof_1",
+        "all_hexproof_1",
+        "cleanup_1",
+        "hibernation_1",
+        "hibernation_expired_1",
+        "colorless_target_1",
+        "no_creature_1",
+        "shroud_only_1",
+        "insufficient_mana_1",
+        "off_turn_1",
+        "pending_snapshot_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,625 @@
+{
+  "sources": {
+    "Drudge Spell": {
+      "oracle": {
+        "oracle_id": "d63f4eeb-3fa5-4e65-8414-e3fd3c03c128",
+        "name": "Drudge Spell",
+        "oracle_text": "{B}, Exile two creature cards from your graveyard: Create a 1/1 black Skeleton creature token. It has \"{B}: Regenerate this token.\"\nWhen this enchantment leaves the battlefield, destroy all Skeleton tokens. They can't be regenerated.",
+        "mana_cost": "{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hml/45/drudge-spell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1636,
+        "iid": 2783,
+        "name": "Drudge Spell",
+        "handler": "manalinkeh_card_drudge_spell",
+        "kind": "card"
+      }
+    },
+    "Locust Swarm": {
+      "oracle": {
+        "oracle_id": "9963b6a9-d715-430e-9b5e-576fb688d944",
+        "name": "Locust Swarm",
+        "oracle_text": "Flying\n{G}: Regenerate this creature.\n{G}: Untap this creature. Activate only once each turn.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Insect",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/226/locust-swarm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2530,
+        "iid": 5671,
+        "name": "Locust Swarm",
+        "handler": "manalinkeh_card_locust_swarm",
+        "kind": "card"
+      }
+    },
+    "Masticore": {
+      "oracle": {
+        "oracle_id": "621476a4-44bf-4f55-adb1-880cdd213f38",
+        "name": "Masticore",
+        "oracle_text": "At the beginning of your upkeep, sacrifice this creature unless you discard a card.\n{2}: This creature deals 1 damage to target creature.\n{2}: Regenerate this creature.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature — Masticore",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/275/masticore?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1230,
+        "iid": 5975,
+        "name": "Masticore",
+        "handler": "manalinkeh_card_masticore",
+        "kind": "card"
+      }
+    },
+    "Molten-Tail Masticore": {
+      "oracle": {
+        "oracle_id": "15fb3a7a-a6c3-4bef-9f72-1d04b623063e",
+        "name": "Molten-Tail Masticore",
+        "oracle_text": "At the beginning of your upkeep, sacrifice this creature unless you discard a card.\n{4}, Exile a creature card from your graveyard: This creature deals 4 damage to any target.\n{2}: Regenerate this creature.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature — Masticore",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/177/molten-tail-masticore?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11308,
+        "iid": 6275,
+        "name": "Molten-Tail Masticore",
+        "handler": "manalinkeh_card_moltentail_masticore",
+        "kind": "card"
+      }
+    },
+    "Sedge Troll": {
+      "oracle": {
+        "oracle_id": "a6a43190-cca2-4f07-afe9-8af681d777da",
+        "name": "Sedge Troll",
+        "oracle_text": "This creature gets +1/+1 as long as you control a Swamp.\n{B}: Regenerate this creature.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Troll",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/135/sedge-troll?utm_source=api"
+      },
+      "registry": {
+        "csvid": 219,
+        "iid": 8431,
+        "name": "Sedge Troll",
+        "handler": "manalinkeh_card_sedge_troll",
+        "kind": "card"
+      }
+    },
+    "Servant of Tymaret": {
+      "oracle": {
+        "oracle_id": "1ea5a8c2-d8c4-4028-b1fe-9951514ea882",
+        "name": "Servant of Tymaret",
+        "oracle_text": "Inspired — Whenever this creature becomes untapped, each opponent loses 1 life. You gain life equal to the life lost this way.\n{2}{B}: Regenerate this creature.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [
+          "Inspired",
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/82/servant-of-tymaret?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13800,
+        "iid": 8536,
+        "name": "Servant of Tymaret",
+        "handler": "manalinkeh_card_servant_of_tymaret",
+        "kind": "card"
+      }
+    },
+    "Skithiryx, the Blight Dragon": {
+      "oracle": {
+        "oracle_id": "daf6c421-e7f7-4fc6-967c-65f4ab96fcfd",
+        "name": "Skithiryx, the Blight Dragon",
+        "oracle_text": "Flying\nInfect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\n{B}: Skithiryx gains haste until end of turn.\n{B}{B}: Regenerate Skithiryx.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Legendary Creature — Phyrexian Dragon Skeleton",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Regenerate",
+          "Infect"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/107/skithiryx-the-blight-dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11361,
+        "iid": 8831,
+        "name": "Skithiryx, the Blight Dragon",
+        "handler": "manalinkeh_card_skithiryx_blight_dragon",
+        "kind": "card"
+      }
+    },
+    "Skull Collector": {
+      "oracle": {
+        "oracle_id": "42ec62b1-c899-4ebd-b786-28edf76ce8e0",
+        "name": "Skull Collector",
+        "oracle_text": "At the beginning of your upkeep, return a black creature you control to its owner's hand.\n{1}{B}: Regenerate this creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Ogre Warrior",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/90/skull-collector?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7748,
+        "iid": 8841,
+        "name": "Skull Collector",
+        "handler": "manalinkeh_card_skull_collector",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Drudge Skeletons": {
+      "oracle": {
+        "oracle_id": "c180ed02-07f4-4538-9bea-8c249234a8e2",
+        "name": "Drudge Skeletons",
+        "oracle_text": "{B}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Skeleton",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Heal",
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gvl/36/drudge-skeletons?utm_source=api"
+      },
+      "registry": {
+        "csvid": 70,
+        "iid": 2782,
+        "name": "Drudge Skeletons",
+        "handler": "manalinkeh_card_drudge_skeletons",
+        "kind": "card"
+      }
+    },
+    "Elite Vanguard": {
+      "oracle": {
+        "oracle_id": "b3b9a87d-cb95-435c-90b6-037406cab32e",
+        "name": "Elite Vanguard",
+        "oracle_text": "",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/8/elite-vanguard?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10412,
+        "iid": 2953,
+        "name": "Elite Vanguard",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Silklash Spider": {
+      "oracle": {
+        "oracle_id": "2d0c73da-ed8c-44fc-abd9-7c344b1f890d",
+        "name": "Silklash Spider",
+        "oracle_text": "Reach\n{X}{G}{G}: This creature deals X damage to each creature with flying.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "7",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cma/145/silklash-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6262,
+        "iid": 8743,
+        "name": "Silklash Spider",
+        "handler": "manalinkeh_card_silklash_spider",
+        "kind": "card"
+      }
+    },
+    "Skeleton": {
+      "oracle": {
+        "oracle_id": "9174887a-5990-49c8-ae95-83d830f9d4f3",
+        "name": "Skeleton",
+        "oracle_text": "{B}: Regenerate this creature.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Skeleton",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/ta25/8/skeleton?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18819,
+        "iid": 11405,
+        "name": "Skeleton",
+        "handler": "manalinkeh_card_drudge_skeletons",
+        "kind": "card"
+      }
+    },
+    "Stone Rain": {
+      "oracle": {
+        "oracle_id": "6e880df6-fc00-43d2-a9c8-f575f40b78c6",
+        "name": "Stone Rain",
+        "oracle_text": "Destroy target land.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/221/stone-rain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 236,
+        "iid": 9381,
+        "name": "Stone Rain",
+        "handler": "manalinkeh_card_ice_storm",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Walking Corpse": {
+      "oracle": {
+        "oracle_id": "fea95888-e16a-4209-9cd4-623f7f4d2f67",
+        "name": "Walking Corpse",
+        "oracle_text": "",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/128/walking-corpse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12124,
+        "iid": 10747,
+        "name": "Walking Corpse",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

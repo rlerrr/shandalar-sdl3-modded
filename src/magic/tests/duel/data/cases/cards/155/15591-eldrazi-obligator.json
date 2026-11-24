@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Eldrazi Obligator",
+  "csvid": 15591,
+  "recipes": [
+    {
+      "family": "devoid_cast_payments_and_targets",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\nWhen you cast this spell, you may pay {1}{C}. If you do, gain control of target creature until end of turn, untap that creature, and it gains haste until end of turn. ({C} represents colorless mana.)\nHaste",
+      "params": {
+        "effect": "steal",
+        "price": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "power": 3,
+        "toughness": 1
+      },
+      "variants": [
+        "wrong_base_0",
+        "paid_0",
+        "decline_0",
+        "colored_only_0",
+        "haste_0",
+        "paid_attack_0",
+        "countered_0",
+        "own_target_0",
+        "replay_0",
+        "wrong_base_1",
+        "paid_1",
+        "decline_1",
+        "colored_only_1",
+        "haste_1",
+        "paid_attack_1",
+        "countered_1",
+        "own_target_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

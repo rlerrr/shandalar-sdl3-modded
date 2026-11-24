@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Mana-Charged Dragon",
+  "csvid": 11742,
+  "recipes": [
+    {
+      "family": "attack_follow_on_attack_riders",
+      "version": 2,
+      "params": {
+        "csvid": 11742,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "oracle_text": "Flying, trample\nJoin forces — Whenever this creature attacks or blocks, each player starting with you may pay any amount of mana. This creature gets +X/+0 until end of turn, where X is the total amount of mana paid this way.",
+      "variants": [
+        "attack_paid_0",
+        "attack_paid_1",
+        "block_paid_0",
+        "block_paid_1",
+        "attack_zero_0",
+        "attack_zero_1",
+        "trample_0",
+        "trample_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,451 @@
+{
+  "sources": {
+    "Gorgon Recluse": {
+      "oracle": {
+        "oracle_id": "e6c9a699-0468-42f8-aad5-b9d45a3c1d37",
+        "name": "Gorgon Recluse",
+        "oracle_text": "Whenever this creature blocks or becomes blocked by a nonblack creature, destroy that creature at end of combat.\nMadness {B}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Creature — Gorgon",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Madness"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/117/gorgon-recluse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8565,
+        "iid": 4121,
+        "name": "Gorgon Recluse",
+        "handler": "manalinkeh_card_gorgon_recluse",
+        "kind": "card"
+      }
+    },
+    "Bloodmad Vampire": {
+      "oracle": {
+        "oracle_id": "c8a20fc7-025b-403a-b893-ff5efcbdc9d8",
+        "name": "Bloodmad Vampire",
+        "oracle_text": "Whenever this creature deals combat damage to a player, put a +1/+1 counter on it.\nMadness {1}{R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Vampire Berserker",
+        "power": "4",
+        "toughness": "1",
+        "keywords": [
+          "Madness"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/145/bloodmad-vampire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15752,
+        "iid": 15827,
+        "name": "Bloodmad Vampire",
+        "handler": "manalinkeh_card_bloodmad_vampire",
+        "kind": "card"
+      }
+    },
+    "Stensia Masquerade": {
+      "oracle": {
+        "oracle_id": "88f5d146-420b-417c-bcf1-fe0e78312a74",
+        "name": "Stensia Masquerade",
+        "oracle_text": "Attacking creatures you control have first strike.\nWhenever a Vampire you control deals combat damage to a player, put a +1/+1 counter on it.\nMadness {2}{R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Madness"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/172/stensia-masquerade?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15970,
+        "iid": 16044,
+        "name": "Stensia Masquerade",
+        "handler": "manalinkeh_card_stensia_masquerade",
+        "kind": "card"
+      }
+    },
+    "Stromkirk Occultist": {
+      "oracle": {
+        "oracle_id": "3bdd140b-1406-4d07-8f35-78f2ba92de64",
+        "name": "Stromkirk Occultist",
+        "oracle_text": "Trample\nWhenever this creature deals combat damage to a player, exile the top card of your library. Until end of turn, you may play that card.\nMadness {1}{R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Vampire Horror",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Madness",
+          "Trample"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/173/stromkirk-occultist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16204,
+        "iid": 16292,
+        "name": "Stromkirk Occultist",
+        "handler": "manalinkeh_card_stromkirk_occultist",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Black Oak of Odunos": {
+      "oracle": {
+        "oracle_id": "5fc888d1-241f-45e1-9c20-3c5ae0aadc30",
+        "name": "Black Oak of Odunos",
+        "oracle_text": "Defender\n{B}, Tap another untapped creature you control: This creature gets +1/+1 until end of turn.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Zombie Treefolk",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/62/black-oak-of-odunos?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13672,
+        "iid": 1024,
+        "name": "Black Oak of Odunos",
+        "handler": "manalinkeh_card_black_oak_of_odunos",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Elvish Mystic": {
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13284,
+        "iid": 2982,
+        "name": "Elvish Mystic",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Ornithopter": {
+      "oracle": {
+        "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+        "name": "Ornithopter",
+        "oracle_text": "Flying",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Thopter",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 514,
+        "iid": 6907,
+        "name": "Ornithopter",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Rummaging Goblin": {
+      "oracle": {
+        "oracle_id": "2055eb91-ee36-4752-a6dc-581eaef335c8",
+        "name": "Rummaging Goblin",
+        "oracle_text": "{T}, Discard a card: Draw a card.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Goblin Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/198/rummaging-goblin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12612,
+        "iid": 8111,
+        "name": "Rummaging Goblin",
+        "handler": "manalinkeh_card_rummaging_goblin",
+        "kind": "card"
+      }
+    },
+    "Vampire Interloper": {
+      "oracle": {
+        "oracle_id": "b753d7dd-4c6b-4472-a009-671572f927eb",
+        "name": "Vampire Interloper",
+        "oracle_text": "Flying\nThis creature can't block.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Vampire Scout",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/756/vampire-interloper?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12114,
+        "iid": 10455,
+        "name": "Vampire Interloper",
+        "handler": "manalinkeh_card_vampire_interloper",
+        "kind": "card"
+      }
+    },
+    "Wall of Roots": {
+      "oracle": {
+        "oracle_id": "3a21a6ae-b2f2-4f0c-acfd-5f3e8d63fd2f",
+        "name": "Wall of Roots",
+        "oracle_text": "Defender\nPut a -0/-1 counter on this creature: Add {G}. Activate only once each turn.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Plant Wall",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/278/wall-of-roots?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2656,
+        "iid": 10778,
+        "name": "Wall of Roots",
+        "handler": "manalinkeh_card_wall_of_roots",
+        "kind": "card"
+      }
+    }
+  }
+}

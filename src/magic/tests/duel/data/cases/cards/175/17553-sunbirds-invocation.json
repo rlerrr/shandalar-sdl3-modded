@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Sunbird's Invocation",
+  "csvid": 17553,
+  "recipes": [
+    {
+      "family": "alternate_zone_cast_additional_riders",
+      "version": 2,
+      "params": {
+        "model": "invocation",
+        "cost": [
+          5,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Whenever you cast a spell from your hand, reveal the top X cards of your library, where X is that spell's mana value. You may cast a spell with mana value X or less from among cards revealed this way without paying its mana cost. Put the rest on the bottom of your library in a random order.",
+      "variants": [
+        "short_source_0",
+        "equal_0",
+        "decline_0",
+        "higher_0",
+        "zero_0",
+        "empty_0",
+        "short_library_0",
+        "enemy_cast_0",
+        "replay_0",
+        "short_source_1",
+        "equal_1",
+        "decline_1",
+        "higher_1",
+        "zero_1",
+        "empty_1",
+        "short_library_1",
+        "enemy_cast_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

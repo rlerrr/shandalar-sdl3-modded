@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "card": "Bile Blight",
+  "csvid": 13671,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "same_name_sweep",
+      "version": 2,
+      "oracle_text": "Target creature and all other creatures with the same name as that creature get -3/-3 until end of turn.",
+      "params": {
+        "mode": "pump",
+        "mana": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": -3,
+        "toughness": -3,
+        "keywords": []
+      },
+      "variants": [
+        "effect_0",
+        "effect_1",
+        "own_target_0",
+        "own_target_1",
+        "single_0",
+        "single_1",
+        "target_lost_0",
+        "target_lost_1",
+        "countered_0",
+        "countered_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "short_0",
+        "short_1",
+        "no_target_0",
+        "no_target_1",
+        "replay_0",
+        "replay_1",
+        "survivors_0",
+        "survivors_1",
+        "expiry_0",
+        "expiry_1",
+        "protected_peer_0",
+        "protected_peer_1",
+        "token_population_0",
+        "token_population_1",
+        "offturn_0",
+        "offturn_1",
+        "combat_0",
+        "combat_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,730 @@
+{
+  "sources": {
+    "Deadbridge Chant": {
+      "oracle": {
+        "oracle_id": "506667b1-7922-4959-a5b3-0f8abe8c3615",
+        "name": "Deadbridge Chant",
+        "oracle_text": "When this enchantment enters, mill ten cards.\nAt the beginning of your upkeep, choose a card at random in your graveyard. If it's a creature card, put it onto the battlefield. Otherwise, put it into your hand.",
+        "mana_cost": "{4}{B}{G}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/215/deadbridge-chant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13139,
+        "iid": 2306,
+        "name": "Deadbridge Chant",
+        "handler": "manalinkeh_card_deadbridge_chant",
+        "kind": "card"
+      }
+    },
+    "Drown in Filth": {
+      "oracle": {
+        "oracle_id": "59af03ba-28d0-4f15-b877-2cf3c81d66e1",
+        "name": "Drown in Filth",
+        "oracle_text": "Choose target creature. Mill four cards, then that creature gets -1/-1 until end of turn for each land card in your graveyard.",
+        "mana_cost": "{B}{G}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dgm/67/drown-in-filth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13145,
+        "iid": 2775,
+        "name": "Drown in Filth",
+        "handler": "manalinkeh_card_drown_in_filth",
+        "kind": "card"
+      }
+    },
+    "Extract from Darkness": {
+      "oracle": {
+        "oracle_id": "e597d8a1-3bbc-4001-b642-f4421447970f",
+        "name": "Extract from Darkness",
+        "oracle_text": "Each player mills two cards. Then you put a creature card from a graveyard onto the battlefield under your control.",
+        "mana_cost": "{3}{U}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/210/extract-from-darkness?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14034,
+        "iid": 3209,
+        "name": "Extract from Darkness",
+        "handler": "manalinkeh_card_extract_from_darkness",
+        "kind": "card"
+      }
+    },
+    "Corpse Churn": {
+      "oracle": {
+        "oracle_id": "e2aeac0b-af74-4c47-9ac1-51fbf869c95f",
+        "name": "Corpse Churn",
+        "oracle_text": "Mill three cards, then you may return a creature card from your graveyard to your hand. (To mill three cards, put the top three cards of your library into your graveyard.)",
+        "mana_cost": "{1}{B}",
+        "type_line": "Instant",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/107/corpse-churn?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15575,
+        "iid": 15650,
+        "name": "Corpse Churn",
+        "handler": "manalinkeh_card_corpse_churn",
+        "kind": "card"
+      }
+    },
+    "False Memories": {
+      "oracle": {
+        "oracle_id": "d95dd8cc-ce7d-4d43-afbd-efaa2d3c7a35",
+        "name": "False Memories",
+        "oracle_text": "Mill seven cards. At the beginning of the next end step, exile seven cards from your graveyard.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tor/37/false-memories?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5806,
+        "iid": 3270,
+        "name": "False Memories",
+        "handler": "manalinkeh_card_false_memories",
+        "kind": "card"
+      }
+    },
+    "Sudden Reclamation": {
+      "oracle": {
+        "oracle_id": "c34dec60-031a-4cd3-b2e5-db7a02a34d96",
+        "name": "Sudden Reclamation",
+        "oracle_text": "Mill four cards, then return a creature card and a land card from your graveyard to your hand.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frf/139/sudden-reclamation?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14633,
+        "iid": 11368,
+        "name": "Sudden Reclamation",
+        "handler": "manalinkeh_card_sudden_reclamation",
+        "kind": "card"
+      }
+    },
+    "Grapple with the Past": {
+      "oracle": {
+        "oracle_id": "d14c633d-977a-4f78-85c2-88582b3c3670",
+        "name": "Grapple with the Past",
+        "oracle_text": "Mill three cards, then you may return a creature or land card from your graveyard to your hand. (To mill three cards, put the top three cards of your library into your graveyard.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/257/grapple-with-the-past?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16117,
+        "iid": 16207,
+        "name": "Grapple with the Past",
+        "handler": "manalinkeh_card_grapple_with_the_past",
+        "kind": "card"
+      }
+    },
+    "Winds of Rebuke": {
+      "oracle": {
+        "oracle_id": "6840a63d-d627-4a18-afa9-018406767642",
+        "name": "Winds of Rebuke",
+        "oracle_text": "Return target nonland permanent to its owner's hand. Each player mills two cards.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/akh/76/winds-of-rebuke?utm_source=api"
+      },
+      "registry": {
+        "csvid": 17071,
+        "iid": 17165,
+        "name": "Winds of Rebuke",
+        "handler": "manalinkeh_card_winds_of_rebuke",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Craw Wurm": {
+      "oracle": {
+        "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+        "name": "Craw Wurm",
+        "oracle_text": "",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "6",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/173/craw-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 49,
+        "iid": 2032,
+        "name": "Craw Wurm",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Divination": {
+      "oracle": {
+        "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+        "name": "Divination",
+        "oracle_text": "Draw two cards.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/51/divination?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10405,
+        "iid": 2609,
+        "name": "Divination",
+        "handler": "manalinkeh_card_divination",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Goblin Piker": {
+      "oracle": {
+        "oracle_id": "50608184-90d3-43d2-a221-deb186c78323",
+        "name": "Goblin Piker",
+        "oracle_text": "",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m12/141/goblin-piker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10423,
+        "iid": 4027,
+        "name": "Goblin Piker",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Ornithopter": {
+      "oracle": {
+        "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+        "name": "Ornithopter",
+        "oracle_text": "Flying",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Thopter",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 514,
+        "iid": 6907,
+        "name": "Ornithopter",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Tortured Existence": {
+      "oracle": {
+        "oracle_id": "fa9dfcf7-069c-4441-9ea0-133de47ecada",
+        "name": "Tortured Existence",
+        "oracle_text": "{B}, Discard a creature card: Return target creature card from your graveyard to your hand.",
+        "mana_cost": "{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sth/74/tortured-existence?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3446,
+        "iid": 10103,
+        "name": "Tortured Existence",
+        "handler": "manalinkeh_card_tortured_existence",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Walking Corpse": {
+      "oracle": {
+        "oracle_id": "fea95888-e16a-4209-9cd4-623f7f4d2f67",
+        "name": "Walking Corpse",
+        "oracle_text": "",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/128/walking-corpse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12124,
+        "iid": 10747,
+        "name": "Walking Corpse",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Zephyr Sprite": {
+      "oracle": {
+        "oracle_id": "11f77158-0240-4882-94a4-6bd6b3d94bcc",
+        "name": "Zephyr Sprite",
+        "oracle_text": "Flying",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Faerie",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/82/zephyr-sprite?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10490,
+        "iid": 15591,
+        "name": "Zephyr Sprite",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Traveler's Amulet": {
+      "oracle": {
+        "oracle_id": "48b561dd-f23d-409a-87c8-e49902b2477b",
+        "name": "Traveler's Amulet",
+        "oracle_text": "{1}, Sacrifice this artifact: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/273/travelers-amulet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12102,
+        "iid": 10166,
+        "name": "Traveler's Amulet",
+        "handler": "manalinkeh_card_travelers_amulet",
+        "kind": "card"
+      }
+    },
+    "Act of Treason": {
+      "oracle": {
+        "oracle_id": "9d08af23-9f4a-4097-9abc-3b17475ab744",
+        "name": "Act of Treason",
+        "oracle_text": "Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn. (It can attack and {T} this turn.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/99/act-of-treason?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10381,
+        "iid": 224,
+        "name": "Act of Treason",
+        "handler": "manalinkeh_card_act_of_treason",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    }
+  }
+}

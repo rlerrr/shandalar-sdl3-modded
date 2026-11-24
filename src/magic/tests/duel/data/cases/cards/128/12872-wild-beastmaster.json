@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Wild Beastmaster",
+  "csvid": 12872,
+  "recipes": [
+    {
+      "family": "attack_trigger_team_keywords",
+      "version": 2,
+      "params": {
+        "csvid": 12872,
+        "mana": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks, each other creature you control gets +X/+X until end of turn, where X is this creature's power.",
+      "variants": [
+        "base_0",
+        "base_1",
+        "pre_pump_0",
+        "pre_pump_1",
+        "late_0",
+        "late_1"
+      ]
+    }
+  ]
+}

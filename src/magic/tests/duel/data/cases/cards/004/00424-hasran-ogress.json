@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Hasran Ogress",
+  "csvid": 424,
+  "recipes": [
+    {
+      "family": "attack_trigger_costs_and_damage",
+      "version": 2,
+      "params": {
+        "csvid": 424,
+        "printed_mana": "{B}{B}",
+        "rules": "Whenever this creature attacks, it deals 3 damage to you unless you pay {2}."
+      },
+      "oracle_text": "Whenever this creature attacks, it deals 3 damage to you unless you pay {2}.",
+      "variants": [
+        "pay_exact_0",
+        "pay_exact_1",
+        "unfunded_0",
+        "unfunded_1",
+        "blocked_payment_0",
+        "blocked_payment_1",
+        "blocking_only_0",
+        "blocking_only_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

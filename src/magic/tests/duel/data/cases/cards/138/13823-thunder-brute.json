@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "card": "Thunder Brute",
+  "csvid": 13823,
+  "recipes": [
+    {
+      "family": "entry_interaction_choice_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 13823,
+        "mana_cost": "{4}{R}{R}"
+      },
+      "oracle_text": "Trample\nTribute 3 (As this creature enters, an opponent of your choice may put three +1/+1 counters on it.)\nWhen this creature enters, if tribute wasn't paid, it gains haste until end of turn.",
+      "variants": [
+        "tribute_paid_0",
+        "tribute_paid_1",
+        "trample_0",
+        "trample_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Heart of Bogardan",
+  "csvid": 2989,
+  "recipes": [
+    {
+      "family": "cumulative_upkeep_special_payment_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 2989,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "oracle_text": "Cumulative upkeep {2} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nWhen a player doesn't pay this enchantment's cumulative upkeep, this enchantment deals X damage to target player or planeswalker and each creature that player or that planeswalker's controller controls, where X is twice the number of age counters on this enchantment minus 2.",
+      "variants": [
+        "foe_0",
+        "self_0",
+        "zero_0",
+        "walker_0",
+        "foe_1",
+        "self_1",
+        "zero_1",
+        "walker_1"
+      ]
+    }
+  ]
+}

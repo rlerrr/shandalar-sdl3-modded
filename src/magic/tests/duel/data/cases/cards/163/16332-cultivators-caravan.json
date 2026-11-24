@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "csvid": 16332,
+  "card": "Cultivator's Caravan",
+  "recipes": [
+    {
+      "family": "vehicle_crew_utility",
+      "version": 2,
+      "params": {
+        "effect": "palette",
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "threshold": 3,
+        "power": 5,
+        "toughness": 5,
+        "keywords": []
+      },
+      "oracle_text": "{T}: Add one mana of any color.\nCrew 3 (Tap any number of creatures you control with total power 3 or more: This Vehicle becomes an artifact creature until end of turn.)",
+      "variants": [
+        "cast_0",
+        "cast_1",
+        "cast_short_0",
+        "cast_short_1",
+        "ordered_exact_0",
+        "ordered_exact_1",
+        "underpowered_0",
+        "underpowered_1",
+        "partial_cancel_0",
+        "partial_cancel_1",
+        "expires_0",
+        "expires_1",
+        "pending_replay_0",
+        "pending_replay_1",
+        "mana_black_0",
+        "mana_black_1",
+        "mana_blue_0",
+        "mana_blue_1",
+        "mana_green_0",
+        "mana_green_1",
+        "mana_red_0",
+        "mana_red_1",
+        "mana_white_0",
+        "mana_white_1",
+        "fresh_mana_0",
+        "fresh_mana_1",
+        "crewed_mana_0",
+        "crewed_mana_1",
+        "fresh_crewed_denied_0",
+        "fresh_crewed_denied_1",
+        "spend_blue_0",
+        "spend_blue_1",
+        "both_mana_0",
+        "both_mana_1",
+        "tapped_mana_denied_0",
+        "tapped_mana_denied_1",
+        "crew_tapped_0",
+        "crew_tapped_1"
+      ]
+    }
+  ]
+}

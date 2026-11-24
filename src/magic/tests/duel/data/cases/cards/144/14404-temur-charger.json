@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Temur Charger",
+  "csvid": 14404,
+  "recipes": [
+    {
+      "family": "morph_alternate_payments",
+      "version": 2,
+      "params": {
+        "payment": "Reveal a green card in your hand.",
+        "mode": "green",
+        "keywords": [],
+        "power": 3,
+        "toughness": 1,
+        "mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "color": 8
+      },
+      "oracle_text": "Morph—Reveal a green card in your hand. (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, target creature gains trample until end of turn.",
+      "variants": [
+        "hidden_0",
+        "printed_0",
+        "paid_0",
+        "denied_0",
+        "opponent_turn_0",
+        "pending_spell_0",
+        "replay_0",
+        "cast_short_0",
+        "trample_hit_0",
+        "trample_expiry_0",
+        "self_trample_0",
+        "hidden_1",
+        "printed_1",
+        "paid_1",
+        "denied_1",
+        "opponent_turn_1",
+        "pending_spell_1",
+        "replay_1",
+        "cast_short_1",
+        "trample_hit_1",
+        "trample_expiry_1",
+        "self_trample_1",
+        "cancel_0"
+      ]
+    }
+  ]
+}

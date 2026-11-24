@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "csvid": 11201,
+  "card": "Asceticism",
+  "recipes": [
+    {
+      "family": "regeneration_targeted_abilities",
+      "version": 2,
+      "params": {
+        "csvid": 11201,
+        "mana": [
+          3,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "activation": "{1}{G}",
+        "tap": false,
+        "stats": null
+      },
+      "oracle_text": "Creatures you control have hexproof.\n{1}{G}: Regenerate target creature. (The next time it would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "variants": [
+        "own_0",
+        "own_1",
+        "foreign_0",
+        "foreign_1",
+        "heal_0",
+        "heal_1",
+        "combat_0",
+        "combat_1",
+        "wrong_type_0",
+        "wrong_type_1",
+        "short_0",
+        "short_1",
+        "forbidden_0",
+        "forbidden_1",
+        "proactive_0",
+        "proactive_1",
+        "hexproof_0",
+        "hexproof_1"
+      ]
+    }
+  ]
+}

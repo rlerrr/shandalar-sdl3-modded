@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Sea Troll",
+  "csvid": 2239,
+  "recipes": [
+    {
+      "family": "regeneration_conditional",
+      "version": 2,
+      "params": {
+        "csvid": 2239,
+        "printed_mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "rules": "{U}: Regenerate this creature. Activate only if this creature blocked or was blocked by a blue creature this turn."
+      },
+      "oracle_text": "{U}: Regenerate this creature. Activate only if this creature blocked or was blocked by a blue creature this turn.",
+      "variants": [
+        "blocked_by_blue_0",
+        "blocked_by_blue_1",
+        "blocks_blue_0",
+        "blocks_blue_1",
+        "nonblue_blocker_0",
+        "nonblue_blocker_1",
+        "history_this_turn_0",
+        "history_this_turn_1",
+        "history_expired_0",
+        "history_expired_1"
+      ]
+    }
+  ]
+}

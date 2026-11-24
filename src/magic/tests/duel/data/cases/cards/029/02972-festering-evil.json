@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Festering Evil",
+  "csvid": 2972,
+  "recipes": [
+    {
+      "family": "upkeep_damage_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 2972
+      },
+      "oracle_text": "At the beginning of your upkeep, this enchantment deals 1 damage to each creature and each player.\n{B}{B}, Sacrifice this enchantment: It deals 3 damage to each creature and each player.",
+      "variants": [
+        "upkeep_0",
+        "upkeep_1",
+        "sacrifice_0",
+        "sacrifice_1",
+        "short_0",
+        "short_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Destructive Tampering",
+  "csvid": 16691,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "block_restriction_spells",
+      "version": 2,
+      "oracle_text": "Choose one —\n• Destroy target artifact.\n• Creatures without flying can't block this turn.",
+      "params": {
+        "mode": "modal",
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "instant": false,
+        "keywords": []
+      },
+      "variants": [
+        "effect_0",
+        "effect_1",
+        "expiry_0",
+        "expiry_1",
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "flying_0",
+        "flying_1",
+        "reach_0",
+        "reach_1",
+        "gain_flying_0",
+        "gain_flying_1",
+        "lose_flying_0",
+        "lose_flying_1",
+        "late_ground_0",
+        "late_ground_1",
+        "destroy_0",
+        "destroy_1",
+        "destroy_own_0",
+        "destroy_own_1",
+        "indestructible_0",
+        "indestructible_1",
+        "destroy_removed_0",
+        "destroy_removed_1",
+        "illegal_destroy_0",
+        "illegal_destroy_1",
+        "cancel_0",
+        "cancel_1"
+      ]
+    }
+  ]
+}

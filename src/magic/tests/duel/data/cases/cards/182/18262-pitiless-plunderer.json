@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "csvid": 18262,
+  "card": "Pitiless Plunderer",
+  "recipes": [
+    {
+      "family": "treasure_entry",
+      "version": 2,
+      "params": {
+        "cost": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "composition": "death",
+        "power": 1,
+        "toughness": 4
+      },
+      "oracle_text": "Whenever another creature you control dies, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "variants": [
+        "own_death_0",
+        "foe_death_0",
+        "self_death_0",
+        "artifact_destruction_0",
+        "own_exiled_0",
+        "own_bounced_0",
+        "two_deaths_0",
+        "simultaneous_source_0",
+        "own_dies_off_turn_0",
+        "borrowed_creature_0",
+        "death_before_entry_0",
+        "death_after_source_0",
+        "token_destruction_0",
+        "death_then_spend_0",
+        "own_death_1",
+        "foe_death_1",
+        "self_death_1",
+        "artifact_destruction_1",
+        "own_exiled_1",
+        "own_bounced_1",
+        "two_deaths_1",
+        "simultaneous_source_1",
+        "own_dies_off_turn_1",
+        "borrowed_creature_1",
+        "death_before_entry_1",
+        "death_after_source_1",
+        "token_destruction_1",
+        "death_then_spend_1"
+      ]
+    }
+  ]
+}

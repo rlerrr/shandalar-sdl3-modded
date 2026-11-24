@@ -1,0 +1,477 @@
+{
+  "version": 1,
+  "sources": {
+    "Stave Off": {
+      "oracle": {
+        "oracle_id": "c77c23bc-efde-43ce-bf6f-7a8531d81d89",
+        "name": "Stave Off",
+        "oracle_text": "Target creature gains protection from the color of your choice until end of turn.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddn/61/stave-off?utm_source=api"
+      },
+      "handler": "manalinkeh_card_stave_off"
+    },
+    "Mother of Runes": {
+      "oracle": {
+        "oracle_id": "60433b48-d27f-413c-905c-43839b1943f1",
+        "name": "Mother of Runes",
+        "oracle_text": "{T}: Target creature you control gains protection from the color of your choice until end of turn.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clb/702/mother-of-runes?utm_source=api"
+      },
+      "handler": "manalinkeh_card_mother_of_runes"
+    },
+    "Benevolent Bodyguard": {
+      "oracle": {
+        "oracle_id": "c8c38570-0b42-4bfc-896f-f57f9a11ba9d",
+        "name": "Benevolent Bodyguard",
+        "oracle_text": "Sacrifice this creature: Target creature you control gains protection from the color of your choice until end of turn.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/4/benevolent-bodyguard?utm_source=api"
+      },
+      "handler": "manalinkeh_card_benevolent_bodyguard"
+    },
+    "Midvast Protector": {
+      "oracle": {
+        "oracle_id": "33a5ad42-cd81-4724-9f68-7f32a1c8a047",
+        "name": "Midvast Protector",
+        "oracle_text": "When this creature enters, target creature you control gains protection from the color of your choice until end of turn.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/28/midvast-protector?utm_source=api"
+      },
+      "handler": "manalinkeh_card_midvast_protector"
+    },
+    "Brave the Elements": {
+      "oracle": {
+        "oracle_id": "9d73a51a-1c8e-40cd-8124-aeff406a0884",
+        "name": "Brave the Elements",
+        "oracle_text": "Choose a color. White creatures you control gain protection from the chosen color until end of turn.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c14/66/brave-the-elements?utm_source=api"
+      },
+      "handler": "manalinkeh_card_brave_the_elements"
+    },
+    "Gods Willing": {
+      "oracle": {
+        "oracle_id": "48e603a2-b965-4fbc-ad57-4388bce5ac8b",
+        "name": "Gods Willing",
+        "oracle_text": "Target creature you control gains protection from the color of your choice until end of turn. (It can't be blocked, targeted, dealt damage, enchanted, or equipped by anything of that color.)\nScry 1.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/63/gods-willing?utm_source=api"
+      },
+      "handler": "manalinkeh_card_gods_willing"
+    }
+  },
+  "witnesses": {
+    "Pillarfield Ox": {
+      "oracle": {
+        "oracle_id": "0f7c70c4-9795-4c76-8b27-043942a963c6",
+        "name": "Pillarfield Ox",
+        "oracle_text": "",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Ox",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/76/pillarfield-ox?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Yoked Ox": {
+      "oracle": {
+        "oracle_id": "19b4cf0b-e1e4-4e50-80bc-673bc6ef8bb8",
+        "name": "Yoked Ox",
+        "oracle_text": "",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Ox",
+        "power": "0",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/41/yoked-ox?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Craw Wurm": {
+      "oracle": {
+        "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+        "name": "Craw Wurm",
+        "oracle_text": "",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "6",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/173/craw-wurm?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Air Elemental": {
+      "oracle": {
+        "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+        "name": "Air Elemental",
+        "oracle_text": "Flying",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/44/air-elemental?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Scathe Zombies": {
+      "oracle": {
+        "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+        "name": "Scathe Zombies",
+        "oracle_text": "",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/175/scathe-zombies?utm_source=api"
+      },
+      "handler": "card_scathe_zombies"
+    },
+    "Prodigal Pyromancer": {
+      "oracle": {
+        "oracle_id": "29b3cb3e-aeb1-43eb-8095-9f7881aa34bd",
+        "name": "Prodigal Pyromancer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/180/prodigal-pyromancer?utm_source=api"
+      },
+      "handler": "manalinkeh_card_prodigal_sorcerer"
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "handler": "manalinkeh_card_prodigal_sorcerer"
+    },
+    "Pyroclasm": {
+      "oracle": {
+        "oracle_id": "e4bcd4ea-e7cd-4471-8f3b-18bb51d3d70c",
+        "name": "Pyroclasm",
+        "oracle_text": "Pyroclasm deals 2 damage to each creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/149/pyroclasm?utm_source=api"
+      },
+      "handler": "manalinkeh_card_pyroclasm"
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "handler": "manalinkeh_card_lightning_bolt"
+    },
+    "Pacifism": {
+      "oracle": {
+        "oracle_id": "5f5e0b10-c8cf-450c-bfd3-bcb0528ec330",
+        "name": "Pacifism",
+        "oracle_text": "Enchant creature\nEnchanted creature can't attack or block.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/575/pacifism?utm_source=api"
+      },
+      "handler": "manalinkeh_card_pacifism"
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    }
+  }
+}

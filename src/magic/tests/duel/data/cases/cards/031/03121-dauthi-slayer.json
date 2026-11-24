@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "csvid": 3121,
+  "card": "Dauthi Slayer",
+  "recipes": [
+    {
+      "family": "required_attack_combat_riders",
+      "version": 2,
+      "oracle_text": "Shadow (This creature can block or be blocked by only creatures with shadow.)\nThis creature attacks each combat if able.",
+      "params": {
+        "mode": "slayer",
+        "costs": {
+          "printed": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "power": 2,
+        "toughness": 2,
+        "keywords": [
+          "Shadow"
+        ]
+      },
+      "variants": [
+        "omitted_0",
+        "omitted_1",
+        "tapped_0",
+        "tapped_1",
+        "sick_0",
+        "sick_1",
+        "pacified_0",
+        "pacified_1",
+        "opponent_turn_0",
+        "opponent_turn_1",
+        "competing_selected_0",
+        "competing_selected_1",
+        "two_required_0",
+        "two_required_1",
+        "paid_fresh_0",
+        "paid_fresh_1",
+        "paid_next_turn_0",
+        "paid_next_turn_1",
+        "unfunded_0",
+        "unfunded_1",
+        "proposed_replay_0",
+        "proposed_replay_1",
+        "ground_evasion_0",
+        "ground_evasion_1",
+        "shadow_exchange_0",
+        "shadow_exchange_1",
+        "defend_ground_0",
+        "defend_ground_1",
+        "defend_shadow_0",
+        "defend_shadow_1",
+        "wrong_color_0",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

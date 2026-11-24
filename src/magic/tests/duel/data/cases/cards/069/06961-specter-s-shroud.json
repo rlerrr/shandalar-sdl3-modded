@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 6961,
+  "card": "Specter's Shroud",
+  "recipes": [
+    {
+      "family": "equipment_combat_damage_hand_and_cast",
+      "version": 2,
+      "params": {
+        "csvid": 6961,
+        "equip_generic": 1,
+        "printed_cost": "{2}"
+      },
+      "oracle_text": "Equipped creature gets +1/+0.\nWhenever equipped creature deals combat damage to a player, that player discards a card.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "variants": [
+        "hit_0",
+        "noncombat_0",
+        "blocked_0",
+        "bare_0",
+        "short_equip_0",
+        "empty_hand_0",
+        "hit_1",
+        "noncombat_1",
+        "blocked_1",
+        "bare_1",
+        "short_equip_1",
+        "empty_hand_1"
+      ]
+    }
+  ]
+}

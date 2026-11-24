@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "csvid": 10775,
+  "card": "Hammer of Ruin",
+  "recipes": [
+    {
+      "family": "equipment_combat_damage_board_effects",
+      "version": 2,
+      "params": {
+        "csvid": 10775,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "equip": 2,
+        "bonus": [
+          2,
+          0
+        ]
+      },
+      "oracle_text": "Equipped creature gets +2/+0.\nWhenever equipped creature deals combat damage to a player, you may destroy target Equipment that player controls.\nEquip {2}",
+      "variants": [
+        "destroy_0",
+        "destroy_1",
+        "decline_0",
+        "decline_1",
+        "noncombat_0",
+        "noncombat_1",
+        "blocked_0",
+        "blocked_1",
+        "unattached_0",
+        "unattached_1"
+      ]
+    }
+  ]
+}

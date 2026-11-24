@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Double Header",
+  "csvid": 17736,
+  "recipes": [
+    {
+      "family": "remaining_entry_zone_and_permissions",
+      "version": 2,
+      "params": {
+        "csvid": 17736,
+        "cost": [
+          3,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, you may return target permanent with a two-word name to its owner's hand.",
+      "variants": [
+        "own_two_words_0",
+        "own_two_words_1",
+        "enemy_two_words_0",
+        "enemy_two_words_1",
+        "borrowed_owner_0",
+        "borrowed_owner_1",
+        "decline_0",
+        "decline_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

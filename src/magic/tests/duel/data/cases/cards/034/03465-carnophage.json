@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Carnophage",
+  "csvid": 3465,
+  "recipes": [
+    {
+      "family": "upkeep_life_tap",
+      "version": 2,
+      "params": {
+        "mode": "tap",
+        "life": 1,
+        "mana": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "oracle_text": "At the beginning of your upkeep, tap this creature unless you pay 1 life.",
+      "variants": [
+        "pay_0",
+        "decline_0",
+        "opponent_upkeep_0",
+        "countered_0",
+        "wrong_mana_0",
+        "short_0",
+        "snapshot_0",
+        "attack_paid_0",
+        "attack_declined_0",
+        "already_tapped_0",
+        "locked_life_0",
+        "exact_life_0",
+        "repeat_0",
+        "pay_1",
+        "decline_1",
+        "opponent_upkeep_1",
+        "countered_1",
+        "wrong_mana_1",
+        "short_1",
+        "snapshot_1",
+        "attack_paid_1",
+        "attack_declined_1",
+        "already_tapped_1",
+        "locked_life_1",
+        "exact_life_1",
+        "repeat_1"
+      ]
+    }
+  ]
+}

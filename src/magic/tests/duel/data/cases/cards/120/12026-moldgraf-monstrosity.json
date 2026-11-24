@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Moldgraf Monstrosity",
+  "csvid": 12026,
+  "recipes": [
+    {
+      "family": "departure_graveyard_and_return",
+      "version": 2,
+      "params": {
+        "csvid": 12026,
+        "cost": [
+          4,
+          0,
+          0,
+          3,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Trample\nWhen this creature dies, exile it, then return two creature cards at random from your graveyard to the battlefield.",
+      "variants": [
+        "random_two_0",
+        "random_two_1",
+        "only_one_0",
+        "only_one_1",
+        "no_creature_0",
+        "no_creature_1",
+        "trample_0",
+        "trample_1"
+      ]
+    }
+  ]
+}

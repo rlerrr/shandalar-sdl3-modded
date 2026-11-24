@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Fallowsage",
+  "csvid": 9131,
+  "recipes": [
+    {
+      "family": "becomes_tapped_trigger",
+      "version": 2,
+      "oracle_text": "Whenever this creature becomes tapped, you may draw a card.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "effect": "draw",
+          "keyword": null,
+          "clauses": [
+            "Whenever this creature becomes tapped, you may draw a card."
+          ]
+        }
+      },
+      "variants": [
+        "entry_0",
+        "spell_tap_0",
+        "other_taps_0",
+        "already_tapped_0",
+        "untap_retap_0",
+        "opponent_turn_0",
+        "attack_0",
+        "fresh_attack_0",
+        "cost_tap_0",
+        "cast_countered_0",
+        "ready_replay_0",
+        "pending_replay_0",
+        "decline_0",
+        "entry_1",
+        "spell_tap_1",
+        "other_taps_1",
+        "already_tapped_1",
+        "untap_retap_1",
+        "opponent_turn_1",
+        "attack_1",
+        "fresh_attack_1",
+        "cost_tap_1",
+        "cast_countered_1",
+        "ready_replay_1",
+        "pending_replay_1",
+        "decline_1"
+      ]
+    }
+  ]
+}

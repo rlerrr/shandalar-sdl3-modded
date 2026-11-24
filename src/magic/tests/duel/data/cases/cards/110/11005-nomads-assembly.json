@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Nomads' Assembly",
+  "csvid": 11005,
+  "recipes": [
+    {
+      "family": "untargeted_rebound",
+      "version": 2,
+      "params": {
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "keywords": [],
+        "mode": "tokens",
+        "token": {
+          "name": "Kor Soldier",
+          "power": 1,
+          "toughness": 1,
+          "color": 32,
+          "subtypes": [
+            "Kor",
+            "Soldier"
+          ],
+          "flying": false,
+          "amount": "creatures_you_control"
+        }
+      },
+      "oracle_text": "Create a 1/1 white Kor Soldier creature token for each creature you control.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
+      "variants": [
+        "scheduled_0",
+        "countered_0",
+        "snapshot_0",
+        "wrong_color_0",
+        "subtypes_0",
+        "enemy_only_0",
+        "scheduled_1",
+        "countered_1",
+        "snapshot_1",
+        "wrong_color_1",
+        "subtypes_1",
+        "enemy_only_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

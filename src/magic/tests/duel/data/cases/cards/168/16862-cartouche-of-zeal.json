@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Cartouche of Zeal",
+  "csvid": 16862,
+  "recipes": [
+    {
+      "family": "entry_interaction_combat",
+      "version": 2,
+      "params": {
+        "csvid": 16862,
+        "cost": "{R}",
+        "choices": [
+          "fresh_0",
+          "fresh_1",
+          "remove_0",
+          "remove_1",
+          "expire_0",
+          "expire_1",
+          "foreign_only_0",
+          "foreign_only_1"
+        ]
+      },
+      "oracle_text": "Enchant creature you control\nWhen this Aura enters, target creature can't block this turn.\nEnchanted creature gets +1/+1 and has haste. (It can attack and {T} no matter when it came under your control.)",
+      "variants": [
+        "fresh_0",
+        "fresh_1",
+        "remove_0",
+        "remove_1",
+        "expire_0",
+        "expire_1",
+        "foreign_only_0",
+        "foreign_only_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Gilt-Leaf Ambush",
+  "csvid": 9152,
+  "recipes": [
+    {
+      "family": "clash_whole_cards",
+      "version": 2,
+      "oracle_text": "Create two 1/1 green Elf Warrior creature tokens. Clash with an opponent. If you win, those creatures gain deathtouch until end of turn. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value. Any amount of damage a creature with deathtouch deals to a creature is enough to destroy it.)",
+      "params": {
+        "effect": "ambush",
+        "mana": "{2}{G}",
+        "type_line": "Kindred Instant — Elf",
+        "power": null,
+        "toughness": null
+      },
+      "variants": [
+        "win_0",
+        "tie_0",
+        "loss_0",
+        "human_bottom_0",
+        "snapshot_0",
+        "expiry_0",
+        "win_1",
+        "tie_1",
+        "loss_1",
+        "human_bottom_1",
+        "snapshot_1",
+        "expiry_1"
+      ]
+    }
+  ]
+}

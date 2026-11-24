@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Mystic Enforcer",
+  "csvid": 5627,
+  "recipes": [
+    {
+      "family": "threshold_combat_static",
+      "version": 2,
+      "params": {
+        "csvid": 5627,
+        "mana": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "power_delta": 3,
+        "toughness_delta": 3
+      },
+      "oracle_text": "Protection from black\nThreshold — As long as there are seven or more cards in your graveyard, this creature gets +3/+3 and has flying.",
+      "variants": [
+        "six_0",
+        "six_1",
+        "seven_0",
+        "seven_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "short_funding_0",
+        "short_funding_1",
+        "countered_0",
+        "countered_1",
+        "lose_threshold_0",
+        "lose_threshold_1",
+        "replay_0",
+        "replay_1",
+        "gain_threshold_0",
+        "gain_threshold_1"
+      ]
+    }
+  ]
+}

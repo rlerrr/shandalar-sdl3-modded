@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Stolen Strategy",
+  "csvid": 18641,
+  "recipes": [
+    {
+      "family": "opponent_exile_permissions",
+      "version": 2,
+      "oracle_text": "At the beginning of your upkeep, exile the top card of each opponent's library. Until end of turn, you may cast spells from among those exiled cards, and you may spend mana as though it were mana of any color to cast those spells.",
+      "params": {
+        "model": "upkeep",
+        "cost": [
+          4,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "payment": "any_mana",
+        "expiry": "turn"
+      },
+      "variants": [
+        "alternate_color_0",
+        "short_0",
+        "wrong_seat_0",
+        "wrong_owner_0",
+        "expiry_0",
+        "land_0",
+        "empty_0",
+        "opposing_upkeep_0",
+        "cast_source_0",
+        "replay_0",
+        "alternate_color_1",
+        "short_1",
+        "wrong_seat_1",
+        "wrong_owner_1",
+        "expiry_1",
+        "land_1",
+        "empty_1",
+        "opposing_upkeep_1",
+        "cast_source_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

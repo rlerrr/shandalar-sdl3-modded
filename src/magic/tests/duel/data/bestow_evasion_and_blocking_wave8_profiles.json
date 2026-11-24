@@ -1,0 +1,568 @@
+{
+  "sources": {
+    "Cavern Lampad": {
+      "oracle": {
+        "oracle_id": "6ead91e1-4062-4080-bbc7-a4b62f8c6111",
+        "name": "Cavern Lampad",
+        "oracle_text": "Bestow {5}{B} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nIntimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)\nEnchanted creature gets +2/+2 and has intimidate.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Enchantment Creature — Nymph",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Bestow",
+          "Intimidate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/81/cavern-lampad?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13401,
+        "iid": 1567,
+        "name": "Cavern Lampad",
+        "handler": "manalinkeh_card_cavern_lampad",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13402,
+        "iid": 1568,
+        "name": "Cavern Lampad Bestowed",
+        "handler": "manalinkeh_card_cavern_lampad",
+        "kind": "card"
+      }
+    },
+    "Flitterstep Eidolon": {
+      "oracle": {
+        "oracle_id": "4280191f-e2cb-4cee-a3b4-660b3efd62e9",
+        "name": "Flitterstep Eidolon",
+        "oracle_text": "Bestow {5}{U} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nThis creature can't be blocked.\nEnchanted creature gets +1/+1 and can't be blocked.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment Creature — Spirit",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Bestow"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/40/flitterstep-eidolon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13714,
+        "iid": 3528,
+        "name": "Flitterstep Eidolon",
+        "handler": "manalinkeh_card_flitterstep_eidolon",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13715,
+        "iid": 3529,
+        "name": "Flitterstep Eidolon Bestowed",
+        "handler": "manalinkeh_card_flitterstep_eidolon",
+        "kind": "card"
+      }
+    },
+    "Gnarled Scarhide": {
+      "oracle": {
+        "oracle_id": "1ef73cc0-fe72-4040-a932-bcd4b1a704a3",
+        "name": "Gnarled Scarhide",
+        "oracle_text": "Bestow {3}{B} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nThis creature can't block.\nEnchanted creature gets +2/+1 and can't block.",
+        "mana_cost": "{B}",
+        "type_line": "Enchantment Creature — Minotaur",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Bestow"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/72/gnarled-scarhide?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13896,
+        "iid": 3964,
+        "name": "Gnarled Scarhide",
+        "handler": "manalinkeh_card_gnarled_scarhide",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13897,
+        "iid": 3965,
+        "name": "Gnarled Scarhide Bestowed",
+        "handler": "manalinkeh_card_gnarled_scarhide",
+        "kind": "card"
+      }
+    },
+    "Purphoros's Emissary": {
+      "oracle": {
+        "oracle_id": "d78d7fd6-778b-4030-a776-29ddce83e33f",
+        "name": "Purphoros's Emissary",
+        "oracle_text": "Bestow {6}{R} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nMenace (This creature can't be blocked except by two or more creatures.)\nEnchanted creature gets +3/+3 and has menace.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Enchantment Creature — Ox",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Menace",
+          "Bestow"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/121/purphoross-emissary?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13526,
+        "iid": 7493,
+        "name": "Purphoros's Emissary",
+        "handler": "manalinkeh_card_purphoross_emissary",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13527,
+        "iid": 7494,
+        "name": "Purphoros's Emissary Bestowed",
+        "handler": "manalinkeh_card_purphoross_emissary",
+        "kind": "card"
+      }
+    },
+    "Leafcrown Dryad": {
+      "oracle": {
+        "oracle_id": "01914751-af8e-4aea-a254-6fa4f9fd3457",
+        "name": "Leafcrown Dryad",
+        "oracle_text": "Bestow {3}{G} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nReach\nEnchanted creature gets +2/+2 and has reach.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Enchantment Creature — Nymph Dryad",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Reach",
+          "Bestow"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/161/leafcrown-dryad?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13474,
+        "iid": 5509,
+        "name": "Leafcrown Dryad",
+        "handler": "manalinkeh_card_leafcrown_dryad",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13475,
+        "iid": 5510,
+        "name": "Leafcrown Dryad Bestowed",
+        "handler": "manalinkeh_card_leafcrown_dryad",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Cuombajj Witches": {
+      "oracle": {
+        "oracle_id": "638eeb16-9e0e-4cc6-b97e-8ff0df81ca58",
+        "name": "Cuombajj Witches",
+        "oracle_text": "{T}: This creature deals 1 damage to any target and 1 damage to any target of an opponent's choice.",
+        "mana_cost": "{B}{B}",
+        "type_line": "Creature — Human Wizard",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/116/cuombajj-witches?utm_source=api"
+      },
+      "registry": {
+        "csvid": 404,
+        "iid": 2143,
+        "name": "Cuombajj Witches",
+        "handler": "manalinkeh_card_cuombajj_witches",
+        "kind": "card"
+      }
+    },
+    "Darksteel Myr": {
+      "oracle": {
+        "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+        "name": "Darksteel Myr",
+        "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11238,
+        "iid": 2255,
+        "name": "Darksteel Myr",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Dazzling Ramparts": {
+      "oracle": {
+        "oracle_id": "0527fc47-2bfc-4d02-90fa-5a1284f89a0a",
+        "name": "Dazzling Ramparts",
+        "oracle_text": "Defender\n{1}{W}, {T}: Tap target creature.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "7",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/6/dazzling-ramparts?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14247,
+        "iid": 2299,
+        "name": "Dazzling Ramparts",
+        "handler": "manalinkeh_card_dazzling_ramparts",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Merfolk Mesmerist": {
+      "oracle": {
+        "oracle_id": "590d524f-278d-4cf4-ae3f-efcced4517b1",
+        "name": "Merfolk Mesmerist",
+        "oracle_text": "{U}, {T}: Target player mills two cards.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Merfolk Wizard",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m12/66/merfolk-mesmerist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11828,
+        "iid": 6053,
+        "name": "Merfolk Mesmerist",
+        "handler": "manalinkeh_card_merfolk_mesmerist",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Naturalize": {
+      "oracle": {
+        "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+        "name": "Naturalize",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1096,
+        "iid": 6485,
+        "name": "Naturalize",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Orcish Artillery": {
+      "oracle": {
+        "oracle_id": "c000811e-bde7-4840-a3bb-9714d5c977eb",
+        "name": "Orcish Artillery",
+        "oracle_text": "{T}: This creature deals 2 damage to any target and 3 damage to you.",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Orc Warrior",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/220/orcish-artillery?utm_source=api"
+      },
+      "registry": {
+        "csvid": 177,
+        "iid": 6870,
+        "name": "Orcish Artillery",
+        "handler": "manalinkeh_card_orcish_artillery",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Warden of Evos Isle": {
+      "oracle": {
+        "oracle_id": "f424b5e9-8f02-4491-a7d8-c7e088611c6a",
+        "name": "Warden of Evos Isle",
+        "oracle_text": "Flying\nCreature spells with flying you cast cost {1} less to cast.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Bird Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/106/warden-of-evos-isle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13359,
+        "iid": 10820,
+        "name": "Warden of Evos Isle",
+        "handler": "manalinkeh_card_warden_of_evos_isle",
+        "kind": "card"
+      }
+    }
+  }
+}

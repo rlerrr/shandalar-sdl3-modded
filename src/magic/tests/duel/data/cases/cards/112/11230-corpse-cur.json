@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Corpse Cur",
+  "csvid": 11230,
+  "recipes": [
+    {
+      "family": "entry_trigger_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 11230,
+        "cost": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nWhen this creature enters, you may return target creature card with infect from your graveyard to your hand.",
+      "variants": [
+        "return_infect_0",
+        "return_infect_1",
+        "foreign_infect_0",
+        "foreign_infect_1",
+        "poison_0",
+        "poison_1",
+        "infect_blocked_0",
+        "infect_blocked_1"
+      ]
+    }
+  ]
+}

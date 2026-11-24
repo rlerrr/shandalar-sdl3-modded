@@ -1,0 +1,514 @@
+{
+  "sources": {
+    "Heliod's Emissary": {
+      "oracle": {
+        "oracle_id": "182c9af9-d867-4848-ab36-ac7b1914f41a",
+        "name": "Heliod's Emissary",
+        "oracle_text": "Bestow {6}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nWhenever this creature or enchanted creature attacks, tap target creature an opponent controls.\nEnchanted creature gets +3/+3.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Enchantment Creature — Elk",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Bestow"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/18/heliods-emissary?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13456,
+        "iid": 4475,
+        "name": "Heliod's Emissary",
+        "handler": "manalinkeh_card_heliods_emissary",
+        "kind": "card"
+      }
+    },
+    "Spiteful Returned": {
+      "oracle": {
+        "oracle_id": "e7e60afe-5ddf-406b-86e1-e82e2a660432",
+        "name": "Spiteful Returned",
+        "oracle_text": "Bestow {3}{B} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nWhenever this creature or enchanted creature attacks, defending player loses 2 life.\nEnchanted creature gets +1/+1.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Enchantment Creature — Zombie",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Bestow"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/84/spiteful-returned?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13812,
+        "iid": 9220,
+        "name": "Spiteful Returned",
+        "handler": "manalinkeh_card_spiteful_returned",
+        "kind": "card"
+      }
+    },
+    "Thassa's Emissary": {
+      "oracle": {
+        "oracle_id": "fcb97d06-e0b8-4a13-ab7c-1304ccb7ace2",
+        "name": "Thassa's Emissary",
+        "oracle_text": "Bestow {5}{U} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nWhenever this creature or enchanted creature deals combat damage to a player, draw a card.\nEnchanted creature gets +3/+3.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Enchantment Creature — Crab",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Bestow"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/68/thassas-emissary?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13575,
+        "iid": 9851,
+        "name": "Thassa's Emissary",
+        "handler": "manalinkeh_card_thassas_emissary",
+        "kind": "card"
+      }
+    },
+    "Kestia, the Cultivator": {
+      "oracle": {
+        "oracle_id": "21620bfc-8ef0-4e43-b675-d0bbad86e83d",
+        "name": "Kestia, the Cultivator",
+        "oracle_text": "Bestow {3}{G}{W}{U} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nEnchanted creature gets +4/+4.\nWhenever an enchanted creature or enchantment creature you control attacks, draw a card.",
+        "mana_cost": "{1}{G}{W}{U}",
+        "type_line": "Legendary Enchantment Creature — Nymph",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Bestow"
+        ],
+        "colors": [
+          "G",
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "U",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c18/42/kestia-the-cultivator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19100,
+        "iid": 19033,
+        "name": "Kestia, the Cultivator",
+        "handler": "manalinkeh_card_kestia_the_cultivator",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Holy Strength": {
+      "oracle": {
+        "oracle_id": "9357de36-f8be-4f49-b2c8-9fe9eaf82b07",
+        "name": "Holy Strength",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +1/+2.",
+        "mana_cost": "{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m11/16/holy-strength?utm_source=api"
+      },
+      "registry": {
+        "csvid": 112,
+        "iid": 4610,
+        "name": "Holy Strength",
+        "handler": "manalinkeh_card_holy_strenght",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Nyxborn Shieldmate": {
+      "oracle": {
+        "oracle_id": "a1012f33-7ebd-47c6-b670-1b0dc046fbce",
+        "name": "Nyxborn Shieldmate",
+        "oracle_text": "Bestow {2}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nEnchanted creature gets +1/+2.",
+        "mana_cost": "{W}",
+        "type_line": "Enchantment Creature — Human Soldier",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Bestow"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/21/nyxborn-shieldmate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13765,
+        "iid": 6736,
+        "name": "Nyxborn Shieldmate",
+        "handler": "manalinkeh_card_nyxborn_shieldmate",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Soul's Fire": {
+      "oracle": {
+        "oracle_id": "62d7ed6e-c386-477e-b155-982c3790f842",
+        "name": "Soul's Fire",
+        "oracle_text": "Target creature you control deals damage equal to its power to any target.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/200/souls-fire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10071,
+        "iid": 9051,
+        "name": "Soul's Fire",
+        "handler": "manalinkeh_card_souls_fire",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Wall of Stone": {
+      "oracle": {
+        "oracle_id": "cd4cadb4-3156-49bd-b36e-12ba5c85938b",
+        "name": "Wall of Stone",
+        "oracle_text": "Defender (This creature can't attack.)",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "8",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/232/wall-of-stone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 272,
+        "iid": 10783,
+        "name": "Wall of Stone",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  },
+  "engine_aura_forms": {
+    "Heliod's Emissary": {
+      "convention": "paired",
+      "registry": {
+        "csvid": 13457,
+        "iid": 4476,
+        "name": "Heliod's Emissary Bestowed",
+        "handler": "manalinkeh_card_heliods_emissary",
+        "kind": "card"
+      }
+    },
+    "Spiteful Returned": {
+      "convention": "paired",
+      "registry": {
+        "csvid": 13813,
+        "iid": 9221,
+        "name": "Spiteful Returned Bestowed",
+        "handler": "manalinkeh_card_spiteful_returned",
+        "kind": "card"
+      }
+    },
+    "Thassa's Emissary": {
+      "convention": "paired",
+      "registry": {
+        "csvid": 13576,
+        "iid": 9852,
+        "name": "Thassa's Emissary Bestowed",
+        "handler": "manalinkeh_card_thassas_emissary",
+        "kind": "card"
+      }
+    },
+    "Kestia, the Cultivator": {
+      "convention": "same-csvid dynamic type",
+      "registry": {
+        "csvid": 19100,
+        "iid": 19033,
+        "name": "Kestia, the Cultivator",
+        "handler": "manalinkeh_card_kestia_the_cultivator",
+        "kind": "card"
+      }
+    }
+  }
+}

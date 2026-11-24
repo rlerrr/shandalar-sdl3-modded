@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "card": "Unblinking Bleb",
+  "csvid": 9044,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "morph_turn_up_resources",
+      "version": 2,
+      "oracle_text": "Morph {2}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhenever this creature or another permanent is turned face up, you may scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+      "params": {
+        "mode": "bleb",
+        "mana": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "morph": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "power": 1,
+        "toughness": 3,
+        "keywords": [],
+        "color": 4
+      },
+      "variants": [
+        "printed_cast_0",
+        "printed_cast_1",
+        "hidden_cast_0",
+        "hidden_cast_1",
+        "hidden_choice_0",
+        "hidden_choice_1",
+        "short_cast_0",
+        "short_cast_1",
+        "paid_reveal_0",
+        "paid_reveal_1",
+        "reveal_short_0",
+        "reveal_short_1",
+        "reveal_offturn_0",
+        "reveal_offturn_1",
+        "reveal_replay_0",
+        "reveal_replay_1",
+        "hidden_countered_0",
+        "hidden_countered_1",
+        "hidden_hit_0",
+        "hidden_hit_1",
+        "scry_one_0",
+        "scry_one_1",
+        "scry_empty_0",
+        "scry_empty_1",
+        "hidden_other_turns_up_0",
+        "hidden_other_turns_up_1",
+        "reveal_wrong_color_0",
+        "reveal_wrong_color_1",
+        "scry_reorder_0",
+        "scry_decline_0",
+        "friendly_other_turns_up_0",
+        "opposing_other_turns_up_0"
+      ]
+    }
+  ]
+}

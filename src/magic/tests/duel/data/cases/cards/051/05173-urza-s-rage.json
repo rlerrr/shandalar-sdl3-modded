@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Urza's Rage",
+  "csvid": 5173,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "kicker_alternate_payment_and_damage",
+      "version": 2,
+      "oracle_text": "Kicker {8}{R} (You may pay an additional {8}{R} as you cast this spell.)\nThis spell can't be countered.\nUrza's Rage deals 3 damage to any target. If this spell was kicked, instead it deals 10 damage to that permanent or player and the damage can't be prevented.",
+      "params": {
+        "model": 5173,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "kicker_mana": [
+          8,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "x": null
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "counter_attempt_0",
+        "counter_attempt_1",
+        "paid_unshielded_0",
+        "paid_unshielded_1",
+        "declined_unshielded_0",
+        "declined_unshielded_1"
+      ]
+    }
+  ]
+}

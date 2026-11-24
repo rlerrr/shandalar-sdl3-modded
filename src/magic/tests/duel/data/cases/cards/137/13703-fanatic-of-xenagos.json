@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Fanatic of Xenagos",
+  "csvid": 13703,
+  "recipes": [
+    {
+      "family": "entry_interaction_choice_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 13703,
+        "mana_cost": "{1}{R}{G}"
+      },
+      "oracle_text": "Trample\nTribute 1 (As this creature enters, an opponent of your choice may put a +1/+1 counter on it.)\nWhen this creature enters, if tribute wasn't paid, it gets +1/+1 and gains haste until end of turn.",
+      "variants": [
+        "tribute_paid_0",
+        "tribute_paid_1",
+        "trample_0",
+        "trample_1",
+        "blink_declined_0",
+        "blink_declined_1"
+      ]
+    }
+  ]
+}

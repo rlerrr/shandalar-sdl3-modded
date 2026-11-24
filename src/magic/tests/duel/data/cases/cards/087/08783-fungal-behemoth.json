@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "csvid": 8783,
+  "card": "Fungal Behemoth",
+  "recipes": [
+    {
+      "family": "suspend_variable_countdown",
+      "version": 2,
+      "oracle_text": "Fungal Behemoth's power and toughness are each equal to the number of +1/+1 counters on creatures you control.\nSuspend X—{X}{G}{G}. X can't be 0. (Rather than cast this card from your hand, you may pay {X}{G}{G} and exile it with X time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost. It has haste.)\nWhenever a time counter is removed from this card while it's exiled, you may put a +1/+1 counter on target creature.",
+      "params": {
+        "csvid": 8783,
+        "effect": "growth",
+        "suspend": [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "printed": [
+          3,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "unfunded_0",
+        "x1_0",
+        "x2_0",
+        "x3_0",
+        "wrong_color_0",
+        "replay_0",
+        "unfunded_1",
+        "x1_1",
+        "x2_1",
+        "x3_1",
+        "wrong_color_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

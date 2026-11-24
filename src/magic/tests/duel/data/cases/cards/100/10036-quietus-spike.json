@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "csvid": 10036,
+  "card": "Quietus Spike",
+  "recipes": [
+    {
+      "family": "equipment_combat_damage_board_effects",
+      "version": 2,
+      "params": {
+        "csvid": 10036,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "equip": 3,
+        "bonus": [
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Equipped creature has deathtouch.\nWhenever equipped creature deals combat damage to a player, that player loses half their life, rounded up.\nEquip {3}",
+      "variants": [
+        "odd_0",
+        "odd_1",
+        "even_0",
+        "even_1",
+        "noncombat_0",
+        "noncombat_1",
+        "deathtouch_0",
+        "deathtouch_1",
+        "bare_block_0",
+        "bare_block_1"
+      ]
+    }
+  ]
+}

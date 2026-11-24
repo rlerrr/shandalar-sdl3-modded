@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "csvid": 7615,
+  "card": "Cloudhoof Kirin",
+  "recipes": [
+    {
+      "family": "cast_spirit_or_arcane_riders",
+      "version": 2,
+      "oracle_text": "Flying\nWhenever you cast a Spirit or Arcane spell, you may have target player mill X cards, where X is that spell's mana value.",
+      "params": {
+        "effect": "mill",
+        "price": [
+          3,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "flying": true,
+        "power": 4,
+        "toughness": 4,
+        "extra": [
+          "self_mill",
+          "short_library",
+          "flight_ground",
+          "flight_reach"
+        ],
+        "human": [
+          "decline"
+        ]
+      },
+      "variants": [
+        "own_spirit_0",
+        "own_spirit_1",
+        "own_arcane_0",
+        "own_arcane_1",
+        "own_other_creature_0",
+        "own_other_creature_1",
+        "own_other_instant_0",
+        "own_other_instant_1",
+        "enemy_spirit_0",
+        "enemy_spirit_1",
+        "enemy_arcane_0",
+        "enemy_arcane_1",
+        "self_mill_0",
+        "self_mill_1",
+        "short_library_0",
+        "short_library_1",
+        "flight_ground_0",
+        "flight_ground_1",
+        "flight_reach_0",
+        "flight_reach_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

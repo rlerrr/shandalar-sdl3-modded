@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Mold Demon",
+  "csvid": 727,
+  "recipes": [
+    {
+      "family": "creature_entry_sacrifices",
+      "version": 2,
+      "params": {
+        "mode": "typed_unless",
+        "resource": "Swamp",
+        "quantity": 2,
+        "mana": [
+          5,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": [],
+        "power": 6,
+        "toughness": 6
+      },
+      "oracle_text": "When this creature enters, sacrifice it unless you sacrifice two Swamps.",
+      "variants": [
+        "paid_0",
+        "unavailable_0",
+        "snapshot_0",
+        "countered_0",
+        "wrong_color_0",
+        "nonbasic_0",
+        "paid_1",
+        "unavailable_1",
+        "snapshot_1",
+        "countered_1",
+        "wrong_color_1",
+        "nonbasic_1",
+        "decline_0",
+        "short_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Quest for the Holy Relic",
+  "csvid": 10643,
+  "recipes": [
+    {
+      "family": "cast_creature_riders",
+      "version": 2,
+      "oracle_text": "Whenever you cast a creature spell, you may put a quest counter on this enchantment.\nRemove five quest counters from this enchantment and sacrifice it: Search your library for an Equipment card, put it onto the battlefield, attach it to a creature you control, then shuffle.",
+      "params": {
+        "effect": "quest",
+        "price": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "fee": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "own_0",
+        "opponent_0",
+        "noncreature_0",
+        "countered_0",
+        "replay_0",
+        "threshold_0",
+        "under_threshold_0",
+        "own_1",
+        "opponent_1",
+        "noncreature_1",
+        "countered_1",
+        "replay_1",
+        "threshold_1",
+        "under_threshold_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Fogwalker",
+  "csvid": 16100,
+  "recipes": [
+    {
+      "family": "entry_follow_on_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 16100,
+        "cost": "{1}{U}",
+        "choices": [
+          "skip_0",
+          "skip_1",
+          "does_not_tap_0",
+          "does_not_tap_1",
+          "skulk_0",
+          "skulk_1",
+          "equal_power_0",
+          "equal_power_1"
+        ]
+      },
+      "oracle_text": "Skulk (This creature can't be blocked by creatures with greater power.)\nWhen this creature enters, target creature an opponent controls doesn't untap during its controller's next untap step.",
+      "variants": [
+        "skip_0",
+        "skip_1",
+        "does_not_tap_0",
+        "does_not_tap_1",
+        "skulk_0",
+        "skulk_1",
+        "equal_power_0",
+        "equal_power_1"
+      ]
+    }
+  ]
+}

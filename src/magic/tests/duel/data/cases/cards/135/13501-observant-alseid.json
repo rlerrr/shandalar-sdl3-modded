@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Observant Alseid",
+  "csvid": 13501,
+  "recipes": [
+    {
+      "family": "bestow_cast_and_combat_basics",
+      "version": 2,
+      "params": {
+        "csvid": 13501,
+        "normal_cost": "{2}{W}",
+        "bestow_cost": "{4}{W}",
+        "creature": [
+          2,
+          2
+        ],
+        "bonus": [
+          2,
+          2
+        ],
+        "ability": "Vigilance",
+        "clauses": [
+          "Bestow {4}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)",
+          "Vigilance",
+          "Enchanted creature gets +2/+2 and has vigilance."
+        ]
+      },
+      "oracle_text": "Bestow {4}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nVigilance\nEnchanted creature gets +2/+2 and has vigilance.",
+      "variants": [
+        "creature_combat_0",
+        "creature_combat_1",
+        "bestow_combat_0",
+        "bestow_combat_1",
+        "foreign_combat_0",
+        "foreign_combat_1",
+        "detached_combat_0",
+        "detached_combat_1",
+        "pending_host_lost_0",
+        "pending_host_lost_1",
+        "vigilance_defends_0",
+        "vigilance_defends_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 15609,
+  "card": "Harvester Troll",
+  "recipes": [
+    {
+      "family": "entry_trigger_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 15609,
+        "printed_cost": "{3}{G}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, you may sacrifice a creature or land. If you do, put two +1/+1 counters on this creature.",
+      "variants": [
+        "sac_creature_0",
+        "sac_land_0",
+        "indestructible_0",
+        "decline_0",
+        "self_0",
+        "sac_creature_1",
+        "sac_land_1",
+        "indestructible_1"
+      ]
+    }
+  ]
+}

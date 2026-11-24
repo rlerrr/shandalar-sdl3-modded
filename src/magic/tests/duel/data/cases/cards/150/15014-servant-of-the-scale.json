@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 15014,
+  "card": "Servant of the Scale",
+  "recipes": [
+    {
+      "family": "departure_counters_and_search",
+      "version": 2,
+      "params": {
+        "csvid": 15014,
+        "printed_cost": "{G}"
+      },
+      "oracle_text": "This creature enters with a +1/+1 counter on it.\nWhen this creature dies, put X +1/+1 counters on target creature you control, where X is the number of +1/+1 counters on this creature.",
+      "variants": [
+        "transfer_0",
+        "larger_0",
+        "buffed_0",
+        "no_recipient_0",
+        "bounce_0",
+        "countered_0",
+        "transfer_1",
+        "larger_1",
+        "buffed_1",
+        "no_recipient_1",
+        "bounce_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

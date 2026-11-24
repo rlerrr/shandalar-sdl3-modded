@@ -1,0 +1,515 @@
+{
+  "sources": {
+    "Battlefield Thaumaturge": {
+      "oracle": {
+        "oracle_id": "70d2f5f7-f727-48e1-9532-8d365b1c1ae5",
+        "name": "Battlefield Thaumaturge",
+        "oracle_text": "Each instant and sorcery spell you cast costs {1} less to cast for each creature it targets.\nHeroic — Whenever you cast a spell that targets this creature, this creature gains hexproof until end of turn.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Heroic"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/31/battlefield-thaumaturge?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13849,
+        "iid": 916,
+        "name": "Battlefield Thaumaturge",
+        "handler": "manalinkeh_card_battlefield_thaumaturge",
+        "kind": "card"
+      }
+    },
+    "Battlewise Hoplite": {
+      "oracle": {
+        "oracle_id": "416de3dd-c15d-4596-9386-5cac53302724",
+        "name": "Battlewise Hoplite",
+        "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on this creature, then scry 1. (To scry 1, look at the top card of your library, then you may put that card on the bottom.)",
+        "mana_cost": "{W}{U}",
+        "type_line": "Creature — Human Soldier",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Heroic",
+          "Scry"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/189/battlewise-hoplite?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13386,
+        "iid": 923,
+        "name": "Battlewise Hoplite",
+        "handler": "manalinkeh_card_battlewise_hoplite",
+        "kind": "card"
+      }
+    },
+    "Bloodcrazed Hoplite": {
+      "oracle": {
+        "oracle_id": "b1f441ce-7619-4ab5-ab36-724ed0a76728",
+        "name": "Bloodcrazed Hoplite",
+        "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on it.\nWhenever a +1/+1 counter is put on this creature, remove a +1/+1 counter from target creature an opponent controls.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Human Soldier",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Heroic"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/61/bloodcrazed-hoplite?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13852,
+        "iid": 1131,
+        "name": "Bloodcrazed Hoplite",
+        "handler": "manalinkeh_card_bloodcrazed_hoplite",
+        "kind": "card"
+      }
+    },
+    "Chorus of the Tides": {
+      "oracle": {
+        "oracle_id": "48925016-8a55-4efb-84c7-dc5001baa58e",
+        "name": "Chorus of the Tides",
+        "oracle_text": "Flying\nHeroic — Whenever you cast a spell that targets this creature, scry 1. (To scry 1, look at the top card of your library, then you may put that card on the bottom.)",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Siren",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Scry",
+          "Flying",
+          "Heroic"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/33/chorus-of-the-tides?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13677,
+        "iid": 1719,
+        "name": "Chorus of the Tides",
+        "handler": "manalinkeh_card_chorus_of_the_tides",
+        "kind": "card"
+      }
+    },
+    "Favored Hoplite": {
+      "oracle": {
+        "oracle_id": "145a15f9-89a9-4eb7-9924-e768f17e7e68",
+        "name": "Favored Hoplite",
+        "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on this creature and prevent all damage that would be dealt to it this turn.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Heroic"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/13/favored-hoplite?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13439,
+        "iid": 3319,
+        "name": "Favored Hoplite",
+        "handler": "manalinkeh_card_favored_hoplite",
+        "kind": "card"
+      }
+    },
+    "Hero of Leina Tower": {
+      "oracle": {
+        "oracle_id": "ae15a96d-ce88-4cb9-a353-439387ca3d02",
+        "name": "Hero of Leina Tower",
+        "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, you may pay {X}. If you do, put X +1/+1 counters on this creature.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Human Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Heroic"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/169/hero-of-leina-tower?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13733,
+        "iid": 4521,
+        "name": "Hero of Leina Tower",
+        "handler": "manalinkeh_card_hero_of_leina_tower",
+        "kind": "card"
+      }
+    },
+    "Sage of Hours": {
+      "oracle": {
+        "oracle_id": "bdbf70da-af38-4827-9b8b-39f553ebd34a",
+        "name": "Sage of Hours",
+        "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on it.\nRemove all +1/+1 counters from this creature: For each five counters removed this way, take an extra turn after this one.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Heroic"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/50/sage-of-hours?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13967,
+        "iid": 8175,
+        "name": "Sage of Hours",
+        "handler": "manalinkeh_card_sage_of_hours",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Defiant Strike": {
+      "oracle": {
+        "oracle_id": "f8c2d9c5-6fe6-4698-9972-83cdd625d94b",
+        "name": "Defiant Strike",
+        "oracle_text": "Target creature gets +1/+0 until end of turn.\nDraw a card.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/15/defiant-strike?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14251,
+        "iid": 2395,
+        "name": "Defiant Strike",
+        "handler": "manalinkeh_card_defiant_strike",
+        "kind": "card"
+      }
+    },
+    "Elvish Mystic": {
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13284,
+        "iid": 2982,
+        "name": "Elvish Mystic",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Hunger of the Howlpack": {
+      "oracle": {
+        "oracle_id": "296dee6b-6ec1-4ea4-8dc3-23080dd37646",
+        "name": "Hunger of the Howlpack",
+        "oracle_text": "Put a +1/+1 counter on target creature.\nMorbid — Put three +1/+1 counters on that creature instead if a creature died this turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Morbid"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/168/hunger-of-the-howlpack?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12212,
+        "iid": 4700,
+        "name": "Hunger of the Howlpack",
+        "handler": "manalinkeh_card_hunger_of_the_howlpack",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mighty Leap": {
+      "oracle": {
+        "oracle_id": "593caa15-e1d1-477f-bbb4-124d7a7b81f3",
+        "name": "Mighty Leap",
+        "oracle_text": "Target creature gets +2/+2 and gains flying until end of turn.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/66/mighty-leap?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11149,
+        "iid": 6107,
+        "name": "Mighty Leap",
+        "handler": "manalinkeh_card_mighty_leap",
+        "kind": "card"
+      }
+    },
+    "Rites of Reaping": {
+      "oracle": {
+        "oracle_id": "ed1a1c04-1b2b-4616-abb2-8bd19c47b589",
+        "name": "Rites of Reaping",
+        "oracle_text": "Target creature gets +3/+3 until end of turn. Another target creature gets -3/-3 until end of turn.",
+        "mana_cost": "{4}{B}{G}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rtr/191/rites-of-reaping?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12804,
+        "iid": 8004,
+        "name": "Rites of Reaping",
+        "handler": "manalinkeh_card_rites_of_reaping",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Welkin Tern": {
+      "oracle": {
+        "oracle_id": "010c660a-a67b-48f0-a63a-15470eb89f69",
+        "name": "Welkin Tern",
+        "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nThis creature can block only creatures with flying.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Bird",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gs1/5/welkin-tern?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10709,
+        "iid": 10901,
+        "name": "Welkin Tern",
+        "handler": "manalinkeh_card_skywinder_drake",
+        "kind": "card"
+      }
+    }
+  }
+}

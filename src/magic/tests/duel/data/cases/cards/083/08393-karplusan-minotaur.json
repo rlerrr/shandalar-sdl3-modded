@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Karplusan Minotaur",
+  "csvid": 8393,
+  "recipes": [
+    {
+      "family": "cumulative_upkeep_special_payment_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 8393,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "oracle_text": "Cumulative upkeep—Flip a coin. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nWhenever you win a coin flip, this creature deals 1 damage to any target.\nWhenever you lose a coin flip, this creature deals 1 damage to any target of an opponent's choice.",
+      "variants": [
+        "heads_0",
+        "tails_0",
+        "scaled_0",
+        "decline_0",
+        "heads_1",
+        "tails_1",
+        "scaled_1",
+        "decline_1"
+      ]
+    }
+  ]
+}

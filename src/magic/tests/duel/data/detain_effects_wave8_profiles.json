@@ -1,0 +1,758 @@
+{
+  "version": 1,
+  "sources": {
+    "Azorius Arrester": {
+      "oracle": {
+        "oracle_id": "3f2a27a1-f9cf-4dac-a248-5c6af4de3722",
+        "name": "Azorius Arrester",
+        "oracle_text": "When this creature enters, detain target creature an opponent controls. (Until your next turn, that creature can't attack or block and its activated abilities can't be activated.)",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Detain"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/54/azorius-arrester?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12660,
+        "iid": 783,
+        "name": "Azorius Arrester",
+        "handler": "manalinkeh_card_azorius_arrester",
+        "kind": "card"
+      }
+    },
+    "Azorius Justiciar": {
+      "oracle": {
+        "oracle_id": "cba0eae3-73ea-4ea9-87bf-1015e490da90",
+        "name": "Azorius Justiciar",
+        "oracle_text": "When this creature enters, detain up to two target creatures your opponents control. (Until your next turn, those creatures can't attack or block and their activated abilities can't be activated.)",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Detain"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/55/azorius-justiciar?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12663,
+        "iid": 790,
+        "name": "Azorius Justiciar",
+        "handler": "manalinkeh_card_azorius_justiciar",
+        "kind": "card"
+      }
+    },
+    "Inaction Injunction": {
+      "oracle": {
+        "oracle_id": "6f6bb2dd-c888-43bd-b9ef-8bd451ab669b",
+        "name": "Inaction Injunction",
+        "oracle_text": "Detain target creature an opponent controls. (Until your next turn, that creature can't attack or block and its activated abilities can't be activated.)\nDraw a card.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Detain"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rtr/41/inaction-injunction?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12750,
+        "iid": 4825,
+        "name": "Inaction Injunction",
+        "handler": "manalinkeh_card_inaction_injunction",
+        "kind": "card"
+      }
+    },
+    "Isperia's Skywatch": {
+      "oracle": {
+        "oracle_id": "5101fa05-3cca-499c-8c48-198ba0f8c672",
+        "name": "Isperia's Skywatch",
+        "oracle_text": "Flying\nWhen this creature enters, detain target creature an opponent controls. (Until your next turn, that creature can't attack or block and its activated abilities can't be activated.)",
+        "mana_cost": "{5}{U}",
+        "type_line": "Creature — Vedalken Knight",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Detain"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rtr/43/isperias-skywatch?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12752,
+        "iid": 4967,
+        "name": "Isperia's Skywatch",
+        "handler": "manalinkeh_card_azorius_arrester",
+        "kind": "card"
+      }
+    },
+    "Lyev Skyknight": {
+      "oracle": {
+        "oracle_id": "191ec087-7817-4c56-b2d5-66de5c663536",
+        "name": "Lyev Skyknight",
+        "oracle_text": "Flying\nWhen this creature enters, detain target nonland permanent an opponent controls. (Until your next turn, that permanent can't attack or block and its activated abilities can't be activated.)",
+        "mana_cost": "{1}{W}{U}",
+        "type_line": "Creature — Human Knight",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Detain"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/246/lyev-skyknight?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12769,
+        "iid": 5759,
+        "name": "Lyev Skyknight",
+        "handler": "manalinkeh_card_lyev_skyknight",
+        "kind": "card"
+      }
+    },
+    "Lyev Decree": {
+      "oracle": {
+        "oracle_id": "ace64875-ca4b-45c7-8b46-29ef2f2629dd",
+        "name": "Lyev Decree",
+        "oracle_text": "Detain up to two target creatures your opponents control. (Until your next turn, those creatures can't attack or block and their activated abilities can't be activated.)",
+        "mana_cost": "{1}{W}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Detain"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dgm/3/lyev-decree?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13169,
+        "iid": 5758,
+        "name": "Lyev Decree",
+        "handler": "manalinkeh_card_lyev_decree",
+        "kind": "card"
+      }
+    },
+    "Soulsworn Spirit": {
+      "oracle": {
+        "oracle_id": "e67e3cf1-6da9-4b52-a945-47bf54f69ffa",
+        "name": "Soulsworn Spirit",
+        "oracle_text": "This creature can't be blocked.\nWhen this creature enters, detain target creature an opponent controls. (Until your next turn, that creature can't attack or block and its activated abilities can't be activated.)",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Detain"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rtr/51/soulsworn-spirit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12830,
+        "iid": 9066,
+        "name": "Soulsworn Spirit",
+        "handler": "manalinkeh_card_soulsworn_spirit",
+        "kind": "card"
+      }
+    },
+    "Martial Law": {
+      "oracle": {
+        "oracle_id": "dfcf9f38-eb26-4033-b7c0-45ed29417aa5",
+        "name": "Martial Law",
+        "oracle_text": "At the beginning of your upkeep, detain target creature an opponent controls. (Until your next turn, that creature can't attack or block and its activated abilities can't be activated.)",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Detain"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rtr/14/martial-law?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12771,
+        "iid": 5930,
+        "name": "Martial Law",
+        "handler": "manalinkeh_card_martial_law",
+        "kind": "card"
+      }
+    },
+    "Lavinia of the Tenth": {
+      "oracle": {
+        "oracle_id": "55df6fa3-3d24-46d5-b325-099336c3f0fd",
+        "name": "Lavinia of the Tenth",
+        "oracle_text": "Protection from red\nWhen Lavinia enters, detain each nonland permanent your opponents control with mana value 4 or less. (Until your next turn, those permanents can't attack or block and their activated abilities can't be activated.)",
+        "mana_cost": "{3}{W}{U}",
+        "type_line": "Legendary Creature — Human Soldier",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Protection",
+          "Detain"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/199/lavinia-of-the-tenth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13166,
+        "iid": 5498,
+        "name": "Lavinia of the Tenth",
+        "handler": "manalinkeh_card_lavinia_of_the_tenth",
+        "kind": "card"
+      }
+    },
+    "Archon of the Triumvirate": {
+      "oracle": {
+        "oracle_id": "27ecb717-6251-4066-b57e-7070e9e44bbf",
+        "name": "Archon of the Triumvirate",
+        "oracle_text": "Flying\nWhenever this creature attacks, detain up to two target nonland permanents your opponents control. (Until your next turn, those permanents can't attack or block and their activated abilities can't be activated.)",
+        "mana_cost": "{5}{W}{U}",
+        "type_line": "Creature — Archon",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Detain"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rtr/142/archon-of-the-triumvirate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12650,
+        "iid": 565,
+        "name": "Archon of the Triumvirate",
+        "handler": "manalinkeh_card_archon_of_the_triumvirate",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Boomerang": {
+      "oracle": {
+        "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+        "name": "Boomerang",
+        "oracle_text": "Return target permanent to its owner's hand.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+      },
+      "registry": {
+        "csvid": 585,
+        "iid": 1233,
+        "name": "Boomerang",
+        "handler": "manalinkeh_card_boomerang",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Elvish Mystic": {
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13284,
+        "iid": 2982,
+        "name": "Elvish Mystic",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Fountain of Youth": {
+      "oracle": {
+        "oracle_id": "b906923c-9997-4da5-a05e-53eb4d2dff32",
+        "name": "Fountain of Youth",
+        "oracle_text": "{2}, {T}: You gain 1 life.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/323/fountain-of-youth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 324,
+        "iid": 3626,
+        "name": "Fountain of Youth",
+        "handler": "manalinkeh_card_fountain_of_youth",
+        "kind": "card"
+      }
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Gladecover Scout": {
+      "oracle": {
+        "oracle_id": "385c1208-bfea-44e2-b236-4f38bc90db9f",
+        "name": "Gladecover Scout",
+        "oracle_text": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Scout",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Hexproof"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/176/gladecover-scout?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11810,
+        "iid": 3912,
+        "name": "Gladecover Scout",
+        "handler": "manalinkeh_card_aven_fleetwing",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Sol Ring": {
+      "oracle": {
+        "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+        "name": "Sol Ring",
+        "oracle_text": "{T}: Add {C}{C}.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+      },
+      "registry": {
+        "csvid": 230,
+        "iid": 8968,
+        "name": "Sol Ring",
+        "handler": "manalinkeh_card_sol_ring",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Icy Manipulator": {
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 119,
+        "iid": 4775,
+        "name": "Icy Manipulator",
+        "handler": "manalinkeh_card_icy_manipulator",
+        "kind": "card"
+      }
+    },
+    "Mawcor": {
+      "oracle": {
+        "oracle_id": "4c0384d6-21cb-4645-b7a4-3af133e8a9a8",
+        "name": "Mawcor",
+        "oracle_text": "Flying\n{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature — Beast",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/59/mawcor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1274,
+        "iid": 5984,
+        "name": "Mawcor",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Pyroclasm": {
+      "oracle": {
+        "oracle_id": "e4bcd4ea-e7cd-4471-8f3b-18bb51d3d70c",
+        "name": "Pyroclasm",
+        "oracle_text": "Pyroclasm deals 2 damage to each creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/149/pyroclasm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1121,
+        "iid": 7515,
+        "name": "Pyroclasm",
+        "handler": "manalinkeh_card_pyroclasm",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    }
+  }
+}

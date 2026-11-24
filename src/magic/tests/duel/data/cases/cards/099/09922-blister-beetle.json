@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 9922,
+  "card": "Blister Beetle",
+  "recipes": [
+    {
+      "family": "entry_trigger_life_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 9922,
+        "printed_cost": "{1}{B}"
+      },
+      "oracle_text": "When this creature enters, target creature gets -1/-1 until end of turn.",
+      "variants": [
+        "target_enemy_0",
+        "target_own_0",
+        "lethal_0",
+        "self_0",
+        "countered_0",
+        "target_enemy_1",
+        "target_own_1",
+        "lethal_1",
+        "self_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

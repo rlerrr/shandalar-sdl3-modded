@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "csvid": 13827,
+  "card": "Vanguard of Brimaz",
+  "recipes": [
+    {
+      "family": "heroic_basic_riders",
+      "version": 2,
+      "oracle_text": "Vigilance\nHeroic — Whenever you cast a spell that targets this creature, create a 1/1 white Cat Soldier creature token with vigilance.",
+      "params": {
+        "name": "Vanguard of Brimaz",
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "effect": "cat",
+        "power": 2,
+        "toughness": 2,
+        "keywords": [
+          "Vigilance"
+        ]
+      },
+      "variants": [
+        "own_0",
+        "own_1",
+        "opponent_0",
+        "opponent_1",
+        "other_target_0",
+        "other_target_1",
+        "repeat_0",
+        "repeat_1",
+        "token_fresh_0",
+        "token_fresh_1",
+        "token_vigilance_0",
+        "token_vigilance_1"
+      ]
+    }
+  ]
+}

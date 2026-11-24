@@ -1,0 +1,350 @@
+{
+  "sources": {
+    "Angel of Salvation": {
+      "oracle": {
+        "oracle_id": "27b945ad-92a9-4615-87ec-790682e8c3e7",
+        "name": "Angel of Salvation",
+        "oracle_text": "Flash; convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nFlying\nWhen this creature enters, prevent the next 5 damage that would be dealt this turn to any number of targets, divided as you choose.",
+        "mana_cost": "{6}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Flash",
+          "Convoke"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/moc/170/angel-of-salvation?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8883,
+        "iid": 442,
+        "name": "Angel of Salvation",
+        "handler": "manalinkeh_card_angel_of_salvation",
+        "kind": "card"
+      }
+    },
+    "Chant of Vitu-Ghazi": {
+      "oracle": {
+        "oracle_id": "e245a736-5f65-4159-8e39-e279e1f8794f",
+        "name": "Chant of Vitu-Ghazi",
+        "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nPrevent all damage that would be dealt by creatures this turn. You gain life equal to the damage prevented this way.",
+        "mana_cost": "{6}{W}{W}",
+        "type_line": "Instant",
+        "keywords": [
+          "Convoke"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/moc/177/chant-of-vitu-ghazi?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7791,
+        "iid": 1660,
+        "name": "Chant of Vitu-Ghazi",
+        "handler": "manalinkeh_card_chant_of_vitu_ghazi",
+        "kind": "card"
+      }
+    },
+    "Guardian of Vitu-Ghazi": {
+      "oracle": {
+        "oracle_id": "a7d5a9ca-27ec-4843-a9fd-0de0d67def39",
+        "name": "Guardian of Vitu-Ghazi",
+        "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nVigilance",
+        "mana_cost": "{6}{G}{W}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "7",
+        "keywords": [
+          "Vigilance",
+          "Convoke"
+        ],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rav/212/guardian-of-vitu-ghazi?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7873,
+        "iid": 4297,
+        "name": "Guardian of Vitu-Ghazi",
+        "handler": "manalinkeh_card_guardian_of_vitu_ghazi",
+        "kind": "card"
+      }
+    },
+    "Rosemane Centaur": {
+      "oracle": {
+        "oracle_id": "54b3ccdc-e5b0-44d9-bc81-a296fc5dc005",
+        "name": "Rosemane Centaur",
+        "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nVigilance",
+        "mana_cost": "{3}{G}{W}",
+        "type_line": "Creature — Centaur Soldier",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Vigilance",
+          "Convoke"
+        ],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/grn/197/rosemane-centaur?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19477,
+        "iid": 19410,
+        "name": "Rosemane Centaur",
+        "handler": "manalinkeh_card_guardian_of_vitu_ghazi",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Eager Cadet": {
+      "oracle": {
+        "oracle_id": "39780477-01ba-40c6-8fe6-2178efb10b92",
+        "name": "Eager Cadet",
+        "oracle_text": "",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/S1/eager-cadet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4363,
+        "iid": 12406,
+        "name": "Eager Cadet",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Ornithopter": {
+      "oracle": {
+        "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+        "name": "Ornithopter",
+        "oracle_text": "Flying",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Thopter",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 514,
+        "iid": 6907,
+        "name": "Ornithopter",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Squire": {
+      "oracle": {
+        "oracle_id": "aa6cdcc7-f5ea-47bf-9448-1c63e36b18d1",
+        "name": "Squire",
+        "oracle_text": "",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsb/15/squire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 948,
+        "iid": 9275,
+        "name": "Squire",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

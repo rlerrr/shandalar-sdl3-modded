@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Rogue Elephant",
+  "csvid": 3033,
+  "recipes": [
+    {
+      "family": "creature_entry_sacrifices",
+      "version": 2,
+      "params": {
+        "mode": "typed_unless",
+        "resource": "Forest",
+        "quantity": 1,
+        "mana": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "keywords": [],
+        "power": 3,
+        "toughness": 3
+      },
+      "oracle_text": "When this creature enters, sacrifice it unless you sacrifice a Forest.",
+      "variants": [
+        "paid_0",
+        "unavailable_0",
+        "snapshot_0",
+        "countered_0",
+        "wrong_color_0",
+        "nonbasic_0",
+        "paid_1",
+        "unavailable_1",
+        "snapshot_1",
+        "countered_1",
+        "wrong_color_1",
+        "nonbasic_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

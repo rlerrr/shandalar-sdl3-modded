@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Geralf's Mindcrusher",
+  "csvid": 12188,
+  "recipes": [
+    {
+      "family": "recurrence_entry_upkeep",
+      "version": 2,
+      "params": {
+        "schema": 8,
+        "mechanism": "undying",
+        "enters_tapped": false,
+        "effect": {
+          "kind": "target_mill",
+          "amount": 5
+        }
+      },
+      "oracle_text": "When this creature enters, target player mills five cards.\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+      "variants": [
+        "entry_0",
+        "cycle_0",
+        "destroy_0",
+        "countered_0",
+        "bounce_0",
+        "excluded_counter_0",
+        "death_replay_0",
+        "cast_replay_0",
+        "zero_mana_0",
+        "real_reset_0",
+        "short_library_0",
+        "empty_library_0",
+        "exact_library_0",
+        "entry_1",
+        "cycle_1",
+        "destroy_1",
+        "countered_1",
+        "bounce_1",
+        "excluded_counter_1",
+        "death_replay_1",
+        "cast_replay_1",
+        "zero_mana_1",
+        "real_reset_1",
+        "short_library_1",
+        "empty_library_1",
+        "exact_library_1",
+        "self_target_0"
+      ]
+    }
+  ]
+}

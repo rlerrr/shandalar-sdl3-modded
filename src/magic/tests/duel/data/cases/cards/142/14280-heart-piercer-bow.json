@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "csvid": 14280,
+  "card": "Heart-Piercer Bow",
+  "recipes": [
+    {
+      "family": "attack_damage_triggers",
+      "version": 2,
+      "oracle_text": "Whenever equipped creature attacks, this Equipment deals 1 damage to target creature defending player controls.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "kind": "bow",
+          "printed": [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "equip": 1,
+          "creature": false,
+          "clauses": [
+            "Whenever equipped creature attacks, this Equipment deals 1 damage to target creature defending player controls.",
+            "Equip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)"
+          ]
+        }
+      },
+      "variants": [
+        "cast_0",
+        "cast_1",
+        "short_cast_0",
+        "short_cast_1",
+        "hit_0",
+        "hit_1",
+        "idle_0",
+        "idle_1",
+        "opponent_attack_0",
+        "opponent_attack_1",
+        "replay_0",
+        "replay_1",
+        "unequipped_0",
+        "unequipped_1",
+        "short_equip_0",
+        "short_equip_1",
+        "offturn_equip_0",
+        "offturn_equip_1",
+        "other_attacker_0",
+        "other_attacker_1",
+        "lifelink_0",
+        "lifelink_1",
+        "lethal_0",
+        "lethal_1",
+        "no_target_0",
+        "no_target_1",
+        "walker_attack_0",
+        "walker_attack_1"
+      ]
+    }
+  ]
+}

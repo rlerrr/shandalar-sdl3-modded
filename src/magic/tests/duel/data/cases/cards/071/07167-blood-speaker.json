@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "csvid": 7167,
+  "card": "Blood Speaker",
+  "recipes": [
+    {
+      "family": "upkeep_payment_and_sacrifice",
+      "version": 2,
+      "params": {
+        "csvid": 7167,
+        "printed_cost": "{3}{B}",
+        "keywords": []
+      },
+      "oracle_text": "At the beginning of your upkeep, you may sacrifice this creature. If you do, search your library for a Demon card, reveal that card, put it into your hand, then shuffle.\nWhenever a Demon you control enters, return this card from your graveyard to your hand.",
+      "variants": [
+        "search_return_0",
+        "search_return_1",
+        "decline_0",
+        "no_demon_0",
+        "no_demon_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,952 @@
+{
+  "sources": {
+    "Ashen-Skin Zubera": {
+      "oracle": {
+        "oracle_id": "af9dc302-0345-402f-8e6b-e9706da14bca",
+        "name": "Ashen-Skin Zubera",
+        "oracle_text": "When this creature dies, target opponent discards a card for each Zubera that died this turn.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Zubera Spirit",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/101/ashen-skin-zubera?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7158,
+        "iid": 652,
+        "name": "Ashen-Skin Zubera",
+        "handler": "manalinkeh_card_ashen_skin_zubera",
+        "kind": "card"
+      }
+    },
+    "Dripping-Tongue Zubera": {
+      "oracle": {
+        "oracle_id": "78b1cb2d-1b48-4068-b6f3-8727ef9e8080",
+        "name": "Dripping-Tongue Zubera",
+        "oracle_text": "When this creature dies, create a 1/1 colorless Spirit creature token for each Zubera that died this turn.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Zubera Spirit",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/206/dripping-tongue-zubera?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7199,
+        "iid": 2759,
+        "name": "Dripping-Tongue Zubera",
+        "handler": "manalinkeh_card_dripping_tongue_zubera",
+        "kind": "card"
+      }
+    },
+    "Cathodion": {
+      "oracle": {
+        "oracle_id": "fcd4f816-2de1-4b30-82fb-cb87f45747ea",
+        "name": "Cathodion",
+        "oracle_text": "When this creature dies, add {C}{C}{C}.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/237/cathodion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1208,
+        "iid": 1555,
+        "name": "Cathodion",
+        "handler": "manalinkeh_card_cathodion",
+        "kind": "card"
+      }
+    },
+    "Chromatic Star": {
+      "oracle": {
+        "oracle_id": "fedbd40b-e3a5-449c-a8a3-b42e9da191a9",
+        "name": "Chromatic Star",
+        "oracle_text": "{1}, {T}, Sacrifice this artifact: Add one mana of any color.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/263/chromatic-star?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8501,
+        "iid": 1727,
+        "name": "Chromatic Star",
+        "handler": "manalinkeh_card_chromatic_star",
+        "kind": "card"
+      }
+    },
+    "Ember-Fist Zubera": {
+      "oracle": {
+        "oracle_id": "52a98d1c-602b-4893-870c-190317294181",
+        "name": "Ember-Fist Zubera",
+        "oracle_text": "When this creature dies, it deals damage to any target equal to the number of Zubera that died this turn.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Zubera Spirit",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/166/ember-fist-zubera?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7204,
+        "iid": 3000,
+        "name": "Ember-Fist Zubera",
+        "handler": "manalinkeh_card_ember_fist_zubera",
+        "kind": "card"
+      }
+    },
+    "Floating-Dream Zubera": {
+      "oracle": {
+        "oracle_id": "3d2e9712-d546-40ac-a5ea-2dd7b7d9e0c1",
+        "name": "Floating-Dream Zubera",
+        "oracle_text": "When this creature dies, draw a card for each Zubera that died this turn.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Zubera Spirit",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/61/floating-dream-zubera?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7209,
+        "iid": 3530,
+        "name": "Floating-Dream Zubera",
+        "handler": "manalinkeh_card_floating_dream_zubera",
+        "kind": "card"
+      }
+    },
+    "Silent-Chant Zubera": {
+      "oracle": {
+        "oracle_id": "8d5a8513-0728-46ff-be72-3aefa07c7658",
+        "name": "Silent-Chant Zubera",
+        "oracle_text": "When this creature dies, you gain 2 life for each Zubera that died this turn.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Zubera Spirit",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/45/silent-chant-zubera?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7379,
+        "iid": 8740,
+        "name": "Silent-Chant Zubera",
+        "handler": "manalinkeh_card_silent_chant_zubera",
+        "kind": "card"
+      }
+    },
+    "Blistergrub": {
+      "oracle": {
+        "oracle_id": "f5580a77-a69b-4ee8-9809-4523097cd7ac",
+        "name": "Blistergrub",
+        "oracle_text": "Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)\nWhen this creature dies, each opponent loses 2 life.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Phyrexian Horror",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Landwalk",
+          "Swampwalk"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddr/40/blistergrub?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11215,
+        "iid": 1097,
+        "name": "Blistergrub",
+        "handler": "manalinkeh_card_blistergrub",
+        "kind": "card"
+      }
+    },
+    "Auspicious Ancestor": {
+      "oracle": {
+        "oracle_id": "82fb9834-de65-41a5-b908-f49668dee3ec",
+        "name": "Auspicious Ancestor",
+        "oracle_text": "When this creature dies, you gain 3 life.\nWhenever a player casts a white spell, you may pay {1}. If you do, you gain 1 life.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/3/auspicious-ancestor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2399,
+        "iid": 730,
+        "name": "Auspicious Ancestor",
+        "handler": "manalinkeh_card_auspicious_ancestor",
+        "kind": "card"
+      }
+    },
+    "Centaur Safeguard": {
+      "oracle": {
+        "oracle_id": "468604f2-52e6-4bb1-8a4f-ad0851288cba",
+        "name": "Centaur Safeguard",
+        "oracle_text": "({G/W} can be paid with either {G} or {W}.)\nWhen this creature dies, you may gain 3 life.",
+        "mana_cost": "{2}{G/W}",
+        "type_line": "Creature — Centaur Warrior",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rav/244/centaur-safeguard?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7789,
+        "iid": 1601,
+        "name": "Centaur Safeguard",
+        "handler": "manalinkeh_card_centaur_safeguard",
+        "kind": "card"
+      }
+    },
+    "Core Prowler": {
+      "oracle": {
+        "oracle_id": "0ad44727-41c3-471c-b038-1bf43c5f296a",
+        "name": "Core Prowler",
+        "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nWhen this creature dies, proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature — Phyrexian Horror",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Proliferate",
+          "Infect"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbs/103/core-prowler?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11432,
+        "iid": 1965,
+        "name": "Core Prowler",
+        "handler": "manalinkeh_card_core_prowler",
+        "kind": "card"
+      }
+    },
+    "Myr Moonvessel": {
+      "oracle": {
+        "oracle_id": "3e922661-80df-4e84-a12a-524bc74e6c9d",
+        "name": "Myr Moonvessel",
+        "oracle_text": "When this creature dies, add {C}.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dst/133/myr-moonvessel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6923,
+        "iid": 6422,
+        "name": "Myr Moonvessel",
+        "handler": "manalinkeh_card_myr_moonvessel",
+        "kind": "card"
+      }
+    },
+    "Slithermuse": {
+      "oracle": {
+        "oracle_id": "4b6512aa-535e-4edf-8797-43df2b8463de",
+        "name": "Slithermuse",
+        "oracle_text": "When this creature leaves the battlefield, choose an opponent. If that player has more cards in hand than you, draw cards equal to the difference.\nEvoke {3}{U} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Evoke"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ecc/69/slithermuse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9433,
+        "iid": 8920,
+        "name": "Slithermuse",
+        "handler": "manalinkeh_card_slithermuse",
+        "kind": "card"
+      }
+    },
+    "Marker Beetles": {
+      "oracle": {
+        "oracle_id": "4b1614fd-2810-4d4d-a0d6-934f27adbe65",
+        "name": "Marker Beetles",
+        "oracle_text": "When this creature dies, target creature gets +1/+1 until end of turn.\n{2}, Sacrifice this creature: Draw a card.",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Creature — Insect",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uds/112/marker-beetles?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4156,
+        "iid": 5907,
+        "name": "Marker Beetles",
+        "handler": "manalinkeh_card_marker_beetle",
+        "kind": "card"
+      }
+    },
+    "Terrarion": {
+      "oracle": {
+        "oracle_id": "9e7ade56-ab68-42ab-8a6f-bc38957f1563",
+        "name": "Terrarion",
+        "oracle_text": "This artifact enters tapped.\n{2}, {T}, Sacrifice this artifact: Add two mana in any combination of colors.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/488/terrarion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7984,
+        "iid": 15051,
+        "name": "Terrarion",
+        "handler": "manalinkeh_card_terrarion",
+        "kind": "card"
+      }
+    },
+    "Corpse Augur": {
+      "oracle": {
+        "oracle_id": "06eb43af-637a-4f73-8071-a7036d4c8c3d",
+        "name": "Corpse Augur",
+        "oracle_text": "When this creature dies, you draw X cards and you lose X life, where X is the number of creature cards in target player's graveyard.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Zombie Wizard",
+        "power": "4",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/145/corpse-augur?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15506,
+        "iid": 12079,
+        "name": "Corpse Augur",
+        "handler": "manalinkeh_card_corpse_augur",
+        "kind": "card"
+      }
+    },
+    "Implement of Examination": {
+      "oracle": {
+        "oracle_id": "0baf75b3-cc02-47cc-873a-8d5f17da0ec9",
+        "name": "Implement of Examination",
+        "oracle_text": "{U}, Sacrifice this artifact: Draw a card.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/aer/156/implement-of-examination?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16728,
+        "iid": 16821,
+        "name": "Implement of Examination",
+        "handler": "manalinkeh_card_implement_of_examination",
+        "kind": "card"
+      }
+    },
+    "Implement of Improvement": {
+      "oracle": {
+        "oracle_id": "a71b2ffb-6a62-4239-987f-ec82a358927f",
+        "name": "Implement of Improvement",
+        "oracle_text": "{W}, Sacrifice this artifact: You gain 2 life.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/aer/158/implement-of-improvement?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16730,
+        "iid": 16823,
+        "name": "Implement of Improvement",
+        "handler": "manalinkeh_card_implement_of_improvement",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Naturalize": {
+      "oracle": {
+        "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+        "name": "Naturalize",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1096,
+        "iid": 6485,
+        "name": "Naturalize",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Pyroclasm": {
+      "oracle": {
+        "oracle_id": "e4bcd4ea-e7cd-4471-8f3b-18bb51d3d70c",
+        "name": "Pyroclasm",
+        "oracle_text": "Pyroclasm deals 2 damage to each creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/149/pyroclasm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1121,
+        "iid": 7515,
+        "name": "Pyroclasm",
+        "handler": "manalinkeh_card_pyroclasm",
+        "kind": "card"
+      }
+    },
+    "Revoke Existence": {
+      "oracle": {
+        "oracle_id": "289e1a7c-b301-4395-baf8-e9a1c6d38aab",
+        "name": "Revoke Existence",
+        "oracle_text": "Exile target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/28/revoke-existence?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11347,
+        "iid": 7910,
+        "name": "Revoke Existence",
+        "handler": "manalinkeh_card_revoke_existence",
+        "kind": "card"
+      }
+    },
+    "Silent-Chant Zubera": {
+      "oracle": {
+        "oracle_id": "8d5a8513-0728-46ff-be72-3aefa07c7658",
+        "name": "Silent-Chant Zubera",
+        "oracle_text": "When this creature dies, you gain 2 life for each Zubera that died this turn.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Zubera Spirit",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/45/silent-chant-zubera?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7379,
+        "iid": 8740,
+        "name": "Silent-Chant Zubera",
+        "handler": "manalinkeh_card_silent_chant_zubera",
+        "kind": "card"
+      }
+    },
+    "Spatial Contortion": {
+      "oracle": {
+        "oracle_id": "7346337e-ac12-4dd2-826d-77ec0013e74f",
+        "name": "Spatial Contortion",
+        "oracle_text": "({C} represents colorless mana.)\nTarget creature gets +3/-3 until end of turn.",
+        "mana_cost": "{1}{C}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/809/spatial-contortion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15684,
+        "iid": 15759,
+        "name": "Spatial Contortion",
+        "handler": "manalinkeh_card_spatial_contortion",
+        "kind": "card"
+      }
+    },
+    "Spellbook": {
+      "oracle": {
+        "oracle_id": "83133f51-bfbd-4db5-9be0-f660e3b66435",
+        "name": "Spellbook",
+        "oracle_text": "You have no maximum hand size.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact — Book",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/220/spellbook?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1154,
+        "iid": 9121,
+        "name": "Spellbook",
+        "handler": "manalinkeh_card_spellbook",
+        "kind": "card"
+      }
+    },
+    "Spirit": {
+      "oracle": {
+        "oracle_id": "f39a3005-bc92-49bf-9e32-28e99c4de5c5",
+        "name": "Spirit",
+        "oracle_text": "Flying",
+        "mana_cost": "",
+        "type_line": "Token Creature — Spirit",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmoc/13/spirit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18829,
+        "iid": 9193,
+        "name": "Spirit",
+        "handler": "manalinkeh_card_spirit2",
+        "kind": "card"
+      }
+    },
+    "Suntail Hawk": {
+      "oracle": {
+        "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+        "name": "Suntail Hawk",
+        "oracle_text": "Flying",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/40/suntail-hawk?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1195,
+        "iid": 9548,
+        "name": "Suntail Hawk",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Swords to Plowshares": {
+      "oracle": {
+        "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+        "name": "Swords to Plowshares",
+        "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+      },
+      "registry": {
+        "csvid": 240,
+        "iid": 9616,
+        "name": "Swords to Plowshares",
+        "handler": "manalinkeh_card_swords_to_plowshares",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    }
+  }
+}

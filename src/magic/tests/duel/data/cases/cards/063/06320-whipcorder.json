@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "card": "Whipcorder",
+  "csvid": 6320,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "morph_faceup_activated",
+      "version": 2,
+      "oracle_text": "{W}, {T}: Tap target creature.\nMorph {W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+      "params": {
+        "mode": "tap",
+        "subtype": null,
+        "bonus": [],
+        "megamorph": false,
+        "mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "morph": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "activation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "power": 2,
+        "toughness": 2,
+        "keywords": [],
+        "color": 32
+      },
+      "variants": [
+        "printed_0",
+        "printed_1",
+        "face_down_choice_0",
+        "face_down_choice_1",
+        "short_cast_0",
+        "short_cast_1",
+        "short_reveal_0",
+        "short_reveal_1",
+        "wrong_reveal_color_0",
+        "wrong_reveal_color_1",
+        "effect_0",
+        "effect_1",
+        "hidden_ability_0",
+        "hidden_ability_1",
+        "replay_0",
+        "replay_1",
+        "opposing_turn_0",
+        "opposing_turn_1",
+        "short_ability_0",
+        "short_ability_1",
+        "countered_0",
+        "countered_1",
+        "sick_0",
+        "sick_1",
+        "untap_reuse_0",
+        "untap_reuse_1",
+        "target_protection_0",
+        "target_protection_1",
+        "own_target_0",
+        "own_target_1"
+      ]
+    }
+  ]
+}

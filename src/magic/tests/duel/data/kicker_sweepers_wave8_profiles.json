@@ -1,0 +1,588 @@
+{
+  "version": 1,
+  "sources": {
+    "Breath of Darigaaz": {
+      "oracle": {
+        "oracle_id": "1954994f-17bf-4ea5-af72-60f9bfcb6569",
+        "name": "Breath of Darigaaz",
+        "oracle_text": "Kicker {2} (You may pay an additional {2} as you cast this spell.)\nBreath of Darigaaz deals 1 damage to each creature without flying and each player. If this spell was kicked, it deals 4 damage to each creature without flying and each player instead.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cm2/88/breath-of-darigaaz?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4955,
+        "iid": 1315,
+        "name": "Breath of Darigaaz",
+        "handler": "manalinkeh_card_breath_of_darigaaz",
+        "kind": "card"
+      }
+    },
+    "Canopy Surge": {
+      "oracle": {
+        "oracle_id": "a151c45f-0b9e-41af-90b3-fafa12e3bbce",
+        "name": "Canopy Surge",
+        "oracle_text": "Kicker {2} (You may pay an additional {2} as you cast this spell.)\nCanopy Surge deals 1 damage to each creature with flying and each player. If this spell was kicked, it deals 4 damage to each creature with flying and each player instead.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inv/184/canopy-surge?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4957,
+        "iid": 1475,
+        "name": "Canopy Surge",
+        "handler": "manalinkeh_card_canopy_surge",
+        "kind": "card"
+      }
+    },
+    "Marsh Casualties": {
+      "oracle": {
+        "oracle_id": "d2bd182c-532f-4c77-adb8-754f2c2fcd82",
+        "name": "Marsh Casualties",
+        "oracle_text": "Kicker {3} (You may pay an additional {3} as you cast this spell.)\nCreatures target player controls get -1/-1 until end of turn. If this spell was kicked, those creatures get -2/-2 until end of turn instead.",
+        "mana_cost": "{B}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddp/54/marsh-casualties?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10605,
+        "iid": 5917,
+        "name": "Marsh Casualties",
+        "handler": "manalinkeh_card_marsh_casualties",
+        "kind": "card"
+      }
+    },
+    "Overload": {
+      "oracle": {
+        "oracle_id": "07159efc-c69f-4164-a8ca-9da641dbf702",
+        "name": "Overload",
+        "oracle_text": "Kicker {2} (You may pay an additional {2} as you cast this spell.)\nDestroy target artifact if its mana value is 2 or less. If this spell was kicked, destroy that artifact if its mana value is 5 or less instead.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inv/157/overload?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5055,
+        "iid": 6940,
+        "name": "Overload",
+        "handler": "manalinkeh_card_overload",
+        "kind": "card"
+      }
+    },
+    "Desolation Angel": {
+      "oracle": {
+        "oracle_id": "87f82107-eaba-484a-800d-e61a0cc5e1f2",
+        "name": "Desolation Angel",
+        "oracle_text": "Kicker {W}{W} (You may pay an additional {W}{W} as you cast this spell.)\nFlying\nWhen this creature enters, destroy all lands you control. If it was kicked, destroy all lands instead.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Creature — Angel",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [
+          "Kicker",
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/apc/38/desolation-angel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5355,
+        "iid": 2470,
+        "name": "Desolation Angel",
+        "handler": "manalinkeh_card_desolation_angel",
+        "kind": "card"
+      }
+    },
+    "Desolation Giant": {
+      "oracle": {
+        "oracle_id": "c23aaf6d-151e-481a-a345-ca00c14940d1",
+        "name": "Desolation Giant",
+        "oracle_text": "Kicker {W}{W} (You may pay an additional {W}{W} as you cast this spell.)\nWhen this creature enters, destroy all other creatures you control. If it was kicked, destroy all other creatures instead.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cm2/91/desolation-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5356,
+        "iid": 2471,
+        "name": "Desolation Giant",
+        "handler": "manalinkeh_card_desolation_giant",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Dreamstone Hedron": {
+      "oracle": {
+        "oracle_id": "0e2575be-c596-4c8c-bf07-7941ca065721",
+        "name": "Dreamstone Hedron",
+        "oracle_text": "{T}: Add {C}{C}{C}.\n{3}, {T}, Sacrifice this artifact: Draw three cards.",
+        "mana_cost": "{6}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/945/dreamstone-hedron?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10912,
+        "iid": 2748,
+        "name": "Dreamstone Hedron",
+        "handler": "manalinkeh_card_dreamstone_hedron",
+        "kind": "card"
+      }
+    },
+    "Enormous Baloth": {
+      "oracle": {
+        "oracle_id": "6189cd17-61aa-420a-ba53-5ddaf2bbc2ba",
+        "name": "Enormous Baloth",
+        "oracle_text": "",
+        "mana_cost": "{6}{G}",
+        "type_line": "Creature — Beast",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/180/enormous-baloth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6374,
+        "iid": 3062,
+        "name": "Enormous Baloth",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Gilded Lotus": {
+      "oracle": {
+        "oracle_id": "9a02a9a7-39d9-4763-85d3-747a0540b60b",
+        "name": "Gilded Lotus",
+        "oracle_text": "{T}: Add three mana of any one color.",
+        "mana_cost": "{5}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/199/gilded-lotus?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1336,
+        "iid": 3896,
+        "name": "Gilded Lotus",
+        "handler": "manalinkeh_card_gilded_lotus",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Icy Manipulator": {
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 119,
+        "iid": 4775,
+        "name": "Icy Manipulator",
+        "handler": "manalinkeh_card_icy_manipulator",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Jalum Tome": {
+      "oracle": {
+        "oracle_id": "32d9fd98-142b-41d2-b8f0-40ae1d4cb991",
+        "name": "Jalum Tome",
+        "oracle_text": "{2}, {T}: Draw a card, then discard a card.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact — Book",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/226/jalum-tome?utm_source=api"
+      },
+      "registry": {
+        "csvid": 504,
+        "iid": 5019,
+        "name": "Jalum Tome",
+        "handler": "manalinkeh_card_jalum_tome",
+        "kind": "card"
+      }
+    },
+    "Mahamoti Djinn": {
+      "oracle": {
+        "oracle_id": "c39ea5f9-6ec0-4697-897b-779e326754a7",
+        "name": "Mahamoti Djinn",
+        "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)",
+        "mana_cost": "{4}{U}{U}",
+        "type_line": "Creature — Djinn",
+        "power": "5",
+        "toughness": "6",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/64/mahamoti-djinn?utm_source=api"
+      },
+      "registry": {
+        "csvid": 154,
+        "iid": 5822,
+        "name": "Mahamoti Djinn",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Mind Stone": {
+      "oracle": {
+        "oracle_id": "c97361b5-af16-4a7b-af85-a429dbaf4ad2",
+        "name": "Mind Stone",
+        "oracle_text": "{T}: Add {C}.\n{1}, {T}, Sacrifice this artifact: Draw a card.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbc/76/mind-stone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3009,
+        "iid": 6137,
+        "name": "Mind Stone",
+        "handler": "manalinkeh_card_mind_stone",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Suntail Hawk": {
+      "oracle": {
+        "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+        "name": "Suntail Hawk",
+        "oracle_text": "Flying",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/40/suntail-hawk?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1195,
+        "iid": 9548,
+        "name": "Suntail Hawk",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Wind Drake": {
+      "oracle": {
+        "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+        "name": "Wind Drake",
+        "oracle_text": "Flying",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/70/wind-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1197,
+        "iid": 10989,
+        "name": "Wind Drake",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

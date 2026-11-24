@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 13756,
+  "card": "Nessian Demolok",
+  "recipes": [
+    {
+      "family": "entry_trigger_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 13756,
+        "printed_cost": "{3}{G}{G}",
+        "keywords": [
+          "Tribute"
+        ]
+      },
+      "oracle_text": "Tribute 3 (As this creature enters, an opponent of your choice may put three +1/+1 counters on it.)\nWhen this creature enters, if tribute wasn't paid, destroy target noncreature permanent.",
+      "variants": [
+        "paid_0",
+        "foe_artifact_0",
+        "own_land_0",
+        "creatures_only_0",
+        "paid_1",
+        "foe_artifact_1",
+        "own_land_1",
+        "creatures_only_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "csvid": 14854,
+  "card": "Aven Sunstriker",
+  "recipes": [
+    {
+      "family": "megamorph_keyword_creatures",
+      "version": 2,
+      "oracle_text": "Flying\nDouble strike (This creature deals both first-strike and regular combat damage.)\nMegamorph {4}{W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "printed": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "fee": [
+            4,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "traits": [
+            "Flying",
+            "Double strike"
+          ],
+          "power": 1,
+          "toughness": 1,
+          "clauses": [
+            "Flying",
+            "Double strike (This creature deals both first-strike and regular combat damage.)",
+            "Megamorph {4}{W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)"
+          ],
+          "color": 32,
+          "subtypes": [
+            "Bird",
+            "Warrior"
+          ]
+        }
+      },
+      "variants": [
+        "hidden_0",
+        "hidden_1",
+        "ordinary_0",
+        "ordinary_1",
+        "choose_hidden_0",
+        "choose_hidden_1",
+        "cast_short_0",
+        "cast_short_1",
+        "countered_0",
+        "countered_1",
+        "flip_0",
+        "flip_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "offturn_0",
+        "offturn_1",
+        "counter_persists_0",
+        "counter_persists_1",
+        "already_up_0",
+        "already_up_1",
+        "grow_and_flip_0",
+        "grow_and_flip_1",
+        "bounce_reset_0",
+        "bounce_reset_1",
+        "replay_0",
+        "replay_1",
+        "fee_short_0",
+        "fee_short_1",
+        "keyword_hidden_0",
+        "keyword_hidden_1",
+        "keyword_ordinary_0",
+        "keyword_ordinary_1",
+        "keyword_flipped_0",
+        "keyword_flipped_1",
+        "keyword_reach_0",
+        "keyword_reach_1"
+      ]
+    }
+  ]
+}

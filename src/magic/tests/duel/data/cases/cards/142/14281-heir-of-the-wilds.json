@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "csvid": 14281,
+  "card": "Heir of the Wilds",
+  "recipes": [
+    {
+      "family": "attack_trigger_stat_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 14281,
+        "printed_cost": "{1}{G}"
+      },
+      "oracle_text": "Deathtouch\nFerocious — Whenever this creature attacks, if you control a creature with power 4 or greater, this creature gets +1/+1 until end of turn.",
+      "variants": [
+        "meets_power_0",
+        "below_0",
+        "power_on_foe_0",
+        "self_power_0",
+        "late_power_0",
+        "remove_support_0",
+        "deathtouch_0",
+        "prevent_deathtouch_0",
+        "defends_0",
+        "meets_power_1",
+        "below_1",
+        "power_on_foe_1",
+        "self_power_1",
+        "late_power_1",
+        "remove_support_1",
+        "deathtouch_1",
+        "prevent_deathtouch_1",
+        "defends_1"
+      ]
+    }
+  ]
+}

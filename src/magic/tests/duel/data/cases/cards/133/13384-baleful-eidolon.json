@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Baleful Eidolon",
+  "csvid": 13384,
+  "recipes": [
+    {
+      "family": "bestow_cast_and_combat_basics",
+      "version": 2,
+      "params": {
+        "csvid": 13384,
+        "normal_cost": "{1}{B}",
+        "bestow_cost": "{4}{B}",
+        "creature": [
+          1,
+          1
+        ],
+        "bonus": [
+          1,
+          1
+        ],
+        "ability": "Deathtouch",
+        "clauses": [
+          "Bestow {4}{B} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)",
+          "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)",
+          "Enchanted creature gets +1/+1 and has deathtouch."
+        ]
+      },
+      "oracle_text": "Bestow {4}{B} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\nEnchanted creature gets +1/+1 and has deathtouch.",
+      "variants": [
+        "creature_combat_0",
+        "creature_combat_1",
+        "bestow_combat_0",
+        "bestow_combat_1",
+        "foreign_combat_0",
+        "foreign_combat_1",
+        "detached_combat_0",
+        "detached_combat_1",
+        "pending_host_lost_0",
+        "pending_host_lost_1",
+        "pending_replay_0",
+        "pending_replay_1"
+      ]
+    }
+  ]
+}

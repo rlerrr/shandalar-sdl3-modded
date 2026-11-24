@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Deity of Scars",
+  "csvid": 9762,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_conditional_costs",
+      "version": 2,
+      "params": {
+        "csvid": 9762,
+        "printed_mana": "{B/G}{B/G}{B/G}{B/G}{B/G}",
+        "rules": "Trample\nThis creature enters with two -1/-1 counters on it.\n{B/G}, Remove a -1/-1 counter from this creature: Regenerate this creature."
+      },
+      "oracle_text": "Trample\nThis creature enters with two -1/-1 counters on it.\n{B/G}, Remove a -1/-1 counter from this creature: Regenerate this creature.",
+      "variants": [
+        "black_preemptive_0",
+        "black_preemptive_1",
+        "green_preemptive_0",
+        "green_preemptive_1",
+        "exhaust_counters_0",
+        "exhaust_counters_1",
+        "trample_0",
+        "trample_1"
+      ]
+    }
+  ]
+}

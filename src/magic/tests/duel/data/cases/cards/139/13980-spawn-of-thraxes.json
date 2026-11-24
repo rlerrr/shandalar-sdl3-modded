@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Spawn of Thraxes",
+  "csvid": 13980,
+  "recipes": [
+    {
+      "family": "entry_follow_on_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 13980,
+        "cost": "{5}{R}{R}",
+        "choices": [
+          "mountains_0",
+          "mountains_1",
+          "zero_0",
+          "zero_1",
+          "flying_0",
+          "flying_1",
+          "lethal_0",
+          "lethal_1"
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, it deals damage to any target equal to the number of Mountains you control.",
+      "variants": [
+        "mountains_0",
+        "mountains_1",
+        "zero_0",
+        "zero_1",
+        "flying_0",
+        "flying_1",
+        "lethal_0",
+        "lethal_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "csvid": 15560,
+  "card": "Blinding Drone",
+  "recipes": [
+    {
+      "family": "devoid_colorless_activations",
+      "version": 2,
+      "params": {
+        "price": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          1,
+          3
+        ],
+        "effect": "tap",
+        "generic": 0,
+        "colorless": 1,
+        "once": false
+      },
+      "oracle_text": "Devoid (This card has no color.)\n{C}, {T}: Tap target creature. ({C} represents colorless mana.)",
+      "variants": [
+        "exact_0",
+        "exact_1",
+        "colored_only_0",
+        "colored_only_1",
+        "short_0",
+        "short_1",
+        "replay_0",
+        "replay_1",
+        "tap_own_0",
+        "tap_own_1",
+        "sick_denied_0",
+        "sick_denied_1",
+        "tapped_denied_0",
+        "tapped_denied_1"
+      ]
+    }
+  ]
+}

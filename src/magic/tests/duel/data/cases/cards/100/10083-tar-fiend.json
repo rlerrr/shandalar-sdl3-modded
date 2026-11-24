@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "card": "Tar Fiend",
+  "csvid": 10083,
+  "recipes": [
+    {
+      "family": "devour_entry_rewards",
+      "version": 2,
+      "params": {
+        "reward": "discard",
+        "multiplier": 2,
+        "mana": [
+          5,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": [],
+        "power": 4,
+        "toughness": 4
+      },
+      "oracle_text": "Devour 2 (As this creature enters, you may sacrifice any number of creatures. It enters with twice that many +1/+1 counters on it.)\nWhen this creature enters, target player discards a card for each creature it devoured.",
+      "variants": [
+        "none_0",
+        "paid_one_0",
+        "countered_0",
+        "wrong_color_0",
+        "snapshot_0",
+        "none_1",
+        "paid_one_1",
+        "countered_1",
+        "wrong_color_1",
+        "snapshot_1",
+        "paid_two_0",
+        "partial_0",
+        "decline_0",
+        "borrowed_meal_0",
+        "short_hand_0",
+        "target_self_0",
+        "empty_hand_0"
+      ]
+    }
+  ]
+}

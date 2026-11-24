@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Ral Zarek",
+  "csvid": 13201,
+  "recipes": [
+    {
+      "family": "coin_flip_partner_and_recurring",
+      "version": 2,
+      "params": {
+        "csvid": 13201,
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "+1: Tap target permanent, then untap another target permanent.\n−2: Ral Zarek deals 3 damage to any target.\n−7: Flip five coins. Take an extra turn after this one for each coin that comes up heads.",
+      "variants": [
+        "plus_0",
+        "plus_1",
+        "bolt_player_0",
+        "bolt_player_1",
+        "bolt_creature_0",
+        "bolt_creature_1",
+        "bolt_walker_0",
+        "bolt_walker_1",
+        "two_heads_0",
+        "two_heads_1",
+        "zero_heads_0",
+        "zero_heads_1",
+        "first_target_lost_0",
+        "first_target_lost_1"
+      ]
+    }
+  ]
+}

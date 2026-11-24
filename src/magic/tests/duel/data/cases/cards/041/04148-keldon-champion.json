@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Keldon Champion",
+  "csvid": 4148,
+  "recipes": [
+    {
+      "family": "entry_trigger_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 4148,
+        "cost": "{2}{R}{R}",
+        "choices": [
+          "player_0",
+          "player_1",
+          "planeswalker_0",
+          "planeswalker_1",
+          "haste_0",
+          "haste_1",
+          "echo_pay_0",
+          "echo_pay_1",
+          "echo_decline_0",
+          "echo_decline_1",
+          "echo_short_0",
+          "echo_short_1"
+        ]
+      },
+      "oracle_text": "Haste\nEcho {2}{R}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters, it deals 3 damage to target player or planeswalker.",
+      "variants": [
+        "player_0",
+        "player_1",
+        "planeswalker_0",
+        "planeswalker_1",
+        "haste_0",
+        "haste_1",
+        "echo_pay_0",
+        "echo_pay_1",
+        "echo_decline_0",
+        "echo_decline_1",
+        "echo_short_0",
+        "echo_short_1"
+      ]
+    }
+  ]
+}

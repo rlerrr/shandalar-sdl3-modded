@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 1539,
+  "card": "Bogardan Hellkite",
+  "recipes": [
+    {
+      "family": "flash_entry_combat_and_damage",
+      "version": 2,
+      "params": {
+        "csvid": 1539,
+        "printed_cost": "{6}{R}{R}"
+      },
+      "oracle_text": "Flash\nFlying\nWhen this creature enters, it deals 5 damage divided as you choose among any number of targets.",
+      "variants": [
+        "split_response_0",
+        "face_0",
+        "two_players_0",
+        "flight_0",
+        "short_0",
+        "split_response_1",
+        "face_1",
+        "two_players_1",
+        "flight_1",
+        "short_1"
+      ]
+    }
+  ]
+}

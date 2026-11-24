@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "csvid": 13580,
+  "card": "Tormented Hero",
+  "recipes": [
+    {
+      "family": "heroic_basic_riders",
+      "version": 2,
+      "oracle_text": "This creature enters tapped.\nHeroic — Whenever you cast a spell that targets this creature, each opponent loses 1 life. You gain life equal to the life lost this way.",
+      "params": {
+        "name": "Tormented Hero",
+        "cost": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "effect": "drain",
+        "power": 2,
+        "toughness": 1,
+        "keywords": []
+      },
+      "variants": [
+        "own_0",
+        "own_1",
+        "opponent_0",
+        "opponent_1",
+        "other_target_0",
+        "other_target_1",
+        "repeat_0",
+        "repeat_1",
+        "entry_untap_0",
+        "entry_untap_1"
+      ]
+    }
+  ]
+}

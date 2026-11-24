@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "csvid": 1263,
+  "card": "Spark Elemental",
+  "recipes": [
+    {
+      "family": "one_turn_attack_creature",
+      "version": 2,
+      "oracle_text": "Trample, haste (This creature can deal excess combat damage to the player or planeswalker it's attacking. This creature can attack and {T} as soon as it comes under your control.)\nAt the beginning of the end step, sacrifice this creature.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "trample": true,
+          "infect": false,
+          "cost": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "power": 3,
+          "toughness": 1,
+          "clauses": [
+            "Trample, haste (This creature can deal excess combat damage to the player or planeswalker it's attacking. This creature can attack and {T} as soon as it comes under your control.)",
+            "At the beginning of the end step, sacrifice this creature."
+          ]
+        }
+      },
+      "variants": [
+        "cast_payment_0",
+        "cast_short_0",
+        "cast_wrong_color_0",
+        "countered_0",
+        "fresh_hit_0",
+        "combat_small_0",
+        "combat_high_0",
+        "combat_indestructible_0",
+        "combat_fog_0",
+        "sick_witness_0",
+        "pacified_0",
+        "end_own_0",
+        "end_other_0",
+        "late_combat_end_0",
+        "source_bounced_0",
+        "bounce_recast_0",
+        "indestructible_sacrifice_0",
+        "replay_cast_0",
+        "replay_end_0",
+        "two_end_steps_0",
+        "cast_payment_1",
+        "cast_short_1",
+        "cast_wrong_color_1",
+        "countered_1",
+        "fresh_hit_1",
+        "combat_small_1",
+        "combat_high_1",
+        "combat_indestructible_1",
+        "combat_fog_1",
+        "sick_witness_1",
+        "pacified_1",
+        "end_own_1",
+        "end_other_1",
+        "late_combat_end_1",
+        "source_bounced_1",
+        "bounce_recast_1",
+        "indestructible_sacrifice_1",
+        "replay_cast_1",
+        "replay_end_1",
+        "two_end_steps_1"
+      ]
+    }
+  ]
+}

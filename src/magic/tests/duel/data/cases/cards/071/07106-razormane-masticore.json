@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Razormane Masticore",
+  "csvid": 7106,
+  "recipes": [
+    {
+      "family": "draw_step_damage_and_upkeep",
+      "version": 2,
+      "params": {
+        "csvid": 7106,
+        "printed_cost": "{5}"
+      },
+      "oracle_text": "First strike (This creature deals combat damage before creatures without first strike.)\nAt the beginning of your upkeep, sacrifice this creature unless you discard a card.\nAt the beginning of your draw step, you may have this creature deal 3 damage to target creature.",
+      "variants": [
+        "foe_target_0",
+        "own_target_0",
+        "prevented_target_0",
+        "first_strike_0",
+        "empty_0",
+        "upkeep_decline_0",
+        "decline_shot_0",
+        "foe_target_1",
+        "own_target_1",
+        "prevented_target_1",
+        "first_strike_1",
+        "empty_1",
+        "upkeep_decline_1"
+      ]
+    }
+  ]
+}

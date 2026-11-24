@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Leafcrown Dryad",
+  "csvid": 13474,
+  "recipes": [
+    {
+      "family": "bestow_evasion_and_blocking",
+      "version": 2,
+      "params": {
+        "csvid": 13474,
+        "normal": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "bestowed": [
+          3,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "creature": [
+          2,
+          2
+        ],
+        "bonus": [
+          2,
+          2
+        ]
+      },
+      "oracle_text": "Bestow {3}{G} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nReach\nEnchanted creature gets +2/+2 and has reach.",
+      "variants": [
+        "regular_0",
+        "regular_1",
+        "bestowed_0",
+        "bestowed_1",
+        "pending_fallback_0",
+        "pending_fallback_1",
+        "removed_aura_0",
+        "removed_aura_1"
+      ]
+    }
+  ]
+}

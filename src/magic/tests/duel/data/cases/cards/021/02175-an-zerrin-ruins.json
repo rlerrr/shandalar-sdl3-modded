@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "An-Zerrin Ruins",
+  "csvid": 2175,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "chosen_type_effects",
+      "version": 2,
+      "oracle_text": "As this enchantment enters, choose a creature type.\nCreatures of the chosen type don't untap during their controllers' untap steps.",
+      "params": {
+        "mode": "ruins",
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "goblins_0",
+        "goblins_1",
+        "angels_0",
+        "angels_1",
+        "short_0",
+        "short_1",
+        "source_removed_0",
+        "source_removed_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "late_match_0",
+        "late_match_1",
+        "untapped_entry_0",
+        "untapped_entry_1",
+        "manual_untap_0",
+        "manual_untap_1"
+      ]
+    }
+  ]
+}

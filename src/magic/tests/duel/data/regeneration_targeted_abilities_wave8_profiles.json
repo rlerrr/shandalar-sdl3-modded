@@ -1,0 +1,715 @@
+{
+  "sources": {
+    "Asceticism": {
+      "oracle": {
+        "oracle_id": "9396546c-d067-4ce3-9c3d-b62cca970b4f",
+        "name": "Asceticism",
+        "oracle_text": "Creatures you control have hexproof.\n{1}{G}: Regenerate target creature. (The next time it would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Heal",
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/110/asceticism?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11201,
+        "iid": 645,
+        "name": "Asceticism",
+        "handler": "manalinkeh_card_asceticism",
+        "kind": "card"
+      }
+    },
+    "Ezuri, Renegade Leader": {
+      "oracle": {
+        "oracle_id": "6734497c-16f0-4c4b-ba24-337333511fc6",
+        "name": "Ezuri, Renegade Leader",
+        "oracle_text": "{G}: Regenerate another target Elf.\n{2}{G}{G}{G}: Elf creatures you control get +3/+3 and gain trample until end of turn.",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Legendary Creature — Elf Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddu/1/ezuri-renegade-leader?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11251,
+        "iid": 3223,
+        "name": "Ezuri, Renegade Leader",
+        "handler": "manalinkeh_card_ezuri_renegade_leader",
+        "kind": "card"
+      }
+    },
+    "Isao, Enlightened Bushi": {
+      "oracle": {
+        "oracle_id": "15ec1bfc-b0a0-4058-87bb-8dbaf17b7f3b",
+        "name": "Isao, Enlightened Bushi",
+        "oracle_text": "This spell can't be countered.\nBushido 2 (Whenever this creature blocks or becomes blocked, it gets +2/+2 until end of turn.)\n{2}: Regenerate target Samurai.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Legendary Creature — Human Samurai",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Bushido",
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bok/129/isao-enlightened-bushi?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7495,
+        "iid": 4957,
+        "name": "Isao, Enlightened Bushi",
+        "handler": "manalinkeh_card_isao_enlightned_bushi",
+        "kind": "card"
+      }
+    },
+    "Jhoira's Toolbox": {
+      "oracle": {
+        "oracle_id": "a08475a6-1fac-4a3f-b343-aed16a61bc16",
+        "name": "Jhoira's Toolbox",
+        "oracle_text": "{2}: Regenerate target artifact creature.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Insect",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ulg/128/jhoiras-toolbox?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4012,
+        "iid": 5060,
+        "name": "Jhoira's Toolbox",
+        "handler": "manalinkeh_card_jhoira_toolbox",
+        "kind": "card"
+      }
+    },
+    "Niall Silvain": {
+      "oracle": {
+        "oracle_id": "9d2dd032-bcef-4d04-8836-1eaff1c56b98",
+        "name": "Niall Silvain",
+        "oracle_text": "{G}{G}{G}{G}, {T}: Regenerate target creature.",
+        "mana_cost": "{G}{G}{G}",
+        "type_line": "Creature — Ouphe",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/drk/82/niall-silvain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 373,
+        "iid": 6591,
+        "name": "Niall Silvain",
+        "handler": "manalinkeh_card_niall_silvain",
+        "kind": "card"
+      }
+    },
+    "Ragnar": {
+      "oracle": {
+        "oracle_id": "6d474413-e72f-414e-872f-aa00d38b7da4",
+        "name": "Ragnar",
+        "oracle_text": "{G}{W}{U}, {T}: Regenerate target creature.",
+        "mana_cost": "{G}{W}{U}",
+        "type_line": "Legendary Creature — Human Cleric",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "G",
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/167/ragnar?utm_source=api"
+      },
+      "registry": {
+        "csvid": 758,
+        "iid": 7597,
+        "name": "Ragnar",
+        "handler": "manalinkeh_card_ragnar",
+        "kind": "card"
+      }
+    },
+    "Suture Spirit": {
+      "oracle": {
+        "oracle_id": "4b2eba61-3937-4dc2-ad0a-e51fff8ecb80",
+        "name": "Suture Spirit",
+        "oracle_text": "Flying\n{W/B}{W/B}{W/B}: Regenerate target creature.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Spirit",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Regenerate"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eve/16/suture-spirit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9885,
+        "iid": 9584,
+        "name": "Suture Spirit",
+        "handler": "manalinkeh_card_suture_spirit",
+        "kind": "card"
+      }
+    },
+    "Clockwork Gnomes": {
+      "oracle": {
+        "oracle_id": "21d269f2-c11c-4094-b526-500f0785f483",
+        "name": "Clockwork Gnomes",
+        "oracle_text": "{3}, {T}: Regenerate target artifact creature.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature — Gnome",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/191/clockwork-gnomes?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2191,
+        "iid": 12007,
+        "name": "Clockwork Gnomes",
+        "handler": "manalinkeh_card_clockwork_gnomes",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Bottle Gnomes": {
+      "oracle": {
+        "oracle_id": "54b5e429-7a44-480d-bea4-4f8eeb7449b5",
+        "name": "Bottle Gnomes",
+        "oracle_text": "Sacrifice this creature: You gain 3 life.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Gnome",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cm2/177/bottle-gnomes?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1705,
+        "iid": 1265,
+        "name": "Bottle Gnomes",
+        "handler": "manalinkeh_card_bottle_gnomes",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Dazzling Ramparts": {
+      "oracle": {
+        "oracle_id": "0527fc47-2bfc-4d02-90fa-5a1284f89a0a",
+        "name": "Dazzling Ramparts",
+        "oracle_text": "Defender\n{1}{W}, {T}: Tap target creature.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "7",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/6/dazzling-ramparts?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14247,
+        "iid": 2299,
+        "name": "Dazzling Ramparts",
+        "handler": "manalinkeh_card_dazzling_ramparts",
+        "kind": "card"
+      }
+    },
+    "Drift of Phantasms": {
+      "oracle": {
+        "oracle_id": "6ee51134-c4ad-4101-8ce2-23dde9359cd4",
+        "name": "Drift of Phantasms",
+        "oracle_text": "Defender (This creature can't attack.)\nFlying\nTransmute {1}{U}{U} ({1}{U}{U}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Spirit",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Defender",
+          "Transmute"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/42/drift-of-phantasms?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7828,
+        "iid": 2753,
+        "name": "Drift of Phantasms",
+        "handler": "manalinkeh_card_drift_of_phantasms",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Millstone": {
+      "oracle": {
+        "oracle_id": "3212e47a-5492-4c50-9d4a-6ea562f1a6e1",
+        "name": "Millstone",
+        "oracle_text": "{2}, {T}: Target player mills two cards.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/242/millstone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 507,
+        "iid": 6116,
+        "name": "Millstone",
+        "handler": "manalinkeh_card_millstone",
+        "kind": "card"
+      }
+    },
+    "Mothrider Samurai": {
+      "oracle": {
+        "oracle_id": "38530399-d2c9-4445-92ba-14c5cd438055",
+        "name": "Mothrider Samurai",
+        "oracle_text": "Flying\nBushido 1 (Whenever this creature blocks or becomes blocked, it gets +1/+1 until end of turn.)",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Human Samurai",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Bushido"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/34/mothrider-samurai?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7308,
+        "iid": 13700,
+        "name": "Mothrider Samurai",
+        "handler": "manalinkeh_card_devoted_retainer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Naturalize": {
+      "oracle": {
+        "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+        "name": "Naturalize",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1096,
+        "iid": 6485,
+        "name": "Naturalize",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Terminate": {
+      "oracle": {
+        "oracle_id": "6257c2fd-005f-41e3-8a72-af76df1eb134",
+        "name": "Terminate",
+        "oracle_text": "Destroy target creature. It can't be regenerated.",
+        "mana_cost": "{B}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/189/terminate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1471,
+        "iid": 9812,
+        "name": "Terminate",
+        "handler": "manalinkeh_card_terminate",
+        "kind": "card"
+      }
+    },
+    "Wastes": {
+      "oracle": {
+        "oracle_id": "05d24b0c-904a-46b6-b42a-96a4d91a0dd4",
+        "name": "Wastes",
+        "oracle_text": "{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Basic Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/191/wastes?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15719,
+        "iid": 15794,
+        "name": "Wastes",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Wellwisher": {
+      "oracle": {
+        "oracle_id": "c3b1b7bd-cff8-4275-b6d3-868f4e4b2cc0",
+        "name": "Wellwisher",
+        "oracle_text": "{T}: You gain 1 life for each Elf on the battlefield.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Elf",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cma/166/wellwisher?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6318,
+        "iid": 10906,
+        "name": "Wellwisher",
+        "handler": "manalinkeh_card_wellwisher",
+        "kind": "card"
+      }
+    }
+  }
+}

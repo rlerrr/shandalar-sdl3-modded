@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "card": "Grisly Survivor",
+  "csvid": 17146,
+  "recipes": [
+    {
+      "family": "cycle_discard_self_reward",
+      "version": 2,
+      "oracle_text": "Whenever you cycle or discard a card, this creature gets +2/+0 until end of turn.",
+      "params": {
+        "mana": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 3,
+        "delta_power": 2,
+        "delta_toughness": 0,
+        "unblockable": false,
+        "indestructible": false,
+        "menace": false,
+        "other_only": false,
+        "cycling_mana": null
+      },
+      "variants": [
+        "own_cycle_0",
+        "own_discard_0",
+        "opponent_cycle_0",
+        "opponent_discard_0",
+        "cycle_cancel_0",
+        "cycle_unaffordable_0",
+        "repeated_cycle_0",
+        "cycle_then_discard_0",
+        "draw_only_0",
+        "expiry_0",
+        "source_cast_0",
+        "source_cast_denied_0",
+        "offturn_cycle_0",
+        "pending_replay_0",
+        "own_cycle_1",
+        "own_discard_1",
+        "opponent_cycle_1",
+        "opponent_discard_1",
+        "cycle_cancel_1",
+        "cycle_unaffordable_1",
+        "repeated_cycle_1",
+        "cycle_then_discard_1",
+        "draw_only_1",
+        "expiry_1",
+        "source_cast_1",
+        "source_cast_denied_1",
+        "offturn_cycle_1",
+        "pending_replay_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "card": "Roar of Challenge",
+  "csvid": 14353,
+  "recipes": [
+    {
+      "family": "must_block_creature_spell",
+      "version": 2,
+      "params": {
+        "cost": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "mechanism": "spell",
+        "instant": false,
+        "ferocious": 4
+      },
+      "oracle_text": "All creatures able to block target creature this turn do so.\nFerocious — That creature gains indestructible until end of turn if you control a creature with power 4 or greater.",
+      "variants": [
+        "force_one_0",
+        "force_two_0",
+        "decline_0",
+        "competing_0",
+        "all_tapped_0",
+        "illegal_blocker_0",
+        "idle_target_0",
+        "after_cleanup_0",
+        "enemy_target_0",
+        "no_target_0",
+        "shroud_target_0",
+        "unfunded_0",
+        "target_lost_0",
+        "flyer_reach_0",
+        "power_three_0",
+        "power_four_0",
+        "enemy_power_four_0",
+        "support_lost_0",
+        "support_after_0",
+        "destroy_after_expiry_0",
+        "force_one_1",
+        "force_two_1",
+        "decline_1",
+        "competing_1",
+        "all_tapped_1",
+        "illegal_blocker_1",
+        "idle_target_1",
+        "after_cleanup_1",
+        "enemy_target_1",
+        "no_target_1",
+        "shroud_target_1",
+        "unfunded_1",
+        "target_lost_1",
+        "flyer_reach_1",
+        "power_three_1",
+        "power_four_1",
+        "enemy_power_four_1",
+        "support_lost_1",
+        "support_after_1",
+        "destroy_after_expiry_1"
+      ]
+    }
+  ]
+}

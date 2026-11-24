@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Deftblade Elite",
+  "csvid": 6365,
+  "recipes": [
+    {
+      "family": "attack_follow_on_requirements_and_legality",
+      "version": 2,
+      "params": {
+        "csvid": 6365,
+        "cost": "{W}",
+        "choices": [
+          "provoke_0",
+          "provoke_1",
+          "decline_0",
+          "decline_1",
+          "paid_prevention_0",
+          "paid_prevention_1",
+          "short_0",
+          "short_1",
+          "noncombat_0",
+          "noncombat_1"
+        ]
+      },
+      "oracle_text": "Provoke (Whenever this creature attacks, you may have target creature defending player controls untap and block it if able.)\n{1}{W}: Prevent all combat damage that would be dealt to and dealt by this creature this turn.",
+      "variants": [
+        "provoke_0",
+        "provoke_1",
+        "decline_0",
+        "decline_1",
+        "paid_prevention_0",
+        "paid_prevention_1",
+        "short_0",
+        "short_1",
+        "noncombat_0",
+        "noncombat_1"
+      ]
+    }
+  ]
+}

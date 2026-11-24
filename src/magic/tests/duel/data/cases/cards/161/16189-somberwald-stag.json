@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "csvid": 16189,
+  "card": "Somberwald Stag",
+  "recipes": [
+    {
+      "family": "fight_entry_fighters",
+      "version": 2,
+      "params": {
+        "csvid": 16189,
+        "mana": [
+          3,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "stats": [
+          4,
+          3
+        ]
+      },
+      "oracle_text": "When this creature enters, you may have it fight target creature you don't control.",
+      "variants": [
+        "reciprocal_0",
+        "reciprocal_1",
+        "backlash_0",
+        "backlash_1",
+        "decline_0",
+        "decline_1",
+        "own_only_0",
+        "own_only_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "csvid": 16381,
+  "card": "Foundry Inspector",
+  "recipes": [
+    {
+      "family": "artifact_discount_composition",
+      "version": 2,
+      "oracle_text": "Artifact spells you cast cost {1} less to cast.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "printed": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "role": "flat",
+          "clauses": [
+            "Artifact spells you cast cost {1} less to cast."
+          ],
+          "artifact": true,
+          "power": 3,
+          "toughness": 2
+        }
+      },
+      "variants": [
+        "full_price_0",
+        "full_price_1",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "paid_replay_0",
+        "paid_replay_1",
+        "artifact_creature_0",
+        "artifact_creature_1",
+        "artifact_noncreature_0",
+        "artifact_noncreature_1",
+        "nonartifact_0",
+        "nonartifact_1",
+        "opposing_caster_0",
+        "opposing_caster_1",
+        "colored_floor_0",
+        "colored_floor_1",
+        "wrong_colored_floor_0",
+        "wrong_colored_floor_1",
+        "source_leaves_0",
+        "source_leaves_1",
+        "multiple_reducers_0",
+        "multiple_reducers_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "csvid": 5720,
+  "card": "Stone-Tongue Basilisk",
+  "recipes": [
+    {
+      "family": "must_block_creature_spell",
+      "version": 2,
+      "params": {
+        "composition": "threshold_basilisk",
+        "threshold": 7,
+        "cost": [
+          4,
+          0,
+          0,
+          3,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever this creature deals combat damage to a creature, destroy that creature at end of combat.\nThreshold — As long as there are seven or more cards in your graveyard, all creatures able to block this creature do so.",
+      "variants": [
+        "six_unforced_0",
+        "six_manual_0",
+        "seven_forced_0",
+        "enemy_only_seven_0",
+        "cast_then_force_0",
+        "indestructible_0",
+        "prevented_0",
+        "defending_damage_0",
+        "six_unforced_1",
+        "six_manual_1",
+        "seven_forced_1",
+        "enemy_only_seven_1",
+        "cast_then_force_1",
+        "indestructible_1",
+        "prevented_1",
+        "defending_damage_1"
+      ]
+    }
+  ]
+}

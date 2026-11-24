@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Shield Mare",
+  "csvid": 19004,
+  "recipes": [
+    {
+      "family": "entry_interaction_choice_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 19004,
+        "mana_cost": "{1}{W}{W}"
+      },
+      "oracle_text": "This creature can't be blocked by red creatures.\nWhen this creature enters or becomes the target of a spell or ability an opponent controls, you gain 3 life.",
+      "variants": [
+        "own_spell_0",
+        "own_spell_1",
+        "foe_spell_0",
+        "foe_spell_1",
+        "foe_ability_0",
+        "foe_ability_1",
+        "red_block_0",
+        "red_block_1",
+        "nonred_block_0",
+        "nonred_block_1"
+      ]
+    }
+  ]
+}

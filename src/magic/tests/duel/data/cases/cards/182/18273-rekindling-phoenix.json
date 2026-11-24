@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Rekindling Phoenix",
+  "csvid": 18273,
+  "recipes": [
+    {
+      "family": "graveyard_reanimation_permissions",
+      "version": 2,
+      "params": {
+        "model": "phoenix",
+        "cost": [
+          2,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "hybrid_symbols": []
+      },
+      "oracle_text": "Flying\nWhen this creature dies, create a 0/1 red Elemental creature token with \"At the beginning of your upkeep, sacrifice this token and return target card named Rekindling Phoenix from your graveyard to the battlefield. It gains haste until end of turn.\"",
+      "variants": [
+        "effect_0",
+        "opponent_upkeep_0",
+        "replay_0",
+        "repeat_0",
+        "underpaid_0",
+        "countered_0",
+        "alive_0",
+        "bounce_0",
+        "token_removed_0",
+        "missing_name_0",
+        "wrong_owner_0",
+        "shroud_0",
+        "flying_ground_0",
+        "flying_reach_0",
+        "haste_expires_0",
+        "effect_1",
+        "opponent_upkeep_1",
+        "replay_1",
+        "repeat_1",
+        "underpaid_1",
+        "countered_1",
+        "alive_1",
+        "bounce_1",
+        "token_removed_1",
+        "missing_name_1",
+        "wrong_owner_1",
+        "shroud_1",
+        "flying_ground_1",
+        "flying_reach_1",
+        "haste_expires_1"
+      ]
+    }
+  ]
+}

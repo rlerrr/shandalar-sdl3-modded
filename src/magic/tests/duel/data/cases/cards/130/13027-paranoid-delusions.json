@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Paranoid Delusions",
+  "csvid": 13027,
+  "recipes": [
+    {
+      "family": "mill_remaining_spells_and_modes",
+      "version": 2,
+      "params": {
+        "csvid": 13027,
+        "printed_cost": "{U}{B}",
+        "clauses": [
+          "Target player mills three cards.",
+          "Cipher (Then you may exile this spell card encoded on a creature you control. Whenever that creature deals combat damage to a player, its controller may cast a copy of the encoded card without paying its mana cost.)"
+        ],
+        "modes": [
+          "no_host",
+          "decline_encode",
+          "encode_hit",
+          "encode_blocked"
+        ],
+        "human_modes": [
+          "decline_copy"
+        ]
+      },
+      "oracle_text": "Target player mills three cards.\nCipher (Then you may exile this spell card encoded on a creature you control. Whenever that creature deals combat damage to a player, its controller may cast a copy of the encoded card without paying its mana cost.)",
+      "variants": [
+        "no_host_0",
+        "no_host_1",
+        "decline_encode_0",
+        "decline_encode_1",
+        "encode_hit_0",
+        "encode_hit_1",
+        "encode_blocked_0",
+        "encode_blocked_1",
+        "decline_copy_0"
+      ]
+    }
+  ]
+}

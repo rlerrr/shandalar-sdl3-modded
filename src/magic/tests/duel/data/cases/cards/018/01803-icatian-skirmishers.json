@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Icatian Skirmishers",
+  "csvid": 1803,
+  "recipes": [
+    {
+      "family": "attack_follow_on_requirements_and_legality",
+      "version": 2,
+      "params": {
+        "csvid": 1803,
+        "cost": "{3}{W}",
+        "choices": [
+          "first_strike_0",
+          "first_strike_1",
+          "unbanded_0",
+          "unbanded_1"
+        ]
+      },
+      "oracle_text": "First strike; banding (Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are blocking or being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's being blocked by or is blocking.)\nWhenever this creature attacks, all creatures banded with it gain first strike until end of turn.",
+      "variants": [
+        "first_strike_0",
+        "first_strike_1",
+        "unbanded_0",
+        "unbanded_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Volition Reins",
+  "csvid": 11406,
+  "recipes": [
+    {
+      "family": "remaining_entry_attachments",
+      "version": 2,
+      "params": {
+        "csvid": 11406,
+        "mana_cost": "{3}{U}{U}{U}"
+      },
+      "oracle_text": "Enchant permanent\nWhen this Aura enters, if enchanted permanent is tapped, untap it.\nYou control enchanted permanent.",
+      "variants": [
+        "foreign_land_0",
+        "foreign_land_1",
+        "release_creature_0",
+        "release_creature_1",
+        "own_land_0",
+        "own_land_1"
+      ]
+    }
+  ]
+}

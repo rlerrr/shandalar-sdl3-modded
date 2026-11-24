@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Darksteel Pendant",
+  "csvid": 6874,
+  "recipes": [
+    {
+      "family": "library_scry_activated_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 6874,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)\n{1}, {T}: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "variants": [
+        "bottom_0",
+        "bottom_1",
+        "keep_0",
+        "keep_1",
+        "resists_destroy_0",
+        "resists_destroy_1",
+        "exile_pending_0",
+        "exile_pending_1",
+        "tapped_0",
+        "tapped_1",
+        "short_mana_0",
+        "short_mana_1"
+      ]
+    }
+  ]
+}

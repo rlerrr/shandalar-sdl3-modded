@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Apex of Power",
+  "csvid": 18880,
+  "recipes": [
+    {
+      "family": "own_exile_specializations",
+      "version": 2,
+      "params": {
+        "model": "apex",
+        "cost": [
+          7,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        "count": 7,
+        "mana": 10
+      },
+      "oracle_text": "Exile the top seven cards of your library. Until end of turn, you may cast spells from among them.\nIf this spell was cast from your hand, add ten mana of any one color.",
+      "variants": [
+        "empty_0",
+        "wrong_source_mana_0",
+        "countered_0",
+        "expiry_0",
+        "full_prefix_0",
+        "shallow_0",
+        "paid_spell_blue_0",
+        "wrong_spell_color_0",
+        "lands_forbidden_0",
+        "wrong_seat_0",
+        "from_exile_0",
+        "replay_0",
+        "black_0",
+        "green_0",
+        "white_0",
+        "empty_1",
+        "wrong_source_mana_1",
+        "countered_1",
+        "expiry_1",
+        "full_prefix_1",
+        "shallow_1",
+        "paid_spell_blue_1",
+        "wrong_spell_color_1",
+        "lands_forbidden_1",
+        "wrong_seat_1",
+        "from_exile_1",
+        "replay_1",
+        "black_1",
+        "green_1",
+        "white_1"
+      ]
+    }
+  ]
+}

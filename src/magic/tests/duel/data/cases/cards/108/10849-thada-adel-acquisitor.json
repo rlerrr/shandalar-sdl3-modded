@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Thada Adel, Acquisitor",
+  "csvid": 10849,
+  "recipes": [
+    {
+      "family": "opponent_exile_permissions",
+      "version": 2,
+      "oracle_text": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)\nWhenever Thada Adel deals combat damage to a player, search that player's library for an artifact card and exile it. Then that player shuffles. Until end of turn, you may play that card.",
+      "params": {
+        "model": "artifact_search",
+        "cost": [
+          1,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "payment": "printed",
+        "expiry": "turn"
+      },
+      "variants": [
+        "exact_cost_0",
+        "short_0",
+        "wrong_seat_0",
+        "expiry_0",
+        "artifact_land_0",
+        "land_spent_0",
+        "blocked_0",
+        "islandwalk_0",
+        "no_artifact_0",
+        "empty_0",
+        "replay_0",
+        "exact_cost_1",
+        "short_1",
+        "wrong_seat_1",
+        "expiry_1",
+        "artifact_land_1",
+        "land_spent_1",
+        "blocked_1",
+        "islandwalk_1",
+        "no_artifact_1",
+        "empty_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

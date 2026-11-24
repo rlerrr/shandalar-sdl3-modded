@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "csvid": 16342,
+  "card": "Demon of Dark Schemes",
+  "recipes": [
+    {
+      "family": "entry_interaction_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 16342,
+        "printed_cost": "{3}{B}{B}{B}",
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, all other creatures get -2/-2 until end of turn.\nWhenever another creature dies, you get {E} (an energy counter).\n{2}{B}, Pay {E}{E}{E}{E}: Put target creature card from a graveyard onto the battlefield tapped under your control.",
+      "variants": [
+        "four_deaths_0",
+        "three_energy_0",
+        "own_grave_0",
+        "foe_grave_0",
+        "wrong_color_0",
+        "flying_0",
+        "four_deaths_1",
+        "three_energy_1",
+        "own_grave_1",
+        "foe_grave_1",
+        "wrong_color_1",
+        "flying_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2147 @@
+{
+  "sources": {
+    "Mayor of Avabruck": {
+      "oracle": {
+        "oracle_id": "6e638587-30b3-4c4b-b463-fb415ea048f7",
+        "name": "Mayor of Avabruck // Howlpack Alpha",
+        "type_line": "Creature — Human Advisor Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/inr/207/mayor-of-avabruck-howlpack-alpha?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Mayor of Avabruck",
+            "mana_cost": "{1}{G}",
+            "type_line": "Creature — Human Advisor Werewolf",
+            "oracle_text": "Other Human creatures you control get +1/+1.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "G"
+            ],
+            "power": "1",
+            "toughness": "1",
+            "flavor_text": "He can deny his true nature for only so long.",
+            "artist": "Svetlin Velinov",
+            "artist_id": "ffd063ae-c097-4f26-b2e6-b1e2137708bc",
+            "illustration_id": "fcb69740-c4f3-4698-abaf-968dca84d41d",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "normal": "https://cards.scryfall.io/normal/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "large": "https://cards.scryfall.io/large/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "png": "https://cards.scryfall.io/png/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.png?1783908100",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "thumb": "https://cards.scryfall.io/thumb/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100",
+              "grid": "https://cards.scryfall.io/grid/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100",
+              "display": "https://cards.scryfall.io/display/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100",
+              "art": "https://cards.scryfall.io/art/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100",
+              "crop": "https://cards.scryfall.io/crop/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Howlpack Alpha",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "Each other creature you control that's a Werewolf or a Wolf gets +1/+1.\nAt the beginning of your end step, create a 2/2 green Wolf creature token.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "G"
+            ],
+            "color_indicator": [
+              "G"
+            ],
+            "power": "3",
+            "toughness": "3",
+            "artist": "Svetlin Velinov",
+            "artist_id": "ffd063ae-c097-4f26-b2e6-b1e2137708bc",
+            "illustration_id": "4299ed5c-a63a-4d69-a289-9dd020399c7a",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "normal": "https://cards.scryfall.io/normal/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "large": "https://cards.scryfall.io/large/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "png": "https://cards.scryfall.io/png/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.png?1783908100",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "thumb": "https://cards.scryfall.io/thumb/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100",
+              "grid": "https://cards.scryfall.io/grid/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100",
+              "display": "https://cards.scryfall.io/display/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100",
+              "art": "https://cards.scryfall.io/art/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100",
+              "crop": "https://cards.scryfall.io/crop/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100"
+            }
+          }
+        ],
+        "engine_face": "Mayor of Avabruck",
+        "selected_face": {
+          "name": "Mayor of Avabruck",
+          "oracle_text": "Other Human creatures you control get +1/+1.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+          "mana_cost": "{1}{G}",
+          "type_line": "Creature — Human Advisor Werewolf",
+          "power": "1",
+          "toughness": "1",
+          "colors": [
+            "G"
+          ]
+        }
+      },
+      "registry": {
+        "csvid": 12017,
+        "iid": 5987,
+        "name": "Mayor of Avabruck",
+        "handler": "manalinkeh_card_mayor_of_avabruck",
+        "kind": "card"
+      },
+      "back_oracle": {
+        "oracle_id": "6e638587-30b3-4c4b-b463-fb415ea048f7",
+        "name": "Mayor of Avabruck // Howlpack Alpha",
+        "type_line": "Creature — Human Advisor Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/inr/207/mayor-of-avabruck-howlpack-alpha?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Mayor of Avabruck",
+            "mana_cost": "{1}{G}",
+            "type_line": "Creature — Human Advisor Werewolf",
+            "oracle_text": "Other Human creatures you control get +1/+1.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "G"
+            ],
+            "power": "1",
+            "toughness": "1",
+            "flavor_text": "He can deny his true nature for only so long.",
+            "artist": "Svetlin Velinov",
+            "artist_id": "ffd063ae-c097-4f26-b2e6-b1e2137708bc",
+            "illustration_id": "fcb69740-c4f3-4698-abaf-968dca84d41d",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "normal": "https://cards.scryfall.io/normal/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "large": "https://cards.scryfall.io/large/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "png": "https://cards.scryfall.io/png/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.png?1783908100",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "thumb": "https://cards.scryfall.io/thumb/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100",
+              "grid": "https://cards.scryfall.io/grid/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100",
+              "display": "https://cards.scryfall.io/display/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100",
+              "art": "https://cards.scryfall.io/art/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100",
+              "crop": "https://cards.scryfall.io/crop/front/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Howlpack Alpha",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "Each other creature you control that's a Werewolf or a Wolf gets +1/+1.\nAt the beginning of your end step, create a 2/2 green Wolf creature token.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "G"
+            ],
+            "color_indicator": [
+              "G"
+            ],
+            "power": "3",
+            "toughness": "3",
+            "artist": "Svetlin Velinov",
+            "artist_id": "ffd063ae-c097-4f26-b2e6-b1e2137708bc",
+            "illustration_id": "4299ed5c-a63a-4d69-a289-9dd020399c7a",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "normal": "https://cards.scryfall.io/normal/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "large": "https://cards.scryfall.io/large/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "png": "https://cards.scryfall.io/png/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.png?1783908100",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.jpg?1783908100",
+              "thumb": "https://cards.scryfall.io/thumb/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100",
+              "grid": "https://cards.scryfall.io/grid/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100",
+              "display": "https://cards.scryfall.io/display/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100",
+              "art": "https://cards.scryfall.io/art/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100",
+              "crop": "https://cards.scryfall.io/crop/back/e/f/ef84540b-a132-4169-b3c0-b0edeb395c9b.webp?1783908100"
+            }
+          }
+        ],
+        "engine_face": "Howlpack Alpha",
+        "selected_face": {
+          "name": "Howlpack Alpha",
+          "oracle_text": "Each other creature you control that's a Werewolf or a Wolf gets +1/+1.\nAt the beginning of your end step, create a 2/2 green Wolf creature token.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+          "mana_cost": "",
+          "type_line": "Creature — Werewolf",
+          "power": "3",
+          "toughness": "3",
+          "colors": [
+            "G"
+          ]
+        }
+      },
+      "back_registry": {
+        "csvid": 12018,
+        "iid": 4685,
+        "name": "Howlpack Alpha",
+        "handler": "manalinkeh_card_howlpack_alpha",
+        "kind": "card"
+      }
+    },
+    "Afflicted Deserter": {
+      "oracle": {
+        "oracle_id": "52adc761-1a0a-43d1-a706-41a92bb7880c",
+        "name": "Afflicted Deserter // Werewolf Ransacker",
+        "type_line": "Creature — Human Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/dka/81/afflicted-deserter-werewolf-ransacker?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Afflicted Deserter",
+            "mana_cost": "{3}{R}",
+            "type_line": "Creature — Human Werewolf",
+            "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "R"
+            ],
+            "power": "3",
+            "toughness": "2",
+            "flavor_text": "The rising of the first full moon eliminated any doubt as to the horrible truth lurking within.",
+            "artist": "David Palumbo",
+            "artist_id": "04ce1c75-e30c-4b7a-8cb0-b53e4ecc2f39",
+            "illustration_id": "0d3b25e6-5cd0-471c-be67-c9a22e79cc09",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "normal": "https://cards.scryfall.io/normal/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "large": "https://cards.scryfall.io/large/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "png": "https://cards.scryfall.io/png/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.png?1783940829",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "thumb": "https://cards.scryfall.io/thumb/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829",
+              "grid": "https://cards.scryfall.io/grid/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829",
+              "display": "https://cards.scryfall.io/display/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829",
+              "art": "https://cards.scryfall.io/art/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829",
+              "crop": "https://cards.scryfall.io/crop/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Werewolf Ransacker",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "Whenever this creature transforms into Werewolf Ransacker, you may destroy target artifact. If that artifact is put into a graveyard this way, this creature deals 3 damage to that artifact's controller.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "R"
+            ],
+            "color_indicator": [
+              "R"
+            ],
+            "power": "5",
+            "toughness": "4",
+            "artist": "David Palumbo",
+            "artist_id": "04ce1c75-e30c-4b7a-8cb0-b53e4ecc2f39",
+            "illustration_id": "ade4c37e-4fc2-4a72-82af-00ff716d9eaf",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "normal": "https://cards.scryfall.io/normal/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "large": "https://cards.scryfall.io/large/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "png": "https://cards.scryfall.io/png/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.png?1783940829",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "thumb": "https://cards.scryfall.io/thumb/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829",
+              "grid": "https://cards.scryfall.io/grid/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829",
+              "display": "https://cards.scryfall.io/display/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829",
+              "art": "https://cards.scryfall.io/art/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829",
+              "crop": "https://cards.scryfall.io/crop/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829"
+            }
+          }
+        ],
+        "engine_face": "Afflicted Deserter",
+        "selected_face": {
+          "name": "Afflicted Deserter",
+          "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+          "mana_cost": "{3}{R}",
+          "type_line": "Creature — Human Werewolf",
+          "power": "3",
+          "toughness": "2",
+          "colors": [
+            "R"
+          ]
+        }
+      },
+      "registry": {
+        "csvid": 12130,
+        "iid": 278,
+        "name": "Afflicted Deserter",
+        "handler": "manalinkeh_card_gastaf_shepherd",
+        "kind": "card"
+      },
+      "back_oracle": {
+        "oracle_id": "52adc761-1a0a-43d1-a706-41a92bb7880c",
+        "name": "Afflicted Deserter // Werewolf Ransacker",
+        "type_line": "Creature — Human Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/dka/81/afflicted-deserter-werewolf-ransacker?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Afflicted Deserter",
+            "mana_cost": "{3}{R}",
+            "type_line": "Creature — Human Werewolf",
+            "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "R"
+            ],
+            "power": "3",
+            "toughness": "2",
+            "flavor_text": "The rising of the first full moon eliminated any doubt as to the horrible truth lurking within.",
+            "artist": "David Palumbo",
+            "artist_id": "04ce1c75-e30c-4b7a-8cb0-b53e4ecc2f39",
+            "illustration_id": "0d3b25e6-5cd0-471c-be67-c9a22e79cc09",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "normal": "https://cards.scryfall.io/normal/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "large": "https://cards.scryfall.io/large/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "png": "https://cards.scryfall.io/png/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.png?1783940829",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "thumb": "https://cards.scryfall.io/thumb/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829",
+              "grid": "https://cards.scryfall.io/grid/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829",
+              "display": "https://cards.scryfall.io/display/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829",
+              "art": "https://cards.scryfall.io/art/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829",
+              "crop": "https://cards.scryfall.io/crop/front/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Werewolf Ransacker",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "Whenever this creature transforms into Werewolf Ransacker, you may destroy target artifact. If that artifact is put into a graveyard this way, this creature deals 3 damage to that artifact's controller.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "R"
+            ],
+            "color_indicator": [
+              "R"
+            ],
+            "power": "5",
+            "toughness": "4",
+            "artist": "David Palumbo",
+            "artist_id": "04ce1c75-e30c-4b7a-8cb0-b53e4ecc2f39",
+            "illustration_id": "ade4c37e-4fc2-4a72-82af-00ff716d9eaf",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "normal": "https://cards.scryfall.io/normal/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "large": "https://cards.scryfall.io/large/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "png": "https://cards.scryfall.io/png/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.png?1783940829",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.jpg?1783940829",
+              "thumb": "https://cards.scryfall.io/thumb/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829",
+              "grid": "https://cards.scryfall.io/grid/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829",
+              "display": "https://cards.scryfall.io/display/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829",
+              "art": "https://cards.scryfall.io/art/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829",
+              "crop": "https://cards.scryfall.io/crop/back/a/2/a2c044c0-3625-4bdf-9445-b462394cecae.webp?1783940829"
+            }
+          }
+        ],
+        "engine_face": "Werewolf Ransacker",
+        "selected_face": {
+          "name": "Werewolf Ransacker",
+          "oracle_text": "Whenever this creature transforms into Werewolf Ransacker, you may destroy target artifact. If that artifact is put into a graveyard this way, this creature deals 3 damage to that artifact's controller.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+          "mana_cost": "",
+          "type_line": "Creature — Werewolf",
+          "power": "5",
+          "toughness": "4",
+          "colors": [
+            "R"
+          ]
+        }
+      },
+      "back_registry": {
+        "csvid": 12131,
+        "iid": 10908,
+        "name": "Werewolf Ransacker",
+        "handler": "manalinkeh_card_werewolf_ransacker",
+        "kind": "card"
+      }
+    },
+    "Huntmaster of the Fells": {
+      "oracle": {
+        "oracle_id": "582328cd-660d-47a4-bb23-e91e80b9a907",
+        "name": "Huntmaster of the Fells // Ravager of the Fells",
+        "type_line": "Creature — Human Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform",
+          "Trample"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/inr/241/huntmaster-of-the-fells-ravager-of-the-fells?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Huntmaster of the Fells",
+            "mana_cost": "{2}{R}{G}",
+            "type_line": "Creature — Human Werewolf",
+            "oracle_text": "Whenever this creature enters or transforms into Huntmaster of the Fells, create a 2/2 green Wolf creature token and you gain 2 life.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "G",
+              "R"
+            ],
+            "power": "2",
+            "toughness": "2",
+            "artist": "Chris Rahn",
+            "artist_id": "7742047e-0f80-4c0f-a530-d07460165e86",
+            "illustration_id": "8ce1bfa2-7cd6-4f4f-b23e-c5d985acec48",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "normal": "https://cards.scryfall.io/normal/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "large": "https://cards.scryfall.io/large/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "png": "https://cards.scryfall.io/png/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.png?1783908083",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "thumb": "https://cards.scryfall.io/thumb/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083",
+              "grid": "https://cards.scryfall.io/grid/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083",
+              "display": "https://cards.scryfall.io/display/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083",
+              "art": "https://cards.scryfall.io/art/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083",
+              "crop": "https://cards.scryfall.io/crop/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Ravager of the Fells",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "Trample\nWhenever this creature transforms into Ravager of the Fells, it deals 2 damage to target opponent or planeswalker and 2 damage to up to one target creature that player or that planeswalker's controller controls.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "G",
+              "R"
+            ],
+            "color_indicator": [
+              "G",
+              "R"
+            ],
+            "power": "4",
+            "toughness": "4",
+            "artist": "Chris Rahn",
+            "artist_id": "7742047e-0f80-4c0f-a530-d07460165e86",
+            "illustration_id": "a26de848-cc6a-4f49-9d43-72afa3c80b3e",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "normal": "https://cards.scryfall.io/normal/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "large": "https://cards.scryfall.io/large/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "png": "https://cards.scryfall.io/png/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.png?1783908083",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "thumb": "https://cards.scryfall.io/thumb/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083",
+              "grid": "https://cards.scryfall.io/grid/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083",
+              "display": "https://cards.scryfall.io/display/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083",
+              "art": "https://cards.scryfall.io/art/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083",
+              "crop": "https://cards.scryfall.io/crop/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083"
+            }
+          }
+        ],
+        "engine_face": "Huntmaster of the Fells",
+        "selected_face": {
+          "name": "Huntmaster of the Fells",
+          "oracle_text": "Whenever this creature enters or transforms into Huntmaster of the Fells, create a 2/2 green Wolf creature token and you gain 2 life.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+          "mana_cost": "{2}{R}{G}",
+          "type_line": "Creature — Human Werewolf",
+          "power": "2",
+          "toughness": "2",
+          "colors": [
+            "G",
+            "R"
+          ]
+        }
+      },
+      "registry": {
+        "csvid": 12213,
+        "iid": 4721,
+        "name": "Huntmaster of the Fells",
+        "handler": "manalinkeh_card_huntmaster_of_the_fells",
+        "kind": "card"
+      },
+      "back_oracle": {
+        "oracle_id": "582328cd-660d-47a4-bb23-e91e80b9a907",
+        "name": "Huntmaster of the Fells // Ravager of the Fells",
+        "type_line": "Creature — Human Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform",
+          "Trample"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/inr/241/huntmaster-of-the-fells-ravager-of-the-fells?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Huntmaster of the Fells",
+            "mana_cost": "{2}{R}{G}",
+            "type_line": "Creature — Human Werewolf",
+            "oracle_text": "Whenever this creature enters or transforms into Huntmaster of the Fells, create a 2/2 green Wolf creature token and you gain 2 life.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "G",
+              "R"
+            ],
+            "power": "2",
+            "toughness": "2",
+            "artist": "Chris Rahn",
+            "artist_id": "7742047e-0f80-4c0f-a530-d07460165e86",
+            "illustration_id": "8ce1bfa2-7cd6-4f4f-b23e-c5d985acec48",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "normal": "https://cards.scryfall.io/normal/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "large": "https://cards.scryfall.io/large/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "png": "https://cards.scryfall.io/png/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.png?1783908083",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "thumb": "https://cards.scryfall.io/thumb/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083",
+              "grid": "https://cards.scryfall.io/grid/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083",
+              "display": "https://cards.scryfall.io/display/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083",
+              "art": "https://cards.scryfall.io/art/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083",
+              "crop": "https://cards.scryfall.io/crop/front/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Ravager of the Fells",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "Trample\nWhenever this creature transforms into Ravager of the Fells, it deals 2 damage to target opponent or planeswalker and 2 damage to up to one target creature that player or that planeswalker's controller controls.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "G",
+              "R"
+            ],
+            "color_indicator": [
+              "G",
+              "R"
+            ],
+            "power": "4",
+            "toughness": "4",
+            "artist": "Chris Rahn",
+            "artist_id": "7742047e-0f80-4c0f-a530-d07460165e86",
+            "illustration_id": "a26de848-cc6a-4f49-9d43-72afa3c80b3e",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "normal": "https://cards.scryfall.io/normal/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "large": "https://cards.scryfall.io/large/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "png": "https://cards.scryfall.io/png/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.png?1783908083",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.jpg?1783908083",
+              "thumb": "https://cards.scryfall.io/thumb/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083",
+              "grid": "https://cards.scryfall.io/grid/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083",
+              "display": "https://cards.scryfall.io/display/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083",
+              "art": "https://cards.scryfall.io/art/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083",
+              "crop": "https://cards.scryfall.io/crop/back/b/3/b3819a11-2f3e-4304-a1b0-6abf893c89c5.webp?1783908083"
+            }
+          }
+        ],
+        "engine_face": "Ravager of the Fells",
+        "selected_face": {
+          "name": "Ravager of the Fells",
+          "oracle_text": "Trample\nWhenever this creature transforms into Ravager of the Fells, it deals 2 damage to target opponent or planeswalker and 2 damage to up to one target creature that player or that planeswalker's controller controls.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+          "mana_cost": "",
+          "type_line": "Creature — Werewolf",
+          "power": "4",
+          "toughness": "4",
+          "colors": [
+            "G",
+            "R"
+          ]
+        }
+      },
+      "back_registry": {
+        "csvid": 12214,
+        "iid": 7684,
+        "name": "Ravager of the Fells",
+        "handler": "manalinkeh_card_ravager_of_the_fells",
+        "kind": "card"
+      }
+    },
+    "Lambholt Elder": {
+      "oracle": {
+        "oracle_id": "12330f42-0e3f-40e1-86f3-57a34403d143",
+        "name": "Lambholt Elder // Silverpelt Werewolf",
+        "type_line": "Creature — Human Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/dka/122/lambholt-elder-silverpelt-werewolf?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Lambholt Elder",
+            "mana_cost": "{2}{G}",
+            "type_line": "Creature — Human Werewolf",
+            "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "G"
+            ],
+            "power": "1",
+            "toughness": "2",
+            "flavor_text": "\"Be wary of the seemingly gentle souls. The weak here were slaughtered long ago.\"\n—Rem Karolus, Blade of the Inquisitors",
+            "artist": "Matt Stewart",
+            "artist_id": "20871267-2d8a-41d5-b03a-be3d557c5734",
+            "illustration_id": "6da0a9fe-06f0-42bf-bfe9-a1b16b842312",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "normal": "https://cards.scryfall.io/normal/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "large": "https://cards.scryfall.io/large/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "png": "https://cards.scryfall.io/png/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.png?1783940809",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "thumb": "https://cards.scryfall.io/thumb/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809",
+              "grid": "https://cards.scryfall.io/grid/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809",
+              "display": "https://cards.scryfall.io/display/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809",
+              "art": "https://cards.scryfall.io/art/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809",
+              "crop": "https://cards.scryfall.io/crop/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Silverpelt Werewolf",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "Whenever this creature deals combat damage to a player, draw a card.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "G"
+            ],
+            "color_indicator": [
+              "G"
+            ],
+            "power": "4",
+            "toughness": "5",
+            "artist": "Matt Stewart",
+            "artist_id": "20871267-2d8a-41d5-b03a-be3d557c5734",
+            "illustration_id": "cea968e0-872d-4349-a1b4-4c2fc0e0d972",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "normal": "https://cards.scryfall.io/normal/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "large": "https://cards.scryfall.io/large/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "png": "https://cards.scryfall.io/png/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.png?1783940809",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "thumb": "https://cards.scryfall.io/thumb/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809",
+              "grid": "https://cards.scryfall.io/grid/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809",
+              "display": "https://cards.scryfall.io/display/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809",
+              "art": "https://cards.scryfall.io/art/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809",
+              "crop": "https://cards.scryfall.io/crop/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809"
+            }
+          }
+        ],
+        "engine_face": "Lambholt Elder",
+        "selected_face": {
+          "name": "Lambholt Elder",
+          "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+          "mana_cost": "{2}{G}",
+          "type_line": "Creature — Human Werewolf",
+          "power": "1",
+          "toughness": "2",
+          "colors": [
+            "G"
+          ]
+        }
+      },
+      "registry": {
+        "csvid": 12223,
+        "iid": 5453,
+        "name": "Lambholt Elder",
+        "handler": "manalinkeh_card_gastaf_shepherd",
+        "kind": "card"
+      },
+      "back_oracle": {
+        "oracle_id": "12330f42-0e3f-40e1-86f3-57a34403d143",
+        "name": "Lambholt Elder // Silverpelt Werewolf",
+        "type_line": "Creature — Human Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/dka/122/lambholt-elder-silverpelt-werewolf?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Lambholt Elder",
+            "mana_cost": "{2}{G}",
+            "type_line": "Creature — Human Werewolf",
+            "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "G"
+            ],
+            "power": "1",
+            "toughness": "2",
+            "flavor_text": "\"Be wary of the seemingly gentle souls. The weak here were slaughtered long ago.\"\n—Rem Karolus, Blade of the Inquisitors",
+            "artist": "Matt Stewart",
+            "artist_id": "20871267-2d8a-41d5-b03a-be3d557c5734",
+            "illustration_id": "6da0a9fe-06f0-42bf-bfe9-a1b16b842312",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "normal": "https://cards.scryfall.io/normal/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "large": "https://cards.scryfall.io/large/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "png": "https://cards.scryfall.io/png/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.png?1783940809",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "thumb": "https://cards.scryfall.io/thumb/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809",
+              "grid": "https://cards.scryfall.io/grid/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809",
+              "display": "https://cards.scryfall.io/display/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809",
+              "art": "https://cards.scryfall.io/art/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809",
+              "crop": "https://cards.scryfall.io/crop/front/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Silverpelt Werewolf",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "Whenever this creature deals combat damage to a player, draw a card.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "G"
+            ],
+            "color_indicator": [
+              "G"
+            ],
+            "power": "4",
+            "toughness": "5",
+            "artist": "Matt Stewart",
+            "artist_id": "20871267-2d8a-41d5-b03a-be3d557c5734",
+            "illustration_id": "cea968e0-872d-4349-a1b4-4c2fc0e0d972",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "normal": "https://cards.scryfall.io/normal/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "large": "https://cards.scryfall.io/large/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "png": "https://cards.scryfall.io/png/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.png?1783940809",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.jpg?1783940809",
+              "thumb": "https://cards.scryfall.io/thumb/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809",
+              "grid": "https://cards.scryfall.io/grid/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809",
+              "display": "https://cards.scryfall.io/display/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809",
+              "art": "https://cards.scryfall.io/art/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809",
+              "crop": "https://cards.scryfall.io/crop/back/9/3/932d753d-9584-4ad8-9a5e-a3524184f961.webp?1783940809"
+            }
+          }
+        ],
+        "engine_face": "Silverpelt Werewolf",
+        "selected_face": {
+          "name": "Silverpelt Werewolf",
+          "oracle_text": "Whenever this creature deals combat damage to a player, draw a card.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+          "mana_cost": "",
+          "type_line": "Creature — Werewolf",
+          "power": "4",
+          "toughness": "5",
+          "colors": [
+            "G"
+          ]
+        }
+      },
+      "back_registry": {
+        "csvid": 12224,
+        "iid": 8758,
+        "name": "Silverpelt Werewolf",
+        "handler": "manalinkeh_card_silverpelt_werewolf",
+        "kind": "card"
+      }
+    },
+    "Mondronen Shaman": {
+      "oracle": {
+        "oracle_id": "f94cb722-7e46-4569-b474-9654ecf7ec14",
+        "name": "Mondronen Shaman // Tovolar's Magehunter",
+        "type_line": "Creature — Human Shaman Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/dka/98/mondronen-shaman-tovolars-magehunter?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Mondronen Shaman",
+            "mana_cost": "{3}{R}",
+            "type_line": "Creature — Human Shaman Werewolf",
+            "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "R"
+            ],
+            "power": "3",
+            "toughness": "2",
+            "flavor_text": "\"Tovolar, my master. Gather the howlpack, for the Hunter's Moon is nigh and Thraben's walls grow weak.\"",
+            "artist": "Mike Sass",
+            "artist_id": "155bc2cb-038d-4b1f-9990-6178db1d1a21",
+            "illustration_id": "7a2726a7-213e-469c-aca7-f19b251ca06e",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "normal": "https://cards.scryfall.io/normal/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "large": "https://cards.scryfall.io/large/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "png": "https://cards.scryfall.io/png/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.png?1783940821",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "thumb": "https://cards.scryfall.io/thumb/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821",
+              "grid": "https://cards.scryfall.io/grid/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821",
+              "display": "https://cards.scryfall.io/display/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821",
+              "art": "https://cards.scryfall.io/art/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821",
+              "crop": "https://cards.scryfall.io/crop/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Tovolar's Magehunter",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "Whenever an opponent casts a spell, this creature deals 2 damage to that player.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "R"
+            ],
+            "color_indicator": [
+              "R"
+            ],
+            "power": "5",
+            "toughness": "5",
+            "artist": "Mike Sass",
+            "artist_id": "155bc2cb-038d-4b1f-9990-6178db1d1a21",
+            "illustration_id": "2b3e804d-ec35-4cdd-8608-7216d7e4a934",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "normal": "https://cards.scryfall.io/normal/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "large": "https://cards.scryfall.io/large/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "png": "https://cards.scryfall.io/png/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.png?1783940821",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "thumb": "https://cards.scryfall.io/thumb/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821",
+              "grid": "https://cards.scryfall.io/grid/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821",
+              "display": "https://cards.scryfall.io/display/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821",
+              "art": "https://cards.scryfall.io/art/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821",
+              "crop": "https://cards.scryfall.io/crop/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821"
+            }
+          }
+        ],
+        "engine_face": "Mondronen Shaman",
+        "selected_face": {
+          "name": "Mondronen Shaman",
+          "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+          "mana_cost": "{3}{R}",
+          "type_line": "Creature — Human Shaman Werewolf",
+          "power": "3",
+          "toughness": "2",
+          "colors": [
+            "R"
+          ]
+        }
+      },
+      "registry": {
+        "csvid": 12233,
+        "iid": 6287,
+        "name": "Mondronen Shaman",
+        "handler": "manalinkeh_card_gastaf_shepherd",
+        "kind": "card"
+      },
+      "back_oracle": {
+        "oracle_id": "f94cb722-7e46-4569-b474-9654ecf7ec14",
+        "name": "Mondronen Shaman // Tovolar's Magehunter",
+        "type_line": "Creature — Human Shaman Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/dka/98/mondronen-shaman-tovolars-magehunter?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Mondronen Shaman",
+            "mana_cost": "{3}{R}",
+            "type_line": "Creature — Human Shaman Werewolf",
+            "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "R"
+            ],
+            "power": "3",
+            "toughness": "2",
+            "flavor_text": "\"Tovolar, my master. Gather the howlpack, for the Hunter's Moon is nigh and Thraben's walls grow weak.\"",
+            "artist": "Mike Sass",
+            "artist_id": "155bc2cb-038d-4b1f-9990-6178db1d1a21",
+            "illustration_id": "7a2726a7-213e-469c-aca7-f19b251ca06e",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "normal": "https://cards.scryfall.io/normal/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "large": "https://cards.scryfall.io/large/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "png": "https://cards.scryfall.io/png/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.png?1783940821",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "thumb": "https://cards.scryfall.io/thumb/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821",
+              "grid": "https://cards.scryfall.io/grid/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821",
+              "display": "https://cards.scryfall.io/display/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821",
+              "art": "https://cards.scryfall.io/art/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821",
+              "crop": "https://cards.scryfall.io/crop/front/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Tovolar's Magehunter",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "Whenever an opponent casts a spell, this creature deals 2 damage to that player.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "R"
+            ],
+            "color_indicator": [
+              "R"
+            ],
+            "power": "5",
+            "toughness": "5",
+            "artist": "Mike Sass",
+            "artist_id": "155bc2cb-038d-4b1f-9990-6178db1d1a21",
+            "illustration_id": "2b3e804d-ec35-4cdd-8608-7216d7e4a934",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "normal": "https://cards.scryfall.io/normal/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "large": "https://cards.scryfall.io/large/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "png": "https://cards.scryfall.io/png/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.png?1783940821",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.jpg?1783940821",
+              "thumb": "https://cards.scryfall.io/thumb/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821",
+              "grid": "https://cards.scryfall.io/grid/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821",
+              "display": "https://cards.scryfall.io/display/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821",
+              "art": "https://cards.scryfall.io/art/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821",
+              "crop": "https://cards.scryfall.io/crop/back/b/1/b150d71f-11c9-40d6-a461-4967ef437315.webp?1783940821"
+            }
+          }
+        ],
+        "engine_face": "Tovolar's Magehunter",
+        "selected_face": {
+          "name": "Tovolar's Magehunter",
+          "oracle_text": "Whenever an opponent casts a spell, this creature deals 2 damage to that player.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+          "mana_cost": "",
+          "type_line": "Creature — Werewolf",
+          "power": "5",
+          "toughness": "5",
+          "colors": [
+            "R"
+          ]
+        }
+      },
+      "back_registry": {
+        "csvid": 12234,
+        "iid": 10112,
+        "name": "Tovolar's Magehunter",
+        "handler": "manalinkeh_card_tovolars_magehunters",
+        "kind": "card"
+      }
+    },
+    "Geier Reach Bandit": {
+      "oracle": {
+        "oracle_id": "64720167-b88b-47f7-bfc1-d5e005c9fd68",
+        "name": "Geier Reach Bandit // Vildin-Pack Alpha",
+        "type_line": "Creature — Human Rogue Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform",
+          "Haste"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/inr/156/geier-reach-bandit-vildin-pack-alpha?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Geier Reach Bandit",
+            "mana_cost": "{2}{R}",
+            "type_line": "Creature — Human Rogue Werewolf",
+            "oracle_text": "Haste\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "R"
+            ],
+            "power": "3",
+            "toughness": "2",
+            "flavor_text": "The cathars realized they had not tracked her—she had led them here.",
+            "artist": "Slawomir Maniak",
+            "artist_id": "d887bc66-2779-416c-a1ff-d8720242063e",
+            "illustration_id": "3d8213a4-e96a-4af1-8af4-6263064985be",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "normal": "https://cards.scryfall.io/normal/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "large": "https://cards.scryfall.io/large/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "png": "https://cards.scryfall.io/png/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.png?1783908128",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "thumb": "https://cards.scryfall.io/thumb/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128",
+              "grid": "https://cards.scryfall.io/grid/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128",
+              "display": "https://cards.scryfall.io/display/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128",
+              "art": "https://cards.scryfall.io/art/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128",
+              "crop": "https://cards.scryfall.io/crop/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Vildin-Pack Alpha",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "Whenever a Werewolf you control enters, you may transform it.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "R"
+            ],
+            "color_indicator": [
+              "R"
+            ],
+            "power": "4",
+            "toughness": "3",
+            "artist": "Slawomir Maniak",
+            "artist_id": "d887bc66-2779-416c-a1ff-d8720242063e",
+            "illustration_id": "1057e79c-5a9a-42dd-bf39-25d4aadbed67",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "normal": "https://cards.scryfall.io/normal/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "large": "https://cards.scryfall.io/large/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "png": "https://cards.scryfall.io/png/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.png?1783908128",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "thumb": "https://cards.scryfall.io/thumb/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128",
+              "grid": "https://cards.scryfall.io/grid/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128",
+              "display": "https://cards.scryfall.io/display/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128",
+              "art": "https://cards.scryfall.io/art/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128",
+              "crop": "https://cards.scryfall.io/crop/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128"
+            }
+          }
+        ],
+        "engine_face": "Geier Reach Bandit",
+        "selected_face": {
+          "name": "Geier Reach Bandit",
+          "oracle_text": "Haste\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+          "mana_cost": "{2}{R}",
+          "type_line": "Creature — Human Rogue Werewolf",
+          "power": "3",
+          "toughness": "2",
+          "colors": [
+            "R"
+          ]
+        }
+      },
+      "registry": {
+        "csvid": 15828,
+        "iid": 15901,
+        "name": "Geier Reach Bandit",
+        "handler": "manalinkeh_card_geier_reach_bandit",
+        "kind": "card"
+      },
+      "back_oracle": {
+        "oracle_id": "64720167-b88b-47f7-bfc1-d5e005c9fd68",
+        "name": "Geier Reach Bandit // Vildin-Pack Alpha",
+        "type_line": "Creature — Human Rogue Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform",
+          "Haste"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/inr/156/geier-reach-bandit-vildin-pack-alpha?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Geier Reach Bandit",
+            "mana_cost": "{2}{R}",
+            "type_line": "Creature — Human Rogue Werewolf",
+            "oracle_text": "Haste\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "R"
+            ],
+            "power": "3",
+            "toughness": "2",
+            "flavor_text": "The cathars realized they had not tracked her—she had led them here.",
+            "artist": "Slawomir Maniak",
+            "artist_id": "d887bc66-2779-416c-a1ff-d8720242063e",
+            "illustration_id": "3d8213a4-e96a-4af1-8af4-6263064985be",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "normal": "https://cards.scryfall.io/normal/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "large": "https://cards.scryfall.io/large/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "png": "https://cards.scryfall.io/png/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.png?1783908128",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "thumb": "https://cards.scryfall.io/thumb/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128",
+              "grid": "https://cards.scryfall.io/grid/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128",
+              "display": "https://cards.scryfall.io/display/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128",
+              "art": "https://cards.scryfall.io/art/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128",
+              "crop": "https://cards.scryfall.io/crop/front/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Vildin-Pack Alpha",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "Whenever a Werewolf you control enters, you may transform it.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "R"
+            ],
+            "color_indicator": [
+              "R"
+            ],
+            "power": "4",
+            "toughness": "3",
+            "artist": "Slawomir Maniak",
+            "artist_id": "d887bc66-2779-416c-a1ff-d8720242063e",
+            "illustration_id": "1057e79c-5a9a-42dd-bf39-25d4aadbed67",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "normal": "https://cards.scryfall.io/normal/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "large": "https://cards.scryfall.io/large/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "png": "https://cards.scryfall.io/png/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.png?1783908128",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.jpg?1783908128",
+              "thumb": "https://cards.scryfall.io/thumb/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128",
+              "grid": "https://cards.scryfall.io/grid/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128",
+              "display": "https://cards.scryfall.io/display/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128",
+              "art": "https://cards.scryfall.io/art/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128",
+              "crop": "https://cards.scryfall.io/crop/back/f/0/f0af234d-ce14-49ac-b877-00b0dd1f11e2.webp?1783908128"
+            }
+          }
+        ],
+        "engine_face": "Vildin-Pack Alpha",
+        "selected_face": {
+          "name": "Vildin-Pack Alpha",
+          "oracle_text": "Whenever a Werewolf you control enters, you may transform it.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+          "mana_cost": "",
+          "type_line": "Creature — Werewolf",
+          "power": "4",
+          "toughness": "3",
+          "colors": [
+            "R"
+          ]
+        }
+      },
+      "back_registry": {
+        "csvid": 15829,
+        "iid": 16088,
+        "name": "Vildin-Pack Alpha",
+        "handler": "manalinkeh_card_vildin_pack_alpha",
+        "kind": "card"
+      }
+    },
+    "Hermit of the Natterknolls": {
+      "oracle": {
+        "oracle_id": "6d32f688-a854-4d82-b654-d720b93fb766",
+        "name": "Hermit of the Natterknolls // Lone Wolf of the Natterknolls",
+        "type_line": "Creature — Human Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/soi/209/hermit-of-the-natterknolls-lone-wolf-of-the-natterknolls?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Hermit of the Natterknolls",
+            "mana_cost": "{2}{G}",
+            "type_line": "Creature — Human Werewolf",
+            "oracle_text": "Whenever an opponent casts a spell during your turn, draw a card.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "G"
+            ],
+            "power": "2",
+            "toughness": "3",
+            "flavor_text": "He hates company . . .",
+            "artist": "Dan Murayama Scott",
+            "artist_id": "f852fa13-137e-40f2-bbc1-0f01df09c0e0",
+            "illustration_id": "964b360c-3c09-4302-9dfa-5c9f729d078f",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "normal": "https://cards.scryfall.io/normal/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "large": "https://cards.scryfall.io/large/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "png": "https://cards.scryfall.io/png/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.png?1783937736",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "thumb": "https://cards.scryfall.io/thumb/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736",
+              "grid": "https://cards.scryfall.io/grid/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736",
+              "display": "https://cards.scryfall.io/display/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736",
+              "art": "https://cards.scryfall.io/art/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736",
+              "crop": "https://cards.scryfall.io/crop/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Lone Wolf of the Natterknolls",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "Whenever an opponent casts a spell during your turn, draw two cards.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "G"
+            ],
+            "color_indicator": [
+              "G"
+            ],
+            "power": "3",
+            "toughness": "5",
+            "flavor_text": ". . . but he'll have you for lunch.",
+            "artist": "Dan Murayama Scott",
+            "artist_id": "f852fa13-137e-40f2-bbc1-0f01df09c0e0",
+            "illustration_id": "c0d1f180-a124-4c9a-a1e1-95ef511bdddf",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "normal": "https://cards.scryfall.io/normal/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "large": "https://cards.scryfall.io/large/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "png": "https://cards.scryfall.io/png/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.png?1783937736",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "thumb": "https://cards.scryfall.io/thumb/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736",
+              "grid": "https://cards.scryfall.io/grid/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736",
+              "display": "https://cards.scryfall.io/display/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736",
+              "art": "https://cards.scryfall.io/art/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736",
+              "crop": "https://cards.scryfall.io/crop/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736"
+            }
+          }
+        ],
+        "engine_face": "Hermit of the Natterknolls",
+        "selected_face": {
+          "name": "Hermit of the Natterknolls",
+          "oracle_text": "Whenever an opponent casts a spell during your turn, draw a card.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+          "mana_cost": "{2}{G}",
+          "type_line": "Creature — Human Werewolf",
+          "power": "2",
+          "toughness": "3",
+          "colors": [
+            "G"
+          ]
+        }
+      },
+      "registry": {
+        "csvid": 15849,
+        "iid": 15919,
+        "name": "Hermit of the Natterknolls",
+        "handler": "manalinkeh_card_hermit_of_the_natterknolls",
+        "kind": "card"
+      },
+      "back_oracle": {
+        "oracle_id": "6d32f688-a854-4d82-b654-d720b93fb766",
+        "name": "Hermit of the Natterknolls // Lone Wolf of the Natterknolls",
+        "type_line": "Creature — Human Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/soi/209/hermit-of-the-natterknolls-lone-wolf-of-the-natterknolls?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Hermit of the Natterknolls",
+            "mana_cost": "{2}{G}",
+            "type_line": "Creature — Human Werewolf",
+            "oracle_text": "Whenever an opponent casts a spell during your turn, draw a card.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "G"
+            ],
+            "power": "2",
+            "toughness": "3",
+            "flavor_text": "He hates company . . .",
+            "artist": "Dan Murayama Scott",
+            "artist_id": "f852fa13-137e-40f2-bbc1-0f01df09c0e0",
+            "illustration_id": "964b360c-3c09-4302-9dfa-5c9f729d078f",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "normal": "https://cards.scryfall.io/normal/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "large": "https://cards.scryfall.io/large/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "png": "https://cards.scryfall.io/png/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.png?1783937736",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "thumb": "https://cards.scryfall.io/thumb/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736",
+              "grid": "https://cards.scryfall.io/grid/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736",
+              "display": "https://cards.scryfall.io/display/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736",
+              "art": "https://cards.scryfall.io/art/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736",
+              "crop": "https://cards.scryfall.io/crop/front/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Lone Wolf of the Natterknolls",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "Whenever an opponent casts a spell during your turn, draw two cards.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "G"
+            ],
+            "color_indicator": [
+              "G"
+            ],
+            "power": "3",
+            "toughness": "5",
+            "flavor_text": ". . . but he'll have you for lunch.",
+            "artist": "Dan Murayama Scott",
+            "artist_id": "f852fa13-137e-40f2-bbc1-0f01df09c0e0",
+            "illustration_id": "c0d1f180-a124-4c9a-a1e1-95ef511bdddf",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "normal": "https://cards.scryfall.io/normal/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "large": "https://cards.scryfall.io/large/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "png": "https://cards.scryfall.io/png/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.png?1783937736",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.jpg?1783937736",
+              "thumb": "https://cards.scryfall.io/thumb/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736",
+              "grid": "https://cards.scryfall.io/grid/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736",
+              "display": "https://cards.scryfall.io/display/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736",
+              "art": "https://cards.scryfall.io/art/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736",
+              "crop": "https://cards.scryfall.io/crop/back/d/5/d5e84d80-b5a6-4cd1-9f31-f6ca46bf2c0c.webp?1783937736"
+            }
+          }
+        ],
+        "engine_face": "Lone Wolf of the Natterknolls",
+        "selected_face": {
+          "name": "Lone Wolf of the Natterknolls",
+          "oracle_text": "Whenever an opponent casts a spell during your turn, draw two cards.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+          "mana_cost": "",
+          "type_line": "Creature — Werewolf",
+          "power": "3",
+          "toughness": "5",
+          "colors": [
+            "G"
+          ]
+        }
+      },
+      "back_registry": {
+        "csvid": 15850,
+        "iid": 15954,
+        "name": "Lone Wolf of the Natterknolls",
+        "handler": "manalinkeh_card_lone_wolf_of_the_natterknolls",
+        "kind": "card"
+      }
+    },
+    "Kessig Forgemaster": {
+      "oracle": {
+        "oracle_id": "b0d66546-c6a3-4052-b86e-98c3c2ab44b3",
+        "name": "Kessig Forgemaster // Flameheart Werewolf",
+        "type_line": "Creature — Human Shaman Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/soi/169/kessig-forgemaster-flameheart-werewolf?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Kessig Forgemaster",
+            "mana_cost": "{1}{R}",
+            "type_line": "Creature — Human Shaman Werewolf",
+            "oracle_text": "Whenever this creature blocks or becomes blocked by a creature, this creature deals 1 damage to that creature.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "R"
+            ],
+            "power": "2",
+            "toughness": "1",
+            "artist": "Winona Nelson",
+            "artist_id": "e45fe8d3-75d6-42c9-a2df-e945ad81ea27",
+            "illustration_id": "59eab70b-cce9-4d2c-a514-fa9108cb57bf",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "normal": "https://cards.scryfall.io/normal/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "large": "https://cards.scryfall.io/large/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "png": "https://cards.scryfall.io/png/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.png?1783937754",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "thumb": "https://cards.scryfall.io/thumb/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754",
+              "grid": "https://cards.scryfall.io/grid/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754",
+              "display": "https://cards.scryfall.io/display/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754",
+              "art": "https://cards.scryfall.io/art/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754",
+              "crop": "https://cards.scryfall.io/crop/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Flameheart Werewolf",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "Whenever this creature blocks or becomes blocked by a creature, this creature deals 2 damage to that creature.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "R"
+            ],
+            "color_indicator": [
+              "R"
+            ],
+            "power": "3",
+            "toughness": "2",
+            "artist": "Winona Nelson",
+            "artist_id": "e45fe8d3-75d6-42c9-a2df-e945ad81ea27",
+            "illustration_id": "2202e783-8f20-41b8-89cc-9e206be72105",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "normal": "https://cards.scryfall.io/normal/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "large": "https://cards.scryfall.io/large/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "png": "https://cards.scryfall.io/png/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.png?1783937754",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "thumb": "https://cards.scryfall.io/thumb/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754",
+              "grid": "https://cards.scryfall.io/grid/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754",
+              "display": "https://cards.scryfall.io/display/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754",
+              "art": "https://cards.scryfall.io/art/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754",
+              "crop": "https://cards.scryfall.io/crop/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754"
+            }
+          }
+        ],
+        "engine_face": "Kessig Forgemaster",
+        "selected_face": {
+          "name": "Kessig Forgemaster",
+          "oracle_text": "Whenever this creature blocks or becomes blocked by a creature, this creature deals 1 damage to that creature.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+          "mana_cost": "{1}{R}",
+          "type_line": "Creature — Human Shaman Werewolf",
+          "power": "2",
+          "toughness": "1",
+          "colors": [
+            "R"
+          ]
+        }
+      },
+      "registry": {
+        "csvid": 15875,
+        "iid": 15946,
+        "name": "Kessig Forgemaster",
+        "handler": "manalinkeh_card_kessig_forgemaster",
+        "kind": "card"
+      },
+      "back_oracle": {
+        "oracle_id": "b0d66546-c6a3-4052-b86e-98c3c2ab44b3",
+        "name": "Kessig Forgemaster // Flameheart Werewolf",
+        "type_line": "Creature — Human Shaman Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/soi/169/kessig-forgemaster-flameheart-werewolf?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Kessig Forgemaster",
+            "mana_cost": "{1}{R}",
+            "type_line": "Creature — Human Shaman Werewolf",
+            "oracle_text": "Whenever this creature blocks or becomes blocked by a creature, this creature deals 1 damage to that creature.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "R"
+            ],
+            "power": "2",
+            "toughness": "1",
+            "artist": "Winona Nelson",
+            "artist_id": "e45fe8d3-75d6-42c9-a2df-e945ad81ea27",
+            "illustration_id": "59eab70b-cce9-4d2c-a514-fa9108cb57bf",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "normal": "https://cards.scryfall.io/normal/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "large": "https://cards.scryfall.io/large/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "png": "https://cards.scryfall.io/png/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.png?1783937754",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "thumb": "https://cards.scryfall.io/thumb/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754",
+              "grid": "https://cards.scryfall.io/grid/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754",
+              "display": "https://cards.scryfall.io/display/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754",
+              "art": "https://cards.scryfall.io/art/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754",
+              "crop": "https://cards.scryfall.io/crop/front/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Flameheart Werewolf",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "Whenever this creature blocks or becomes blocked by a creature, this creature deals 2 damage to that creature.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "R"
+            ],
+            "color_indicator": [
+              "R"
+            ],
+            "power": "3",
+            "toughness": "2",
+            "artist": "Winona Nelson",
+            "artist_id": "e45fe8d3-75d6-42c9-a2df-e945ad81ea27",
+            "illustration_id": "2202e783-8f20-41b8-89cc-9e206be72105",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "normal": "https://cards.scryfall.io/normal/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "large": "https://cards.scryfall.io/large/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "png": "https://cards.scryfall.io/png/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.png?1783937754",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.jpg?1783937754",
+              "thumb": "https://cards.scryfall.io/thumb/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754",
+              "grid": "https://cards.scryfall.io/grid/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754",
+              "display": "https://cards.scryfall.io/display/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754",
+              "art": "https://cards.scryfall.io/art/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754",
+              "crop": "https://cards.scryfall.io/crop/back/3/3/33e542ce-1106-489d-9563-bd62886b8ed3.webp?1783937754"
+            }
+          }
+        ],
+        "engine_face": "Flameheart Werewolf",
+        "selected_face": {
+          "name": "Flameheart Werewolf",
+          "oracle_text": "Whenever this creature blocks or becomes blocked by a creature, this creature deals 2 damage to that creature.\nAt the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+          "mana_cost": "",
+          "type_line": "Creature — Werewolf",
+          "power": "3",
+          "toughness": "2",
+          "colors": [
+            "R"
+          ]
+        }
+      },
+      "back_registry": {
+        "csvid": 15876,
+        "iid": 15888,
+        "name": "Flameheart Werewolf",
+        "handler": "manalinkeh_card_flameheart_werewolf",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Elite Vanguard": {
+      "oracle": {
+        "oracle_id": "b3b9a87d-cb95-435c-90b6-037406cab32e",
+        "name": "Elite Vanguard",
+        "oracle_text": "",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/8/elite-vanguard?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10412,
+        "iid": 2953,
+        "name": "Elite Vanguard",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Fog": {
+      "oracle": {
+        "oracle_id": "27e9db49-7af7-4bef-ad4c-bf5dfb92030d",
+        "name": "Fog",
+        "oracle_text": "Prevent all combat damage that would be dealt this turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/167/fog?utm_source=api"
+      },
+      "registry": {
+        "csvid": 88,
+        "iid": 3563,
+        "name": "Fog",
+        "handler": "manalinkeh_card_fog",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Howlpack of Estwald": {
+      "oracle": {
+        "oracle_id": "dcf692f6-baec-4b60-a6e3-2a8b731d7816",
+        "name": "Villagers of Estwald // Howlpack of Estwald",
+        "type_line": "Creature — Human Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/inr/224/villagers-of-estwald-howlpack-of-estwald?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Villagers of Estwald",
+            "mana_cost": "{2}{G}",
+            "type_line": "Creature — Human Werewolf",
+            "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "G"
+            ],
+            "power": "2",
+            "toughness": "3",
+            "flavor_text": "You can spot a werewolf-infested town by its lack of butcher shops.",
+            "artist": "Kev Walker",
+            "artist_id": "f366a0ee-a0cd-466d-ba6a-90058c7a31a6",
+            "illustration_id": "6c9323c0-ddc7-41d1-8c61-ad5237f79c1f",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "normal": "https://cards.scryfall.io/normal/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "large": "https://cards.scryfall.io/large/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "png": "https://cards.scryfall.io/png/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.png?1783908089",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "thumb": "https://cards.scryfall.io/thumb/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089",
+              "grid": "https://cards.scryfall.io/grid/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089",
+              "display": "https://cards.scryfall.io/display/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089",
+              "art": "https://cards.scryfall.io/art/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089",
+              "crop": "https://cards.scryfall.io/crop/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Howlpack of Estwald",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "G"
+            ],
+            "color_indicator": [
+              "G"
+            ],
+            "power": "4",
+            "toughness": "6",
+            "flavor_text": "Estwald's citizens don't dislike outsiders—they taste just fine.",
+            "artist": "Kev Walker",
+            "artist_id": "f366a0ee-a0cd-466d-ba6a-90058c7a31a6",
+            "illustration_id": "1ec20759-7a4b-4daa-8407-499e965574a8",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "normal": "https://cards.scryfall.io/normal/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "large": "https://cards.scryfall.io/large/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "png": "https://cards.scryfall.io/png/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.png?1783908089",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "thumb": "https://cards.scryfall.io/thumb/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089",
+              "grid": "https://cards.scryfall.io/grid/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089",
+              "display": "https://cards.scryfall.io/display/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089",
+              "art": "https://cards.scryfall.io/art/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089",
+              "crop": "https://cards.scryfall.io/crop/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089"
+            }
+          }
+        ],
+        "engine_face": "Howlpack of Estwald",
+        "selected_face": {
+          "name": "Howlpack of Estwald",
+          "oracle_text": "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+          "mana_cost": "",
+          "type_line": "Creature — Werewolf",
+          "power": "4",
+          "toughness": "6",
+          "colors": [
+            "G"
+          ]
+        }
+      },
+      "registry": {
+        "csvid": 12122,
+        "iid": 4686,
+        "name": "Howlpack of Estwald",
+        "handler": "manalinkeh_card_howlpack_of_estwald",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Memnite": {
+      "oracle": {
+        "oracle_id": "7663ac7c-1de3-4250-b96a-fae9dbd66a27",
+        "name": "Memnite",
+        "oracle_text": "",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/td2/2/memnite?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11303,
+        "iid": 6020,
+        "name": "Memnite",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Mons's Goblin Raiders": {
+      "oracle": {
+        "oracle_id": "a37159df-f6d7-4db6-85de-0ea77f425993",
+        "name": "Mons's Goblin Raiders",
+        "oracle_text": "",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/s00/32/monss-goblin-raiders?utm_source=api"
+      },
+      "registry": {
+        "csvid": 163,
+        "iid": 6293,
+        "name": "Mons's Goblin Raiders",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Villagers of Estwald": {
+      "oracle": {
+        "oracle_id": "dcf692f6-baec-4b60-a6e3-2a8b731d7816",
+        "name": "Villagers of Estwald // Howlpack of Estwald",
+        "type_line": "Creature — Human Werewolf // Creature — Werewolf",
+        "keywords": [
+          "Transform"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "transform",
+        "scryfall_uri": "https://scryfall.com/card/inr/224/villagers-of-estwald-howlpack-of-estwald?utm_source=api",
+        "card_faces": [
+          {
+            "object": "card_face",
+            "name": "Villagers of Estwald",
+            "mana_cost": "{2}{G}",
+            "type_line": "Creature — Human Werewolf",
+            "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+            "colors": [
+              "G"
+            ],
+            "power": "2",
+            "toughness": "3",
+            "flavor_text": "You can spot a werewolf-infested town by its lack of butcher shops.",
+            "artist": "Kev Walker",
+            "artist_id": "f366a0ee-a0cd-466d-ba6a-90058c7a31a6",
+            "illustration_id": "6c9323c0-ddc7-41d1-8c61-ad5237f79c1f",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "normal": "https://cards.scryfall.io/normal/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "large": "https://cards.scryfall.io/large/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "png": "https://cards.scryfall.io/png/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.png?1783908089",
+              "art_crop": "https://cards.scryfall.io/art_crop/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "border_crop": "https://cards.scryfall.io/border_crop/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "thumb": "https://cards.scryfall.io/thumb/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089",
+              "grid": "https://cards.scryfall.io/grid/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089",
+              "display": "https://cards.scryfall.io/display/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089",
+              "art": "https://cards.scryfall.io/art/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089",
+              "crop": "https://cards.scryfall.io/crop/front/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089"
+            }
+          },
+          {
+            "object": "card_face",
+            "name": "Howlpack of Estwald",
+            "mana_cost": "",
+            "type_line": "Creature — Werewolf",
+            "oracle_text": "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature.",
+            "colors": [
+              "G"
+            ],
+            "color_indicator": [
+              "G"
+            ],
+            "power": "4",
+            "toughness": "6",
+            "flavor_text": "Estwald's citizens don't dislike outsiders—they taste just fine.",
+            "artist": "Kev Walker",
+            "artist_id": "f366a0ee-a0cd-466d-ba6a-90058c7a31a6",
+            "illustration_id": "1ec20759-7a4b-4daa-8407-499e965574a8",
+            "image_uris": {
+              "small": "https://cards.scryfall.io/small/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "normal": "https://cards.scryfall.io/normal/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "large": "https://cards.scryfall.io/large/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "png": "https://cards.scryfall.io/png/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.png?1783908089",
+              "art_crop": "https://cards.scryfall.io/art_crop/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "border_crop": "https://cards.scryfall.io/border_crop/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.jpg?1783908089",
+              "thumb": "https://cards.scryfall.io/thumb/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089",
+              "grid": "https://cards.scryfall.io/grid/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089",
+              "display": "https://cards.scryfall.io/display/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089",
+              "art": "https://cards.scryfall.io/art/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089",
+              "crop": "https://cards.scryfall.io/crop/back/3/1/319b65f6-a6e6-45ea-9837-bc5831f54205.webp?1783908089"
+            }
+          }
+        ],
+        "engine_face": "Villagers of Estwald",
+        "selected_face": {
+          "name": "Villagers of Estwald",
+          "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+          "mana_cost": "{2}{G}",
+          "type_line": "Creature — Human Werewolf",
+          "power": "2",
+          "toughness": "3",
+          "colors": [
+            "G"
+          ]
+        }
+      },
+      "registry": {
+        "csvid": 12121,
+        "iid": 10600,
+        "name": "Villagers of Estwald",
+        "handler": "manalinkeh_card_gastaf_shepherd",
+        "kind": "card"
+      }
+    },
+    "Wolf": {
+      "oracle": {
+        "oracle_id": "b2224843-8274-4872-a7ca-2adf69cc066b",
+        "name": "Wolf",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Wolf",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/thob/9/wolf?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18856,
+        "iid": 11056,
+        "name": "Wolf",
+        "handler": "manalinkeh_card_wolf_token",
+        "kind": "card"
+      }
+    },
+    "Woodland Changeling": {
+      "oracle": {
+        "oracle_id": "338f0ab6-f744-4e5a-a358-05e71b93758d",
+        "name": "Woodland Changeling",
+        "oracle_text": "Changeling (This card is every creature type.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Shapeshifter",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Changeling"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/242/woodland-changeling?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9315,
+        "iid": 11079,
+        "name": "Woodland Changeling",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Young Wolf": {
+      "oracle": {
+        "oracle_id": "8b492764-10b6-4506-be11-22daa9220a91",
+        "name": "Young Wolf",
+        "oracle_text": "Undying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Wolf",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Undying"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/227/young-wolf?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12296,
+        "iid": 11185,
+        "name": "Young Wolf",
+        "handler": "manalinkeh_card_nearheath_stalker",
+        "kind": "card"
+      }
+    }
+  }
+}

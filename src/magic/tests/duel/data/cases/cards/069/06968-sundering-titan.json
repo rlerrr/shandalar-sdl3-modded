@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 6968,
+  "card": "Sundering Titan",
+  "recipes": [
+    {
+      "family": "entry_trigger_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 6968,
+        "printed_cost": "{8}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters or leaves the battlefield, choose a land of each basic land type, then destroy those lands.",
+      "variants": [
+        "all_five_0",
+        "typed_dual_0",
+        "no_types_0",
+        "leaves_bounce_0",
+        "leaves_death_0",
+        "all_five_1",
+        "typed_dual_1",
+        "no_types_1",
+        "leaves_bounce_1",
+        "leaves_death_1"
+      ]
+    }
+  ]
+}

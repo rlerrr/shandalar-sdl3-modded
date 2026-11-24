@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Oubliette",
+  "csvid": 447,
+  "recipes": [
+    {
+      "family": "entry_interaction_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 447,
+        "cost": [
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this enchantment enters, target creature phases out until this enchantment leaves the battlefield. Tap that creature as it phases in this way. (Auras and Equipment phase out with it. While permanents are phased out, they're treated as though they don't exist.)",
+      "variants": [
+        "ordinary_0",
+        "ordinary_1",
+        "attachments_0",
+        "attachments_1",
+        "through_untap_0",
+        "through_untap_1",
+        "no_creature_0",
+        "no_creature_1"
+      ]
+    }
+  ]
+}

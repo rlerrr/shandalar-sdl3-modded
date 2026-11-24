@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "csvid": 7511,
+  "card": "Loam Dweller",
+  "recipes": [
+    {
+      "family": "land_from_hand",
+      "version": 2,
+      "oracle_text": "Whenever you cast a Spirit or Arcane spell, you may put a land card from your hand onto the battlefield tapped.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "cast": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "trigger": "spirit_or_arcane",
+          "artifact": false,
+          "power": 2,
+          "toughness": 2
+        }
+      },
+      "variants": [
+        "source_short_0",
+        "spirit_0",
+        "arcane_0",
+        "decline_0",
+        "empty_spirit_0",
+        "arcane_draw_no_land_0",
+        "nonland_only_0",
+        "enemy_spirit_0",
+        "non_spirit_0",
+        "non_arcane_0",
+        "cast_countered_0",
+        "after_normal_0",
+        "before_normal_0",
+        "artifact_land_0",
+        "tapped_entry_0",
+        "ready_replay_0",
+        "source_short_1",
+        "spirit_1",
+        "arcane_1",
+        "decline_1",
+        "empty_spirit_1",
+        "arcane_draw_no_land_1",
+        "nonland_only_1",
+        "enemy_spirit_1",
+        "non_spirit_1",
+        "non_arcane_1",
+        "cast_countered_1",
+        "after_normal_1",
+        "before_normal_1",
+        "artifact_land_1",
+        "tapped_entry_1",
+        "ready_replay_1",
+        "trigger_decline_0"
+      ]
+    }
+  ]
+}

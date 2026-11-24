@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Snapcaster Mage",
+  "csvid": 12079,
+  "recipes": [
+    {
+      "family": "flash_entry_spell_access_and_protection",
+      "version": 2,
+      "params": {
+        "csvid": 12079,
+        "printed_mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "rules": "Flash\nWhen this creature enters, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)"
+      },
+      "oracle_text": "Flash\nWhen this creature enters, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+      "variants": [
+        "select_instant_0",
+        "select_instant_1",
+        "select_sorcery_0",
+        "select_sorcery_1"
+      ]
+    }
+  ]
+}

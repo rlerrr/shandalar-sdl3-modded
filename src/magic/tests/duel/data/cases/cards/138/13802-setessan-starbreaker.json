@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 13802,
+  "card": "Setessan Starbreaker",
+  "recipes": [
+    {
+      "family": "entry_trigger_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 13802,
+        "printed_cost": "{3}{G}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, you may destroy target Aura.",
+      "variants": [
+        "own_aura_0",
+        "foe_aura_0",
+        "foreign_host_0",
+        "decline_0",
+        "non_aura_0",
+        "skip_trigger_0",
+        "own_aura_1",
+        "foe_aura_1",
+        "foreign_host_1",
+        "decline_1",
+        "non_aura_1"
+      ]
+    }
+  ]
+}

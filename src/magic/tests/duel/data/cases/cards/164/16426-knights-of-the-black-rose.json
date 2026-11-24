@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Knights of the Black Rose",
+  "csvid": 16426,
+  "recipes": [
+    {
+      "family": "monarch_additional_riders",
+      "version": 2,
+      "params": {
+        "model": "knights",
+        "cost": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "When this creature enters, you become the monarch.\nWhenever an opponent becomes the monarch, if you were the monarch as the turn began, that player loses 2 life and you gain 2 life.",
+      "variants": [
+        "entry_0",
+        "underpaid_0",
+        "countered_0",
+        "replay_0",
+        "etb_loss_0",
+        "combat_loss_0",
+        "midturn_0",
+        "earlier_opponent_0",
+        "gone_0",
+        "entry_1",
+        "underpaid_1",
+        "countered_1",
+        "replay_1",
+        "etb_loss_1",
+        "combat_loss_1",
+        "midturn_1",
+        "earlier_opponent_1",
+        "gone_1"
+      ]
+    }
+  ]
+}

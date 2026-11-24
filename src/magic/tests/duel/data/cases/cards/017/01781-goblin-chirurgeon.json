@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "csvid": 1781,
+  "card": "Goblin Chirurgeon",
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_targeted_costs",
+      "version": 2,
+      "params": {
+        "csvid": 1781,
+        "mana": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "activation": null,
+        "stats": [
+          0,
+          2
+        ]
+      },
+      "oracle_text": "Sacrifice a Goblin: Regenerate target creature.",
+      "variants": [
+        "self_cost_0",
+        "self_cost_1",
+        "other_goblin_0",
+        "other_goblin_1",
+        "foreign_0",
+        "foreign_1",
+        "sacrifice_lock_0",
+        "sacrifice_lock_1",
+        "wrong_type_0",
+        "wrong_type_1",
+        "proactive_0",
+        "proactive_1"
+      ]
+    }
+  ]
+}

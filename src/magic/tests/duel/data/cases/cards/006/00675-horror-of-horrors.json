@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Horror of Horrors",
+  "csvid": 675,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_sacrifice_and_team",
+      "version": 2,
+      "params": {
+        "csvid": 675,
+        "printed_cost": "{3}{B}{B}",
+        "choices": [
+          "friendly_0",
+          "friendly_1",
+          "foreign_0",
+          "foreign_1",
+          "wrong_color_0",
+          "wrong_color_1",
+          "no_swamp_0",
+          "no_swamp_1",
+          "proactive_0",
+          "proactive_1"
+        ]
+      },
+      "oracle_text": "Sacrifice a Swamp: Regenerate target black creature. (The next time that creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "variants": [
+        "friendly_0",
+        "friendly_1",
+        "foreign_0",
+        "foreign_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "no_swamp_0",
+        "no_swamp_1",
+        "proactive_0",
+        "proactive_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "csvid": 9761,
+  "card": "Deathbringer Liege",
+  "recipes": [
+    {
+      "family": "cast_spell_color_riders",
+      "version": 2,
+      "oracle_text": "Other white creatures you control get +1/+1.\nOther black creatures you control get +1/+1.\nWhenever you cast a white spell, you may tap target creature.\nWhenever you cast a black spell, you may destroy target creature if it's tapped.",
+      "params": {
+        "effect": "deathbringer",
+        "colors": [
+          "W",
+          "B"
+        ],
+        "price": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        "other_price": [
+          2,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hybrid": true,
+        "base": [
+          3,
+          4
+        ],
+        "clauses": [
+          "Other white creatures you control get +1/+1.",
+          "Other black creatures you control get +1/+1.",
+          "Whenever you cast a white spell, you may tap target creature.",
+          "Whenever you cast a black spell, you may destroy target creature if it's tapped."
+        ]
+      },
+      "variants": [
+        "first_0",
+        "first_1",
+        "opponent_0",
+        "opponent_1",
+        "unmatched_0",
+        "unmatched_1",
+        "colorless_0",
+        "colorless_1",
+        "replay_0",
+        "replay_1",
+        "second_0",
+        "second_1",
+        "both_0",
+        "both_1",
+        "untapped_target_0",
+        "untapped_target_1"
+      ]
+    }
+  ]
+}

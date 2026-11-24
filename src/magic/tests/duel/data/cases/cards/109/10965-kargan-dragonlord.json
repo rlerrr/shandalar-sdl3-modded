@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "csvid": 10965,
+  "card": "Kargan Dragonlord",
+  "recipes": [
+    {
+      "family": "level_upper_combat_riders",
+      "version": 2,
+      "params": {
+        "price": [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "activation": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "base": [
+          2,
+          2
+        ],
+        "first": [
+          4,
+          4,
+          4
+        ],
+        "second": [
+          8,
+          8,
+          8
+        ],
+        "first_riders": [
+          "Flying"
+        ],
+        "second_riders": [
+          "Flying, trample",
+          "{R}: This creature gets +1/+0 until end of turn."
+        ],
+        "effect": "air",
+        "pump_cost": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Level up {R} ({R}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 4-7\n4/4\nFlying\nLEVEL 8+\n8/8\nFlying, trample\n{R}: This creature gets +1/+0 until end of turn.",
+      "variants": [
+        "paid_bands_0",
+        "paid_bands_1",
+        "offturn_denied_0",
+        "offturn_denied_1",
+        "pending_denied_0",
+        "pending_denied_1",
+        "ground_before_0",
+        "ground_before_1",
+        "flight_middle_0",
+        "flight_middle_1",
+        "trample_upper_0",
+        "trample_upper_1",
+        "pump_offturn_0",
+        "pump_offturn_1"
+      ]
+    }
+  ]
+}

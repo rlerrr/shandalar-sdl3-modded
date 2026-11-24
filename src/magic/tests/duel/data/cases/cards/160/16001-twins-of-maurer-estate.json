@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Twins of Maurer Estate",
+  "csvid": 16001,
+  "recipes": [
+    {
+      "family": "madness_upkeep_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 16001,
+        "normal": [
+          4,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "madness": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Madness {2}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "short_0",
+        "short_1",
+        "normal_0",
+        "normal_1",
+        "offturn_paid_0",
+        "offturn_paid_1",
+        "normal_countered_0",
+        "normal_countered_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Hagra Crocodile",
+  "csvid": 10559,
+  "recipes": [
+    {
+      "family": "landfall_self_change",
+      "version": 2,
+      "params": {
+        "schema": 8,
+        "change": {
+          "kind": "pump",
+          "power": 2,
+          "toughness": 2,
+          "trample": false
+        },
+        "passive": "This creature can't block."
+      },
+      "oracle_text": "This creature can't block.\nLandfall — Whenever a land you control enters, this creature gets +2/+2 until end of turn.",
+      "variants": [
+        "cast_0",
+        "unfunded_0",
+        "own_land_0",
+        "opponent_land_0",
+        "consecutive_lands_0",
+        "cleanup_0",
+        "empty_search_0",
+        "nonland_spell_0",
+        "late_source_0",
+        "removed_source_0",
+        "countered_search_0",
+        "pending_replay_0",
+        "fresh_source_0",
+        "other_source_0",
+        "cannot_block_0",
+        "cast_1",
+        "unfunded_1",
+        "own_land_1",
+        "opponent_land_1",
+        "consecutive_lands_1",
+        "cleanup_1",
+        "empty_search_1",
+        "nonland_spell_1",
+        "late_source_1",
+        "removed_source_1",
+        "countered_search_1",
+        "pending_replay_1",
+        "fresh_source_1",
+        "other_source_1",
+        "cannot_block_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "csvid": 5494,
+  "card": "Bomb Squad",
+  "recipes": [
+    {
+      "family": "upkeep_counters",
+      "version": 2,
+      "params": {
+        "csvid": 5494,
+        "printed_cost": "{3}{R}"
+      },
+      "oracle_text": "{T}: Put a fuse counter on target creature.\nAt the beginning of your upkeep, put a fuse counter on each creature with a fuse counter on it.\nWhenever a creature has four or more fuse counters on it, remove all fuse counters from it and destroy it. That creature deals 4 damage to its controller.",
+      "variants": [
+        "opposing_0",
+        "own_0",
+        "indestructible_0",
+        "opposing_1",
+        "own_1",
+        "indestructible_1"
+      ]
+    }
+  ]
+}

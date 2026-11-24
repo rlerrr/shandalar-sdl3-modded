@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "csvid": 13852,
+  "card": "Bloodcrazed Hoplite",
+  "recipes": [
+    {
+      "family": "heroic_counter_riders",
+      "version": 2,
+      "params": {
+        "effect": "drain_counter",
+        "clauses": [
+          "Heroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on it.",
+          "Whenever a +1/+1 counter is put on this creature, remove a +1/+1 counter from target creature an opponent controls."
+        ],
+        "price": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          2,
+          1
+        ]
+      },
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on it.\nWhenever a +1/+1 counter is put on this creature, remove a +1/+1 counter from target creature an opponent controls.",
+      "variants": [
+        "own_0",
+        "own_1",
+        "opponent_0",
+        "opponent_1",
+        "elsewhere_0",
+        "elsewhere_1",
+        "counter_from_other_spell_0",
+        "counter_from_other_spell_1"
+      ]
+    }
+  ]
+}

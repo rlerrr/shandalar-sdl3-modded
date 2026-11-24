@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Piranha Marsh",
+  "csvid": 10632,
+  "recipes": [
+    {
+      "family": "entry_follow_on_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 10632,
+        "cost": "",
+        "choices": [
+          "foe_0",
+          "foe_1",
+          "self_0",
+          "self_1",
+          "mana_0",
+          "mana_1"
+        ]
+      },
+      "oracle_text": "This land enters tapped.\nWhen this land enters, target player loses 1 life.\n{T}: Add {B}.",
+      "variants": [
+        "foe_0",
+        "foe_1",
+        "self_0",
+        "self_1",
+        "mana_0",
+        "mana_1"
+      ]
+    }
+  ]
+}

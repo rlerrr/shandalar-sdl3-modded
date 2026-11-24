@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "card": "Kolaghan Skirmisher",
+  "csvid": 14947,
+  "recipes": [
+    {
+      "family": "dash_creature",
+      "version": 2,
+      "oracle_text": "Dash {2}{B} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)",
+      "params": {
+        "regular": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "alternate": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 2
+      },
+      "variants": [
+        "dash_exact_0",
+        "normal_exact_0",
+        "dash_menu_0",
+        "normal_menu_0",
+        "cancel_0",
+        "unfunded_0",
+        "wrong_color_0",
+        "dash_combat_0",
+        "normal_fresh_attack_0",
+        "countered_dash_0",
+        "destroyed_0",
+        "blink_0",
+        "donated_0",
+        "recast_dash_0",
+        "recast_normal_0",
+        "pending_replay_0",
+        "return_replay_0",
+        "dash_exact_1",
+        "normal_exact_1",
+        "dash_menu_1",
+        "normal_menu_1",
+        "cancel_1",
+        "unfunded_1",
+        "wrong_color_1",
+        "dash_combat_1",
+        "normal_fresh_attack_1",
+        "countered_dash_1",
+        "destroyed_1",
+        "blink_1",
+        "donated_1",
+        "recast_dash_1",
+        "recast_normal_1",
+        "pending_replay_1",
+        "return_replay_1"
+      ]
+    }
+  ]
+}

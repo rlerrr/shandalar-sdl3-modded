@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Heightened Awareness",
+  "csvid": 4838,
+  "recipes": [
+    {
+      "family": "draw_step_discard_and_hand_size",
+      "version": 2,
+      "params": {
+        "csvid": 4838
+      },
+      "oracle_text": "As this enchantment enters, discard your hand.\nAt the beginning of your draw step, draw an additional card.",
+      "variants": [
+        "scope_0",
+        "scope_1",
+        "removed_0",
+        "removed_1",
+        "countered_0",
+        "countered_1",
+        "empty_entry_0",
+        "empty_entry_1"
+      ]
+    }
+  ]
+}

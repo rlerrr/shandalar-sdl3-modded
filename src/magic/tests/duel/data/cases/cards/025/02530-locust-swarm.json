@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Locust Swarm",
+  "csvid": 2530,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_grants_and_modes",
+      "version": 2,
+      "params": {
+        "csvid": 2530,
+        "mana": [
+          3,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flying\n{G}: Regenerate this creature.\n{G}: Untap this creature. Activate only once each turn.",
+      "variants": [
+        "untap_limit_0",
+        "untap_limit_1",
+        "flying_0",
+        "flying_1",
+        "regenerate_0",
+        "regenerate_1",
+        "regen_after_untap_0",
+        "regen_after_untap_1",
+        "wrong_color_0",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

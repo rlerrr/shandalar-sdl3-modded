@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Fell Specter",
+  "csvid": 18919,
+  "recipes": [
+    {
+      "family": "remaining_entry_library_and_hand",
+      "version": 2,
+      "params": {
+        "csvid": 18919,
+        "printed_mana": "{3}{B}",
+        "rules": "Flying\nWhen this creature enters, target opponent discards a card.\nWhenever an opponent discards a card, that player loses 2 life."
+      },
+      "oracle_text": "Flying\nWhen this creature enters, target opponent discards a card.\nWhenever an opponent discards a card, that player loses 2 life.",
+      "variants": [
+        "discard_entry_0",
+        "discard_entry_1",
+        "actual_life_loss_0",
+        "actual_life_loss_1",
+        "own_discard_0",
+        "own_discard_1"
+      ]
+    }
+  ]
+}

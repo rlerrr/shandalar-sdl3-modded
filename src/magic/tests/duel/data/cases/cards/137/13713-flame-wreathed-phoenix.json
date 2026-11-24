@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Flame-Wreathed Phoenix",
+  "csvid": 13713,
+  "recipes": [
+    {
+      "family": "entry_interaction_choice_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 13713,
+        "mana_cost": "{2}{R}{R}"
+      },
+      "oracle_text": "Flying\nTribute 2 (As this creature enters, an opponent of your choice may put two +1/+1 counters on it.)\nWhen this creature enters, if tribute wasn't paid, it gains haste and \"When this creature dies, return it to its owner's hand.\"",
+      "variants": [
+        "tribute_paid_0",
+        "tribute_paid_1",
+        "declined_death_0",
+        "declined_death_1",
+        "declined_flight_0",
+        "declined_flight_1",
+        "borrowed_death_0",
+        "borrowed_death_1"
+      ]
+    }
+  ]
+}

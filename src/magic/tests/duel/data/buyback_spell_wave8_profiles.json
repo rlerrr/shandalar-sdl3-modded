@@ -1,0 +1,986 @@
+{
+  "version": 1,
+  "sources": {
+    "Allay": {
+      "oracle": {
+        "oracle_id": "664d982a-5cd8-4289-afb8-fa2e083042c9",
+        "name": "Allay",
+        "oracle_text": "Buyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nDestroy target enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [
+          "Buyback"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/exo/1/allay?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1426,
+        "iid": 361,
+        "name": "Allay",
+        "handler": "manalinkeh_card_allay",
+        "kind": "card"
+      },
+      "params": {
+        "mana": "{1}{W}",
+        "fee": "{3}",
+        "effect": "destroy_enchantment",
+        "instant": true
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/exodus.c",
+        "sha256": "665aed18fbbf2ac5663eaa599626c0f0bb1c8f2ee90d4a97a295dbbe0f6ed527",
+        "symbol": "card_allay",
+        "line": 82
+      }
+    },
+    "Capsize": {
+      "oracle": {
+        "oracle_id": "77637eff-2963-4402-88f3-ca346f762fc8",
+        "name": "Capsize",
+        "oracle_text": "Buyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nReturn target permanent to its owner's hand.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Buyback"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/42/capsize?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1396,
+        "iid": 1484,
+        "name": "Capsize",
+        "handler": "manalinkeh_card_capsize",
+        "kind": "card"
+      },
+      "params": {
+        "mana": "{1}{U}{U}",
+        "fee": "{3}",
+        "effect": "bounce",
+        "instant": true
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/tempest.c",
+        "sha256": "a68be9738aee623df51c6fa3a707a81bb50cac758d141a3517221928be1bd82c",
+        "symbol": "card_capsize",
+        "line": 1015
+      }
+    },
+    "Elvish Fury": {
+      "oracle": {
+        "oracle_id": "557d2af0-04c5-461d-826b-7208c4535dc2",
+        "name": "Elvish Fury",
+        "oracle_text": "Buyback {4} (You may pay an additional {4} as you cast this spell. If you do, put this card into your hand as it resolves.)\nTarget creature gets +2/+2 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Buyback"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh1/162/elvish-fury?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1428,
+        "iid": 2976,
+        "name": "Elvish Fury",
+        "handler": "manalinkeh_card_elvish_fury",
+        "kind": "card"
+      },
+      "params": {
+        "mana": "{G}",
+        "fee": "{4}",
+        "effect": "pump",
+        "instant": true
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/tempest.c",
+        "sha256": "a68be9738aee623df51c6fa3a707a81bb50cac758d141a3517221928be1bd82c",
+        "symbol": "card_elvish_fury",
+        "line": 2199
+      }
+    },
+    "Evincar's Justice": {
+      "oracle": {
+        "oracle_id": "c0d3dfc0-1ff2-4ac3-98eb-32eaa5b84c05",
+        "name": "Evincar's Justice",
+        "oracle_text": "Buyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nEvincar's Justice deals 2 damage to each creature and each player.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Buyback"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cma/58/evincars-justice?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1429,
+        "iid": 3170,
+        "name": "Evincar's Justice",
+        "handler": "manalinkeh_card_evincars_justice",
+        "kind": "card"
+      },
+      "params": {
+        "mana": "{2}{B}{B}",
+        "fee": "{3}",
+        "effect": "symmetric_damage",
+        "instant": false
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/tempest.c",
+        "sha256": "a68be9738aee623df51c6fa3a707a81bb50cac758d141a3517221928be1bd82c",
+        "symbol": "card_evincars_justice",
+        "line": 2382
+      }
+    },
+    "Lab Rats": {
+      "oracle": {
+        "oracle_id": "c53d6d3e-64e3-48b9-afab-3bde3164888f",
+        "name": "Lab Rats",
+        "oracle_text": "Buyback {4} (You may pay an additional {4} as you cast this spell. If you do, put this card into your hand as it resolves.)\nCreate a 1/1 black Rat creature token.",
+        "mana_cost": "{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Buyback"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/108/lab-rats?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3387,
+        "iid": 5436,
+        "name": "Lab Rats",
+        "handler": "manalinkeh_card_lab_rats",
+        "kind": "card"
+      },
+      "params": {
+        "mana": "{B}",
+        "fee": "{4}",
+        "effect": "rat",
+        "instant": false
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/stronghold.c",
+        "sha256": "ec3fcf5f1a83350c765081584ac8423400d623ca3f5cd3340317f3abd0e94101",
+        "symbol": "card_lab_rats",
+        "line": 1247
+      }
+    },
+    "Mind Peel": {
+      "oracle": {
+        "oracle_id": "4f424d94-1544-4086-a57d-2add17332094",
+        "name": "Mind Peel",
+        "oracle_text": "Buyback {2}{B}{B} (You may pay an additional {2}{B}{B} as you cast this spell. If you do, put this card into your hand as it resolves.)\nTarget player discards a card.",
+        "mana_cost": "{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Buyback"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sth/63/mind-peel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3393,
+        "iid": 6131,
+        "name": "Mind Peel",
+        "handler": "manalinkeh_card_mind_peel",
+        "kind": "card"
+      },
+      "params": {
+        "mana": "{B}",
+        "fee": "{2}{B}{B}",
+        "effect": "discard",
+        "instant": false
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/stronghold.c",
+        "sha256": "ec3fcf5f1a83350c765081584ac8423400d623ca3f5cd3340317f3abd0e94101",
+        "symbol": "card_mind_peel",
+        "line": 1395
+      }
+    },
+    "Mystic Speculation": {
+      "oracle": {
+        "oracle_id": "a58adf82-d9e2-4b47-933e-68180f280ba2",
+        "name": "Mystic Speculation",
+        "oracle_text": "Buyback {2} (You may pay an additional {2} as you cast this spell. If you do, put this card into your hand as it resolves.)\nScry 3. (Look at the top three cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+        "mana_cost": "{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Buyback",
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fut/41/mystic-speculation?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8979,
+        "iid": 6445,
+        "name": "Mystic Speculation",
+        "handler": "manalinkeh_card_mystic_speculation",
+        "kind": "card"
+      },
+      "params": {
+        "mana": "{U}",
+        "fee": "{2}",
+        "effect": "scry",
+        "instant": false
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/future_sight.c",
+        "sha256": "d76adbe700ed52b79d6b19a03d34710d346496fe19f6a104c906fa1293762fc6",
+        "symbol": "card_mystic_speculation",
+        "line": 2396
+      }
+    },
+    "Whispers of the Muse": {
+      "oracle": {
+        "oracle_id": "a4a8af4e-8686-45ba-94fd-ccf6cc8adaae",
+        "name": "Whispers of the Muse",
+        "oracle_text": "Buyback {5} (You may pay an additional {5} as you cast this spell. If you do, put this card into your hand as it resolves.)\nDraw a card.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Buyback"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/79/whispers-of-the-muse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1436,
+        "iid": 10936,
+        "name": "Whispers of the Muse",
+        "handler": "manalinkeh_card_whispers_of_the_muse",
+        "kind": "card"
+      },
+      "params": {
+        "mana": "{U}",
+        "fee": "{5}",
+        "effect": "draw",
+        "instant": true
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/tempest.c",
+        "sha256": "a68be9738aee623df51c6fa3a707a81bb50cac758d141a3517221928be1bd82c",
+        "symbol": "card_whispers_of_the_muse",
+        "line": 5879
+      }
+    },
+    "Shattering Pulse": {
+      "registry": {
+        "csvid": 1434,
+        "iid": 8603,
+        "name": "Shattering Pulse",
+        "handler": "manalinkeh_card_shattering_pulse",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "77953b7a-813e-45f5-ad7f-ab72a79a0112",
+        "name": "Shattering Pulse",
+        "oracle_text": "Buyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nDestroy target artifact.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Instant",
+        "keywords": [
+          "Buyback"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/exo/102/shattering-pulse?utm_source=api"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/exodus.c",
+        "symbol": "card_shattering_pulse",
+        "line": 2100,
+        "sha256": "665aed18fbbf2ac5663eaa599626c0f0bb1c8f2ee90d4a97a295dbbe0f6ed527"
+      },
+      "params": {
+        "mana": "{1}{R}",
+        "fee": "{3}",
+        "effect": "destroy_artifact",
+        "instant": true
+      }
+    },
+    "Seething Anger": {
+      "oracle": {
+        "oracle_id": "2effcd1c-5833-4e0e-bb67-2d2ffb22a014",
+        "name": "Seething Anger",
+        "oracle_text": "Buyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nTarget creature gets +3/+0 until end of turn.",
+        "mana_cost": "{R}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Buyback"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/156/seething-anger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1433,
+        "iid": 8449,
+        "name": "Seething Anger",
+        "handler": "manalinkeh_card_seething_anger",
+        "kind": "card"
+      },
+      "params": {
+        "mana": "{R}",
+        "fee": "{3}",
+        "effect": "power_pump",
+        "instant": false
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/stronghold.c",
+        "sha256": "ec3fcf5f1a83350c765081584ac8423400d623ca3f5cd3340317f3abd0e94101",
+        "symbol": "card_seething_anger",
+        "line": 2379
+      }
+    }
+  },
+  "witnesses": {
+    "Act of Treason": {
+      "oracle": {
+        "oracle_id": "9d08af23-9f4a-4097-9abc-3b17475ab744",
+        "name": "Act of Treason",
+        "oracle_text": "Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn. (It can attack and {T} this turn.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/99/act-of-treason?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10381,
+        "iid": 224,
+        "name": "Act of Treason",
+        "handler": "manalinkeh_card_act_of_treason",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Glorious Anthem": {
+      "oracle": {
+        "oracle_id": "e3886fe8-9b76-4613-8891-4ec74657c087",
+        "name": "Glorious Anthem",
+        "oracle_text": "Creatures you control get +1/+1.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/21/glorious-anthem?utm_source=api"
+      },
+      "registry": {
+        "csvid": 966,
+        "iid": 3948,
+        "name": "Glorious Anthem",
+        "handler": "manalinkeh_card_gaeas_anthem",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Howling Mine": {
+      "oracle": {
+        "oracle_id": "d26b27db-a567-4631-b4b6-7294222fbdd1",
+        "name": "Howling Mine",
+        "oracle_text": "At the beginning of each player's draw step, if this artifact is untapped, that player draws an additional card.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c16/257/howling-mine?utm_source=api"
+      },
+      "registry": {
+        "csvid": 114,
+        "iid": 4683,
+        "name": "Howling Mine",
+        "handler": "manalinkeh_card_howling_mine",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Naturalize": {
+      "oracle": {
+        "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+        "name": "Naturalize",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1096,
+        "iid": 6485,
+        "name": "Naturalize",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Negate": {
+      "oracle": {
+        "oracle_id": "3407fe41-fdd3-4119-8f70-4bc4590a379f",
+        "name": "Negate",
+        "oracle_text": "Counter target noncreature spell.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tmt/47/negate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9395,
+        "iid": 6544,
+        "name": "Negate",
+        "handler": "manalinkeh_card_negate",
+        "kind": "card"
+      }
+    },
+    "Ornithopter": {
+      "oracle": {
+        "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+        "name": "Ornithopter",
+        "oracle_text": "Flying",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Thopter",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 514,
+        "iid": 6907,
+        "name": "Ornithopter",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Pack Rat": {
+      "oracle": {
+        "oracle_id": "5632c2df-71e6-41b7-b8f5-c683812cc0e2",
+        "name": "Pack Rat",
+        "oracle_text": "Pack Rat's power and toughness are each equal to the number of Rats you control.\n{2}{B}, Discard a card: Create a token that's a copy of this creature.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Rat",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rtr/73/pack-rat?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12783,
+        "iid": 6963,
+        "name": "Pack Rat",
+        "handler": "manalinkeh_card_pack_rat",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Thassa, God of the Sea": {
+      "oracle": {
+        "oracle_id": "69e5df2f-be1f-4608-a90f-3e2f51e2fea4",
+        "name": "Thassa, God of the Sea",
+        "oracle_text": "Indestructible\nAs long as your devotion to blue is less than five, Thassa isn't a creature. (Each {U} in the mana costs of permanents you control counts toward your devotion to blue.)\nAt the beginning of your upkeep, scry 1.\n{1}{U}: Target creature you control can't be blocked this turn.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Legendary Enchantment Creature — God",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Indestructible",
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lcc/176/thassa-god-of-the-sea?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13572,
+        "iid": 9847,
+        "name": "Thassa, God of the Sea",
+        "handler": "manalinkeh_card_thassa_god_of_the_sea",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    }
+  },
+  "static_characteristics_only_witnesses": [
+    "Grizzly Bears",
+    "Hill Giant",
+    "Ornithopter"
+  ],
+  "token": {
+    "oracle": {
+      "oracle_id": "d319f2a2-74df-46e8-9245-6f99c6dca992",
+      "name": "Rat",
+      "oracle_text": "Lifelink",
+      "mana_cost": "",
+      "type_line": "Token Creature — Rat",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Lifelink"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "scryfall_uri": "https://scryfall.com/card/tmh3/19/rat?utm_source=api"
+    },
+    "registry": {
+      "csvid": 18806,
+      "iid": 7674,
+      "name": "Rat",
+      "handler": "manalinkeh_card_rhino_token",
+      "kind": "card"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "csvid": 4584,
+  "card": "Rushwood Herbalist",
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_targeted_costs",
+      "version": 2,
+      "params": {
+        "csvid": 4584,
+        "mana": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "activation": "{G}",
+        "stats": [
+          2,
+          2
+        ]
+      },
+      "oracle_text": "{G}, {T}, Discard a card: Regenerate target creature.",
+      "variants": [
+        "own_0",
+        "own_1",
+        "foreign_0",
+        "foreign_1",
+        "choose_discard_0",
+        "empty_0",
+        "empty_1",
+        "sick_0",
+        "sick_1",
+        "tapped_0",
+        "tapped_1",
+        "short_0",
+        "short_1",
+        "proactive_0",
+        "proactive_1"
+      ]
+    }
+  ]
+}

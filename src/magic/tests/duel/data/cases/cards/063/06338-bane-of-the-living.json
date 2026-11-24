@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "csvid": 6338,
+  "card": "Bane of the Living",
+  "recipes": [
+    {
+      "family": "morph_turn_up_team",
+      "version": 2,
+      "params": {
+        "effect": "mass_x",
+        "power_delta": 0,
+        "toughness_delta": 0,
+        "cast_mana": [
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "flip_mana": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "variable": true,
+        "power": 4,
+        "toughness": 3
+      },
+      "oracle_text": "Morph {X}{B}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, all creatures get -X/-X until end of turn.",
+      "variants": [
+        "hidden_0",
+        "faceup_0",
+        "hidden_choice_0",
+        "hidden_short_0",
+        "flip_short_0",
+        "flip_wrong_0",
+        "offturn_0",
+        "replay_0",
+        "x_zero_0",
+        "x_one_reserved_0",
+        "x_two_0",
+        "x_three_0",
+        "hidden_1",
+        "faceup_1",
+        "hidden_choice_1",
+        "hidden_short_1",
+        "flip_short_1",
+        "flip_wrong_1",
+        "offturn_1",
+        "replay_1",
+        "x_zero_1",
+        "x_one_reserved_1",
+        "x_two_1",
+        "x_three_1"
+      ]
+    }
+  ]
+}

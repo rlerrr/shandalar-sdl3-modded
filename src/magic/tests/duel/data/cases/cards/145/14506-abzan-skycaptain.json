@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 14506,
+  "card": "Abzan Skycaptain",
+  "recipes": [
+    {
+      "family": "departure_counters_and_search",
+      "version": 2,
+      "params": {
+        "csvid": 14506,
+        "printed_cost": "{3}{W}"
+      },
+      "oracle_text": "Flying\nWhen this creature dies, bolster 2. (Choose a creature with the least toughness among creatures you control and put two +1/+1 counters on it.)",
+      "variants": [
+        "weakest_0",
+        "tie_0",
+        "flying_0",
+        "bounce_0",
+        "weakest_1",
+        "tie_1",
+        "flying_1",
+        "bounce_1"
+      ]
+    }
+  ]
+}

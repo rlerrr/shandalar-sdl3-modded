@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "card": "Chandra, Flamecaller",
+  "csvid": 15567,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "loyalty_library_effects",
+      "version": 2,
+      "oracle_text": "+1: Create two 3/1 red Elemental creature tokens with haste. Exile them at the beginning of the next end step.\n0: Discard all the cards in your hand, then draw that many cards plus one.\n−X: Chandra deals X damage to each creature.",
+      "params": {
+        "mode": "elementals",
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "start": 4,
+        "costs": [
+          1,
+          0,
+          "-X"
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "once_per_turn_0",
+        "once_per_turn_1",
+        "opposing_turn_0",
+        "opposing_turn_1",
+        "tokens_0",
+        "tokens_1",
+        "tokens_combat_0",
+        "tokens_combat_1",
+        "wheel_0",
+        "wheel_1",
+        "empty_hand_0",
+        "empty_hand_1",
+        "sweep_one_0",
+        "sweep_one_1",
+        "sweep_two_0",
+        "sweep_two_1",
+        "sweep_all_0",
+        "sweep_all_1",
+        "too_much_loyalty_0",
+        "too_much_loyalty_1"
+      ]
+    }
+  ]
+}

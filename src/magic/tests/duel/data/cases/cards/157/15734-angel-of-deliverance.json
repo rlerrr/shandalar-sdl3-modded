@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Angel of Deliverance",
+  "csvid": 15734,
+  "recipes": [
+    {
+      "family": "delirium_targeted_spells_and_aura",
+      "version": 2,
+      "params": {
+        "csvid": 15734,
+        "mana": [
+          6,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "Flying\nDelirium — Whenever this creature deals damage, if there are four or more card types among cards in your graveyard, exile target creature an opponent controls.",
+      "variants": [
+        "three_duplicates_0",
+        "three_duplicates_1",
+        "four_types_0",
+        "four_types_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "no_enemy_creature_0",
+        "no_enemy_creature_1",
+        "short_funding_0",
+        "short_funding_1",
+        "lose_fourth_0",
+        "lose_fourth_1",
+        "replay_0",
+        "replay_1",
+        "fly_block_0",
+        "fly_block_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

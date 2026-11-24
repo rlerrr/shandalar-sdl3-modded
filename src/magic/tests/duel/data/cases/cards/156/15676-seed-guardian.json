@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Seed Guardian",
+  "csvid": 15676,
+  "recipes": [
+    {
+      "family": "departure_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 15676,
+        "mana_cost": "{2}{G}{G}"
+      },
+      "oracle_text": "Reach\nWhen this creature dies, create an X/X green Elemental creature token, where X is the number of creature cards in your graveyard.",
+      "variants": [
+        "creature_count_0",
+        "creature_count_1",
+        "reach_0",
+        "reach_1",
+        "exile_0",
+        "exile_1"
+      ]
+    }
+  ]
+}

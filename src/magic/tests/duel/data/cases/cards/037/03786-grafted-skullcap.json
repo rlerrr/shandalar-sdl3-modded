@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Grafted Skullcap",
+  "csvid": 3786,
+  "recipes": [
+    {
+      "family": "draw_step_discard_and_hand_size",
+      "version": 2,
+      "params": {
+        "csvid": 3786
+      },
+      "oracle_text": "At the beginning of your draw step, draw an additional card.\nAt the beginning of your end step, discard your hand.",
+      "variants": [
+        "scope_0",
+        "scope_1",
+        "removed_0",
+        "removed_1",
+        "removed_after_draw_0",
+        "removed_after_draw_1"
+      ]
+    }
+  ]
+}

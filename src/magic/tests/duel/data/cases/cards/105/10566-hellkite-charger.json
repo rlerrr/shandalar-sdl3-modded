@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "csvid": 10566,
+  "card": "Hellkite Charger",
+  "recipes": [
+    {
+      "family": "attack_trigger_tokens_and_combat",
+      "version": 2,
+      "params": {
+        "csvid": 10566,
+        "printed_cost": "{4}{R}{R}",
+        "keywords": [
+          "Flying",
+          "Haste"
+        ]
+      },
+      "oracle_text": "Flying, haste\nWhenever this creature attacks, you may pay {5}{R}{R}. If you do, untap all attacking creatures and after this phase, there is an additional combat phase.",
+      "variants": [
+        "pay_0",
+        "decline_0",
+        "flying_0",
+        "extra_pay_0",
+        "extra_decline_0",
+        "pay_1",
+        "unfunded_1",
+        "underpaid_1",
+        "flying_1",
+        "extra_pay_1",
+        "extra_short_1"
+      ]
+    }
+  ]
+}

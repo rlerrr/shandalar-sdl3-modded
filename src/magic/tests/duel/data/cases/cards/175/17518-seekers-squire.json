@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "card": "Seekers' Squire",
+  "csvid": 17518,
+  "recipes": [
+    {
+      "family": "entry_explore",
+      "version": 2,
+      "oracle_text": "When this creature enters, it explores. (Reveal the top card of your library. Put that card into your hand if it's a land. Otherwise, put a +1/+1 counter on this creature, then put the card back or put it into your graveyard.)",
+      "params": {
+        "mana": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 1,
+        "toughness": 2
+      },
+      "variants": [
+        "land_0",
+        "nonland_keep_0",
+        "nonland_mill_0",
+        "artifact_land_0",
+        "artifact_nonland_0",
+        "instant_nonland_0",
+        "empty_0",
+        "only_land_0",
+        "only_nonland_mill_0",
+        "countered_0",
+        "insufficient_0",
+        "wrong_color_0",
+        "pending_replay_0",
+        "blink_keep_mill_0",
+        "blink_mill_land_0",
+        "bounce_recast_0",
+        "grave_entry_0",
+        "two_entries_0",
+        "cleanup_0",
+        "land_1",
+        "nonland_keep_1",
+        "nonland_mill_1",
+        "artifact_land_1",
+        "artifact_nonland_1",
+        "instant_nonland_1",
+        "empty_1",
+        "only_land_1",
+        "only_nonland_mill_1",
+        "countered_1",
+        "insufficient_1",
+        "wrong_color_1",
+        "pending_replay_1",
+        "blink_keep_mill_1",
+        "blink_mill_land_1",
+        "bounce_recast_1",
+        "grave_entry_1",
+        "two_entries_1",
+        "cleanup_1"
+      ]
+    }
+  ]
+}

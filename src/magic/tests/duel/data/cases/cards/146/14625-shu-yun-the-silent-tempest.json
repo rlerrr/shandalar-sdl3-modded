@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Shu Yun, the Silent Tempest",
+  "csvid": 14625,
+  "recipes": [
+    {
+      "family": "cast_noncreature_riders",
+      "version": 2,
+      "params": {
+        "role": "shu",
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhenever you cast a noncreature spell, you may pay {R/W}{R/W}. If you do, target creature gains double strike until end of turn.",
+      "variants": [
+        "own_0",
+        "creature_0",
+        "opponent_0",
+        "countered_0",
+        "red_0",
+        "white_0",
+        "decline_0",
+        "unfunded_0",
+        "own_1",
+        "creature_1",
+        "opponent_1",
+        "countered_1",
+        "red_1",
+        "white_1",
+        "decline_1",
+        "unfunded_1"
+      ]
+    }
+  ]
+}

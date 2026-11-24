@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Ugin's Insight",
+  "csvid": 15469,
+  "recipes": [
+    {
+      "family": "library_scry_before_draw",
+      "version": 2,
+      "params": {
+        "csvid": 15469,
+        "printed_cost": "{3}{U}{U}",
+        "choices": [
+          "greatest_0",
+          "greatest_1",
+          "opposing_only_0",
+          "opposing_only_1",
+          "greatest_leaves_0",
+          "greatest_leaves_1"
+        ]
+      },
+      "oracle_text": "Scry X, where X is the greatest mana value among permanents you control, then draw three cards.",
+      "variants": [
+        "greatest_0",
+        "greatest_1",
+        "opposing_only_0",
+        "opposing_only_1",
+        "greatest_leaves_0",
+        "greatest_leaves_1"
+      ]
+    }
+  ]
+}

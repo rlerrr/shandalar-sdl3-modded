@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Weirding Wood",
+  "csvid": 16020,
+  "recipes": [
+    {
+      "family": "entry_trigger_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 16020,
+        "printed_mana": "{2}{G}",
+        "rules": "Enchant land\nWhen this Aura enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\nEnchanted land has \"{T}: Add two mana of any one color.\""
+      },
+      "oracle_text": "Enchant land\nWhen this Aura enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\nEnchanted land has \"{T}: Add two mana of any one color.\"",
+      "variants": [
+        "own_land_mana_0",
+        "own_land_mana_1",
+        "foe_land_mana_0",
+        "foe_land_mana_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 13706,
+  "card": "Fated Infatuation",
+  "recipes": [
+    {
+      "family": "library_scry_modes_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 13706,
+        "printed_cost": "{U}{U}{U}"
+      },
+      "oracle_text": "Create a token that's a copy of target creature you control. If it's your turn, scry 2.",
+      "variants": [
+        "own_0",
+        "off_turn_0",
+        "lost_target_0",
+        "bounce_copy_0",
+        "wrong_controller_0",
+        "reorder_0",
+        "own_1",
+        "off_turn_1",
+        "lost_target_1",
+        "bounce_copy_1",
+        "wrong_controller_1"
+      ]
+    }
+  ]
+}

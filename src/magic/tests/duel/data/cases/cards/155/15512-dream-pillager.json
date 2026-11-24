@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Dream Pillager",
+  "csvid": 15512,
+  "recipes": [
+    {
+      "family": "alternate_zone_cast_additional_riders",
+      "version": 2,
+      "params": {
+        "model": "pillager",
+        "cost": [
+          5,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "oracle_text": "Flying\nWhenever this creature deals combat damage to a player, exile that many cards from the top of your library. Until end of turn, you may cast spells from among those exiled cards.",
+      "variants": [
+        "short_source_0",
+        "exact_pay_0",
+        "two_spells_0",
+        "wrong_color_0",
+        "expiry_0",
+        "land_0",
+        "empty_0",
+        "short_library_0",
+        "flying_ground_0",
+        "reach_block_0",
+        "replay_0",
+        "short_source_1",
+        "exact_pay_1",
+        "two_spells_1",
+        "wrong_color_1",
+        "expiry_1",
+        "land_1",
+        "empty_1",
+        "short_library_1",
+        "flying_ground_1",
+        "reach_block_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

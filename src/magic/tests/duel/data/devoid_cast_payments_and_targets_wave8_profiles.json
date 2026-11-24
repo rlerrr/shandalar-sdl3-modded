@@ -1,0 +1,496 @@
+{
+  "sources": {
+    "Bearer of Silence": {
+      "oracle": {
+        "oracle_id": "d69c8c55-6433-4cc5-bdc7-9722f121b8e2",
+        "name": "Bearer of Silence",
+        "oracle_text": "Devoid (This card has no color.)\nWhen you cast this spell, you may pay {1}{C}. If you do, target opponent sacrifices a creature. ({C} represents colorless mana.)\nFlying\nThis creature can't block.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Eldrazi",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/67/bearer-of-silence?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15558,
+        "iid": 15633,
+        "name": "Bearer of Silence",
+        "handler": "manalinkeh_card_bearer_of_silence",
+        "kind": "card"
+      }
+    },
+    "Eldrazi Displacer": {
+      "oracle": {
+        "oracle_id": "9b1f552a-bddc-4fcb-ac67-b4a65b2f48ba",
+        "name": "Eldrazi Displacer",
+        "oracle_text": "Devoid (This card has no color.)\n{2}{C}: Exile another target creature, then return it to the battlefield tapped under its owner's control. ({C} represents colorless mana.)",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Eldrazi",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/13/eldrazi-displacer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15589,
+        "iid": 15664,
+        "name": "Eldrazi Displacer",
+        "handler": "manalinkeh_card_eldrazi_displacer",
+        "kind": "card"
+      }
+    },
+    "Eldrazi Obligator": {
+      "oracle": {
+        "oracle_id": "d09402cb-cf64-493e-a82d-244b31700710",
+        "name": "Eldrazi Obligator",
+        "oracle_text": "Devoid (This card has no color.)\nWhen you cast this spell, you may pay {1}{C}. If you do, gain control of target creature until end of turn, untap that creature, and it gains haste until end of turn. ({C} represents colorless mana.)\nHaste",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Eldrazi",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Devoid",
+          "Haste"
+        ],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/96/eldrazi-obligator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15591,
+        "iid": 15666,
+        "name": "Eldrazi Obligator",
+        "handler": "manalinkeh_card_eldrazi_obligator",
+        "kind": "card"
+      }
+    },
+    "Immobilizer Eldrazi": {
+      "oracle": {
+        "oracle_id": "416f9656-9247-4ef2-971b-1515fc8e031b",
+        "name": "Immobilizer Eldrazi",
+        "oracle_text": "Devoid (This card has no color.)\n{2}{C}: Each creature with toughness greater than its power can't block this turn. ({C} represents colorless mana.)",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/97/immobilizer-eldrazi?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15615,
+        "iid": 15690,
+        "name": "Immobilizer Eldrazi",
+        "handler": "manalinkeh_card_immobilizer_eldrazi",
+        "kind": "card"
+      }
+    },
+    "Void Grafter": {
+      "oracle": {
+        "oracle_id": "01d202b9-1ac6-484c-a208-a8bc69bccdb2",
+        "name": "Void Grafter",
+        "oracle_text": "Devoid (This card has no color.)\nFlash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, another target creature you control gains hexproof until end of turn.",
+        "mana_cost": "{1}{G}{U}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Devoid",
+          "Flash"
+        ],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/150/void-grafter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15712,
+        "iid": 15787,
+        "name": "Void Grafter",
+        "handler": "manalinkeh_card_void_grafter",
+        "kind": "card"
+      }
+    },
+    "World Breaker": {
+      "oracle": {
+        "oracle_id": "deeb7e22-b207-42de-b9d4-f790403d52a9",
+        "name": "World Breaker",
+        "oracle_text": "Devoid (This card has no color.)\nWhen you cast this spell, exile target artifact, enchantment, or land.\nReach\n{2}{C}, Sacrifice a land: Return this card from your graveyard to your hand. ({C} represents colorless mana.)",
+        "mana_cost": "{6}{G}",
+        "type_line": "Creature — Eldrazi",
+        "power": "5",
+        "toughness": "7",
+        "keywords": [
+          "Reach",
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/112/world-breaker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15722,
+        "iid": 15797,
+        "name": "World Breaker",
+        "handler": "manalinkeh_card_world_breaker",
+        "kind": "card"
+      }
+    },
+    "Visions of Brutality": {
+      "oracle": {
+        "oracle_id": "66553485-4e9d-4049-9e80-3ac903f8127a",
+        "name": "Visions of Brutality",
+        "oracle_text": "Devoid (This card has no color.)\nEnchant creature\nEnchanted creature can't block.\nWhenever enchanted creature deals damage, its controller loses that much life.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Devoid",
+          "Enchant"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/81/visions-of-brutality?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15711,
+        "iid": 15786,
+        "name": "Visions of Brutality",
+        "handler": "manalinkeh_card_visions_of_brutality",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Fervor": {
+      "oracle": {
+        "oracle_id": "8e0cea9c-3110-4728-9378-76849e33bb90",
+        "name": "Fervor",
+        "oracle_text": "Creatures you control have haste. (They can attack and {T} as soon as they come under your control.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/129/fervor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1604,
+        "iid": 3365,
+        "name": "Fervor",
+        "handler": "manalinkeh_card_fervor",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Jalum Tome": {
+      "oracle": {
+        "oracle_id": "32d9fd98-142b-41d2-b8f0-40ae1d4cb991",
+        "name": "Jalum Tome",
+        "oracle_text": "{2}, {T}: Draw a card, then discard a card.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact — Book",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/226/jalum-tome?utm_source=api"
+      },
+      "registry": {
+        "csvid": 504,
+        "iid": 5019,
+        "name": "Jalum Tome",
+        "handler": "manalinkeh_card_jalum_tome",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Wastes": {
+      "oracle": {
+        "oracle_id": "05d24b0c-904a-46b6-b42a-96a4d91a0dd4",
+        "name": "Wastes",
+        "oracle_text": "{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Basic Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/191/wastes?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15719,
+        "iid": 15794,
+        "name": "Wastes",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Wind Drake": {
+      "oracle": {
+        "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+        "name": "Wind Drake",
+        "oracle_text": "Flying",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/70/wind-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1197,
+        "iid": 10989,
+        "name": "Wind Drake",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

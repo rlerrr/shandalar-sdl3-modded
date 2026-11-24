@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 10681,
+  "card": "Surrakar Marauder",
+  "recipes": [
+    {
+      "family": "landfall_combat_and_animation",
+      "version": 2,
+      "oracle_text": "Landfall — Whenever a land you control enters, this creature gains intimidate until end of turn. (It can't be blocked except by artifact creatures and/or creatures that share a color with it.)",
+      "params": {
+        "effect": "intimidate"
+      },
+      "variants": [
+        "opponent_land_0",
+        "cleanup_0",
+        "intimidate_0",
+        "matching_color_0",
+        "artifact_blocker_0",
+        "before_land_0",
+        "expired_block_0",
+        "opponent_land_1",
+        "cleanup_1",
+        "intimidate_1",
+        "matching_color_1",
+        "artifact_blocker_1",
+        "before_land_1",
+        "expired_block_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "csvid": 8522,
+  "card": "Draining Whelk",
+  "recipes": [
+    {
+      "family": "flash_entry_stack_control",
+      "version": 2,
+      "params": {
+        "csvid": 8522,
+        "mana": [
+          4,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          1,
+          1
+        ]
+      },
+      "oracle_text": "Flash\nFlying\nWhen this creature enters, counter target spell. Put X +1/+1 counters on this creature, where X is that spell's mana value.",
+      "variants": [
+        "low_0",
+        "low_1",
+        "high_0",
+        "high_1",
+        "uncounterable_0",
+        "uncounterable_1",
+        "flight_0",
+        "flight_1"
+      ]
+    }
+  ]
+}

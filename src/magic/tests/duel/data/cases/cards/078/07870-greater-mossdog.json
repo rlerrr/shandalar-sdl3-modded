@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "card": "Greater Mossdog",
+  "csvid": 7870,
+  "recipes": [
+    {
+      "family": "mill_remaining_dredge_and_graveyard",
+      "version": 2,
+      "params": {
+        "csvid": 7870,
+        "cost": [
+          3,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "dredge": 3
+      },
+      "oracle_text": "Dredge 3 (If you would draw a card, you may mill three cards instead. If you do, return this card from your graveyard to your hand.)",
+      "variants": [
+        "exact_0",
+        "exact_1",
+        "pass_0",
+        "pass_1",
+        "short_0",
+        "short_1",
+        "draw_two_0",
+        "draw_two_1",
+        "competing_0",
+        "competing_1",
+        "other_grave_0",
+        "other_grave_1"
+      ]
+    }
+  ]
+}

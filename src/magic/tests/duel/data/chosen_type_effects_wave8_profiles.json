@@ -1,0 +1,708 @@
+{
+  "version": 1,
+  "sources": {
+    "Adaptive Automaton": {
+      "oracle": {
+        "oracle_id": "53c730c6-2f8c-4af8-b400-b9d573a71e60",
+        "name": "Adaptive Automaton",
+        "oracle_text": "As this creature enters, choose a creature type.\nThis creature is the chosen type in addition to its other types.\nOther creatures you control of the chosen type get +1/+1.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/723/adaptive-automaton?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11771,
+        "iid": 229,
+        "name": "Adaptive Automaton",
+        "handler": "manalinkeh_card_adaptive_automaton",
+        "kind": "card"
+      }
+    },
+    "Door of Destinies": {
+      "oracle": {
+        "oracle_id": "9b6d3dcf-aa5a-4516-bd48-a0723e86bfd1",
+        "name": "Door of Destinies",
+        "oracle_text": "As this artifact enters, choose a creature type.\nWhenever you cast a spell of the chosen type, put a charge counter on this artifact.\nCreatures you control of the chosen type get +1/+1 for each charge counter on this artifact.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/198/door-of-destinies?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9347,
+        "iid": 2646,
+        "name": "Door of Destinies",
+        "handler": "manalinkeh_card_door_of_destinies",
+        "kind": "card"
+      }
+    },
+    "Engineered Plague": {
+      "oracle": {
+        "oracle_id": "dc8210b4-8e17-4156-994b-e95e215e3e34",
+        "name": "Engineered Plague",
+        "oracle_text": "As this enchantment enters, choose a creature type.\nAll creatures of the chosen type get -1/-1.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/7ed/133/engineered-plague?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3987,
+        "iid": 3054,
+        "name": "Engineered Plague",
+        "handler": "manalinkeh_card_engineered_plague",
+        "kind": "card"
+      }
+    },
+    "Shared Triumph": {
+      "oracle": {
+        "oracle_id": "64d022ab-5222-4a7a-ab8a-89749560f666",
+        "name": "Shared Triumph",
+        "oracle_text": "As this enchantment enters, choose a creature type.\nCreatures of the chosen type get +1/+1.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ons/53/shared-triumph?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6257,
+        "iid": 8594,
+        "name": "Shared Triumph",
+        "handler": "manalinkeh_card_shared_triumph",
+        "kind": "card"
+      }
+    },
+    "Steely Resolve": {
+      "oracle": {
+        "oracle_id": "48c127f0-2857-4c36-97bc-1291b6fe4a82",
+        "name": "Steely Resolve",
+        "oracle_text": "As this enchantment enters, choose a creature type.\nCreatures of the chosen type have shroud. (They can't be the targets of spells or abilities.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ons/286/steely-resolve?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6285,
+        "iid": 9345,
+        "name": "Steely Resolve",
+        "handler": "manalinkeh_card_steely_resolve",
+        "kind": "card"
+      }
+    },
+    "Urza's Incubator": {
+      "oracle": {
+        "oracle_id": "b380c04b-0bce-4328-8f0a-1425e48bee72",
+        "name": "Urza's Incubator",
+        "oracle_text": "As this artifact enters, choose a creature type.\nCreature spells of the chosen type cost {2} less to cast.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh3/297/urzas-incubator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4206,
+        "iid": 10427,
+        "name": "Urza's Incubator",
+        "handler": "manalinkeh_card_urzas_incubator",
+        "kind": "card"
+      }
+    },
+    "Xenograft": {
+      "oracle": {
+        "oracle_id": "76642e7a-3c8f-45b8-9cd7-dac8086bea87",
+        "name": "Xenograft",
+        "oracle_text": "As this enchantment enters, choose a creature type.\nEach creature you control is the chosen type in addition to its other types.",
+        "mana_cost": "{4}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/51/xenograft?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11719,
+        "iid": 11152,
+        "name": "Xenograft",
+        "handler": "manalinkeh_card_xenograft",
+        "kind": "card"
+      }
+    },
+    "Metallic Mimic": {
+      "oracle": {
+        "oracle_id": "1f91297a-ec2b-4ea8-9198-aa1daac20ff8",
+        "name": "Metallic Mimic",
+        "oracle_text": "As this creature enters, choose a creature type.\nThis creature is the chosen type in addition to its other types.\nEach other creature you control of the chosen type enters with an additional +1/+1 counter on it.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Shapeshifter",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/203/metallic-mimic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16751,
+        "iid": 16844,
+        "name": "Metallic Mimic",
+        "handler": "manalinkeh_card_metallic_mimic",
+        "kind": "card"
+      }
+    },
+    "Vanquisher's Banner": {
+      "oracle": {
+        "oracle_id": "8cf38025-5821-45a0-9483-266353b7e82d",
+        "name": "Vanquisher's Banner",
+        "oracle_text": "As this artifact enters, choose a creature type.\nCreatures you control of the chosen type get +1/+1.\nWhenever you cast a creature spell of the chosen type, draw a card.",
+        "mana_cost": "{5}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lcc/316/vanquishers-banner?utm_source=api"
+      },
+      "registry": {
+        "csvid": 17577,
+        "iid": 17673,
+        "name": "Vanquisher's Banner",
+        "handler": "manalinkeh_card_vanquishers_banner",
+        "kind": "card"
+      }
+    },
+    "An-Zerrin Ruins": {
+      "oracle": {
+        "oracle_id": "f805b100-49b8-4d23-a768-e8de8bb0daa3",
+        "name": "An-Zerrin Ruins",
+        "oracle_text": "As this enchantment enters, choose a creature type.\nCreatures of the chosen type don't untap during their controllers' untap steps.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/117/an-zerrin-ruins?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2175,
+        "iid": 11503,
+        "name": "An-Zerrin Ruins",
+        "handler": "manalinkeh_card_an_zerrin_ruins",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Boggart Shenanigans": {
+      "oracle": {
+        "oracle_id": "997d2f38-5a50-451e-bd48-e36dcb24d967",
+        "name": "Boggart Shenanigans",
+        "oracle_text": "Whenever another Goblin you control is put into a graveyard from the battlefield, you may have this enchantment deal 1 damage to target player or planeswalker.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Kindred Enchantment — Goblin",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/evg/54/boggart-shenanigans?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9083,
+        "iid": 1197,
+        "name": "Boggart Shenanigans",
+        "handler": "manalinkeh_card_boggart_shenanigans",
+        "kind": "card"
+      }
+    },
+    "Boomerang": {
+      "oracle": {
+        "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+        "name": "Boomerang",
+        "oracle_text": "Return target permanent to its owner's hand.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+      },
+      "registry": {
+        "csvid": 585,
+        "iid": 1233,
+        "name": "Boomerang",
+        "handler": "manalinkeh_card_boomerang",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Goblin Goon": {
+      "oracle": {
+        "oracle_id": "e91bcf01-113b-4532-9f78-2a155b17be4f",
+        "name": "Goblin Goon",
+        "oracle_text": "This creature can't attack unless you control more creatures than defending player.\nThis creature can't block unless you control more creatures than attacking player.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Goblin Mutant",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/326/goblin-goon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6392,
+        "iid": 4008,
+        "name": "Goblin Goon",
+        "handler": "manalinkeh_card_goblin_goon",
+        "kind": "card"
+      }
+    },
+    "Goblin Roughrider": {
+      "oracle": {
+        "oracle_id": "a920d37e-e172-41f7-bfbf-c18821dcbed7",
+        "name": "Goblin Roughrider",
+        "oracle_text": "",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Goblin Knight",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/146/goblin-roughrider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10765,
+        "iid": 4040,
+        "name": "Goblin Roughrider",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Mogg Fanatic": {
+      "oracle": {
+        "oracle_id": "7efd5d62-6da2-428a-98e3-5b842f668656",
+        "name": "Mogg Fanatic",
+        "oracle_text": "Sacrifice this creature: It deals 1 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/138/mogg-fanatic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1354,
+        "iid": 6244,
+        "name": "Mogg Fanatic",
+        "handler": "manalinkeh_card_mogg_fanatic",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Pyroclasm": {
+      "oracle": {
+        "oracle_id": "e4bcd4ea-e7cd-4471-8f3b-18bb51d3d70c",
+        "name": "Pyroclasm",
+        "oracle_text": "Pyroclasm deals 2 damage to each creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/149/pyroclasm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1121,
+        "iid": 7515,
+        "name": "Pyroclasm",
+        "handler": "manalinkeh_card_pyroclasm",
+        "kind": "card"
+      }
+    },
+    "Serra Angel": {
+      "oracle": {
+        "oracle_id": "4b7ac066-e5c7-43e6-9e7e-2739b24a905d",
+        "name": "Serra Angel",
+        "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/740/serra-angel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 221,
+        "iid": 8519,
+        "name": "Serra Angel",
+        "handler": "manalinkeh_card_serra_angel",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Wind Drake": {
+      "oracle": {
+        "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+        "name": "Wind Drake",
+        "oracle_text": "Flying",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/70/wind-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1197,
+        "iid": 10989,
+        "name": "Wind Drake",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Morphling": {
+      "oracle": {
+        "oracle_id": "19f233b2-8be6-4172-abf9-b132fc3393d9",
+        "name": "Morphling",
+        "oracle_text": "{U}: Untap this creature.\n{U}: This creature gains flying until end of turn.\n{U}: This creature gains shroud until end of turn. (It can't be the target of spells or abilities.)\n{1}: This creature gets +1/-1 until end of turn.\n{1}: This creature gets -1/+1 until end of turn.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature — Shapeshifter",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/81/morphling?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1355,
+        "iid": 6327,
+        "name": "Morphling",
+        "handler": "manalinkeh_card_morphling",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Shared Triumph": {
+      "oracle": {
+        "oracle_id": "64d022ab-5222-4a7a-ab8a-89749560f666",
+        "name": "Shared Triumph",
+        "oracle_text": "As this enchantment enters, choose a creature type.\nCreatures of the chosen type get +1/+1.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ons/53/shared-triumph?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6257,
+        "iid": 8594,
+        "name": "Shared Triumph",
+        "handler": "manalinkeh_card_shared_triumph",
+        "kind": "card"
+      }
+    },
+    "Twiddle": {
+      "oracle": {
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "name": "Twiddle",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 256,
+        "iid": 10281,
+        "name": "Twiddle",
+        "handler": "manalinkeh_card_twiddle",
+        "kind": "card"
+      }
+    }
+  }
+}

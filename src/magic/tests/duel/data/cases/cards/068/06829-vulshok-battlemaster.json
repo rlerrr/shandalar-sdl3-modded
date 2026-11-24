@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Vulshok Battlemaster",
+  "csvid": 6829,
+  "recipes": [
+    {
+      "family": "entry_rider_control",
+      "version": 2,
+      "params": {
+        "csvid": 6829,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Haste\nWhen this creature enters, attach all Equipment on the battlefield to it. (Control of the Equipment doesn't change.)",
+      "variants": [
+        "both_equipment_0",
+        "both_equipment_1",
+        "pre_equipped_0",
+        "pre_equipped_1",
+        "no_equipment_0",
+        "no_equipment_1"
+      ]
+    }
+  ]
+}

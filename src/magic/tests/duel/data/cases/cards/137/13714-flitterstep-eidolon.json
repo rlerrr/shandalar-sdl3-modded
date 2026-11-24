@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Flitterstep Eidolon",
+  "csvid": 13714,
+  "recipes": [
+    {
+      "family": "bestow_evasion_and_blocking",
+      "version": 2,
+      "params": {
+        "csvid": 13714,
+        "normal": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "bestowed": [
+          5,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "creature": [
+          1,
+          1
+        ],
+        "bonus": [
+          1,
+          1
+        ]
+      },
+      "oracle_text": "Bestow {5}{U} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nThis creature can't be blocked.\nEnchanted creature gets +1/+1 and can't be blocked.",
+      "variants": [
+        "regular_0",
+        "regular_1",
+        "bestowed_0",
+        "bestowed_1",
+        "detach_0",
+        "detach_1",
+        "pending_fallback_0",
+        "pending_fallback_1"
+      ]
+    }
+  ]
+}

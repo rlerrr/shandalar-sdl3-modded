@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "card": "Elite Skirmisher",
+  "csvid": 13691,
+  "recipes": [
+    {
+      "family": "heroic_target_control_riders",
+      "version": 2,
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, you may tap target creature.",
+      "params": {
+        "effect": "tap",
+        "price": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "power": 3,
+        "toughness": 1
+      },
+      "variants": [
+        "own_0",
+        "opponent_0",
+        "other_target_0",
+        "countered_0",
+        "replay_0",
+        "own_victim_0",
+        "already_tapped_0",
+        "own_1",
+        "opponent_1",
+        "other_target_1",
+        "countered_1",
+        "replay_1",
+        "own_victim_1",
+        "already_tapped_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

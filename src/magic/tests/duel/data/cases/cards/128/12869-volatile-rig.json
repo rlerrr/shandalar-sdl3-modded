@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Volatile Rig",
+  "csvid": 12869,
+  "recipes": [
+    {
+      "family": "coin_flip_combat_flips",
+      "version": 2,
+      "params": {
+        "csvid": 12869,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Trample\nThis creature attacks each combat if able.\nWhenever this creature is dealt damage, flip a coin. If you lose the flip, sacrifice this creature.\nWhen this creature dies, flip a coin. If you lose the flip, it deals 4 damage to each creature and each player.",
+      "variants": [
+        "trample_win_0",
+        "trample_win_1",
+        "damage_sacrifice_0",
+        "damage_sacrifice_1",
+        "death_blast_0",
+        "death_blast_1",
+        "death_quiet_0",
+        "death_quiet_1",
+        "exile_instead_0",
+        "exile_instead_1"
+      ]
+    }
+  ]
+}

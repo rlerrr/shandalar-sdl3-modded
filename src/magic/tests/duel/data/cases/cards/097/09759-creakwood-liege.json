@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "card": "Creakwood Liege",
+  "csvid": 9759,
+  "recipes": [
+    {
+      "family": "upkeep_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 9759,
+        "mana_cost": "{1}{B/G}{B/G}{B/G}"
+      },
+      "oracle_text": "Other black creatures you control get +1/+1.\nOther green creatures you control get +1/+1.\nAt the beginning of your upkeep, you may create a 1/1 black and green Worm creature token.",
+      "variants": [
+        "colors_0",
+        "colors_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

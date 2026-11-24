@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Centaur Safeguard",
+  "csvid": 7789,
+  "recipes": [
+    {
+      "family": "departure_resources",
+      "version": 2,
+      "params": {
+        "csvid": 7789,
+        "printed_mana": "{2}{G/W}",
+        "rules": "({G/W} can be paid with either {G} or {W}.)\nWhen this creature dies, you may gain 3 life."
+      },
+      "oracle_text": "({G/W} can be paid with either {G} or {W}.)\nWhen this creature dies, you may gain 3 life.",
+      "variants": [
+        "green_gain_0",
+        "green_gain_1",
+        "white_gain_0",
+        "white_gain_1",
+        "green_decline_0"
+      ]
+    }
+  ]
+}

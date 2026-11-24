@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "csvid": 14341,
+  "card": "Pine Walker",
+  "recipes": [
+    {
+      "family": "morph_turn_up_team",
+      "version": 2,
+      "params": {
+        "effect": "untap",
+        "power_delta": 0,
+        "toughness_delta": 0,
+        "cast_mana": [
+          3,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "flip_mana": [
+          4,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "variable": false,
+        "power": 5,
+        "toughness": 5
+      },
+      "oracle_text": "Morph {4}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhenever this creature or another creature you control is turned face up, untap that creature.",
+      "variants": [
+        "hidden_0",
+        "faceup_0",
+        "hidden_choice_0",
+        "hidden_short_0",
+        "flip_short_0",
+        "flip_wrong_0",
+        "offturn_0",
+        "replay_0",
+        "self_attack_0",
+        "ally_flip_0",
+        "opposing_flip_0",
+        "watcher_hidden_0",
+        "hidden_1",
+        "faceup_1",
+        "hidden_choice_1",
+        "hidden_short_1",
+        "flip_short_1",
+        "flip_wrong_1",
+        "offturn_1",
+        "replay_1",
+        "self_attack_1",
+        "ally_flip_1",
+        "opposing_flip_1",
+        "watcher_hidden_1"
+      ]
+    }
+  ]
+}

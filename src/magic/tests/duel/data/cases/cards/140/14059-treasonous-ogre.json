@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 14059,
+  "card": "Treasonous Ogre",
+  "recipes": [
+    {
+      "family": "attack_follow_on_counters_and_dethrone",
+      "version": 2,
+      "params": {
+        "csvid": 14059,
+        "printed_cost": "{3}{R}"
+      },
+      "oracle_text": "Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.)\nPay 3 life: Add {R}.",
+      "variants": [
+        "tie_0",
+        "defender_behind_0",
+        "life_mana_0",
+        "mana_dethrone_0",
+        "short_life_0",
+        "tie_1",
+        "defender_behind_1",
+        "life_mana_1",
+        "mana_dethrone_1",
+        "short_life_1"
+      ]
+    }
+  ]
+}

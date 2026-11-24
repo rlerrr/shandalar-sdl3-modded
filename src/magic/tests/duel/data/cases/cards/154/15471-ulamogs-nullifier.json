@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Ulamog's Nullifier",
+  "csvid": 15471,
+  "recipes": [
+    {
+      "family": "devoid_opponent_exile_costs",
+      "version": 2,
+      "params": {
+        "model": "counter",
+        "cost": [
+          2,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "fee": null,
+        "exile_cost": 2
+      },
+      "oracle_text": "Devoid (This card has no color.)\nFlash\nFlying\nWhen this creature enters, you may put two cards your opponents own from exile into their owners' graveyards. If you do, counter target spell.",
+      "variants": [
+        "paid_0",
+        "own_exile_0",
+        "empty_0",
+        "mixed_0",
+        "replay_0",
+        "one_card_0",
+        "decline_0",
+        "no_stack_flying_0",
+        "paid_1",
+        "own_exile_1",
+        "empty_1",
+        "mixed_1",
+        "replay_1",
+        "one_card_1",
+        "decline_1",
+        "no_stack_flying_1"
+      ]
+    }
+  ]
+}

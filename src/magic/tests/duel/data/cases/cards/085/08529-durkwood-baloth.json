@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Durkwood Baloth",
+  "csvid": 8529,
+  "recipes": [
+    {
+      "family": "suspend_paid_countdown",
+      "version": 2,
+      "params": {
+        "csvid": 8529,
+        "duration": 5,
+        "effect": "ground_haste",
+        "suspend": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "normal": [
+          4,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Suspend 5—{G} (Rather than cast this card from your hand, you may pay {G} and exile it with five time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost. It has haste.)",
+      "variants": [
+        "parked_0",
+        "parked_1",
+        "countdown_0",
+        "countdown_1",
+        "unfunded_0",
+        "unfunded_1",
+        "normal_0",
+        "normal_1",
+        "normal_countered_0",
+        "normal_countered_1",
+        "replay_0",
+        "replay_1",
+        "removed_0",
+        "removed_1"
+      ]
+    }
+  ]
+}

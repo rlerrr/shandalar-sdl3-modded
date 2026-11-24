@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Raging Swordtooth",
+  "csvid": 17490,
+  "recipes": [
+    {
+      "family": "entry_trigger_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 17490,
+        "cost": "{3}{R}{G}",
+        "choices": [
+          "scope_0",
+          "scope_1",
+          "trample_0",
+          "trample_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "Trample\nWhen this creature enters, it deals 1 damage to each other creature.",
+      "variants": [
+        "scope_0",
+        "scope_1",
+        "trample_0",
+        "trample_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

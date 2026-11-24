@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Elvish Rejuvenator",
+  "csvid": 18916,
+  "recipes": [
+    {
+      "family": "entry_follow_on_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 18916,
+        "printed_mana": "{2}{G}",
+        "rules": "When this creature enters, look at the top five cards of your library. You may put a land card from among them onto the battlefield tapped. Put the rest on the bottom of your library in a random order."
+      },
+      "oracle_text": "When this creature enters, look at the top five cards of your library. You may put a land card from among them onto the battlefield tapped. Put the rest on the bottom of your library in a random order.",
+      "variants": [
+        "select_land_0",
+        "select_land_1",
+        "no_land_in_five_0",
+        "no_land_in_five_1",
+        "decline_land_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 17884,
+  "card": "Uktabi Kong",
+  "recipes": [
+    {
+      "family": "remaining_entry_turn_and_choices",
+      "version": 2,
+      "params": {
+        "csvid": 17884,
+        "printed_cost": "{5}{G}{G}{G}",
+        "keywords": [
+          "Trample"
+        ]
+      },
+      "oracle_text": "Trample\nWhen this creature enters, destroy all artifacts.\nTap two untapped Apes you control: Create a 1/1 green Ape creature token.",
+      "variants": [
+        "sweep_0",
+        "token_0",
+        "foe_apes_0",
+        "trample_0",
+        "sweep_1",
+        "token_1",
+        "foe_apes_1",
+        "trample_1"
+      ]
+    }
+  ]
+}

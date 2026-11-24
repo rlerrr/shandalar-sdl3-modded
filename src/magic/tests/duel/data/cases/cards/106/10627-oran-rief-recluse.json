@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Oran-Rief Recluse",
+  "csvid": 10627,
+  "recipes": [
+    {
+      "family": "kicker_targeted_entry",
+      "version": 2,
+      "params": {
+        "kind": "flying_creature",
+        "mana": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "kicker": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Kicker {2}{G} (You may pay an additional {2}{G} as you cast this spell.)\nReach (This creature can block creatures with flying.)\nWhen this creature enters, if it was kicked, destroy target creature with flying.",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "base_only_0",
+        "base_only_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "countered_0",
+        "countered_1",
+        "scope_0",
+        "scope_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

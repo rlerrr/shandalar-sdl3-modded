@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Dream Thief",
+  "csvid": 9770,
+  "recipes": [
+    {
+      "family": "entry_trigger_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 9770,
+        "printed_mana": "{2}{U}",
+        "rules": "Flying\nWhen this creature enters, draw a card if you've cast another blue spell this turn."
+      },
+      "oracle_text": "Flying\nWhen this creature enters, draw a card if you've cast another blue spell this turn.",
+      "variants": [
+        "blue_prior_0",
+        "blue_prior_1",
+        "rival_blue_0",
+        "rival_blue_1",
+        "flying_only_0",
+        "flying_only_1"
+      ]
+    }
+  ]
+}

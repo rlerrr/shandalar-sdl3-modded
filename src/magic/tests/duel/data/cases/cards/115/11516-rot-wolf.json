@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Rot Wolf",
+  "csvid": 11516,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "infect_combat_riders",
+      "version": 2,
+      "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nWhenever a creature dealt damage by Rot Wolf this turn dies, you may draw a card.",
+      "params": {
+        "rider": "rot_draw",
+        "mana": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 2,
+        "artifact": false
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "unblocked_0",
+        "unblocked_1",
+        "blocked_0",
+        "blocked_1",
+        "defending_0",
+        "defending_1",
+        "replay_0",
+        "replay_1",
+        "wolf_draw_0",
+        "wolf_draw_1",
+        "wolf_decline_0",
+        "wolf_decline_1",
+        "wolf_next_turn_0",
+        "wolf_next_turn_1",
+        "wolf_unrelated_0",
+        "wolf_unrelated_1"
+      ]
+    }
+  ]
+}

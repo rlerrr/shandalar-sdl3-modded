@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 13708,
+  "card": "Fated Retribution",
+  "recipes": [
+    {
+      "family": "library_scry_modes_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 13708,
+        "printed_cost": "{4}{W}{W}{W}"
+      },
+      "oracle_text": "Destroy all creatures and planeswalkers. If it's your turn, scry 2.",
+      "variants": [
+        "own_0",
+        "off_turn_0",
+        "countered_0",
+        "empty_library_0",
+        "own_1",
+        "off_turn_1",
+        "countered_1",
+        "empty_library_1"
+      ]
+    }
+  ]
+}

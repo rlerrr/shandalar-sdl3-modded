@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Yavimaya Hollow",
+  "csvid": 4211,
+  "recipes": [
+    {
+      "family": "regeneration_land_and_grants",
+      "version": 2,
+      "params": {
+        "csvid": 4211,
+        "mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{T}: Add {C}.\n{G}, {T}: Regenerate target creature.",
+      "variants": [
+        "mana_0",
+        "mana_1",
+        "green_paid_0",
+        "green_paid_1",
+        "foreign_paid_0",
+        "foreign_paid_1",
+        "heal_0",
+        "heal_1",
+        "combat_0",
+        "combat_1",
+        "terminate_0",
+        "terminate_1",
+        "spent_green_0",
+        "spent_green_1"
+      ]
+    }
+  ]
+}

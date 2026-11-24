@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Balustrade Spy",
+  "csvid": 12888,
+  "recipes": [
+    {
+      "family": "entry_rider_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 12888,
+        "printed_mana": "{3}{B}",
+        "rules": "Flying\nWhen this creature enters, target player reveals cards from the top of their library until they reveal a land card, then puts those cards into their graveyard."
+      },
+      "oracle_text": "Flying\nWhen this creature enters, target player reveals cards from the top of their library until they reveal a land card, then puts those cards into their graveyard.",
+      "variants": [
+        "opponent_land_0",
+        "opponent_land_1",
+        "self_no_land_0",
+        "self_no_land_1",
+        "opponent_empty_0",
+        "opponent_empty_1"
+      ]
+    }
+  ]
+}

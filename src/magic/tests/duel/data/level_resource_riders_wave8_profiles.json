@@ -1,0 +1,487 @@
+{
+  "version": 1,
+  "sources": {
+    "Coralhelm Commander": {
+      "oracle": {
+        "oracle_id": "0ca0a186-026d-4cec-9c23-15d94e6acca9",
+        "name": "Coralhelm Commander",
+        "oracle_text": "Level up {1} ({1}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 2-3\n3/3\nFlying\nLEVEL 4+\n4/4\nFlying\nOther Merfolk creatures you control get +1/+1.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Creature — Merfolk Soldier",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Level Up"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "leveler",
+        "scryfall_uri": "https://scryfall.com/card/lcc/148/coralhelm-commander?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10894,
+        "iid": 1964,
+        "name": "Coralhelm Commander",
+        "handler": "manalinkeh_card_coralhelm_commander",
+        "kind": "card"
+      }
+    },
+    "Hedron-Field Purists": {
+      "oracle": {
+        "oracle_id": "ecc3e2ac-6534-4350-92f4-2c1f578d854e",
+        "name": "Hedron-Field Purists",
+        "oracle_text": "Level up {2}{W} ({2}{W}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 1-4\n1/4\nIf a source would deal damage to you or a creature you control, prevent 1 of that damage.\nLEVEL 5+\n2/5\nIf a source would deal damage to you or a creature you control, prevent 2 of that damage.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "0",
+        "toughness": "3",
+        "keywords": [
+          "Level Up"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "leveler",
+        "scryfall_uri": "https://scryfall.com/card/roe/25/hedron-field-purists?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10952,
+        "iid": 4467,
+        "name": "Hedron-Field Purists",
+        "handler": "manalinkeh_card_hedron_field_purists",
+        "kind": "card"
+      }
+    },
+    "Joraga Treespeaker": {
+      "oracle": {
+        "oracle_id": "a011aefe-5853-4435-b686-179e931ba897",
+        "name": "Joraga Treespeaker",
+        "oracle_text": "Level up {1}{G} ({1}{G}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 1-4\n1/2\n{T}: Add {G}{G}.\nLEVEL 5+\n1/4\nElves you control have \"{T}: Add {G}{G}.\"",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Level Up"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "leveler",
+        "scryfall_uri": "https://scryfall.com/card/roe/190/joraga-treespeaker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10962,
+        "iid": 5080,
+        "name": "Joraga Treespeaker",
+        "handler": "manalinkeh_card_joraga_treespeaker",
+        "kind": "card"
+      }
+    },
+    "Kabira Vindicator": {
+      "oracle": {
+        "oracle_id": "c43c76d5-aa11-4fce-911a-ec60cb06ce2a",
+        "name": "Kabira Vindicator",
+        "oracle_text": "Level up {2}{W} ({2}{W}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 2-4\n3/6\nOther creatures you control get +1/+1.\nLEVEL 5+\n4/8\nOther creatures you control get +2/+2.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Human Knight",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Level Up"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "leveler",
+        "scryfall_uri": "https://scryfall.com/card/ddp/4/kabira-vindicator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10964,
+        "iid": 5125,
+        "name": "Kabira Vindicator",
+        "handler": "manalinkeh_card_kabira_vindicator",
+        "kind": "card"
+      }
+    },
+    "Lighthouse Chronologist": {
+      "oracle": {
+        "oracle_id": "b19ff0dd-2041-461f-aa62-6dc273e4bbe5",
+        "name": "Lighthouse Chronologist",
+        "oracle_text": "Level up {U} ({U}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 4-6\n2/4\nLEVEL 7+\n3/5\nAt the beginning of each end step, if it's not your turn, take an extra turn after this one.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Human Wizard",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [
+          "Level Up"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "leveler",
+        "scryfall_uri": "https://scryfall.com/card/roe/75/lighthouse-chronologist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10980,
+        "iid": 5590,
+        "name": "Lighthouse Chronologist",
+        "handler": "manalinkeh_card_lighthouse_chronologist",
+        "kind": "card"
+      }
+    },
+    "Lord of Shatterskull Pass": {
+      "oracle": {
+        "oracle_id": "d369a02b-c282-454a-9f89-480f4f5d838c",
+        "name": "Lord of Shatterskull Pass",
+        "oracle_text": "Level up {1}{R} ({1}{R}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 1-5\n6/6\nLEVEL 6+\n6/6\nWhenever this creature attacks, it deals 6 damage to each creature defending player controls.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Minotaur Shaman",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Level Up"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "leveler",
+        "scryfall_uri": "https://scryfall.com/card/roe/156/lord-of-shatterskull-pass?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10985,
+        "iid": 5688,
+        "name": "Lord of Shatterskull Pass",
+        "handler": "manalinkeh_card_lord_of_shatterskull_pass",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Dazzling Ramparts": {
+      "oracle": {
+        "oracle_id": "0527fc47-2bfc-4d02-90fa-5a1284f89a0a",
+        "name": "Dazzling Ramparts",
+        "oracle_text": "Defender\n{1}{W}, {T}: Tap target creature.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "7",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/6/dazzling-ramparts?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14247,
+        "iid": 2299,
+        "name": "Dazzling Ramparts",
+        "handler": "manalinkeh_card_dazzling_ramparts",
+        "kind": "card"
+      }
+    },
+    "Elvish Warrior": {
+      "oracle": {
+        "oracle_id": "da587161-da7e-48ae-8af6-7f02ee71afd8",
+        "name": "Elvish Warrior",
+        "oracle_text": "",
+        "mana_cost": "{G}{G}",
+        "type_line": "Creature — Elf Warrior",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/evg/5/elvish-warrior?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1703,
+        "iid": 2993,
+        "name": "Elvish Warrior",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Expedition Map": {
+      "oracle": {
+        "oracle_id": "8fcf50cd-e6d0-4516-850f-d42ee75dcc3a",
+        "name": "Expedition Map",
+        "oracle_text": "{2}, {T}, Sacrifice this artifact: Search your library for a land card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/724/expedition-map?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10537,
+        "iid": 3192,
+        "name": "Expedition Map",
+        "handler": "manalinkeh_card_expedition_map",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Horned Turtle": {
+      "oracle": {
+        "oracle_id": "7a4ae76b-6241-4fa8-b239-5ec941a0e7df",
+        "name": "Horned Turtle",
+        "oracle_text": "",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Turtle",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/53/horned-turtle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1057,
+        "iid": 4656,
+        "name": "Horned Turtle",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Merfolk of the Pearl Trident": {
+      "oracle": {
+        "oracle_id": "218d9277-c179-4de3-9c7f-79b5a6d4fa38",
+        "name": "Merfolk of the Pearl Trident",
+        "oracle_text": "",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Merfolk",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/60/merfolk-of-the-pearl-trident?utm_source=api"
+      },
+      "registry": {
+        "csvid": 160,
+        "iid": 6055,
+        "name": "Merfolk of the Pearl Trident",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Naturalize": {
+      "oracle": {
+        "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+        "name": "Naturalize",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1096,
+        "iid": 6485,
+        "name": "Naturalize",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Wind Drake": {
+      "oracle": {
+        "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+        "name": "Wind Drake",
+        "oracle_text": "Flying",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/70/wind-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1197,
+        "iid": 10989,
+        "name": "Wind Drake",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

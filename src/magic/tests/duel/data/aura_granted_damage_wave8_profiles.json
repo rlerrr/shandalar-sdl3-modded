@@ -1,0 +1,561 @@
+{
+  "sources": {
+    "Hermetic Study": {
+      "oracle": {
+        "oracle_id": "792d7818-ee5c-4254-b969-7b50f475c629",
+        "name": "Hermetic Study",
+        "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to any target.\"",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/53/hermetic-study?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3793,
+        "iid": 4517,
+        "name": "Hermetic Study",
+        "handler": "manalinkeh_card_hermetic_study",
+        "kind": "card"
+      }
+    },
+    "Power of Fire": {
+      "oracle": {
+        "oracle_id": "df4903cb-50fa-4620-8470-6a6a398fc1ef",
+        "name": "Power of Fire",
+        "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to any target.\"",
+        "mana_cost": "{1}{R}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/150/power-of-fire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9630,
+        "iid": 7314,
+        "name": "Power of Fire",
+        "handler": "manalinkeh_card_hermetic_study",
+        "kind": "card"
+      }
+    },
+    "Psionic Gift": {
+      "oracle": {
+        "oracle_id": "842bb10a-f056-4db8-a341-2d20796b99ba",
+        "name": "Psionic Gift",
+        "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to any target.\"",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ody/95/psionic-gift?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5663,
+        "iid": 14057,
+        "name": "Psionic Gift",
+        "handler": "manalinkeh_card_hermetic_study",
+        "kind": "card"
+      }
+    },
+    "Burning Anger": {
+      "oracle": {
+        "oracle_id": "a2c76ac2-5ab1-450c-b64e-e9a6c4dad1ca",
+        "name": "Burning Anger",
+        "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals damage equal to its power to any target.\"",
+        "mana_cost": "{4}{R}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/166/burning-anger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14080,
+        "iid": 1401,
+        "name": "Burning Anger",
+        "handler": "manalinkeh_card_burning_anger",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Serra Angel": {
+      "oracle": {
+        "oracle_id": "4b7ac066-e5c7-43e6-9e7e-2739b24a905d",
+        "name": "Serra Angel",
+        "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/740/serra-angel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 221,
+        "iid": 8519,
+        "name": "Serra Angel",
+        "handler": "manalinkeh_card_serra_angel",
+        "kind": "card"
+      }
+    },
+    "Shivan Dragon": {
+      "oracle": {
+        "oracle_id": "711eea87-0fa3-46e0-a42b-fa5a86455f04",
+        "name": "Shivan Dragon",
+        "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/763/shivan-dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 224,
+        "iid": 8648,
+        "name": "Shivan Dragon",
+        "handler": "manalinkeh_card_furnace_whelp",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Mogg Fanatic": {
+      "oracle": {
+        "oracle_id": "7efd5d62-6da2-428a-98e3-5b842f668656",
+        "name": "Mogg Fanatic",
+        "oracle_text": "Sacrifice this creature: It deals 1 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/138/mogg-fanatic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1354,
+        "iid": 6244,
+        "name": "Mogg Fanatic",
+        "handler": "manalinkeh_card_mogg_fanatic",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Child of Night": {
+      "oracle": {
+        "oracle_id": "c650a7bc-e350-44a0-a698-d4a233d66156",
+        "name": "Child of Night",
+        "oracle_text": "Lifelink",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Vampire",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Lifelink"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/218/child-of-night?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10398,
+        "iid": 1694,
+        "name": "Child of Night",
+        "handler": "manalinkeh_card_child_of_night",
+        "kind": "card"
+      }
+    },
+    "White Knight": {
+      "oracle": {
+        "oracle_id": "ddb021df-ae4a-4ac1-8353-d0b375761714",
+        "name": "White Knight",
+        "oracle_text": "First strike (This creature deals combat damage before creatures without first strike.)\nProtection from black (This creature can't be blocked, targeted, dealt damage, or enchanted by anything black.)",
+        "mana_cost": "{W}{W}",
+        "type_line": "Creature — Human Knight",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "First strike",
+          "Protection"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddg/9/white-knight?utm_source=api"
+      },
+      "registry": {
+        "csvid": 283,
+        "iid": 10939,
+        "name": "White Knight",
+        "handler": "manalinkeh_card_white_knight",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Disfigure": {
+      "oracle": {
+        "oracle_id": "77eafe49-b9c5-461d-89c5-cec217dd2974",
+        "name": "Disfigure",
+        "oracle_text": "Target creature gets -2/-2 until end of turn.",
+        "mana_cost": "{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bro/91/disfigure?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10530,
+        "iid": 2576,
+        "name": "Disfigure",
+        "handler": "manalinkeh_card_disfigure",
+        "kind": "card"
+      }
+    },
+    "Twiddle": {
+      "oracle": {
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "name": "Twiddle",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 256,
+        "iid": 10281,
+        "name": "Twiddle",
+        "handler": "manalinkeh_card_twiddle",
+        "kind": "card"
+      }
+    },
+    "Bazaar Trader": {
+      "oracle": {
+        "oracle_id": "21ad7067-3210-42d6-9009-0784b2834227",
+        "name": "Bazaar Trader",
+        "oracle_text": "{T}: Target player gains control of target artifact, creature, or land you control.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/72/bazaar-trader?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10729,
+        "iid": 930,
+        "name": "Bazaar Trader",
+        "handler": "manalinkeh_card_bazaar_trader",
+        "kind": "card"
+      }
+    },
+    "Wall of Tanglecord": {
+      "oracle": {
+        "oracle_id": "423bebcc-8fa0-49c4-aa22-728bf51a535b",
+        "name": "Wall of Tanglecord",
+        "oracle_text": "Defender\n{G}: This creature gains reach until end of turn. (It can block creatures with flying.)",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Wall",
+        "power": "0",
+        "toughness": "6",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/222/wall-of-tanglecord?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11409,
+        "iid": 10785,
+        "name": "Wall of Tanglecord",
+        "handler": "manalinkeh_card_wall_of_tanglecord",
+        "kind": "card"
+      }
+    }
+  }
+}

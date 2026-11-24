@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Creepy Doll",
+  "csvid": 11912,
+  "recipes": [
+    {
+      "family": "coin_flip_combat_flips",
+      "version": 2,
+      "params": {
+        "csvid": 11912,
+        "mana": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Indestructible\nWhenever this creature deals combat damage to a creature, flip a coin. If you win the flip, destroy that creature.",
+      "variants": [
+        "win_0",
+        "win_1",
+        "lose_0",
+        "lose_1",
+        "player_damage_0",
+        "player_damage_1",
+        "fight_0",
+        "fight_1",
+        "destroy_source_0",
+        "destroy_source_1"
+      ]
+    }
+  ]
+}

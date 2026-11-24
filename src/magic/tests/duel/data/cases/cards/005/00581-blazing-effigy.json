@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 581,
+  "card": "Blazing Effigy",
+  "recipes": [
+    {
+      "family": "departure_damage_and_removal",
+      "version": 2,
+      "params": {
+        "csvid": 581,
+        "printed_cost": "{1}{R}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature dies, it deals X damage to target creature, where X is 3 plus the amount of damage dealt to this creature this turn by other sources named Blazing Effigy.",
+      "variants": [
+        "death_0",
+        "chain_0",
+        "unrelated_damage_0",
+        "bounce_0",
+        "death_1",
+        "chain_1",
+        "unrelated_damage_1",
+        "bounce_1"
+      ]
+    }
+  ]
+}

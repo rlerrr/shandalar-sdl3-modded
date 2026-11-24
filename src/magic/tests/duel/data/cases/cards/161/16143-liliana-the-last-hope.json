@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 16143,
+  "card": "Liliana, the Last Hope",
+  "recipes": [
+    {
+      "family": "mill_remaining_activated_and_loyalty",
+      "version": 2,
+      "params": {
+        "csvid": 16143,
+        "printed_cost": "{1}{B}{B}"
+      },
+      "oracle_text": "+1: Up to one target creature gets -2/-1 until your next turn.\n−2: Mill two cards, then you may return a creature card from your graveyard to your hand.\n−7: You get an emblem with \"At the beginning of your end step, create X 2/2 black Zombie creature tokens, where X is two plus the number of Zombies you control.\"",
+      "variants": [
+        "weaken_0",
+        "no_target_0",
+        "mill_return_0",
+        "mill_decline_0",
+        "emblem_0",
+        "weaken_1",
+        "no_target_1",
+        "mill_return_1",
+        "mill_decline_1",
+        "emblem_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,919 @@
+{
+  "sources": {
+    "Sage of Shaila's Claim": {
+      "oracle": {
+        "oracle_id": "a0b413cc-b16f-4112-8061-2ccded7f481d",
+        "name": "Sage of Shaila's Claim",
+        "oracle_text": "When this creature enters, you get {E}{E}{E} (three energy counters).",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/168/sage-of-shailas-claim?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16502,
+        "iid": 16588,
+        "name": "Sage of Shaila's Claim",
+        "handler": "manalinkeh_card_sage_of_shailas_claim",
+        "kind": "card"
+      }
+    },
+    "Woodweaver's Puzzleknot": {
+      "oracle": {
+        "oracle_id": "3334b218-01e3-47a3-8a28-5cc2decbedea",
+        "name": "Woodweaver's Puzzleknot",
+        "oracle_text": "When this artifact enters, you gain 3 life and get {E}{E}{E} (three energy counters).\n{2}{G}, Sacrifice this artifact: You gain 3 life and get {E}{E}{E}.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/240/woodweavers-puzzleknot?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16581,
+        "iid": 16667,
+        "name": "Woodweaver's Puzzleknot",
+        "handler": "manalinkeh_card_woodweavers_puzzleknot",
+        "kind": "card"
+      }
+    },
+    "Servant of the Conduit": {
+      "oracle": {
+        "oracle_id": "df1a8846-b4da-4e9b-8cf3-ee687e4c606b",
+        "name": "Servant of the Conduit",
+        "oracle_text": "When this creature enters, you get {E}{E} (two energy counters).\n{T}, Pay {E}: Add one mana of any color.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/169/servant-of-the-conduit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16513,
+        "iid": 16599,
+        "name": "Servant of the Conduit",
+        "handler": "manalinkeh_card_servant_of_the_conduit",
+        "kind": "card"
+      }
+    },
+    "Peregrine Drake": {
+      "oracle": {
+        "oracle_id": "0bd67481-6bd9-48d6-92bd-8933b5ea1eae",
+        "name": "Peregrine Drake",
+        "oracle_text": "Flying\nWhen this creature enters, untap up to five lands.",
+        "mana_cost": "{4}{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/65/peregrine-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1343,
+        "iid": 7085,
+        "name": "Peregrine Drake",
+        "handler": "manalinkeh_card_peregrine_drake",
+        "kind": "card"
+      }
+    },
+    "Great Whale": {
+      "oracle": {
+        "oracle_id": "c43ce30a-0346-479d-8dbc-56c3872ff82a",
+        "name": "Great Whale",
+        "oracle_text": "When this creature enters, untap up to seven lands.",
+        "mana_cost": "{5}{U}{U}",
+        "type_line": "Creature — Whale",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/usg/77/great-whale?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3787,
+        "iid": 4185,
+        "name": "Great Whale",
+        "handler": "manalinkeh_card_great_whale",
+        "kind": "card"
+      }
+    },
+    "Palinchron": {
+      "oracle": {
+        "oracle_id": "0023888e-7bec-43e0-8dee-d1a4eb94b372",
+        "name": "Palinchron",
+        "oracle_text": "Flying\nWhen this creature enters, untap up to seven lands.\n{2}{U}{U}: Return this creature to its owner's hand.",
+        "mana_cost": "{5}{U}{U}",
+        "type_line": "Creature — Illusion",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/86/palinchron?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1340,
+        "iid": 6980,
+        "name": "Palinchron",
+        "handler": "manalinkeh_card_palinchron",
+        "kind": "card"
+      }
+    },
+    "Treachery": {
+      "oracle": {
+        "oracle_id": "8ed57194-7508-4aef-9373-64f7e80612d8",
+        "name": "Treachery",
+        "oracle_text": "Enchant creature\nWhen this Aura enters, untap up to five lands.\nYou control enchanted creature.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uds/50/treachery?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1341,
+        "iid": 10171,
+        "name": "Treachery",
+        "handler": "manalinkeh_card_treachery",
+        "kind": "card"
+      }
+    },
+    "Aethertorch Renegade": {
+      "oracle": {
+        "oracle_id": "7db864fe-e0b7-4b32-8706-2ad01f93f7ca",
+        "name": "Aethertorch Renegade",
+        "oracle_text": "When this creature enters, you get {E}{E}{E}{E} (four energy counters).\n{T}, Pay {E}{E}: This creature deals 1 damage to target creature.\n{T}, Pay eight {E}: This creature deals 6 damage to target player or planeswalker.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Human Rogue",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/106/aethertorch-renegade?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16277,
+        "iid": 16366,
+        "name": "Aethertorch Renegade",
+        "handler": "manalinkeh_card_aethertorch_renegade",
+        "kind": "card"
+      }
+    },
+    "Deadlock Trap": {
+      "oracle": {
+        "oracle_id": "726c911d-6543-4400-a8fa-b8a5c9f0c15d",
+        "name": "Deadlock Trap",
+        "oracle_text": "This artifact enters tapped.\nWhen this artifact enters, you get {E}{E} (two energy counters).\n{T}, Pay {E}: Tap target creature or planeswalker. Its activated abilities can't be activated this turn.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/204/deadlock-trap?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16338,
+        "iid": 16426,
+        "name": "Deadlock Trap",
+        "handler": "manalinkeh_card_deadlock_trap",
+        "kind": "card"
+      }
+    },
+    "Electrostatic Pummeler": {
+      "oracle": {
+        "oracle_id": "79676f10-9fca-4bca-acc5-6994955142b4",
+        "name": "Electrostatic Pummeler",
+        "oracle_text": "When this creature enters, you get {E}{E}{E} (three energy counters).\nPay {E}{E}{E}: This creature gets +X/+X until end of turn, where X is its power.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/210/electrostatic-pummeler?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16359,
+        "iid": 16446,
+        "name": "Electrostatic Pummeler",
+        "handler": "manalinkeh_card_electrostatic_pummerler",
+        "kind": "card"
+      }
+    },
+    "Hightide Hermit": {
+      "oracle": {
+        "oracle_id": "3689ef94-2573-4424-b52e-379656340345",
+        "name": "Hightide Hermit",
+        "oracle_text": "Defender\nWhen this creature enters, you get {E}{E}{E}{E} (four energy counters).\nPay {E}{E}: This creature can attack this turn as though it didn't have defender.",
+        "mana_cost": "{4}{U}",
+        "type_line": "Creature — Crab",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/51/hightide-hermit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16408,
+        "iid": 16495,
+        "name": "Hightide Hermit",
+        "handler": "manalinkeh_card_hightide_hermit",
+        "kind": "card"
+      }
+    },
+    "Janjeet Sentry": {
+      "oracle": {
+        "oracle_id": "fb818d43-8e5d-41aa-98f8-5826dfd5dfdb",
+        "name": "Janjeet Sentry",
+        "oracle_text": "When this creature enters, you get {E}{E} (two energy counters).\n{T}, Pay {E}{E}: You may tap or untap target artifact or creature.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Vedalken Soldier",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/53/janjeet-sentry?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16420,
+        "iid": 16507,
+        "name": "Janjeet Sentry",
+        "handler": "manalinkeh_card_janjeet_sentry",
+        "kind": "card"
+      }
+    },
+    "Lathnu Hellion": {
+      "oracle": {
+        "oracle_id": "6dd71453-63ec-4f4c-87d2-34d207398b9a",
+        "name": "Lathnu Hellion",
+        "oracle_text": "Haste\nWhen this creature enters, you get {E}{E} (two energy counters).\nAt the beginning of your end step, sacrifice this creature unless you pay {E}{E}.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Hellion",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/121/lathnu-hellion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16429,
+        "iid": 16516,
+        "name": "Lathnu Hellion",
+        "handler": "manalinkeh_card_lathnu_hellion",
+        "kind": "card"
+      }
+    },
+    "Multiform Wonder": {
+      "oracle": {
+        "oracle_id": "9849c743-9492-4a1b-83bf-1be54614b85f",
+        "name": "Multiform Wonder",
+        "oracle_text": "When this creature enters, you get {E}{E}{E} (three energy counters).\nPay {E}: This creature gains your choice of flying, vigilance, or lifelink until end of turn.\nPay {E}: This creature gets +2/-2 or -2/+2 until end of turn.",
+        "mana_cost": "{5}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/223/multiform-wonder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16455,
+        "iid": 16542,
+        "name": "Multiform Wonder",
+        "handler": "manalinkeh_card_multiform_wonder",
+        "kind": "card"
+      }
+    },
+    "Spontaneous Artist": {
+      "oracle": {
+        "oracle_id": "c0602911-7d44-4a7a-a04c-837036ed3b82",
+        "name": "Spontaneous Artist",
+        "oracle_text": "When this creature enters, you get {E} (an energy counter).\nPay {E}: Target creature gains haste until end of turn.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Human Rogue",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/134/spontaneous-artist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16534,
+        "iid": 16620,
+        "name": "Spontaneous Artist",
+        "handler": "manalinkeh_card_spontaneous_artist",
+        "kind": "card"
+      }
+    },
+    "Whirler Virtuoso": {
+      "oracle": {
+        "oracle_id": "f82da236-e567-4221-a0bc-439a0c7e2b03",
+        "name": "Whirler Virtuoso",
+        "oracle_text": "When this creature enters, you get {E}{E}{E} (three energy counters).\nPay {E}{E}{E}: Create a 1/1 colorless Thopter artifact creature token with flying.",
+        "mana_cost": "{1}{U}{R}",
+        "type_line": "Creature — Vedalken Artificer",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/190/whirler-virtuoso?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16574,
+        "iid": 16660,
+        "name": "Whirler Virtuoso",
+        "handler": "manalinkeh_card_whirler_virtuoso",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Sage of Shaila's Claim": {
+      "oracle": {
+        "oracle_id": "a0b413cc-b16f-4112-8061-2ccded7f481d",
+        "name": "Sage of Shaila's Claim",
+        "oracle_text": "When this creature enters, you get {E}{E}{E} (three energy counters).",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/168/sage-of-shailas-claim?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16502,
+        "iid": 16588,
+        "name": "Sage of Shaila's Claim",
+        "handler": "manalinkeh_card_sage_of_shailas_claim",
+        "kind": "card"
+      }
+    },
+    "Sparring Construct": {
+      "oracle": {
+        "oracle_id": "bc948e19-816b-4c13-a36b-73b3e0472dca",
+        "name": "Sparring Construct",
+        "oracle_text": "When this creature dies, put a +1/+1 counter on target creature you control.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dom/232/sparring-construct?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18513,
+        "iid": 18620,
+        "name": "Sparring Construct",
+        "handler": "manalinkeh_card_lawless_broker",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Kobolds of Kher Keep": {
+      "oracle": {
+        "oracle_id": "badf0669-9f65-44e3-bf91-6c57ac2fecff",
+        "name": "Kobolds of Kher Keep",
+        "oracle_text": "",
+        "mana_cost": "{0}",
+        "type_line": "Creature — Kobold",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/107/kobolds-of-kher-keep?utm_source=api"
+      },
+      "registry": {
+        "csvid": 704,
+        "iid": 5341,
+        "name": "Kobolds of Kher Keep",
+        "handler": "card_crimson_kobolds",
+        "kind": "card"
+      }
+    },
+    "Thriving Turtle": {
+      "oracle": {
+        "oracle_id": "85dda096-48b2-414e-8c4d-4ffa6e5dac11",
+        "name": "Thriving Turtle",
+        "oracle_text": "When this creature enters, you get {E}{E} (two energy counters).\nWhenever this creature attacks, you may pay {E}{E}. If you do, put a +1/+1 counter on it.",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Turtle",
+        "power": "0",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/66/thriving-turtle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16552,
+        "iid": 16638,
+        "name": "Thriving Turtle",
+        "handler": "manalinkeh_card_thriving_ibex",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Putrid Leech": {
+      "oracle": {
+        "oracle_id": "16b723bc-aab9-40f2-8e1b-b9c2bd2af3bc",
+        "name": "Putrid Leech",
+        "oracle_text": "Pay 2 life: This creature gets +2/+2 until end of turn. Activate only once each turn.",
+        "mana_cost": "{B}{G}",
+        "type_line": "Creature — Zombie Leech",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddm/51/putrid-leech?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10330,
+        "iid": 7502,
+        "name": "Putrid Leech",
+        "handler": "manalinkeh_card_putrid_leech",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Sol Ring": {
+      "oracle": {
+        "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+        "name": "Sol Ring",
+        "oracle_text": "{T}: Add {C}{C}.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+      },
+      "registry": {
+        "csvid": 230,
+        "iid": 8968,
+        "name": "Sol Ring",
+        "handler": "manalinkeh_card_sol_ring",
+        "kind": "card"
+      }
+    },
+    "Walking Atlas": {
+      "oracle": {
+        "oracle_id": "855a4837-7fc8-4b97-afbd-daa88e322c89",
+        "name": "Walking Atlas",
+        "oracle_text": "{T}: You may put a land card from your hand onto the battlefield.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/131/walking-atlas?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10860,
+        "iid": 10746,
+        "name": "Walking Atlas",
+        "handler": "manalinkeh_card_sakura_tribe_scout",
+        "kind": "card"
+      }
+    },
+    "Thopter": {
+      "oracle": {
+        "oracle_id": "e3c8482e-ce21-43f8-ac07-c26c01941a4d",
+        "name": "Thopter",
+        "oracle_text": "Flying",
+        "mana_cost": "",
+        "type_line": "Token Artifact Creature — Thopter",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmh3/13/thopter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18837,
+        "iid": 9894,
+        "name": "Thopter",
+        "handler": "manalinkeh_card_thopter2",
+        "kind": "card"
+      }
+    }
+  }
+}

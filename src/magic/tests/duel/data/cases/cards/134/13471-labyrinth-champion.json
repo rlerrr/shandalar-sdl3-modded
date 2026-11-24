@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "csvid": 13471,
+  "card": "Labyrinth Champion",
+  "recipes": [
+    {
+      "family": "heroic_basic_riders",
+      "version": 2,
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, this creature deals 2 damage to any target.",
+      "params": {
+        "name": "Labyrinth Champion",
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "effect": "damage",
+        "power": 2,
+        "toughness": 2,
+        "keywords": []
+      },
+      "variants": [
+        "own_0",
+        "own_1",
+        "opponent_0",
+        "opponent_1",
+        "other_target_0",
+        "other_target_1",
+        "repeat_0",
+        "repeat_1",
+        "damage_creature_0",
+        "damage_creature_1",
+        "damage_walker_0",
+        "damage_walker_1",
+        "damage_self_0",
+        "damage_self_1"
+      ]
+    }
+  ]
+}

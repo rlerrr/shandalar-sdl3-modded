@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Sidewinder Sliver",
+  "csvid": 8665,
+  "recipes": [
+    {
+      "family": "combat_flanking_composition",
+      "version": 2,
+      "oracle_text": "All Sliver creatures have flanking. (Whenever a creature without flanking blocks a Sliver, the blocking creature gets -1/-1 until end of turn.)",
+      "params": {
+        "role": "slivers",
+        "printed_mana": "{W}",
+        "intrinsic_flanking": false,
+        "grant_cost": "",
+        "grant_taps_source": false
+      },
+      "variants": [
+        "cast_payment_0",
+        "cast_unaffordable_0",
+        "countered_cast_0",
+        "normal_block_0",
+        "lethal_declaration_0",
+        "flanking_blocker_0",
+        "two_blockers_0",
+        "defending_0",
+        "unblocked_0",
+        "empty_attack_0",
+        "declared_snapshot_0",
+        "cleanup_0",
+        "friendly_sliver_0",
+        "enemy_sliver_0",
+        "non_sliver_0",
+        "sliver_blocker_0",
+        "two_sidewinders_0",
+        "grant_removed_0",
+        "cast_payment_1",
+        "cast_unaffordable_1",
+        "countered_cast_1",
+        "normal_block_1",
+        "lethal_declaration_1",
+        "flanking_blocker_1",
+        "two_blockers_1",
+        "defending_1",
+        "unblocked_1",
+        "empty_attack_1",
+        "declared_snapshot_1",
+        "cleanup_1",
+        "friendly_sliver_1",
+        "enemy_sliver_1",
+        "non_sliver_1",
+        "sliver_blocker_1",
+        "two_sidewinders_1",
+        "grant_removed_1"
+      ]
+    }
+  ]
+}

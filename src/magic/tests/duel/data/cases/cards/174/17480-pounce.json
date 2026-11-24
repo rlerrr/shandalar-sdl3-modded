@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Pounce",
+  "csvid": 17480,
+  "recipes": [
+    {
+      "family": "fight_targeted_spells",
+      "version": 2,
+      "params": {
+        "csvid": 17480,
+        "mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "timing": "Instant",
+        "boost": [
+          0,
+          0
+        ],
+        "clauses": [
+          "Target creature you control fights target creature you don't control. (Each deals damage equal to its power to the other.)"
+        ],
+        "modes": [
+          "mutual",
+          "enemy_bounced",
+          "own_bounced",
+          "no_opposing_target",
+          "offturn_response",
+          "mutual_death"
+        ]
+      },
+      "oracle_text": "Target creature you control fights target creature you don't control. (Each deals damage equal to its power to the other.)",
+      "variants": [
+        "mutual_0",
+        "mutual_1",
+        "enemy_bounced_0",
+        "enemy_bounced_1",
+        "own_bounced_0",
+        "own_bounced_1",
+        "no_opposing_target_0",
+        "no_opposing_target_1",
+        "offturn_response_0",
+        "offturn_response_1",
+        "mutual_death_0",
+        "mutual_death_1"
+      ]
+    }
+  ]
+}

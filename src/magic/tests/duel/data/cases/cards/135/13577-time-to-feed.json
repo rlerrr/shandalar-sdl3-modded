@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 13577,
+  "card": "Time to Feed",
+  "recipes": [
+    {
+      "family": "fight_two_target_and_granted",
+      "version": 2,
+      "params": {
+        "csvid": 13577,
+        "printed_cost": "{2}{G}"
+      },
+      "oracle_text": "Choose target creature an opponent controls. When that creature dies this turn, you gain 3 life. Target creature you control fights that creature. (Each deals damage equal to its power to the other.)",
+      "variants": [
+        "kill_now_0",
+        "delayed_0",
+        "expired_0",
+        "lose_own_0",
+        "lose_foe_0",
+        "other_death_0",
+        "kill_now_1",
+        "delayed_1",
+        "expired_1",
+        "lose_own_1",
+        "lose_foe_1",
+        "other_death_1"
+      ]
+    }
+  ]
+}

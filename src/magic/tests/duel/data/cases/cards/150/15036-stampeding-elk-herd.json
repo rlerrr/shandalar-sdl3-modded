@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Stampeding Elk Herd",
+  "csvid": 15036,
+  "recipes": [
+    {
+      "family": "attack_trigger_team_keywords",
+      "version": 2,
+      "params": {
+        "csvid": 15036,
+        "mana": [
+          3,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Formidable — Whenever this creature attacks, if creatures you control have total power 8 or greater, creatures you control gain trample until end of turn.",
+      "variants": [
+        "below_0",
+        "below_1",
+        "exactly_0",
+        "exactly_1",
+        "late_threshold_0",
+        "late_threshold_1"
+      ]
+    }
+  ]
+}

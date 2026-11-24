@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Mana Bloom",
+  "csvid": 12770,
+  "recipes": [
+    {
+      "family": "upkeep_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 12770,
+        "cost": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "This enchantment enters with X charge counters on it.\nRemove a charge counter from this enchantment: Add one mana of any color. Activate only once each turn.\nAt the beginning of your upkeep, if this enchantment has no charge counters on it, return it to its owner's hand.",
+      "variants": [
+        "zero_0",
+        "zero_1",
+        "one_held_0",
+        "one_held_1",
+        "one_used_0",
+        "one_used_1",
+        "two_uses_0",
+        "two_uses_1"
+      ]
+    }
+  ]
+}

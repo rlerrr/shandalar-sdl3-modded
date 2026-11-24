@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Detention Sphere",
+  "csvid": 12704,
+  "recipes": [
+    {
+      "family": "entry_follow_on_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 12704,
+        "cost": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "When this enchantment enters, you may exile target nonland permanent not named Detention Sphere and all other permanents with the same name as that permanent.\nWhen this enchantment leaves the battlefield, return the exiled cards to the battlefield under their owner's control.",
+      "variants": [
+        "same_name_0",
+        "same_name_1",
+        "decline_0",
+        "decline_1",
+        "land_only_0",
+        "land_only_1",
+        "excluded_name_0",
+        "excluded_name_1"
+      ]
+    }
+  ]
+}

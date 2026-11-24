@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "card": "Explorer's Scope",
+  "csvid": 10538,
+  "recipes": [
+    {
+      "family": "equipment_combat_attack_land_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 10538,
+        "spell_fee": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "equip_fee": 1,
+        "static_bonus": [
+          0,
+          0
+        ],
+        "rules": "Whenever equipped creature attacks, look at the top card of your library. If it's a land card, you may put it onto the battlefield tapped.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)"
+      },
+      "oracle_text": "Whenever equipped creature attacks, look at the top card of your library. If it's a land card, you may put it onto the battlefield tapped.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "variants": [
+        "take_land_0",
+        "take_land_1",
+        "nonland_0",
+        "nonland_1",
+        "empty_0",
+        "empty_1",
+        "decline_land_0"
+      ]
+    }
+  ]
+}

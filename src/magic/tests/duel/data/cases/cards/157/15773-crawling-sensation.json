@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Crawling Sensation",
+  "csvid": 15773,
+  "recipes": [
+    {
+      "family": "mill_remaining_phase_and_mill_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 15773,
+        "printed_mana": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "rules": "At the beginning of your upkeep, you may mill two cards. (You may put the top two cards of your library into your graveyard.)\nWhenever one or more land cards are put into your graveyard from anywhere for the first time each turn, create a 1/1 green Insect creature token."
+      },
+      "oracle_text": "At the beginning of your upkeep, you may mill two cards. (You may put the top two cards of your library into your graveyard.)\nWhenever one or more land cards are put into your graveyard from anywhere for the first time each turn, create a 1/1 green Insect creature token.",
+      "variants": [
+        "upkeep_and_external_0",
+        "upkeep_and_external_1",
+        "own_land_only_0",
+        "own_land_only_1"
+      ]
+    }
+  ]
+}

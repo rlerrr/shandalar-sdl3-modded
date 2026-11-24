@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "card": "Titan's Revenge",
+  "csvid": 9450,
+  "recipes": [
+    {
+      "family": "pending_spell_composition",
+      "version": 2,
+      "oracle_text": "Titan's Revenge deals X damage to any target. Clash with an opponent. If you win, return Titan's Revenge to its owner's hand. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",
+      "params": {
+        "effect": "damage_x",
+        "mana": "{X}{R}{R}"
+      },
+      "variants": [
+        "win_0",
+        "win_1",
+        "tie_0",
+        "tie_1",
+        "loss_0",
+        "loss_1",
+        "human_bottom_0",
+        "human_bottom_1",
+        "snapshot_0",
+        "snapshot_1",
+        "x_zero_0",
+        "x_zero_1",
+        "creature_0",
+        "creature_1",
+        "walker_0",
+        "walker_1",
+        "own_player_0",
+        "own_player_1",
+        "fizzle_0",
+        "fizzle_1",
+        "recast_0",
+        "recast_1",
+        "short_color_0",
+        "short_color_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Mossbridge Troll",
+  "csvid": 9610,
+  "recipes": [
+    {
+      "family": "regeneration_conditional",
+      "version": 2,
+      "params": {
+        "csvid": 9610,
+        "printed_mana": [
+          5,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "rules": "If this creature would be destroyed, regenerate it.\nTap any number of untapped creatures you control other than this creature with total power 10 or greater: This creature gets +20/+20 until end of turn."
+      },
+      "oracle_text": "If this creature would be destroyed, regenerate it.\nTap any number of untapped creatures you control other than this creature with total power 10 or greater: This creature gets +20/+20 until end of turn.",
+      "variants": [
+        "automatic_0",
+        "automatic_1",
+        "pump_ten_0",
+        "pump_ten_1",
+        "power_short_0",
+        "power_short_1",
+        "cannot_regenerate_0",
+        "cannot_regenerate_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Palace Siege",
+  "csvid": 14601,
+  "recipes": [
+    {
+      "family": "graveyard_return_cost_modes",
+      "version": 2,
+      "params": {
+        "model": "siege",
+        "cost": [
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "destination": "hand"
+      },
+      "oracle_text": "As this enchantment enters, choose Khans or Dragons.\n• Khans — At the beginning of your upkeep, return target creature card from your graveyard to your hand.\n• Dragons — At the beginning of your upkeep, each opponent loses 2 life and you gain 2 life.",
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "opponent_grave_0",
+        "shroud_0",
+        "replay_0",
+        "repeat_0",
+        "empty_0",
+        "opponent_upkeep_0",
+        "dragons_0",
+        "dragons_repeat_0",
+        "dragons_empty_0",
+        "dragons_opponent_0",
+        "countered_0",
+        "underpaid_0",
+        "effect_1",
+        "alternate_1",
+        "opponent_grave_1",
+        "shroud_1",
+        "replay_1",
+        "repeat_1",
+        "empty_1",
+        "opponent_upkeep_1",
+        "dragons_1",
+        "dragons_repeat_1",
+        "dragons_empty_1",
+        "dragons_opponent_1",
+        "countered_1",
+        "underpaid_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Tooth of Chiss-Goria",
+  "csvid": 6814,
+  "recipes": [
+    {
+      "family": "artifact_affinity",
+      "version": 2,
+      "params": {
+        "role": "pump",
+        "printed": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "draw_count": 0,
+        "flash": true,
+        "power_pump": 1,
+        "dynamic_artifact_size": false
+      },
+      "oracle_text": "Flash\nAffinity for artifacts (This spell costs {1} less to cast for each artifact you control.)\n{T}: Target creature gets +1/+0 until end of turn.",
+      "variants": [
+        "reduced_cast_0",
+        "floor_cast_0",
+        "flash_response_0",
+        "flash_combat_response_0",
+        "pump_attack_0",
+        "enemy_pump_0",
+        "tapped_denied_0",
+        "no_target_0",
+        "reduced_cast_1",
+        "floor_cast_1",
+        "flash_response_1",
+        "flash_combat_response_1",
+        "pump_attack_1",
+        "enemy_pump_1",
+        "tapped_denied_1",
+        "no_target_1"
+      ]
+    }
+  ]
+}

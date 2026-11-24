@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Ring of Evos Isle",
+  "csvid": 12606,
+  "recipes": [
+    {
+      "family": "ring_equipment_upkeep",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "color": "blue",
+        "effect": "hexproof",
+        "equip": 1,
+        "active_cost": 2
+      },
+      "oracle_text": "{2}: Equipped creature gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)\nAt the beginning of your upkeep, put a +1/+1 counter on equipped creature if it's blue.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "variants": [
+        "growth_twice_0",
+        "wrong_color_0",
+        "unattached_0",
+        "move_to_match_0",
+        "move_to_nonmatch_0",
+        "equip_unfunded_0",
+        "equip_wrong_controller_0",
+        "equip_wrong_type_0",
+        "equip_offturn_0",
+        "equip_target_leaves_0",
+        "equipment_removed_0",
+        "pending_equip_replay_0",
+        "hexproof_offturn_0",
+        "hexproof_unfunded_0",
+        "hexproof_moved_0",
+        "growth_twice_1",
+        "wrong_color_1",
+        "unattached_1",
+        "move_to_match_1",
+        "move_to_nonmatch_1",
+        "equip_unfunded_1",
+        "equip_wrong_controller_1",
+        "equip_wrong_type_1",
+        "equip_offturn_1",
+        "equip_target_leaves_1",
+        "equipment_removed_1",
+        "pending_equip_replay_1",
+        "hexproof_offturn_1",
+        "hexproof_unfunded_1",
+        "hexproof_moved_1"
+      ]
+    }
+  ]
+}

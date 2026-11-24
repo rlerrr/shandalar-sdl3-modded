@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Riftsweeper",
+  "csvid": 9003,
+  "recipes": [
+    {
+      "family": "entry_follow_on_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 9003,
+        "cost": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, choose target face-up exiled card. Its owner shuffles it into their library.",
+      "variants": [
+        "own_only_0",
+        "own_only_1",
+        "foe_only_0",
+        "foe_only_1",
+        "choose_own_0",
+        "choose_own_1",
+        "choose_foe_0",
+        "choose_foe_1",
+        "none_0",
+        "none_1",
+        "hidden_only_0",
+        "hidden_only_1",
+        "hidden_plus_face_up_0",
+        "hidden_plus_face_up_1"
+      ]
+    }
+  ]
+}

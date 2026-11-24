@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "card": "Ishkanah, Grafwidow",
+  "csvid": 16136,
+  "recipes": [
+    {
+      "family": "delirium_tokens_and_board",
+      "version": 2,
+      "params": {
+        "csvid": 16136,
+        "branch": "ishkanah",
+        "mana": [
+          4,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Reach\nDelirium — When Ishkanah enters, if there are four or more card types among cards in your graveyard, create three 1/2 green Spider creature tokens with reach.\n{6}{B}: Target opponent loses 1 life for each Spider you control.",
+      "variants": [
+        "three_duplicates_0",
+        "three_duplicates_1",
+        "four_types_0",
+        "four_types_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "spider_reach_0",
+        "spider_reach_1",
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "countered_0",
+        "countered_1",
+        "gain_fourth_0",
+        "gain_fourth_1"
+      ]
+    }
+  ]
+}

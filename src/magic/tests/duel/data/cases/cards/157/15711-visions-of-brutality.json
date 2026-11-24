@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Visions of Brutality",
+  "csvid": 15711,
+  "recipes": [
+    {
+      "family": "devoid_cast_payments_and_targets",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\nEnchant creature\nEnchanted creature can't block.\nWhenever enchanted creature deals damage, its controller loses that much life.",
+      "params": {
+        "effect": "aura",
+        "price": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": null,
+        "toughness": null
+      },
+      "variants": [
+        "wrong_base_0",
+        "noncombat_0",
+        "combat_0",
+        "cant_block_0",
+        "own_host_0",
+        "other_source_0",
+        "no_creature_0",
+        "replay_0",
+        "wrong_base_1",
+        "noncombat_1",
+        "combat_1",
+        "cant_block_1",
+        "own_host_1",
+        "other_source_1",
+        "no_creature_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

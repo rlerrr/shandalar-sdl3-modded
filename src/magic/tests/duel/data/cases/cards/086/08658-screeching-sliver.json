@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Screeching Sliver",
+  "csvid": 8658,
+  "recipes": [
+    {
+      "family": "mill_remaining_costs_and_grants",
+      "version": 2,
+      "params": {
+        "csvid": 8658,
+        "mana": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "All Slivers have \"{T}: Target player mills a card.\"",
+      "variants": [
+        "cast_0",
+        "cast_1",
+        "countered_0",
+        "countered_1",
+        "no_printed_hand_ability_0",
+        "no_printed_hand_ability_1"
+      ]
+    }
+  ]
+}

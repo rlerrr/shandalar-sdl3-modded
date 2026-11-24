@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Goblin Kites",
+  "csvid": 1784,
+  "recipes": [
+    {
+      "family": "coin_flip_conditional_activation",
+      "version": 2,
+      "params": {
+        "csvid": 1784,
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "{R}: Target creature you control with toughness 2 or less gains flying until end of turn. Flip a coin at the beginning of the next end step. If you lose the flip, sacrifice that creature.",
+      "variants": [
+        "win_0",
+        "win_1",
+        "lose_0",
+        "lose_1",
+        "only_illegal_0",
+        "only_illegal_1"
+      ]
+    }
+  ]
+}

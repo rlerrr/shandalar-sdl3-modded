@@ -1,0 +1,354 @@
+{
+  "version": 1,
+  "sources": {
+    "Land Cap": {
+      "oracle": {
+        "oracle_id": "bfec4d0a-3792-4bc3-bae1-e639da5bb9a6",
+        "name": "Land Cap",
+        "oracle_text": "This land doesn't untap during your untap step if it has a depletion counter on it.\nAt the beginning of your upkeep, remove a depletion counter from this land.\n{T}: Add {W} or {U}. Put a depletion counter on this land.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ice/357/land-cap?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2012,
+        "iid": 13352,
+        "name": "Land Cap",
+        "handler": "manalinkeh_card_land_cap",
+        "kind": "card"
+      }
+    },
+    "Lava Tubes": {
+      "oracle": {
+        "oracle_id": "2ffb2647-60bb-4916-b919-cbcf18e5e424",
+        "name": "Lava Tubes",
+        "oracle_text": "This land doesn't untap during your untap step if it has a depletion counter on it.\nAt the beginning of your upkeep, remove a depletion counter from this land.\n{T}: Add {B} or {R}. Put a depletion counter on this land.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ice/358/lava-tubes?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2015,
+        "iid": 13370,
+        "name": "Lava Tubes",
+        "handler": "manalinkeh_card_land_cap",
+        "kind": "card"
+      }
+    },
+    "River Delta": {
+      "oracle": {
+        "oracle_id": "4c6c064c-da61-4c7a-9607-8fb4490ff9a6",
+        "name": "River Delta",
+        "oracle_text": "This land doesn't untap during your untap step if it has a depletion counter on it.\nAt the beginning of your upkeep, remove a depletion counter from this land.\n{T}: Add {U} or {B}. Put a depletion counter on this land.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ice/359/river-delta?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2082,
+        "iid": 14277,
+        "name": "River Delta",
+        "handler": "manalinkeh_card_land_cap",
+        "kind": "card"
+      }
+    },
+    "Timberline Ridge": {
+      "oracle": {
+        "oracle_id": "a597d2b7-484b-4cfd-89a6-d166cb1a3420",
+        "name": "Timberline Ridge",
+        "oracle_text": "This land doesn't untap during your untap step if it has a depletion counter on it.\nAt the beginning of your upkeep, remove a depletion counter from this land.\n{T}: Add {R} or {G}. Put a depletion counter on this land.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ice/361/timberline-ridge?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2132,
+        "iid": 15110,
+        "name": "Timberline Ridge",
+        "handler": "manalinkeh_card_land_cap",
+        "kind": "card"
+      }
+    },
+    "Veldt": {
+      "oracle": {
+        "oracle_id": "10b9bfb3-c478-45c6-b227-9c66b63bc79b",
+        "name": "Veldt",
+        "oracle_text": "This land doesn't untap during your untap step if it has a depletion counter on it.\nAt the beginning of your upkeep, remove a depletion counter from this land.\n{T}: Add {G} or {W}. Put a depletion counter on this land.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ice/363/veldt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2143,
+        "iid": 15299,
+        "name": "Veldt",
+        "handler": "manalinkeh_card_land_cap",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Walking Atlas": {
+      "oracle": {
+        "oracle_id": "855a4837-7fc8-4b97-afbd-daa88e322c89",
+        "name": "Walking Atlas",
+        "oracle_text": "{T}: You may put a land card from your hand onto the battlefield.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/131/walking-atlas?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10860,
+        "iid": 10746,
+        "name": "Walking Atlas",
+        "handler": "manalinkeh_card_sakura_tribe_scout",
+        "kind": "card"
+      }
+    },
+    "Twiddle": {
+      "oracle": {
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "name": "Twiddle",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 256,
+        "iid": 10281,
+        "name": "Twiddle",
+        "handler": "manalinkeh_card_twiddle",
+        "kind": "card"
+      }
+    },
+    "Boomerang": {
+      "oracle": {
+        "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+        "name": "Boomerang",
+        "oracle_text": "Return target permanent to its owner's hand.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+      },
+      "registry": {
+        "csvid": 585,
+        "iid": 1233,
+        "name": "Boomerang",
+        "handler": "manalinkeh_card_boomerang",
+        "kind": "card"
+      }
+    },
+    "Typhoid Rats": {
+      "oracle": {
+        "oracle_id": "d6ee6cc1-902d-4f56-afa5-6fa4813bfbbc",
+        "name": "Typhoid Rats",
+        "oracle_text": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Rat",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Deathtouch"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frf/89/typhoid-rats?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12106,
+        "iid": 10299,
+        "name": "Typhoid Rats",
+        "handler": "manalinkeh_card_deadly_recluse",
+        "kind": "card"
+      }
+    },
+    "Merfolk of the Pearl Trident": {
+      "oracle": {
+        "oracle_id": "218d9277-c179-4de3-9c7f-79b5a6d4fa38",
+        "name": "Merfolk of the Pearl Trident",
+        "oracle_text": "",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Merfolk",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/60/merfolk-of-the-pearl-trident?utm_source=api"
+      },
+      "registry": {
+        "csvid": 160,
+        "iid": 6055,
+        "name": "Merfolk of the Pearl Trident",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Jungle Lion": {
+      "oracle": {
+        "oracle_id": "45b42694-9ee8-44f3-9de3-aa2c0f1b6a13",
+        "name": "Jungle Lion",
+        "oracle_text": "This creature can't block.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Cat",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/125/jungle-lion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2867,
+        "iid": 5104,
+        "name": "Jungle Lion",
+        "handler": "manalinkeh_card_jungle_lion",
+        "kind": "card"
+      }
+    },
+    "Raging Goblin": {
+      "oracle": {
+        "oracle_id": "30997b43-fc13-41d3-8064-1ccc2cb6fd2b",
+        "name": "Raging Goblin",
+        "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin Berserker",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/oana/43/raging-goblin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1122,
+        "iid": 7591,
+        "name": "Raging Goblin",
+        "handler": "manalinkeh_card_ambush_party",
+        "kind": "card"
+      }
+    },
+    "Savannah Lions": {
+      "oracle": {
+        "oracle_id": "60ba93eb-39e6-4af2-9c66-cd38f72daff2",
+        "name": "Savannah Lions",
+        "oracle_text": "",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Cat",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/146/savannah-lions?utm_source=api"
+      },
+      "registry": {
+        "csvid": 213,
+        "iid": 8272,
+        "name": "Savannah Lions",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    }
+  }
+}

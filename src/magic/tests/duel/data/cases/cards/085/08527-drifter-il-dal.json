@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "card": "Drifter il-Dal",
+  "csvid": 8527,
+  "recipes": [
+    {
+      "family": "upkeep_pay_or_sacrifice_creature",
+      "version": 2,
+      "params": {
+        "upkeep_mana": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "cast_mana": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "keywords": [
+          "Shadow"
+        ],
+        "power": 2,
+        "toughness": 1
+      },
+      "oracle_text": "Shadow (This creature can block or be blocked by only creatures with shadow.)\nAt the beginning of your upkeep, sacrifice this creature unless you pay {U}.",
+      "variants": [
+        "cast_payment_0",
+        "cast_short_0",
+        "cast_wrong_color_0",
+        "pay_0",
+        "decline_0",
+        "short_0",
+        "wrong_color_0",
+        "opponent_upkeep_0",
+        "opponent_funds_0",
+        "repeat_pay_0",
+        "repeat_decline_0",
+        "repeat_short_0",
+        "in_hand_0",
+        "cast_after_upkeep_0",
+        "destroy_before_0",
+        "control_pay_0",
+        "control_short_0",
+        "untap_replay_0",
+        "paid_replay_0",
+        "fresh_attack_0",
+        "pay_attack_0",
+        "attack_ground_0",
+        "sacrifice_indestructible_0",
+        "attack_shadow_0",
+        "defend_shadow_0",
+        "defend_ground_0",
+        "cast_payment_1",
+        "cast_short_1",
+        "cast_wrong_color_1",
+        "pay_1",
+        "decline_1",
+        "short_1",
+        "wrong_color_1",
+        "opponent_upkeep_1",
+        "opponent_funds_1",
+        "repeat_pay_1",
+        "repeat_decline_1",
+        "repeat_short_1",
+        "in_hand_1",
+        "cast_after_upkeep_1",
+        "destroy_before_1",
+        "control_pay_1",
+        "control_short_1",
+        "untap_replay_1",
+        "paid_replay_1",
+        "fresh_attack_1",
+        "pay_attack_1",
+        "attack_ground_1",
+        "sacrifice_indestructible_1",
+        "attack_shadow_1",
+        "defend_shadow_1",
+        "defend_ground_1",
+        "cancel_0"
+      ]
+    }
+  ]
+}

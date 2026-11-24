@@ -1,0 +1,507 @@
+{
+  "version": 1,
+  "sources": {
+    "Portent": {
+      "oracle": {
+        "oracle_id": "e744dbb6-2d56-462a-8d49-d79c73944048",
+        "name": "Portent",
+        "oracle_text": "Look at the top three cards of target player's library, then put them back in any order. You may have that player shuffle.\nDraw a card at the beginning of the next turn's upkeep.",
+        "mana_cost": "{U}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/74/portent?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2068,
+        "iid": 7300,
+        "name": "Portent",
+        "handler": "manalinkeh_card_portent",
+        "kind": "card"
+      }
+    },
+    "Gravebind": {
+      "oracle": {
+        "oracle_id": "0ce01e24-42db-42db-9ba2-38f653383991",
+        "name": "Gravebind",
+        "oracle_text": "Target creature can't be regenerated this turn.\nDraw a card at the beginning of the next turn's upkeep.",
+        "mana_cost": "{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/84/gravebind?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1959,
+        "iid": 12885,
+        "name": "Gravebind",
+        "handler": "manalinkeh_card_gravebind",
+        "kind": "card"
+      }
+    },
+    "Headstone": {
+      "oracle": {
+        "oracle_id": "cbf767d4-9be4-417a-bbf7-0c72ede727b4",
+        "name": "Headstone",
+        "oracle_text": "Exile target card from a graveyard.\nDraw a card at the beginning of the next turn's upkeep.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hml/52/headstone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2212,
+        "iid": 12989,
+        "name": "Headstone",
+        "handler": "manalinkeh_card_headstone",
+        "kind": "card"
+      }
+    },
+    "Prophecy": {
+      "oracle": {
+        "oracle_id": "8dcf15fd-f000-4424-b74c-22fc2642b8c3",
+        "name": "Prophecy",
+        "oracle_text": "Reveal the top card of target opponent's library. If it's a land, you gain 1 life. Then that player shuffles.\nDraw a card at the beginning of the next turn's upkeep.",
+        "mana_cost": "{W}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hml/11/prophecy?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2228,
+        "iid": 14052,
+        "name": "Prophecy",
+        "handler": "manalinkeh_card_prophecy",
+        "kind": "card"
+      }
+    },
+    "Ray of Erasure": {
+      "oracle": {
+        "oracle_id": "29d828fa-a813-48f6-8dcb-43f6047b88a3",
+        "name": "Ray of Erasure",
+        "oracle_text": "Target player mills a card.\nDraw a card at the beginning of the next turn's upkeep.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ice/93/ray-of-erasure?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2076,
+        "iid": 14147,
+        "name": "Ray of Erasure",
+        "handler": "manalinkeh_card_ray_of_erasure",
+        "kind": "card"
+      }
+    },
+    "Touch of Death": {
+      "oracle": {
+        "oracle_id": "52a768eb-16eb-4643-b8be-7a4b5b32f28b",
+        "name": "Touch of Death",
+        "oracle_text": "Touch of Death deals 1 damage to target player or planeswalker. You gain 1 life.\nDraw a card at the beginning of the next turn's upkeep.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5ed/200/touch-of-death?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2137,
+        "iid": 15146,
+        "name": "Touch of Death",
+        "handler": "manalinkeh_card_touch_of_death",
+        "kind": "card"
+      }
+    },
+    "Updraft": {
+      "oracle": {
+        "oracle_id": "ff0d5cbe-99d3-4d3b-9a5b-80223fc18869",
+        "name": "Updraft",
+        "oracle_text": "Target creature gains flying until end of turn.\nDraw a card at the beginning of the next turn's upkeep.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5ed/133/updraft?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2141,
+        "iid": 15255,
+        "name": "Updraft",
+        "handler": "manalinkeh_card_updraft",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Cremate": {
+      "oracle": {
+        "oracle_id": "c6a2e410-b182-48d1-aeb2-bc8de27e9cd2",
+        "name": "Cremate",
+        "oracle_text": "Exile target card from a graveyard.\nDraw a card.",
+        "mana_cost": "{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rtr/59/cremate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4967,
+        "iid": 2046,
+        "name": "Cremate",
+        "handler": "manalinkeh_card_cremate",
+        "kind": "card"
+      }
+    },
+    "Drudge Skeletons": {
+      "oracle": {
+        "oracle_id": "c180ed02-07f4-4538-9bea-8c249234a8e2",
+        "name": "Drudge Skeletons",
+        "oracle_text": "{B}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Skeleton",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Heal",
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gvl/36/drudge-skeletons?utm_source=api"
+      },
+      "registry": {
+        "csvid": 70,
+        "iid": 2782,
+        "name": "Drudge Skeletons",
+        "handler": "manalinkeh_card_drudge_skeletons",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    }
+  }
+}

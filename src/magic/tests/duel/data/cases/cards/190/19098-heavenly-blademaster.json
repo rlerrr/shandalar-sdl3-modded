@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Heavenly Blademaster",
+  "csvid": 19098,
+  "recipes": [
+    {
+      "family": "remaining_entry_attachments",
+      "version": 2,
+      "params": {
+        "csvid": 19098,
+        "mana_cost": "{5}{W}"
+      },
+      "oracle_text": "Flying, double strike\nWhen this creature enters, you may attach any number of Auras and Equipment you control to it.\nOther creatures you control get +1/+1 for each Aura and Equipment attached to this creature.",
+      "variants": [
+        "both_0",
+        "both_1",
+        "subset_0",
+        "subset_1",
+        "foreign_equipment_0",
+        "foreign_equipment_1"
+      ]
+    }
+  ]
+}

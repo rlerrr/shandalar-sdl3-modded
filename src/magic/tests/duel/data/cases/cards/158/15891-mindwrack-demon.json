@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "csvid": 15891,
+  "card": "Mindwrack Demon",
+  "recipes": [
+    {
+      "family": "delirium_upkeep_and_entry",
+      "version": 2,
+      "oracle_text": "Flying, trample\nWhen this creature enters, mill four cards.\nDelirium — At the beginning of your upkeep, you lose 4 life unless there are four or more card types among cards in your graveyard.",
+      "params": {
+        "effect": "self_mill_life",
+        "csvid": 15891,
+        "printed": [
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "three_types_0",
+        "four_types_0",
+        "opponent_only_0",
+        "wrong_color_0",
+        "crossing_0",
+        "replay_0",
+        "three_types_1",
+        "four_types_1",
+        "opponent_only_1",
+        "wrong_color_1",
+        "crossing_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

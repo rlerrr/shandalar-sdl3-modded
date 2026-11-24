@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 6633,
+  "card": "Clockwork Beetle",
+  "recipes": [
+    {
+      "family": "attack_follow_on_counters_and_dethrone",
+      "version": 2,
+      "params": {
+        "csvid": 6633,
+        "printed_cost": "{1}"
+      },
+      "oracle_text": "This creature enters with two +1/+1 counters on it.\nWhenever this creature attacks or blocks, remove a +1/+1 counter from it at end of combat.",
+      "variants": [
+        "attack_0",
+        "block_0",
+        "idle_0",
+        "spent_0",
+        "attack_1",
+        "block_1",
+        "idle_1",
+        "spent_1"
+      ]
+    }
+  ]
+}

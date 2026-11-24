@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Staff of Nin",
+  "csvid": 12623,
+  "recipes": [
+    {
+      "family": "upkeep_draw_and_discard",
+      "version": 2,
+      "params": {
+        "csvid": 12623,
+        "printed_mana": "{6}",
+        "rules": "At the beginning of your upkeep, draw a card.\n{T}: This artifact deals 1 damage to any target."
+      },
+      "oracle_text": "At the beginning of your upkeep, draw a card.\n{T}: This artifact deals 1 damage to any target.",
+      "variants": [
+        "draw_and_ping_0",
+        "draw_and_ping_1",
+        "creature_ping_0",
+        "creature_ping_1"
+      ]
+    }
+  ]
+}

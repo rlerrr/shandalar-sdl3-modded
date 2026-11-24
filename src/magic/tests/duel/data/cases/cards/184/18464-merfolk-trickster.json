@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Merfolk Trickster",
+  "csvid": 18464,
+  "recipes": [
+    {
+      "family": "flash_entry_battlefield_targeting",
+      "version": 2,
+      "params": {
+        "csvid": 18464,
+        "cost": [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          2,
+          2
+        ],
+        "clauses": [
+          "Flash",
+          "When this creature enters, tap target creature an opponent controls. It loses all abilities until end of turn."
+        ],
+        "modes": [
+          "remove_ability",
+          "already_tapped",
+          "no_opposing_creature"
+        ]
+      },
+      "oracle_text": "Flash\nWhen this creature enters, tap target creature an opponent controls. It loses all abilities until end of turn.",
+      "variants": [
+        "remove_ability_0",
+        "remove_ability_1",
+        "already_tapped_0",
+        "already_tapped_1",
+        "no_opposing_creature_0",
+        "no_opposing_creature_1"
+      ]
+    }
+  ]
+}

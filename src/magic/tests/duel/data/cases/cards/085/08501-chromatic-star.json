@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Chromatic Star",
+  "csvid": 8501,
+  "recipes": [
+    {
+      "family": "departure_resources",
+      "version": 2,
+      "params": {
+        "csvid": 8501,
+        "printed_mana": "{1}",
+        "rules": "{1}, {T}, Sacrifice this artifact: Add one mana of any color.\nWhen this artifact is put into a graveyard from the battlefield, draw a card."
+      },
+      "oracle_text": "{1}, {T}, Sacrifice this artifact: Add one mana of any color.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+      "variants": [
+        "paid_red_0",
+        "paid_red_1",
+        "paid_black_0",
+        "paid_black_1",
+        "unfunded_0",
+        "unfunded_1",
+        "destroy_draw_0",
+        "destroy_draw_1",
+        "exile_0",
+        "exile_1"
+      ]
+    }
+  ]
+}

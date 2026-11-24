@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "csvid": 18894,
+  "card": "Chromium, the Mutable",
+  "recipes": [
+    {
+      "family": "flash_remaining_casting_and_counterability",
+      "version": 2,
+      "params": {
+        "csvid": 18894,
+        "mana": [
+          4,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "stats": [
+          7,
+          7
+        ]
+      },
+      "oracle_text": "Flash\nThis spell can't be countered.\nFlying\nDiscard a card: Until end of turn, Chromium becomes a Human with base power and toughness 1/1, loses all abilities, and gains hexproof. It can't be blocked this turn.",
+      "variants": [
+        "counter_0",
+        "counter_1",
+        "shift_0",
+        "shift_1",
+        "shift_defends_0",
+        "shift_defends_1",
+        "flight_0",
+        "flight_1",
+        "empty_hand_0",
+        "empty_hand_1"
+      ]
+    }
+  ]
+}

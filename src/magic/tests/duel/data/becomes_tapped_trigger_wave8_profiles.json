@@ -1,0 +1,509 @@
+{
+  "sources": {
+    "Fallowsage": {
+      "csvid": 9131,
+      "handler": "manalinkeh_card_fallowsage",
+      "oracle": {
+        "oracle_id": "b9d018ff-de27-4bf6-9cc6-9d9a46db3eb9",
+        "name": "Fallowsage",
+        "oracle_text": "Whenever this creature becomes tapped, you may draw a card.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Merfolk Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/moc/223/fallowsage?utm_source=api"
+      }
+    },
+    "Vampire Envoy": {
+      "csvid": 15708,
+      "handler": "manalinkeh_card_vampire_envoy",
+      "oracle": {
+        "oracle_id": "cfc50aef-b17b-4fc1-af07-fe43b89689b7",
+        "name": "Vampire Envoy",
+        "oracle_text": "Flying\nWhenever this creature becomes tapped, you gain 1 life.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Vampire Cleric Ally",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/92/vampire-envoy?utm_source=api"
+      }
+    },
+    "Night Market Lookout": {
+      "csvid": 16458,
+      "handler": "manalinkeh_card_night_market_lookout",
+      "oracle": {
+        "oracle_id": "5f5c5f59-1cc0-4a72-863c-c26db411f114",
+        "name": "Night Market Lookout",
+        "oracle_text": "Whenever this creature becomes tapped, each opponent loses 1 life and you gain 1 life.",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Human Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/95/night-market-lookout?utm_source=api"
+      }
+    },
+    "Spireside Infiltrator": {
+      "csvid": 16532,
+      "handler": "manalinkeh_card_spireside_infiltrator",
+      "oracle": {
+        "oracle_id": "f46e9fa0-2ed7-4a94-8ad4-031e87a6da45",
+        "name": "Spireside Infiltrator",
+        "oracle_text": "Whenever this creature becomes tapped, it deals 1 damage to each opponent.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Human Rogue",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/133/spireside-infiltrator?utm_source=api"
+      }
+    },
+    "Reckless Racer": {
+      "csvid": 16775,
+      "handler": "manalinkeh_card_reckless_racer",
+      "oracle": {
+        "oracle_id": "d9a09e7f-6bef-4e75-b5c7-cea20a69cf02",
+        "name": "Reckless Racer",
+        "oracle_text": "First strike\nWhenever this creature becomes tapped, you may discard a card. If you do, draw a card.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Human Pilot",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "First strike"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/aer/95/reckless-racer?utm_source=api"
+      }
+    },
+    "Renegade Wheelsmith": {
+      "csvid": 16779,
+      "handler": "manalinkeh_card_renegade_wheelsmith",
+      "oracle": {
+        "oracle_id": "d3caee32-25b7-4ef7-9f9a-e31d08720086",
+        "name": "Renegade Wheelsmith",
+        "oracle_text": "Whenever this creature becomes tapped, target creature can't block this turn.",
+        "mana_cost": "{1}{R}{W}",
+        "type_line": "Creature — Dwarf Pilot",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/aer/134/renegade-wheelsmith?utm_source=api"
+      }
+    },
+    "Surgespanner": {
+      "csvid": 9278,
+      "handler": "manalinkeh_card_surgespanner",
+      "oracle": {
+        "oracle_id": "3f15349a-6ac6-4091-95a3-ae9f593e4650",
+        "name": "Surgespanner",
+        "oracle_text": "Whenever this creature becomes tapped, you may pay {1}{U}. If you do, return target permanent to its owner's hand.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Creature — Merfolk Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lcc/174/surgespanner?utm_source=api"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "csvid": 48,
+      "handler": "manalinkeh_card_counterspell",
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      }
+    },
+    "Earthcraft": {
+      "csvid": 3128,
+      "handler": "manalinkeh_card_earthcraft",
+      "oracle": {
+        "oracle_id": "50aa7aff-1f01-4224-9a83-01f74d703ec2",
+        "name": "Earthcraft",
+        "oracle_text": "Tap an untapped creature you control: Untap target basic land.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tmp/222/earthcraft?utm_source=api"
+      }
+    },
+    "Fog": {
+      "csvid": 88,
+      "handler": "manalinkeh_card_fog",
+      "oracle": {
+        "oracle_id": "27e9db49-7af7-4bef-ad4c-bf5dfb92030d",
+        "name": "Fog",
+        "oracle_text": "Prevent all combat damage that would be dealt this turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/167/fog?utm_source=api"
+      }
+    },
+    "Forest": {
+      "csvid": 91,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      }
+    },
+    "Giant Spider": {
+      "csvid": 98,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      }
+    },
+    "Grizzly Bears": {
+      "csvid": 106,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      }
+    },
+    "Hill Giant": {
+      "csvid": 110,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      }
+    },
+    "Horned Turtle": {
+      "csvid": 1057,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "7a4ae76b-6241-4fa8-b239-5ec941a0e7df",
+        "name": "Horned Turtle",
+        "oracle_text": "",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Turtle",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/53/horned-turtle?utm_source=api"
+      }
+    },
+    "Island": {
+      "csvid": 126,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      }
+    },
+    "Mountain": {
+      "csvid": 164,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      }
+    },
+    "Plains": {
+      "csvid": 188,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      }
+    },
+    "Safe Passage": {
+      "csvid": 10462,
+      "handler": "manalinkeh_card_safe_passage",
+      "oracle": {
+        "oracle_id": "dfa459a1-b065-4488-88d3-4da388261b52",
+        "name": "Safe Passage",
+        "oracle_text": "Prevent all damage that would be dealt to you and creatures you control this turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/30/safe-passage?utm_source=api"
+      }
+    },
+    "Swamp": {
+      "csvid": 239,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      }
+    },
+    "Twiddle": {
+      "csvid": 256,
+      "handler": "manalinkeh_card_twiddle",
+      "oracle": {
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "name": "Twiddle",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+      }
+    },
+    "Wastes": {
+      "csvid": 15719,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "05d24b0c-904a-46b6-b42a-96a4d91a0dd4",
+        "name": "Wastes",
+        "oracle_text": "{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Basic Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/191/wastes?utm_source=api"
+      }
+    },
+    "Darksteel Relic": {
+      "csvid": 11586,
+      "handler": "manalinkeh_card_darksteel_myr",
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      }
+    }
+  },
+  "static_witnesses": [
+    "Giant Spider",
+    "Grizzly Bears",
+    "Hill Giant",
+    "Horned Turtle"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Pristine Skywise",
+  "csvid": 14980,
+  "recipes": [
+    {
+      "family": "cast_noncreature_riders",
+      "version": 2,
+      "params": {
+        "role": "skywise",
+        "mana": [
+          4,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Flying\nWhenever you cast a noncreature spell, untap this creature. It gains protection from the color of your choice until end of turn.",
+      "variants": [
+        "own_0",
+        "creature_0",
+        "opponent_0",
+        "countered_0",
+        "protect_0",
+        "expiry_0",
+        "own_1",
+        "creature_1",
+        "opponent_1",
+        "countered_1",
+        "protect_1",
+        "expiry_1"
+      ]
+    }
+  ]
+}

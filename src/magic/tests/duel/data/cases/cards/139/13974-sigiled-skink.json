@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "csvid": 13974,
+  "card": "Sigiled Skink",
+  "recipes": [
+    {
+      "family": "library_scry_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 13974,
+        "mana": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "stats": [
+          2,
+          1
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks, scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "variants": [
+        "bottom_0",
+        "bottom_1",
+        "keep_0",
+        "keep_1",
+        "other_attack_0",
+        "other_attack_1",
+        "sick_0",
+        "sick_1",
+        "repeat_0",
+        "repeat_1",
+        "empty_0",
+        "empty_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "csvid": 14215,
+  "card": "Altar of the Brood",
+  "recipes": [
+    {
+      "family": "mill_death_and_entry",
+      "version": 2,
+      "params": {
+        "csvid": 14215,
+        "mana": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "stats": null
+      },
+      "oracle_text": "Whenever another permanent you control enters, each opponent mills a card.",
+      "variants": [
+        "self_only_0",
+        "self_only_1",
+        "friendly_0",
+        "friendly_1",
+        "foe_0",
+        "foe_1",
+        "short_0",
+        "short_1",
+        "spell_only_0",
+        "spell_only_1"
+      ]
+    }
+  ]
+}

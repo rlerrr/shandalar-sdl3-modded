@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Journey to Nowhere",
+  "csvid": 10574,
+  "recipes": [
+    {
+      "family": "entry_follow_on_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 10574,
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "When this enchantment enters, exile target creature.\nWhen this enchantment leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+      "variants": [
+        "return_0",
+        "return_1",
+        "own_target_0",
+        "own_target_1",
+        "borrowed_0",
+        "borrowed_1",
+        "empty_0",
+        "empty_1",
+        "countered_0",
+        "countered_1",
+        "returned_etb_0",
+        "returned_etb_1"
+      ]
+    }
+  ]
+}

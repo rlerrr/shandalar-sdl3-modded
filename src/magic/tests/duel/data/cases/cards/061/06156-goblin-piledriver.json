@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Goblin Piledriver",
+  "csvid": 6156,
+  "recipes": [
+    {
+      "family": "attack_follow_on_requirements_and_legality",
+      "version": 2,
+      "params": {
+        "csvid": 6156,
+        "cost": "{1}{R}",
+        "choices": [
+          "blue_block_0",
+          "blue_block_1",
+          "blue_target_0",
+          "blue_target_1",
+          "other_colors_0",
+          "other_colors_1",
+          "goblin_count_0",
+          "goblin_count_1",
+          "idle_goblin_0",
+          "idle_goblin_1"
+        ]
+      },
+      "oracle_text": "Protection from blue (This creature can't be blocked, targeted, dealt damage, or enchanted by anything blue.)\nWhenever this creature attacks, it gets +2/+0 until end of turn for each other attacking Goblin.",
+      "variants": [
+        "blue_block_0",
+        "blue_block_1",
+        "blue_target_0",
+        "blue_target_1",
+        "other_colors_0",
+        "other_colors_1",
+        "goblin_count_0",
+        "goblin_count_1",
+        "idle_goblin_0",
+        "idle_goblin_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Viashino Cutthroat",
+  "csvid": 1697,
+  "recipes": [
+    {
+      "family": "haste_end_step_return",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "flying": false,
+        "printed_mana": "{2}{R}{R}",
+        "power": 5,
+        "toughness": 3
+      },
+      "oracle_text": "Haste\nAt the beginning of the end step, return this creature to its owner's hand.",
+      "variants": [
+        "fresh_attack_0",
+        "fresh_comparison_0",
+        "no_attack_0",
+        "opposing_end_0",
+        "ground_block_0",
+        "reach_blocks_0",
+        "spell_death_0",
+        "early_bounce_0",
+        "single_recast_0",
+        "donated_0",
+        "pending_replay_0",
+        "end_replay_0",
+        "twice_end_0",
+        "unfunded_0",
+        "wrong_color_0",
+        "countered_0",
+        "fresh_attack_1",
+        "fresh_comparison_1",
+        "no_attack_1",
+        "opposing_end_1",
+        "ground_block_1",
+        "reach_blocks_1",
+        "spell_death_1",
+        "early_bounce_1",
+        "single_recast_1",
+        "donated_1",
+        "pending_replay_1",
+        "end_replay_1",
+        "twice_end_1",
+        "unfunded_1",
+        "wrong_color_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

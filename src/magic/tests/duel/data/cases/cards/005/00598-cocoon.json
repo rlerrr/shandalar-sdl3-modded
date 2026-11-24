@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "card": "Cocoon",
+  "csvid": 598,
+  "recipes": [
+    {
+      "family": "remaining_entry_attachments",
+      "version": 2,
+      "params": {
+        "csvid": 598,
+        "mana_cost": "{G}"
+      },
+      "oracle_text": "Enchant creature you control\nWhen this Aura enters, tap enchanted creature and put three pupa counters on this Aura.\nEnchanted creature doesn't untap during your untap step if this Aura has a pupa counter on it.\nAt the beginning of your upkeep, remove a pupa counter from this Aura. If you can't, sacrifice it, put a +1/+1 counter on enchanted creature, and that creature gains flying.",
+      "variants": [
+        "countdown_0",
+        "countdown_1",
+        "foreign_creature_0",
+        "foreign_creature_1"
+      ]
+    }
+  ]
+}

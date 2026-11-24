@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "csvid": 13971,
+  "card": "Setessan Tactics",
+  "recipes": [
+    {
+      "family": "fight_two_target_and_granted",
+      "version": 2,
+      "params": {
+        "csvid": 13971,
+        "printed_cost": "{1}{G}"
+      },
+      "oracle_text": "Strive — This spell costs {G} more to cast for each target beyond the first.\nUntil end of turn, any number of target creatures each get +1/+1 and gain \"{T}: This creature fights another target creature.\"",
+      "variants": [
+        "one_0",
+        "two_0",
+        "foreign_0",
+        "zero_0",
+        "short_color_0",
+        "lose_one_0",
+        "one_1",
+        "two_1",
+        "foreign_1",
+        "zero_1",
+        "short_color_1",
+        "lose_one_1",
+        "grant_two_0",
+        "grant_two_1",
+        "grant_sick_0",
+        "grant_sick_1",
+        "grant_target_lost_0",
+        "grant_target_lost_1"
+      ]
+    }
+  ]
+}

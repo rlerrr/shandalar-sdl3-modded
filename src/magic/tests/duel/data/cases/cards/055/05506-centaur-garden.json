@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Centaur Garden",
+  "csvid": 5506,
+  "recipes": [
+    {
+      "family": "threshold_pain_land",
+      "version": 2,
+      "oracle_text": "{T}: Add {G}. This land deals 1 damage to you.\nThreshold — {G}, {T}, Sacrifice this land: Target creature gets +3/+3 until end of turn. Activate only if there are seven or more cards in your graveyard.",
+      "params": {
+        "color": 3,
+        "effect": "pump"
+      },
+      "variants": [
+        "mana_empty_grave_0",
+        "own_six_opposing_eight_0",
+        "at_seven_0",
+        "above_seven_0",
+        "payment_0",
+        "off_turn_0",
+        "tapped_0",
+        "unfunded_0",
+        "wrong_color_0",
+        "seventh_card_dies_0",
+        "grave_exiled_0",
+        "pending_replay_0",
+        "mana_repeat_denied_0",
+        "opponent_creature_0",
+        "cleanup_0",
+        "no_creatures_0",
+        "target_destroyed_0",
+        "mana_empty_grave_1",
+        "own_six_opposing_eight_1",
+        "at_seven_1",
+        "above_seven_1",
+        "payment_1",
+        "off_turn_1",
+        "tapped_1",
+        "unfunded_1",
+        "wrong_color_1",
+        "seventh_card_dies_1",
+        "grave_exiled_1",
+        "pending_replay_1",
+        "mana_repeat_denied_1",
+        "opponent_creature_1",
+        "cleanup_1",
+        "no_creatures_1",
+        "target_destroyed_1",
+        "mana_with_alternative_0"
+      ]
+    }
+  ]
+}

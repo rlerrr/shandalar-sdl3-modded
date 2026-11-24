@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Dance of Many",
+  "csvid": 309,
+  "recipes": [
+    {
+      "family": "entry_interaction_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 309,
+        "cost": [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this enchantment enters, create a token that's a copy of target nontoken creature.\nWhen this enchantment leaves the battlefield, exile the token.\nWhen the token leaves the battlefield, sacrifice this enchantment.\nAt the beginning of your upkeep, sacrifice this enchantment unless you pay {U}{U}.",
+      "variants": [
+        "source_leaves_0",
+        "source_leaves_1",
+        "token_leaves_0",
+        "token_leaves_1",
+        "paid_upkeep_0",
+        "paid_upkeep_1",
+        "unpaid_upkeep_0",
+        "unpaid_upkeep_1",
+        "token_only_0",
+        "token_only_1"
+      ]
+    }
+  ]
+}

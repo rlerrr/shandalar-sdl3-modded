@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Nissa's Revelation",
+  "csvid": 15187,
+  "recipes": [
+    {
+      "family": "library_scry_before_draw",
+      "version": 2,
+      "params": {
+        "csvid": 15187,
+        "printed_cost": "{5}{G}{G}",
+        "choices": [
+          "creature_0",
+          "creature_1",
+          "noncreature_0",
+          "noncreature_1",
+          "short_0",
+          "short_1"
+        ]
+      },
+      "oracle_text": "Scry 5, then reveal the top card of your library. If it's a creature card, you draw cards equal to its power and you gain life equal to its toughness.",
+      "variants": [
+        "creature_0",
+        "creature_1",
+        "noncreature_0",
+        "noncreature_1",
+        "short_0",
+        "short_1"
+      ]
+    }
+  ]
+}

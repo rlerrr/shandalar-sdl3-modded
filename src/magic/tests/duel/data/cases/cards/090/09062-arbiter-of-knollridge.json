@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 9062,
+  "card": "Arbiter of Knollridge",
+  "recipes": [
+    {
+      "family": "remaining_entry_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 9062,
+        "printed_cost": "{6}{W}"
+      },
+      "oracle_text": "Vigilance\nWhen this creature enters, each player's life total becomes the highest life total among all players.",
+      "variants": [
+        "foe_high_0",
+        "owner_high_0",
+        "both_low_0",
+        "equal_0",
+        "vigilance_0",
+        "countered_0",
+        "foe_high_1",
+        "owner_high_1",
+        "both_low_1",
+        "equal_1",
+        "vigilance_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

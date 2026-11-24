@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Cunning Lethemancer",
+  "csvid": 9943,
+  "recipes": [
+    {
+      "family": "upkeep_draw_and_discard",
+      "version": 2,
+      "params": {
+        "csvid": 9943,
+        "printed_mana": "{2}{B}",
+        "rules": "At the beginning of your upkeep, each player discards a card."
+      },
+      "oracle_text": "At the beginning of your upkeep, each player discards a card.",
+      "variants": [
+        "both_discard_0",
+        "both_discard_1",
+        "empty_active_0",
+        "empty_active_1"
+      ]
+    }
+  ]
+}

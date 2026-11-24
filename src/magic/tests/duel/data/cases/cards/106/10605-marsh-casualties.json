@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Marsh Casualties",
+  "csvid": 10605,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "kicker_sweepers",
+      "version": 2,
+      "oracle_text": "Kicker {3} (You may pay an additional {3} as you cast this spell.)\nCreatures target player controls get -1/-1 until end of turn. If this spell was kicked, those creatures get -2/-2 until end of turn instead.",
+      "params": {
+        "effect": "shrink",
+        "flight": null,
+        "mana": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "kicker_mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": [],
+        "stats": []
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "base_only_0",
+        "base_only_1",
+        "fee_short_0",
+        "fee_short_1",
+        "cast_short_0",
+        "cast_short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "self_target_0",
+        "self_target_1"
+      ]
+    }
+  ]
+}

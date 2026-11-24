@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Chronic Flooding",
+  "csvid": 12682,
+  "recipes": [
+    {
+      "family": "mill_remaining_phase_and_mill_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 12682,
+        "printed_mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "rules": "Enchant land\nWhenever enchanted land becomes tapped, its controller mills three cards."
+      },
+      "oracle_text": "Enchant land\nWhenever enchanted land becomes tapped, its controller mills three cards.",
+      "variants": [
+        "borrowed_mana_0",
+        "borrowed_mana_1",
+        "retap_short_0",
+        "retap_short_1"
+      ]
+    }
+  ]
+}

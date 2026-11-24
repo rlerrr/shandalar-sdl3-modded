@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Azra Bladeseeker",
+  "csvid": 18575,
+  "recipes": [
+    {
+      "family": "entry_interaction_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 18575,
+        "printed_mana": "{2}{R}",
+        "rules": "When this creature enters, each player on your team may discard a card, then each player who discarded a card this way draws a card."
+      },
+      "oracle_text": "When this creature enters, each player on your team may discard a card, then each player who discarded a card this way draws a card.",
+      "variants": [
+        "loot_0",
+        "loot_1",
+        "decline_0",
+        "decline_1"
+      ]
+    }
+  ]
+}

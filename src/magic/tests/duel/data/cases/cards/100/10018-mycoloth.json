@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Mycoloth",
+  "csvid": 10018,
+  "recipes": [
+    {
+      "family": "devour_entry_rewards",
+      "version": 2,
+      "params": {
+        "reward": "upkeep",
+        "multiplier": 2,
+        "mana": [
+          3,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "keywords": [],
+        "power": 4,
+        "toughness": 4
+      },
+      "oracle_text": "Devour 2 (As this creature enters, you may sacrifice any number of creatures. It enters with twice that many +1/+1 counters on it.)\nAt the beginning of your upkeep, create a 1/1 green Saproling creature token for each +1/+1 counter on this creature.",
+      "variants": [
+        "none_0",
+        "paid_one_0",
+        "countered_0",
+        "wrong_color_0",
+        "snapshot_0",
+        "upkeep_repeat_0",
+        "external_counter_0",
+        "source_removed_0",
+        "none_1",
+        "paid_one_1",
+        "countered_1",
+        "wrong_color_1",
+        "snapshot_1",
+        "upkeep_repeat_1",
+        "external_counter_1",
+        "source_removed_1",
+        "paid_two_0",
+        "partial_0",
+        "decline_0",
+        "borrowed_meal_0"
+      ]
+    }
+  ]
+}

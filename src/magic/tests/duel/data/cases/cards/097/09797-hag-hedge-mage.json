@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Hag Hedge-Mage",
+  "csvid": 9797,
+  "recipes": [
+    {
+      "family": "entry_rider_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 9797,
+        "printed_mana": "{2}{B/G}",
+        "rules": "When this creature enters, if you control two or more Swamps, you may have target player discard a card.\nWhen this creature enters, if you control two or more Forests, you may put target card from your graveyard on top of your library."
+      },
+      "oracle_text": "When this creature enters, if you control two or more Swamps, you may have target player discard a card.\nWhen this creature enters, if you control two or more Forests, you may put target card from your graveyard on top of your library.",
+      "variants": [
+        "both_thresholds_0",
+        "both_thresholds_1",
+        "forests_only_0",
+        "forests_only_1",
+        "swamps_only_0",
+        "swamps_only_1",
+        "under_threshold_0",
+        "under_threshold_1"
+      ]
+    }
+  ]
+}

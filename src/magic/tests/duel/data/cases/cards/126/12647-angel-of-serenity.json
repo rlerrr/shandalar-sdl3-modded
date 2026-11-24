@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Angel of Serenity",
+  "csvid": 12647,
+  "recipes": [
+    {
+      "family": "entry_rider_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 12647,
+        "cost": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          3
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, you may exile up to three other target creatures from the battlefield and/or creature cards from graveyards.\nWhen this creature leaves the battlefield, return the exiled cards to their owners' hands.",
+      "variants": [
+        "mixed_0",
+        "mixed_1",
+        "three_battlefield_0",
+        "three_battlefield_1",
+        "limit_grave_0",
+        "limit_grave_1",
+        "decline_0",
+        "decline_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

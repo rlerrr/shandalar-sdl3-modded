@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Tidehollow Sculler",
+  "csvid": 10088,
+  "recipes": [
+    {
+      "family": "entry_follow_on_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 10088,
+        "cost": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "When this creature enters, target opponent reveals their hand and you choose a nonland card from it. Exile that card.\nWhen this creature leaves the battlefield, return the exiled card to its owner's hand.",
+      "variants": [
+        "creature_0",
+        "creature_1",
+        "spell_0",
+        "spell_1",
+        "land_only_0",
+        "land_only_1",
+        "empty_0",
+        "empty_1"
+      ]
+    }
+  ]
+}

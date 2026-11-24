@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 14439,
+  "card": "Angel of the Dire Hour",
+  "recipes": [
+    {
+      "family": "flash_entry_combat_and_damage",
+      "version": 2,
+      "params": {
+        "csvid": 14439,
+        "printed_cost": "{5}{W}{W}"
+      },
+      "oracle_text": "Flash\nFlying\nWhen this creature enters, if you cast it from your hand, exile all attacking creatures.",
+      "variants": [
+        "enemy_attackers_0",
+        "own_attackers_0",
+        "blink_0",
+        "flight_0",
+        "short_0",
+        "enemy_attackers_1",
+        "own_attackers_1",
+        "blink_1",
+        "flight_1",
+        "short_1"
+      ]
+    }
+  ]
+}

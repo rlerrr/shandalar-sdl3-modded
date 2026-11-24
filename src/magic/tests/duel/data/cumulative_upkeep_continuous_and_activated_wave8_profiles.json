@@ -1,0 +1,760 @@
+{
+  "sources": {
+    "Blizzard": {
+      "oracle": {
+        "oracle_id": "698feaaa-2fff-4809-81d1-4caad44c6c0a",
+        "name": "Blizzard",
+        "oracle_text": "Cast this spell only if you control a snow land.\nCumulative upkeep {2} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nCreatures with flying don't untap during their controllers' untap steps.",
+        "mana_cost": "{G}{G}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Cumulative upkeep"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ice/227/blizzard?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1875,
+        "iid": 1101,
+        "name": "Blizzard",
+        "handler": "manalinkeh_card_blizzard",
+        "kind": "card"
+      }
+    },
+    "Energy Storm": {
+      "oracle": {
+        "oracle_id": "567d3de7-8d56-4b6d-a59a-f8674172f595",
+        "name": "Energy Storm",
+        "oracle_text": "Cumulative upkeep {1} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nPrevent all damage that would be dealt by instant and sorcery spells.\nCreatures with flying don't untap during their controllers' untap steps.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Cumulative upkeep"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/11/energy-storm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1914,
+        "iid": 3051,
+        "name": "Energy Storm",
+        "handler": "manalinkeh_card_energy_storm",
+        "kind": "card"
+      }
+    },
+    "Sustaining Spirit": {
+      "oracle": {
+        "oracle_id": "683c81ae-38cd-4db1-b7e7-a09d34b6431e",
+        "name": "Sustaining Spirit",
+        "oracle_text": "Cumulative upkeep {1}{W} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nDamage that would reduce your life total to less than 1 reduces it to 1 instead.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Angel Spirit",
+        "power": "0",
+        "toughness": "3",
+        "keywords": [
+          "Cumulative upkeep"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/36/sustaining-spirit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2364,
+        "iid": 9582,
+        "name": "Sustaining Spirit",
+        "handler": "manalinkeh_card_sustaining_spirit",
+        "kind": "card"
+      }
+    },
+    "Tornado": {
+      "oracle": {
+        "oracle_id": "dd283473-6423-4a1f-b5a3-77234cdce643",
+        "name": "Tornado",
+        "oracle_text": "Cumulative upkeep {G} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\n{2}{G}, Pay 3 life for each velocity counter on this enchantment: Destroy target permanent and put a velocity counter on this enchantment. Activate only once each turn.",
+        "mana_cost": "{4}{G}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Cumulative upkeep"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me1/136/tornado?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2371,
+        "iid": 10095,
+        "name": "Tornado",
+        "handler": "manalinkeh_card_tornado",
+        "kind": "card"
+      }
+    },
+    "Corrosion": {
+      "oracle": {
+        "oracle_id": "3d3fd8a2-78d4-4f52-8fcd-0c6fa93f0043",
+        "name": "Corrosion",
+        "oracle_text": "Cumulative upkeep {1} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nAt the beginning of your upkeep, put a rust counter on each artifact target opponent controls. Then destroy each artifact with mana value less than or equal to the number of rust counters on it. Artifacts destroyed this way can't be regenerated.\nWhen this enchantment leaves the battlefield, remove all rust counters from all permanents.",
+        "mana_cost": "{1}{B}{R}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Cumulative upkeep"
+        ],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vis/128/corrosion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2684,
+        "iid": 1976,
+        "name": "Corrosion",
+        "handler": "manalinkeh_card_corrosion",
+        "kind": "card"
+      }
+    },
+    "Musician": {
+      "oracle": {
+        "oracle_id": "0d6e9468-adb2-4feb-87cf-9113db8717b1",
+        "name": "Musician",
+        "oracle_text": "Cumulative upkeep {1} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\n{T}: Put a music counter on target creature. If it doesn't have \"At the beginning of your upkeep, destroy this creature unless you pay {1} for each music counter on it,\" it gains that ability.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [
+          "Cumulative upkeep"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/56/musician?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2044,
+        "iid": 6396,
+        "name": "Musician",
+        "handler": "manalinkeh_card_musician",
+        "kind": "card"
+      }
+    },
+    "Illusionary Terrain": {
+      "oracle": {
+        "oracle_id": "17ae63fa-fd63-45e6-81c1-bf30851bf77c",
+        "name": "Illusionary Terrain",
+        "oracle_text": "Cumulative upkeep {2} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nAs this enchantment enters, choose two basic land types.\nBasic lands of the first chosen type are the second chosen type.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Cumulative upkeep"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ice/77/illusionary-terrain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1980,
+        "iid": 13099,
+        "name": "Illusionary Terrain",
+        "handler": "manalinkeh_card_illusionary_terrain",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Bonesplitter": {
+      "oracle": {
+        "oracle_id": "452e3f5f-ce17-4682-966b-5cc100210aee",
+        "name": "Bonesplitter",
+        "oracle_text": "Equipped creature gets +2/+0.\nEquip {1}",
+        "mana_cost": "{1}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/458/bonesplitter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6627,
+        "iid": 1226,
+        "name": "Bonesplitter",
+        "handler": "manalinkeh_card_bonesplitter",
+        "kind": "card"
+      }
+    },
+    "Darksteel Myr": {
+      "oracle": {
+        "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+        "name": "Darksteel Myr",
+        "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11238,
+        "iid": 2255,
+        "name": "Darksteel Myr",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Dazzling Ramparts": {
+      "oracle": {
+        "oracle_id": "0527fc47-2bfc-4d02-90fa-5a1284f89a0a",
+        "name": "Dazzling Ramparts",
+        "oracle_text": "Defender\n{1}{W}, {T}: Tap target creature.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "7",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/6/dazzling-ramparts?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14247,
+        "iid": 2299,
+        "name": "Dazzling Ramparts",
+        "handler": "manalinkeh_card_dazzling_ramparts",
+        "kind": "card"
+      }
+    },
+    "Doom Blade": {
+      "oracle": {
+        "oracle_id": "59e7f2ae-4535-4191-98be-3e65b6b2befa",
+        "name": "Doom Blade",
+        "oracle_text": "Destroy target nonblack creature.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/576/doom-blade?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10408,
+        "iid": 2639,
+        "name": "Doom Blade",
+        "handler": "manalinkeh_card_doom_blade",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Naturalize": {
+      "oracle": {
+        "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+        "name": "Naturalize",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1096,
+        "iid": 6485,
+        "name": "Naturalize",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Prismatic Lens": {
+      "oracle": {
+        "oracle_id": "e3056f28-868b-401a-a528-7528d639bdeb",
+        "name": "Prismatic Lens",
+        "oracle_text": "{T}: Add {C}.\n{1}, {T}: Add one mana of any color.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/otc/264/prismatic-lens?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8640,
+        "iid": 7391,
+        "name": "Prismatic Lens",
+        "handler": "manalinkeh_card_prismatic_lens",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Sapseep Forest": {
+      "oracle": {
+        "oracle_id": "8d4dcab0-86e5-4ff8-a90f-78a062664e16",
+        "name": "Sapseep Forest",
+        "oracle_text": "({T}: Add {G}.)\nThis land enters tapped.\n{G}, {T}: You gain 1 life. Activate only if you control two or more green permanents.",
+        "mana_cost": "",
+        "type_line": "Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c21/313/sapseep-forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9664,
+        "iid": 8239,
+        "name": "Sapseep Forest",
+        "handler": "manalinkeh_card_sapseep_forest",
+        "kind": "card"
+      }
+    },
+    "Shivan Dragon": {
+      "oracle": {
+        "oracle_id": "711eea87-0fa3-46e0-a42b-fa5a86455f04",
+        "name": "Shivan Dragon",
+        "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/763/shivan-dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 224,
+        "iid": 8648,
+        "name": "Shivan Dragon",
+        "handler": "manalinkeh_card_furnace_whelp",
+        "kind": "card"
+      }
+    },
+    "Signal Pest": {
+      "oracle": {
+        "oracle_id": "724f3d2f-0513-4efd-961f-56a7ea7b5731",
+        "name": "Signal Pest",
+        "oracle_text": "Battle cry (Whenever this creature attacks, each other attacking creature gets +1/+0 until end of turn.)\nThis creature can't be blocked except by creatures with flying or reach.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact Creature — Pest",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Battle Cry"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbs/131/signal-pest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11524,
+        "iid": 8730,
+        "name": "Signal Pest",
+        "handler": "manalinkeh_card_signal_pest",
+        "kind": "card"
+      }
+    },
+    "Snow-Covered Forest": {
+      "oracle": {
+        "oracle_id": "5f0d3be8-e63e-4ade-ae58-6b0c14f2ce6d",
+        "name": "Snow-Covered Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Snow Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/khm/284/snow-covered-forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2100,
+        "iid": 11401,
+        "name": "Snow-Covered Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Traveler's Amulet": {
+      "oracle": {
+        "oracle_id": "48b561dd-f23d-409a-87c8-e49902b2477b",
+        "name": "Traveler's Amulet",
+        "oracle_text": "{1}, Sacrifice this artifact: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/273/travelers-amulet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12102,
+        "iid": 10166,
+        "name": "Traveler's Amulet",
+        "handler": "manalinkeh_card_travelers_amulet",
+        "kind": "card"
+      }
+    },
+    "Volcanic Hammer": {
+      "oracle": {
+        "oracle_id": "98fa5a06-0553-40fd-999c-bc31c9b3f4db",
+        "name": "Volcanic Hammer",
+        "oracle_text": "Volcanic Hammer deals 3 damage to any target.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/226/volcanic-hammer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1187,
+        "iid": 10685,
+        "name": "Volcanic Hammer",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Wastes": {
+      "oracle": {
+        "oracle_id": "05d24b0c-904a-46b6-b42a-96a4d91a0dd4",
+        "name": "Wastes",
+        "oracle_text": "{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Basic Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/191/wastes?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15719,
+        "iid": 15794,
+        "name": "Wastes",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Welding Jar": {
+      "oracle": {
+        "oracle_id": "e4a6c421-bef1-4360-a2dc-ae9c61d86b2f",
+        "name": "Welding Jar",
+        "oracle_text": "Sacrifice this artifact: Regenerate target artifact.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/307/welding-jar?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6836,
+        "iid": 10899,
+        "name": "Welding Jar",
+        "handler": "manalinkeh_card_welding_jar",
+        "kind": "card"
+      }
+    },
+    "Whispersilk Cloak": {
+      "oracle": {
+        "oracle_id": "9ad4f730-a18e-4a7c-a468-a926c718c741",
+        "name": "Whispersilk Cloak",
+        "oracle_text": "Equipped creature can't be blocked and has shroud. (It can't be the target of spells or abilities.)\nEquip {2}",
+        "mana_cost": "{3}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/225/whispersilk-cloak?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6996,
+        "iid": 10937,
+        "name": "Whispersilk Cloak",
+        "handler": "manalinkeh_card_whispersilk_cloak",
+        "kind": "card"
+      }
+    },
+    "Early Harvest": {
+      "oracle": {
+        "oracle_id": "32001382-3079-4bbe-8d86-05da654c0d1a",
+        "name": "Early Harvest",
+        "oracle_text": "Target player untaps all basic lands they control.",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/235/early-harvest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2459,
+        "iid": 2857,
+        "name": "Early Harvest",
+        "handler": "manalinkeh_card_early_harvest",
+        "kind": "card"
+      }
+    }
+  }
+}

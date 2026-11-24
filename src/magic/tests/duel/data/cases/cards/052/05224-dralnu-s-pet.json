@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Dralnu's Pet",
+  "csvid": 5224,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "kicker_alternate_payment_and_damage",
+      "version": 2,
+      "oracle_text": "Kicker—{2}{B}, Discard a creature card. (You may pay {2}{B} and discard a creature card in addition to any other costs as you cast this spell.)\nIf this creature was kicked, it enters with flying and with X +1/+1 counters on it, where X is the discarded card's mana value.",
+      "params": {
+        "model": 5224,
+        "mana": [
+          1,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "kicker_mana": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "x": null
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "blue_fee_0",
+        "blue_fee_1",
+        "paid_buffer_0",
+        "paid_buffer_1",
+        "base_only_0",
+        "base_only_1"
+      ]
+    }
+  ]
+}

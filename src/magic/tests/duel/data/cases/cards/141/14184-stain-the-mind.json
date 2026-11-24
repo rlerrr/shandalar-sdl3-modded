@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Stain the Mind",
+  "csvid": 14184,
+  "recipes": [
+    {
+      "family": "convoke_variable_and_choices",
+      "version": 2,
+      "params": {
+        "csvid": 14184,
+        "fixed_cost": [
+          4,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "variable": false
+      },
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nChoose a nonland card name. Search target player's graveyard, hand, and library for any number of cards with that name and exile them. Then that player shuffles.",
+      "variants": [
+        "countered_0",
+        "countered_1",
+        "exile_1",
+        "decline_1",
+        "self_target_1"
+      ]
+    }
+  ]
+}

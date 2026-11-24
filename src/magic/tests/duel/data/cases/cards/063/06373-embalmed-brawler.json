@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 6373,
+  "card": "Embalmed Brawler",
+  "recipes": [
+    {
+      "family": "attack_follow_on_counters_and_dethrone",
+      "version": 2,
+      "params": {
+        "csvid": 6373,
+        "printed_cost": "{2}{B}"
+      },
+      "oracle_text": "Amplify 1 (As this creature enters, put a +1/+1 counter on it for each Zombie card you reveal in your hand.)\nWhenever this creature attacks or blocks, you lose 1 life for each +1/+1 counter on it.",
+      "variants": [
+        "auto_two_0",
+        "enemy_only_0",
+        "auto_block_0",
+        "manual_one_0",
+        "manual_none_0",
+        "auto_two_1",
+        "enemy_only_1",
+        "auto_block_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,491 @@
+{
+  "sources": {
+    "Berserkers of Blood Ridge": {
+      "oracle_id": "9e8a2d53-3145-421a-aad1-8f2b2f6eaec8",
+      "name": "Berserkers of Blood Ridge",
+      "oracle_text": "This creature attacks each combat if able.",
+      "mana_cost": "{4}{R}",
+      "type_line": "Creature — Human Berserker",
+      "power": "4",
+      "toughness": "4",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 5.0,
+      "layout": "normal"
+    },
+    "Bloodrock Cyclops": {
+      "oracle_id": "06a3fe24-7e1f-4f98-ba2f-dbb5d38f4b9d",
+      "name": "Bloodrock Cyclops",
+      "oracle_text": "This creature attacks each combat if able.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Cyclops",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Crazed Goblin": {
+      "oracle_id": "fafe2d90-e5fc-401a-a971-829192bec6c0",
+      "name": "Crazed Goblin",
+      "oracle_text": "This creature attacks each combat if able.",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Goblin Warrior",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Goblin Brigand": {
+      "oracle_id": "22134489-efce-4903-9f14-37a2248e8546",
+      "name": "Goblin Brigand",
+      "oracle_text": "This creature attacks each combat if able.",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Goblin Warrior",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Tattermunge Maniac": {
+      "oracle_id": "69ba7864-0d09-4517-ad1a-7efaf437ded0",
+      "name": "Tattermunge Maniac",
+      "oracle_text": "This creature attacks each combat if able.",
+      "mana_cost": "{R/G}",
+      "type_line": "Creature — Goblin Warrior",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Frontline Rebel": {
+      "oracle_id": "7471e445-4655-4336-9769-3debd197b77c",
+      "name": "Frontline Rebel",
+      "oracle_text": "This creature attacks each combat if able.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Human Warrior",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Rubblebelt Recluse": {
+      "oracle_id": "3ef0fff2-6010-42de-a7ce-e4cac295a481",
+      "name": "Rubblebelt Recluse",
+      "oracle_text": "This creature attacks each combat if able.",
+      "mana_cost": "{4}{R}",
+      "type_line": "Creature — Ogre Berserker",
+      "power": "6",
+      "toughness": "5",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 5.0,
+      "layout": "normal"
+    },
+    "Flameborn Hellion": {
+      "oracle_id": "47d4da1e-b1a2-4a23-9b96-c85d5d20e3ef",
+      "name": "Flameborn Hellion",
+      "oracle_text": "Haste\nThis creature attacks each combat if able.",
+      "mana_cost": "{5}{R}",
+      "type_line": "Creature — Hellion",
+      "power": "5",
+      "toughness": "4",
+      "keywords": [
+        "Haste"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 6.0,
+      "layout": "normal"
+    },
+    "Impetuous Sunchaser": {
+      "oracle_id": "7f240b1f-fb7b-49a3-bcaf-6348956d2a38",
+      "name": "Impetuous Sunchaser",
+      "oracle_text": "Flying, haste\nThis creature attacks each combat if able.",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Human Soldier",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Flying",
+        "Haste"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Reckless Brute": {
+      "oracle_id": "5ba6a472-b2f3-4d8e-838c-269aaa5eb2e3",
+      "name": "Reckless Brute",
+      "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)\nThis creature attacks each combat if able.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Ogre Warrior",
+      "power": "3",
+      "toughness": "1",
+      "keywords": [
+        "Haste"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Riot Piker": {
+      "oracle_id": "864c81e4-d612-4939-b4df-4b125cb8cdf2",
+      "name": "Riot Piker",
+      "oracle_text": "First strike\nThis creature attacks each combat if able.",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Goblin Berserker",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [
+        "First strike"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Urborg Drake": {
+      "oracle_id": "57d93683-8739-49ef-856a-5a70f92d8763",
+      "name": "Urborg Drake",
+      "oracle_text": "Flying\nThis creature attacks each combat if able.",
+      "mana_cost": "{1}{U}{B}",
+      "type_line": "Creature — Drake",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Utvara Scalper": {
+      "oracle_id": "58e754ad-88b4-47c5-b105-8b50e54143c8",
+      "name": "Utvara Scalper",
+      "oracle_text": "Flying\nThis creature attacks each combat if able.",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Goblin Scout",
+      "power": "1",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Valley Dasher": {
+      "oracle_id": "aad16b50-a866-4871-843f-ec8813ad5dfd",
+      "name": "Valley Dasher",
+      "oracle_text": "Haste\nThis creature attacks each combat if able.",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Human Berserker",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Haste"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Ashen Monstrosity": {
+      "oracle_id": "01906aae-fc53-40b0-a386-dae43e4f437f",
+      "name": "Ashen Monstrosity",
+      "oracle_text": "Haste\nThis creature attacks each combat if able.",
+      "mana_cost": "{5}{R}{R}",
+      "type_line": "Creature — Spirit",
+      "power": "7",
+      "toughness": "4",
+      "keywords": [
+        "Haste"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 7.0,
+      "layout": "normal"
+    }
+  },
+  "witnesses": {
+    "Crazed Goblin": {
+      "oracle_id": "fafe2d90-e5fc-401a-a971-829192bec6c0",
+      "name": "Crazed Goblin",
+      "oracle_text": "This creature attacks each combat if able.",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Goblin Warrior",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Pacifism": {
+      "oracle_id": "5f5e0b10-c8cf-450c-bfd3-bcb0528ec330",
+      "name": "Pacifism",
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack or block.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Enchantment — Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Suntail Hawk": {
+      "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+      "name": "Suntail Hawk",
+      "oracle_text": "Flying",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Bird",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Giant Spider": {
+      "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+      "name": "Giant Spider",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Spider",
+      "power": "2",
+      "toughness": "4",
+      "keywords": [
+        "Reach"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    }
+  },
+  "handlers": {
+    "Berserkers of Blood Ridge": "manalinkeh_card_berserkers_of_blood_ridge",
+    "Bloodrock Cyclops": "manalinkeh_card_berserkers_of_blood_ridge",
+    "Crazed Goblin": "manalinkeh_card_berserkers_of_blood_ridge",
+    "Forest": "manalinkeh_plain_mana_producer",
+    "Frontline Rebel": "manalinkeh_card_berserkers_of_blood_ridge",
+    "Goblin Brigand": "manalinkeh_card_berserkers_of_blood_ridge",
+    "Grizzly Bears": "card_dummy",
+    "Hill Giant": "card_dummy",
+    "Island": "manalinkeh_plain_mana_producer",
+    "Mountain": "manalinkeh_plain_mana_producer",
+    "Pacifism": "manalinkeh_card_pacifism",
+    "Plains": "manalinkeh_plain_mana_producer",
+    "Rubblebelt Recluse": "manalinkeh_card_berserkers_of_blood_ridge",
+    "Tattermunge Maniac": "manalinkeh_card_tattermunge_maniac",
+    "Suntail Hawk": "card_dummy",
+    "Giant Spider": "card_dummy",
+    "Flameborn Hellion": "manalinkeh_card_flameborn_hellion",
+    "Impetuous Sunchaser": "manalinkeh_card_flameborn_hellion",
+    "Reckless Brute": "manalinkeh_card_flameborn_hellion",
+    "Riot Piker": "manalinkeh_card_berserkers_of_blood_ridge",
+    "Urborg Drake": "manalinkeh_card_berserkers_of_blood_ridge",
+    "Utvara Scalper": "manalinkeh_card_berserkers_of_blood_ridge",
+    "Valley Dasher": "manalinkeh_card_flameborn_hellion",
+    "Ashen Monstrosity": "manalinkeh_card_flameborn_hellion"
+  }
+}

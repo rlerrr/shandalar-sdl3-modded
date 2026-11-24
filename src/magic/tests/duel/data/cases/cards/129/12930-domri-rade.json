@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "card": "Domri Rade",
+  "csvid": 12930,
+  "recipes": [
+    {
+      "family": "fight_battlefield_activations",
+      "version": 2,
+      "params": {
+        "csvid": 12930,
+        "fee": null,
+        "mana": [
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "+1: Look at the top card of your library. If it's a creature card, you may reveal it and put it into your hand.\n−2: Target creature you control fights another target creature.\n−7: You get an emblem with \"Creatures you control have double strike, trample, hexproof, and haste.\"",
+      "variants": [
+        "fight_0",
+        "fight_1",
+        "target_leaves_0",
+        "target_leaves_1",
+        "own_pair_0",
+        "own_pair_1",
+        "low_loyalty_0",
+        "low_loyalty_1",
+        "reveal_creature_0",
+        "reveal_creature_1",
+        "top_noncreature_0",
+        "top_noncreature_1",
+        "decline_creature_0",
+        "decline_creature_1",
+        "emblem_0",
+        "emblem_1"
+      ]
+    }
+  ]
+}

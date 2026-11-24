@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "csvid": 16525,
+  "card": "Smuggler's Copter",
+  "recipes": [
+    {
+      "family": "vehicle_triggered_crew",
+      "version": 2,
+      "params": {
+        "effect": "loot",
+        "cost": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "threshold": 1,
+        "power": 3,
+        "toughness": 3,
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "oracle_text": "Flying\nWhenever this Vehicle attacks or blocks, you may draw a card. If you do, discard a card.\nCrew 1 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)",
+      "variants": [
+        "cast_0",
+        "cast_1",
+        "cast_short_0",
+        "cast_short_1",
+        "ordered_exact_0",
+        "ordered_exact_1",
+        "underpowered_0",
+        "underpowered_1",
+        "partial_cancel_0",
+        "partial_cancel_1",
+        "attack_uncrewed_0",
+        "attack_uncrewed_1",
+        "expires_0",
+        "expires_1",
+        "pending_replay_0",
+        "pending_replay_1",
+        "attack_accept_0",
+        "attack_accept_1",
+        "attack_empty_hand_0",
+        "attack_empty_hand_1",
+        "block_accept_0",
+        "block_accept_1",
+        "attack_ground_0",
+        "attack_ground_1",
+        "other_attacker_0",
+        "other_attacker_1",
+        "trigger_replay_0",
+        "trigger_replay_1",
+        "attack_decline_0",
+        "block_decline_0"
+      ]
+    }
+  ]
+}

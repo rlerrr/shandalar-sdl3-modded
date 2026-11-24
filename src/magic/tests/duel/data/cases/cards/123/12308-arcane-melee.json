@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "card": "Arcane Melee",
+  "csvid": 12308,
+  "recipes": [
+    {
+      "family": "fixed_generic_cast_reducers",
+      "version": 2,
+      "oracle_text": "Instant and sorcery spells cost {2} less to cast.",
+      "params": {
+        "effect": "fixed_generic_discount",
+        "spells": "instant_sorcery",
+        "amount": 2,
+        "bilateral": true,
+        "cost": [
+          4,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "exact_0",
+        "residual_0",
+        "short_0",
+        "wrong_color_0",
+        "source_cast_0",
+        "source_leaves_0",
+        "opposing_caster_0",
+        "mixed_sources_0",
+        "stacked_0",
+        "countered_0",
+        "paid_replay_0",
+        "tax_0",
+        "instant_0",
+        "offturn_instant_0",
+        "flash_creature_0",
+        "mixed_negative_0",
+        "colored_floor_0",
+        "kindred_instant_0",
+        "exact_1",
+        "residual_1",
+        "short_1",
+        "wrong_color_1",
+        "source_cast_1",
+        "source_leaves_1",
+        "opposing_caster_1",
+        "mixed_sources_1",
+        "stacked_1",
+        "countered_1",
+        "paid_replay_1",
+        "tax_1",
+        "instant_1",
+        "offturn_instant_1",
+        "flash_creature_1",
+        "mixed_negative_1",
+        "colored_floor_1",
+        "kindred_instant_1"
+      ]
+    }
+  ]
+}

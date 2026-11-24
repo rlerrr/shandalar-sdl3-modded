@@ -1,0 +1,940 @@
+{
+  "sources": {
+    "Ankle Shanker": {
+      "oracle": {
+        "oracle_id": "22052572-0b7d-4dd8-84a8-e2658f77b85e",
+        "name": "Ankle Shanker",
+        "oracle_text": "Haste\nWhenever this creature attacks, creatures you control gain first strike and deathtouch until end of turn.",
+        "mana_cost": "{2}{R}{W}{B}",
+        "type_line": "Creature — Goblin Berserker",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "B",
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "R",
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c16/178/ankle-shanker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14217,
+        "iid": 478,
+        "name": "Ankle Shanker",
+        "handler": "manalinkeh_card_ankle_shanker",
+        "kind": "card"
+      }
+    },
+    "Cavalry Pegasus": {
+      "oracle": {
+        "oracle_id": "1f6fd5d9-d123-4986-a18b-206cc2dfb3f1",
+        "name": "Cavalry Pegasus",
+        "oracle_text": "Flying\nWhenever this creature attacks, each attacking Human gains flying until end of turn.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Pegasus",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c20/81/cavalry-pegasus?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13400,
+        "iid": 1563,
+        "name": "Cavalry Pegasus",
+        "handler": "manalinkeh_card_cavalry_pegasus",
+        "kind": "card"
+      }
+    },
+    "Heavenly Qilin": {
+      "oracle": {
+        "oracle_id": "cbe1c80a-db82-460a-b6e9-d0e429628aa1",
+        "name": "Heavenly Qilin",
+        "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever this creature attacks, another target creature you control gains flying until end of turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Kirin",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gs1/6/heavenly-qilin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18672,
+        "iid": 18782,
+        "name": "Heavenly Qilin",
+        "handler": "manalinkeh_card_trained_condor",
+        "kind": "card"
+      }
+    },
+    "Hamlet Captain": {
+      "oracle": {
+        "oracle_id": "1a60dc0f-e387-4d28-8ff0-c3f1883d0c5d",
+        "name": "Hamlet Captain",
+        "oracle_text": "Whenever this creature attacks or blocks, other Humans you control get +1/+1 until end of turn.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Human Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/201/hamlet-captain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11979,
+        "iid": 4353,
+        "name": "Hamlet Captain",
+        "handler": "manalinkeh_card_hamlet_captain",
+        "kind": "card"
+      }
+    },
+    "Chasm Drake": {
+      "oracle": {
+        "oracle_id": "e0f44bb8-f07b-416c-b767-87b9fe6461aa",
+        "name": "Chasm Drake",
+        "oracle_text": "Flying\nWhenever this creature attacks, target creature you control gains flying until end of turn.",
+        "mana_cost": "{4}{U}",
+        "type_line": "Creature — Drake",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m12/48/chasm-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11791,
+        "iid": 1683,
+        "name": "Chasm Drake",
+        "handler": "manalinkeh_card_chasm_drake",
+        "kind": "card"
+      }
+    },
+    "Trained Condor": {
+      "oracle": {
+        "oracle_id": "99742ec7-7b67-4301-9307-3c2068046e33",
+        "name": "Trained Condor",
+        "oracle_text": "Flying\nWhenever this creature attacks, another target creature you control gains flying until end of turn.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Bird",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/76/trained-condor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13353,
+        "iid": 10141,
+        "name": "Trained Condor",
+        "handler": "manalinkeh_card_trained_condor",
+        "kind": "card"
+      }
+    },
+    "Pyreheart Wolf": {
+      "oracle": {
+        "oracle_id": "b97ccb69-e76c-4962-91ca-c7fd857140e8",
+        "name": "Pyreheart Wolf",
+        "oracle_text": "Whenever this creature attacks, creatures you control gain menace until end of turn. (They can't be blocked except by two or more creatures.)\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Wolf",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Undying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dka/101/pyreheart-wolf?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12243,
+        "iid": 7511,
+        "name": "Pyreheart Wolf",
+        "handler": "manalinkeh_card_pyreheart_wolf",
+        "kind": "card"
+      }
+    },
+    "Blood-Chin Rager": {
+      "oracle": {
+        "oracle_id": "a7036d08-6ee4-49b1-bbbf-c96a937afa15",
+        "name": "Blood-Chin Rager",
+        "oracle_text": "Whenever this creature attacks, Warrior creatures you control gain menace until end of turn. (They can't be blocked except by two or more creatures.)",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Human Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/89/blood-chin-rager?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14860,
+        "iid": 11752,
+        "name": "Blood-Chin Rager",
+        "handler": "manalinkeh_card_blood_chin_rager",
+        "kind": "card"
+      }
+    },
+    "Pathbreaker Ibex": {
+      "oracle": {
+        "oracle_id": "7e52e91b-70e6-4f26-a5d4-b8e33d1debbf",
+        "name": "Pathbreaker Ibex",
+        "oracle_text": "Whenever this creature attacks, creatures you control gain trample and get +X/+X until end of turn, where X is the greatest power among creatures you control.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Goat",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cma/132/pathbreaker-ibex?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15534,
+        "iid": 13929,
+        "name": "Pathbreaker Ibex",
+        "handler": "manalinkeh_card_pathbreaker_ibex",
+        "kind": "card"
+      }
+    },
+    "Stampeding Elk Herd": {
+      "oracle": {
+        "oracle_id": "fc1020b7-086e-41d6-a9ae-1c6c72cf820c",
+        "name": "Stampeding Elk Herd",
+        "oracle_text": "Formidable — Whenever this creature attacks, if creatures you control have total power 8 or greater, creatures you control gain trample until end of turn.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Elk",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Formidable"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/208/stampeding-elk-herd?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15036,
+        "iid": 14849,
+        "name": "Stampeding Elk Herd",
+        "handler": "manalinkeh_card_stampeding_elk_herd",
+        "kind": "card"
+      }
+    },
+    "Bear Umbra": {
+      "oracle": {
+        "oracle_id": "44661108-d72f-4d02-9303-7e4b0ecf7e9c",
+        "name": "Bear Umbra",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +2/+2 and has \"Whenever this creature attacks, untap all lands you control.\"\nUmbra armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Umbra armor",
+          "Enchant"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nec/113/bear-umbra?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10877,
+        "iid": 940,
+        "name": "Bear Umbra",
+        "handler": "manalinkeh_card_bear_umbra",
+        "kind": "card"
+      }
+    },
+    "Veteran's Armaments": {
+      "oracle": {
+        "oracle_id": "a671f8ca-1177-4511-9d51-ca4ff12a5104",
+        "name": "Veteran's Armaments",
+        "oracle_text": "Equipped creature has \"Whenever this creature attacks or blocks, it gets +1/+1 until end of turn for each attacking creature.\"\nWhenever a Soldier creature enters, you may attach this Equipment to it.\nEquip {2}",
+        "mana_cost": "{2}",
+        "type_line": "Kindred Artifact — Soldier Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mor/146/veterans-armaments?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9454,
+        "iid": 10557,
+        "name": "Veteran's Armaments",
+        "handler": "manalinkeh_card_veterans_armaments",
+        "kind": "card"
+      }
+    },
+    "Cultivator of Blades": {
+      "oracle": {
+        "oracle_id": "ca4c0945-7035-47dc-aba8-fbda351d9b7b",
+        "name": "Cultivator of Blades",
+        "oracle_text": "Fabricate 2 (When this creature enters, put two +1/+1 counters on it or create two 1/1 colorless Servo artifact creature tokens.)\nWhenever this creature attacks, you may have other attacking creatures get +X/+X until end of turn, where X is this creature's power.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Elf Artificer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Fabricate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/khc/55/cultivator-of-blades?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16331,
+        "iid": 16419,
+        "name": "Cultivator of Blades",
+        "handler": "manalinkeh_card_cultivator_of_blades",
+        "kind": "card"
+      }
+    },
+    "Wild Beastmaster": {
+      "oracle": {
+        "oracle_id": "52058c39-4edf-40f5-af18-e6de93f302a3",
+        "name": "Wild Beastmaster",
+        "oracle_text": "Whenever this creature attacks, each other creature you control gets +X/+X until end of turn, where X is this creature's power.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Human Shaman",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mic/146/wild-beastmaster?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12872,
+        "iid": 10955,
+        "name": "Wild Beastmaster",
+        "handler": "manalinkeh_card_wild_beastmaster",
+        "kind": "card"
+      }
+    },
+    "Sabertooth Outrider": {
+      "oracle": {
+        "oracle_id": "2a98f634-d739-47a7-98cb-b7f935cd65ef",
+        "name": "Sabertooth Outrider",
+        "oracle_text": "Trample\nFormidable — Whenever this creature attacks, if creatures you control have total power 8 or greater, this creature gains first strike until end of turn.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Human Warrior",
+        "power": "4",
+        "toughness": "2",
+        "keywords": [
+          "Trample",
+          "Formidable"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/152/sabertooth-outrider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14996,
+        "iid": 14352,
+        "name": "Sabertooth Outrider",
+        "handler": "manalinkeh_card_sabertooth_outrider",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Ashcoat Bear": {
+      "oracle": {
+        "oracle_id": "e6d13c0d-23ed-41f5-a726-f18d4bb44c9a",
+        "name": "Ashcoat Bear",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsp/190/ashcoat-bear?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1663,
+        "iid": 648,
+        "name": "Ashcoat Bear",
+        "handler": "manalinkeh_card_ashcoat_bear",
+        "kind": "card"
+      }
+    },
+    "Containment Priest": {
+      "oracle": {
+        "oracle_id": "8a76a9b9-3127-45fe-b20f-a8f643276281",
+        "name": "Containment Priest",
+        "oracle_text": "Flash\nIf a nontoken creature would enter and it wasn't cast, exile it instead.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/13/containment-priest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14448,
+        "iid": 1932,
+        "name": "Containment Priest",
+        "handler": "manalinkeh_card_containment_priest",
+        "kind": "card"
+      }
+    },
+    "Eager Cadet": {
+      "oracle": {
+        "oracle_id": "39780477-01ba-40c6-8fe6-2178efb10b92",
+        "name": "Eager Cadet",
+        "oracle_text": "",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/S1/eager-cadet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4363,
+        "iid": 12406,
+        "name": "Eager Cadet",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Fall of the Hammer": {
+      "oracle": {
+        "oracle_id": "7e3fe8e4-e56a-4109-a314-96c44bbe7d22",
+        "name": "Fall of the Hammer",
+        "oracle_text": "Target creature you control deals damage equal to its power to another target creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cm2/97/fall-of-the-hammer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13702,
+        "iid": 3261,
+        "name": "Fall of the Hammer",
+        "handler": "manalinkeh_card_fall_of_the_hammer",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Glory Seeker": {
+      "oracle": {
+        "oracle_id": "55c60b29-52c5-428c-9229-11ed0e26bd71",
+        "name": "Glory Seeker",
+        "oracle_text": "",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/w17/2/glory-seeker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1045,
+        "iid": 3952,
+        "name": "Glory Seeker",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Goblin Piker": {
+      "oracle": {
+        "oracle_id": "50608184-90d3-43d2-a221-deb186c78323",
+        "name": "Goblin Piker",
+        "oracle_text": "",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m12/141/goblin-piker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10423,
+        "iid": 4027,
+        "name": "Goblin Piker",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Rumbling Baloth": {
+      "oracle": {
+        "oracle_id": "3191c6ca-4d25-4ba3-bfe1-4aeab1295573",
+        "name": "Rumbling Baloth",
+        "oracle_text": "",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/426/rumbling-baloth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13328,
+        "iid": 8108,
+        "name": "Rumbling Baloth",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Scaled Wurm": {
+      "oracle": {
+        "oracle_id": "009a8e38-74d0-4b4a-b8ca-62c9f3183531",
+        "name": "Scaled Wurm",
+        "oracle_text": "",
+        "mana_cost": "{7}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "7",
+        "toughness": "6",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/178/scaled-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2085,
+        "iid": 8287,
+        "name": "Scaled Wurm",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Servo": {
+      "oracle": {
+        "oracle_id": "b6ca7bd1-d72e-4260-8b52-997ee1377279",
+        "name": "Servo",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Artifact Creature — Servo",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmh3/33/servo?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18816,
+        "iid": 16669,
+        "name": "Servo",
+        "handler": "manalinkeh_card_rhino_token",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Spined Wurm": {
+      "oracle": {
+        "oracle_id": "05425f2f-7228-4bf5-8fe1-6fe99107e8e0",
+        "name": "Spined Wurm",
+        "oracle_text": "",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/198/spined-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1156,
+        "iid": 9179,
+        "name": "Spined Wurm",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Trophy Hunter": {
+      "oracle": {
+        "oracle_id": "d2c68c15-761e-4aea-89d8-f7fe8f44905c",
+        "name": "Trophy Hunter",
+        "oracle_text": "{1}{G}: This creature deals 1 damage to target creature with flying.\nWhenever a creature with flying dealt damage by this creature this turn dies, put a +1/+1 counter on this creature.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Human Archer",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rav/187/trophy-hunter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7991,
+        "iid": 10236,
+        "name": "Trophy Hunter",
+        "handler": "manalinkeh_card_trophy_hunter",
+        "kind": "card"
+      }
+    },
+    "Welkin Tern": {
+      "oracle": {
+        "oracle_id": "010c660a-a67b-48f0-a63a-15470eb89f69",
+        "name": "Welkin Tern",
+        "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nThis creature can block only creatures with flying.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Bird",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gs1/5/welkin-tern?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10709,
+        "iid": 10901,
+        "name": "Welkin Tern",
+        "handler": "manalinkeh_card_skywinder_drake",
+        "kind": "card"
+      }
+    }
+  }
+}

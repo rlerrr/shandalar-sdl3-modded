@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "From Beyond",
+  "csvid": 15330,
+  "recipes": [
+    {
+      "family": "devoid_scions_and_sacrifice",
+      "version": 2,
+      "params": {
+        "role": "beyond",
+        "mana": [
+          3,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Devoid (This card has no color.)\nAt the beginning of your upkeep, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\"\n{1}{G}, Sacrifice this enchantment: Search your library for an Eldrazi card, reveal it, put it into your hand, then shuffle.",
+      "variants": [
+        "opponent_upkeep_0",
+        "own_upkeep_0",
+        "repeated_0",
+        "tutor_0",
+        "kindred_tutor_0",
+        "replay_0",
+        "opponent_upkeep_1",
+        "own_upkeep_1",
+        "repeated_1",
+        "tutor_1",
+        "kindred_tutor_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

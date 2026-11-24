@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Mindclaw Shaman",
+  "csvid": 12593,
+  "recipes": [
+    {
+      "family": "remaining_entry_zone_and_permissions",
+      "version": 2,
+      "params": {
+        "csvid": 12593,
+        "cost": [
+          4,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, target opponent reveals their hand. You may cast an instant or sorcery spell from among those cards without paying its mana cost.",
+      "variants": [
+        "draw_from_hand_0",
+        "draw_from_hand_1",
+        "damage_from_hand_0",
+        "damage_from_hand_1",
+        "decline_0",
+        "decline_1",
+        "no_enemy_spell_0",
+        "no_enemy_spell_1",
+        "empty_enemy_hand_0",
+        "empty_enemy_hand_1"
+      ]
+    }
+  ]
+}

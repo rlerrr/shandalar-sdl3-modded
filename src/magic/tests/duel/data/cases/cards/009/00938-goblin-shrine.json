@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 938,
+  "card": "Goblin Shrine",
+  "recipes": [
+    {
+      "family": "departure_damage_and_removal",
+      "version": 2,
+      "params": {
+        "csvid": 938,
+        "printed_cost": "{1}{R}{R}",
+        "keywords": [
+          "Enchant"
+        ]
+      },
+      "oracle_text": "Enchant land\nAs long as enchanted land is a basic Mountain, Goblin creatures get +1/+0.\nWhen this Aura leaves the battlefield, it deals 1 damage to each Goblin creature.",
+      "variants": [
+        "basic_mountain_0",
+        "nonbasic_mountain_0",
+        "bounce_0",
+        "basic_mountain_1",
+        "nonbasic_mountain_1",
+        "bounce_1"
+      ]
+    }
+  ]
+}

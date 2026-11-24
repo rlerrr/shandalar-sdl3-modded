@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Daxos of Meletis",
+  "csvid": 13418,
+  "recipes": [
+    {
+      "family": "alternate_zone_cast_additional_riders",
+      "version": 2,
+      "params": {
+        "model": "daxos",
+        "cost": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Daxos can't be blocked by creatures with power 3 or greater.\nWhenever Daxos deals combat damage to a player, exile the top card of that player's library. You gain life equal to that card's mana value. Until end of turn, you may cast that card and you may spend mana as though it were mana of any color to cast that spell.",
+      "variants": [
+        "short_source_0",
+        "alternate_pay_0",
+        "short_0",
+        "expiry_0",
+        "higher_0",
+        "land_0",
+        "empty_0",
+        "big_block_0",
+        "legal_block_0",
+        "replay_0",
+        "short_source_1",
+        "alternate_pay_1",
+        "short_1",
+        "expiry_1",
+        "higher_1",
+        "land_1",
+        "empty_1",
+        "big_block_1",
+        "legal_block_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

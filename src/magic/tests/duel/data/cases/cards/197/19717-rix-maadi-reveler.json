@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Rix Maadi Reveler",
+  "csvid": 19717,
+  "recipes": [
+    {
+      "family": "entry_follow_on_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 19717,
+        "printed_mana": "{1}{R}",
+        "rules": "Spectacle {2}{B}{R} (You may cast this spell for its spectacle cost rather than its mana cost if an opponent lost life this turn.)\nWhen this creature enters, discard a card, then draw a card. If this creature's spectacle cost was paid, instead discard your hand, then draw three cards."
+      },
+      "oracle_text": "Spectacle {2}{B}{R} (You may cast this spell for its spectacle cost rather than its mana cost if an opponent lost life this turn.)\nWhen this creature enters, discard a card, then draw a card. If this creature's spectacle cost was paid, instead discard your hand, then draw three cards.",
+      "variants": [
+        "normal_loot_0",
+        "normal_loot_1",
+        "spectacle_dump_0",
+        "spectacle_dump_1"
+      ]
+    }
+  ]
+}

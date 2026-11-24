@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Sengir Autocrat",
+  "csvid": 1647,
+  "recipes": [
+    {
+      "family": "entry_trigger_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 1647,
+        "mana": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, create three 0/1 black Serf creature tokens.\nWhen this creature leaves the battlefield, exile all Serf tokens.",
+      "variants": [
+        "entry_0",
+        "entry_1",
+        "global_leave_0",
+        "global_leave_1",
+        "dies_0",
+        "dies_1"
+      ]
+    }
+  ]
+}

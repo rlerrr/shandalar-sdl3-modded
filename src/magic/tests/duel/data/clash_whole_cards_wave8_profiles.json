@@ -1,0 +1,795 @@
+{
+  "version": 1,
+  "sources": {
+    "Adder-Staff Boggart": {
+      "oracle": {
+        "oracle_id": "c95e75fb-2bf2-431c-b7ca-d84236bffe5c",
+        "name": "Adder-Staff Boggart",
+        "oracle_text": "When this creature enters, clash with an opponent. If you win, put a +1/+1 counter on this creature. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Clash"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/148/adder-staff-boggart?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9057,
+        "iid": 234,
+        "name": "Adder-Staff Boggart",
+        "handler": "manalinkeh_card_adder_staff_boggart",
+        "kind": "card"
+      },
+      "params": {
+        "effect": "counter",
+        "mana": "{1}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": 2,
+        "toughness": 1
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/lorwyn.c",
+        "sha256": "2ad3df9420588fbe9ad2badaa55d087269fca4cadce35216a73aa6f1844a92fd",
+        "symbol": "card_adder_staff_boggart",
+        "line": 610
+      }
+    },
+    "Gilt-Leaf Ambush": {
+      "oracle": {
+        "oracle_id": "e5a06062-0513-48af-b92a-420ebbeb1695",
+        "name": "Gilt-Leaf Ambush",
+        "oracle_text": "Create two 1/1 green Elf Warrior creature tokens. Clash with an opponent. If you win, those creatures gain deathtouch until end of turn. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value. Any amount of damage a creature with deathtouch deals to a creature is enough to destroy it.)",
+        "mana_cost": "{2}{G}",
+        "type_line": "Kindred Instant — Elf",
+        "keywords": [
+          "Clash"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/214/gilt-leaf-ambush?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9152,
+        "iid": 3898,
+        "name": "Gilt-Leaf Ambush",
+        "handler": "manalinkeh_card_gilt_leaf_ambush",
+        "kind": "card"
+      },
+      "params": {
+        "effect": "ambush",
+        "mana": "{2}{G}",
+        "type_line": "Kindred Instant — Elf",
+        "power": null,
+        "toughness": null
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/lorwyn.c",
+        "sha256": "2ad3df9420588fbe9ad2badaa55d087269fca4cadce35216a73aa6f1844a92fd",
+        "symbol": "card_gilt_leaf_ambush",
+        "line": 3305
+      }
+    },
+    "Hoarder's Greed": {
+      "oracle": {
+        "oracle_id": "60040023-7bf0-42e0-ab30-46a730675564",
+        "name": "Hoarder's Greed",
+        "oracle_text": "You lose 2 life and draw two cards, then clash with an opponent. If you win, repeat this process. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",
+        "mana_cost": "{3}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Clash"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ecc/47/hoarders-greed?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9169,
+        "iid": 4592,
+        "name": "Hoarder's Greed",
+        "handler": "manalinkeh_card_hoarders_greed",
+        "kind": "card"
+      },
+      "params": {
+        "effect": "greed",
+        "mana": "{3}{B}",
+        "type_line": "Sorcery",
+        "power": null,
+        "toughness": null
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/lorwyn.c",
+        "sha256": "2ad3df9420588fbe9ad2badaa55d087269fca4cadce35216a73aa6f1844a92fd",
+        "symbol": "card_hoarders_greed",
+        "line": 3447
+      }
+    },
+    "Lash Out": {
+      "oracle": {
+        "oracle_id": "398d57bb-4653-4652-aa42-7cea4317be0a",
+        "name": "Lash Out",
+        "oracle_text": "Lash Out deals 3 damage to target creature. Clash with an opponent. If you win, Lash Out deals 3 damage to that creature's controller. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",
+        "mana_cost": "{1}{R}",
+        "type_line": "Instant",
+        "keywords": [
+          "Clash"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmd/127/lash-out?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9199,
+        "iid": 5469,
+        "name": "Lash Out",
+        "handler": "manalinkeh_card_lash_out",
+        "kind": "card"
+      },
+      "params": {
+        "effect": "lash",
+        "mana": "{1}{R}",
+        "type_line": "Instant",
+        "power": null,
+        "toughness": null
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/lorwyn.c",
+        "sha256": "2ad3df9420588fbe9ad2badaa55d087269fca4cadce35216a73aa6f1844a92fd",
+        "symbol": "card_lash_out",
+        "line": 4395
+      }
+    },
+    "Redeem the Lost": {
+      "oracle": {
+        "oracle_id": "3c5e269e-1baa-4b40-8e0f-1763ac85dc6b",
+        "name": "Redeem the Lost",
+        "oracle_text": "Target creature you control gains protection from the color of your choice until end of turn. Clash with an opponent. If you win, return Redeem the Lost to its owner's hand. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [
+          "Clash"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mor/21/redeem-the-lost?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9414,
+        "iid": 7777,
+        "name": "Redeem the Lost",
+        "handler": "manalinkeh_card_redeem_the_lost",
+        "kind": "card"
+      },
+      "params": {
+        "effect": "protect",
+        "mana": "{1}{W}",
+        "type_line": "Instant",
+        "power": null,
+        "toughness": null
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/morningtide.c",
+        "sha256": "0b7c831927bb584207d35c3fcb0c2e516f71eef364ce1631521bcf54ed794e01",
+        "symbol": "card_redeem_the_lost",
+        "line": 2355
+      }
+    },
+    "Release the Ants": {
+      "oracle": {
+        "oracle_id": "b420e429-9dec-4993-a45f-3458795e5cbe",
+        "name": "Release the Ants",
+        "oracle_text": "Release the Ants deals 1 damage to any target. Clash with an opponent. If you win, return Release the Ants to its owner's hand. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",
+        "mana_cost": "{1}{R}",
+        "type_line": "Instant",
+        "keywords": [
+          "Clash"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mor/98/release-the-ants?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9416,
+        "iid": 7807,
+        "name": "Release the Ants",
+        "handler": "manalinkeh_card_release_the_ants",
+        "kind": "card"
+      },
+      "params": {
+        "effect": "ants",
+        "mana": "{1}{R}",
+        "type_line": "Instant",
+        "power": null,
+        "toughness": null
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/morningtide.c",
+        "sha256": "0b7c831927bb584207d35c3fcb0c2e516f71eef364ce1631521bcf54ed794e01",
+        "symbol": "card_release_the_ants",
+        "line": 2390
+      }
+    },
+    "Research the Deep": {
+      "oracle": {
+        "oracle_id": "02f35851-c1be-4162-a6f8-7897325555a7",
+        "name": "Research the Deep",
+        "oracle_text": "Draw a card. Clash with an opponent. If you win, return Research the Deep to its owner's hand. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Clash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mor/46/research-the-deep?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9417,
+        "iid": 7852,
+        "name": "Research the Deep",
+        "handler": "manalinkeh_card_research_the_deep",
+        "kind": "card"
+      },
+      "params": {
+        "effect": "draw",
+        "mana": "{1}{U}",
+        "type_line": "Sorcery",
+        "power": null,
+        "toughness": null
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/morningtide.c",
+        "sha256": "0b7c831927bb584207d35c3fcb0c2e516f71eef364ce1631521bcf54ed794e01",
+        "symbol": "card_research_the_deep",
+        "line": 2417
+      }
+    },
+    "Revive the Fallen": {
+      "oracle": {
+        "oracle_id": "2f857ef6-c1e5-4b85-b3fb-8163be4895b5",
+        "name": "Revive the Fallen",
+        "oracle_text": "Return target creature card from a graveyard to its owner's hand. Clash with an opponent. If you win, return Revive the Fallen to its owner's hand. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",
+        "mana_cost": "{1}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Clash"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mor/76/revive-the-fallen?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9419,
+        "iid": 7907,
+        "name": "Revive the Fallen",
+        "handler": "manalinkeh_card_revive_the_fallen",
+        "kind": "card"
+      },
+      "params": {
+        "effect": "revive",
+        "mana": "{1}{B}",
+        "type_line": "Sorcery",
+        "power": null,
+        "toughness": null
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/morningtide.c",
+        "sha256": "0b7c831927bb584207d35c3fcb0c2e516f71eef364ce1631521bcf54ed794e01",
+        "symbol": "card_revive_the_fallen",
+        "line": 2486
+      }
+    },
+    "Oaken Brawler": {
+      "oracle": {
+        "oracle_id": "819351c6-b0d6-42dc-9bd9-d1a3851aad7c",
+        "name": "Oaken Brawler",
+        "oracle_text": "When this creature enters, clash with an opponent. If you win, put a +1/+1 counter on this creature. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Treefolk Warrior",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Clash"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/33/oaken-brawler?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9228,
+        "iid": 13816,
+        "name": "Oaken Brawler",
+        "handler": "manalinkeh_card_adder_staff_boggart",
+        "kind": "card"
+      },
+      "params": {
+        "effect": "counter",
+        "mana": "{3}{W}",
+        "type_line": "Creature — Treefolk Warrior",
+        "power": 2,
+        "toughness": 4
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/lorwyn.c",
+        "sha256": "2ad3df9420588fbe9ad2badaa55d087269fca4cadce35216a73aa6f1844a92fd",
+        "symbol": "card_adder_staff_boggart",
+        "line": 610
+      }
+    },
+    "Paperfin Rascal": {
+      "oracle": {
+        "oracle_id": "bdec1d22-2f89-424b-b48f-46c9158943af",
+        "name": "Paperfin Rascal",
+        "oracle_text": "When this creature enters, clash with an opponent. If you win, put a +1/+1 counter on this creature. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Merfolk Rogue",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Clash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/77/paperfin-rascal?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9232,
+        "iid": 13916,
+        "name": "Paperfin Rascal",
+        "handler": "manalinkeh_card_adder_staff_boggart",
+        "kind": "card"
+      },
+      "params": {
+        "effect": "counter",
+        "mana": "{2}{U}",
+        "type_line": "Creature — Merfolk Rogue",
+        "power": 2,
+        "toughness": 2
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/lorwyn.c",
+        "sha256": "2ad3df9420588fbe9ad2badaa55d087269fca4cadce35216a73aa6f1844a92fd",
+        "symbol": "card_adder_staff_boggart",
+        "line": 610
+      }
+    }
+  },
+  "witnesses": {
+    "Crater Elemental": {
+      "oracle": {
+        "oracle_id": "8ea607cd-c14b-4bb1-aba1-c5cdc397a825",
+        "name": "Crater Elemental",
+        "oracle_text": "{R}, {T}, Sacrifice this creature: It deals 4 damage to target creature.\nFormidable — {2}{R}: This creature has base power 8 until end of turn. Activate only if creatures you control have total power 8 or greater.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Elemental",
+        "power": "0",
+        "toughness": "6",
+        "keywords": [
+          "Formidable"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/132/crater-elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14874,
+        "iid": 12106,
+        "name": "Crater Elemental",
+        "handler": "manalinkeh_card_crater_elemental",
+        "kind": "card"
+      }
+    },
+    "Craw Wurm": {
+      "oracle": {
+        "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+        "name": "Craw Wurm",
+        "oracle_text": "",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "6",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/173/craw-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 49,
+        "iid": 2032,
+        "name": "Craw Wurm",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Howling Mine": {
+      "oracle": {
+        "oracle_id": "d26b27db-a567-4631-b4b6-7294222fbdd1",
+        "name": "Howling Mine",
+        "oracle_text": "At the beginning of each player's draw step, if this artifact is untapped, that player draws an additional card.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c16/257/howling-mine?utm_source=api"
+      },
+      "registry": {
+        "csvid": 114,
+        "iid": 4683,
+        "name": "Howling Mine",
+        "handler": "manalinkeh_card_howling_mine",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Reclaim": {
+      "oracle": {
+        "oracle_id": "797155cd-faf4-4321-8629-c8c352392748",
+        "name": "Reclaim",
+        "oracle_text": "Put target card from your graveyard on top of your library.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ori/195/reclaim?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3544,
+        "iid": 7761,
+        "name": "Reclaim",
+        "handler": "manalinkeh_card_reclaim",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    }
+  },
+  "static_characteristics_only_witnesses": [
+    "Craw Wurm",
+    "Grizzly Bears",
+    "Hill Giant"
+  ],
+  "token": {
+    "oracle": {
+      "oracle_id": "dac8a765-6845-4b57-bb79-4ec463436f92",
+      "name": "Elf Warrior",
+      "oracle_text": "",
+      "mana_cost": "",
+      "type_line": "Token Creature — Elf Warrior",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "scryfall_uri": "https://scryfall.com/card/tecc/4/elf-warrior?utm_source=api"
+    },
+    "registry": {
+      "csvid": 18732,
+      "iid": 2942,
+      "name": "Elf Warrior",
+      "handler": "manalinkeh_card_rhino_token",
+      "kind": "card"
+    }
+  }
+}

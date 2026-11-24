@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Admonition Angel",
+  "csvid": 10717,
+  "recipes": [
+    {
+      "family": "landfall_control_and_recovery",
+      "version": 2,
+      "oracle_text": "Flying\nLandfall — Whenever a land you control enters, you may exile target nonland permanent other than this creature.\nWhen this creature leaves the battlefield, return all cards exiled with it to the battlefield under their owners' control.",
+      "params": {
+        "source": "Admonition Angel"
+      },
+      "variants": [
+        "own_land_0",
+        "own_land_1",
+        "opposing_land_0",
+        "opposing_land_1",
+        "repeat_0",
+        "repeat_1",
+        "replay_0",
+        "replay_1",
+        "linked_0",
+        "linked_1",
+        "own_target_0",
+        "own_target_1",
+        "release_two_0",
+        "release_two_1",
+        "only_self_0",
+        "only_self_1",
+        "flying_0",
+        "flying_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

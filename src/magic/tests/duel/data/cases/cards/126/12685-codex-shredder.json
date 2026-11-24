@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Codex Shredder",
+  "csvid": 12685,
+  "recipes": [
+    {
+      "family": "mill_paid_abilities",
+      "version": 2,
+      "params": {
+        "csvid": 12685,
+        "mana": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{T}: Target player mills a card. (They put the top card of their library into their graveyard.)\n{5}, {T}, Sacrifice this artifact: Return target card from your graveyard to your hand.",
+      "variants": [
+        "mill_foe_0",
+        "mill_foe_1",
+        "mill_self_0",
+        "mill_self_1",
+        "recover_0",
+        "recover_1",
+        "empty_mill_0",
+        "empty_mill_1",
+        "tapped_0",
+        "tapped_1"
+      ]
+    }
+  ]
+}

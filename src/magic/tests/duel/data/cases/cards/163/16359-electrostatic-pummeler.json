@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 16359,
+  "card": "Electrostatic Pummeler",
+  "recipes": [
+    {
+      "family": "entry_rider_energy_and_mana",
+      "version": 2,
+      "params": {
+        "csvid": 16359,
+        "printed_cost": "{3}"
+      },
+      "oracle_text": "When this creature enters, you get {E}{E}{E} (three energy counters).\nPay {E}{E}{E}: This creature gets +X/+X until end of turn, where X is its power.",
+      "variants": [
+        "entry_0",
+        "double_0",
+        "scaled_0",
+        "repeat_0",
+        "countered_0",
+        "entry_1",
+        "double_1",
+        "scaled_1",
+        "repeat_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

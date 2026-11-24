@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "card": "Deep-Sea Kraken",
+  "csvid": 8517,
+  "recipes": [
+    {
+      "family": "suspend_time_and_recurring_exile",
+      "version": 2,
+      "oracle_text": "This creature can't be blocked.\nSuspend 9—{2}{U} (Rather than cast this card from your hand, you may pay {2}{U} and exile it with nine time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost. It has haste.)\nWhenever an opponent casts a spell, if this card is suspended, remove a time counter from it.",
+      "params": {
+        "source": 8517,
+        "duration": 9,
+        "suspend_fee": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "countdown_0",
+        "countdown_1",
+        "own_spell_0",
+        "own_spell_1",
+        "opponent_spell_0",
+        "opponent_spell_1",
+        "replay_0",
+        "replay_1",
+        "countered_0",
+        "countered_1",
+        "exile_loss_0",
+        "exile_loss_1",
+        "unfunded_0",
+        "unfunded_1",
+        "normal_entry_0",
+        "normal_entry_1"
+      ]
+    }
+  ]
+}

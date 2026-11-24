@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Puppet's Verdict",
+  "csvid": 4557,
+  "recipes": [
+    {
+      "family": "seeded_coin_riders",
+      "version": 2,
+      "params": {
+        "shape": "verdict",
+        "mana": [
+          1,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "keywords": []
+      },
+      "oracle_text": "Flip a coin. If you win the flip, destroy all creatures with power 2 or less. If you lose the flip, destroy all creatures with power 3 or greater.",
+      "variants": [
+        "win_0",
+        "lose_0",
+        "replay_0",
+        "offturn_win_0",
+        "win_1",
+        "lose_1",
+        "replay_1",
+        "offturn_win_1"
+      ]
+    }
+  ]
+}

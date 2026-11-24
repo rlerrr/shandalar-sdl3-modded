@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Scythe Tiger",
+  "csvid": 10656,
+  "recipes": [
+    {
+      "family": "creature_entry_sacrifices",
+      "version": 2,
+      "params": {
+        "mode": "typed_unless",
+        "resource": "land",
+        "quantity": 1,
+        "mana": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "keywords": [
+          "Shroud"
+        ],
+        "power": 3,
+        "toughness": 2
+      },
+      "oracle_text": "Shroud (This creature can't be the target of spells or abilities.)\nWhen this creature enters, sacrifice it unless you sacrifice a land.",
+      "variants": [
+        "paid_0",
+        "unavailable_0",
+        "snapshot_0",
+        "countered_0",
+        "wrong_color_0",
+        "nonbasic_0",
+        "shroud_0",
+        "paid_1",
+        "unavailable_1",
+        "snapshot_1",
+        "countered_1",
+        "wrong_color_1",
+        "nonbasic_1",
+        "shroud_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

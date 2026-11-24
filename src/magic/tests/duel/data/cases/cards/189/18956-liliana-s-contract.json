@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Liliana's Contract",
+  "csvid": 18956,
+  "recipes": [
+    {
+      "family": "entry_interaction_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 18956,
+        "printed_mana": "{3}{B}{B}",
+        "rules": "When this enchantment enters, you draw four cards and you lose 4 life.\nAt the beginning of your upkeep, if you control four or more Demons with different names, you win the game."
+      },
+      "oracle_text": "When this enchantment enters, you draw four cards and you lose 4 life.\nAt the beginning of your upkeep, if you control four or more Demons with different names, you win the game.",
+      "variants": [
+        "four_names_0",
+        "four_names_1",
+        "duplicate_names_0",
+        "duplicate_names_1"
+      ]
+    }
+  ]
+}

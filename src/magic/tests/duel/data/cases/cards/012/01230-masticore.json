@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Masticore",
+  "csvid": 1230,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_grants_and_modes",
+      "version": 2,
+      "params": {
+        "csvid": 1230,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "At the beginning of your upkeep, sacrifice this creature unless you discard a card.\n{2}: This creature deals 1 damage to target creature.\n{2}: Regenerate this creature.",
+      "variants": [
+        "ping_0",
+        "ping_1",
+        "upkeep_pay_0",
+        "upkeep_pay_1",
+        "upkeep_decline_0",
+        "upkeep_decline_1",
+        "upkeep_empty_0",
+        "upkeep_empty_1",
+        "regen_0",
+        "regen_1",
+        "regen_exact_0",
+        "regen_exact_1"
+      ]
+    }
+  ]
+}

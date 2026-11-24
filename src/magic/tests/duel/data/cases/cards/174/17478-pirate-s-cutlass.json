@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Pirate's Cutlass",
+  "csvid": 17478,
+  "recipes": [
+    {
+      "family": "remaining_entry_attachments",
+      "version": 2,
+      "params": {
+        "csvid": 17478,
+        "mana_cost": "{3}"
+      },
+      "oracle_text": "When this Equipment enters, attach it to target Pirate you control.\nEquipped creature gets +2/+1.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+      "variants": [
+        "pirate_0",
+        "pirate_1",
+        "changeling_0",
+        "changeling_1",
+        "paid_reattach_0",
+        "paid_reattach_1",
+        "foreign_pirate_0",
+        "foreign_pirate_1"
+      ]
+    }
+  ]
+}

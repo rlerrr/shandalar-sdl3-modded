@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Roil Elemental",
+  "csvid": 10649,
+  "recipes": [
+    {
+      "family": "landfall_control_and_recovery",
+      "version": 2,
+      "oracle_text": "Flying\nLandfall — Whenever a land you control enters, you may gain control of target creature for as long as you control this creature.",
+      "params": {
+        "source": "Roil Elemental"
+      },
+      "variants": [
+        "own_land_0",
+        "own_land_1",
+        "opposing_land_0",
+        "opposing_land_1",
+        "repeat_0",
+        "repeat_1",
+        "replay_0",
+        "replay_1",
+        "steal_0",
+        "steal_1",
+        "leave_0",
+        "leave_1",
+        "lose_control_0",
+        "lose_control_1",
+        "owner_hand_0",
+        "owner_hand_1",
+        "flying_0",
+        "flying_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Timbermare",
+  "csvid": 8864,
+  "recipes": [
+    {
+      "family": "entry_trigger_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 8864,
+        "cost": "{3}{G}",
+        "choices": [
+          "scope_0",
+          "scope_1",
+          "haste_0",
+          "haste_1",
+          "echo_pay_0",
+          "echo_pay_1",
+          "echo_short_0",
+          "echo_short_1"
+        ]
+      },
+      "oracle_text": "Haste\nEcho {5}{G} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters, tap all other creatures.",
+      "variants": [
+        "scope_0",
+        "scope_1",
+        "haste_0",
+        "haste_1",
+        "echo_pay_0",
+        "echo_pay_1",
+        "echo_short_0",
+        "echo_short_1"
+      ]
+    }
+  ]
+}

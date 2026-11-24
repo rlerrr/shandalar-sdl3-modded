@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 7451,
+  "card": "Chisei, Heart of Oceans",
+  "recipes": [
+    {
+      "family": "upkeep_counters",
+      "version": 2,
+      "params": {
+        "csvid": 7451,
+        "printed_cost": "{2}{U}{U}"
+      },
+      "oracle_text": "Flying\nAt the beginning of your upkeep, sacrifice Chisei unless you remove a counter from a permanent you control.",
+      "variants": [
+        "none_0",
+        "foreign_0",
+        "charge_0",
+        "flying_0",
+        "none_1",
+        "foreign_1",
+        "charge_1",
+        "flying_1"
+      ]
+    }
+  ]
+}

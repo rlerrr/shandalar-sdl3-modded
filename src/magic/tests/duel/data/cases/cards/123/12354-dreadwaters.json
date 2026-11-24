@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Dreadwaters",
+  "csvid": 12354,
+  "recipes": [
+    {
+      "family": "mill_library_spells",
+      "version": 2,
+      "params": {
+        "csvid": 12354,
+        "printed_cost": "{3}{U}",
+        "clauses": [
+          "Target player mills X cards, where X is the number of lands you control."
+        ],
+        "modes": [
+          "own_lands",
+          "foe_lands_only",
+          "land_removed",
+          "short_library"
+        ],
+        "human_modes": [
+          "self_target"
+        ]
+      },
+      "oracle_text": "Target player mills X cards, where X is the number of lands you control.",
+      "variants": [
+        "own_lands_0",
+        "own_lands_1",
+        "foe_lands_only_0",
+        "foe_lands_only_1",
+        "land_removed_0",
+        "land_removed_1",
+        "short_library_0",
+        "short_library_1",
+        "self_target_0"
+      ]
+    }
+  ]
+}

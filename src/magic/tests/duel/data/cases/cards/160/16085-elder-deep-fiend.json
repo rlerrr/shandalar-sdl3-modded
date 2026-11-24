@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Elder Deep-Fiend",
+  "csvid": 16085,
+  "recipes": [
+    {
+      "family": "flash_remaining_alternate_costs_and_modes",
+      "version": 2,
+      "params": {
+        "csvid": 16085,
+        "mana": [
+          8,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flash\nEmerge {5}{U}{U} (You may cast this spell by sacrificing a creature and paying the emerge cost reduced by that creature's mana value.)\nWhen you cast this spell, tap up to four target permanents.",
+      "variants": [
+        "paid_four_0",
+        "paid_four_1",
+        "paid_zero_0",
+        "paid_zero_1",
+        "emerge_0",
+        "emerge_1",
+        "emerge_countered_0",
+        "emerge_countered_1",
+        "colored_short_0",
+        "colored_short_1"
+      ]
+    }
+  ]
+}

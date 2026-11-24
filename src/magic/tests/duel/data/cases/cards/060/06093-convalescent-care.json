@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Convalescent Care",
+  "csvid": 6093,
+  "recipes": [
+    {
+      "family": "upkeep_draw_and_discard",
+      "version": 2,
+      "params": {
+        "csvid": 6093,
+        "printed_mana": "{1}{W}{W}",
+        "rules": "At the beginning of your upkeep, if you have 5 or less life, you gain 3 life and draw a card."
+      },
+      "oracle_text": "At the beginning of your upkeep, if you have 5 or less life, you gain 3 life and draw a card.",
+      "variants": [
+        "five_0",
+        "five_1",
+        "six_0",
+        "six_1",
+        "cross_by_damage_0",
+        "cross_by_damage_1"
+      ]
+    }
+  ]
+}

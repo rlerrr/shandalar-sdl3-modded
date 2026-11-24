@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Wildfire Eternal",
+  "csvid": 17256,
+  "recipes": [
+    {
+      "family": "attack_follow_on_unblocked_modes",
+      "version": 2,
+      "params": {
+        "csvid": 17256,
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Afflict 4 (Whenever this creature becomes blocked, defending player loses 4 life.)\nWhenever this creature attacks and isn't blocked, you may cast an instant or sorcery spell from your hand without paying its mana cost.",
+      "variants": [
+        "free_instant_0",
+        "free_instant_1",
+        "free_sorcery_0",
+        "free_sorcery_1",
+        "decline_0",
+        "decline_1",
+        "blocked_afflict_0",
+        "blocked_afflict_1",
+        "nonspell_0",
+        "nonspell_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Ashen Rider",
+  "csvid": 13381,
+  "recipes": [
+    {
+      "family": "entry_trigger_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 13381,
+        "cost": [
+          4,
+          2,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters or dies, exile target permanent.",
+      "variants": [
+        "entry_and_death_0",
+        "entry_and_death_1",
+        "own_target_0",
+        "own_target_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

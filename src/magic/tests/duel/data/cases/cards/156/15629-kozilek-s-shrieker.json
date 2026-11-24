@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "csvid": 15629,
+  "card": "Kozilek's Shrieker",
+  "recipes": [
+    {
+      "family": "devoid_colorless_activations",
+      "version": 2,
+      "params": {
+        "price": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          3,
+          2
+        ],
+        "effect": "menace",
+        "generic": 0,
+        "colorless": 1,
+        "once": false,
+        "delta": [
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Devoid (This card has no color.)\n{C}: This creature gets +1/+0 and gains menace until end of turn. (It can't be blocked except by two or more creatures. {C} represents colorless mana.)",
+      "variants": [
+        "exact_0",
+        "exact_1",
+        "colored_only_0",
+        "colored_only_1",
+        "short_0",
+        "short_1",
+        "replay_0",
+        "replay_1",
+        "lone_blocker_0",
+        "lone_blocker_1",
+        "two_blockers_0",
+        "two_blockers_1",
+        "menace_expiry_0",
+        "menace_expiry_1"
+      ]
+    }
+  ]
+}

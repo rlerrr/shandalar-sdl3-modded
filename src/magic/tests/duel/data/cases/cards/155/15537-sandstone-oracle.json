@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Sandstone Oracle",
+  "csvid": 15537,
+  "recipes": [
+    {
+      "family": "entry_follow_on_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 15537,
+        "printed_mana": "{7}",
+        "rules": "Flying\nWhen this creature enters, choose an opponent. If that player has more cards in hand than you, draw cards equal to the difference."
+      },
+      "oracle_text": "Flying\nWhen this creature enters, choose an opponent. If that player has more cards in hand than you, draw cards equal to the difference.",
+      "variants": [
+        "behind_0",
+        "behind_1",
+        "equal_flying_0",
+        "equal_flying_1"
+      ]
+    }
+  ]
+}

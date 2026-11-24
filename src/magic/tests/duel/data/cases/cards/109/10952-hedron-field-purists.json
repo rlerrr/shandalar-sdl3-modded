@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "card": "Hedron-Field Purists",
+  "csvid": 10952,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "level_resource_riders",
+      "version": 2,
+      "oracle_text": "Level up {2}{W} ({2}{W}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 1-4\n1/4\nIf a source would deal damage to you or a creature you control, prevent 1 of that damage.\nLEVEL 5+\n2/5\nIf a source would deal damage to you or a creature you control, prevent 2 of that damage.",
+      "params": {
+        "price": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "activation": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "base": [
+          0,
+          3
+        ],
+        "first": [
+          1,
+          1,
+          4
+        ],
+        "second": [
+          5,
+          2,
+          5
+        ],
+        "first_riders": [
+          "If a source would deal damage to you or a creature you control, prevent 1 of that damage."
+        ],
+        "second_riders": [
+          "If a source would deal damage to you or a creature you control, prevent 2 of that damage."
+        ],
+        "rider": "prevent"
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "opponent_timing_0",
+        "opponent_timing_1",
+        "base_0",
+        "base_1",
+        "one_per_packet_0",
+        "one_per_packet_1",
+        "two_per_packet_0",
+        "two_per_packet_1",
+        "combat_0",
+        "combat_1",
+        "walker_0",
+        "walker_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

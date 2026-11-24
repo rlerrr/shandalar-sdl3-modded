@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Tavern Swindler",
+  "csvid": 12847,
+  "recipes": [
+    {
+      "family": "seeded_coin_riders",
+      "version": 2,
+      "params": {
+        "shape": "swindle",
+        "mana": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "oracle_text": "{T}, Pay 3 life: Flip a coin. If you win the flip, you gain 6 life.",
+      "variants": [
+        "win_0",
+        "lose_0",
+        "replay_0",
+        "low_life_0",
+        "fresh_0",
+        "win_1",
+        "lose_1",
+        "replay_1",
+        "low_life_1",
+        "fresh_1"
+      ]
+    }
+  ]
+}

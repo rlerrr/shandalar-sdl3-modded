@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "csvid": 11059,
+  "card": "Surreal Memoir",
+  "recipes": [
+    {
+      "family": "untargeted_rebound",
+      "version": 2,
+      "oracle_text": "Return an instant card at random from your graveyard to your hand.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
+      "params": {
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "keywords": [],
+        "mode": "memoir",
+        "card_type": "Instant",
+        "amount": 1,
+        "random": true
+      },
+      "variants": [
+        "scheduled_0",
+        "countered_0",
+        "snapshot_0",
+        "wrong_color_0",
+        "one_instant_0",
+        "no_instant_0",
+        "scheduled_1",
+        "countered_1",
+        "snapshot_1",
+        "wrong_color_1",
+        "one_instant_1",
+        "no_instant_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 2350,
+  "card": "Soldevi Excavations",
+  "recipes": [
+    {
+      "family": "library_scry_modes_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 2350,
+        "printed_cost": ""
+      },
+      "oracle_text": "If this land would enter, sacrifice an untapped Island instead. If you do, put this land onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add {C}{U}.\n{1}, {T}: Scry 1.",
+      "variants": [
+        "mana_0",
+        "scry_0",
+        "no_island_0",
+        "tapped_island_0",
+        "mana_1",
+        "scry_1",
+        "no_island_1",
+        "tapped_island_1"
+      ]
+    }
+  ]
+}

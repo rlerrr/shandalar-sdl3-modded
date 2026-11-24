@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Lesser Gargadon",
+  "csvid": 1068,
+  "recipes": [
+    {
+      "family": "attack_trigger_costs_and_damage",
+      "version": 2,
+      "params": {
+        "csvid": 1068,
+        "printed_mana": "{2}{R}{R}",
+        "rules": "Whenever this creature attacks or blocks, sacrifice a land."
+      },
+      "oracle_text": "Whenever this creature attacks or blocks, sacrifice a land.",
+      "variants": [
+        "sacrifice_attack_0",
+        "sacrifice_attack_1",
+        "sacrifice_block_0",
+        "sacrifice_block_1",
+        "no_land_0",
+        "no_land_1",
+        "other_attacker_0",
+        "other_attacker_1"
+      ]
+    }
+  ]
+}

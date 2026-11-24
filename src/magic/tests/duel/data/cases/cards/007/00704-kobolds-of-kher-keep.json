@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Kobolds of Kher Keep",
+  "csvid": 704,
+  "recipes": [
+    {
+      "family": "zero_cost_creature",
+      "version": 2,
+      "params": {
+        "color": 16,
+        "toughness": 1,
+        "defender": false
+      },
+      "oracle_text": "",
+      "variants": [
+        "cast_0",
+        "surplus_0",
+        "replay_0",
+        "attack_0",
+        "block_0",
+        "unblocked_0",
+        "kobold_lord_0",
+        "cast_1",
+        "surplus_1",
+        "replay_1",
+        "attack_1",
+        "block_1",
+        "unblocked_1",
+        "kobold_lord_1"
+      ]
+    }
+  ]
+}

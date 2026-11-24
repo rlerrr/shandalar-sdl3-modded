@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Faith Unbroken",
+  "csvid": 16095,
+  "recipes": [
+    {
+      "family": "entry_interaction_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 16095,
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Enchant creature you control\nWhen this Aura enters, exile target creature an opponent controls until this Aura leaves the battlefield.\nEnchanted creature gets +2/+2.",
+      "variants": [
+        "double_target_0",
+        "double_target_1",
+        "host_dies_0",
+        "host_dies_1",
+        "no_own_target_0",
+        "no_own_target_1",
+        "no_enemy_target_0",
+        "no_enemy_target_1",
+        "lost_host_0",
+        "lost_host_1",
+        "returned_owner_0",
+        "returned_owner_1"
+      ]
+    }
+  ]
+}

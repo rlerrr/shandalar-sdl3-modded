@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "csvid": 15024,
+  "card": "Sight Beyond Sight",
+  "recipes": [
+    {
+      "family": "untargeted_rebound",
+      "version": 2,
+      "oracle_text": "Look at the top two cards of your library. Put one of them into your hand and the other on the bottom of your library.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
+      "params": {
+        "mana": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "keywords": [],
+        "mode": "sight",
+        "look": 2,
+        "keep": 1
+      },
+      "variants": [
+        "scheduled_0",
+        "countered_0",
+        "snapshot_0",
+        "wrong_color_0",
+        "choose_second_0",
+        "one_card_0",
+        "empty_library_0",
+        "scheduled_1",
+        "countered_1",
+        "snapshot_1",
+        "wrong_color_1",
+        "choose_second_1",
+        "one_card_1",
+        "empty_library_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

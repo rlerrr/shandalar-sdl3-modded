@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Bloodline Necromancer",
+  "csvid": 17285,
+  "recipes": [
+    {
+      "family": "entry_reanimate_rewards",
+      "version": 2,
+      "params": {
+        "model": "bloodline",
+        "cost": [
+          4,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "from_opponent": false,
+        "choice_for_opponent": false,
+        "optional": true,
+        "maximum_mana_value": null
+      },
+      "oracle_text": "Lifelink\nWhen this creature enters, you may return target Vampire or Wizard creature card from your graveyard to the battlefield.",
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "empty_0",
+        "wrong_side_0",
+        "wrong_type_0",
+        "shroud_0",
+        "underpaid_0",
+        "countered_0",
+        "replay_0",
+        "changeling_0",
+        "decline_0",
+        "lifelink_0",
+        "life_trade_0",
+        "subtype_only_0",
+        "effect_1",
+        "alternate_1",
+        "empty_1",
+        "wrong_side_1",
+        "wrong_type_1",
+        "shroud_1",
+        "underpaid_1",
+        "countered_1",
+        "replay_1",
+        "changeling_1",
+        "decline_1",
+        "lifelink_1",
+        "life_trade_1",
+        "subtype_only_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 1953,
+  "card": "Goblin Lyre",
+  "recipes": [
+    {
+      "family": "coin_flip_activated_outcomes",
+      "version": 2,
+      "params": {
+        "csvid": 1953,
+        "printed_cost": "{3}"
+      },
+      "oracle_text": "Sacrifice this artifact: Flip a coin. If you win the flip, this artifact deals damage to target opponent or planeswalker equal to the number of creatures you control. If you lose the flip, this artifact deals damage to you equal to the number of creatures that opponent or that planeswalker's controller controls.",
+      "variants": [
+        "win_player_0",
+        "lose_player_0",
+        "win_walker_0",
+        "lose_walker_0",
+        "win_zero_0",
+        "lose_zero_0",
+        "win_player_1",
+        "lose_player_1",
+        "win_walker_1",
+        "lose_walker_1",
+        "win_zero_1",
+        "lose_zero_1"
+      ]
+    }
+  ]
+}

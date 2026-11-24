@@ -1,0 +1,1003 @@
+{
+  "sources": {
+    "Aether Rift": {
+      "oracle": {
+        "oracle_id": "2577ef8e-d85e-47af-ac34-629f31992751",
+        "name": "Aether Rift",
+        "oracle_text": "At the beginning of your upkeep, discard a card at random. If you discard a creature card this way, return it from your graveyard to the battlefield unless any player pays 5 life.",
+        "mana_cost": "{1}{R}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inv/227/aether-rift?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4938,
+        "iid": 263,
+        "name": "Aether Rift",
+        "handler": "manalinkeh_card_aether_rift",
+        "kind": "card"
+      }
+    },
+    "Akuta, Born of Ash": {
+      "oracle": {
+        "oracle_id": "29169659-309f-4e1c-86ba-1d36420ed41e",
+        "name": "Akuta, Born of Ash",
+        "oracle_text": "Haste\nAt the beginning of your upkeep, if you have more cards in hand than each opponent, you may sacrifice a Swamp. If you do, return Akuta from your graveyard to the battlefield.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Legendary Creature — Spirit",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/61/akuta-born-of-ash?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7600,
+        "iid": 334,
+        "name": "Akuta, Born of Ash",
+        "handler": "manalinkeh_card_akuta_born_from_ashes",
+        "kind": "card"
+      }
+    },
+    "Anowon, the Ruin Sage": {
+      "oracle": {
+        "oracle_id": "0c201f79-9eca-48c8-88ba-a20fa6918a07",
+        "name": "Anowon, the Ruin Sage",
+        "oracle_text": "At the beginning of your upkeep, each player sacrifices a non-Vampire creature of their choice.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Legendary Creature — Vampire Shaman",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/voc/118/anowon-the-ruin-sage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10721,
+        "iid": 484,
+        "name": "Anowon, the Ruin Sage",
+        "handler": "manalinkeh_card_anowon_the_ruin_sage",
+        "kind": "card"
+      }
+    },
+    "Anurid Scavenger": {
+      "oracle": {
+        "oracle_id": "8d4d70c4-0490-4239-ac8f-dd1d1a008f08",
+        "name": "Anurid Scavenger",
+        "oracle_text": "Protection from black\nAt the beginning of your upkeep, sacrifice this creature unless you put a card from your graveyard on the bottom of your library.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Frog Beast",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Protection"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tor/119/anurid-scavenger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5767,
+        "iid": 492,
+        "name": "Anurid Scavenger",
+        "handler": "manalinkeh_card_anurid_scavenger",
+        "kind": "card"
+      }
+    },
+    "Arcades Sabboth": {
+      "oracle": {
+        "oracle_id": "8ead94c5-8447-4f20-87ec-efdccde689fc",
+        "name": "Arcades Sabboth",
+        "oracle_text": "Flying\nAt the beginning of your upkeep, sacrifice Arcades Sabboth unless you pay {G}{W}{U}.\nEach untapped creature you control gets +0/+2 as long as it's not attacking.\n{W}: Arcades Sabboth gets +0/+1 until end of turn.",
+        "mana_cost": "{2}{G}{G}{W}{W}{U}{U}",
+        "type_line": "Legendary Creature — Elder Dragon",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "G",
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "U",
+          "W"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/187/arcades-sabboth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 568,
+        "iid": 529,
+        "name": "Arcades Sabboth",
+        "handler": "manalinkeh_card_arcades_sabboth",
+        "kind": "card"
+      }
+    },
+    "Barrow Ghoul": {
+      "oracle": {
+        "oracle_id": "1610875f-48da-490c-a371-c439dc36f533",
+        "name": "Barrow Ghoul",
+        "oracle_text": "At the beginning of your upkeep, sacrifice this creature unless you exile the top creature card of your graveyard.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/61/barrow-ghoul?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2939,
+        "iid": 880,
+        "name": "Barrow Ghoul",
+        "handler": "manalinkeh_card_barrow_ghoul",
+        "kind": "card"
+      }
+    },
+    "Binding Grasp": {
+      "oracle": {
+        "oracle_id": "1ebdc091-16d5-4803-821a-ac8c4696b5bc",
+        "name": "Binding Grasp",
+        "oracle_text": "Enchant creature\nAt the beginning of your upkeep, sacrifice this Aura unless you pay {1}{U}.\nYou control enchanted creature.\nEnchanted creature gets +0/+1.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/41/binding-grasp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1872,
+        "iid": 999,
+        "name": "Binding Grasp",
+        "handler": "manalinkeh_card_binding_grasp",
+        "kind": "card"
+      }
+    },
+    "Blood Speaker": {
+      "oracle": {
+        "oracle_id": "2659c0ea-9ae0-4be3-b9f7-5a38230815ad",
+        "name": "Blood Speaker",
+        "oracle_text": "At the beginning of your upkeep, you may sacrifice this creature. If you do, search your library for a Demon card, reveal that card, put it into your hand, then shuffle.\nWhenever a Demon you control enters, return this card from your graveyard to your hand.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Ogre Shaman",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/103/blood-speaker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7167,
+        "iid": 1121,
+        "name": "Blood Speaker",
+        "handler": "manalinkeh_card_blood_speaker",
+        "kind": "card"
+      }
+    },
+    "Braids, Cabal Minion": {
+      "oracle": {
+        "oracle_id": "d85aa59b-c6aa-4b2f-885c-59d6e5e6e8b9",
+        "name": "Braids, Cabal Minion",
+        "oracle_text": "At the beginning of each player's upkeep, that player sacrifices an artifact, creature, or land of their choice.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Legendary Creature — Human Minion",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh2/273/braids-cabal-minion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5495,
+        "iid": 1281,
+        "name": "Braids, Cabal Minion",
+        "handler": "manalinkeh_card_braids_cabal_minion",
+        "kind": "card"
+      }
+    },
+    "Brass Man": {
+      "oracle": {
+        "oracle_id": "64f56228-7874-4465-ba58-1049083ea02f",
+        "name": "Brass Man",
+        "oracle_text": "This creature doesn't untap during your untap step.\nAt the beginning of your upkeep, you may pay {1}. If you do, untap this creature.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/185/brass-man?utm_source=api"
+      },
+      "registry": {
+        "csvid": 930,
+        "iid": 1299,
+        "name": "Brass Man",
+        "handler": "manalinkeh_card_brass_man",
+        "kind": "card"
+      }
+    },
+    "Breeding Pit": {
+      "oracle": {
+        "oracle_id": "ddc83b35-cf7c-495b-bd30-e409b622e299",
+        "name": "Breeding Pit",
+        "oracle_text": "At the beginning of your upkeep, sacrifice this enchantment unless you pay {B}{B}.\nAt the beginning of your end step, create a 0/1 black Thrull creature token.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dvd/53/breeding-pit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1755,
+        "iid": 1319,
+        "name": "Breeding Pit",
+        "handler": "manalinkeh_card_breeding_pit",
+        "kind": "card"
+      }
+    },
+    "Brink of Madness": {
+      "oracle": {
+        "oracle_id": "3209ad08-5482-4dd4-a02e-1dbe99ce6b54",
+        "name": "Brink of Madness",
+        "oracle_text": "At the beginning of your upkeep, if you have no cards in hand, sacrifice this enchantment and target opponent discards their hand.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ulg/50/brink-of-madness?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3974,
+        "iid": 1352,
+        "name": "Brink of Madness",
+        "handler": "manalinkeh_card_brink_of_madness",
+        "kind": "card"
+      }
+    },
+    "Call to the Grave": {
+      "oracle": {
+        "oracle_id": "db5a4c25-5ae5-4a04-be79-bdee39b9152c",
+        "name": "Call to the Grave",
+        "oracle_text": "At the beginning of each player's upkeep, that player sacrifices a non-Zombie creature of their choice.\nAt the beginning of the end step, if no creatures are on the battlefield, sacrifice this enchantment.",
+        "mana_cost": "{4}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m12/85/call-to-the-grave?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6488,
+        "iid": 1454,
+        "name": "Call to the Grave",
+        "handler": "manalinkeh_card_call_to_the_grave",
+        "kind": "card"
+      }
+    },
+    "Chromium": {
+      "oracle": {
+        "oracle_id": "7c91ae5d-0320-46a7-98d2-df0918202478",
+        "name": "Chromium",
+        "oracle_text": "Flying\nRampage 2 (Whenever this creature becomes blocked, it gets +2/+2 until end of turn for each creature blocking it beyond the first.)\nAt the beginning of your upkeep, sacrifice Chromium unless you pay {W}{U}{B}.",
+        "mana_cost": "{2}{W}{W}{U}{U}{B}{B}",
+        "type_line": "Legendary Creature — Elder Dragon",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [
+          "Flying",
+          "Rampage"
+        ],
+        "colors": [
+          "B",
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "U",
+          "W"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/147/chromium?utm_source=api"
+      },
+      "registry": {
+        "csvid": 595,
+        "iid": 1732,
+        "name": "Chromium",
+        "handler": "manalinkeh_card_chromium",
+        "kind": "card"
+      }
+    },
+    "Circling Vultures": {
+      "oracle": {
+        "oracle_id": "7fd6fe21-8fb8-499b-9dd4-806d0d660265",
+        "name": "Circling Vultures",
+        "oracle_text": "Flying\nYou may discard this card any time you could cast an instant.\nAt the beginning of your upkeep, sacrifice this creature unless you exile the top creature card of your graveyard.",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Bird",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/64/circling-vultures?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2954,
+        "iid": 1758,
+        "name": "Circling Vultures",
+        "handler": "manalinkeh_card_circling_vultures",
+        "kind": "card"
+      }
+    },
+    "Conversion": {
+      "oracle": {
+        "oracle_id": "a24e05fb-dffb-4400-b4ca-22fdde45e7a7",
+        "name": "Conversion",
+        "oracle_text": "At the beginning of your upkeep, sacrifice this enchantment unless you pay {W}{W}.\nAll Mountains are Plains.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/9/conversion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 45,
+        "iid": 1944,
+        "name": "Conversion",
+        "handler": "manalinkeh_card_conversion2",
+        "kind": "card"
+      }
+    },
+    "Cosmic Horror": {
+      "oracle": {
+        "oracle_id": "d73df13d-942a-4104-ac9d-de7c100c086f",
+        "name": "Cosmic Horror",
+        "oracle_text": "First strike\nAt the beginning of your upkeep, destroy this creature unless you pay {3}{B}{B}{B}. If this creature is destroyed this way, it deals 7 damage to you.",
+        "mana_cost": "{3}{B}{B}{B}",
+        "type_line": "Creature — Horror",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [
+          "First strike"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/61/cosmic-horror?utm_source=api"
+      },
+      "registry": {
+        "csvid": 600,
+        "iid": 1986,
+        "name": "Cosmic Horror",
+        "handler": "manalinkeh_card_cosmic_horror",
+        "kind": "card"
+      }
+    },
+    "Cosmic Larva": {
+      "oracle": {
+        "oracle_id": "97428d25-d850-4a98-8852-9440e06a9091",
+        "name": "Cosmic Larva",
+        "oracle_text": "Trample\nAt the beginning of your upkeep, sacrifice this creature unless you sacrifice two lands.",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Beast",
+        "power": "7",
+        "toughness": "6",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5dn/63/cosmic-larva?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7032,
+        "iid": 1987,
+        "name": "Cosmic Larva",
+        "handler": "manalinkeh_card_cosmic_larva",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Abyssal Persecutor": {
+      "oracle": {
+        "oracle_id": "7282f643-191b-41be-9f6f-82360c915d6d",
+        "name": "Abyssal Persecutor",
+        "oracle_text": "Flying, trample\nYou can't win the game and your opponents can't lose the game.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Creature — Demon",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Flying",
+          "Trample"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ima/78/abyssal-persecutor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10716,
+        "iid": 192,
+        "name": "Abyssal Persecutor",
+        "handler": "manalinkeh_card_abyssal_persecutor",
+        "kind": "card"
+      }
+    },
+    "Aven Fleetwing": {
+      "oracle": {
+        "oracle_id": "37ad9318-6690-4a8d-bcea-9fcbca58769d",
+        "name": "Aven Fleetwing",
+        "oracle_text": "Flying\nHexproof (This creature can't be the target of spells or abilities your opponents control.)",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Bird Soldier",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Hexproof"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m12/44/aven-fleetwing?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11780,
+        "iid": 756,
+        "name": "Aven Fleetwing",
+        "handler": "manalinkeh_card_aven_fleetwing",
+        "kind": "card"
+      }
+    },
+    "Child of Night": {
+      "oracle": {
+        "oracle_id": "c650a7bc-e350-44a0-a698-d4a233d66156",
+        "name": "Child of Night",
+        "oracle_text": "Lifelink",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Vampire",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Lifelink"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/218/child-of-night?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10398,
+        "iid": 1694,
+        "name": "Child of Night",
+        "handler": "manalinkeh_card_child_of_night",
+        "kind": "card"
+      }
+    },
+    "Fervor": {
+      "oracle": {
+        "oracle_id": "8e0cea9c-3110-4728-9378-76849e33bb90",
+        "name": "Fervor",
+        "oracle_text": "Creatures you control have haste. (They can attack and {T} as soon as they come under your control.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/129/fervor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1604,
+        "iid": 3365,
+        "name": "Fervor",
+        "handler": "manalinkeh_card_fervor",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Indestructibility": {
+      "oracle": {
+        "oracle_id": "9aaa0a28-e342-48bd-8f59-0cd289491f98",
+        "name": "Indestructibility",
+        "oracle_text": "Enchant permanent\nEnchanted permanent has indestructible. (Effects that say \"destroy\" don't destroy that permanent. A creature with indestructible can't be destroyed by damage.)",
+        "mana_cost": "{3}{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/23/indestructibility?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10434,
+        "iid": 4842,
+        "name": "Indestructibility",
+        "handler": "manalinkeh_card_indestructibility",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Scathe Zombies": {
+      "oracle": {
+        "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+        "name": "Scathe Zombies",
+        "oracle_text": "",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/175/scathe-zombies?utm_source=api"
+      },
+      "registry": {
+        "csvid": 214,
+        "iid": 8302,
+        "name": "Scathe Zombies",
+        "handler": "card_scathe_zombies",
+        "kind": "card"
+      }
+    },
+    "Spellbook": {
+      "oracle": {
+        "oracle_id": "83133f51-bfbd-4db5-9be0-f660e3b66435",
+        "name": "Spellbook",
+        "oracle_text": "You have no maximum hand size.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact — Book",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/220/spellbook?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1154,
+        "iid": 9121,
+        "name": "Spellbook",
+        "handler": "manalinkeh_card_spellbook",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Thrull": {
+      "oracle": {
+        "oracle_id": "d31b98f6-dfc6-42d9-9cbc-4fad16f1879f",
+        "name": "Thrull",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Thrull",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tcmm/18/thrull?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18838,
+        "iid": 9965,
+        "name": "Thrull",
+        "handler": "manalinkeh_card_rhino_token",
+        "kind": "card"
+      }
+    },
+    "Welkin Tern": {
+      "oracle": {
+        "oracle_id": "010c660a-a67b-48f0-a63a-15470eb89f69",
+        "name": "Welkin Tern",
+        "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nThis creature can block only creatures with flying.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Bird",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gs1/5/welkin-tern?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10709,
+        "iid": 10901,
+        "name": "Welkin Tern",
+        "handler": "manalinkeh_card_skywinder_drake",
+        "kind": "card"
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Samut, Voice of Dissent",
+  "csvid": 17012,
+  "recipes": [
+    {
+      "family": "flash_remaining_alternate_costs_and_modes",
+      "version": 2,
+      "params": {
+        "csvid": 17012,
+        "mana": [
+          3,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Flash\nDouble strike, vigilance, haste\nOther creatures you control have haste.\n{W}, {T}: Untap another target creature.",
+      "variants": [
+        "haste_team_0",
+        "haste_team_1",
+        "own_untap_0",
+        "own_untap_1",
+        "foreign_untap_0",
+        "foreign_untap_1",
+        "white_short_0",
+        "white_short_1"
+      ]
+    }
+  ]
+}

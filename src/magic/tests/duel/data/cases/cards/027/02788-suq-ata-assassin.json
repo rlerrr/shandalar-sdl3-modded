@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 2788,
+  "card": "Suq'Ata Assassin",
+  "recipes": [
+    {
+      "family": "attack_follow_on_sabotage_and_poison",
+      "version": 2,
+      "params": {
+        "csvid": 2788,
+        "printed_cost": "{1}{B}{B}",
+        "keywords": [
+          "Fear"
+        ]
+      },
+      "oracle_text": "Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)\nWhenever this creature attacks and isn't blocked, defending player gets a poison counter. (A player with ten or more poison counters loses the game.)",
+      "variants": [
+        "unblocked_0",
+        "ground_denied_0",
+        "black_blocker_0",
+        "artifact_blocker_0",
+        "other_attack_0",
+        "unblocked_1",
+        "ground_denied_1",
+        "black_blocker_1",
+        "artifact_blocker_1",
+        "other_attack_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Scoria Wurm",
+  "csvid": 3888,
+  "recipes": [
+    {
+      "family": "seeded_coin_riders",
+      "version": 2,
+      "params": {
+        "shape": "scoria",
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "keywords": []
+      },
+      "oracle_text": "At the beginning of your upkeep, flip a coin. If you lose the flip, return this creature to its owner's hand.",
+      "variants": [
+        "win_0",
+        "lose_0",
+        "replay_0",
+        "opponent_only_0",
+        "win_1",
+        "lose_1",
+        "replay_1",
+        "opponent_only_1"
+      ]
+    }
+  ]
+}

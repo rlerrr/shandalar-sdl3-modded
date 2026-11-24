@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Cephalid Coliseum",
+  "csvid": 5508,
+  "recipes": [
+    {
+      "family": "threshold_pain_land",
+      "version": 2,
+      "oracle_text": "{T}: Add {U}. This land deals 1 damage to you.\nThreshold — {U}, {T}, Sacrifice this land: Target player draws three cards, then discards three cards. Activate only if there are seven or more cards in your graveyard.",
+      "params": {
+        "color": 2,
+        "effect": "loot"
+      },
+      "variants": [
+        "mana_empty_grave_0",
+        "own_six_opposing_eight_0",
+        "at_seven_0",
+        "above_seven_0",
+        "payment_0",
+        "off_turn_0",
+        "tapped_0",
+        "unfunded_0",
+        "wrong_color_0",
+        "seventh_card_dies_0",
+        "grave_exiled_0",
+        "pending_replay_0",
+        "mana_repeat_denied_0",
+        "own_player_0",
+        "existing_hand_0",
+        "own_existing_hand_0",
+        "other_discard_order_0",
+        "mana_empty_grave_1",
+        "own_six_opposing_eight_1",
+        "at_seven_1",
+        "above_seven_1",
+        "payment_1",
+        "off_turn_1",
+        "tapped_1",
+        "unfunded_1",
+        "wrong_color_1",
+        "seventh_card_dies_1",
+        "grave_exiled_1",
+        "pending_replay_1",
+        "mana_repeat_denied_1",
+        "own_player_1",
+        "existing_hand_1",
+        "own_existing_hand_1",
+        "other_discard_order_1",
+        "mana_with_alternative_0"
+      ]
+    }
+  ]
+}

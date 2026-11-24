@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Cathodion",
+  "csvid": 1208,
+  "recipes": [
+    {
+      "family": "departure_resources",
+      "version": 2,
+      "params": {
+        "csvid": 1208,
+        "printed_mana": "{3}",
+        "rules": "When this creature dies, add {C}{C}{C}."
+      },
+      "oracle_text": "When this creature dies, add {C}{C}{C}.",
+      "variants": [
+        "colorless_spend_0",
+        "colorless_spend_1",
+        "borrowed_controller_0",
+        "borrowed_controller_1",
+        "exile_0",
+        "exile_1"
+      ]
+    }
+  ]
+}

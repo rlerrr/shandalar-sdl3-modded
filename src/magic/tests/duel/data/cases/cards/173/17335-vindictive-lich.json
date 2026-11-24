@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 17335,
+  "card": "Vindictive Lich",
+  "recipes": [
+    {
+      "family": "departure_damage_and_removal",
+      "version": 2,
+      "params": {
+        "csvid": 17335,
+        "printed_cost": "{3}{B}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature dies, choose one or more. Each mode must target a different player.\n• Target opponent sacrifices a creature of their choice.\n• Target opponent discards two cards.\n• Target opponent loses 5 life.",
+      "variants": [
+        "sacrifice_0",
+        "discard_0",
+        "life_0",
+        "bounce_0",
+        "sacrifice_1",
+        "discard_1",
+        "life_1",
+        "bounce_1"
+      ]
+    }
+  ]
+}

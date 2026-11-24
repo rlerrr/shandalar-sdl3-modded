@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 14471,
+  "card": "Lifeblood Hydra",
+  "recipes": [
+    {
+      "family": "departure_counters_and_search",
+      "version": 2,
+      "params": {
+        "csvid": 14471,
+        "printed_cost": "{X}{G}{G}{G}"
+      },
+      "oracle_text": "Trample\nThis creature enters with X +1/+1 counters on it.\nWhen this creature dies, you gain life and draw cards equal to its power.",
+      "variants": [
+        "x_zero_0",
+        "x_one_0",
+        "pumped_0",
+        "trample_0",
+        "bounce_0",
+        "countered_0",
+        "x_zero_1",
+        "x_one_1",
+        "pumped_1",
+        "trample_1",
+        "bounce_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

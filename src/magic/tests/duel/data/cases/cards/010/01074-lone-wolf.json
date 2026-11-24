@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Lone Wolf",
+  "csvid": 1074,
+  "recipes": [
+    {
+      "family": "optional_combat_damage_bypass",
+      "version": 2,
+      "oracle_text": "You may have this creature assign its combat damage as though it weren't blocked.",
+      "params": {
+        "mana": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 2
+      },
+      "variants": [
+        "cast_then_attack_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bypass_0",
+        "normal_0",
+        "unblocked_0",
+        "defending_0",
+        "source_idle_0",
+        "mixed_attackers_0",
+        "first_strike_0",
+        "bypass_removed_blocker_0",
+        "normal_removed_blocker_0",
+        "choice_snapshot_0",
+        "rechoose_0",
+        "noncombat_when_chosen_0",
+        "cast_then_attack_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bypass_1",
+        "normal_1",
+        "unblocked_1",
+        "defending_1",
+        "source_idle_1",
+        "mixed_attackers_1",
+        "first_strike_1",
+        "bypass_removed_blocker_1",
+        "normal_removed_blocker_1",
+        "choice_snapshot_1",
+        "rechoose_1",
+        "noncombat_when_chosen_1"
+      ]
+    }
+  ]
+}

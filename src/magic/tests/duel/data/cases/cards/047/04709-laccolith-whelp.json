@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "card": "Laccolith Whelp",
+  "csvid": 4709,
+  "recipes": [
+    {
+      "family": "laccolith_creature",
+      "version": 2,
+      "params": {
+        "mana": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "power": 1,
+        "toughness": 1,
+        "keywords": []
+      },
+      "oracle_text": "Whenever this creature becomes blocked, you may have it deal damage equal to its power to target creature. If you do, this creature assigns no combat damage this turn.",
+      "variants": [
+        "take_0",
+        "own_target_0",
+        "kill_blocker_0",
+        "blocker_returns_damage_0",
+        "boost_before_block_0",
+        "legal_target_0",
+        "late_flash_target_0",
+        "blocker_bounced_0",
+        "next_turn_restore_0",
+        "pending_block_snapshot_0",
+        "unblocked_0",
+        "source_blocks_0",
+        "countered_0",
+        "wrong_color_0",
+        "insufficient_mana_0",
+        "decline_0",
+        "take_1",
+        "own_target_1",
+        "kill_blocker_1",
+        "blocker_returns_damage_1",
+        "boost_before_block_1",
+        "legal_target_1",
+        "late_flash_target_1",
+        "blocker_bounced_1",
+        "next_turn_restore_1",
+        "pending_block_snapshot_1",
+        "unblocked_1",
+        "source_blocks_1",
+        "countered_1",
+        "wrong_color_1",
+        "insufficient_mana_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Blood-Chin Rager",
+  "csvid": 14860,
+  "recipes": [
+    {
+      "family": "attack_trigger_team_keywords",
+      "version": 2,
+      "params": {
+        "csvid": 14860,
+        "mana": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks, Warrior creatures you control gain menace until end of turn. (They can't be blocked except by two or more creatures.)",
+      "variants": [
+        "warrior_only_0",
+        "warrior_only_1",
+        "pair_0",
+        "pair_1",
+        "expires_0",
+        "expires_1"
+      ]
+    }
+  ]
+}

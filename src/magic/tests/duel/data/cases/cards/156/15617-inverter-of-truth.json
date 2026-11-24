@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Inverter of Truth",
+  "csvid": 15617,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "devoid_zone_and_spell_choices",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\nFlying\nWhen this creature enters, exile all cards from your library face down, then shuffle all cards from your graveyard into your library.",
+      "params": {
+        "model": "invert",
+        "mana": [
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "kind": "creature"
+      },
+      "variants": [
+        "pool_exchange_0",
+        "pool_exchange_1",
+        "empty_grave_0",
+        "empty_grave_1",
+        "empty_library_0",
+        "empty_library_1",
+        "public_exile_control_0",
+        "public_exile_control_1",
+        "flying_0",
+        "flying_1",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

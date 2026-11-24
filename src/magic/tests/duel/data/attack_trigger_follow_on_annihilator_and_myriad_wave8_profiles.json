@@ -1,0 +1,692 @@
+{
+  "sources": {
+    "Artisan of Kozilek": {
+      "oracle": {
+        "oracle_id": "19409704-09c4-4a4b-a5a7-f95120b425db",
+        "name": "Artisan of Kozilek",
+        "oracle_text": "When you cast this spell, you may return target creature card from your graveyard to the battlefield.\nAnnihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents of their choice.)",
+        "mana_cost": "{9}",
+        "type_line": "Creature — Eldrazi",
+        "power": "10",
+        "toughness": "9",
+        "keywords": [
+          "Annihilator"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 9.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/801/artisan-of-kozilek?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10870,
+        "iid": 641,
+        "name": "Artisan of Kozilek",
+        "handler": "manalinkeh_card_artisan_of_kozilek",
+        "kind": "card"
+      }
+    },
+    "Kozilek, Butcher of Truth": {
+      "oracle": {
+        "oracle_id": "7b8528b0-71eb-4c9e-bed9-aa2d2e84038f",
+        "name": "Kozilek, Butcher of Truth",
+        "oracle_text": "When you cast this spell, draw four cards.\nAnnihilator 4 (Whenever this creature attacks, defending player sacrifices four permanents of their choice.)\nWhen Kozilek is put into a graveyard from anywhere, its owner shuffles their graveyard into their library.",
+        "mana_cost": "{10}",
+        "type_line": "Legendary Creature — Eldrazi",
+        "power": "12",
+        "toughness": "12",
+        "keywords": [
+          "Annihilator"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 10.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/2/kozilek-butcher-of-truth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10974,
+        "iid": 5373,
+        "name": "Kozilek, Butcher of Truth",
+        "handler": "manalinkeh_card_kozilek_butcher_of_truth",
+        "kind": "card"
+      }
+    },
+    "Hand of Emrakul": {
+      "oracle": {
+        "oracle_id": "b206d3bc-1203-4f00-997e-5da706346a24",
+        "name": "Hand of Emrakul",
+        "oracle_text": "You may sacrifice four Eldrazi Spawn rather than pay this spell's mana cost.\nAnnihilator 1 (Whenever this creature attacks, defending player sacrifices a permanent of their choice.)",
+        "mana_cost": "{9}",
+        "type_line": "Creature — Eldrazi",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [
+          "Annihilator"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 9.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/roe/5/hand-of-emrakul?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10948,
+        "iid": 4366,
+        "name": "Hand of Emrakul",
+        "handler": "manalinkeh_card_hand_of_emrakul",
+        "kind": "card"
+      }
+    },
+    "Banshee of the Dread Choir": {
+      "oracle": {
+        "oracle_id": "282b4dbf-ec00-48ba-8010-73bee489fa7a",
+        "name": "Banshee of the Dread Choir",
+        "oracle_text": "Myriad (Whenever this creature attacks, for each opponent other than defending player, you may create a token copy that's tapped and attacking that player or a planeswalker they control. Exile the tokens at end of combat.)\nWhenever this creature deals combat damage to a player, that player discards a card.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Creature — Spirit",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Myriad"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cma/47/banshee-of-the-dread-choir?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15498,
+        "iid": 11650,
+        "name": "Banshee of the Dread Choir",
+        "handler": "manalinkeh_card_banshee_of_the_dread_choir",
+        "kind": "card"
+      }
+    },
+    "It That Betrays": {
+      "oracle": {
+        "oracle_id": "b11187ab-f8a8-422b-b550-4495f96de0f2",
+        "name": "It That Betrays",
+        "oracle_text": "Annihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents of their choice.)\nWhenever an opponent sacrifices a nontoken permanent, put that card onto the battlefield under your control.",
+        "mana_cost": "{12}",
+        "type_line": "Creature — Eldrazi",
+        "power": "11",
+        "toughness": "11",
+        "keywords": [
+          "Annihilator"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 12.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/805/it-that-betrays?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10960,
+        "iid": 4968,
+        "name": "It That Betrays",
+        "handler": "manalinkeh_card_it_that_betrays",
+        "kind": "card"
+      }
+    },
+    "Pathrazer of Ulamog": {
+      "oracle": {
+        "oracle_id": "4bf95747-4572-49b8-b892-87fe7f910252",
+        "name": "Pathrazer of Ulamog",
+        "oracle_text": "Annihilator 3 (Whenever this creature attacks, defending player sacrifices three permanents of their choice.)\nThis creature can't be blocked except by three or more creatures.",
+        "mana_cost": "{11}",
+        "type_line": "Creature — Eldrazi",
+        "power": "9",
+        "toughness": "9",
+        "keywords": [
+          "Annihilator"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 11.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/4/pathrazer-of-ulamog?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11013,
+        "iid": 7032,
+        "name": "Pathrazer of Ulamog",
+        "handler": "manalinkeh_card_pathrazer_of_ulamog",
+        "kind": "card"
+      }
+    },
+    "Ulamog, the Infinite Gyre": {
+      "oracle": {
+        "oracle_id": "b817bc56-9b4d-4c50-bafa-3c652b99578f",
+        "name": "Ulamog, the Infinite Gyre",
+        "oracle_text": "When you cast this spell, destroy target permanent.\nIndestructible\nAnnihilator 4 (Whenever this creature attacks, defending player sacrifices four permanents of their choice.)\nWhen Ulamog is put into a graveyard from anywhere, its owner shuffles their graveyard into their library.",
+        "mana_cost": "{11}",
+        "type_line": "Legendary Creature — Eldrazi",
+        "power": "10",
+        "toughness": "10",
+        "keywords": [
+          "Indestructible",
+          "Annihilator"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 11.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/3/ulamog-the-infinite-gyre?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11070,
+        "iid": 10313,
+        "name": "Ulamog, the Infinite Gyre",
+        "handler": "manalinkeh_card_ulamog_the_infinite_gyre",
+        "kind": "card"
+      }
+    },
+    "Broodbirth Viper": {
+      "oracle": {
+        "oracle_id": "a8455828-9c61-4ef9-a5f1-1f0cc6fbf446",
+        "name": "Broodbirth Viper",
+        "oracle_text": "Myriad (Whenever this creature attacks, for each opponent other than defending player, you may create a token copy that's tapped and attacking that player or a planeswalker they control. Exile the tokens at end of combat.)\nWhenever this creature deals combat damage to a player, you may draw a card.",
+        "mana_cost": "{4}{U}",
+        "type_line": "Creature — Snake",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Myriad"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c15/10/broodbirth-viper?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15502,
+        "iid": 11833,
+        "name": "Broodbirth Viper",
+        "handler": "manalinkeh_card_neurok_commando",
+        "kind": "card"
+      }
+    },
+    "Herald of the Host": {
+      "oracle": {
+        "oracle_id": "4371d5bc-1760-477b-822e-6d4999fb0a6b",
+        "name": "Herald of the Host",
+        "oracle_text": "Flying, vigilance\nMyriad (Whenever this creature attacks, for each opponent other than defending player, you may create a token copy that's tapped and attacking that player or a planeswalker they control. Exile the tokens at end of combat.)",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Myriad",
+          "Flying",
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/30/herald-of-the-host?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15519,
+        "iid": 13016,
+        "name": "Herald of the Host",
+        "handler": "manalinkeh_card_serra_angel",
+        "kind": "card"
+      }
+    },
+    "Warchief Giant": {
+      "oracle": {
+        "oracle_id": "589abb40-04b4-4dbe-9c2a-446b6c3075d1",
+        "name": "Warchief Giant",
+        "oracle_text": "Haste\nMyriad (Whenever this creature attacks, for each opponent other than defending player, you may create a token copy that's tapped and attacking that player or a planeswalker they control. Exile the tokens at end of combat.)",
+        "mana_cost": "{3}{R}{R}",
+        "type_line": "Creature — Giant Warrior",
+        "power": "5",
+        "toughness": "3",
+        "keywords": [
+          "Haste",
+          "Myriad"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cm2/127/warchief-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15547,
+        "iid": 15424,
+        "name": "Warchief Giant",
+        "handler": "manalinkeh_card_ambush_party",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Air Elemental": {
+      "oracle": {
+        "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+        "name": "Air Elemental",
+        "oracle_text": "Flying",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/44/air-elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 0,
+        "iid": 298,
+        "name": "Air Elemental",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Blood Vassal": {
+      "oracle": {
+        "oracle_id": "f792f40d-1d37-4854-98da-e4020c6a44d4",
+        "name": "Blood Vassal",
+        "oracle_text": "Sacrifice this creature: Add {B}{B}.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Thrull",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/usg/118/blood-vassal?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3708,
+        "iid": 1125,
+        "name": "Blood Vassal",
+        "handler": "manalinkeh_card_blood_vassal",
+        "kind": "card"
+      }
+    },
+    "Eldrazi Spawn": {
+      "oracle": {
+        "oracle_id": "3aaf906a-e749-4e86-ac79-97650b92f271",
+        "name": "Eldrazi Spawn",
+        "oracle_text": "Sacrifice this creature: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Eldrazi Spawn",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tsoc/1/eldrazi-spawn?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18725,
+        "iid": 2919,
+        "name": "Eldrazi Spawn",
+        "handler": "manalinkeh_card_eldrazi_spawn",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mind Rot": {
+      "oracle": {
+        "oracle_id": "ad44cf74-b717-48fb-9fa2-77512024d76a",
+        "name": "Mind Rot",
+        "oracle_text": "Target player discards two cards.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/115/mind-rot?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1087,
+        "iid": 6132,
+        "name": "Mind Rot",
+        "handler": "manalinkeh_card_mind_rot",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Skittering Invasion": {
+      "oracle": {
+        "oracle_id": "cf890abd-b282-4dbb-ac86-9e7caec1c1b8",
+        "name": "Skittering Invasion",
+        "oracle_text": "Create five 0/1 colorless Eldrazi Spawn creature tokens. They have \"Sacrifice this token: Add {C}.\"",
+        "mana_cost": "{7}",
+        "type_line": "Kindred Sorcery — Eldrazi",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/roe/10/skittering-invasion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11040,
+        "iid": 8834,
+        "name": "Skittering Invasion",
+        "handler": "manalinkeh_card_skittering_invasion",
+        "kind": "card"
+      }
+    },
+    "Spellbook": {
+      "oracle": {
+        "oracle_id": "83133f51-bfbd-4db5-9be0-f660e3b66435",
+        "name": "Spellbook",
+        "oracle_text": "You have no maximum hand size.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact — Book",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/220/spellbook?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1154,
+        "iid": 9121,
+        "name": "Spellbook",
+        "handler": "manalinkeh_card_spellbook",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "csvid": 3344,
+  "card": "Burgeoning",
+  "recipes": [
+    {
+      "family": "land_from_hand",
+      "version": 2,
+      "oracle_text": "Whenever an opponent plays a land, you may put a land card from your hand onto the battlefield.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "cast": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "trigger": "opponent_land"
+        }
+      },
+      "variants": [
+        "source_short_0",
+        "opponent_play_0",
+        "decline_0",
+        "empty_0",
+        "nonland_only_0",
+        "own_play_0",
+        "opponent_put_0",
+        "opponent_second_denied_0",
+        "tapped_entry_0",
+        "ready_replay_0",
+        "source_short_1",
+        "opponent_play_1",
+        "decline_1",
+        "empty_1",
+        "nonland_only_1",
+        "own_play_1",
+        "opponent_put_1",
+        "opponent_second_denied_1",
+        "tapped_entry_1",
+        "ready_replay_1",
+        "trigger_decline_0"
+      ]
+    }
+  ]
+}

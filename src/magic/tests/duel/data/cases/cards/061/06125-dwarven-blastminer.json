@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Dwarven Blastminer",
+  "csvid": 6125,
+  "recipes": [
+    {
+      "family": "morph_special_condition_riders",
+      "version": 2,
+      "oracle_text": "{2}{R}, {T}: Destroy target nonbasic land.\nMorph {R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+      "params": {
+        "effect": "land_destroy",
+        "keywords": [],
+        "cast_mana": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "flip_mana": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "ability_mana": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "power": 1,
+        "toughness": 1
+      },
+      "variants": [
+        "printed_effect_0",
+        "hidden_0",
+        "flip_0",
+        "flip_short_0",
+        "activation_short_0",
+        "replay_0",
+        "basic_probe_0",
+        "fresh_denied_0",
+        "printed_effect_1",
+        "hidden_1",
+        "flip_1",
+        "flip_short_1",
+        "activation_short_1",
+        "replay_1",
+        "basic_probe_1",
+        "fresh_denied_1"
+      ]
+    }
+  ]
+}

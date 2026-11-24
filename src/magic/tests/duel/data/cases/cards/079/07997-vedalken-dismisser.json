@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Vedalken Dismisser",
+  "csvid": 7997,
+  "recipes": [
+    {
+      "family": "remaining_entry_library_and_hand",
+      "version": 2,
+      "params": {
+        "csvid": 7997,
+        "printed_mana": "{5}{U}",
+        "rules": "When this creature enters, put target creature on top of its owner's library."
+      },
+      "oracle_text": "When this creature enters, put target creature on top of its owner's library.",
+      "variants": [
+        "borrowed_creature_0",
+        "borrowed_creature_1",
+        "opponent_creature_0",
+        "opponent_creature_1"
+      ]
+    }
+  ]
+}

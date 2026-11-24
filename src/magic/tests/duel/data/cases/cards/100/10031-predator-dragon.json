@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Predator Dragon",
+  "csvid": 10031,
+  "recipes": [
+    {
+      "family": "devour_permanent_rewards",
+      "version": 2,
+      "params": {
+        "reward": "haste",
+        "multiplier": 2,
+        "keywords": [
+          "Flying",
+          "Haste"
+        ],
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        "power": 4,
+        "toughness": 4
+      },
+      "oracle_text": "Flying, haste\nDevour 2 (As this creature enters, you may sacrifice any number of creatures. It enters with twice that many +1/+1 counters on it.)",
+      "variants": [
+        "none_0",
+        "paid_one_0",
+        "wrong_color_0",
+        "countered_0",
+        "snapshot_0",
+        "fresh_paid_0",
+        "fresh_none_0",
+        "fresh_reach_0",
+        "none_1",
+        "paid_one_1",
+        "wrong_color_1",
+        "countered_1",
+        "snapshot_1",
+        "fresh_paid_1",
+        "fresh_none_1",
+        "fresh_reach_1",
+        "paid_two_0",
+        "partial_0",
+        "decline_0"
+      ]
+    }
+  ]
+}

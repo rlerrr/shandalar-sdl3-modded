@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Silumgar Sorcerer",
+  "csvid": 15030,
+  "recipes": [
+    {
+      "family": "exploit_entry_effects",
+      "version": 2,
+      "params": {
+        "reward": "flash_counter",
+        "mana": [
+          1,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "keywords": [
+          "Flash",
+          "Flying"
+        ],
+        "power": 2,
+        "toughness": 1
+      },
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nFlying\nExploit (When this creature enters, you may sacrifice a creature.)\nWhen this creature exploits a creature, counter target creature spell.",
+      "variants": [
+        "pending_creature_0",
+        "pending_noncreature_0",
+        "flash_no_parent_0",
+        "countered_0",
+        "wrong_color_0",
+        "pending_snapshot_0",
+        "flying_ground_0",
+        "flying_reach_0",
+        "pending_creature_1",
+        "pending_noncreature_1",
+        "flash_no_parent_1",
+        "countered_1",
+        "wrong_color_1",
+        "pending_snapshot_1",
+        "flying_ground_1",
+        "flying_reach_1",
+        "pending_decline_0",
+        "pending_self_0",
+        "own_pending_0",
+        "offturn_pay_no_target_0"
+      ]
+    }
+  ]
+}

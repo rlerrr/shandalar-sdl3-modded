@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 14109,
+  "card": "Goblin Rabblemaster",
+  "recipes": [
+    {
+      "family": "attack_trigger_tokens_and_combat",
+      "version": 2,
+      "params": {
+        "csvid": 14109,
+        "printed_cost": "{2}{R}",
+        "keywords": []
+      },
+      "oracle_text": "Other Goblin creatures you control attack each combat if able.\nAt the beginning of combat on your turn, create a 1/1 red Goblin creature token with haste.\nWhenever this creature attacks, it gets +1/+0 until end of turn for each other attacking Goblin.",
+      "variants": [
+        "others_0",
+        "non_goblin_0",
+        "other_only_0",
+        "opening_solo_0",
+        "opening_sick_goblin_0",
+        "opening_foe_turn_0",
+        "others_1",
+        "non_goblin_1",
+        "other_only_1",
+        "opening_solo_1",
+        "opening_sick_goblin_1",
+        "opening_foe_turn_1"
+      ]
+    }
+  ]
+}

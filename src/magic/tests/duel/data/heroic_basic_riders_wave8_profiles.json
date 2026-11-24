@@ -1,0 +1,470 @@
+{
+  "sources": {
+    "Akroan Crusader": {
+      "registry": {
+        "csvid": 13369,
+        "iid": 319,
+        "name": "Akroan Crusader",
+        "handler": "manalinkeh_card_akroan_crusader",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "d981d85c-e97b-4fe7-b415-6e73a3e7e35c",
+        "name": "Akroan Crusader",
+        "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, create a 1/1 red Soldier creature token with haste. (It can attack and {T} as soon as it comes under your control.)",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Heroic"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/121/akroan-crusader?utm_source=api"
+      }
+    },
+    "Akroan Line Breaker": {
+      "registry": {
+        "csvid": 13840,
+        "iid": 322,
+        "name": "Akroan Line Breaker",
+        "handler": "manalinkeh_card_akroan_line_breaker",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "01443d75-3f86-45c0-81fa-fbf1b3175d4f",
+        "name": "Akroan Line Breaker",
+        "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, this creature gets +2/+0 and gains intimidate until end of turn. (It can't be blocked except by artifact creatures and/or creatures that share a color with it.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Human Warrior",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Heroic"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/88/akroan-line-breaker?utm_source=api"
+      }
+    },
+    "Anax and Cymede": {
+      "registry": {
+        "csvid": 13372,
+        "iid": 414,
+        "name": "Anax and Cymede",
+        "handler": "manalinkeh_card_anax_and_cymede",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "9c4219db-1a7a-4d61-bb8b-7998cfed1faf",
+        "name": "Anax and Cymede",
+        "oracle_text": "First strike, vigilance\nHeroic — Whenever you cast a spell that targets Anax and Cymede, creatures you control get +1/+1 and gain trample until end of turn.",
+        "mana_cost": "{1}{R}{W}",
+        "type_line": "Legendary Creature — Human Soldier",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Vigilance",
+          "Heroic",
+          "First strike"
+        ],
+        "colors": [
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/186/anax-and-cymede?utm_source=api"
+      }
+    },
+    "Labyrinth Champion": {
+      "registry": {
+        "csvid": 13471,
+        "iid": 5438,
+        "name": "Labyrinth Champion",
+        "handler": "manalinkeh_card_labyrinth_champion",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "e1a22f41-0543-4e85-8fb8-93c018b461aa",
+        "name": "Labyrinth Champion",
+        "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, this creature deals 2 damage to any target.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Human Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Heroic"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/115/labyrinth-champion?utm_source=api"
+      }
+    },
+    "Phalanx Leader": {
+      "registry": {
+        "csvid": 13511,
+        "iid": 7112,
+        "name": "Phalanx Leader",
+        "handler": "manalinkeh_card_phalanx_leader",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "857db7e0-254a-4920-a71d-9bab6555342f",
+        "name": "Phalanx Leader",
+        "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on each creature you control.",
+        "mana_cost": "{W}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Heroic"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/27/phalanx-leader?utm_source=api"
+      }
+    },
+    "Tormented Hero": {
+      "registry": {
+        "csvid": 13580,
+        "iid": 10087,
+        "name": "Tormented Hero",
+        "handler": "manalinkeh_card_tormented_hero",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "47fbb4f0-565b-4682-9971-0735210c76e5",
+        "name": "Tormented Hero",
+        "oracle_text": "This creature enters tapped.\nHeroic — Whenever you cast a spell that targets this creature, each opponent loses 1 life. You gain life equal to the life lost this way.",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Human Warrior",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Heroic"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/108/tormented-hero?utm_source=api"
+      }
+    },
+    "Vanguard of Brimaz": {
+      "registry": {
+        "csvid": 13827,
+        "iid": 10470,
+        "name": "Vanguard of Brimaz",
+        "handler": "manalinkeh_card_vanguard_of_brimaz",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "4a4f6e85-df16-49a4-8fc6-149a28c2cb42",
+        "name": "Vanguard of Brimaz",
+        "oracle_text": "Vigilance\nHeroic — Whenever you cast a spell that targets this creature, create a 1/1 white Cat Soldier creature token with vigilance.",
+        "mana_cost": "{W}{W}",
+        "type_line": "Creature — Cat Soldier",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Vigilance",
+          "Heroic"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/29/vanguard-of-brimaz?utm_source=api"
+      }
+    }
+  },
+  "witnesses": {
+    "Cat Soldier": {
+      "registry": {
+        "csvid": 18706,
+        "iid": 1531,
+        "name": "Cat Soldier",
+        "handler": "manalinkeh_card_rhino_token",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "53c009a1-b9b6-43d6-8543-77688fedf8ae",
+        "name": "Cat Soldier",
+        "oracle_text": "Vigilance",
+        "mana_cost": "",
+        "type_line": "Token Creature — Cat Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tbng/2/cat-soldier?utm_source=api"
+      }
+    },
+    "Defiant Strike": {
+      "registry": {
+        "csvid": 14251,
+        "iid": 2395,
+        "name": "Defiant Strike",
+        "handler": "manalinkeh_card_defiant_strike",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "f8c2d9c5-6fe6-4698-9972-83cdd625d94b",
+        "name": "Defiant Strike",
+        "oracle_text": "Target creature gets +1/+0 until end of turn.\nDraw a card.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/15/defiant-strike?utm_source=api"
+      }
+    },
+    "Forest": {
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      }
+    },
+    "Grizzly Bears": {
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      }
+    },
+    "Jace Beleren": {
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      }
+    },
+    "Mons's Goblin Raiders": {
+      "registry": {
+        "csvid": 163,
+        "iid": 6293,
+        "name": "Mons's Goblin Raiders",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "a37159df-f6d7-4db6-85de-0ea77f425993",
+        "name": "Mons's Goblin Raiders",
+        "oracle_text": "",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/s00/32/monss-goblin-raiders?utm_source=api"
+      }
+    },
+    "Scathe Zombies": {
+      "registry": {
+        "csvid": 214,
+        "iid": 8302,
+        "name": "Scathe Zombies",
+        "handler": "card_scathe_zombies",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+        "name": "Scathe Zombies",
+        "oracle_text": "",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/175/scathe-zombies?utm_source=api"
+      }
+    },
+    "Soldier": {
+      "registry": {
+        "csvid": 18822,
+        "iid": 8976,
+        "name": "Soldier",
+        "handler": "manalinkeh_card_rhino_token",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "eac25f12-6459-438c-a09e-93e23d2cf80d",
+        "name": "Soldier",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tfrc/3/soldier?utm_source=api"
+      }
+    },
+    "Wall of Tanglecord": {
+      "registry": {
+        "csvid": 11409,
+        "iid": 10785,
+        "name": "Wall of Tanglecord",
+        "handler": "manalinkeh_card_wall_of_tanglecord",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "423bebcc-8fa0-49c4-aa22-728bf51a535b",
+        "name": "Wall of Tanglecord",
+        "oracle_text": "Defender\n{G}: This creature gains reach until end of turn. (It can block creatures with flying.)",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Wall",
+        "power": "0",
+        "toughness": "6",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/222/wall-of-tanglecord?utm_source=api"
+      }
+    }
+  }
+}

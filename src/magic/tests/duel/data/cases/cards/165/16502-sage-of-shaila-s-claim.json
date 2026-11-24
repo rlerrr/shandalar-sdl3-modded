@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 16502,
+  "card": "Sage of Shaila's Claim",
+  "recipes": [
+    {
+      "family": "entry_rider_energy_and_mana",
+      "version": 2,
+      "params": {
+        "csvid": 16502,
+        "printed_cost": "{1}{G}"
+      },
+      "oracle_text": "When this creature enters, you get {E}{E}{E} (three energy counters).",
+      "variants": [
+        "entry_0",
+        "countered_0",
+        "recast_0",
+        "opposing_0",
+        "entry_1",
+        "countered_1",
+        "recast_1",
+        "opposing_1"
+      ]
+    }
+  ]
+}

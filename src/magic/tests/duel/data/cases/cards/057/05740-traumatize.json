@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Traumatize",
+  "csvid": 5740,
+  "recipes": [
+    {
+      "family": "mill_library_spells",
+      "version": 2,
+      "params": {
+        "csvid": 5740,
+        "printed_cost": "{3}{U}{U}",
+        "clauses": [
+          "Target player mills half their library, rounded down."
+        ],
+        "modes": [
+          "even",
+          "odd",
+          "one_card",
+          "live_draw"
+        ],
+        "human_modes": [
+          "self_target"
+        ]
+      },
+      "oracle_text": "Target player mills half their library, rounded down.",
+      "variants": [
+        "even_0",
+        "even_1",
+        "odd_0",
+        "odd_1",
+        "one_card_0",
+        "one_card_1",
+        "live_draw_0",
+        "live_draw_1",
+        "self_target_0"
+      ]
+    }
+  ]
+}

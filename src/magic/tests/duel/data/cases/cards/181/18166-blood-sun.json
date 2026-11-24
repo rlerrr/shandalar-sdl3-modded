@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Blood Sun",
+  "csvid": 18166,
+  "recipes": [
+    {
+      "family": "entry_trigger_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 18166,
+        "printed_mana": "{2}{R}",
+        "rules": "When this enchantment enters, draw a card.\nAll lands lose all abilities except mana abilities."
+      },
+      "oracle_text": "When this enchantment enters, draw a card.\nAll lands lose all abilities except mana abilities.",
+      "variants": [
+        "retain_mana_0",
+        "retain_mana_1",
+        "restore_search_0",
+        "restore_search_1"
+      ]
+    }
+  ]
+}

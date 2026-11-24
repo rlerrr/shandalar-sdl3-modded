@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Chains of Mephistopheles",
+  "csvid": 594,
+  "recipes": [
+    {
+      "family": "mill_remaining_phase_and_mill_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 594,
+        "printed_mana": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "rules": "If a player would draw a card except the first one they draw in each of their draw steps, that player discards a card instead. If the player discards a card this way, they draw a card. If the player doesn't discard a card this way, they mill a card."
+      },
+      "oracle_text": "If a player would draw a card except the first one they draw in each of their draw steps, that player discards a card instead. If the player discards a card this way, they draw a card. If the player doesn't discard a card this way, they mill a card.",
+      "variants": [
+        "outside_empty_0",
+        "outside_empty_1",
+        "outside_with_discard_0",
+        "outside_with_discard_1",
+        "first_and_additional_0",
+        "first_and_additional_1"
+      ]
+    }
+  ]
+}

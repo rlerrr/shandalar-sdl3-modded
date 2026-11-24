@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "csvid": 18350,
+  "card": "Baird, Steward of Argive",
+  "recipes": [
+    {
+      "family": "global_attack_tax",
+      "version": 2,
+      "params": {
+        "cost": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "composition": "vigilance",
+        "tax_formula": "fixed",
+        "amount": 1,
+        "protects_walker": true,
+        "flying": false
+      },
+      "oracle_text": "Vigilance\nCreatures can't attack you or planeswalkers you control unless their controller pays {1} for each of those creatures.",
+      "variants": [
+        "pay_exact_0",
+        "decline_0",
+        "underfunded_0",
+        "two_paid_0",
+        "first_only_0",
+        "stack_distinct_0",
+        "opposite_source_0",
+        "own_vigilance_0",
+        "vigilance_blocks_next_0",
+        "cast_source_0",
+        "removed_source_0",
+        "walker_short_0",
+        "pay_exact_1",
+        "decline_1",
+        "underfunded_1",
+        "two_paid_1",
+        "first_only_1",
+        "stack_distinct_1",
+        "opposite_source_1",
+        "own_vigilance_1",
+        "vigilance_blocks_next_1",
+        "cast_source_1",
+        "removed_source_1",
+        "walker_short_1"
+      ]
+    }
+  ]
+}

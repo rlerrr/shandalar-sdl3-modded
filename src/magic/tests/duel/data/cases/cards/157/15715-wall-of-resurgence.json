@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 15715,
+  "card": "Wall of Resurgence",
+  "recipes": [
+    {
+      "family": "remaining_entry_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 15715,
+        "printed_cost": "{2}{W}"
+      },
+      "oracle_text": "Defender\nWhen this creature enters, you may put three +1/+1 counters on target land you control. If you do, that land becomes a 0/0 Elemental creature with haste that's still a land.",
+      "variants": [
+        "foreign_only_0",
+        "decline_0",
+        "fresh_0",
+        "mana_0",
+        "countered_0",
+        "foreign_only_1",
+        "fresh_1",
+        "mana_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

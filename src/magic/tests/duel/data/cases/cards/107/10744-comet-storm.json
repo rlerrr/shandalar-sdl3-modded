@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 10744,
+  "card": "Comet Storm",
+  "recipes": [
+    {
+      "family": "kicker_variable_and_multikicker",
+      "version": 2,
+      "oracle_text": "Multikicker {1} (You may pay an additional {1} any number of times as you cast this spell.)\nChoose any target, then choose another target for each time this spell was kicked. Comet Storm deals X damage to each of them.",
+      "params": {
+        "effect": "cast_targets",
+        "kicker_cost": "{1}",
+        "base_cost": "{X}{R}{R}",
+        "csvid": 10744
+      },
+      "variants": [
+        "declined_0",
+        "paid_0",
+        "once_0",
+        "short_base_0",
+        "countered_0",
+        "replay_0",
+        "declined_1",
+        "paid_1",
+        "once_1",
+        "short_base_1",
+        "countered_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

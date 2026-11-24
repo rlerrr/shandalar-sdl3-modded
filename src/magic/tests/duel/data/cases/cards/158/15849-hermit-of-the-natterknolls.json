@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "csvid": 15849,
+  "card": "Hermit of the Natterknolls",
+  "recipes": [
+    {
+      "family": "werewolf_triggered_riders",
+      "version": 2,
+      "params": {
+        "model": "hermit",
+        "price": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "front": {
+          "name": "Hermit of the Natterknolls",
+          "power": 2,
+          "toughness": 3,
+          "color": 8,
+          "keywords": [],
+          "clauses": [
+            "Whenever an opponent casts a spell during your turn, draw a card.",
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Lone Wolf of the Natterknolls",
+          "power": 3,
+          "toughness": 5,
+          "color": 8,
+          "keywords": [],
+          "clauses": [
+            "Whenever an opponent casts a spell during your turn, draw two cards.",
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        }
+      },
+      "variants": [
+        "short_cast_0",
+        "short_cast_1",
+        "split_stays_0",
+        "split_stays_1",
+        "replay_0",
+        "replay_1",
+        "front_0",
+        "front_1",
+        "back_0",
+        "back_1",
+        "not_your_turn_0",
+        "not_your_turn_1",
+        "own_spell_0",
+        "own_spell_1",
+        "countered_0",
+        "countered_1"
+      ],
+      "oracle_text": "Whenever an opponent casts a spell during your turn, draw a card.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+    }
+  ]
+}

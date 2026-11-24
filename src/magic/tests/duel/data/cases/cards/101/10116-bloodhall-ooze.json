@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 10116,
+  "card": "Bloodhall Ooze",
+  "recipes": [
+    {
+      "family": "upkeep_counters",
+      "version": 2,
+      "params": {
+        "csvid": 10116,
+        "printed_cost": "{R}"
+      },
+      "oracle_text": "At the beginning of your upkeep, if you control a black permanent, you may put a +1/+1 counter on this creature.\nAt the beginning of your upkeep, if you control a green permanent, you may put a +1/+1 counter on this creature.",
+      "variants": [
+        "none_0",
+        "green_0",
+        "black_0",
+        "both_0",
+        "partial_0",
+        "decline_0",
+        "dual_0",
+        "none_1",
+        "green_1",
+        "black_1",
+        "both_1",
+        "dual_1"
+      ]
+    }
+  ]
+}

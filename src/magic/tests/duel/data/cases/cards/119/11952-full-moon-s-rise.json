@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Full Moon's Rise",
+  "csvid": 11952,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_sacrifice_and_team",
+      "version": 2,
+      "params": {
+        "csvid": 11952,
+        "printed_cost": "{1}{G}",
+        "choices": [
+          "trample_0",
+          "trample_1",
+          "legacy_team_0",
+          "legacy_team_1",
+          "proactive_shield_0",
+          "proactive_shield_1",
+          "without_cost_0",
+          "without_cost_1"
+        ]
+      },
+      "oracle_text": "Werewolf creatures you control get +1/+0 and have trample.\nSacrifice this enchantment: Regenerate all Werewolf creatures you control.",
+      "variants": [
+        "trample_0",
+        "trample_1",
+        "legacy_team_0",
+        "legacy_team_1",
+        "proactive_shield_0",
+        "proactive_shield_1",
+        "without_cost_0",
+        "without_cost_1"
+      ]
+    }
+  ]
+}

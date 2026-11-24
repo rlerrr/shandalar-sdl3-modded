@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 17029,
+  "card": "Soulstinger",
+  "recipes": [
+    {
+      "family": "remaining_entry_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 17029,
+        "printed_cost": "{3}{B}"
+      },
+      "oracle_text": "When this creature enters, put two -1/-1 counters on target creature you control.\nWhen this creature dies, you may put a -1/-1 counter on target creature for each -1/-1 counter on this creature.",
+      "variants": [
+        "entry_0",
+        "death_0",
+        "zero_0",
+        "decline_0",
+        "bounce_0",
+        "countered_0",
+        "entry_1",
+        "death_1",
+        "zero_1",
+        "bounce_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 3567,
+  "card": "Spike Cannibal",
+  "recipes": [
+    {
+      "family": "entry_interaction_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 3567,
+        "printed_cost": "{1}{B}{B}",
+        "keywords": []
+      },
+      "oracle_text": "This creature enters with a +1/+1 counter on it.\nWhen this creature enters, move all +1/+1 counters from all creatures onto it.",
+      "variants": [
+        "alone_0",
+        "one_each_0",
+        "multiple_0",
+        "alone_1",
+        "one_each_1",
+        "multiple_1"
+      ]
+    }
+  ]
+}

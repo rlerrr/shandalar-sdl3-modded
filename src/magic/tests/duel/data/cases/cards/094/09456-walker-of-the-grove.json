@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Walker of the Grove",
+  "csvid": 9456,
+  "recipes": [
+    {
+      "family": "departure_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 9456,
+        "mana_cost": "{6}{G}{G}"
+      },
+      "oracle_text": "When this creature leaves the battlefield, create a 4/4 green Elemental creature token.\nEvoke {4}{G} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+      "variants": [
+        "normal_stays_0",
+        "normal_stays_1",
+        "bounce_0",
+        "bounce_1",
+        "exile_0",
+        "exile_1",
+        "evoke_0",
+        "evoke_1"
+      ]
+    }
+  ]
+}

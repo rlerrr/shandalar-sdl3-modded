@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 8686,
+  "card": "Subterranean Shambler",
+  "recipes": [
+    {
+      "family": "entry_rider_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 8686,
+        "printed_cost": "{3}{R}",
+        "keywords": [
+          "Echo"
+        ]
+      },
+      "oracle_text": "Echo {3}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters or leaves the battlefield, it deals 1 damage to each creature without flying.",
+      "variants": [
+        "grounded_0",
+        "death_0",
+        "bounce_0",
+        "echo_pay_0",
+        "echo_short_0",
+        "grounded_1",
+        "death_1",
+        "bounce_1",
+        "echo_pay_1",
+        "echo_short_1"
+      ]
+    }
+  ]
+}

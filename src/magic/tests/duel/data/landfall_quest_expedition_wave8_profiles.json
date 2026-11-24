@@ -1,0 +1,467 @@
+{
+  "version": 1,
+  "sources": {
+    "Ior Ruin Expedition": {
+      "oracle": {
+        "oracle_id": "fc338ba2-c3a4-45d6-895f-af7f72bf7a94",
+        "name": "Ior Ruin Expedition",
+        "oracle_text": "Landfall — Whenever a land you control enters, you may put a quest counter on this enchantment.\nRemove three quest counters from this enchantment and sacrifice it: Draw two cards.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/398/ior-ruin-expedition?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10572,
+        "iid": 4940,
+        "name": "Ior Ruin Expedition",
+        "handler": "manalinkeh_card_ior_ruin_expedition",
+        "kind": "card"
+      }
+    },
+    "Khalni Heart Expedition": {
+      "oracle": {
+        "oracle_id": "be6155de-c5b2-415c-ad83-142f9926462a",
+        "name": "Khalni Heart Expedition",
+        "oracle_text": "Landfall — Whenever a land you control enters, you may put a quest counter on this enchantment.\nRemove three quest counters from this enchantment and sacrifice it: Search your library for up to two basic land cards, put them onto the battlefield tapped, then shuffle.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/899/khalni-heart-expedition?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10583,
+        "iid": 5238,
+        "name": "Khalni Heart Expedition",
+        "handler": "manalinkeh_card_khalni_heart_expedition",
+        "kind": "card"
+      }
+    },
+    "Soul Stair Expedition": {
+      "oracle": {
+        "oracle_id": "24b11ede-26c8-40ed-b874-c0f6b21572c3",
+        "name": "Soul Stair Expedition",
+        "oracle_text": "Landfall — Whenever a land you control enters, you may put a quest counter on this enchantment.\nRemove three quest counters from this enchantment and sacrifice it: Return up to two target creature cards from your graveyard to your hand.",
+        "mana_cost": "{B}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/112/soul-stair-expedition?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10669,
+        "iid": 9047,
+        "name": "Soul Stair Expedition",
+        "handler": "manalinkeh_card_soul_stair_expedition",
+        "kind": "card"
+      }
+    },
+    "Sunspring Expedition": {
+      "oracle": {
+        "oracle_id": "f5aeed95-24f8-4f28-9e7c-1e3502d013cd",
+        "name": "Sunspring Expedition",
+        "oracle_text": "Landfall — Whenever a land you control enters, you may put a quest counter on this enchantment.\nRemove three quest counters from this enchantment and sacrifice it: You gain 8 life.",
+        "mana_cost": "{W}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/37/sunspring-expedition?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10680,
+        "iid": 9547,
+        "name": "Sunspring Expedition",
+        "handler": "manalinkeh_card_sunspring_expedition",
+        "kind": "card"
+      }
+    },
+    "Zektar Shrine Expedition": {
+      "oracle": {
+        "oracle_id": "45bd5e97-f34e-47bc-ad21-da42d3444431",
+        "name": "Zektar Shrine Expedition",
+        "oracle_text": "Landfall — Whenever a land you control enters, you may put a quest counter on this enchantment.\nRemove three quest counters from this enchantment and sacrifice it: Create a 7/1 red Elemental creature token with trample and haste. Exile it at the beginning of the next end step.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/155/zektar-shrine-expedition?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10714,
+        "iid": 11195,
+        "name": "Zektar Shrine Expedition",
+        "handler": "manalinkeh_card_zektar_shrine_expedition",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Walking Atlas": {
+      "oracle": {
+        "oracle_id": "855a4837-7fc8-4b97-afbd-daa88e322c89",
+        "name": "Walking Atlas",
+        "oracle_text": "{T}: You may put a land card from your hand onto the battlefield.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/131/walking-atlas?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10860,
+        "iid": 10746,
+        "name": "Walking Atlas",
+        "handler": "manalinkeh_card_sakura_tribe_scout",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Dryad Arbor": {
+      "oracle": {
+        "oracle_id": "e996cd67-739c-40f4-b276-0042acf26c71",
+        "name": "Dryad Arbor",
+        "oracle_text": "(This land isn't a spell, it's affected by summoning sickness, and it has \"{T}: Add {G}.\")",
+        "mana_cost": "",
+        "type_line": "Land Creature — Forest Dryad",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/273/dryad-arbor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8916,
+        "iid": 2792,
+        "name": "Dryad Arbor",
+        "handler": "manalinkeh_card_dryad_arbor",
+        "kind": "card"
+      }
+    },
+    "Knight of Glory": {
+      "oracle": {
+        "oracle_id": "10b8fd4d-1696-4b0d-b791-7bd3de504457",
+        "name": "Knight of Glory",
+        "oracle_text": "Protection from black (This creature can't be blocked, targeted, dealt damage, or enchanted by anything black.)\nExalted (Whenever a creature you control attacks alone, that creature gets +1/+1 until end of turn.)",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Knight",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Exalted",
+          "Protection"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/21/knight-of-glory?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12582,
+        "iid": 5313,
+        "name": "Knight of Glory",
+        "handler": "manalinkeh_card_akrasan_squire",
+        "kind": "card"
+      }
+    },
+    "Elvish Mystic": {
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13284,
+        "iid": 2982,
+        "name": "Elvish Mystic",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Drift of Phantasms": {
+      "oracle": {
+        "oracle_id": "6ee51134-c4ad-4101-8ce2-23dde9359cd4",
+        "name": "Drift of Phantasms",
+        "oracle_text": "Defender (This creature can't attack.)\nFlying\nTransmute {1}{U}{U} ({1}{U}{U}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Spirit",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Defender",
+          "Transmute"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/42/drift-of-phantasms?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7828,
+        "iid": 2753,
+        "name": "Drift of Phantasms",
+        "handler": "manalinkeh_card_drift_of_phantasms",
+        "kind": "card"
+      }
+    }
+  },
+  "token_binding": {
+    "csvid": 18726,
+    "iid": 2926,
+    "name": "Elemental",
+    "handler": "manalinkeh_card_elemental_token",
+    "kind": "card"
+  }
+}

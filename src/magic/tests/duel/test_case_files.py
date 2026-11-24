@@ -220,6 +220,17 @@ class UpkeepStepContractTests(unittest.TestCase):
             with self.subTest(field=field), self.assertRaises(ValueError):
                 validate_upkeep_step(dict(op='upkeep_step', player=0, **{field: 1}))
 
+class DrawStepContractTests(unittest.TestCase):
+    def test_draw_step_accepts_only_a_single_explicit_seat(self):
+        from generate_cases import validate_draw_step
+        for player in (0, 1):
+            validate_draw_step(dict(op='draw_step', player=player))
+        invalid = [dict(op='draw_step'), dict(op='draw_step', player=0, value=2)]
+        invalid.extend(dict(op='draw_step', player=p) for p in (True, False, -1, 2, '0', 0.0))
+        for action in invalid:
+            with self.subTest(action=action), self.assertRaises(ValueError):
+                validate_draw_step(action)
+
 class ShuffleObservationContractTests(unittest.TestCase):
     def test_explicit_zero_and_positive_counts(self):
         from generate_cases import validate_shuffle_observation

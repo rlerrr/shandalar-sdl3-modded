@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Falter",
+  "csvid": 3766,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "block_restriction_spells",
+      "version": 2,
+      "oracle_text": "Creatures without flying can't block this turn.",
+      "params": {
+        "mode": "global",
+        "mana": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "instant": true,
+        "keywords": []
+      },
+      "variants": [
+        "effect_0",
+        "effect_1",
+        "expiry_0",
+        "expiry_1",
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "flying_0",
+        "flying_1",
+        "reach_0",
+        "reach_1",
+        "gain_flying_0",
+        "gain_flying_1",
+        "lose_flying_0",
+        "lose_flying_1",
+        "late_ground_0",
+        "late_ground_1",
+        "defend_0",
+        "defend_1",
+        "preblock_0",
+        "preblock_1",
+        "afterblock_0",
+        "afterblock_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 19091,
+  "card": "Estrid, the Masked",
+  "recipes": [
+    {
+      "family": "mill_remaining_activated_and_loyalty",
+      "version": 2,
+      "params": {
+        "csvid": 19091,
+        "printed_cost": "{1}{G}{W}{U}"
+      },
+      "oracle_text": "+2: Untap each enchanted permanent you control.\n−1: Create a white Aura enchantment token named Mask attached to another target permanent. The token has enchant permanent and umbra armor.\n−7: Mill seven cards. Return all non-Aura enchantment cards from your graveyard to the battlefield, then do the same for Aura cards.\nEstrid, the Masked can be your commander.",
+      "variants": [
+        "untap_0",
+        "mask_0",
+        "replenish_0",
+        "replenish_short_0",
+        "untap_1",
+        "mask_1",
+        "replenish_1",
+        "replenish_short_1"
+      ]
+    }
+  ]
+}

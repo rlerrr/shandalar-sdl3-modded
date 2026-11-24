@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "csvid": 8554,
+  "card": "Fortune Thief",
+  "recipes": [
+    {
+      "family": "morph_battlefield_riders",
+      "version": 2,
+      "oracle_text": "Damage that would reduce your life total to less than 1 reduces it to 1 instead.\nMorph {R}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+      "params": {
+        "mode": "thief",
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "morph": [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "power": 0,
+        "toughness": 1,
+        "keywords": [],
+        "color": 16
+      },
+      "variants": [
+        "printed_cast_0",
+        "printed_cast_1",
+        "hidden_cast_0",
+        "hidden_cast_1",
+        "hidden_choice_0",
+        "hidden_choice_1",
+        "cast_short_0",
+        "cast_short_1",
+        "reveal_ready_0",
+        "reveal_ready_1",
+        "reveal_short_0",
+        "reveal_short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "offturn_reveal_0",
+        "offturn_reveal_1",
+        "reveal_replay_0",
+        "reveal_replay_1",
+        "floor_0",
+        "floor_1",
+        "printed_effect_0",
+        "printed_effect_1",
+        "nonlethal_0",
+        "nonlethal_1",
+        "exact_one_0",
+        "exact_one_1",
+        "at_one_0",
+        "at_one_1",
+        "hidden_lethal_0",
+        "hidden_lethal_1",
+        "combat_floor_0",
+        "combat_floor_1",
+        "other_player_0",
+        "other_player_1",
+        "life_loss_0",
+        "life_loss_1",
+        "source_absent_0",
+        "source_absent_1"
+      ]
+    }
+  ]
+}

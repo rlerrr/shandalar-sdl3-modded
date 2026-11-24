@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 3691,
+  "card": "Albino Troll",
+  "recipes": [
+    {
+      "family": "regeneration_self_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 3691,
+        "printed_cost": "{1}{G}"
+      },
+      "oracle_text": "Echo {1}{G} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\n{1}{G}: Regenerate this creature.",
+      "variants": [
+        "regenerate_0",
+        "short_0",
+        "terminate_0",
+        "proactive_0",
+        "pay_once_0",
+        "decline_0",
+        "regenerate_1",
+        "short_1",
+        "terminate_1",
+        "proactive_1",
+        "pay_once_1",
+        "decline_1"
+      ]
+    }
+  ]
+}

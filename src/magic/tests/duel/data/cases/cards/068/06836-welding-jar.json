@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Welding Jar",
+  "csvid": 6836,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_sacrifice_and_team",
+      "version": 2,
+      "params": {
+        "csvid": 6836,
+        "printed_cost": "{0}",
+        "choices": [
+          "proactive_0",
+          "proactive_1",
+          "friendly_0",
+          "friendly_1",
+          "foreign_0",
+          "foreign_1",
+          "wounded_0",
+          "wounded_1",
+          "forbidden_0",
+          "forbidden_1"
+        ]
+      },
+      "oracle_text": "Sacrifice this artifact: Regenerate target artifact.",
+      "variants": [
+        "proactive_0",
+        "proactive_1",
+        "friendly_0",
+        "friendly_1",
+        "foreign_0",
+        "foreign_1",
+        "wounded_0",
+        "wounded_1",
+        "forbidden_0",
+        "forbidden_1"
+      ]
+    }
+  ]
+}

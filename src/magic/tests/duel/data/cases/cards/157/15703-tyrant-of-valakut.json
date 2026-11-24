@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Tyrant of Valakut",
+  "csvid": 15703,
+  "recipes": [
+    {
+      "family": "entry_interaction_choice_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 15703,
+        "mana_cost": "{5}{R}{R}"
+      },
+      "oracle_text": "Surge {3}{R}{R} (You may cast this spell for its surge cost if you or a teammate has cast another spell this turn.)\nFlying\nWhen this creature enters, if its surge cost was paid, it deals 3 damage to any target.",
+      "variants": [
+        "normal_flying_0",
+        "normal_flying_1",
+        "surged_creature_0",
+        "surged_creature_1",
+        "surged_player_0",
+        "surged_player_1",
+        "no_cast_before_0",
+        "no_cast_before_1"
+      ]
+    }
+  ]
+}

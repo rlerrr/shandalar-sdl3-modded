@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Heliod's Emissary",
+  "csvid": 13456,
+  "recipes": [
+    {
+      "family": "bestow_attack_and_damage_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 13456,
+        "normal": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "bestowed": [
+          6,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "creature": [
+          3,
+          3
+        ],
+        "bonus": [
+          3,
+          3
+        ]
+      },
+      "oracle_text": "Bestow {6}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nWhenever this creature or enchanted creature attacks, tap target creature an opponent controls.\nEnchanted creature gets +3/+3.",
+      "variants": [
+        "regular_attack_0",
+        "regular_attack_1",
+        "bestowed_attack_0",
+        "bestowed_attack_1",
+        "foreign_attack_0",
+        "foreign_attack_1",
+        "detach_attack_0",
+        "detach_attack_1",
+        "no_legal_target_0",
+        "no_legal_target_1"
+      ]
+    }
+  ]
+}

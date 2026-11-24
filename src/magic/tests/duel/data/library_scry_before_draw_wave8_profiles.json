@@ -1,0 +1,849 @@
+{
+  "sources": {
+    "Preordain": {
+      "oracle": {
+        "oracle_id": "ac641490-ca14-48d7-8cc4-b69ce984befa",
+        "name": "Preordain",
+        "oracle_text": "Scry 2, then draw a card. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+        "mana_cost": "{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/161/preordain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11160,
+        "iid": 7343,
+        "name": "Preordain",
+        "handler": "manalinkeh_card_preordain",
+        "kind": "card"
+      }
+    },
+    "Foresee": {
+      "oracle": {
+        "oracle_id": "441de890-7b9f-42f7-859a-a154b8ed74ac",
+        "name": "Foresee",
+        "oracle_text": "Scry 4, then draw two cards.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/69/foresee?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8929,
+        "iid": 3597,
+        "name": "Foresee",
+        "handler": "manalinkeh_card_foresee",
+        "kind": "card"
+      }
+    },
+    "Read the Bones": {
+      "oracle": {
+        "oracle_id": "5bf4d8d9-a2b2-4dba-ac05-9d4470a89db2",
+        "name": "Read the Bones",
+        "oracle_text": "Scry 2, then draw two cards. You lose 2 life. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+        "mana_cost": "{2}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/154/read-the-bones?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13532,
+        "iid": 7721,
+        "name": "Read the Bones",
+        "handler": "manalinkeh_card_read_the_bones",
+        "kind": "card"
+      }
+    },
+    "Interpret the Signs": {
+      "oracle": {
+        "oracle_id": "834554f6-3b65-44fd-b1d1-8495b740dbfc",
+        "name": "Interpret the Signs",
+        "oracle_text": "Scry 3, then reveal the top card of your library. Draw cards equal to that card's mana value. (To scry 3, look at the top three cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+        "mana_cost": "{5}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/75/interpret-the-signs?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13914,
+        "iid": 4911,
+        "name": "Interpret the Signs",
+        "handler": "manalinkeh_card_interpret_the_signs",
+        "kind": "card"
+      }
+    },
+    "Riddle of Lightning": {
+      "oracle": {
+        "oracle_id": "ea480035-9f1b-40c9-a3a5-ce7cd093dfcf",
+        "name": "Riddle of Lightning",
+        "oracle_text": "Choose any target. Scry 3, then reveal the top card of your library. Riddle of Lightning deals damage equal to that card's mana value to that permanent or player.",
+        "mana_cost": "{3}{R}{R}",
+        "type_line": "Instant",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/183/riddle-of-lightning?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9001,
+        "iid": 7927,
+        "name": "Riddle of Lightning",
+        "handler": "manalinkeh_card_riddle_of_lightning",
+        "kind": "card"
+      }
+    },
+    "Nissa's Revelation": {
+      "oracle": {
+        "oracle_id": "ba9cd7bc-846f-4b5c-a1dc-9763a60dafc9",
+        "name": "Nissa's Revelation",
+        "oracle_text": "Scry 5, then reveal the top card of your library. If it's a creature card, you draw cards equal to its power and you gain life equal to its toughness.",
+        "mana_cost": "{5}{G}{G}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gnt/47/nissas-revelation?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15187,
+        "iid": 13789,
+        "name": "Nissa's Revelation",
+        "handler": "manalinkeh_card_nissas_revelation",
+        "kind": "card"
+      }
+    },
+    "Ugin's Insight": {
+      "oracle": {
+        "oracle_id": "ad7b9db0-e061-4360-9b81-0408d18d971d",
+        "name": "Ugin's Insight",
+        "oracle_text": "Scry X, where X is the greatest mana value among permanents you control, then draw three cards.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/87/ugins-insight?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15469,
+        "iid": 15220,
+        "name": "Ugin's Insight",
+        "handler": "manalinkeh_card_ugins_insight",
+        "kind": "card"
+      }
+    },
+    "Glimmer of Genius": {
+      "oracle": {
+        "oracle_id": "b9c58cfb-b7d5-4e86-a5d3-efb07192aa22",
+        "name": "Glimmer of Genius",
+        "oracle_text": "Scry 2, then draw two cards. You get {E}{E} (two energy counters).",
+        "mana_cost": "{3}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/49/glimmer-of-genius?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16395,
+        "iid": 16482,
+        "name": "Glimmer of Genius",
+        "handler": "manalinkeh_card_glimmer_of_genius",
+        "kind": "card"
+      }
+    },
+    "Precognitive Perception": {
+      "oracle": {
+        "oracle_id": "275d0b90-a8d6-4388-b7db-34615287f532",
+        "name": "Precognitive Perception",
+        "oracle_text": "Draw three cards.\nAddendum — If you cast this spell during your main phase, instead scry 3, then draw three cards.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Scry",
+          "Addendum"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rna/45/precognitive-perception?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19690,
+        "iid": 19624,
+        "name": "Precognitive Perception",
+        "handler": "manalinkeh_card_precognitive_perception",
+        "kind": "card"
+      }
+    },
+    "Cryptic Annelid": {
+      "oracle": {
+        "oracle_id": "32ebc862-3bf6-4754-b7b8-8bb73f1651cf",
+        "name": "Cryptic Annelid",
+        "oracle_text": "When this creature enters, scry 1, then scry 2, then scry 3. (To scry X, look at the top X cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Worm Beast",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/60/cryptic-annelid?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8907,
+        "iid": 2116,
+        "name": "Cryptic Annelid",
+        "handler": "manalinkeh_card_cryptic_anellid",
+        "kind": "card"
+      }
+    },
+    "Llanowar Empath": {
+      "oracle": {
+        "oracle_id": "0f71416c-e244-48b4-acbe-2a8ef540db0f",
+        "name": "Llanowar Empath",
+        "oracle_text": "When this creature enters, scry 2, then reveal the top card of your library. If it's a creature card, put it into your hand. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Elf Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddu/18/llanowar-empath?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8960,
+        "iid": 5656,
+        "name": "Llanowar Empath",
+        "handler": "manalinkeh_card_llanowar_empath",
+        "kind": "card"
+      }
+    },
+    "Eager Construct": {
+      "oracle": {
+        "oracle_id": "39363190-7f79-4fae-bcfc-b17ec4e07bfe",
+        "name": "Eager Construct",
+        "oracle_text": "When this creature enters, each player may scry 1. (To scry 1, look at the top card of your library, then you may put that card on the bottom.)",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/250/eager-construct?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16357,
+        "iid": 16444,
+        "name": "Eager Construct",
+        "handler": "manalinkeh_card_eager_construct",
+        "kind": "card"
+      }
+    },
+    "Glassblower's Puzzleknot": {
+      "oracle": {
+        "oracle_id": "0fbe0610-8565-4910-bf35-2c10e38b633a",
+        "name": "Glassblower's Puzzleknot",
+        "oracle_text": "When this artifact enters, scry 2, then you get {E}{E}. (You get two energy counters. To scry 2, look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)\n{2}{U}, Sacrifice this artifact: Scry 2, then you get {E}{E}.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/217/glassblowers-puzzleknot?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16394,
+        "iid": 16481,
+        "name": "Glassblower's Puzzleknot",
+        "handler": "manalinkeh_card_glassblowers_puzzleknot",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Brainstorm": {
+      "oracle": {
+        "oracle_id": "36cd2364-d113-47d1-b2c4-b088d9eb88dd",
+        "name": "Brainstorm",
+        "oracle_text": "Draw three cards, then put two cards from your hand on top of your library in any order.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/39/brainstorm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1547,
+        "iid": 1289,
+        "name": "Brainstorm",
+        "handler": "manalinkeh_card_brainstorm",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Divination": {
+      "oracle": {
+        "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+        "name": "Divination",
+        "oracle_text": "Draw two cards.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/51/divination?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10405,
+        "iid": 2609,
+        "name": "Divination",
+        "handler": "manalinkeh_card_divination",
+        "kind": "card"
+      }
+    },
+    "Elvish Mystic": {
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13284,
+        "iid": 2982,
+        "name": "Elvish Mystic",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Goblin Balloon Brigade": {
+      "oracle": {
+        "oracle_id": "10bc98b0-3fdc-46d1-8d3b-6d160e9dd62f",
+        "name": "Goblin Balloon Brigade",
+        "oracle_text": "{R}: This creature gains flying until end of turn.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cn2/159/goblin-balloon-brigade?utm_source=api"
+      },
+      "registry": {
+        "csvid": 101,
+        "iid": 3980,
+        "name": "Goblin Balloon Brigade",
+        "handler": "manalinkeh_card_goblin_balloon_brigade",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Psychic Corrosion": {
+      "oracle": {
+        "oracle_id": "328b42f1-d679-4f9c-80e3-38fe3b965d10",
+        "name": "Psychic Corrosion",
+        "oracle_text": "Whenever you draw a card, each opponent mills two cards.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/68/psychic-corrosion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18982,
+        "iid": 18915,
+        "name": "Psychic Corrosion",
+        "handler": "manalinkeh_card_psychic_corrosion",
+        "kind": "card"
+      }
+    },
+    "Reach Through Mists": {
+      "oracle": {
+        "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+        "name": "Reach Through Mists",
+        "oracle_text": "Draw a card.",
+        "mana_cost": "{U}",
+        "type_line": "Instant — Arcane",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/7/reach-through-mists?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7353,
+        "iid": 7720,
+        "name": "Reach Through Mists",
+        "handler": "manalinkeh_card_reach_through_mists",
+        "kind": "card"
+      }
+    },
+    "Serra Angel": {
+      "oracle": {
+        "oracle_id": "4b7ac066-e5c7-43e6-9e7e-2739b24a905d",
+        "name": "Serra Angel",
+        "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/740/serra-angel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 221,
+        "iid": 8519,
+        "name": "Serra Angel",
+        "handler": "manalinkeh_card_serra_angel",
+        "kind": "card"
+      }
+    },
+    "Sphinx of Magosi": {
+      "oracle": {
+        "oracle_id": "1c9cf20c-51e4-4a87-b9f8-231b6baf5d6b",
+        "name": "Sphinx of Magosi",
+        "oracle_text": "Flying\n{2}{U}: Draw a card, then put a +1/+1 counter on this creature.",
+        "mana_cost": "{3}{U}{U}{U}",
+        "type_line": "Creature — Sphinx",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/w17/12/sphinx-of-magosi?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11048,
+        "iid": 9138,
+        "name": "Sphinx of Magosi",
+        "handler": "manalinkeh_card_sphinx_of_magosi",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    }
+  }
+}

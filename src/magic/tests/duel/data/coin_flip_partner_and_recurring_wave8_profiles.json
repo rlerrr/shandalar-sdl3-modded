@@ -1,0 +1,396 @@
+{
+  "sources": {
+    "Okaun, Eye of Chaos": {
+      "oracle": {
+        "oracle_id": "7dec219b-96d1-4d4c-b3ac-15eda9d2ccc6",
+        "name": "Okaun, Eye of Chaos",
+        "oracle_text": "Partner with Zndrsplt, Eye of Wisdom (When this creature enters, target player may put Zndrsplt into their hand from their library, then shuffle.)\nAt the beginning of combat on your turn, flip a coin until you lose a flip.\nWhenever a player wins a coin flip, double Okaun's power and toughness until end of turn.",
+        "mana_cost": "{4}{R}",
+        "type_line": "Legendary Creature — Cyclops Berserker",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Partner with",
+          "Partner",
+          "Double"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bbd/6/okaun-eye-of-chaos?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18618,
+        "iid": 18728,
+        "name": "Okaun, Eye of Chaos",
+        "handler": "manalinkeh_card_okaun_eye_of_chaos",
+        "kind": "card"
+      }
+    },
+    "Zndrsplt, Eye of Wisdom": {
+      "oracle": {
+        "oracle_id": "502849a6-8e65-40f3-b348-a41c4f939768",
+        "name": "Zndrsplt, Eye of Wisdom",
+        "oracle_text": "Partner with Okaun, Eye of Chaos (When this creature enters, target player may put Okaun into their hand from their library, then shuffle.)\nAt the beginning of combat on your turn, flip a coin until you lose a flip.\nWhenever a player wins a coin flip, draw a card.",
+        "mana_cost": "{4}{U}",
+        "type_line": "Legendary Creature — Homunculus",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Partner with",
+          "Partner"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bbd/5/zndrsplt-eye-of-wisdom?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18656,
+        "iid": 18766,
+        "name": "Zndrsplt, Eye of Wisdom",
+        "handler": "manalinkeh_card_zndrsplt_eye_of_wisdom",
+        "kind": "card"
+      }
+    },
+    "Ral Zarek": {
+      "oracle": {
+        "oracle_id": "75ed6946-e7b1-4bf8-a05c-62a2ba5a6c79",
+        "name": "Ral Zarek",
+        "oracle_text": "+1: Tap target permanent, then untap another target permanent.\n−2: Ral Zarek deals 3 damage to any target.\n−7: Flip five coins. Take an extra turn after this one for each coin that comes up heads.",
+        "mana_cost": "{2}{U}{R}",
+        "type_line": "Legendary Planeswalker — Ral",
+        "loyalty": "4",
+        "keywords": [],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/216/ral-zarek?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13201,
+        "iid": 7646,
+        "name": "Ral Zarek",
+        "handler": "manalinkeh_card_ral_zarek",
+        "kind": "card"
+      }
+    },
+    "Frenetic Sliver": {
+      "oracle": {
+        "oracle_id": "b1af4207-e546-4bde-950b-3234dfffe278",
+        "name": "Frenetic Sliver",
+        "oracle_text": "All Slivers have \"{0}: If this permanent is on the battlefield, flip a coin. If you win the flip, exile this permanent and return it to the battlefield under its owner's control at the beginning of the next end step. If you lose the flip, sacrifice it.\"",
+        "mana_cost": "{1}{U}{R}",
+        "type_line": "Creature — Sliver",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/plc/157/frenetic-sliver?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8782,
+        "iid": 3637,
+        "name": "Frenetic Sliver",
+        "handler": "manalinkeh_card_frenetic_sliver",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Ajani Goldmane": {
+      "oracle": {
+        "oracle_id": "dfb5f660-fd8b-4b7b-934c-6a71cd182f15",
+        "name": "Ajani Goldmane",
+        "oracle_text": "+1: You gain 2 life.\n−1: Put a +1/+1 counter on each creature you control. Those creatures gain vigilance until end of turn.\n−6: Create a white Avatar creature token. It has \"This token's power and toughness are each equal to your life total.\"",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Legendary Planeswalker — Ajani",
+        "loyalty": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m11/1/ajani-goldmane?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9058,
+        "iid": 302,
+        "name": "Ajani Goldmane",
+        "handler": "manalinkeh_card_ajani_goldmane",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Metallic Sliver": {
+      "oracle": {
+        "oracle_id": "7cf70a6b-6b55-400c-9a89-b4b85f7a19f5",
+        "name": "Metallic Sliver",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Artifact Creature — Sliver",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/ttsr/15/metallic-sliver?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1384,
+        "iid": 6079,
+        "name": "Metallic Sliver",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Okaun, Eye of Chaos": {
+      "oracle": {
+        "oracle_id": "7dec219b-96d1-4d4c-b3ac-15eda9d2ccc6",
+        "name": "Okaun, Eye of Chaos",
+        "oracle_text": "Partner with Zndrsplt, Eye of Wisdom (When this creature enters, target player may put Zndrsplt into their hand from their library, then shuffle.)\nAt the beginning of combat on your turn, flip a coin until you lose a flip.\nWhenever a player wins a coin flip, double Okaun's power and toughness until end of turn.",
+        "mana_cost": "{4}{R}",
+        "type_line": "Legendary Creature — Cyclops Berserker",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Partner with",
+          "Partner",
+          "Double"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bbd/6/okaun-eye-of-chaos?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18618,
+        "iid": 18728,
+        "name": "Okaun, Eye of Chaos",
+        "handler": "manalinkeh_card_okaun_eye_of_chaos",
+        "kind": "card"
+      }
+    },
+    "Scoria Wurm": {
+      "oracle": {
+        "oracle_id": "ee45c80c-699c-4e37-97e6-1859c6601c99",
+        "name": "Scoria Wurm",
+        "oracle_text": "At the beginning of your upkeep, flip a coin. If you lose the flip, return this creature to its owner's hand.",
+        "mana_cost": "{4}{R}",
+        "type_line": "Creature — Wurm",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/227/scoria-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3888,
+        "iid": 8335,
+        "name": "Scoria Wurm",
+        "handler": "manalinkeh_card_scoria_wurm",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Wastes": {
+      "oracle": {
+        "oracle_id": "05d24b0c-904a-46b6-b42a-96a4d91a0dd4",
+        "name": "Wastes",
+        "oracle_text": "{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Basic Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/191/wastes?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15719,
+        "iid": 15794,
+        "name": "Wastes",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Zndrsplt, Eye of Wisdom": {
+      "oracle": {
+        "oracle_id": "502849a6-8e65-40f3-b348-a41c4f939768",
+        "name": "Zndrsplt, Eye of Wisdom",
+        "oracle_text": "Partner with Okaun, Eye of Chaos (When this creature enters, target player may put Okaun into their hand from their library, then shuffle.)\nAt the beginning of combat on your turn, flip a coin until you lose a flip.\nWhenever a player wins a coin flip, draw a card.",
+        "mana_cost": "{4}{U}",
+        "type_line": "Legendary Creature — Homunculus",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Partner with",
+          "Partner"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bbd/5/zndrsplt-eye-of-wisdom?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18656,
+        "iid": 18766,
+        "name": "Zndrsplt, Eye of Wisdom",
+        "handler": "manalinkeh_card_zndrsplt_eye_of_wisdom",
+        "kind": "card"
+      }
+    }
+  }
+}

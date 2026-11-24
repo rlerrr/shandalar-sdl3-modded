@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "card": "Taigam's Strike",
+  "csvid": 15048,
+  "recipes": [
+    {
+      "family": "targeted_rebound",
+      "version": 2,
+      "params": {
+        "power": 2,
+        "toughness": 0,
+        "unblockable": true,
+        "instant": false,
+        "mana": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "oracle_text": "Target creature gets +2/+0 until end of turn and can't be blocked this turn.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
+      "variants": [
+        "return_same_0",
+        "retarget_enemy_0",
+        "no_target_0",
+        "countered_0",
+        "fizzle_0",
+        "combat_0",
+        "snapshot_0",
+        "wrong_color_0",
+        "expired_block_0",
+        "return_same_1",
+        "retarget_enemy_1",
+        "no_target_1",
+        "countered_1",
+        "fizzle_1",
+        "combat_1",
+        "snapshot_1",
+        "wrong_color_1",
+        "expired_block_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

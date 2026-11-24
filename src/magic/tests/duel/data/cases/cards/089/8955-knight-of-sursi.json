@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "csvid": 8955,
+  "card": "Knight of Sursi",
+  "recipes": [
+    {
+      "family": "suspend_creature_combat",
+      "version": 2,
+      "oracle_text": "Flying; flanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)\nSuspend 3—{W} (Rather than cast this card from your hand, you may pay {W} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost. It has haste.)",
+      "params": {
+        "csvid": 8955,
+        "duration": 3,
+        "fee": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "printed": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "pt": [
+          2,
+          2
+        ],
+        "clauses": [
+          "Flying; flanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)",
+          "Suspend 3—{W} (Rather than cast this card from your hand, you may pay {W} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost. It has haste.)"
+        ]
+      },
+      "variants": [
+        "parked_0",
+        "parked_1",
+        "countdown_0",
+        "countdown_1",
+        "unfunded_0",
+        "unfunded_1",
+        "wrong_suspend_0",
+        "wrong_suspend_1",
+        "normal_0",
+        "normal_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

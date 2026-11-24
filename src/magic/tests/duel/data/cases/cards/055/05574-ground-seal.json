@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Ground Seal",
+  "csvid": 5574,
+  "recipes": [
+    {
+      "family": "entry_follow_on_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 5574,
+        "printed_mana": "{1}{G}",
+        "rules": "When this enchantment enters, draw a card.\nCards in graveyards can't be the targets of spells or abilities."
+      },
+      "oracle_text": "When this enchantment enters, draw a card.\nCards in graveyards can't be the targets of spells or abilities.",
+      "variants": [
+        "seal_graves_0",
+        "seal_graves_1",
+        "restore_target_0",
+        "restore_target_1"
+      ]
+    }
+  ]
+}

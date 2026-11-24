@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 600,
+  "card": "Cosmic Horror",
+  "recipes": [
+    {
+      "family": "upkeep_payment_and_sacrifice",
+      "version": 2,
+      "params": {
+        "csvid": 600,
+        "printed_cost": "{3}{B}{B}{B}",
+        "keywords": [
+          "First strike"
+        ]
+      },
+      "oracle_text": "First strike\nAt the beginning of your upkeep, destroy this creature unless you pay {3}{B}{B}{B}. If this creature is destroyed this way, it deals 7 damage to you.",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "short_0",
+        "short_1",
+        "first_strike_0",
+        "first_strike_1",
+        "indestructible_0",
+        "indestructible_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Pyroclast Consul",
+  "csvid": 9410,
+  "recipes": [
+    {
+      "family": "library_kinship_upkeep",
+      "version": 2,
+      "params": {
+        "csvid": 9410,
+        "printed_mana": [
+          3,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "rules": "Kinship — At the beginning of your upkeep, you may look at the top card of your library. If it shares a creature type with this creature, you may reveal it. If you do, this creature deals 2 damage to each creature."
+      },
+      "oracle_text": "Kinship — At the beginning of your upkeep, you may look at the top card of your library. If it shares a creature type with this creature, you may reveal it. If you do, this creature deals 2 damage to each creature.",
+      "variants": [
+        "matched_fires_0",
+        "matched_fires_1",
+        "nonmatch_0",
+        "nonmatch_1",
+        "decline_reveal_0"
+      ]
+    }
+  ]
+}

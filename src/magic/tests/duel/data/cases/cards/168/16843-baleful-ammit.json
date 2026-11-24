@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 16843,
+  "card": "Baleful Ammit",
+  "recipes": [
+    {
+      "family": "entry_follow_on_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 16843,
+        "printed_cost": "{2}{B}"
+      },
+      "oracle_text": "Lifelink\nWhen this creature enters, put a -1/-1 counter on target creature you control.",
+      "variants": [
+        "own_0",
+        "self_0",
+        "combat_0",
+        "countered_0",
+        "own_1",
+        "self_1",
+        "combat_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "card": "Rakdos Cackler",
+  "csvid": 12792,
+  "recipes": [
+    {
+      "family": "unleash_creature",
+      "version": 2,
+      "oracle_text": "Unleash (You may have this creature enter with a +1/+1 counter on it. It can't block as long as it has a +1/+1 counter on it.)",
+      "params": {
+        "mana_options": [
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "hybrid": true,
+        "power": 1,
+        "toughness": 1
+      },
+      "variants": [
+        "pay_black_0",
+        "pay_red_0",
+        "decline_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "block_accept_0",
+        "block_decline_0",
+        "block_after_clear_0",
+        "decline_external_counter_0",
+        "grow_other_0",
+        "double_counter_0",
+        "boosted_attack_0",
+        "bounce_rechoose_0",
+        "piper_accept_0",
+        "piper_decline_0",
+        "pending_snapshot_0",
+        "separate_copies_0",
+        "pay_black_1",
+        "pay_red_1",
+        "decline_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "block_accept_1",
+        "block_decline_1",
+        "block_after_clear_1",
+        "decline_external_counter_1",
+        "grow_other_1",
+        "double_counter_1",
+        "boosted_attack_1",
+        "bounce_rechoose_1",
+        "piper_accept_1",
+        "piper_decline_1",
+        "pending_snapshot_1",
+        "separate_copies_1"
+      ]
+    }
+  ]
+}

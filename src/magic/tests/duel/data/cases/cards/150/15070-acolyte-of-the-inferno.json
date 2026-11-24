@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "csvid": 15070,
+  "card": "Acolyte of the Inferno",
+  "recipes": [
+    {
+      "family": "block_damage_trigger",
+      "version": 2,
+      "oracle_text": "Renown 1 (When this creature deals combat damage to a player, if it isn't renowned, put a +1/+1 counter on it and it becomes renowned.)\nWhenever this creature becomes blocked by a creature, it deals 2 damage to that creature.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "defense": false,
+          "damage": 2,
+          "controller_damage": 0,
+          "renown": true,
+          "printed": [
+            2,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "power": 3,
+          "toughness": 1,
+          "clauses": [
+            "Renown 1 (When this creature deals combat damage to a player, if it isn't renowned, put a +1/+1 counter on it and it becomes renowned.)",
+            "Whenever this creature becomes blocked by a creature, it deals 2 damage to that creature."
+          ]
+        }
+      },
+      "variants": [
+        "cast_0",
+        "cast_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "unfunded_0",
+        "unfunded_1",
+        "fresh_attack_0",
+        "fresh_attack_1",
+        "attack_lethal_0",
+        "attack_lethal_1",
+        "defend_lethal_0",
+        "defend_lethal_1",
+        "attack_marked_0",
+        "attack_marked_1",
+        "defend_marked_0",
+        "defend_marked_1",
+        "attack_first_strike_0",
+        "attack_first_strike_1",
+        "attack_two_0",
+        "attack_two_1",
+        "hexproof_blocker_0",
+        "hexproof_blocker_1",
+        "unblocked_0",
+        "unblocked_1",
+        "unrelated_0",
+        "unrelated_1",
+        "replay_0",
+        "replay_1",
+        "renown_twice_0",
+        "renown_twice_1"
+      ]
+    }
+  ]
+}

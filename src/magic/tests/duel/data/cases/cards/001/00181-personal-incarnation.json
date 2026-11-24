@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 181,
+  "card": "Personal Incarnation",
+  "recipes": [
+    {
+      "family": "departure_counters_and_search",
+      "version": 2,
+      "params": {
+        "csvid": 181,
+        "printed_cost": "{3}{W}{W}{W}"
+      },
+      "oracle_text": "{0}: The next 1 damage that would be dealt to this creature this turn is dealt to its owner instead. Only this creature's owner may activate this ability.\nWhen this creature dies, its owner loses half their life, rounded up.",
+      "variants": [
+        "even_0",
+        "odd_0",
+        "bounce_0",
+        "proactive_0",
+        "even_1",
+        "odd_1",
+        "bounce_1",
+        "proactive_1"
+      ]
+    }
+  ]
+}

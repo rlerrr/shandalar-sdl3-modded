@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "card": "Azorius Justiciar",
+  "csvid": 12663,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "detain_effects",
+      "version": 2,
+      "oracle_text": "When this creature enters, detain up to two target creatures your opponents control. (Until your next turn, those creatures can't attack or block and their activated abilities can't be activated.)",
+      "params": {
+        "etb": true,
+        "flying": false,
+        "draw": false,
+        "maximum": 2,
+        "nonland": false,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "effect_0",
+        "effect_1",
+        "attack_lock_0",
+        "attack_lock_1",
+        "activation_lock_0",
+        "activation_lock_1",
+        "mana_lock_0",
+        "mana_lock_1",
+        "expiry_0",
+        "expiry_1",
+        "no_target_0",
+        "no_target_1",
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "source_removed_0",
+        "source_removed_1",
+        "two_0",
+        "two_1",
+        "stop_after_one_0",
+        "stop_after_one_1",
+        "zero_0",
+        "zero_1"
+      ]
+    }
+  ]
+}

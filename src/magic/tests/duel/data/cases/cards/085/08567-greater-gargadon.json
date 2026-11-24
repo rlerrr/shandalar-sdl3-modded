@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Greater Gargadon",
+  "csvid": 8567,
+  "recipes": [
+    {
+      "family": "suspend_entry_and_sacrifice",
+      "version": 2,
+      "params": {
+        "csvid": 8567,
+        "duration": 10,
+        "mana": [
+          9,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "suspend_fee": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Suspend 10—{R}\nSacrifice an artifact, creature, or land: Remove a time counter from this card. Activate only if this card is suspended.",
+      "variants": [
+        "parked_0",
+        "parked_1",
+        "unfunded_0",
+        "unfunded_1",
+        "countdown_0",
+        "countdown_1",
+        "normal_0",
+        "normal_1",
+        "wrong_suspend_color_0",
+        "wrong_suspend_color_1",
+        "countered_normal_0",
+        "countered_normal_1",
+        "replay_release_0",
+        "replay_release_1",
+        "stolen_haste_0",
+        "stolen_haste_1"
+      ]
+    }
+  ]
+}

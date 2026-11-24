@@ -1,0 +1,548 @@
+{
+  "sources": {
+    "Infected Vermin": {
+      "oracle": {
+        "oracle_id": "448396b8-b691-457a-8569-1282c3fca65a",
+        "name": "Infected Vermin",
+        "oracle_text": "{2}{B}: This creature deals 1 damage to each creature and each player.\nThreshold — {3}{B}: This creature deals 3 damage to each creature and each player. Activate only if there are seven or more cards in your graveyard.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Rat",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Threshold"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ody/144/infected-vermin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5582,
+        "iid": 4854,
+        "name": "Infected Vermin",
+        "handler": "manalinkeh_card_infected_vermin",
+        "kind": "card"
+      }
+    },
+    "Nomad Decoy": {
+      "oracle": {
+        "oracle_id": "73c40477-7061-47db-af8f-2a5cf6c22c9b",
+        "name": "Nomad Decoy",
+        "oracle_text": "{W}, {T}: Tap target creature.\nThreshold — {W}{W}, {T}: Tap two target creatures. Activate only if there are seven or more cards in your graveyard.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Nomad",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Threshold"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/17/nomad-decoy?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5638,
+        "iid": 6677,
+        "name": "Nomad Decoy",
+        "handler": "manalinkeh_card_nomad_decoy",
+        "kind": "card"
+      }
+    },
+    "Krosan Restorer": {
+      "oracle": {
+        "oracle_id": "ea845951-0158-4646-acd9-3b0b28da40b1",
+        "name": "Krosan Restorer",
+        "oracle_text": "{T}: Untap target land.\nThreshold — {T}: Untap up to three target lands. Activate only if there are seven or more cards in your graveyard.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Human Druid",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Threshold"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/168/krosan-restorer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5830,
+        "iid": 5404,
+        "name": "Krosan Restorer",
+        "handler": "manalinkeh_card_krosan_restorer",
+        "kind": "card"
+      }
+    },
+    "Battlefield Scrounger": {
+      "oracle": {
+        "oracle_id": "92ac7531-10bb-47a2-9dd0-378d547b4ed6",
+        "name": "Battlefield Scrounger",
+        "oracle_text": "Threshold — Put three cards from your graveyard on the bottom of your library: This creature gets +3/+3 until end of turn. Activate only once each turn and only if there are seven or more cards in your graveyard.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Centaur",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Threshold"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/150/battlefield-scrounger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5910,
+        "iid": 915,
+        "name": "Battlefield Scrounger",
+        "handler": "manalinkeh_card_battlefield_scrounger",
+        "kind": "card"
+      }
+    },
+    "Nantuko Monastery": {
+      "oracle": {
+        "oracle_id": "c6de0ee9-785d-4cd8-8a7f-5bb715763131",
+        "name": "Nantuko Monastery",
+        "oracle_text": "{T}: Add {C}.\nThreshold — {G}{W}: This land becomes a 4/4 green and white Insect Monk creature with first strike until end of turn. It's still a land. Activate only if there are seven or more cards in your graveyard.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [
+          "Threshold"
+        ],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/252/nantuko-monastery?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5979,
+        "iid": 6466,
+        "name": "Nantuko Monastery",
+        "handler": "manalinkeh_card_nantuko_monastery",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Coat of Arms": {
+      "oracle": {
+        "oracle_id": "5f7f133e-58ea-41ab-b1be-be4b400fac4c",
+        "name": "Coat of Arms",
+        "oracle_text": "Each creature gets +1/+1 for each other creature on the battlefield that shares at least one creature type with it. (For example, if two Goblin Warriors and a Goblin Shaman are on the battlefield, each gets +2/+2.)",
+        "mana_cost": "{5}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/58/coat-of-arms?utm_source=api"
+      },
+      "registry": {
+        "csvid": 996,
+        "iid": 1844,
+        "name": "Coat of Arms",
+        "handler": "manalinkeh_card_coat_of_arms",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Kraul Warrior": {
+      "oracle": {
+        "oracle_id": "b05d000d-39b4-4db5-bd32-9c77a7434127",
+        "name": "Kraul Warrior",
+        "oracle_text": "{5}{G}: This creature gets +3/+3 until end of turn.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Insect Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/168/kraul-warrior?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13165,
+        "iid": 5389,
+        "name": "Kraul Warrior",
+        "handler": "manalinkeh_card_kraul_warrior",
+        "kind": "card"
+      }
+    },
+    "Ley Druid": {
+      "oracle": {
+        "oracle_id": "a4ae41c7-9631-407d-8fd3-04f403d940a8",
+        "name": "Ley Druid",
+        "oracle_text": "{T}: Untap target land.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Human Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/251/ley-druid?utm_source=api"
+      },
+      "registry": {
+        "csvid": 139,
+        "iid": 5546,
+        "name": "Ley Druid",
+        "handler": "manalinkeh_card_ley_druid",
+        "kind": "card"
+      }
+    },
+    "Monastery Swiftspear": {
+      "oracle": {
+        "oracle_id": "dafd2713-d1bc-474b-b390-d2ff20b5375e",
+        "name": "Monastery Swiftspear",
+        "oracle_text": "Haste\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Human Monk",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Prowess",
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bro/144/monastery-swiftspear?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14332,
+        "iid": 6286,
+        "name": "Monastery Swiftspear",
+        "handler": "manalinkeh_card_monastery_swiftspear",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Rumbling Baloth": {
+      "oracle": {
+        "oracle_id": "3191c6ca-4d25-4ba3-bfe1-4aeab1295573",
+        "name": "Rumbling Baloth",
+        "oracle_text": "",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/426/rumbling-baloth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13328,
+        "iid": 8108,
+        "name": "Rumbling Baloth",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Runeclaw Bear": {
+      "oracle": {
+        "oracle_id": "ec49dfcf-d16d-4621-af4b-4a6f09043221",
+        "name": "Runeclaw Bear",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/197/runeclaw-bear?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10461,
+        "iid": 8117,
+        "name": "Runeclaw Bear",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Spellbook": {
+      "oracle": {
+        "oracle_id": "83133f51-bfbd-4db5-9be0-f660e3b66435",
+        "name": "Spellbook",
+        "oracle_text": "You have no maximum hand size.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact — Book",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/220/spellbook?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1154,
+        "iid": 9121,
+        "name": "Spellbook",
+        "handler": "manalinkeh_card_spellbook",
+        "kind": "card"
+      }
+    },
+    "Stone-Seeder Hierophant": {
+      "oracle": {
+        "oracle_id": "ccaea194-4b21-4485-ba08-d8d030c9418d",
+        "name": "Stone-Seeder Hierophant",
+        "oracle_text": "Landfall — Whenever a land you control enters, untap this creature.\n{T}: Untap target land.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Human Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rav/184/stone-seeder-hierophant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7968,
+        "iid": 9382,
+        "name": "Stone-Seeder Hierophant",
+        "handler": "manalinkeh_card_stoneseeder_hierophant",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    }
+  }
+}

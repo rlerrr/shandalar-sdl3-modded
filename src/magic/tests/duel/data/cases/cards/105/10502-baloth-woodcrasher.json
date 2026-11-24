@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "card": "Baloth Woodcrasher",
+  "csvid": 10502,
+  "recipes": [
+    {
+      "family": "landfall_self_change",
+      "version": 2,
+      "params": {
+        "schema": 8,
+        "change": {
+          "kind": "pump",
+          "power": 4,
+          "toughness": 4,
+          "trample": true
+        },
+        "passive": ""
+      },
+      "oracle_text": "Landfall — Whenever a land you control enters, this creature gets +4/+4 and gains trample until end of turn. (It can deal excess combat damage to the player or planeswalker it's attacking.)",
+      "variants": [
+        "cast_0",
+        "unfunded_0",
+        "own_land_0",
+        "opponent_land_0",
+        "consecutive_lands_0",
+        "cleanup_0",
+        "empty_search_0",
+        "nonland_spell_0",
+        "late_source_0",
+        "removed_source_0",
+        "countered_search_0",
+        "pending_replay_0",
+        "fresh_source_0",
+        "other_source_0",
+        "combat_before_0",
+        "combat_after_0",
+        "combat_expired_0",
+        "cast_1",
+        "unfunded_1",
+        "own_land_1",
+        "opponent_land_1",
+        "consecutive_lands_1",
+        "cleanup_1",
+        "empty_search_1",
+        "nonland_spell_1",
+        "late_source_1",
+        "removed_source_1",
+        "countered_search_1",
+        "pending_replay_1",
+        "fresh_source_1",
+        "other_source_1",
+        "combat_before_1",
+        "combat_after_1",
+        "combat_expired_1"
+      ]
+    }
+  ]
+}

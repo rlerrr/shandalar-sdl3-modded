@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 11530,
+  "card": "Spine of Ish Sah",
+  "recipes": [
+    {
+      "family": "entry_follow_on_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 11530,
+        "printed_cost": "{7}",
+        "keywords": []
+      },
+      "oracle_text": "When this artifact enters, destroy target permanent.\nWhen this artifact is put into a graveyard from the battlefield, return it to its owner's hand.",
+      "variants": [
+        "foe_land_0",
+        "self_0",
+        "exile_0",
+        "owner_return_0",
+        "recast_0",
+        "foe_land_1",
+        "self_1",
+        "exile_1",
+        "owner_return_1",
+        "recast_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "csvid": 9265,
+  "card": "Spellstutter Sprite",
+  "recipes": [
+    {
+      "family": "flash_entry_stack_control",
+      "version": 2,
+      "params": {
+        "csvid": 9265,
+        "mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          1,
+          1
+        ]
+      },
+      "oracle_text": "Flash\nFlying\nWhen this creature enters, counter target spell with mana value X or less, where X is the number of Faeries you control.",
+      "variants": [
+        "solo_flight_0",
+        "solo_flight_1",
+        "below_count_0",
+        "below_count_1",
+        "own_faerie_0",
+        "own_faerie_1",
+        "foe_faerie_0",
+        "foe_faerie_1",
+        "own_kindred_0",
+        "own_kindred_1"
+      ]
+    }
+  ]
+}

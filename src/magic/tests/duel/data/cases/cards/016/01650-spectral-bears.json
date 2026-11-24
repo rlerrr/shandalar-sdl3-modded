@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Spectral Bears",
+  "csvid": 1650,
+  "recipes": [
+    {
+      "family": "attack_follow_on_requirements_and_legality",
+      "version": 2,
+      "params": {
+        "csvid": 1650,
+        "cost": "{1}{G}",
+        "choices": [
+          "empty_0",
+          "empty_1",
+          "black_noncreature_0",
+          "black_noncreature_1",
+          "own_black_0",
+          "own_black_1",
+          "black_token_0",
+          "black_token_1",
+          "black_removed_0",
+          "black_removed_1",
+          "idle_0",
+          "idle_1"
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks, if defending player controls no black nontoken permanents, it doesn't untap during your next untap step.",
+      "variants": [
+        "empty_0",
+        "empty_1",
+        "black_noncreature_0",
+        "black_noncreature_1",
+        "own_black_0",
+        "own_black_1",
+        "black_token_0",
+        "black_token_1",
+        "black_removed_0",
+        "black_removed_1",
+        "idle_0",
+        "idle_1"
+      ]
+    }
+  ]
+}

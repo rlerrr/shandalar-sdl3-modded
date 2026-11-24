@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Thieving Sprite",
+  "csvid": 9283,
+  "recipes": [
+    {
+      "family": "remaining_entry_library_and_hand",
+      "version": 2,
+      "params": {
+        "csvid": 9283,
+        "printed_mana": "{2}{B}",
+        "rules": "Flying\nWhen this creature enters, target player reveals X cards from their hand, where X is the number of Faeries you control. You choose one of those cards. That player discards that card."
+      },
+      "oracle_text": "Flying\nWhen this creature enters, target player reveals X cards from their hand, where X is the number of Faeries you control. You choose one of those cards. That player discards that card.",
+      "variants": [
+        "scaled_reveal_0",
+        "scaled_reveal_1",
+        "flying_single_reveal_0",
+        "flying_single_reveal_1"
+      ]
+    }
+  ]
+}

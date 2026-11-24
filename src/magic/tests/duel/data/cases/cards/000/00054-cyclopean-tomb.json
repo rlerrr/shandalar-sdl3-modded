@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Cyclopean Tomb",
+  "csvid": 54,
+  "recipes": [
+    {
+      "family": "departure_linked_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 54
+      },
+      "oracle_text": "{2}, {T}: Put a mire counter on target non-Swamp land. That land is a Swamp for as long as it has a mire counter on it. Activate only during your upkeep.\nWhen this artifact is put into a graveyard from the battlefield, at the beginning of each of your upkeeps for the rest of the game, remove all mire counters from a land that a mire counter was put onto with this artifact but that a mire counter has not been removed from with this artifact.",
+      "variants": [
+        "restoration_0",
+        "restoration_1",
+        "bounce_0",
+        "bounce_1",
+        "two_upkeeps_0",
+        "two_upkeeps_1",
+        "wrong_time_0",
+        "wrong_time_1",
+        "only_swamp_0",
+        "only_swamp_1"
+      ]
+    }
+  ]
+}

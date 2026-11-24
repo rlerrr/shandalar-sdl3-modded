@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Goblin Bomb",
+  "csvid": 2983,
+  "recipes": [
+    {
+      "family": "coin_flip_upkeep_and_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 2983,
+        "price": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "clauses": [
+          "At the beginning of your upkeep, you may flip a coin. If you win the flip, put a fuse counter on this enchantment. If you lose the flip, remove a fuse counter from this enchantment.",
+          "Remove five fuse counters from this enchantment and sacrifice it: It deals 20 damage to target player or planeswalker."
+        ],
+        "modes": [
+          "player",
+          "planeswalker",
+          "loss_recovers",
+          "human_declines",
+          "loss_at_zero"
+        ]
+      },
+      "oracle_text": "At the beginning of your upkeep, you may flip a coin. If you win the flip, put a fuse counter on this enchantment. If you lose the flip, remove a fuse counter from this enchantment.\nRemove five fuse counters from this enchantment and sacrifice it: It deals 20 damage to target player or planeswalker.",
+      "variants": [
+        "player_0",
+        "player_1",
+        "planeswalker_0",
+        "planeswalker_1",
+        "loss_recovers_0",
+        "loss_recovers_1",
+        "human_declines_0",
+        "loss_at_zero_0",
+        "loss_at_zero_1"
+      ]
+    }
+  ]
+}

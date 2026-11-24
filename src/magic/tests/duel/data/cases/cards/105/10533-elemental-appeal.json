@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "csvid": 10533,
+  "card": "Elemental Appeal",
+  "recipes": [
+    {
+      "family": "kicker_tokens_and_copies",
+      "version": 2,
+      "oracle_text": "Kicker {5} (You may pay an additional {5} as you cast this spell.)\nCreate a 7/1 red Elemental creature token with trample and haste. Exile it at the beginning of the next end step. If this spell was kicked, that creature gets +7/+0 until end of turn.",
+      "params": {
+        "effect": "elemental",
+        "identity": "Elemental",
+        "counts": [
+          1,
+          1
+        ],
+        "pt": [
+          7,
+          1
+        ],
+        "color": 16,
+        "subtypes": [
+          "Elemental"
+        ],
+        "kicked_power": 7,
+        "price": [
+          0,
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        "fee": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "clauses": [
+          "Kicker {5} (You may pay an additional {5} as you cast this spell.)",
+          "Create a 7/1 red Elemental creature token with trample and haste. Exile it at the beginning of the next end step. If this spell was kicked, that creature gets +7/+0 until end of turn."
+        ],
+        "source_pt": []
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

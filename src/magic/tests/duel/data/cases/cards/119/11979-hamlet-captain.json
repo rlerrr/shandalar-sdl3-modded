@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Hamlet Captain",
+  "csvid": 11979,
+  "recipes": [
+    {
+      "family": "attack_trigger_team_keywords",
+      "version": 2,
+      "params": {
+        "csvid": 11979,
+        "mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks or blocks, other Humans you control get +1/+1 until end of turn.",
+      "variants": [
+        "attacks_0",
+        "attacks_1",
+        "blocks_0",
+        "blocks_1",
+        "other_attack_0",
+        "other_attack_1",
+        "late_0",
+        "late_1",
+        "expires_0",
+        "expires_1"
+      ]
+    }
+  ]
+}

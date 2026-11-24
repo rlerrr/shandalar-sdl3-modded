@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "card": "Demonlord of Ashmouth",
+  "csvid": 12345,
+  "recipes": [
+    {
+      "family": "creature_entry_sacrifices",
+      "version": 2,
+      "params": {
+        "mode": "undying",
+        "mana": [
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": [
+          "Flying",
+          "Undying"
+        ],
+        "power": 5,
+        "toughness": 4
+      },
+      "oracle_text": "Flying\nWhen this creature enters, exile it unless you sacrifice another creature.\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+      "variants": [
+        "paid_0",
+        "unavailable_0",
+        "combat_0",
+        "undying_paid_twice_0",
+        "undying_unpaid_0",
+        "countered_0",
+        "wrong_color_0",
+        "snapshot_0",
+        "paid_1",
+        "unavailable_1",
+        "combat_1",
+        "undying_paid_twice_1",
+        "undying_unpaid_1",
+        "countered_1",
+        "wrong_color_1",
+        "snapshot_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

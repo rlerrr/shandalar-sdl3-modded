@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Nether Spirit",
+  "csvid": 4543,
+  "recipes": [
+    {
+      "family": "upkeep_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 4543,
+        "cost": [
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "At the beginning of your upkeep, if this card is the only creature card in your graveyard, you may return this card to the battlefield.",
+      "variants": [
+        "only_creature_0",
+        "only_creature_1",
+        "creature_foil_0",
+        "creature_foil_1",
+        "second_copy_0",
+        "second_copy_1",
+        "decline_0",
+        "foe_upkeep_0",
+        "foe_upkeep_1",
+        "actual_death_0",
+        "actual_death_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 2388,
+  "card": "Afiya Grove",
+  "recipes": [
+    {
+      "family": "upkeep_counters",
+      "version": 2,
+      "params": {
+        "csvid": 2388,
+        "printed_cost": "{1}{G}"
+      },
+      "oracle_text": "This enchantment enters with three +1/+1 counters on it.\nAt the beginning of your upkeep, move a +1/+1 counter from this enchantment onto target creature.\nWhen this enchantment has no +1/+1 counters on it, sacrifice it.",
+      "variants": [
+        "lifecycle_0",
+        "foreign_0",
+        "empty_0",
+        "later_target_0",
+        "countered_0",
+        "lifecycle_1",
+        "foreign_1",
+        "empty_1",
+        "later_target_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

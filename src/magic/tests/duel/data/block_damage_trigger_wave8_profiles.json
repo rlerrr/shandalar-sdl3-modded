@@ -1,0 +1,356 @@
+{
+  "sources": {
+    "Ashmouth Hound": {
+      "csvid": 11877,
+      "handler": "manalinkeh_card_ashmouth_hound",
+      "oracle": {
+        "oracle_id": "d40fd63b-f55d-49f6-b4e5-a8d00f22e8e1",
+        "name": "Ashmouth Hound",
+        "oracle_text": "Whenever this creature blocks or becomes blocked by a creature, this creature deals 1 damage to that creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Elemental Dog",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/290/ashmouth-hound?utm_source=api"
+      }
+    },
+    "Ornery Goblin": {
+      "csvid": 19449,
+      "handler": "manalinkeh_card_ashmouth_hound",
+      "oracle": {
+        "oracle_id": "cbd4e160-9eb1-42de-aee8-6f1d1398f633",
+        "name": "Ornery Goblin",
+        "oracle_text": "Whenever this creature blocks or becomes blocked by a creature, this creature deals 1 damage to that creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/143/ornery-goblin?utm_source=api"
+      }
+    },
+    "Assembled Alphas": {
+      "csvid": 16032,
+      "handler": "manalinkeh_card_assembled_alphas",
+      "oracle": {
+        "oracle_id": "151a681d-a350-4d1d-86cd-b80d58602810",
+        "name": "Assembled Alphas",
+        "oracle_text": "Whenever this creature blocks or becomes blocked by a creature, this creature deals 3 damage to that creature and 3 damage to that creature's controller.",
+        "mana_cost": "{5}{R}",
+        "type_line": "Creature — Wolf",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/emn/117/assembled-alphas?utm_source=api"
+      }
+    },
+    "Somberwald Vigilante": {
+      "csvid": 12470,
+      "handler": "manalinkeh_card_somberwald_vigilante",
+      "oracle": {
+        "oracle_id": "31c77036-8627-476a-996b-2a6b005c9e12",
+        "name": "Somberwald Vigilante",
+        "oracle_text": "Whenever this creature becomes blocked by a creature, this creature deals 1 damage to that creature.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Human Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddl/2/somberwald-vigilante?utm_source=api"
+      }
+    },
+    "Kolaghan Aspirant": {
+      "csvid": 14944,
+      "handler": "manalinkeh_card_somberwald_vigilante",
+      "oracle": {
+        "oracle_id": "334178f6-cf4b-4ea6-a24f-c7375d1b38de",
+        "name": "Kolaghan Aspirant",
+        "oracle_text": "Whenever this creature becomes blocked by a creature, this creature deals 1 damage to that creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Human Warrior",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/143/kolaghan-aspirant?utm_source=api"
+      }
+    },
+    "Acolyte of the Inferno": {
+      "csvid": 15070,
+      "handler": "manalinkeh_card_acolyte_of_the_inferno",
+      "oracle": {
+        "oracle_id": "35bf67e0-8141-4664-b762-2c613353e1eb",
+        "name": "Acolyte of the Inferno",
+        "oracle_text": "Renown 1 (When this creature deals combat damage to a player, if it isn't renowned, put a +1/+1 counter on it and it becomes renowned.)\nWhenever this creature becomes blocked by a creature, it deals 2 damage to that creature.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Human Monk",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Renown"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ori/128/acolyte-of-the-inferno?utm_source=api"
+      }
+    }
+  },
+  "witnesses": {
+    "Dazzling Ramparts": {
+      "csvid": 14247,
+      "handler": "manalinkeh_card_dazzling_ramparts",
+      "oracle": {
+        "oracle_id": "0527fc47-2bfc-4d02-90fa-5a1284f89a0a",
+        "name": "Dazzling Ramparts",
+        "oracle_text": "Defender\n{1}{W}, {T}: Tap target creature.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "7",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/6/dazzling-ramparts?utm_source=api"
+      }
+    },
+    "Elvish Mystic": {
+      "csvid": 13284,
+      "handler": "manalinkeh_card_elvish_mystic",
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      }
+    },
+    "Goblin Raider": {
+      "csvid": 1049,
+      "handler": "manalinkeh_card_vampire_interloper",
+      "oracle": {
+        "oracle_id": "7f11c830-fced-40db-8c02-b3c54f3e4372",
+        "name": "Goblin Raider",
+        "oracle_text": "This creature can't block.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/S8/goblin-raider?utm_source=api"
+      }
+    },
+    "Island": {
+      "csvid": 126,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      }
+    },
+    "Nessian Asp": {
+      "csvid": 13489,
+      "handler": "manalinkeh_card_nessian_asp",
+      "oracle": {
+        "oracle_id": "8b46e077-f667-432f-ab5b-8256a7378311",
+        "name": "Nessian Asp",
+        "oracle_text": "Reach\n{6}{G}: Monstrosity 4. (If this creature isn't monstrous, put four +1/+1 counters on it and it becomes monstrous.)",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Snake",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Reach",
+          "Monstrosity"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cn2/187/nessian-asp?utm_source=api"
+      }
+    },
+    "Plains": {
+      "csvid": 188,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      }
+    },
+    "Slippery Bogle": {
+      "csvid": 9870,
+      "handler": "manalinkeh_card_slippery_bogle",
+      "oracle": {
+        "oracle_id": "f64878c1-1fba-44f7-a24f-d24bef2e03ae",
+        "name": "Slippery Bogle",
+        "oracle_text": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)",
+        "mana_cost": "{G/U}",
+        "type_line": "Creature — Beast",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Hexproof"
+        ],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/223/slippery-bogle?utm_source=api"
+      }
+    },
+    "Thalia, Guardian of Thraben": {
+      "csvid": 12275,
+      "handler": "manalinkeh_card_thalia_guardian_of_thraben",
+      "oracle": {
+        "oracle_id": "9b7f1d05-707c-4ed3-9f0e-8ced1232c2ee",
+        "name": "Thalia, Guardian of Thraben",
+        "oracle_text": "First strike\nNoncreature spells cost {1} more to cast.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Legendary Creature — Human Soldier",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "First strike"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vow/38/thalia-guardian-of-thraben?utm_source=api"
+      }
+    },
+    "Think Twice": {
+      "csvid": 8702,
+      "handler": "manalinkeh_card_think_twice",
+      "oracle": {
+        "oracle_id": "fa85c5a2-8e83-4624-a35a-a0bbf17ecbb4",
+        "name": "Think Twice",
+        "oracle_text": "Draw a card.\nFlashback {2}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/787/think-twice?utm_source=api"
+      }
+    }
+  }
+}

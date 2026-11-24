@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Tornado",
+  "csvid": 2371,
+  "recipes": [
+    {
+      "family": "cumulative_upkeep_continuous_and_activated",
+      "version": 2,
+      "params": {
+        "csvid": 2371,
+        "cast": [
+          4,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "upkeep": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Cumulative upkeep {G} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\n{2}{G}, Pay 3 life for each velocity counter on this enchantment: Destroy target permanent and put a velocity counter on this enchantment. Activate only once each turn.",
+      "variants": [
+        "age_two_0",
+        "age_two_1",
+        "decline_0",
+        "decline_1",
+        "velocity_0",
+        "velocity_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Coiling Oracle",
+  "csvid": 8186,
+  "recipes": [
+    {
+      "family": "entry_follow_on_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 8186,
+        "printed_mana": "{G}{U}",
+        "rules": "When this creature enters, reveal the top card of your library. If it's a land card, put it onto the battlefield. Otherwise, put that card into your hand."
+      },
+      "oracle_text": "When this creature enters, reveal the top card of your library. If it's a land card, put it onto the battlefield. Otherwise, put that card into your hand.",
+      "variants": [
+        "land_top_0",
+        "land_top_1",
+        "nonland_top_0",
+        "nonland_top_1",
+        "empty_library_0",
+        "empty_library_1"
+      ]
+    }
+  ]
+}

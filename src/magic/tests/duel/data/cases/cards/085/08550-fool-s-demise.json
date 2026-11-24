@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Fool's Demise",
+  "csvid": 8550,
+  "recipes": [
+    {
+      "family": "departure_graveyard_and_return",
+      "version": 2,
+      "params": {
+        "csvid": 8550,
+        "cost": [
+          4,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Enchant creature\nWhen enchanted creature dies, return that card to the battlefield under your control.\nWhen this Aura is put into a graveyard from the battlefield, return it to its owner's hand.",
+      "variants": [
+        "own_host_0",
+        "own_host_1",
+        "opp_owner_0",
+        "opp_owner_1",
+        "host_bounced_0",
+        "host_bounced_1",
+        "aura_destroyed_0",
+        "aura_destroyed_1"
+      ]
+    }
+  ]
+}

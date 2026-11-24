@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Dualcaster Mage",
+  "csvid": 14456,
+  "recipes": [
+    {
+      "family": "flash_entry_spell_access_and_protection",
+      "version": 2,
+      "params": {
+        "csvid": 14456,
+        "printed_mana": [
+          1,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "rules": "Flash\nWhen this creature enters, copy target instant or sorcery spell. You may choose new targets for the copy."
+      },
+      "oracle_text": "Flash\nWhen this creature enters, copy target instant or sorcery spell. You may choose new targets for the copy.",
+      "variants": [
+        "copy_draw_0",
+        "copy_draw_1",
+        "retain_target_0",
+        "retain_target_1",
+        "redirect_0",
+        "redirect_1"
+      ]
+    }
+  ]
+}

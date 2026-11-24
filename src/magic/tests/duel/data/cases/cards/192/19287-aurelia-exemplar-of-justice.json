@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Aurelia, Exemplar of Justice",
+  "csvid": 19287,
+  "recipes": [
+    {
+      "family": "attack_follow_on_attack_riders",
+      "version": 2,
+      "params": {
+        "csvid": 19287,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "oracle_text": "Flying\nMentor (Whenever this creature attacks, put a +1/+1 counter on target attacking creature with lesser power.)\nAt the beginning of combat on your turn, choose up to one target creature you control. Until end of turn, that creature gets +2/+0, gains trample if it's red, and gains vigilance if it's white.",
+      "variants": [
+        "mentor_0",
+        "mentor_1",
+        "equal_power_0",
+        "equal_power_1",
+        "both_colors_0",
+        "both_colors_1",
+        "white_only_0",
+        "white_only_1",
+        "red_only_0",
+        "red_only_1",
+        "decline_0",
+        "decline_1",
+        "foe_turn_0",
+        "foe_turn_1"
+      ]
+    }
+  ]
+}

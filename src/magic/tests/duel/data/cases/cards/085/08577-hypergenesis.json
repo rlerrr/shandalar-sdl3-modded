@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Hypergenesis",
+  "csvid": 8577,
+  "recipes": [
+    {
+      "family": "suspend_mass_effects",
+      "version": 2,
+      "params": {
+        "csvid": 8577,
+        "duration": 3,
+        "effect": "offer",
+        "mana": [
+          1,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Suspend 3—{1}{G}{G}\nStarting with you, each player may put an artifact, creature, enchantment, or land card from their hand onto the battlefield. Repeat this process until no one puts a card onto the battlefield.",
+      "variants": [
+        "parked_0",
+        "parked_1",
+        "countdown_0",
+        "countdown_1",
+        "unfunded_0",
+        "unfunded_1",
+        "one_declines_0",
+        "one_declines_1",
+        "both_decline_0",
+        "both_decline_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "first_owner_0",
+        "first_owner_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

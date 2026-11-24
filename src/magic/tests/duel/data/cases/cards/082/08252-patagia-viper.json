@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Patagia Viper",
+  "csvid": 8252,
+  "recipes": [
+    {
+      "family": "creature_entry_sacrifices",
+      "version": 2,
+      "params": {
+        "mode": "blue_tokens",
+        "mana": [
+          3,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "keywords": [
+          "Flying"
+        ],
+        "power": 2,
+        "toughness": 1
+      },
+      "oracle_text": "Flying\nWhen this creature enters, create two 1/1 green and blue Snake creature tokens.\nWhen this creature enters, sacrifice it unless {U} was spent to cast it.",
+      "variants": [
+        "ordinary_0",
+        "blue_0",
+        "blink_0",
+        "combat_0",
+        "plain_token_combat_0",
+        "countered_0",
+        "wrong_color_0",
+        "snapshot_0",
+        "ordinary_1",
+        "blue_1",
+        "blink_1",
+        "combat_1",
+        "plain_token_combat_1",
+        "countered_1",
+        "wrong_color_1",
+        "snapshot_1",
+        "blue_left_unspent_0"
+      ]
+    }
+  ]
+}

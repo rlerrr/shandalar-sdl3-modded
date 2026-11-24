@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "card": "Predatory Urge",
+  "csvid": 10635,
+  "recipes": [
+    {
+      "family": "additional_damage_auras",
+      "version": 2,
+      "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals damage equal to its power to target creature. That creature deals damage equal to its power to this creature.\"",
+      "params": {
+        "effect": "reciprocal",
+        "cast_mana": [
+          3,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "no_creature_0",
+        "no_creature_1",
+        "foreign_gate_0",
+        "foreign_gate_1",
+        "replay_0",
+        "replay_1",
+        "pending_replay_0",
+        "pending_replay_1",
+        "aura_removed_pending_0",
+        "aura_removed_pending_1",
+        "normal_0",
+        "normal_1",
+        "double_lethal_0",
+        "double_lethal_1",
+        "double_lifelink_0",
+        "double_lifelink_1",
+        "self_target_0",
+        "self_target_1",
+        "land_denied_0",
+        "land_denied_1",
+        "target_leaves_0",
+        "target_leaves_1",
+        "power_up_0",
+        "power_up_1",
+        "power_down_0",
+        "power_down_1",
+        "zero_power_0",
+        "zero_power_1",
+        "foreign_host_0",
+        "foreign_host_1",
+        "fresh_0",
+        "fresh_1",
+        "tapped_0",
+        "tapped_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Enthralling Victor",
+  "csvid": 15121,
+  "recipes": [
+    {
+      "family": "entry_rider_control",
+      "version": 2,
+      "params": {
+        "csvid": 15121,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, gain control of target creature an opponent controls with power 2 or less until end of turn. Untap that creature. It gains haste until end of turn. (It can attack and {T} this turn.)",
+      "variants": [
+        "power_two_0",
+        "power_two_1",
+        "power_three_0",
+        "power_three_1",
+        "only_friendly_0",
+        "only_friendly_1"
+      ]
+    }
+  ]
+}

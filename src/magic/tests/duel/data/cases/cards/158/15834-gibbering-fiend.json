@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "csvid": 15834,
+  "card": "Gibbering Fiend",
+  "recipes": [
+    {
+      "family": "delirium_upkeep_and_entry",
+      "version": 2,
+      "oracle_text": "When this creature enters, it deals 1 damage to each opponent.\nDelirium — At the beginning of each opponent's upkeep, if there are four or more card types among cards in your graveyard, this creature deals 1 damage to that player.",
+      "params": {
+        "effect": "damage",
+        "csvid": 15834,
+        "printed": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "variants": [
+        "three_types_0",
+        "four_types_0",
+        "opponent_only_0",
+        "wrong_color_0",
+        "crossing_0",
+        "replay_0",
+        "three_types_1",
+        "four_types_1",
+        "opponent_only_1",
+        "wrong_color_1",
+        "crossing_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

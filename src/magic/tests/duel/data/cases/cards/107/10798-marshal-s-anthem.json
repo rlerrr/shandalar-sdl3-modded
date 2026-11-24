@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 10798,
+  "card": "Marshal's Anthem",
+  "recipes": [
+    {
+      "family": "kicker_variable_and_multikicker",
+      "version": 2,
+      "oracle_text": "Multikicker {1}{W} (You may pay an additional {1}{W} any number of times as you cast this spell.)\nCreatures you control get +1/+1.\nWhen this enchantment enters, return up to X target creature cards from your graveyard to the battlefield, where X is the number of times this enchantment was kicked.",
+      "params": {
+        "effect": "return",
+        "kicker_cost": "{1}{W}",
+        "base_cost": "{2}{W}{W}",
+        "csvid": 10798
+      },
+      "variants": [
+        "declined_0",
+        "paid_0",
+        "once_0",
+        "short_base_0",
+        "countered_0",
+        "replay_0",
+        "declined_1",
+        "paid_1",
+        "once_1",
+        "short_base_1",
+        "countered_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

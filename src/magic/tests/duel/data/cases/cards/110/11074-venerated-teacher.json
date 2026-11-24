@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 11074,
+  "card": "Venerated Teacher",
+  "recipes": [
+    {
+      "family": "entry_interaction_counters",
+      "version": 2,
+      "params": {
+        "csvid": 11074,
+        "printed_cost": "{2}{U}"
+      },
+      "oracle_text": "When this creature enters, put two level counters on each creature you control with level up.",
+      "variants": [
+        "empty_0",
+        "mixed_0",
+        "threshold_0",
+        "opponent_only_0",
+        "countered_0",
+        "empty_1",
+        "mixed_1",
+        "threshold_1",
+        "opponent_only_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

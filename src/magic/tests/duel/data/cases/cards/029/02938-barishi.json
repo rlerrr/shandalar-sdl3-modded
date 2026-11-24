@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Barishi",
+  "csvid": 2938,
+  "recipes": [
+    {
+      "family": "departure_graveyard_and_return",
+      "version": 2,
+      "params": {
+        "csvid": 2938,
+        "cost": [
+          2,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature dies, exile it, then shuffle all creature cards from your graveyard into your library.",
+      "variants": [
+        "mixed_0",
+        "mixed_1",
+        "no_creature_0",
+        "no_creature_1",
+        "bounce_0",
+        "bounce_1",
+        "borrowed_dies_0",
+        "borrowed_dies_1"
+      ]
+    }
+  ]
+}

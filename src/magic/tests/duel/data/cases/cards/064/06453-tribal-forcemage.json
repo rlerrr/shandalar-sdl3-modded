@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "csvid": 6453,
+  "card": "Tribal Forcemage",
+  "recipes": [
+    {
+      "family": "morph_turn_up_team",
+      "version": 2,
+      "params": {
+        "effect": "tribe",
+        "power_delta": 2,
+        "toughness_delta": 2,
+        "cast_mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "flip_mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "variable": false,
+        "power": 1,
+        "toughness": 1
+      },
+      "oracle_text": "Morph {1}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, creatures of the creature type of your choice get +2/+2 and gain trample until end of turn.",
+      "variants": [
+        "hidden_0",
+        "faceup_0",
+        "hidden_choice_0",
+        "hidden_short_0",
+        "flip_short_0",
+        "flip_wrong_0",
+        "offturn_0",
+        "replay_0",
+        "goblins_0",
+        "angels_0",
+        "trample_0",
+        "trample_hidden_0",
+        "trample_expired_0",
+        "hidden_1",
+        "faceup_1",
+        "hidden_choice_1",
+        "hidden_short_1",
+        "flip_short_1",
+        "flip_wrong_1",
+        "offturn_1",
+        "replay_1",
+        "goblins_1",
+        "angels_1",
+        "trample_1",
+        "trample_hidden_1",
+        "trample_expired_1"
+      ]
+    }
+  ]
+}

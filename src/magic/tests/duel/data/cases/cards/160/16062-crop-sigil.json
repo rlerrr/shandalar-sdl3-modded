@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Crop Sigil",
+  "csvid": 16062,
+  "recipes": [
+    {
+      "family": "delirium_activated_and_cast_costs",
+      "version": 2,
+      "oracle_text": "At the beginning of your upkeep, you may mill a card.\nDelirium — {2}{G}, Sacrifice this enchantment: Return up to one target creature card and up to one target land card from your graveyard to your hand. Activate only if there are four or more card types among cards in your graveyard.",
+      "params": {
+        "source": 16062
+      },
+      "variants": [
+        "three_duplicates_0",
+        "three_duplicates_1",
+        "four_types_0",
+        "four_types_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "upkeep_crossing_0",
+        "upkeep_crossing_1",
+        "replay_0",
+        "replay_1",
+        "upkeep_decline_0"
+      ]
+    }
+  ]
+}

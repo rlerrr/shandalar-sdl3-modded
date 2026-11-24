@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Dread Summons",
+  "csvid": 15511,
+  "recipes": [
+    {
+      "family": "mill_library_spells",
+      "version": 2,
+      "params": {
+        "csvid": 15511,
+        "printed_cost": "{X}{B}{B}",
+        "clauses": [
+          "Each player mills X cards. For each creature card put into a graveyard this way, you create a tapped 2/2 black Zombie creature token. (To mill a card, a player puts the top card of their library into their graveyard.)"
+        ],
+        "modes": [
+          "mixed_x4",
+          "short_x3",
+          "no_creatures",
+          "zero_x"
+        ],
+        "human_modes": []
+      },
+      "oracle_text": "Each player mills X cards. For each creature card put into a graveyard this way, you create a tapped 2/2 black Zombie creature token. (To mill a card, a player puts the top card of their library into their graveyard.)",
+      "variants": [
+        "mixed_x4_0",
+        "mixed_x4_1",
+        "short_x3_0",
+        "short_x3_1",
+        "no_creatures_0",
+        "no_creatures_1",
+        "zero_x_0",
+        "zero_x_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "csvid": 15260,
+  "card": "Akoum Hellkite",
+  "recipes": [
+    {
+      "family": "landfall_land_type_riders",
+      "version": 2,
+      "oracle_text": "Flying\nLandfall — Whenever a land you control enters, this creature deals 1 damage to any target. If that land is a Mountain, this creature deals 2 damage instead.",
+      "params": {
+        "effect": "damage",
+        "subtype": "Mountain",
+        "dual": "Taiga",
+        "modes": [
+          "planeswalker",
+          "creature_damage",
+          "rejected_land"
+        ],
+        "cast_price": [
+          4,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "power": 4,
+        "toughness": 4
+      },
+      "variants": [
+        "ordinary_0",
+        "ordinary_1",
+        "matched_0",
+        "matched_1",
+        "both_subtypes_0",
+        "both_subtypes_1",
+        "foreign_0",
+        "foreign_1",
+        "before_source_0",
+        "before_source_1",
+        "flying_ground_0",
+        "flying_ground_1",
+        "flying_reach_0",
+        "flying_reach_1",
+        "planeswalker_0",
+        "planeswalker_1",
+        "creature_damage_0",
+        "creature_damage_1",
+        "rejected_land_0",
+        "rejected_land_1"
+      ]
+    }
+  ]
+}

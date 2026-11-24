@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "csvid": 9790,
+  "card": "Gift of the Deity",
+  "recipes": [
+    {
+      "family": "must_block_creature_spell",
+      "version": 2,
+      "params": {
+        "composition": "color_aura",
+        "bonus": [
+          1,
+          1
+        ],
+        "fees": {
+          "B": [
+            4,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "G": [
+            4,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      "oracle_text": "Enchant creature\nAs long as enchanted creature is black, it gets +1/+1 and has deathtouch. (Any amount of damage it deals to a creature is enough to destroy that creature.)\nAs long as enchanted creature is green, it gets +1/+1 and all creatures able to block it do so.",
+      "variants": [
+        "black_paid_b_0",
+        "green_paid_g_0",
+        "both_paid_b_0",
+        "neither_paid_g_0",
+        "foreign_host_0",
+        "aura_removed_0",
+        "wrong_color_0",
+        "no_host_0",
+        "black_paid_b_1",
+        "green_paid_g_1",
+        "both_paid_b_1",
+        "neither_paid_g_1",
+        "foreign_host_1",
+        "aura_removed_1",
+        "wrong_color_1",
+        "no_host_1"
+      ]
+    }
+  ]
+}

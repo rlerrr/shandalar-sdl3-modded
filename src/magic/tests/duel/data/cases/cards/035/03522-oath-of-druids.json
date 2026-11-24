@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Oath of Druids",
+  "csvid": 3522,
+  "recipes": [
+    {
+      "family": "upkeep_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 3522,
+        "cost": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "At the beginning of each player's upkeep, that player chooses target player who controls more creatures than they do and is their opponent. The first player may reveal cards from the top of their library until they reveal a creature card. If the first player does, that player puts that card onto the battlefield and all other cards revealed this way into their graveyard.",
+      "variants": [
+        "own_0",
+        "own_1",
+        "enemy_0",
+        "enemy_1",
+        "decline_0",
+        "decline_1",
+        "tie_0",
+        "tie_1",
+        "shroud_0",
+        "shroud_1",
+        "no_creature_0",
+        "no_creature_1"
+      ]
+    }
+  ]
+}

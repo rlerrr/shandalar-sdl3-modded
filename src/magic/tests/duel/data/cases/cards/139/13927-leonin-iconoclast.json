@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Leonin Iconoclast",
+  "csvid": 13927,
+  "recipes": [
+    {
+      "family": "heroic_target_control_riders",
+      "version": 2,
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, destroy target enchantment creature an opponent controls.",
+      "params": {
+        "effect": "destroy",
+        "price": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "power": 3,
+        "toughness": 2
+      },
+      "variants": [
+        "own_0",
+        "opponent_0",
+        "other_target_0",
+        "countered_0",
+        "replay_0",
+        "typed_0",
+        "no_target_0",
+        "own_1",
+        "opponent_1",
+        "other_target_1",
+        "countered_1",
+        "replay_1",
+        "typed_1",
+        "no_target_1"
+      ]
+    }
+  ]
+}

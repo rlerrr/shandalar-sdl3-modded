@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Dawn of the Dead",
+  "csvid": 5799,
+  "recipes": [
+    {
+      "family": "graveyard_return_cost_modes",
+      "version": 2,
+      "params": {
+        "model": "dawn",
+        "cost": [
+          2,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        "destination": "battlefield"
+      },
+      "oracle_text": "At the beginning of your upkeep, you lose 1 life.\nAt the beginning of your upkeep, you may return target creature card from your graveyard to the battlefield. That creature gains haste until end of turn. Exile it at the beginning of the next end step.",
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "opponent_grave_0",
+        "shroud_0",
+        "replay_0",
+        "repeat_0",
+        "empty_0",
+        "opponent_upkeep_0",
+        "decline_0",
+        "haste_exile_0",
+        "source_gone_0",
+        "target_bounced_0",
+        "countered_0",
+        "underpaid_0",
+        "cross_owned_0",
+        "effect_1",
+        "alternate_1",
+        "opponent_grave_1",
+        "shroud_1",
+        "replay_1",
+        "repeat_1",
+        "empty_1",
+        "opponent_upkeep_1",
+        "decline_1",
+        "haste_exile_1",
+        "source_gone_1",
+        "target_bounced_1",
+        "countered_1",
+        "underpaid_1",
+        "cross_owned_1"
+      ]
+    }
+  ]
+}

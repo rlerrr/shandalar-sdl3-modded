@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 9773,
+  "card": "Duergar Hedge-Mage",
+  "recipes": [
+    {
+      "family": "entry_follow_on_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 9773,
+        "printed_cost": "{2}{R/W}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, if you control two or more Mountains, you may destroy target artifact.\nWhen this creature enters, if you control two or more Plains, you may destroy target enchantment.",
+      "variants": [
+        "both_0",
+        "mountains_0",
+        "plains_0",
+        "other_lands_0",
+        "typed_lands_0",
+        "decline_0",
+        "both_1",
+        "mountains_1",
+        "plains_1",
+        "other_lands_1",
+        "typed_lands_1",
+        "decline_1"
+      ]
+    }
+  ]
+}

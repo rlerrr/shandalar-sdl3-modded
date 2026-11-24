@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "csvid": 19110,
+  "card": "Nesting Dragon",
+  "recipes": [
+    {
+      "family": "landfall_tokens_and_mana",
+      "version": 2,
+      "oracle_text": "Flying\nLandfall — Whenever a land you control enters, create a 0/2 red Dragon Egg creature token with defender and \"When this token dies, create a 2/2 red Dragon creature token with flying and '{R}: This token gets +1/+0 until end of turn.'\"",
+      "params": {
+        "effect": "dragon",
+        "price": [
+          3,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "clauses": [
+          "Flying",
+          "Landfall — Whenever a land you control enters, create a 0/2 red Dragon Egg creature token with defender and \"When this token dies, create a 2/2 red Dragon creature token with flying and '{R}: This token gets +1/+0 until end of turn.'\""
+        ]
+      },
+      "variants": [
+        "own_0",
+        "own_1",
+        "opponent_0",
+        "opponent_1",
+        "repeat_0",
+        "repeat_1",
+        "late_source_0",
+        "late_source_1",
+        "egg_defender_0",
+        "egg_defender_1",
+        "dragon_hatches_0",
+        "dragon_hatches_1",
+        "source_flying_0",
+        "source_flying_1"
+      ]
+    }
+  ]
+}

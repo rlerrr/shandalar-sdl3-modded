@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Lash Out",
+  "csvid": 9199,
+  "recipes": [
+    {
+      "family": "clash_whole_cards",
+      "version": 2,
+      "oracle_text": "Lash Out deals 3 damage to target creature. Clash with an opponent. If you win, Lash Out deals 3 damage to that creature's controller. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",
+      "params": {
+        "effect": "lash",
+        "mana": "{1}{R}",
+        "type_line": "Instant",
+        "power": null,
+        "toughness": null
+      },
+      "variants": [
+        "win_0",
+        "tie_0",
+        "loss_0",
+        "human_bottom_0",
+        "snapshot_0",
+        "own_target_0",
+        "lethal_0",
+        "fizzle_0",
+        "wrong_type_0",
+        "win_1",
+        "tie_1",
+        "loss_1",
+        "human_bottom_1",
+        "snapshot_1",
+        "own_target_1",
+        "lethal_1",
+        "fizzle_1",
+        "wrong_type_1"
+      ]
+    }
+  ]
+}

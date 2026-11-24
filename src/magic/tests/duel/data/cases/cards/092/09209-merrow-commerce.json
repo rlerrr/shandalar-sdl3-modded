@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Merrow Commerce",
+  "csvid": 9209,
+  "recipes": [
+    {
+      "family": "own_end_step_state_trigger",
+      "version": 2,
+      "oracle_text": "At the beginning of your end step, untap all Merfolk you control.",
+      "params": {
+        "role": "merfolk",
+        "printed_mana": "{1}{U}",
+        "has_colored_cost": true
+      },
+      "variants": [
+        "cast_payment_0",
+        "cast_unaffordable_0",
+        "cast_countered_0",
+        "own_end_step_0",
+        "opponent_end_step_0",
+        "no_early_trigger_0",
+        "source_removed_0",
+        "end_step_snapshot_0",
+        "cast_then_end_step_0",
+        "cast_wrong_color_0",
+        "two_merfolk_0",
+        "kindred_source_tapped_0",
+        "nonmerfolk_only_0",
+        "ready_merfolk_0",
+        "cast_payment_1",
+        "cast_unaffordable_1",
+        "cast_countered_1",
+        "own_end_step_1",
+        "opponent_end_step_1",
+        "no_early_trigger_1",
+        "source_removed_1",
+        "end_step_snapshot_1",
+        "cast_then_end_step_1",
+        "cast_wrong_color_1",
+        "two_merfolk_1",
+        "kindred_source_tapped_1",
+        "nonmerfolk_only_1",
+        "ready_merfolk_1"
+      ]
+    }
+  ]
+}

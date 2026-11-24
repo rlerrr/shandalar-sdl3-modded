@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Sungrass Egg",
+  "csvid": 5721,
+  "recipes": [
+    {
+      "family": "egg_mana_draw",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "activation_generic": 2,
+        "tap": true,
+        "sacrifice": true,
+        "output": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "draw": 1,
+        "timing": "instant"
+      },
+      "oracle_text": "{2}, {T}, Sacrifice this artifact: Add {G}{W}. Draw a card. (Activate only as an instant.)",
+      "variants": [
+        "exact_two_0",
+        "funded_0",
+        "off_turn_0",
+        "respond_to_spell_0",
+        "cast_then_activate_0",
+        "unfunded_0",
+        "tapped_0",
+        "foreign_owned_0",
+        "last_card_0",
+        "empty_library_0",
+        "two_eggs_0",
+        "pending_snapshot_0",
+        "ordinary_spell_payment_0",
+        "exact_two_1",
+        "funded_1",
+        "off_turn_1",
+        "respond_to_spell_1",
+        "cast_then_activate_1",
+        "unfunded_1",
+        "tapped_1",
+        "foreign_owned_1",
+        "last_card_1",
+        "empty_library_1",
+        "two_eggs_1",
+        "pending_snapshot_1",
+        "ordinary_spell_payment_1",
+        "payment_window_probe_0"
+      ]
+    }
+  ]
+}

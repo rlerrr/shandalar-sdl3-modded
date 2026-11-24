@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Jeering Instigator",
+  "csvid": 14294,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "morph_additional_effects",
+      "version": 2,
+      "oracle_text": "Morph {2}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, if it's your turn, gain control of another target creature until end of turn. Untap that creature. It gains haste until end of turn.",
+      "params": {
+        "mode": "temporary_control",
+        "mana": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "morph": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "power": 2,
+        "toughness": 1,
+        "keywords": [],
+        "color": 16
+      },
+      "variants": [
+        "printed_0",
+        "printed_1",
+        "face_down_choice_0",
+        "face_down_choice_1",
+        "face_down_short_0",
+        "face_down_short_1",
+        "reveal_short_0",
+        "reveal_short_1",
+        "reveal_wrong_color_0",
+        "reveal_wrong_color_1",
+        "effect_0",
+        "effect_1",
+        "offturn_0",
+        "offturn_1",
+        "replay_0",
+        "replay_1",
+        "own_target_0",
+        "own_target_1",
+        "return_after_attack_0",
+        "return_after_attack_1",
+        "source_removed_0",
+        "source_removed_1"
+      ]
+    }
+  ]
+}

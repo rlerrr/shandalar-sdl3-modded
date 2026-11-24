@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Sightless Brawler",
+  "csvid": 13972,
+  "recipes": [
+    {
+      "family": "cannot_attack_or_block_alone",
+      "version": 2,
+      "oracle_text": "Bestow {4}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nThis creature can't attack alone.\nEnchanted creature gets +3/+2 and can't attack alone.",
+      "params": {
+        "normal_cost": "{1}{W}",
+        "bestow_cost": "{4}{W}",
+        "bonus": [
+          3,
+          2
+        ],
+        "creature": [
+          3,
+          2
+        ]
+      },
+      "variants": [
+        "regular_solo_0",
+        "regular_group_0",
+        "regular_fresh_block_0",
+        "menu_regular_0",
+        "unfunded_0",
+        "bestow_own_solo_0",
+        "bestow_own_group_0",
+        "bestow_own_block_0",
+        "bestow_foreign_solo_0",
+        "bestow_foreign_group_0",
+        "detached_solo_0",
+        "detached_group_0",
+        "pending_lost_solo_0",
+        "pending_lost_group_0",
+        "aura_destroyed_releases_host_0",
+        "pending_bestow_replay_0",
+        "cancel_bestow_0",
+        "cancel_bestow_target_0",
+        "regular_solo_1",
+        "regular_group_1",
+        "regular_fresh_block_1",
+        "menu_regular_1",
+        "unfunded_1",
+        "bestow_own_solo_1",
+        "bestow_own_group_1",
+        "bestow_own_block_1",
+        "bestow_foreign_solo_1",
+        "bestow_foreign_group_1",
+        "detached_solo_1",
+        "detached_group_1",
+        "pending_lost_solo_1",
+        "pending_lost_group_1",
+        "aura_destroyed_releases_host_1",
+        "pending_bestow_replay_1",
+        "cancel_bestow_1",
+        "cancel_bestow_target_1"
+      ]
+    }
+  ]
+}

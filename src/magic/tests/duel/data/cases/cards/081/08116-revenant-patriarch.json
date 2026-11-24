@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Revenant Patriarch",
+  "csvid": 8116,
+  "recipes": [
+    {
+      "family": "entry_interaction_combat",
+      "version": 2,
+      "params": {
+        "csvid": 8116,
+        "cost": "{4}{B}",
+        "choices": [
+          "black_fee_0",
+          "black_fee_1",
+          "white_fee_0",
+          "white_fee_1",
+          "target_self_0",
+          "target_self_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, if {W} was spent to cast it, target player skips their next combat phase.\nThis creature can't block.",
+      "variants": [
+        "black_fee_0",
+        "black_fee_1",
+        "white_fee_0",
+        "white_fee_1",
+        "target_self_0",
+        "target_self_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

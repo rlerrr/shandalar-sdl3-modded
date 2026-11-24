@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 16277,
+  "card": "Aethertorch Renegade",
+  "recipes": [
+    {
+      "family": "entry_rider_energy_and_mana",
+      "version": 2,
+      "params": {
+        "csvid": 16277,
+        "printed_cost": "{2}{R}"
+      },
+      "oracle_text": "When this creature enters, you get {E}{E}{E}{E} (four energy counters).\n{T}, Pay {E}{E}: This creature deals 1 damage to target creature.\n{T}, Pay eight {E}: This creature deals 6 damage to target player or planeswalker.",
+      "variants": [
+        "entry_0",
+        "ping_0",
+        "burn_0",
+        "walker_0",
+        "countered_0",
+        "entry_1",
+        "ping_1",
+        "burn_1",
+        "walker_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

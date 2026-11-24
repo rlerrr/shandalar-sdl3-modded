@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Neurok Familiar",
+  "csvid": 6740,
+  "recipes": [
+    {
+      "family": "entry_rider_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 6740,
+        "printed_mana": "{1}{U}",
+        "rules": "Flying\nWhen this creature enters, reveal the top card of your library. If it's an artifact card, put it into your hand. Otherwise, put it into your graveyard."
+      },
+      "oracle_text": "Flying\nWhen this creature enters, reveal the top card of your library. If it's an artifact card, put it into your hand. Otherwise, put it into your graveyard.",
+      "variants": [
+        "artifact_flight_0",
+        "artifact_flight_1",
+        "mill_nonartifact_0",
+        "mill_nonartifact_1",
+        "empty_0",
+        "empty_1"
+      ]
+    }
+  ]
+}

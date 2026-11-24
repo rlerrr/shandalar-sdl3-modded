@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Hero of Iroas",
+  "csvid": 13732,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "cast_reducers_with_riders",
+      "version": 2,
+      "oracle_text": "Aura spells you cast cost {1} less to cast.\nHeroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on this creature.",
+      "params": {
+        "subtype": "Aura",
+        "reduction": 1,
+        "mode": "heroic",
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "keywords": [],
+        "regen_cost": []
+      },
+      "variants": [
+        "match_0",
+        "match_1",
+        "surplus_0",
+        "surplus_1",
+        "short_0",
+        "short_1",
+        "opponent_0",
+        "opponent_1",
+        "nonmatch_0",
+        "nonmatch_1",
+        "removed_0",
+        "removed_1",
+        "source_short_0",
+        "source_short_1",
+        "replay_0",
+        "replay_1",
+        "countered_0",
+        "countered_1",
+        "offcolor_aura_0",
+        "offcolor_aura_1",
+        "other_target_0",
+        "other_target_1",
+        "opponent_target_0",
+        "opponent_target_1",
+        "instant_heroic_0",
+        "instant_heroic_1",
+        "floor_0",
+        "floor_1",
+        "counter_persists_0",
+        "counter_persists_1"
+      ]
+    }
+  ]
+}

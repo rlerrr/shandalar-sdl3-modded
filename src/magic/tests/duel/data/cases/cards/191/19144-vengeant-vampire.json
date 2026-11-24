@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Vengeant Vampire",
+  "csvid": 19144,
+  "recipes": [
+    {
+      "family": "departure_graveyard_and_return",
+      "version": 2,
+      "params": {
+        "csvid": 19144,
+        "cost": [
+          4,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Lifelink\nWhen this creature dies, destroy target creature an opponent controls and you gain 4 life.",
+      "variants": [
+        "target_0",
+        "target_1",
+        "indestructible_0",
+        "indestructible_1",
+        "no_target_0",
+        "no_target_1",
+        "lifelink_0",
+        "lifelink_1"
+      ]
+    }
+  ]
+}

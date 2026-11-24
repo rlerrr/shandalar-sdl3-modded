@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Naru Meha, Master Wizard",
+  "csvid": 18471,
+  "recipes": [
+    {
+      "family": "flash_remaining_triggers_and_copy",
+      "version": 2,
+      "params": {
+        "csvid": 18471,
+        "cost": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flash\nWhen Naru Meha enters, copy target instant or sorcery spell you control. You may choose new targets for the copy.\nOther Wizards you control get +1/+1.",
+      "variants": [
+        "own_copy_0",
+        "own_copy_1",
+        "own_retarget_0",
+        "own_retarget_1",
+        "opponent_spell_0",
+        "opponent_spell_1",
+        "own_creature_0",
+        "own_creature_1"
+      ]
+    }
+  ]
+}

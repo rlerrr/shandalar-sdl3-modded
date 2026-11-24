@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "csvid": 1760,
+  "card": "Delif's Cube",
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_targeted_costs",
+      "version": 2,
+      "params": {
+        "csvid": 1760,
+        "mana": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "activation": "{2}",
+        "stats": null
+      },
+      "oracle_text": "{2}, {T}: This turn, when target creature you control attacks and isn't blocked, it assigns no combat damage this turn and you put a cube counter on this artifact.\n{2}, Remove a cube counter from this artifact: Regenerate target creature.",
+      "variants": [
+        "consumed_0",
+        "consumed_1",
+        "blocked_0",
+        "blocked_1",
+        "unrelated_0",
+        "unrelated_1",
+        "proactive_0",
+        "proactive_1",
+        "target_scope_0",
+        "target_scope_1"
+      ]
+    }
+  ]
+}

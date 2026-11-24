@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Sequestered Stash",
+  "csvid": 16512,
+  "recipes": [
+    {
+      "family": "mill_paid_abilities",
+      "version": 2,
+      "params": {
+        "csvid": 16512,
+        "mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{T}: Add {C}.\n{4}, {T}, Sacrifice this land: Mill five cards. Then you may put an artifact card from your graveyard on top of your library.",
+      "variants": [
+        "mana_0",
+        "mana_1",
+        "mill_new_artifact_0",
+        "mill_new_artifact_1",
+        "mill_prior_artifact_0",
+        "mill_prior_artifact_1",
+        "mill_decline_0",
+        "mill_decline_1",
+        "mill_no_artifact_0",
+        "mill_no_artifact_1"
+      ]
+    }
+  ]
+}

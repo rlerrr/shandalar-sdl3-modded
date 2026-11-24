@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Drudge Spell",
+  "csvid": 1636,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_grants_and_modes",
+      "version": 2,
+      "params": {
+        "csvid": 1636,
+        "mana": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{B}, Exile two creature cards from your graveyard: Create a 1/1 black Skeleton creature token. It has \"{B}: Regenerate this token.\"\nWhen this enchantment leaves the battlefield, destroy all Skeleton tokens. They can't be regenerated.",
+      "variants": [
+        "tokens_0",
+        "tokens_1",
+        "protect_token_0",
+        "protect_token_1",
+        "leaves_0",
+        "leaves_1",
+        "not_enough_0",
+        "not_enough_1",
+        "foreign_graveyard_0",
+        "foreign_graveyard_1",
+        "wrong_color_0",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

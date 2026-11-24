@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Vigilant Martyr",
+  "csvid": 2651,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_sacrifice_and_team",
+      "version": 2,
+      "params": {
+        "csvid": 2651,
+        "printed_cost": "{W}",
+        "choices": [
+          "friendly_0",
+          "friendly_1",
+          "proactive_0",
+          "proactive_1",
+          "counter_0",
+          "counter_1",
+          "counter_short_0",
+          "counter_short_1",
+          "counter_sick_0",
+          "counter_sick_1",
+          "wrong_target_0",
+          "wrong_target_1"
+        ]
+      },
+      "oracle_text": "Sacrifice this creature: Regenerate target creature.\n{W}{W}, {T}, Sacrifice this creature: Counter target spell that targets an enchantment.",
+      "variants": [
+        "friendly_0",
+        "friendly_1",
+        "proactive_0",
+        "proactive_1",
+        "counter_0",
+        "counter_1",
+        "counter_short_0",
+        "counter_short_1",
+        "counter_sick_0",
+        "counter_sick_1",
+        "wrong_target_0",
+        "wrong_target_1"
+      ]
+    }
+  ]
+}

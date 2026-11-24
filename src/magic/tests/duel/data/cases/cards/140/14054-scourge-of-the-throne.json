@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "csvid": 14054,
+  "card": "Scourge of the Throne",
+  "recipes": [
+    {
+      "family": "attack_trigger_tokens_and_combat",
+      "version": 2,
+      "params": {
+        "csvid": 14054,
+        "printed_cost": "{4}{R}{R}",
+        "keywords": [
+          "Flying",
+          "Dethrone"
+        ]
+      },
+      "oracle_text": "Flying\nDethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.)\nWhenever this creature attacks for the first time each turn, if it's attacking the player with the most life or tied for most life, untap all attacking creatures. After this phase, there is an additional combat phase.",
+      "variants": [
+        "tie_0",
+        "foe_ahead_0",
+        "own_ahead_0",
+        "other_only_0",
+        "extra_tie_0",
+        "extra_foe_ahead_0",
+        "extra_own_ahead_0",
+        "tie_1",
+        "foe_ahead_1",
+        "own_ahead_1",
+        "other_only_1",
+        "extra_tie_1",
+        "extra_foe_ahead_1",
+        "extra_own_ahead_1"
+      ]
+    }
+  ]
+}

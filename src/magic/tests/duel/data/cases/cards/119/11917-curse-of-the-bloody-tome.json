@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Curse of the Bloody Tome",
+  "csvid": 11917,
+  "recipes": [
+    {
+      "family": "mill_upkeep_and_untap",
+      "version": 2,
+      "params": {
+        "csvid": 11917,
+        "printed_mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "rules": "Enchant player\nAt the beginning of enchanted player's upkeep, that player mills two cards."
+      },
+      "oracle_text": "Enchant player\nAt the beginning of enchanted player's upkeep, that player mills two cards.",
+      "variants": [
+        "opposing_owner_0",
+        "opposing_owner_1",
+        "self_owner_0",
+        "self_owner_1"
+      ]
+    }
+  ]
+}

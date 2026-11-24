@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Bloodghast",
+  "csvid": 10511,
+  "recipes": [
+    {
+      "family": "landfall_control_and_recovery",
+      "version": 2,
+      "oracle_text": "This creature can't block.\nThis creature has haste as long as an opponent has 10 or less life.\nLandfall — Whenever a land you control enters, you may return this card from your graveyard to the battlefield.",
+      "params": {
+        "source": "Bloodghast"
+      },
+      "variants": [
+        "own_land_0",
+        "own_land_1",
+        "opposing_land_0",
+        "opposing_land_1",
+        "repeat_0",
+        "repeat_1",
+        "replay_0",
+        "replay_1",
+        "return_0",
+        "return_1",
+        "exiled_0",
+        "exiled_1",
+        "haste_0",
+        "haste_1",
+        "no_haste_0",
+        "no_haste_1",
+        "cannot_block_0",
+        "cannot_block_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

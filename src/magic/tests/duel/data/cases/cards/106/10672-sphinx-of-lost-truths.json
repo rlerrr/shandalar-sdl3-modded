@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Sphinx of Lost Truths",
+  "csvid": 10672,
+  "recipes": [
+    {
+      "family": "kicker_card_flow",
+      "version": 2,
+      "oracle_text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nFlying\nWhen this creature enters, draw three cards. Then if it wasn't kicked, discard three cards.",
+      "params": {
+        "effect": "draw_loot",
+        "base_cost": [
+          3,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "kicker_cost": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "kicker_short_0",
+        "kicker_short_1",
+        "base_short_0",
+        "base_short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

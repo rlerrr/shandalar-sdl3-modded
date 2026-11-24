@@ -1,0 +1,695 @@
+{
+  "sources": {
+    "Goblin Shortcutter": {
+      "oracle": {
+        "oracle_id": "29863706-fa4e-49ed-9f40-69ae503abba3",
+        "name": "Goblin Shortcutter",
+        "oracle_text": "When this creature enters, target creature can't block this turn.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Scout",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/330/goblin-shortcutter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10549,
+        "iid": 4046,
+        "name": "Goblin Shortcutter",
+        "handler": "manalinkeh_card_goblin_shortcutter",
+        "kind": "card"
+      }
+    },
+    "Teetering Peaks": {
+      "oracle": {
+        "oracle_id": "4a9437a6-4e61-48b6-8194-1c6ba6432250",
+        "name": "Teetering Peaks",
+        "oracle_text": "This land enters tapped.\nWhen this land enters, target creature gets +2/+0 until end of turn.\n{T}: Add {R}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/226/teetering-peaks?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10684,
+        "iid": 9732,
+        "name": "Teetering Peaks",
+        "handler": "manalinkeh_card_teetering_peaks",
+        "kind": "card"
+      }
+    },
+    "Craterhoof Behemoth": {
+      "oracle": {
+        "oracle_id": "8c52bd39-0586-48ca-b263-17210cf9feb6",
+        "name": "Craterhoof Behemoth",
+        "oracle_text": "Haste\nWhen this creature enters, creatures you control gain trample and get +X/+X until end of turn, where X is the number of creatures you control.",
+        "mana_cost": "{5}{G}{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdm/138/craterhoof-behemoth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12334,
+        "iid": 2029,
+        "name": "Craterhoof Behemoth",
+        "handler": "manalinkeh_card_craterhoof_behemoth",
+        "kind": "card"
+      }
+    },
+    "Angel of the Dawn": {
+      "oracle": {
+        "oracle_id": "f63ea0e5-7769-4a22-bbb3-658281141d8c",
+        "name": "Angel of the Dawn",
+        "oracle_text": "Flying\nWhen this creature enters, creatures you control get +1/+1 and gain vigilance until end of turn.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Angel",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/6/angel-of-the-dawn?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18879,
+        "iid": 18812,
+        "name": "Angel of the Dawn",
+        "handler": "manalinkeh_card_dawnfeather_eagle",
+        "kind": "card"
+      }
+    },
+    "Battleflight Eagle": {
+      "oracle": {
+        "oracle_id": "f36e316d-c0ad-414d-8cf0-b1c9ea779e03",
+        "name": "Battleflight Eagle",
+        "oracle_text": "Flying\nWhen this creature enters, target creature gets +2/+2 and gains flying until end of turn.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Bird",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/7/battleflight-eagle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12543,
+        "iid": 917,
+        "name": "Battleflight Eagle",
+        "handler": "manalinkeh_card_battlefligh_eagle",
+        "kind": "card"
+      }
+    },
+    "Crossway Vampire": {
+      "oracle": {
+        "oracle_id": "543071da-fc89-4274-a2ae-d5d755d1f2a9",
+        "name": "Crossway Vampire",
+        "oracle_text": "When this creature enters, target creature can't block this turn.",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Vampire",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/isd/135/crossway-vampire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11913,
+        "iid": 2070,
+        "name": "Crossway Vampire",
+        "handler": "manalinkeh_card_goblin_shortcutter",
+        "kind": "card"
+      }
+    },
+    "Fervent Cathar": {
+      "oracle": {
+        "oracle_id": "94bcae2f-86a6-4d38-b8e1-5ebf69dc7cbc",
+        "name": "Fervent Cathar",
+        "oracle_text": "Haste\nWhen this creature enters, target creature can't block this turn.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Human Knight",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/129/fervent-cathar?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12369,
+        "iid": 3363,
+        "name": "Fervent Cathar",
+        "handler": "manalinkeh_card_fervent_cathar",
+        "kind": "card"
+      }
+    },
+    "Flame-Kin Zealot": {
+      "oracle": {
+        "oracle_id": "4af23012-16eb-47be-b666-3e536d8f6c1b",
+        "name": "Flame-Kin Zealot",
+        "oracle_text": "When this creature enters, creatures you control get +1/+1 and gain haste until end of turn.",
+        "mana_cost": "{1}{R}{R}{W}",
+        "type_line": "Creature — Elemental Berserker",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/201/flame-kin-zealot?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7844,
+        "iid": 3466,
+        "name": "Flame-Kin Zealot",
+        "handler": "manalinkeh_card_flamekin_zealot",
+        "kind": "card"
+      }
+    },
+    "Hammerhand": {
+      "oracle": {
+        "oracle_id": "8efa0026-c3f8-44e0-8f55-729f9c30ac93",
+        "name": "Hammerhand",
+        "oracle_text": "Enchant creature\nWhen this Aura enters, target creature can't block this turn.\nEnchanted creature gets +1/+1 and has haste.",
+        "mana_cost": "{R}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmu/129/hammerhand?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14110,
+        "iid": 4360,
+        "name": "Hammerhand",
+        "handler": "manalinkeh_card_hammerhand",
+        "kind": "card"
+      }
+    },
+    "Inner-Flame Acolyte": {
+      "oracle": {
+        "oracle_id": "699812af-4dba-49dc-987d-67e472a68971",
+        "name": "Inner-Flame Acolyte",
+        "oracle_text": "When this creature enters, target creature gets +2/+0 and gains haste until end of turn.\nEvoke {R} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Elemental Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Evoke"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jvc/41/inner-flame-acolyte?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9183,
+        "iid": 4887,
+        "name": "Inner-Flame Acolyte",
+        "handler": "manalinkeh_card_inner_flame_acolyte",
+        "kind": "card"
+      }
+    },
+    "Markov Warlord": {
+      "oracle": {
+        "oracle_id": "2279005d-5434-49ce-b16a-212759c5775a",
+        "name": "Markov Warlord",
+        "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)\nWhen this creature enters, up to two target creatures can't block this turn.",
+        "mana_cost": "{5}{R}",
+        "type_line": "Creature — Vampire Warrior",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dka/97/markov-warlord?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12230,
+        "iid": 5911,
+        "name": "Markov Warlord",
+        "handler": "manalinkeh_card_markov_warlord",
+        "kind": "card"
+      }
+    },
+    "Soaring Seacliff": {
+      "oracle": {
+        "oracle_id": "a37544b6-0048-4213-8e40-76ba8a0b6d1b",
+        "name": "Soaring Seacliff",
+        "oracle_text": "This land enters tapped.\nWhen this land enters, target creature gains flying until end of turn.\n{T}: Add {U}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c20/315/soaring-seacliff?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10667,
+        "iid": 8966,
+        "name": "Soaring Seacliff",
+        "handler": "manalinkeh_card_soaring_seacliff",
+        "kind": "card"
+      }
+    },
+    "Turntimber Grove": {
+      "oracle": {
+        "oracle_id": "62934aab-b6fa-41b2-ac05-d3fa0e3c5a79",
+        "name": "Turntimber Grove",
+        "oracle_text": "This land enters tapped.\nWhen this land enters, target creature gets +1/+1 until end of turn.\n{T}: Add {G}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddp/34/turntimber-grove?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10696,
+        "iid": 10276,
+        "name": "Turntimber Grove",
+        "handler": "manalinkeh_card_turntimber_grove",
+        "kind": "card"
+      }
+    },
+    "Looming Spires": {
+      "oracle": {
+        "oracle_id": "7d09b136-525f-49dd-a3a2-dfaca4e8e9a8",
+        "name": "Looming Spires",
+        "oracle_text": "This land enters tapped.\nWhen this land enters, target creature gets +1/+1 and gains first strike until end of turn.\n{T}: Add {R}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/238/looming-spires?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15368,
+        "iid": 13448,
+        "name": "Looming Spires",
+        "handler": "manalinkeh_card_looming_spires",
+        "kind": "card"
+      }
+    },
+    "Sandstone Bridge": {
+      "oracle": {
+        "oracle_id": "08911e8e-cd67-4960-a927-958c33632469",
+        "name": "Sandstone Bridge",
+        "oracle_text": "This land enters tapped.\nWhen this land enters, target creature gets +1/+1 and gains vigilance until end of turn.\n{T}: Add {W}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/243/sandstone-bridge?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15427,
+        "iid": 14389,
+        "name": "Sandstone Bridge",
+        "handler": "manalinkeh_card_sandstone_bridge",
+        "kind": "card"
+      }
+    },
+    "End-Raze Forerunners": {
+      "oracle": {
+        "oracle_id": "69b52907-8aff-4f2a-a391-7d1ab2669b5c",
+        "name": "End-Raze Forerunners",
+        "oracle_text": "Vigilance, trample, haste\nWhen this creature enters, other creatures you control get +2/+2 and gain vigilance and trample until end of turn.",
+        "mana_cost": "{5}{G}{G}{G}",
+        "type_line": "Creature — Boar",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [
+          "Vigilance",
+          "Haste",
+          "Trample"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clb/822/end-raze-forerunners?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19614,
+        "iid": 19548,
+        "name": "End-Raze Forerunners",
+        "handler": "manalinkeh_card_end_raze_forerunners",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Essence Scatter": {
+      "oracle": {
+        "oracle_id": "46665089-aa3d-44c3-964d-6638dfbb5782",
+        "name": "Essence Scatter",
+        "oracle_text": "Counter target creature spell.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sos/47/essence-scatter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10416,
+        "iid": 3131,
+        "name": "Essence Scatter",
+        "handler": "manalinkeh_card_remove_soul",
+        "kind": "card"
+      }
+    },
+    "Fiery Hellhound": {
+      "oracle": {
+        "oracle_id": "ab71c8ba-c7ac-4ad2-a6db-29d903bbca78",
+        "name": "Fiery Hellhound",
+        "oracle_text": "{R}: This creature gets +1/+0 until end of turn.",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Elemental Dog",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ori/284/fiery-hellhound?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10417,
+        "iid": 3392,
+        "name": "Fiery Hellhound",
+        "handler": "manalinkeh_card_furnace_whelp",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Serra Angel": {
+      "oracle": {
+        "oracle_id": "4b7ac066-e5c7-43e6-9e7e-2739b24a905d",
+        "name": "Serra Angel",
+        "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/740/serra-angel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 221,
+        "iid": 8519,
+        "name": "Serra Angel",
+        "handler": "manalinkeh_card_serra_angel",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Welding Jar": {
+      "oracle": {
+        "oracle_id": "e4a6c421-bef1-4360-a2dc-ae9c61d86b2f",
+        "name": "Welding Jar",
+        "oracle_text": "Sacrifice this artifact: Regenerate target artifact.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/307/welding-jar?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6836,
+        "iid": 10899,
+        "name": "Welding Jar",
+        "handler": "manalinkeh_card_welding_jar",
+        "kind": "card"
+      }
+    }
+  }
+}

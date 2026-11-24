@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Myth Realized",
+  "csvid": 14964,
+  "recipes": [
+    {
+      "family": "cast_noncreature_riders",
+      "version": 2,
+      "params": {
+        "role": "myth",
+        "mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Whenever you cast a noncreature spell, put a lore counter on this enchantment.\n{2}{W}: Put a lore counter on this enchantment.\n{W}: Until end of turn, this enchantment becomes a Monk Avatar creature in addition to its other types and gains \"This creature's power and toughness are each equal to the number of lore counters on it.\"",
+      "variants": [
+        "own_0",
+        "creature_0",
+        "opponent_0",
+        "countered_0",
+        "activate_both_0",
+        "expiry_0",
+        "own_1",
+        "creature_1",
+        "opponent_1",
+        "countered_1",
+        "activate_both_1",
+        "expiry_1"
+      ]
+    }
+  ]
+}

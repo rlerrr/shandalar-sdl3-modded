@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "csvid": 15226,
+  "card": "Subterranean Scout",
+  "recipes": [
+    {
+      "family": "entry_target_unblockability",
+      "version": 2,
+      "params": {
+        "effect": "entry_target",
+        "cast_mana": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "intrinsic": false,
+        "power_limit": 2,
+        "power": 2,
+        "toughness": 1
+      },
+      "oracle_text": "When this creature enters, target creature with power 2 or less can't be blocked this turn.",
+      "variants": [
+        "effect_0",
+        "effect_1",
+        "no_cast_0",
+        "no_cast_1",
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "countered_0",
+        "countered_1",
+        "self_only_0",
+        "self_only_1",
+        "enemy_target_0",
+        "enemy_target_1",
+        "source_leaves_0",
+        "source_leaves_1",
+        "expiry_0",
+        "expiry_1",
+        "bounce_recast_0",
+        "bounce_recast_1",
+        "pending_replay_0",
+        "pending_replay_1",
+        "power_boundary_0",
+        "power_boundary_1",
+        "above_boundary_alternative_0",
+        "above_boundary_alternative_1",
+        "live_power_alternative_0",
+        "live_power_alternative_1"
+      ]
+    }
+  ]
+}

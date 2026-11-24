@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Ulvenwald Tracker",
+  "csvid": 12496,
+  "recipes": [
+    {
+      "family": "fight_battlefield_activations",
+      "version": 2,
+      "params": {
+        "csvid": 12496,
+        "fee": "{1}{G}",
+        "mana": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{1}{G}, {T}: Target creature you control fights another target creature.",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "own_pair_0",
+        "own_pair_1",
+        "short_0",
+        "short_1",
+        "target_leaves_0",
+        "target_leaves_1",
+        "power_changed_0",
+        "power_changed_1",
+        "alone_0",
+        "alone_1",
+        "fresh_0",
+        "fresh_1"
+      ]
+    }
+  ]
+}

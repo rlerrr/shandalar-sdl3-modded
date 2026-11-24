@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Cloudform",
+  "csvid": 14529,
+  "recipes": [
+    {
+      "family": "remaining_entry_zone_and_permissions",
+      "version": 2,
+      "params": {
+        "csvid": 14529,
+        "cost": [
+          1,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this enchantment enters, it becomes an Aura with enchant creature. Manifest the top card of your library and attach this enchantment to it. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)\nEnchanted creature has flying and hexproof.",
+      "variants": [
+        "combat_0",
+        "combat_1",
+        "face_up_0",
+        "face_up_1",
+        "hexproof_0",
+        "hexproof_1",
+        "empty_0",
+        "empty_1"
+      ]
+    }
+  ]
+}

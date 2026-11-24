@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Indomitable Will",
+  "csvid": 7251,
+  "recipes": [
+    {
+      "family": "flash_remaining_auras_and_enchantments",
+      "version": 2,
+      "params": {
+        "csvid": 7251,
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "clauses": [
+          "Flash (You may cast this spell any time you could cast an instant.)",
+          "Enchant creature",
+          "Enchanted creature gets +1/+2."
+        ],
+        "modes": [
+          "own_creature",
+          "foe_creature",
+          "rescue_blocker",
+          "remove_aura",
+          "lost_target"
+        ]
+      },
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nEnchant creature\nEnchanted creature gets +1/+2.",
+      "variants": [
+        "own_creature_0",
+        "own_creature_1",
+        "foe_creature_0",
+        "foe_creature_1",
+        "rescue_blocker_0",
+        "rescue_blocker_1",
+        "remove_aura_0",
+        "remove_aura_1",
+        "lost_target_0",
+        "lost_target_1"
+      ]
+    }
+  ]
+}

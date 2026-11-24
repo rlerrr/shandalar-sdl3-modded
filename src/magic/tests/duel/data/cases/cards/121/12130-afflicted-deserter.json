@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "csvid": 12130,
+  "card": "Afflicted Deserter",
+  "recipes": [
+    {
+      "family": "werewolf_triggered_riders",
+      "version": 2,
+      "params": {
+        "model": "deserter",
+        "price": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "front": {
+          "name": "Afflicted Deserter",
+          "power": 3,
+          "toughness": 2,
+          "color": 16,
+          "keywords": [],
+          "clauses": [
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Werewolf Ransacker",
+          "power": 5,
+          "toughness": 4,
+          "color": 16,
+          "keywords": [],
+          "clauses": [
+            "Whenever this creature transforms into Werewolf Ransacker, you may destroy target artifact. If that artifact is put into a graveyard this way, this creature deals 3 damage to that artifact's controller.",
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        }
+      },
+      "variants": [
+        "short_cast_0",
+        "short_cast_1",
+        "split_stays_0",
+        "split_stays_1",
+        "replay_0",
+        "replay_1",
+        "enemy_artifact_0",
+        "enemy_artifact_1",
+        "own_artifact_0",
+        "own_artifact_1",
+        "decline_0",
+        "decline_1",
+        "indestructible_0",
+        "indestructible_1"
+      ],
+      "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+    }
+  ]
+}

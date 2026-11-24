@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Dauthi Mindripper",
+  "csvid": 3120,
+  "recipes": [
+    {
+      "family": "blocked_discard",
+      "version": 2,
+      "params": {
+        "mana": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 1,
+        "blocked": false,
+        "effect": "sacrifice",
+        "keywords": [
+          "Shadow"
+        ]
+      },
+      "oracle_text": "Shadow (This creature can block or be blocked by only creatures with shadow.)\nWhenever this creature attacks and isn't blocked, you may sacrifice it. If you do, defending player discards three cards.",
+      "variants": [
+        "blocked_0",
+        "unblocked_0",
+        "multi_blockers_0",
+        "empty_hand_0",
+        "short_hand_0",
+        "late_blocker_bounced_0",
+        "source_blocks_0",
+        "pending_block_snapshot_0",
+        "countered_0",
+        "wrong_color_0",
+        "insufficient_mana_0",
+        "decline_0",
+        "shadow_ground_denied_0",
+        "shadow_defends_0",
+        "blocked_1",
+        "unblocked_1",
+        "multi_blockers_1",
+        "empty_hand_1",
+        "short_hand_1",
+        "late_blocker_bounced_1",
+        "source_blocks_1",
+        "pending_block_snapshot_1",
+        "countered_1",
+        "wrong_color_1",
+        "insufficient_mana_1",
+        "decline_1",
+        "shadow_ground_denied_1",
+        "shadow_defends_1",
+        "human_discard_high_1"
+      ]
+    }
+  ]
+}

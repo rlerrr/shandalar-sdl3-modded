@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "csvid": 3793,
+  "card": "Hermetic Study",
+  "recipes": [
+    {
+      "family": "aura_granted_damage",
+      "version": 2,
+      "params": {
+        "effect": "fixed",
+        "cast_mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to any target.\"",
+      "variants": [
+        "player_0",
+        "self_player_0",
+        "creature_0",
+        "nonlethal_0",
+        "walker_0",
+        "short_0",
+        "wrong_color_0",
+        "no_creature_0",
+        "fresh_0",
+        "tapped_0",
+        "cancel_0",
+        "foreign_host_0",
+        "changed_control_0",
+        "repeat_0",
+        "host_lifelink_0",
+        "source_color_0",
+        "target_leaves_0",
+        "aura_leaves_0",
+        "aura_removed_pending_0",
+        "host_removed_pending_0",
+        "cast_host_leaves_0",
+        "replay_0",
+        "pending_replay_0",
+        "player_1",
+        "self_player_1",
+        "creature_1",
+        "nonlethal_1",
+        "walker_1",
+        "short_1",
+        "wrong_color_1",
+        "no_creature_1",
+        "fresh_1",
+        "tapped_1",
+        "cancel_1",
+        "foreign_host_1",
+        "changed_control_1",
+        "repeat_1",
+        "host_lifelink_1",
+        "source_color_1",
+        "target_leaves_1",
+        "aura_leaves_1",
+        "aura_removed_pending_1",
+        "host_removed_pending_1",
+        "cast_host_leaves_1",
+        "replay_1",
+        "pending_replay_1"
+      ]
+    }
+  ]
+}

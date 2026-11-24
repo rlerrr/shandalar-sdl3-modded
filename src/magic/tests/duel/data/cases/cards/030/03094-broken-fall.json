@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Broken Fall",
+  "csvid": 3094,
+  "recipes": [
+    {
+      "family": "regeneration_spells_and_auras",
+      "version": 2,
+      "params": {
+        "csvid": 3094,
+        "printed_cost": "{2}{G}",
+        "choices": [
+          "friendly_0",
+          "friendly_1",
+          "foreign_0",
+          "foreign_1",
+          "recast_0",
+          "recast_1",
+          "proactive_0",
+          "proactive_1"
+        ]
+      },
+      "oracle_text": "Return this enchantment to its owner's hand: Regenerate target creature.",
+      "variants": [
+        "friendly_0",
+        "friendly_1",
+        "foreign_0",
+        "foreign_1",
+        "recast_0",
+        "recast_1",
+        "proactive_0",
+        "proactive_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Hired Giant",
+  "csvid": 4492,
+  "recipes": [
+    {
+      "family": "entry_rider_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 4492,
+        "printed_mana": "{3}{R}",
+        "rules": "When this creature enters, each other player may search their library for a land card and put that card onto the battlefield. Then each player who searched their library this way shuffles."
+      },
+      "oracle_text": "When this creature enters, each other player may search their library for a land card and put that card onto the battlefield. Then each player who searched their library this way shuffles.",
+      "variants": [
+        "foe_search_0",
+        "foe_search_1",
+        "foe_decline_0",
+        "foe_decline_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "card": "Thraben Foulbloods",
+  "csvid": 16219,
+  "recipes": [
+    {
+      "family": "delirium_combat_keywords",
+      "version": 2,
+      "params": {
+        "csvid": 16219,
+        "keyword": "menace",
+        "power_delta": 1,
+        "toughness_delta": 1,
+        "mana": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Delirium — This creature gets +1/+1 and has menace as long as there are four or more card types among cards in your graveyard. (A creature with menace can't be blocked except by two or more creatures.)",
+      "variants": [
+        "three_duplicates_0",
+        "three_duplicates_1",
+        "four_types_0",
+        "four_types_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "four_pair_0",
+        "four_pair_1",
+        "short_funding_0",
+        "short_funding_1",
+        "countered_0",
+        "countered_1",
+        "mixed_type_0",
+        "mixed_type_1",
+        "lose_fourth_0",
+        "lose_fourth_1",
+        "replay_0",
+        "replay_1",
+        "gain_fourth_0",
+        "gain_fourth_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 7600,
+  "card": "Akuta, Born of Ash",
+  "recipes": [
+    {
+      "family": "upkeep_payment_and_sacrifice",
+      "version": 2,
+      "params": {
+        "csvid": 7600,
+        "printed_cost": "{2}{B}{B}",
+        "keywords": [
+          "Haste"
+        ]
+      },
+      "oracle_text": "Haste\nAt the beginning of your upkeep, if you have more cards in hand than each opponent, you may sacrifice a Swamp. If you do, return Akuta from your graveyard to the battlefield.",
+      "variants": [
+        "return_haste_0",
+        "return_haste_1",
+        "equal_hand_0",
+        "equal_hand_1",
+        "no_swamp_0",
+        "no_swamp_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Aegis Angel",
+  "csvid": 11772,
+  "recipes": [
+    {
+      "family": "entry_interaction_combat",
+      "version": 2,
+      "params": {
+        "csvid": 11772,
+        "cost": "{4}{W}{W}",
+        "choices": [
+          "protect_0",
+          "protect_1",
+          "opposing_artifact_0",
+          "opposing_artifact_1",
+          "source_leaves_0",
+          "source_leaves_1",
+          "source_control_0",
+          "source_control_1",
+          "source_only_0",
+          "source_only_1",
+          "flying_0",
+          "flying_1"
+        ]
+      },
+      "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhen this creature enters, another target permanent gains indestructible for as long as you control this creature. (Effects that say \"destroy\" don't destroy it. A creature with indestructible can't be destroyed by damage.)",
+      "variants": [
+        "protect_0",
+        "protect_1",
+        "opposing_artifact_0",
+        "opposing_artifact_1",
+        "source_leaves_0",
+        "source_leaves_1",
+        "source_control_0",
+        "source_control_1",
+        "source_only_0",
+        "source_only_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "csvid": 10298,
+  "card": "Kathari Remnant",
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_self_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 10298,
+        "printed_cost": "{2}{U}{B}"
+      },
+      "oracle_text": "Flying\n{B}: Regenerate this creature.\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)",
+      "variants": [
+        "regenerate_0",
+        "short_0",
+        "terminate_0",
+        "proactive_0",
+        "cascade_accept_0",
+        "cascade_decline_0",
+        "cascade_countered_0",
+        "flight_0",
+        "regenerate_1",
+        "short_1",
+        "terminate_1",
+        "proactive_1",
+        "cascade_accept_1",
+        "cascade_decline_1",
+        "cascade_countered_1",
+        "flight_1"
+      ]
+    }
+  ]
+}

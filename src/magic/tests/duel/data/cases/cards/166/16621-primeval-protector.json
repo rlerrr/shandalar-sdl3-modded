@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Primeval Protector",
+  "csvid": 16621,
+  "recipes": [
+    {
+      "family": "remaining_entry_combat",
+      "version": 2,
+      "params": {
+        "csvid": 16621,
+        "cost": "{10}{G}",
+        "choices": [
+          "scope_0",
+          "scope_1",
+          "no_foes_0",
+          "no_foes_1",
+          "crowd_0",
+          "crowd_1"
+        ]
+      },
+      "oracle_text": "This spell costs {1} less to cast for each creature your opponents control.\nWhen this creature enters, put a +1/+1 counter on each other creature you control.",
+      "variants": [
+        "scope_0",
+        "scope_1",
+        "no_foes_0",
+        "no_foes_1",
+        "crowd_0",
+        "crowd_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,466 @@
+{
+  "sources": {
+    "Anvil of Bogardan": {
+      "oracle": {
+        "oracle_id": "9deb2a0b-f40c-4d13-8321-41dc41448d24",
+        "name": "Anvil of Bogardan",
+        "oracle_text": "Players have no maximum hand size.\nAt the beginning of each player's draw step, that player draws an additional card, then discards a card.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vis/141/anvil-of-bogardan?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2670,
+        "iid": 494,
+        "name": "Anvil of Bogardan",
+        "handler": "manalinkeh_card_anvil_of_bagardan",
+        "kind": "card"
+      }
+    },
+    "Grafted Skullcap": {
+      "oracle": {
+        "oracle_id": "7694887a-2f3b-4ef1-b598-f3323f018ef4",
+        "name": "Grafted Skullcap",
+        "oracle_text": "At the beginning of your draw step, draw an additional card.\nAt the beginning of your end step, discard your hand.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/7ed/298/grafted-skullcap?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3786,
+        "iid": 4135,
+        "name": "Grafted Skullcap",
+        "handler": "manalinkeh_card_grafted_skullcap",
+        "kind": "card"
+      }
+    },
+    "Heightened Awareness": {
+      "oracle": {
+        "oracle_id": "a69a0720-35fb-450d-8d48-8e51a14ffa49",
+        "name": "Heightened Awareness",
+        "oracle_text": "As this enchantment enters, discard your hand.\nAt the beginning of your draw step, draw an additional card.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pcy/37/heightened-awareness?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4838,
+        "iid": 4470,
+        "name": "Heightened Awareness",
+        "handler": "manalinkeh_card_heightened_awareness",
+        "kind": "card"
+      }
+    },
+    "Avaricious Dragon": {
+      "oracle": {
+        "oracle_id": "9be9d534-470d-463a-ba2f-9817a6723692",
+        "name": "Avaricious Dragon",
+        "oracle_text": "Flying\nAt the beginning of your draw step, draw an additional card.\nAt the beginning of your end step, discard your hand.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ori/131/avaricious-dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15084,
+        "iid": 11600,
+        "name": "Avaricious Dragon",
+        "handler": "manalinkeh_card_grafted_skullcap",
+        "kind": "card"
+      }
+    },
+    "Midnight Oil": {
+      "oracle": {
+        "oracle_id": "26bfc19c-8122-4e95-9a62-2b5418429db2",
+        "name": "Midnight Oil",
+        "oracle_text": "This enchantment enters with seven hour counters on it.\nAt the beginning of your draw step, draw an additional card and remove two hour counters from this enchantment.\nYour maximum hand size is equal to the number of hour counters on this enchantment.\nWhenever you discard a card, you lose 1 life.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/92/midnight-oil?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16452,
+        "iid": 16539,
+        "name": "Midnight Oil",
+        "handler": "manalinkeh_card_midnight_oil",
+        "kind": "card"
+      }
+    },
+    "Teferi's Puzzle Box": {
+      "oracle": {
+        "oracle_id": "37abcc92-9466-47ea-9e0b-5eda2eb62c8e",
+        "name": "Teferi's Puzzle Box",
+        "oracle_text": "At the beginning of each player's draw step, that player puts the cards in their hand on the bottom of their library in any order, then draws that many cards.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/312/teferis-puzzle-box?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1168,
+        "iid": 9741,
+        "name": "Teferi's Puzzle Box",
+        "handler": "manalinkeh_card_teferis_puzzle_box",
+        "kind": "card"
+      }
+    },
+    "Overbeing of Myth": {
+      "oracle": {
+        "oracle_id": "5391f601-b778-413f-a31f-9f8b23b40f5c",
+        "name": "Overbeing of Myth",
+        "oracle_text": "Overbeing of Myth's power and toughness are each equal to the number of cards in your hand.\nAt the beginning of your draw step, draw an additional card.",
+        "mana_cost": "{G/U}{G/U}{G/U}{G/U}{G/U}",
+        "type_line": "Creature — Spirit Avatar",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eve/157/overbeing-of-myth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9845,
+        "iid": 6932,
+        "name": "Overbeing of Myth",
+        "handler": "manalinkeh_card_overbeing_of_myth",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Reach Through Mists": {
+      "oracle": {
+        "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+        "name": "Reach Through Mists",
+        "oracle_text": "Draw a card.",
+        "mana_cost": "{U}",
+        "type_line": "Instant — Arcane",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/7/reach-through-mists?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7353,
+        "iid": 7720,
+        "name": "Reach Through Mists",
+        "handler": "manalinkeh_card_reach_through_mists",
+        "kind": "card"
+      }
+    },
+    "Rummaging Goblin": {
+      "oracle": {
+        "oracle_id": "2055eb91-ee36-4752-a6dc-581eaef335c8",
+        "name": "Rummaging Goblin",
+        "oracle_text": "{T}, Discard a card: Draw a card.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Goblin Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/198/rummaging-goblin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12612,
+        "iid": 8111,
+        "name": "Rummaging Goblin",
+        "handler": "manalinkeh_card_rummaging_goblin",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Terminate": {
+      "oracle": {
+        "oracle_id": "6257c2fd-005f-41e3-8a72-af76df1eb134",
+        "name": "Terminate",
+        "oracle_text": "Destroy target creature. It can't be regenerated.",
+        "mana_cost": "{B}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/189/terminate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1471,
+        "iid": 9812,
+        "name": "Terminate",
+        "handler": "manalinkeh_card_terminate",
+        "kind": "card"
+      }
+    }
+  }
+}

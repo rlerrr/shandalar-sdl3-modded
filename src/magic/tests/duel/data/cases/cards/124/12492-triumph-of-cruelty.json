@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Triumph of Cruelty",
+  "csvid": 12492,
+  "recipes": [
+    {
+      "family": "upkeep_draw_and_discard",
+      "version": 2,
+      "params": {
+        "csvid": 12492,
+        "printed_mana": "{2}{B}",
+        "rules": "At the beginning of your upkeep, target opponent discards a card if you control the creature with the greatest power or tied for the greatest power."
+      },
+      "oracle_text": "At the beginning of your upkeep, target opponent discards a card if you control the creature with the greatest power or tied for the greatest power.",
+      "variants": [
+        "tied_power_0",
+        "tied_power_1",
+        "smaller_power_0",
+        "smaller_power_1",
+        "no_creatures_0",
+        "no_creatures_1"
+      ]
+    }
+  ]
+}

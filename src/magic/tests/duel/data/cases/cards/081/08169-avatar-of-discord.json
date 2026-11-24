@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "card": "Avatar of Discord",
+  "csvid": 8169,
+  "recipes": [
+    {
+      "family": "entry_discard_payment",
+      "version": 2,
+      "params": {
+        "amount": 2,
+        "random": false,
+        "mana": [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hybrid": [
+          [
+            0,
+            0,
+            0,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "keywords": [
+          "Flying"
+        ],
+        "power": 5,
+        "toughness": 3
+      },
+      "oracle_text": "({B/R} can be paid with either {B} or {R}.)\nFlying\nWhen this creature enters, sacrifice it unless you discard two cards.",
+      "variants": [
+        "funded_0",
+        "empty_0",
+        "extra_0",
+        "countered_0",
+        "snapshot_0",
+        "wrong_mana_0",
+        "mana_short_0",
+        "indestructible_0",
+        "borrowed_paid_0",
+        "borrowed_empty_0",
+        "short_hand_0",
+        "all_red_0",
+        "mixed_payment_0",
+        "flying_ground_0",
+        "flying_reach_0",
+        "funded_1",
+        "empty_1",
+        "extra_1",
+        "countered_1",
+        "snapshot_1",
+        "wrong_mana_1",
+        "mana_short_1",
+        "indestructible_1",
+        "borrowed_paid_1",
+        "borrowed_empty_1",
+        "short_hand_1",
+        "all_red_1",
+        "mixed_payment_1",
+        "flying_ground_1",
+        "flying_reach_1",
+        "choose_low_0",
+        "choose_high_0",
+        "cancel_first_0",
+        "cancel_second_0",
+        "payment_menu_0"
+      ]
+    }
+  ]
+}

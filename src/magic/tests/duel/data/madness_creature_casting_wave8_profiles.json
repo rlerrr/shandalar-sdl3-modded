@@ -1,0 +1,311 @@
+{
+  "sources": {
+    "Arrogant Wurm": {
+      "oracle": {
+        "oracle_id": "dc7f0c33-80ea-453e-a237-473f077f038e",
+        "name": "Arrogant Wurm",
+        "oracle_text": "Trample\nMadness {2}{G} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Madness",
+          "Trample"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/195/arrogant-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5769,
+        "iid": 627,
+        "name": "Arrogant Wurm",
+        "handler": "manalinkeh_card_arrogant_wurm",
+        "kind": "card"
+      }
+    },
+    "Basking Rootwalla": {
+      "oracle": {
+        "oracle_id": "b2ec080f-ad5d-4274-91e3-bc6ac89fc3e4",
+        "name": "Basking Rootwalla",
+        "oracle_text": "{1}{G}: This creature gets +2/+2 until end of turn. Activate only once each turn.\nMadness {0} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Lizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Madness"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/156/basking-rootwalla?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5774,
+        "iid": 893,
+        "name": "Basking Rootwalla",
+        "handler": "manalinkeh_card_basking_rootwalla",
+        "kind": "card"
+      }
+    },
+    "Reckless Wurm": {
+      "oracle": {
+        "oracle_id": "c9159396-81d3-4f81-88b4-dda163ff4b74",
+        "name": "Reckless Wurm",
+        "oracle_text": "Trample\nMadness {2}{R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+        "mana_cost": "{3}{R}{R}",
+        "type_line": "Creature — Wurm",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Madness",
+          "Trample"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/181/reckless-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8832,
+        "iid": 7760,
+        "name": "Reckless Wurm",
+        "handler": "manalinkeh_card_reckless_wurm",
+        "kind": "card"
+      }
+    },
+    "Incorrigible Youths": {
+      "oracle": {
+        "oracle_id": "9c239027-c5cb-43c6-b4f3-93c269a1d853",
+        "name": "Incorrigible Youths",
+        "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)\nMadness {2}{R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+        "mana_cost": "{3}{R}{R}",
+        "type_line": "Creature — Vampire",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [
+          "Madness",
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/166/incorrigible-youths?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15860,
+        "iid": 15929,
+        "name": "Incorrigible Youths",
+        "handler": "manalinkeh_card_incorrigible_youths",
+        "kind": "card"
+      }
+    },
+    "Weirded Vampire": {
+      "oracle": {
+        "oracle_id": "3af07cd3-36c3-4792-bc93-3ec82e1606bb",
+        "name": "Weirded Vampire",
+        "oracle_text": "Madness {2}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Vampire Horror",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Madness"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/emn/113/weirded-vampire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16237,
+        "iid": 16322,
+        "name": "Weirded Vampire",
+        "handler": "manalinkeh_card_twins_of_maurer_estate",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Ornithopter": {
+      "oracle": {
+        "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+        "name": "Ornithopter",
+        "oracle_text": "Flying",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Thopter",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 514,
+        "iid": 6907,
+        "name": "Ornithopter",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Rummaging Goblin": {
+      "oracle": {
+        "oracle_id": "2055eb91-ee36-4752-a6dc-581eaef335c8",
+        "name": "Rummaging Goblin",
+        "oracle_text": "{T}, Discard a card: Draw a card.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Goblin Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/198/rummaging-goblin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12612,
+        "iid": 8111,
+        "name": "Rummaging Goblin",
+        "handler": "manalinkeh_card_rummaging_goblin",
+        "kind": "card"
+      }
+    }
+  }
+}

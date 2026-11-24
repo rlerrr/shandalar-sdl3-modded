@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Phyrexian Etchings",
+  "csvid": 8422,
+  "recipes": [
+    {
+      "family": "cumulative_upkeep_phase_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 8422,
+        "cast_cost": [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        "upkeep": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Cumulative upkeep {B} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nAt the beginning of your end step, draw a card for each age counter on this enchantment.\nWhen this enchantment is put into a graveyard from the battlefield, you lose 2 life for each age counter on it.",
+      "variants": [
+        "draw_two_0",
+        "draw_two_1",
+        "decline_second_0",
+        "decline_second_1",
+        "disenchant_age2_0",
+        "disenchant_age2_1"
+      ]
+    }
+  ]
+}

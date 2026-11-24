@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Nantuko Monastery",
+  "csvid": 5979,
+  "recipes": [
+    {
+      "family": "threshold_modal_activations",
+      "version": 2,
+      "oracle_text": "{T}: Add {C}.\nThreshold — {G}{W}: This land becomes a 4/4 green and white Insect Monk creature with first strike until end of turn. It's still a land. Activate only if there are seven or more cards in your graveyard.",
+      "params": {
+        "source": 5979
+      },
+      "variants": [
+        "six_duplicates_0",
+        "six_duplicates_1",
+        "seven_duplicates_0",
+        "seven_duplicates_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "short_fee_0",
+        "short_fee_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Heartstabber Mosquito",
+  "csvid": 10562,
+  "recipes": [
+    {
+      "family": "kicker_targeted_entry",
+      "version": 2,
+      "params": {
+        "kind": "creature",
+        "mana": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "kicker": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Kicker {2}{B} (You may pay an additional {2}{B} as you cast this spell.)\nFlying\nWhen this creature enters, if it was kicked, destroy target creature.",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "base_only_0",
+        "base_only_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "countered_0",
+        "countered_1",
+        "scope_0",
+        "scope_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

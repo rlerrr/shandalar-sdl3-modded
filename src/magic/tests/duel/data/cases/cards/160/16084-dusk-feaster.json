@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Dusk Feaster",
+  "csvid": 16084,
+  "recipes": [
+    {
+      "family": "delirium_activated_and_cast_costs",
+      "version": 2,
+      "oracle_text": "Delirium — This spell costs {2} less to cast if there are four or more card types among cards in your graveyard.\nFlying",
+      "params": {
+        "source": 16084
+      },
+      "variants": [
+        "three_duplicates_0",
+        "three_duplicates_1",
+        "four_types_0",
+        "four_types_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "full_cost_0",
+        "full_cost_1",
+        "gain_fourth_0",
+        "gain_fourth_1",
+        "lose_fourth_0",
+        "lose_fourth_1",
+        "mixed_type_0",
+        "mixed_type_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

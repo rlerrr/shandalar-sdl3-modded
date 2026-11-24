@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Spearpoint Oread",
+  "csvid": 13557,
+  "recipes": [
+    {
+      "family": "bestow_combined_keywords",
+      "version": 2,
+      "params": {
+        "csvid": 13557,
+        "normal": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "bestowed": [
+          5,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "bonus": [
+          2,
+          2
+        ],
+        "creature": [
+          2,
+          2
+        ]
+      },
+      "oracle_text": "Bestow {5}{R} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nFirst strike\nEnchanted creature gets +2/+2 and has first strike.",
+      "variants": [
+        "regular_combat_0",
+        "regular_combat_1",
+        "bestowed_combat_0",
+        "bestowed_combat_1",
+        "detach_combat_0",
+        "detach_combat_1",
+        "pending_host_lost_0",
+        "pending_host_lost_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,377 @@
+{
+  "sources": {
+    "Celestial Archon": {
+      "oracle": {
+        "oracle_id": "d2b29bb0-9fb5-46cd-a546-fa6c4ff6113c",
+        "name": "Celestial Archon",
+        "oracle_text": "Bestow {5}{W}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nFlying, first strike\nEnchanted creature gets +4/+4 and has flying and first strike.",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Enchantment Creature — Archon",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "First strike",
+          "Bestow"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c18/64/celestial-archon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13403,
+        "iid": 1573,
+        "name": "Celestial Archon",
+        "handler": "manalinkeh_card_celestial_archon",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13404,
+        "iid": 1574,
+        "name": "Celestial Archon Bestowed",
+        "handler": "manalinkeh_card_celestial_archon",
+        "kind": "card"
+      }
+    },
+    "Chromanticore": {
+      "oracle": {
+        "oracle_id": "695ee4fe-356d-47fb-9442-d171b618151c",
+        "name": "Chromanticore",
+        "oracle_text": "Bestow {2}{W}{U}{B}{R}{G} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nFlying, first strike, vigilance, trample, lifelink\nEnchanted creature gets +4/+4 and has flying, first strike, vigilance, trample, and lifelink.",
+        "mana_cost": "{W}{U}{B}{R}{G}",
+        "type_line": "Enchantment Creature — Manticore",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Lifelink",
+          "Vigilance",
+          "First strike",
+          "Trample",
+          "Bestow"
+        ],
+        "colors": [
+          "B",
+          "G",
+          "R",
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "G",
+          "R",
+          "U",
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmc/146/chromanticore?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13678,
+        "iid": 1722,
+        "name": "Chromanticore",
+        "handler": "manalinkeh_card_chromanticore",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13679,
+        "iid": 1723,
+        "name": "Chromanticore Bestowed",
+        "handler": "manalinkeh_card_chromanticore",
+        "kind": "card"
+      }
+    },
+    "Ghostblade Eidolon": {
+      "oracle": {
+        "oracle_id": "78a1f291-22ed-41f1-87fd-0bdc97f9c065",
+        "name": "Ghostblade Eidolon",
+        "oracle_text": "Bestow {5}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nDouble strike (This creature deals both first-strike and regular combat damage.)\nEnchanted creature gets +1/+1 and has double strike.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Enchantment Creature — Spirit",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Bestow",
+          "Double strike"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c15/70/ghostblade-eidolon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13720,
+        "iid": 3838,
+        "name": "Ghostblade Eidolon",
+        "handler": "manalinkeh_card_ghostblade_eidolon",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13721,
+        "iid": 3839,
+        "name": "Ghostblade Eidolon Bestowed",
+        "handler": "manalinkeh_card_ghostblade_eidolon",
+        "kind": "card"
+      }
+    },
+    "Spearpoint Oread": {
+      "oracle": {
+        "oracle_id": "2fa7bb26-18eb-4ff0-8558-f6f3981a84ce",
+        "name": "Spearpoint Oread",
+        "oracle_text": "Bestow {5}{R} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nFirst strike\nEnchanted creature gets +2/+2 and has first strike.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment Creature — Nymph",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "First strike",
+          "Bestow"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/141/spearpoint-oread?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13557,
+        "iid": 9096,
+        "name": "Spearpoint Oread",
+        "handler": "manalinkeh_card_spearpoint_oread",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13558,
+        "iid": 9097,
+        "name": "Spearpoint Oread Bestowed",
+        "handler": "manalinkeh_card_spearpoint_oread",
+        "kind": "card"
+      }
+    },
+    "Hopeful Eidolon": {
+      "oracle": {
+        "oracle_id": "13c1ca1e-cd17-49ef-bc31-97bff99ec1e3",
+        "name": "Hopeful Eidolon",
+        "oracle_text": "Bestow {3}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nLifelink (Damage dealt by this creature also causes you to gain that much life.)\nEnchanted creature gets +1/+1 and has lifelink.",
+        "mana_cost": "{W}",
+        "type_line": "Enchantment Creature — Spirit",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Lifelink",
+          "Bestow"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/19/hopeful-eidolon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13459,
+        "iid": 4637,
+        "name": "Hopeful Eidolon",
+        "handler": "manalinkeh_card_hopeful_eidolon",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13460,
+        "iid": 4638,
+        "name": "Hopeful Eidolon Bestowed",
+        "handler": "manalinkeh_card_hopeful_eidolon",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Air Elemental": {
+      "oracle": {
+        "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+        "name": "Air Elemental",
+        "oracle_text": "Flying",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/44/air-elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 0,
+        "iid": 298,
+        "name": "Air Elemental",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Wind Drake": {
+      "oracle": {
+        "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+        "name": "Wind Drake",
+        "oracle_text": "Flying",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/70/wind-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1197,
+        "iid": 10989,
+        "name": "Wind Drake",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

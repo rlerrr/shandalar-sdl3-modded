@@ -1,0 +1,197 @@
+{
+  "version": 1,
+  "sources": {
+    "Skysovereign, Consul Flagship": {
+      "oracle_record_sha256": "76e2d3528bb91a2887369ab1bed15738e37a67e67bf1c9d6eb1d8177fea3e1eb",
+      "registry": {
+        "csvid": 16521,
+        "iid": 16607,
+        "name": "Skysovereign, Consul Flagship",
+        "handler": "manalinkeh_card_skysovereign_consul_flagship",
+        "kind": "card"
+      }
+    },
+    "Heart of Kiran": {
+      "oracle_record_sha256": "99a59a2645344e9f912e280817a295f2b1a0f449ee6c28e76be9ef512f05c089",
+      "registry": {
+        "csvid": 16716,
+        "iid": 16809,
+        "name": "Heart of Kiran",
+        "handler": "manalinkeh_card_heart_of_kiran",
+        "kind": "card"
+      }
+    },
+    "Weatherlight": {
+      "oracle_record_sha256": "1cd9af4a17240c9a5e1d0d117f7118c1e20f31f9f0d580e03880db5d7386885c",
+      "registry": {
+        "csvid": 18558,
+        "iid": 18665,
+        "name": "Weatherlight",
+        "handler": "manalinkeh_card_weatherlight",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Unsummon": {
+      "oracle_record_sha256": "0c5bac8f5868ada1be85b5c6cabfbb406db13c0b449461f797d70df0855b25d0",
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Catapult Squad": {
+      "oracle_record_sha256": "d5899f929e51ebb6729e885b17400107935c0680e763fd849d4742eb246daa85",
+      "registry": {
+        "csvid": 6081,
+        "iid": 1540,
+        "name": "Catapult Squad",
+        "handler": "manalinkeh_card_catapult_squad",
+        "kind": "card"
+      }
+    },
+    "Chandra Nalaar": {
+      "oracle_record_sha256": "33348e338491a36a6a1c2a273f4a5a50f084b646285d96a5862b4b5880204391",
+      "registry": {
+        "csvid": 9095,
+        "iid": 1647,
+        "name": "Chandra Nalaar",
+        "handler": "manalinkeh_card_chandra_nalaar",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle_record_sha256": "cdc1262047c1476b8c5144c0fbfbe5822b49b956822cd421e6dfeeb850037c38",
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Mogg Fanatic": {
+      "oracle_record_sha256": "4697ab2882c3835839712e4aa7d53f163d546f55fc17fcf27a51721799cf0af5",
+      "registry": {
+        "csvid": 1354,
+        "iid": 6244,
+        "name": "Mogg Fanatic",
+        "handler": "manalinkeh_card_mogg_fanatic",
+        "kind": "card"
+      }
+    },
+    "Shivan Dragon": {
+      "oracle_record_sha256": "1c5120b4e2128d5b2d96a1acaa0797e84f7587664906a8a06c322721edf74cf0",
+      "registry": {
+        "csvid": 224,
+        "iid": 8648,
+        "name": "Shivan Dragon",
+        "handler": "manalinkeh_card_furnace_whelp",
+        "kind": "card"
+      }
+    },
+    "Welkin Tern": {
+      "oracle_record_sha256": "8925d6ca40cc266ce8f2740fa277c30b80499afedd409d28ee7e17f0fc686f58",
+      "registry": {
+        "csvid": 10709,
+        "iid": 10901,
+        "name": "Welkin Tern",
+        "handler": "manalinkeh_card_skywinder_drake",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle_record_sha256": "88d8752af13012b387b30e87da82b9651ea03509698218881e6b3297ed9c8527",
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle_record_sha256": "1e7c0c1e3ad096022fd4e7d0fd676ce37ff47f75f80221feff38fd459a619989",
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Isamaru, Hound of Konda": {
+      "oracle_record_sha256": "653888283a3e97956a6cf3f4451d4bcae1a32437310babf23ec3e51227f1d7d2",
+      "registry": {
+        "csvid": 1239,
+        "iid": 4956,
+        "name": "Isamaru, Hound of Konda",
+        "handler": "manalinkeh_card_barktooth_warbeard",
+        "kind": "card"
+      }
+    },
+    "The Eldest Reborn": {
+      "oracle_record_sha256": "ea80977a27c20d4a338f487a3907decd4a9e39e439c06fa8b12514da86e6524f",
+      "registry": {
+        "csvid": 18533,
+        "iid": 18640,
+        "name": "The Eldest Reborn",
+        "handler": "manalinkeh_card_the_eldest_reborn",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle_record_sha256": "886664d9e2cb535b687e433d8ea097379a4eedd125fde04ca68ea95610b93ed8",
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle_record_sha256": "25853cbee66ee747db3b1fcf3330b5869545c0d95498e50dd6e51ebd44ea47a4",
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle_record_sha256": "fd9729323aed22b078e77210051e1d25002aaff6e59c901a0059d7229feeb6eb",
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle_record_sha256": "d21b9e9c00344dcdee3603f5b53db0dafab6b414a5a804d3baed8d9c44122443",
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle_record_sha256": "653d3bb2f3f20e7347f6b140609f3425fdd5a5ee10546ba8f6b0b969150104d5",
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    }
+  }
+}

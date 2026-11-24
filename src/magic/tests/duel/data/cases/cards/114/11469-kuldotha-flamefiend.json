@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Kuldotha Flamefiend",
+  "csvid": 11469,
+  "recipes": [
+    {
+      "family": "creature_entry_sacrifices",
+      "version": 2,
+      "params": {
+        "mode": "artifact_damage",
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "keywords": [],
+        "power": 4,
+        "toughness": 4
+      },
+      "oracle_text": "When this creature enters, you may sacrifice an artifact. If you do, this creature deals 4 damage divided as you choose among any number of targets.",
+      "variants": [
+        "split_0",
+        "artifact_creature_0",
+        "no_artifact_0",
+        "countered_0",
+        "wrong_color_0",
+        "snapshot_0",
+        "split_1",
+        "artifact_creature_1",
+        "no_artifact_1",
+        "countered_1",
+        "wrong_color_1",
+        "snapshot_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

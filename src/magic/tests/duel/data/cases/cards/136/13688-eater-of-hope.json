@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Eater of Hope",
+  "csvid": 13688,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_sacrifice_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 13688,
+        "cost": [
+          5,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flying\n{B}, Sacrifice another creature: Regenerate this creature.\n{2}{B}, Sacrifice two other creatures: Destroy target creature.",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "denied_cost_0",
+        "denied_cost_1",
+        "proactive_0",
+        "proactive_1",
+        "cannot_regenerate_0",
+        "cannot_regenerate_1",
+        "destroy_paid_0",
+        "destroy_paid_1",
+        "destroy_one_0",
+        "destroy_one_1",
+        "destroy_short_0",
+        "destroy_short_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

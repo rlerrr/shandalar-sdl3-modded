@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "card": "Thassa's Devourer",
+  "csvid": 13995,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "constellation_entry_spell",
+      "version": 2,
+      "oracle_text": "Constellation — Whenever this creature or another enchantment you control enters, target player mills two cards.",
+      "params": {
+        "mode": "target_mill",
+        "power": 2,
+        "toughness": 6,
+        "mana": [
+          4,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "keywords": [
+          "Constellation",
+          "Mill"
+        ]
+      },
+      "variants": [
+        "self_entry_0",
+        "self_entry_1",
+        "own_enchantment_0",
+        "own_enchantment_1",
+        "own_enchantment_creature_0",
+        "own_enchantment_creature_1",
+        "opponent_enchantment_0",
+        "opponent_enchantment_1",
+        "opponent_enchantment_creature_0",
+        "opponent_enchantment_creature_1",
+        "own_noncreature_0",
+        "own_noncreature_1",
+        "own_creature_0",
+        "own_creature_1",
+        "double_watchers_0",
+        "double_watchers_1",
+        "alternating_turns_0",
+        "alternating_turns_1",
+        "piper_entry_0",
+        "piper_entry_1",
+        "countered_0",
+        "countered_1",
+        "source_removed_0",
+        "source_removed_1",
+        "bounce_recast_0",
+        "bounce_recast_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "unfunded_0",
+        "unfunded_1",
+        "pending_replay_0",
+        "pending_replay_1",
+        "mill_self_0",
+        "mill_self_1",
+        "empty_library_0",
+        "empty_library_1",
+        "short_library_0",
+        "short_library_1",
+        "repeat_mill_0",
+        "repeat_mill_1"
+      ]
+    }
+  ]
+}

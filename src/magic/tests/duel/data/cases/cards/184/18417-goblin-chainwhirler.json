@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Goblin Chainwhirler",
+  "csvid": 18417,
+  "recipes": [
+    {
+      "family": "entry_follow_on_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 18417,
+        "cost": "{R}{R}{R}",
+        "choices": [
+          "scope_0",
+          "scope_1",
+          "planeswalker_0",
+          "planeswalker_1",
+          "first_strike_0",
+          "first_strike_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "First strike\nWhen this creature enters, it deals 1 damage to each opponent and each creature and planeswalker they control.",
+      "variants": [
+        "scope_0",
+        "scope_1",
+        "planeswalker_0",
+        "planeswalker_1",
+        "first_strike_0",
+        "first_strike_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

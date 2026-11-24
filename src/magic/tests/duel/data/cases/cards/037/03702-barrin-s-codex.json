@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 3702,
+  "card": "Barrin's Codex",
+  "recipes": [
+    {
+      "family": "upkeep_counters",
+      "version": 2,
+      "params": {
+        "csvid": 3702,
+        "printed_cost": "{4}"
+      },
+      "oracle_text": "At the beginning of your upkeep, you may put a page counter on this artifact.\n{4}, {T}, Sacrifice this artifact: Draw X cards, where X is the number of page counters on this artifact.",
+      "variants": [
+        "zero_0",
+        "one_0",
+        "two_0",
+        "decline_0",
+        "tapped_0",
+        "zero_1",
+        "one_1",
+        "two_1",
+        "tapped_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Burning Vengeance",
+  "csvid": 11895,
+  "recipes": [
+    {
+      "family": "nonhand_cast_rewards",
+      "version": 2,
+      "oracle_text": "Whenever you cast a spell from your graveyard, this enchantment deals 2 damage to any target.",
+      "params": {
+        "model": "damage",
+        "cost": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "variants": [
+        "flashback_0",
+        "offturn_0",
+        "other_flashback_0",
+        "hand_0",
+        "exile_0",
+        "underpaid_0",
+        "countered_0",
+        "replay_0",
+        "creature_0",
+        "walker_0",
+        "flashback_1",
+        "offturn_1",
+        "other_flashback_1",
+        "hand_1",
+        "exile_1",
+        "underpaid_1",
+        "countered_1",
+        "replay_1",
+        "creature_1",
+        "walker_1"
+      ]
+    }
+  ]
+}

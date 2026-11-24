@@ -1,0 +1,626 @@
+{
+  "sources": {
+    "Cryptic Cruiser": {
+      "oracle": {
+        "oracle_id": "ae7cfdb8-b0f2-46d7-b847-9a760ddbe028",
+        "name": "Cryptic Cruiser",
+        "oracle_text": "Devoid (This card has no color.)\n{2}{U}, Put a card an opponent owns from exile into that player's graveyard: Tap target creature.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Eldrazi Processor",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/56/cryptic-cruiser?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15303,
+        "iid": 12136,
+        "name": "Cryptic Cruiser",
+        "handler": "manalinkeh_card_cryptic_cruiser",
+        "kind": "card"
+      }
+    },
+    "Mind Raker": {
+      "oracle": {
+        "oracle_id": "060076e7-3705-4f8e-8fac-59402835902b",
+        "name": "Mind Raker",
+        "oracle_text": "Devoid (This card has no color.)\nWhen this creature enters, you may put a card an opponent owns from exile into that player's graveyard. If you do, each opponent discards a card.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Eldrazi Processor",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/95/mind-raker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15374,
+        "iid": 13605,
+        "name": "Mind Raker",
+        "handler": "manalinkeh_card_mind_raker",
+        "kind": "card"
+      }
+    },
+    "Murk Strider": {
+      "oracle": {
+        "oracle_id": "386b8c1f-620c-4561-a9d5-d01e2eb5f12a",
+        "name": "Murk Strider",
+        "oracle_text": "Devoid (This card has no color.)\nWhen this creature enters, you may put a card an opponent owns from exile into that player's graveyard. If you do, return target creature to its owner's hand.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Eldrazi Processor",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/62/murk-strider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15381,
+        "iid": 13718,
+        "name": "Murk Strider",
+        "handler": "manalinkeh_card_murk_strider",
+        "kind": "card"
+      }
+    },
+    "Oracle of Dust": {
+      "oracle": {
+        "oracle_id": "6e5f50b2-0acc-42be-b9fd-32ea390c07fc",
+        "name": "Oracle of Dust",
+        "oracle_text": "Devoid (This card has no color.)\n{2}, Put a card an opponent owns from exile into that player's graveyard: Draw a card, then discard a card.",
+        "mana_cost": "{4}{U}",
+        "type_line": "Creature — Eldrazi Processor",
+        "power": "3",
+        "toughness": "5",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/63/oracle-of-dust?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15394,
+        "iid": 13867,
+        "name": "Oracle of Dust",
+        "handler": "manalinkeh_card_oracle_of_dust",
+        "kind": "card"
+      }
+    },
+    "Processor Assault": {
+      "oracle": {
+        "oracle_id": "e773258a-e59b-4e5f-b4e1-4f95cb11a39f",
+        "name": "Processor Assault",
+        "oracle_text": "Devoid (This card has no color.)\nAs an additional cost to cast this spell, put a card an opponent owns from exile into that player's graveyard.\nProcessor Assault deals 5 damage to target creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/132/processor-assault?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15405,
+        "iid": 14049,
+        "name": "Processor Assault",
+        "handler": "manalinkeh_card_processor_assault",
+        "kind": "card"
+      }
+    },
+    "Ulamog's Reclaimer": {
+      "oracle": {
+        "oracle_id": "137de343-e3d0-4ccb-b8fc-680024387367",
+        "name": "Ulamog's Reclaimer",
+        "oracle_text": "Devoid (This card has no color.)\nWhen this creature enters, you may put a card an opponent owns from exile into that player's graveyard. If you do, return target instant or sorcery card from your graveyard to your hand.",
+        "mana_cost": "{4}{U}",
+        "type_line": "Creature — Eldrazi Processor",
+        "power": "2",
+        "toughness": "5",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/68/ulamogs-reclaimer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15472,
+        "iid": 15224,
+        "name": "Ulamog's Reclaimer",
+        "handler": "manalinkeh_card_ulamogs_reclaimer",
+        "kind": "card"
+      }
+    },
+    "Wasteland Strangler": {
+      "oracle": {
+        "oracle_id": "197f3b17-ce21-430e-8e41-f5d02d5e3637",
+        "name": "Wasteland Strangler",
+        "oracle_text": "Devoid (This card has no color.)\nWhen this creature enters, you may put a card an opponent owns from exile into that player's graveyard. If you do, target creature gets -3/-3 until end of turn.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Eldrazi Processor",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/102/wasteland-strangler?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15487,
+        "iid": 15437,
+        "name": "Wasteland Strangler",
+        "handler": "manalinkeh_card_wasteland_strangler",
+        "kind": "card"
+      }
+    },
+    "Ulamog's Nullifier": {
+      "oracle": {
+        "oracle_id": "bd213210-42d1-49af-9959-08188abe692a",
+        "name": "Ulamog's Nullifier",
+        "oracle_text": "Devoid (This card has no color.)\nFlash\nFlying\nWhen this creature enters, you may put two cards your opponents own from exile into their owners' graveyards. If you do, counter target spell.",
+        "mana_cost": "{2}{U}{B}",
+        "type_line": "Creature — Eldrazi Processor",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Devoid",
+          "Flash"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/207/ulamogs-nullifier?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15471,
+        "iid": 15223,
+        "name": "Ulamog's Nullifier",
+        "handler": "manalinkeh_card_ulamogs_nullifier",
+        "kind": "card"
+      }
+    },
+    "Void Attendant": {
+      "oracle": {
+        "oracle_id": "34f3ec68-871f-4b94-b497-04f71aea88c9",
+        "name": "Void Attendant",
+        "oracle_text": "Devoid (This card has no color.)\n{1}{G}, Put a card an opponent owns from exile into that player's graveyard: Create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\"",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Eldrazi Processor",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/otc/212/void-attendant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15483,
+        "iid": 15370,
+        "name": "Void Attendant",
+        "handler": "manalinkeh_card_void_attendant",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Defiant Strike": {
+      "oracle": {
+        "oracle_id": "f8c2d9c5-6fe6-4698-9972-83cdd625d94b",
+        "name": "Defiant Strike",
+        "oracle_text": "Target creature gets +1/+0 until end of turn.\nDraw a card.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/15/defiant-strike?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14251,
+        "iid": 2395,
+        "name": "Defiant Strike",
+        "handler": "manalinkeh_card_defiant_strike",
+        "kind": "card"
+      }
+    },
+    "Divination": {
+      "oracle": {
+        "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+        "name": "Divination",
+        "oracle_text": "Draw two cards.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/51/divination?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10405,
+        "iid": 2609,
+        "name": "Divination",
+        "handler": "manalinkeh_card_divination",
+        "kind": "card"
+      }
+    },
+    "Eldrazi Scion": {
+      "oracle": {
+        "oracle_id": "0eb3cd4b-c34e-448c-a9ab-e7b0b4524833",
+        "name": "Eldrazi Scion",
+        "oracle_text": "Sacrifice this creature: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Eldrazi Scion",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tm3c/3/eldrazi-scion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18724,
+        "iid": 12425,
+        "name": "Eldrazi Scion",
+        "handler": "manalinkeh_card_eldrazi_spawn",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Scaled Wurm": {
+      "oracle": {
+        "oracle_id": "009a8e38-74d0-4b4a-b8ca-62c9f3183531",
+        "name": "Scaled Wurm",
+        "oracle_text": "",
+        "mana_cost": "{7}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "7",
+        "toughness": "6",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/178/scaled-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2085,
+        "iid": 8287,
+        "name": "Scaled Wurm",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Silver Knight": {
+      "oracle": {
+        "oracle_id": "aa7cd6e6-35a6-4c18-9d66-dc2a95206401",
+        "name": "Silver Knight",
+        "oracle_text": "First strike, protection from red",
+        "mana_cost": "{W}{W}",
+        "type_line": "Creature — Human Knight",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "First strike",
+          "Protection"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddg/8/silver-knight?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1238,
+        "iid": 8745,
+        "name": "Silver Knight",
+        "handler": "manalinkeh_card_galinas_knight",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Think Twice": {
+      "oracle": {
+        "oracle_id": "fa85c5a2-8e83-4624-a35a-a0bbf17ecbb4",
+        "name": "Think Twice",
+        "oracle_text": "Draw a card.\nFlashback {2}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/787/think-twice?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8702,
+        "iid": 9890,
+        "name": "Think Twice",
+        "handler": "manalinkeh_card_think_twice",
+        "kind": "card"
+      }
+    }
+  }
+}

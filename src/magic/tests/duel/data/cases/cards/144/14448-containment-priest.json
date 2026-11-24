@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Containment Priest",
+  "csvid": 14448,
+  "recipes": [
+    {
+      "family": "flash_remaining_rule_effects",
+      "version": 2,
+      "params": {
+        "csvid": 14448,
+        "printed_mana": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "rules": "Flash\nIf a nontoken creature would enter and it wasn't cast, exile it instead."
+      },
+      "oracle_text": "Flash\nIf a nontoken creature would enter and it wasn't cast, exile it instead.",
+      "variants": [
+        "uncast_exiled_0",
+        "uncast_exiled_1",
+        "cast_and_tokens_0",
+        "cast_and_tokens_1"
+      ]
+    }
+  ]
+}

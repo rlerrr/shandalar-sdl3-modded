@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Ogre Marauder",
+  "csvid": 7526,
+  "recipes": [
+    {
+      "family": "attack_trigger_costs_and_damage",
+      "version": 2,
+      "params": {
+        "csvid": 7526,
+        "printed_mana": "{1}{B}{B}",
+        "rules": "Whenever this creature attacks, it gains \"this creature can't be blocked\" until end of turn unless defending player sacrifices a creature of their choice."
+      },
+      "oracle_text": "Whenever this creature attacks, it gains \"this creature can't be blocked\" until end of turn unless defending player sacrifices a creature of their choice.",
+      "variants": [
+        "no_creature_0",
+        "no_creature_1",
+        "decline_sacrifice_0",
+        "decline_sacrifice_1",
+        "paid_sacrifice_0",
+        "paid_sacrifice_1",
+        "paid_then_block_1"
+      ]
+    }
+  ]
+}

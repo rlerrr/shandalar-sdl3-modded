@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Throne of the God-Pharaoh",
+  "csvid": 17047,
+  "recipes": [
+    {
+      "family": "own_end_step_state_trigger",
+      "version": 2,
+      "oracle_text": "At the beginning of your end step, each opponent loses life equal to the number of tapped creatures you control.",
+      "params": {
+        "role": "throne",
+        "printed_mana": "{2}",
+        "has_colored_cost": false
+      },
+      "variants": [
+        "cast_payment_0",
+        "cast_unaffordable_0",
+        "cast_countered_0",
+        "own_end_step_0",
+        "opponent_end_step_0",
+        "no_early_trigger_0",
+        "source_removed_0",
+        "end_step_snapshot_0",
+        "cast_then_end_step_0",
+        "zero_0",
+        "mixed_creatures_0",
+        "three_creatures_0",
+        "tap_mana_creature_0",
+        "noncreatures_only_0",
+        "cast_payment_1",
+        "cast_unaffordable_1",
+        "cast_countered_1",
+        "own_end_step_1",
+        "opponent_end_step_1",
+        "no_early_trigger_1",
+        "source_removed_1",
+        "end_step_snapshot_1",
+        "cast_then_end_step_1",
+        "zero_1",
+        "mixed_creatures_1",
+        "three_creatures_1",
+        "tap_mana_creature_1",
+        "noncreatures_only_1"
+      ]
+    }
+  ]
+}

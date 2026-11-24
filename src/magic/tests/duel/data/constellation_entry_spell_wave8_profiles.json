@@ -1,0 +1,927 @@
+{
+  "version": 1,
+  "sources": {
+    "Doomwake Giant": {
+      "oracle": {
+        "oracle_id": "ba069664-9f92-47c7-b556-9e5143a22579",
+        "name": "Doomwake Giant",
+        "oracle_text": "Constellation — Whenever this creature or another enchantment you control enters, creatures your opponents control get -1/-1 until end of turn.",
+        "mana_cost": "{4}{B}",
+        "type_line": "Enchantment Creature — Giant",
+        "power": "4",
+        "toughness": "6",
+        "keywords": [
+          "Constellation"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/212/doomwake-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13877,
+        "iid": 2645,
+        "name": "Doomwake Giant",
+        "handler": "manalinkeh_card_doomwake_giant",
+        "kind": "card"
+      }
+    },
+    "Forgeborn Oreads": {
+      "oracle": {
+        "oracle_id": "8289190c-b180-48e3-b92f-7dccbca61b39",
+        "name": "Forgeborn Oreads",
+        "oracle_text": "Constellation — Whenever this creature or another enchantment you control enters, this creature deals 1 damage to any target.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Enchantment Creature — Nymph",
+        "power": "4",
+        "toughness": "2",
+        "keywords": [
+          "Constellation"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/98/forgeborn-oreads?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13894,
+        "iid": 3602,
+        "name": "Forgeborn Oreads",
+        "handler": "manalinkeh_card_forgeborn_oreads",
+        "kind": "card"
+      }
+    },
+    "Grim Guardian": {
+      "oracle": {
+        "oracle_id": "c1f1babf-13d0-4fc4-b192-127d2d5db7f1",
+        "name": "Grim Guardian",
+        "oracle_text": "Constellation — Whenever this creature or another enchantment you control enters, each opponent loses 1 life.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Enchantment Creature — Zombie",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Constellation"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/73/grim-guardian?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13903,
+        "iid": 4228,
+        "name": "Grim Guardian",
+        "handler": "manalinkeh_card_grim_guardian",
+        "kind": "card"
+      }
+    },
+    "Oakheart Dryads": {
+      "oracle": {
+        "oracle_id": "60bac6e8-0c72-4665-9b01-d07c99dd1716",
+        "name": "Oakheart Dryads",
+        "oracle_text": "Constellation — Whenever this creature or another enchantment you control enters, target creature gets +1/+1 until end of turn.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment Creature — Nymph Dryad",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Constellation"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/133/oakheart-dryads?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13941,
+        "iid": 6745,
+        "name": "Oakheart Dryads",
+        "handler": "manalinkeh_card_oakheart_dryads",
+        "kind": "card"
+      }
+    },
+    "Thassa's Devourer": {
+      "oracle": {
+        "oracle_id": "b9794b16-3ef4-424a-b1ee-e2077f53873d",
+        "name": "Thassa's Devourer",
+        "oracle_text": "Constellation — Whenever this creature or another enchantment you control enters, target player mills two cards.",
+        "mana_cost": "{4}{U}",
+        "type_line": "Enchantment Creature — Elemental",
+        "power": "2",
+        "toughness": "6",
+        "keywords": [
+          "Mill",
+          "Constellation"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/53/thassas-devourer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13995,
+        "iid": 9850,
+        "name": "Thassa's Devourer",
+        "handler": "manalinkeh_card_thassas_devourer",
+        "kind": "card"
+      }
+    },
+    "Underworld Coinsmith": {
+      "oracle": {
+        "oracle_id": "ae06e0e5-8a42-4d1f-a629-94152e5f1fe6",
+        "name": "Underworld Coinsmith",
+        "oracle_text": "Constellation — Whenever this creature or another enchantment you control enters, you gain 1 life.\n{W}{B}, Pay 1 life: Each opponent loses 1 life.",
+        "mana_cost": "{W}{B}",
+        "type_line": "Enchantment Creature — Human Cleric",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Constellation"
+        ],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c15/237/underworld-coinsmith?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14002,
+        "iid": 10351,
+        "name": "Underworld Coinsmith",
+        "handler": "manalinkeh_card_underworld_coinsmith",
+        "kind": "card"
+      }
+    },
+    "Whitewater Naiads": {
+      "oracle": {
+        "oracle_id": "6c73e533-9ed1-4df0-af12-c0174c0b52b9",
+        "name": "Whitewater Naiads",
+        "oracle_text": "Constellation — Whenever this creature or another enchantment you control enters, target creature can't be blocked this turn.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Enchantment Creature — Nymph",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Constellation"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c18/112/whitewater-naiads?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14004,
+        "iid": 10947,
+        "name": "Whitewater Naiads",
+        "handler": "manalinkeh_card_whitewater_naiads",
+        "kind": "card"
+      }
+    },
+    "Dreadbringer Lampads": {
+      "oracle": {
+        "oracle_id": "e65fa865-3f60-41f2-8b14-b0333c897b93",
+        "name": "Dreadbringer Lampads",
+        "oracle_text": "Constellation — Whenever this creature or another enchantment you control enters, target creature gains intimidate until end of turn. (It can't be blocked except by artifact creatures and/or creatures that share a color with it.)",
+        "mana_cost": "{4}{B}",
+        "type_line": "Enchantment Creature — Nymph",
+        "power": "4",
+        "toughness": "2",
+        "keywords": [
+          "Constellation"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c15/122/dreadbringer-lampads?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13878,
+        "iid": 2728,
+        "name": "Dreadbringer Lampads",
+        "handler": "manalinkeh_card_dreadbringer_lampads",
+        "kind": "card"
+      }
+    },
+    "Harvestguard Alseids": {
+      "oracle": {
+        "oracle_id": "ad88bf37-bbb4-46f0-9994-1863c7c31a2a",
+        "name": "Harvestguard Alseids",
+        "oracle_text": "Constellation — Whenever this creature or another enchantment you control enters, prevent all damage that would be dealt to target creature this turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Enchantment Creature — Nymph",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Constellation"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/13/harvestguard-alseids?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13906,
+        "iid": 4396,
+        "name": "Harvestguard Alseids",
+        "handler": "manalinkeh_card_harvestguard_alseids",
+        "kind": "card"
+      }
+    },
+    "Humbler of Mortals": {
+      "oracle": {
+        "oracle_id": "91933f1a-4aad-4f67-8151-a47ab6d0e42c",
+        "name": "Humbler of Mortals",
+        "oracle_text": "Constellation — Whenever this creature or another enchantment you control enters, creatures you control gain trample until end of turn.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Enchantment Creature — Elemental",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Constellation"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/127/humbler-of-mortals?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13910,
+        "iid": 4696,
+        "name": "Humbler of Mortals",
+        "handler": "manalinkeh_card_humbler_of_mortals",
+        "kind": "card"
+      }
+    },
+    "Strength from the Fallen": {
+      "oracle": {
+        "oracle_id": "23643af9-00b7-45e1-8471-7031d08bbe30",
+        "name": "Strength from the Fallen",
+        "oracle_text": "Constellation — Whenever this enchantment or another enchantment you control enters, target creature gets +X/+X until end of turn, where X is the number of creature cards in your graveyard.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Constellation"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/143/strength-from-the-fallen?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13989,
+        "iid": 9442,
+        "name": "Strength from the Fallen",
+        "handler": "manalinkeh_card_strength_from_the_fallen",
+        "kind": "card"
+      }
+    },
+    "Thoughtrender Lamia": {
+      "oracle": {
+        "oracle_id": "d97c4bca-6433-4cb0-b63a-fdf8360fc29c",
+        "name": "Thoughtrender Lamia",
+        "oracle_text": "Constellation — Whenever this creature or another enchantment you control enters, each opponent discards a card.",
+        "mana_cost": "{4}{B}{B}",
+        "type_line": "Enchantment Creature — Lamia",
+        "power": "5",
+        "toughness": "3",
+        "keywords": [
+          "Constellation"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/85/thoughtrender-lamia?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13997,
+        "iid": 9926,
+        "name": "Thoughtrender Lamia",
+        "handler": "manalinkeh_card_thoughtrender_lamia",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Elvish Piper": {
+      "oracle": {
+        "oracle_id": "872ef617-7cdb-4a7a-85f5-efc9e12bece5",
+        "name": "Elvish Piper",
+        "oracle_text": "{G}, {T}: You may put a creature card from your hand onto the battlefield.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Elf Shaman",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/a25/168/elvish-piper?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1027,
+        "iid": 2984,
+        "name": "Elvish Piper",
+        "handler": "manalinkeh_card_elvish_piper",
+        "kind": "card"
+      }
+    },
+    "Favorable Winds": {
+      "oracle": {
+        "oracle_id": "2361ca87-6352-4ba3-8d91-b3d71242914d",
+        "name": "Favorable Winds",
+        "oracle_text": "Creatures you control with flying get +1/+1.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gnt/21/favorable-winds?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12368,
+        "iid": 3318,
+        "name": "Favorable Winds",
+        "handler": "manalinkeh_card_favourable_winds",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Hussar Patrol": {
+      "oracle": {
+        "oracle_id": "bd73581c-c4bd-46cb-8004-75aeafa24288",
+        "name": "Hussar Patrol",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nVigilance",
+        "mana_cost": "{2}{W}{U}",
+        "type_line": "Creature — Human Knight",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Vigilance",
+          "Flash"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddn/55/hussar-patrol?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12748,
+        "iid": 4728,
+        "name": "Hussar Patrol",
+        "handler": "manalinkeh_card_hussar_patrol",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Mons's Goblin Raiders": {
+      "oracle": {
+        "oracle_id": "a37159df-f6d7-4db6-85de-0ea77f425993",
+        "name": "Mons's Goblin Raiders",
+        "oracle_text": "",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/s00/32/monss-goblin-raiders?utm_source=api"
+      },
+      "registry": {
+        "csvid": 163,
+        "iid": 6293,
+        "name": "Mons's Goblin Raiders",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Nyxborn Triton": {
+      "oracle": {
+        "oracle_id": "cdd37bbf-09db-4c1f-9947-312de48a0f4c",
+        "name": "Nyxborn Triton",
+        "oracle_text": "Bestow {4}{U} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nEnchanted creature gets +2/+3.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Enchantment Creature — Merfolk",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Bestow"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/46/nyxborn-triton?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13767,
+        "iid": 6738,
+        "name": "Nyxborn Triton",
+        "handler": "manalinkeh_card_nyxborn_triton",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Safe Passage": {
+      "oracle": {
+        "oracle_id": "dfa459a1-b065-4488-88d3-4da388261b52",
+        "name": "Safe Passage",
+        "oracle_text": "Prevent all damage that would be dealt to you and creatures you control this turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/30/safe-passage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10462,
+        "iid": 8169,
+        "name": "Safe Passage",
+        "handler": "manalinkeh_card_safe_passage",
+        "kind": "card"
+      }
+    },
+    "Sol Ring": {
+      "oracle": {
+        "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+        "name": "Sol Ring",
+        "oracle_text": "{T}: Add {C}{C}.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+      },
+      "registry": {
+        "csvid": 230,
+        "iid": 8968,
+        "name": "Sol Ring",
+        "handler": "manalinkeh_card_sol_ring",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Wall of Tanglecord": {
+      "oracle": {
+        "oracle_id": "423bebcc-8fa0-49c4-aa22-728bf51a535b",
+        "name": "Wall of Tanglecord",
+        "oracle_text": "Defender\n{G}: This creature gains reach until end of turn. (It can block creatures with flying.)",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Wall",
+        "power": "0",
+        "toughness": "6",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/222/wall-of-tanglecord?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11409,
+        "iid": 10785,
+        "name": "Wall of Tanglecord",
+        "handler": "manalinkeh_card_wall_of_tanglecord",
+        "kind": "card"
+      }
+    }
+  }
+}

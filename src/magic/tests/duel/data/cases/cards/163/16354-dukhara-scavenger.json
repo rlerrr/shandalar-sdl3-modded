@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Dukhara Scavenger",
+  "csvid": 16354,
+  "recipes": [
+    {
+      "family": "entry_rider_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 16354,
+        "cost": [
+          5,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, you may put target artifact or creature card from your graveyard on top of your library.",
+      "variants": [
+        "artifact_0",
+        "artifact_1",
+        "creature_0",
+        "creature_1",
+        "decline_0",
+        "decline_1",
+        "wrong_grave_0",
+        "wrong_grave_1"
+      ]
+    }
+  ]
+}

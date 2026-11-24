@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Sepulchral Primordial",
+  "csvid": 13048,
+  "recipes": [
+    {
+      "family": "entry_reanimate_rewards",
+      "version": 2,
+      "params": {
+        "model": "primordial",
+        "cost": [
+          5,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "from_opponent": true,
+        "choice_for_opponent": false,
+        "optional": true,
+        "maximum_mana_value": null
+      },
+      "oracle_text": "Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)\nWhen this creature enters, for each opponent, you may put up to one target creature card from that player's graveyard onto the battlefield under your control.",
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "empty_0",
+        "wrong_side_0",
+        "wrong_type_0",
+        "shroud_0",
+        "underpaid_0",
+        "countered_0",
+        "replay_0",
+        "decline_0",
+        "intimidate_ground_0",
+        "intimidate_black_0",
+        "intimidate_artifact_0",
+        "effect_1",
+        "alternate_1",
+        "empty_1",
+        "wrong_side_1",
+        "wrong_type_1",
+        "shroud_1",
+        "underpaid_1",
+        "countered_1",
+        "replay_1",
+        "decline_1",
+        "intimidate_ground_1",
+        "intimidate_black_1",
+        "intimidate_artifact_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Magma Giant",
+  "csvid": 3656,
+  "recipes": [
+    {
+      "family": "entry_trigger_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 3656,
+        "cost": "{5}{R}{R}",
+        "choices": [
+          "scope_0",
+          "scope_1",
+          "both_players_0",
+          "both_players_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, it deals 2 damage to each creature and each player.",
+      "variants": [
+        "scope_0",
+        "scope_1",
+        "both_players_0",
+        "both_players_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Gurmag Drowner",
+  "csvid": 14929,
+  "recipes": [
+    {
+      "family": "exploit_entry_effects",
+      "version": 2,
+      "params": {
+        "reward": "top_four",
+        "mana": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "keywords": [],
+        "power": 2,
+        "toughness": 4
+      },
+      "oracle_text": "Exploit (When this creature enters, you may sacrifice a creature.)\nWhen this creature exploits a creature, look at the top four cards of your library. Put one of them into your hand and the rest into your graveyard.",
+      "variants": [
+        "other_0",
+        "self_0",
+        "countered_0",
+        "wrong_color_0",
+        "snapshot_0",
+        "short_library_0",
+        "empty_library_0",
+        "other_1",
+        "self_1",
+        "countered_1",
+        "wrong_color_1",
+        "snapshot_1",
+        "short_library_1",
+        "empty_library_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

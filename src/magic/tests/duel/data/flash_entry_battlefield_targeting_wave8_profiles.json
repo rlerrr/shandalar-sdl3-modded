@@ -1,0 +1,462 @@
+{
+  "sources": {
+    "Deputy of Acquittals": {
+      "oracle": {
+        "oracle_id": "3cbb5045-8566-4279-b7d3-3e599b11ccc5",
+        "name": "Deputy of Acquittals",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, you may return another target creature you control to its owner's hand.",
+        "mana_cost": "{W}{U}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/177/deputy-of-acquittals?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13141,
+        "iid": 2446,
+        "name": "Deputy of Acquittals",
+        "handler": "manalinkeh_card_deputy_of_acquittals",
+        "kind": "card"
+      }
+    },
+    "Restoration Angel": {
+      "oracle": {
+        "oracle_id": "dfbd3afc-9905-4cff-a4f4-df08a4d0a7fa",
+        "name": "Restoration Angel",
+        "oracle_text": "Flash\nFlying\nWhen this creature enters, you may exile target non-Angel creature you control, then return that card to the battlefield under your control.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Angel",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Flash"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/38/restoration-angel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12448,
+        "iid": 7869,
+        "name": "Restoration Angel",
+        "handler": "manalinkeh_card_restoration_angel",
+        "kind": "card"
+      }
+    },
+    "Vedalken Aethermage": {
+      "oracle": {
+        "oracle_id": "271b37b6-b60b-4687-bd82-ecacf3b66cb3",
+        "name": "Vedalken Aethermage",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, return target Sliver to its owner's hand.\nWizardcycling {3} ({3}, Discard this card: Search your library for a Wizard card, reveal it, put it into your hand, then shuffle.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Vedalken Wizard",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Wizardcycling",
+          "Typecycling",
+          "Flash",
+          "Cycling"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fut/61/vedalken-aethermage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9046,
+        "iid": 10489,
+        "name": "Vedalken Aethermage",
+        "handler": "manalinkeh_card_vedalken_aethermage",
+        "kind": "card"
+      }
+    },
+    "Jeskai Barricade": {
+      "oracle": {
+        "oracle_id": "7a2fa0a6-1324-4714-8896-6bb97640578a",
+        "name": "Jeskai Barricade",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nDefender\nWhen this creature enters, you may return another target creature you control to its owner's hand.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "4",
+        "keywords": [
+          "Flash",
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frf/15/jeskai-barricade?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14573,
+        "iid": 11309,
+        "name": "Jeskai Barricade",
+        "handler": "manalinkeh_card_jeskai_barricade",
+        "kind": "card"
+      }
+    },
+    "Vizier of Deferment": {
+      "oracle": {
+        "oracle_id": "008d5896-6fc9-4aaa-8c6f-a44c2feb98bb",
+        "name": "Vizier of Deferment",
+        "oracle_text": "Flash\nWhen this creature enters, you may exile target creature if it attacked or blocked this turn. Return that card to the battlefield under its owner's control at the beginning of the next end step.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/akh/37/vizier-of-deferment?utm_source=api"
+      },
+      "registry": {
+        "csvid": 17059,
+        "iid": 17153,
+        "name": "Vizier of Deferment",
+        "handler": "manalinkeh_card_vizier_of_deferment",
+        "kind": "card"
+      }
+    },
+    "Merfolk Trickster": {
+      "oracle": {
+        "oracle_id": "f712aed5-d6e0-45d3-ae20-518b765ce9da",
+        "name": "Merfolk Trickster",
+        "oracle_text": "Flash\nWhen this creature enters, tap target creature an opponent controls. It loses all abilities until end of turn.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Creature — Merfolk Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dom/56/merfolk-trickster?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18464,
+        "iid": 18571,
+        "name": "Merfolk Trickster",
+        "handler": "manalinkeh_card_merfolk_trickster",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Elvish Mystic": {
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13284,
+        "iid": 2982,
+        "name": "Elvish Mystic",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Goblin Balloon Brigade": {
+      "oracle": {
+        "oracle_id": "10bc98b0-3fdc-46d1-8d3b-6d160e9dd62f",
+        "name": "Goblin Balloon Brigade",
+        "oracle_text": "{R}: This creature gains flying until end of turn.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cn2/159/goblin-balloon-brigade?utm_source=api"
+      },
+      "registry": {
+        "csvid": 101,
+        "iid": 3980,
+        "name": "Goblin Balloon Brigade",
+        "handler": "manalinkeh_card_goblin_balloon_brigade",
+        "kind": "card"
+      }
+    },
+    "Icy Manipulator": {
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 119,
+        "iid": 4775,
+        "name": "Icy Manipulator",
+        "handler": "manalinkeh_card_icy_manipulator",
+        "kind": "card"
+      }
+    },
+    "Lone Missionary": {
+      "oracle": {
+        "oracle_id": "626f1dc3-3b14-4873-902f-ffec5487a97d",
+        "name": "Lone Missionary",
+        "oracle_text": "When this creature enters, you gain 4 life.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Kor Monk",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm3/14/lone-missionary?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10984,
+        "iid": 5675,
+        "name": "Lone Missionary",
+        "handler": "manalinkeh_card_lone_missionary",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Serra Angel": {
+      "oracle": {
+        "oracle_id": "4b7ac066-e5c7-43e6-9e7e-2739b24a905d",
+        "name": "Serra Angel",
+        "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/740/serra-angel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 221,
+        "iid": 8519,
+        "name": "Serra Angel",
+        "handler": "manalinkeh_card_serra_angel",
+        "kind": "card"
+      }
+    },
+    "Traveler's Amulet": {
+      "oracle": {
+        "oracle_id": "48b561dd-f23d-409a-87c8-e49902b2477b",
+        "name": "Traveler's Amulet",
+        "oracle_text": "{1}, Sacrifice this artifact: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/273/travelers-amulet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12102,
+        "iid": 10166,
+        "name": "Traveler's Amulet",
+        "handler": "manalinkeh_card_travelers_amulet",
+        "kind": "card"
+      }
+    },
+    "Venom Sliver": {
+      "oracle": {
+        "oracle_id": "ffe05d4b-0ec9-4319-bb11-1366dc091224",
+        "name": "Venom Sliver",
+        "oracle_text": "Sliver creatures you control have deathtouch. (Any amount of damage a creature with deathtouch deals to a creature is enough to destroy it.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Sliver",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/914/venom-sliver?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14195,
+        "iid": 10527,
+        "name": "Venom Sliver",
+        "handler": "manalinkeh_card_venom_sliver",
+        "kind": "card"
+      }
+    },
+    "Wall of Roots": {
+      "oracle": {
+        "oracle_id": "3a21a6ae-b2f2-4f0c-acfd-5f3e8d63fd2f",
+        "name": "Wall of Roots",
+        "oracle_text": "Defender\nPut a -0/-1 counter on this creature: Add {G}. Activate only once each turn.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Plant Wall",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/278/wall-of-roots?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2656,
+        "iid": 10778,
+        "name": "Wall of Roots",
+        "handler": "manalinkeh_card_wall_of_roots",
+        "kind": "card"
+      }
+    }
+  }
+}

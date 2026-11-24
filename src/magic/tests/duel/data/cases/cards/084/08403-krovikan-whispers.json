@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Krovikan Whispers",
+  "csvid": 8403,
+  "recipes": [
+    {
+      "family": "cumulative_upkeep_alternative_and_snow",
+      "version": 2,
+      "params": {
+        "csvid": 8403,
+        "fee": "{U} or {B}",
+        "price": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "clauses": [
+          "Enchant creature",
+          "Cumulative upkeep {U} or {B} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)",
+          "You control enchanted creature.",
+          "When this Aura is put into a graveyard from the battlefield, you lose 2 life for each age counter on it."
+        ]
+      },
+      "oracle_text": "Enchant creature\nCumulative upkeep {U} or {B} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nYou control enchanted creature.\nWhen this Aura is put into a graveyard from the battlefield, you lose 2 life for each age counter on it.",
+      "variants": [
+        "first_color_0",
+        "first_color_1",
+        "second_color_0",
+        "second_color_1",
+        "mixed_0",
+        "mixed_1",
+        "unpayable_0",
+        "unpayable_1",
+        "decline_after_one_0",
+        "decline_after_one_1",
+        "destroy_age_two_0",
+        "destroy_age_two_1"
+      ]
+    }
+  ]
+}

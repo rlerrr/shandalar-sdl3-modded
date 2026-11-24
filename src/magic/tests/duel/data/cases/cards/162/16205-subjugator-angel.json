@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Subjugator Angel",
+  "csvid": 16205,
+  "recipes": [
+    {
+      "family": "entry_trigger_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 16205,
+        "cost": "{4}{W}{W}",
+        "choices": [
+          "scope_0",
+          "scope_1",
+          "ground_block_0",
+          "ground_block_1",
+          "flying_block_0",
+          "flying_block_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, tap all creatures your opponents control.",
+      "variants": [
+        "scope_0",
+        "scope_1",
+        "ground_block_0",
+        "ground_block_1",
+        "flying_block_0",
+        "flying_block_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

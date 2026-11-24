@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Zoetic Cavern",
+  "csvid": 9056,
+  "recipes": [
+    {
+      "family": "morph_special_condition_riders",
+      "version": 2,
+      "oracle_text": "{T}: Add {C}.\nMorph {2} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+      "params": {
+        "effect": "add_mana",
+        "keywords": [],
+        "cast_mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "flip_mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ability_mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 0,
+        "toughness": 0
+      },
+      "variants": [
+        "printed_effect_0",
+        "hidden_0",
+        "flip_0",
+        "flip_short_0",
+        "hidden_denied_0",
+        "replay_0",
+        "land_limit_0",
+        "mana_spend_0",
+        "offturn_flip_0",
+        "printed_effect_1",
+        "hidden_1",
+        "flip_1",
+        "flip_short_1",
+        "hidden_denied_1",
+        "replay_1",
+        "land_limit_1",
+        "mana_spend_1",
+        "offturn_flip_1"
+      ]
+    }
+  ]
+}

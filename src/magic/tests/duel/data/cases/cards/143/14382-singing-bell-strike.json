@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Singing Bell Strike",
+  "csvid": 14382,
+  "recipes": [
+    {
+      "family": "remaining_entry_combat",
+      "version": 2,
+      "params": {
+        "csvid": 14382,
+        "cost": "{1}{U}",
+        "choices": [
+          "lock_0",
+          "lock_1",
+          "leaves_0",
+          "leaves_1",
+          "pay_0",
+          "pay_1",
+          "short_0",
+          "short_1"
+        ]
+      },
+      "oracle_text": "Enchant creature\nWhen this Aura enters, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step.\nEnchanted creature has \"{6}: Untap this creature.\"",
+      "variants": [
+        "lock_0",
+        "lock_1",
+        "leaves_0",
+        "leaves_1",
+        "pay_0",
+        "pay_1",
+        "short_0",
+        "short_1"
+      ]
+    }
+  ]
+}

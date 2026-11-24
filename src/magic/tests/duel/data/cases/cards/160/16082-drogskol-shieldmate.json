@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Drogskol Shieldmate",
+  "csvid": 16082,
+  "recipes": [
+    {
+      "family": "flash_entry_tribal_and_team",
+      "version": 2,
+      "params": {
+        "csvid": 16082,
+        "cost": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Flash\nWhen this creature enters, other creatures you control get +0/+1 until end of turn.",
+      "variants": [
+        "team_0",
+        "team_1",
+        "combat_save_0",
+        "combat_save_1",
+        "only_source_0",
+        "only_source_1"
+      ]
+    }
+  ]
+}

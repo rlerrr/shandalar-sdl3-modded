@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Thraben Inspector",
+  "csvid": 15990,
+  "recipes": [
+    {
+      "family": "entry_trigger_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 15990,
+        "printed_mana": "{W}",
+        "rules": "When this creature enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")"
+      },
+      "oracle_text": "When this creature enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+      "variants": [
+        "entry_clue_0",
+        "entry_clue_1",
+        "cash_clue_0",
+        "cash_clue_1",
+        "short_clue_0",
+        "short_clue_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

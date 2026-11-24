@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Dinrova Horror",
+  "csvid": 12928,
+  "recipes": [
+    {
+      "family": "entry_trigger_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 12928,
+        "cost": [
+          4,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, return target permanent to its owner's hand, then that player discards a card.",
+      "variants": [
+        "land_0",
+        "land_1",
+        "artifact_0",
+        "artifact_1",
+        "borrowed_0",
+        "borrowed_1",
+        "own_target_0",
+        "own_target_1",
+        "same_name_hand_0",
+        "same_name_hand_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

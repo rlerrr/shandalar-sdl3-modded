@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Vampire Warlord",
+  "csvid": 13355,
+  "recipes": [
+    {
+      "family": "regeneration_costs_and_zones",
+      "version": 2,
+      "params": {
+        "csvid": 13355,
+        "cost": [
+          4,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Sacrifice another creature: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "denied_cost_0",
+        "denied_cost_1",
+        "declined_0",
+        "declined_1",
+        "cannot_regenerate_0",
+        "cannot_regenerate_1",
+        "proactive_0",
+        "proactive_1",
+        "damage_0",
+        "damage_1",
+        "combat_0",
+        "combat_1"
+      ]
+    }
+  ]
+}

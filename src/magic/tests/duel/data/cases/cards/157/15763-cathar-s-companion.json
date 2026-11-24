@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Cathar's Companion",
+  "csvid": 15763,
+  "recipes": [
+    {
+      "family": "cast_noncreature_riders",
+      "version": 2,
+      "params": {
+        "role": "cathar",
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Whenever you cast a noncreature spell, this creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)",
+      "variants": [
+        "own_0",
+        "creature_0",
+        "opponent_0",
+        "countered_0",
+        "survives_0",
+        "expired_0",
+        "no_reward_0",
+        "replay_0",
+        "own_1",
+        "creature_1",
+        "opponent_1",
+        "countered_1",
+        "survives_1",
+        "expired_1",
+        "no_reward_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

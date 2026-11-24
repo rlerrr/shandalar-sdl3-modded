@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Convalescence",
+  "csvid": 3472,
+  "recipes": [
+    {
+      "family": "upkeep_damage_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 3472
+      },
+      "oracle_text": "At the beginning of your upkeep, if you have 10 or less life, you gain 1 life.",
+      "variants": [
+        "nine_0",
+        "nine_1",
+        "ten_0",
+        "ten_1",
+        "eleven_0",
+        "eleven_1",
+        "cross_threshold_0",
+        "cross_threshold_1"
+      ]
+    }
+  ]
+}

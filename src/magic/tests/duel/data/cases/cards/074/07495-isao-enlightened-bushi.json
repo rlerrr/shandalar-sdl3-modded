@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "csvid": 7495,
+  "card": "Isao, Enlightened Bushi",
+  "recipes": [
+    {
+      "family": "regeneration_targeted_abilities",
+      "version": 2,
+      "params": {
+        "csvid": 7495,
+        "mana": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "activation": "{2}",
+        "tap": false,
+        "stats": [
+          2,
+          1
+        ]
+      },
+      "oracle_text": "This spell can't be countered.\nBushido 2 (Whenever this creature blocks or becomes blocked, it gets +2/+2 until end of turn.)\n{2}: Regenerate target Samurai.",
+      "variants": [
+        "self_0",
+        "self_1",
+        "foreign_0",
+        "foreign_1",
+        "wrong_type_0",
+        "wrong_type_1",
+        "short_0",
+        "short_1",
+        "proactive_0",
+        "proactive_1",
+        "uncounterable_0",
+        "uncounterable_1",
+        "bushido_0",
+        "bushido_1"
+      ]
+    }
+  ]
+}

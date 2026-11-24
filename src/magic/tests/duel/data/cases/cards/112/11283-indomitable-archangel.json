@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "csvid": 11283,
+  "card": "Indomitable Archangel",
+  "recipes": [
+    {
+      "family": "metalcraft_artifact",
+      "version": 2,
+      "params": {
+        "effect": "shroud",
+        "flying": true,
+        "artifact": false,
+        "cast_mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "power": 4,
+        "toughness": 4
+      },
+      "oracle_text": "Flying\nMetalcraft — Artifacts you control have shroud as long as you control three or more artifacts. (An artifact with shroud can't be the target of spells or abilities.)",
+      "variants": [
+        "cast_below_0",
+        "cast_threshold_0",
+        "unfunded_0",
+        "enemy_scope_0",
+        "gain_0",
+        "drop_0",
+        "scope_0",
+        "source_removed_0",
+        "noncreature_0",
+        "replay_0",
+        "wrong_color_0",
+        "flying_ground_0",
+        "flying_reach_0",
+        "cast_below_1",
+        "cast_threshold_1",
+        "unfunded_1",
+        "enemy_scope_1",
+        "gain_1",
+        "drop_1",
+        "scope_1",
+        "source_removed_1",
+        "noncreature_1",
+        "replay_1",
+        "wrong_color_1",
+        "flying_ground_1",
+        "flying_reach_1"
+      ]
+    }
+  ]
+}

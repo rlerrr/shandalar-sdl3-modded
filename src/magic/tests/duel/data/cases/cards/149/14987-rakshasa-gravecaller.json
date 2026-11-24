@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Rakshasa Gravecaller",
+  "csvid": 14987,
+  "recipes": [
+    {
+      "family": "exploit_entry_effects",
+      "version": 2,
+      "params": {
+        "reward": "zombies",
+        "mana": [
+          4,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": [],
+        "power": 3,
+        "toughness": 6
+      },
+      "oracle_text": "Exploit (When this creature enters, you may sacrifice a creature.)\nWhen this creature exploits a creature, create two 2/2 black Zombie creature tokens.",
+      "variants": [
+        "other_0",
+        "self_0",
+        "countered_0",
+        "wrong_color_0",
+        "snapshot_0",
+        "attack_with_tokens_0",
+        "other_1",
+        "self_1",
+        "countered_1",
+        "wrong_color_1",
+        "snapshot_1",
+        "attack_with_tokens_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

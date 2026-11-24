@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "csvid": 18280,
+  "card": "Sanguine Glorifier",
+  "recipes": [
+    {
+      "family": "remaining_entry_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 18280,
+        "printed_cost": "{3}{W}"
+      },
+      "oracle_text": "When this creature enters, put a +1/+1 counter on another target Vampire you control.",
+      "variants": [
+        "scope_0",
+        "unmatched_0",
+        "countered_0",
+        "scope_1",
+        "unmatched_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

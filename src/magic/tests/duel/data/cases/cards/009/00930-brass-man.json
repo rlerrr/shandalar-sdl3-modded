@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 930,
+  "card": "Brass Man",
+  "recipes": [
+    {
+      "family": "upkeep_payment_and_sacrifice",
+      "version": 2,
+      "params": {
+        "csvid": 930,
+        "printed_cost": "{1}",
+        "keywords": []
+      },
+      "oracle_text": "This creature doesn't untap during your untap step.\nAt the beginning of your upkeep, you may pay {1}. If you do, untap this creature.",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "short_0",
+        "short_1",
+        "ready_0",
+        "ready_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

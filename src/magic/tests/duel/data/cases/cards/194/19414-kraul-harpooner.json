@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "csvid": 19414,
+  "card": "Kraul Harpooner",
+  "recipes": [
+    {
+      "family": "fight_entry_fighters",
+      "version": 2,
+      "params": {
+        "csvid": 19414,
+        "mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "stats": [
+          3,
+          2
+        ]
+      },
+      "oracle_text": "Reach\nUndergrowth — When this creature enters, choose up to one target creature you don't control with flying. This creature gets +X/+0 until end of turn, where X is the number of creature cards in your graveyard, then you may have this creature fight that creature.",
+      "variants": [
+        "undergrowth_lethal_0",
+        "undergrowth_lethal_1",
+        "normal_fight_0",
+        "normal_fight_1",
+        "zero_targets_0",
+        "zero_targets_1",
+        "no_eligible_0",
+        "no_eligible_1",
+        "foe_grave_only_0",
+        "foe_grave_only_1",
+        "reach_0",
+        "reach_1"
+      ]
+    }
+  ]
+}

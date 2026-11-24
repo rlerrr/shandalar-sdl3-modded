@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "csvid": 15203,
+  "card": "Ramroller",
+  "recipes": [
+    {
+      "family": "required_attack_combat_riders",
+      "version": 2,
+      "oracle_text": "This creature attacks each combat if able.\nThis creature gets +2/+0 as long as you control another artifact.",
+      "params": {
+        "mode": "ramroller",
+        "costs": {
+          "printed": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "power": 2,
+        "toughness": 3,
+        "keywords": []
+      },
+      "variants": [
+        "omitted_0",
+        "omitted_1",
+        "tapped_0",
+        "tapped_1",
+        "sick_0",
+        "sick_1",
+        "pacified_0",
+        "pacified_1",
+        "opponent_turn_0",
+        "opponent_turn_1",
+        "competing_selected_0",
+        "competing_selected_1",
+        "two_required_0",
+        "two_required_1",
+        "paid_fresh_0",
+        "paid_fresh_1",
+        "paid_next_turn_0",
+        "paid_next_turn_1",
+        "unfunded_0",
+        "unfunded_1",
+        "proposed_replay_0",
+        "proposed_replay_1",
+        "own_artifacts_0",
+        "own_artifacts_1",
+        "opponent_artifacts_0",
+        "opponent_artifacts_1",
+        "other_zones_0",
+        "other_zones_1",
+        "gain_artifact_0",
+        "gain_artifact_1",
+        "lose_artifact_0",
+        "lose_artifact_1"
+      ]
+    }
+  ]
+}

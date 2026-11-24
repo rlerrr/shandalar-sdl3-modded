@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 14901,
+  "card": "Dromoka Captain",
+  "recipes": [
+    {
+      "family": "attack_trigger_stat_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 14901,
+        "printed_cost": "{2}{W}"
+      },
+      "oracle_text": "First strike\nWhenever this creature attacks, bolster 1. (Choose a creature with the least toughness among creatures you control and put a +1/+1 counter on it.)",
+      "variants": [
+        "solo_bolster_0",
+        "tied_ally_0",
+        "tied_shroud_0",
+        "first_strike_0",
+        "solo_bolster_1",
+        "tied_ally_1",
+        "tied_shroud_1",
+        "first_strike_1"
+      ]
+    }
+  ]
+}

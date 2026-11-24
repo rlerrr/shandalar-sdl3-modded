@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Ghitu Slinger",
+  "csvid": 4000,
+  "recipes": [
+    {
+      "family": "entry_trigger_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 4000,
+        "cost": "{2}{R}",
+        "choices": [
+          "kill_0",
+          "kill_1",
+          "mark_0",
+          "mark_1",
+          "player_0",
+          "player_1",
+          "planeswalker_0",
+          "planeswalker_1",
+          "self_0",
+          "self_1",
+          "echo_pay_0",
+          "echo_pay_1",
+          "echo_decline_0",
+          "echo_decline_1",
+          "echo_short_0",
+          "echo_short_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "Echo {2}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters, it deals 2 damage to any target.",
+      "variants": [
+        "kill_0",
+        "kill_1",
+        "mark_0",
+        "mark_1",
+        "player_0",
+        "player_1",
+        "planeswalker_0",
+        "planeswalker_1",
+        "self_0",
+        "self_1",
+        "echo_pay_0",
+        "echo_pay_1",
+        "echo_decline_0",
+        "echo_decline_1",
+        "echo_short_0",
+        "echo_short_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

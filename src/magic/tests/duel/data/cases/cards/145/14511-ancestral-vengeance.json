@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Ancestral Vengeance",
+  "csvid": 14511,
+  "recipes": [
+    {
+      "family": "remaining_entry_combat",
+      "version": 2,
+      "params": {
+        "csvid": 14511,
+        "cost": "{B}{B}",
+        "choices": [
+          "opponent_host_0",
+          "opponent_host_1",
+          "self_host_0",
+          "self_host_1",
+          "leaves_0",
+          "leaves_1"
+        ]
+      },
+      "oracle_text": "Enchant creature\nWhen this Aura enters, put a +1/+1 counter on target creature you control.\nEnchanted creature gets -1/-1.",
+      "variants": [
+        "opponent_host_0",
+        "opponent_host_1",
+        "self_host_0",
+        "self_host_1",
+        "leaves_0",
+        "leaves_1"
+      ]
+    }
+  ]
+}

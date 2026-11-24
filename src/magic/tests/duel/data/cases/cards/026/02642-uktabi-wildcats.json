@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Uktabi Wildcats",
+  "csvid": 2642,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_sacrifice_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 2642,
+        "cost": [
+          4,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Uktabi Wildcats's power and toughness are each equal to the number of Forests you control.\n{G}, Sacrifice a Forest: Regenerate this creature.",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "denied_cost_0",
+        "denied_cost_1",
+        "proactive_0",
+        "proactive_1",
+        "cannot_regenerate_0",
+        "cannot_regenerate_1",
+        "typed_forest_0",
+        "typed_forest_1",
+        "last_forest_0",
+        "last_forest_1",
+        "forest_growth_0",
+        "forest_growth_1"
+      ]
+    }
+  ]
+}

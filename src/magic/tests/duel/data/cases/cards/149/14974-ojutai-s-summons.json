@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Ojutai's Summons",
+  "csvid": 14974,
+  "recipes": [
+    {
+      "family": "untargeted_rebound",
+      "version": 2,
+      "params": {
+        "mana": [
+          3,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "keywords": [],
+        "mode": "tokens",
+        "token": {
+          "name": "Djinn Monk",
+          "power": 2,
+          "toughness": 2,
+          "color": 4,
+          "subtypes": [
+            "Djinn",
+            "Monk"
+          ],
+          "flying": true,
+          "amount": "one"
+        }
+      },
+      "oracle_text": "Create a 2/2 blue Djinn Monk creature token with flying.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
+      "variants": [
+        "scheduled_0",
+        "countered_0",
+        "snapshot_0",
+        "wrong_color_0",
+        "subtypes_0",
+        "flying_0",
+        "reach_0",
+        "scheduled_1",
+        "countered_1",
+        "snapshot_1",
+        "wrong_color_1",
+        "subtypes_1",
+        "flying_1",
+        "reach_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

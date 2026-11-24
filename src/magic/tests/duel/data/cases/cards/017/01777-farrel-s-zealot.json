@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Farrel's Zealot",
+  "csvid": 1777,
+  "recipes": [
+    {
+      "family": "attack_follow_on_unblocked_modes",
+      "version": 2,
+      "params": {
+        "csvid": 1777,
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks and isn't blocked, you may have it deal 3 damage to target creature. If you do, this creature assigns no combat damage this turn.",
+      "variants": [
+        "kill_0",
+        "kill_1",
+        "own_0",
+        "own_1",
+        "nonlethal_0",
+        "nonlethal_1",
+        "decline_0",
+        "decline_1",
+        "blocked_0",
+        "blocked_1",
+        "other_attacks_0",
+        "other_attacks_1"
+      ]
+    }
+  ]
+}

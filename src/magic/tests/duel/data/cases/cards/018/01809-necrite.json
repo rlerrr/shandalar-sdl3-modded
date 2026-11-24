@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 1809,
+  "card": "Necrite",
+  "recipes": [
+    {
+      "family": "attack_follow_on_sabotage_and_poison",
+      "version": 2,
+      "params": {
+        "csvid": 1809,
+        "printed_cost": "{1}{B}{B}",
+        "keywords": []
+      },
+      "oracle_text": "Whenever this creature attacks and isn't blocked, you may sacrifice it. If you do, destroy target creature defending player controls. It can't be regenerated.",
+      "variants": [
+        "sacrifice_0",
+        "decline_0",
+        "blocked_0",
+        "cannot_regenerate_0",
+        "indestructible_0",
+        "sacrifice_1",
+        "decline_1",
+        "blocked_1",
+        "cannot_regenerate_1",
+        "indestructible_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "card": "Boros Locket",
+  "csvid": 19299,
+  "recipes": [
+    {
+      "family": "guild_locket",
+      "version": 2,
+      "oracle_text": "{T}: Add {R} or {W}.\n{R/W}{R/W}{R/W}{R/W}, {T}, Sacrifice this artifact: Draw two cards.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "colors": [
+            "R",
+            "W"
+          ],
+          "quantity": 4,
+          "cards_drawn": 2,
+          "cast_mana": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "clauses": [
+            "{T}: Add {R} or {W}.",
+            "{R/W}{R/W}{R/W}{R/W}, {T}, Sacrifice this artifact: Draw two cards."
+          ]
+        }
+      },
+      "variants": [
+        "mana_first_0",
+        "mana_second_0",
+        "entry_mana_0",
+        "mana_replay_0",
+        "wrong_mana_output_0",
+        "spent_source_denied_0",
+        "tapped_denied_0",
+        "cast_insufficient_0",
+        "cast_countered_0",
+        "draw_reserve_0",
+        "draw_ready_replay_0",
+        "draw_pending_replay_0",
+        "draw_4_0_0",
+        "draw_3_1_0",
+        "draw_2_2_0",
+        "draw_1_3_0",
+        "draw_0_4_0",
+        "draw_no_mana_0",
+        "draw_one_short_0",
+        "draw_wrong_color_0",
+        "mana_first_1",
+        "mana_second_1",
+        "entry_mana_1",
+        "mana_replay_1",
+        "wrong_mana_output_1",
+        "spent_source_denied_1",
+        "tapped_denied_1",
+        "cast_insufficient_1",
+        "cast_countered_1",
+        "draw_reserve_1",
+        "draw_ready_replay_1",
+        "draw_pending_replay_1",
+        "draw_4_0_1",
+        "draw_3_1_1",
+        "draw_2_2_1",
+        "draw_1_3_1",
+        "draw_0_4_1",
+        "draw_no_mana_1",
+        "draw_one_short_1",
+        "draw_wrong_color_1",
+        "take_mana_with_draw_0"
+      ]
+    }
+  ]
+}

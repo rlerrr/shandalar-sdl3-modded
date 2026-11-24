@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Fanatic of Mogis",
+  "csvid": 13437,
+  "recipes": [
+    {
+      "family": "entry_trigger_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 13437,
+        "cost": "{3}{R}",
+        "choices": [
+          "self_only_0",
+          "self_only_1",
+          "own_symbols_0",
+          "own_symbols_1",
+          "hybrid_0",
+          "hybrid_1",
+          "support_lost_0",
+          "support_lost_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, it deals damage to each opponent equal to your devotion to red. (Each {R} in the mana costs of permanents you control counts toward your devotion to red.)",
+      "variants": [
+        "self_only_0",
+        "self_only_1",
+        "own_symbols_0",
+        "own_symbols_1",
+        "hybrid_0",
+        "hybrid_1",
+        "support_lost_0",
+        "support_lost_1"
+      ]
+    }
+  ]
+}

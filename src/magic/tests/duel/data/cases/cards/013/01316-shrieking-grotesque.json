@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Shrieking Grotesque",
+  "csvid": 1316,
+  "recipes": [
+    {
+      "family": "remaining_entry_library_and_hand",
+      "version": 2,
+      "params": {
+        "csvid": 1316,
+        "printed_mana": "{2}{W}",
+        "rules": "Flying\nWhen this creature enters, if {B} was spent to cast it, target player discards a card."
+      },
+      "oracle_text": "Flying\nWhen this creature enters, if {B} was spent to cast it, target player discards a card.",
+      "variants": [
+        "black_paid_0",
+        "black_paid_1",
+        "nonblack_flying_0",
+        "nonblack_flying_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Siren of the Fanged Coast",
+  "csvid": 13805,
+  "recipes": [
+    {
+      "family": "entry_rider_control",
+      "version": 2,
+      "params": {
+        "csvid": 13805,
+        "mana": [
+          3,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flying\nTribute 3 (As this creature enters, an opponent of your choice may put three +1/+1 counters on it.)\nWhen this creature enters, if tribute wasn't paid, gain control of target creature.",
+      "variants": [
+        "tribute_paid_0",
+        "tribute_paid_1",
+        "tribute_declined_0",
+        "tribute_declined_1",
+        "permanent_0",
+        "permanent_1"
+      ]
+    }
+  ]
+}

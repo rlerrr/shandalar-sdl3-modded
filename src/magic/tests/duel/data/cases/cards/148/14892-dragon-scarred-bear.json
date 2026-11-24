@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Dragon-Scarred Bear",
+  "csvid": 14892,
+  "recipes": [
+    {
+      "family": "regeneration_conditional",
+      "version": 2,
+      "params": {
+        "csvid": 14892,
+        "printed_mana": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "rules": "Formidable — {1}{G}: Regenerate this creature. Activate only if creatures you control have total power 8 or greater."
+      },
+      "oracle_text": "Formidable — {1}{G}: Regenerate this creature. Activate only if creatures you control have total power 8 or greater.",
+      "variants": [
+        "exact_eight_0",
+        "exact_eight_1",
+        "tapped_power_0",
+        "tapped_power_1",
+        "under_eight_0",
+        "under_eight_1",
+        "wrong_mana_0",
+        "wrong_mana_1"
+      ]
+    }
+  ]
+}

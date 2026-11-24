@@ -1,0 +1,499 @@
+{
+  "sources": {
+    "Goblin Bomb": {
+      "oracle": {
+        "oracle_id": "061e2ef6-ce8d-4319-b525-96b9c2824001",
+        "name": "Goblin Bomb",
+        "oracle_text": "At the beginning of your upkeep, you may flip a coin. If you win the flip, put a fuse counter on this enchantment. If you lose the flip, remove a fuse counter from this enchantment.\nRemove five fuse counters from this enchantment and sacrifice it: It deals 20 damage to target player or planeswalker.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/103/goblin-bomb?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2983,
+        "iid": 3983,
+        "name": "Goblin Bomb",
+        "handler": "manalinkeh_card_goblin_bomb",
+        "kind": "card"
+      }
+    },
+    "Goblin Kaboomist": {
+      "oracle": {
+        "oracle_id": "5209e1da-aeed-45b3-9640-c2db121d6612",
+        "name": "Goblin Kaboomist",
+        "oracle_text": "At the beginning of your upkeep, create a colorless artifact token named Land Mine with \"{R}, Sacrifice this token: This token deals 2 damage to target attacking creature without flying.\" Then flip a coin. If you lose the flip, this creature deals 2 damage to itself.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/144/goblin-kaboomist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14108,
+        "iid": 4014,
+        "name": "Goblin Kaboomist",
+        "handler": "manalinkeh_card_goblin_kaboomist",
+        "kind": "card"
+      }
+    },
+    "Mirror March": {
+      "oracle": {
+        "oracle_id": "945eaa8b-0ba5-45a6-a02a-763e5bfe3af8",
+        "name": "Mirror March",
+        "oracle_text": "Whenever a nontoken creature you control enters, flip a coin until you lose a flip. For each flip you won, create a token that's a copy of that creature. Those tokens gain haste. Exile them at the beginning of the next end step.",
+        "mana_cost": "{5}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rna/108/mirror-march?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19678,
+        "iid": 19612,
+        "name": "Mirror March",
+        "handler": "manalinkeh_card_mirror_march",
+        "kind": "card"
+      }
+    },
+    "Rakdos, the Showstopper": {
+      "oracle": {
+        "oracle_id": "03a4b997-4738-41a9-933f-e1f765e3a75a",
+        "name": "Rakdos, the Showstopper",
+        "oracle_text": "Flying, trample\nWhen Rakdos enters, flip a coin for each creature that isn't a Demon, Devil, or Imp. Destroy each creature whose coin comes up tails.",
+        "mana_cost": "{4}{B}{R}",
+        "type_line": "Legendary Creature — Demon",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Flying",
+          "Trample"
+        ],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/205/rakdos-the-showstopper?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19703,
+        "iid": 19637,
+        "name": "Rakdos, the Showstopper",
+        "handler": "manalinkeh_card_rakdos_the_showstopper",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Daggerclaw Imp": {
+      "oracle": {
+        "oracle_id": "689c5a47-24ec-4cbf-bc93-ebb492732cad",
+        "name": "Daggerclaw Imp",
+        "oracle_text": "Flying\nThis creature can't block.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Imp",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/108/daggerclaw-imp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8041,
+        "iid": 12163,
+        "name": "Daggerclaw Imp",
+        "handler": "manalinkeh_card_vampire_interloper",
+        "kind": "card"
+      }
+    },
+    "Darksteel Myr": {
+      "oracle": {
+        "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+        "name": "Darksteel Myr",
+        "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11238,
+        "iid": 2255,
+        "name": "Darksteel Myr",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Elvish Mystic": {
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13284,
+        "iid": 2982,
+        "name": "Elvish Mystic",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Garruk Wildspeaker": {
+      "oracle": {
+        "oracle_id": "186b4def-4fff-4a2b-bcbf-5318b0ac5fa9",
+        "name": "Garruk Wildspeaker",
+        "oracle_text": "+1: Untap two target lands.\n−1: Create a 3/3 green Beast creature token.\n−4: Creatures you control get +3/+3 and gain trample until end of turn.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Legendary Planeswalker — Garruk",
+        "loyalty": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmd/157/garruk-wildspeaker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9148,
+        "iid": 3738,
+        "name": "Garruk Wildspeaker",
+        "handler": "manalinkeh_card_garruk_wildspeaker",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Land Mine": {
+      "oracle": {
+        "oracle_id": "b143de5d-1be5-4f12-a367-9e1d33ac5e05",
+        "name": "Land Mine",
+        "oracle_text": "{R}, Sacrifice this artifact: This artifact deals 2 damage to target attacking creature without flying.",
+        "mana_cost": "",
+        "type_line": "Token Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tm15/12/land-mine?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18781,
+        "iid": 5459,
+        "name": "Land Mine",
+        "handler": "manalinkeh_card_land_mine",
+        "kind": "card"
+      }
+    },
+    "Lord of the Pit": {
+      "oracle": {
+        "oracle_id": "ea152809-85a2-4fde-8251-3b1f267e4443",
+        "name": "Lord of the Pit",
+        "oracle_text": "Flying, trample\nAt the beginning of your upkeep, sacrifice a creature other than this creature. If you can't, this creature deals 7 damage to you.",
+        "mana_cost": "{4}{B}{B}{B}",
+        "type_line": "Creature — Demon",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [
+          "Flying",
+          "Trample"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ima/96/lord-of-the-pit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 151,
+        "iid": 5689,
+        "name": "Lord of the Pit",
+        "handler": "manalinkeh_card_lord_of_the_pit",
+        "kind": "card"
+      }
+    },
+    "Ornithopter": {
+      "oracle": {
+        "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+        "name": "Ornithopter",
+        "oracle_text": "Flying",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Thopter",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 514,
+        "iid": 6907,
+        "name": "Ornithopter",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Raise the Alarm": {
+      "oracle": {
+        "oracle_id": "5b2364d7-a811-4595-a1b4-224c70555ffa",
+        "name": "Raise the Alarm",
+        "oracle_text": "Create two 1/1 white Soldier creature tokens.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/41/raise-the-alarm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1450,
+        "iid": 7615,
+        "name": "Raise the Alarm",
+        "handler": "manalinkeh_card_raise_the_alarm",
+        "kind": "card"
+      }
+    },
+    "Scion of Glaciers": {
+      "oracle": {
+        "oracle_id": "9d49cef5-8f9c-46cd-aa5e-7861fc1dcaa4",
+        "name": "Scion of Glaciers",
+        "oracle_text": "{U}: This creature gets +1/-1 until end of turn.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "2",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/53/scion-of-glaciers?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14370,
+        "iid": 8324,
+        "name": "Scion of Glaciers",
+        "handler": "manalinkeh_card_metropolis_sprite",
+        "kind": "card"
+      }
+    },
+    "Soldier": {
+      "oracle": {
+        "oracle_id": "eac25f12-6459-438c-a09e-93e23d2cf80d",
+        "name": "Soldier",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tfrc/3/soldier?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18822,
+        "iid": 8976,
+        "name": "Soldier",
+        "handler": "manalinkeh_card_rhino_token",
+        "kind": "card"
+      }
+    },
+    "Torch Fiend": {
+      "oracle": {
+        "oracle_id": "15f8049c-f21d-4cd0-aa81-1a533936cf77",
+        "name": "Torch Fiend",
+        "oracle_text": "{R}, Sacrifice this creature: Destroy target artifact.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Devil",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/367/torch-fiend?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12279,
+        "iid": 10083,
+        "name": "Torch Fiend",
+        "handler": "manalinkeh_card_torch_fiend",
+        "kind": "card"
+      }
+    }
+  }
+}

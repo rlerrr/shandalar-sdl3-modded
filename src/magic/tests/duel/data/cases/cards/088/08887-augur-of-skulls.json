@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 8887,
+  "card": "Augur of Skulls",
+  "recipes": [
+    {
+      "family": "regeneration_self_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 8887,
+        "printed_cost": "{1}{B}"
+      },
+      "oracle_text": "{1}{B}: Regenerate this creature.\nSacrifice this creature: Target player discards two cards. Activate only during your upkeep.",
+      "variants": [
+        "regenerate_0",
+        "short_0",
+        "terminate_0",
+        "proactive_0",
+        "discard_foe_0",
+        "discard_self_0",
+        "foe_upkeep_0",
+        "regenerate_1",
+        "short_1",
+        "terminate_1",
+        "proactive_1",
+        "discard_foe_1",
+        "discard_self_1",
+        "foe_upkeep_1"
+      ]
+    }
+  ]
+}

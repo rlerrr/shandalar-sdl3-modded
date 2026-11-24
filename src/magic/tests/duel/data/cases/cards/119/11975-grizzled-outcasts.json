@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "csvid": 11975,
+  "card": "Grizzled Outcasts",
+  "recipes": [
+    {
+      "family": "werewolf_spell_history",
+      "version": 2,
+      "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+      "params": {
+        "price": [
+          4,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "front": {
+          "name": "Grizzled Outcasts",
+          "power": 4,
+          "toughness": 4,
+          "color": 8,
+          "keywords": [],
+          "clauses": [
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Krallenhorde Wantons",
+          "power": 7,
+          "toughness": 7,
+          "color": 8,
+          "keywords": [],
+          "clauses": [
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        }
+      },
+      "variants": [
+        "cast_0",
+        "cast_1",
+        "short_cast_0",
+        "short_cast_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "front_zero_0",
+        "front_zero_1",
+        "front_one_owner_0",
+        "front_one_owner_1",
+        "front_one_foe_0",
+        "front_one_foe_1",
+        "front_two_owner_0",
+        "front_two_owner_1",
+        "front_two_foe_0",
+        "front_two_foe_1",
+        "front_split_0",
+        "front_split_1",
+        "back_zero_0",
+        "back_zero_1",
+        "back_one_owner_0",
+        "back_one_owner_1",
+        "back_one_foe_0",
+        "back_one_foe_1",
+        "back_two_owner_0",
+        "back_two_owner_1",
+        "back_two_foe_0",
+        "back_two_foe_1",
+        "back_split_0",
+        "back_split_1",
+        "front_zero_on_foe_0",
+        "front_zero_on_foe_1",
+        "back_two_on_owner_0",
+        "back_two_on_owner_1",
+        "countered_second_0",
+        "countered_second_1",
+        "unfunded_activity_0",
+        "unfunded_activity_1",
+        "keep_counters_0",
+        "keep_counters_1",
+        "bounce_recast_0",
+        "bounce_recast_1",
+        "front_replay_0",
+        "front_replay_1",
+        "back_replay_0",
+        "back_replay_1"
+      ]
+    }
+  ]
+}

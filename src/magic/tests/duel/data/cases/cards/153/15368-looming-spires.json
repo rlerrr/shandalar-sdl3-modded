@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Looming Spires",
+  "csvid": 15368,
+  "recipes": [
+    {
+      "family": "entry_rider_combat_modifiers",
+      "version": 2,
+      "params": {
+        "csvid": 15368,
+        "cost": "",
+        "choices": [
+          "own_0",
+          "own_1",
+          "foe_0",
+          "foe_1",
+          "expire_0",
+          "expire_1",
+          "no_creatures_0",
+          "no_creatures_1",
+          "mana_0",
+          "mana_1"
+        ]
+      },
+      "oracle_text": "This land enters tapped.\nWhen this land enters, target creature gets +1/+1 and gains first strike until end of turn.\n{T}: Add {R}.",
+      "variants": [
+        "own_0",
+        "own_1",
+        "foe_0",
+        "foe_1",
+        "expire_0",
+        "expire_1",
+        "no_creatures_0",
+        "no_creatures_1",
+        "mana_0",
+        "mana_1"
+      ]
+    }
+  ]
+}

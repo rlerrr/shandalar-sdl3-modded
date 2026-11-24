@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Breaching Leviathan",
+  "csvid": 14445,
+  "recipes": [
+    {
+      "family": "entry_interaction_combat",
+      "version": 2,
+      "params": {
+        "csvid": 14445,
+        "cost": "{7}{U}{U}",
+        "choices": [
+          "hand_0",
+          "hand_1",
+          "one_untap_0",
+          "one_untap_1",
+          "reanimate_0",
+          "reanimate_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, if you cast it from your hand, tap all nonblue creatures. Those creatures don't untap during their controllers' next untap steps.",
+      "variants": [
+        "hand_0",
+        "hand_1",
+        "one_untap_0",
+        "one_untap_1",
+        "reanimate_0",
+        "reanimate_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

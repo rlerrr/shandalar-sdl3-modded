@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "csvid": 16429,
+  "card": "Lathnu Hellion",
+  "recipes": [
+    {
+      "family": "entry_rider_energy_and_mana",
+      "version": 2,
+      "params": {
+        "csvid": 16429,
+        "printed_cost": "{2}{R}"
+      },
+      "oracle_text": "Haste\nWhen this creature enters, you get {E}{E} (two energy counters).\nAt the beginning of your end step, sacrifice this creature unless you pay {E}{E}.",
+      "variants": [
+        "pay_then_empty_0",
+        "decline_0",
+        "countered_0",
+        "pay_then_empty_1",
+        "decline_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Ojutai Exemplars",
+  "csvid": 14969,
+  "recipes": [
+    {
+      "family": "cast_noncreature_riders",
+      "version": 2,
+      "params": {
+        "role": "exemplars",
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "Whenever you cast a noncreature spell, choose one —\n• Tap target creature.\n• This creature gains first strike and lifelink until end of turn.\n• Exile this creature, then return it to the battlefield tapped under its owner's control.",
+      "variants": [
+        "own_0",
+        "creature_0",
+        "opponent_0",
+        "countered_0",
+        "tap_0",
+        "strike_link_0",
+        "blink_0",
+        "own_1",
+        "creature_1",
+        "opponent_1",
+        "countered_1",
+        "tap_1",
+        "strike_link_1",
+        "blink_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,433 @@
+{
+  "sources": {
+    "Gibbering Descent": {
+      "oracle": {
+        "oracle_id": "fbf6f677-d96b-406a-bc6f-4b244df72c7b",
+        "name": "Gibbering Descent",
+        "oracle_text": "At the beginning of each player's upkeep, that player loses 1 life and discards a card.\nHellbent — Skip your upkeep step if you have no cards in hand.\nMadness {2}{B}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+        "mana_cost": "{4}{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Madness",
+          "Hellbent"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fut/66/gibbering-descent?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8932,
+        "iid": 3876,
+        "name": "Gibbering Descent",
+        "handler": "manalinkeh_card_gibbering_descend",
+        "kind": "card"
+      }
+    },
+    "Asylum Visitor": {
+      "oracle": {
+        "oracle_id": "870deab4-8570-40e9-aeda-ac3726cebb84",
+        "name": "Asylum Visitor",
+        "oracle_text": "At the beginning of each player's upkeep, if that player has no cards in hand, you draw a card and you lose 1 life.\nMadness {1}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Vampire Wizard",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Madness"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/96/asylum-visitor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15743,
+        "iid": 15817,
+        "name": "Asylum Visitor",
+        "handler": "manalinkeh_card_asylum_visitor",
+        "kind": "card"
+      }
+    },
+    "Nagging Thoughts": {
+      "oracle": {
+        "oracle_id": "e74c70be-2b70-4b04-9909-161d6f41a156",
+        "name": "Nagging Thoughts",
+        "oracle_text": "Look at the top two cards of your library. Put one of them into your hand and the other into your graveyard.\nMadness {1}{U} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Madness"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/74/nagging-thoughts?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15898,
+        "iid": 15971,
+        "name": "Nagging Thoughts",
+        "handler": "manalinkeh_card_nagging_thoughts",
+        "kind": "card"
+      }
+    },
+    "Twins of Maurer Estate": {
+      "oracle": {
+        "oracle_id": "378110e9-62d6-4dcf-a2e3-813081c82ec4",
+        "name": "Twins of Maurer Estate",
+        "oracle_text": "Madness {2}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+        "mana_cost": "{4}{B}",
+        "type_line": "Creature — Vampire",
+        "power": "3",
+        "toughness": "5",
+        "keywords": [
+          "Madness"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/118/twins-of-maurer-estate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16001,
+        "iid": 16074,
+        "name": "Twins of Maurer Estate",
+        "handler": "manalinkeh_card_twins_of_maurer_estate",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Growth Spiral": {
+      "oracle": {
+        "oracle_id": "34bcc217-dd91-45a0-90d7-a94d02f1f317",
+        "name": "Growth Spiral",
+        "oracle_text": "Draw a card. You may put a land card from your hand onto the battlefield.",
+        "mana_cost": "{G}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/88/growth-spiral?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19642,
+        "iid": 19576,
+        "name": "Growth Spiral",
+        "handler": "manalinkeh_card_growth_spiral",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Honden of Cleansing Fire": {
+      "oracle": {
+        "oracle_id": "15ee7e1d-b13e-4fd0-bc41-345b6ed34f53",
+        "name": "Honden of Cleansing Fire",
+        "oracle_text": "At the beginning of your upkeep, you gain 2 life for each Shrine you control.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Legendary Enchantment — Shrine",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/13/honden-of-cleansing-fire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7238,
+        "iid": 4622,
+        "name": "Honden of Cleansing Fire",
+        "handler": "manalinkeh_card_honden_of_cleansing_fire",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Rummaging Goblin": {
+      "oracle": {
+        "oracle_id": "2055eb91-ee36-4752-a6dc-581eaef335c8",
+        "name": "Rummaging Goblin",
+        "oracle_text": "{T}, Discard a card: Draw a card.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Goblin Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/198/rummaging-goblin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12612,
+        "iid": 8111,
+        "name": "Rummaging Goblin",
+        "handler": "manalinkeh_card_rummaging_goblin",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    }
+  }
+}

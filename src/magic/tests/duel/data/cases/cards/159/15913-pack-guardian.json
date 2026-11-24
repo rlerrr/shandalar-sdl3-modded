@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Pack Guardian",
+  "csvid": 15913,
+  "recipes": [
+    {
+      "family": "flash_entry_tribal_and_team",
+      "version": 2,
+      "params": {
+        "csvid": 15913,
+        "cost": [
+          2,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flash\nWhen this creature enters, you may discard a land card. If you do, create a 2/2 green Wolf creature token.",
+      "variants": [
+        "discard_0",
+        "discard_1",
+        "decline_0",
+        "decline_1",
+        "nonland_only_0",
+        "nonland_only_1",
+        "opponent_land_0",
+        "opponent_land_1"
+      ]
+    }
+  ]
+}

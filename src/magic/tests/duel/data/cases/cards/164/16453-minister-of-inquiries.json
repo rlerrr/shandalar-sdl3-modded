@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Minister of Inquiries",
+  "csvid": 16453,
+  "recipes": [
+    {
+      "family": "mill_paid_abilities",
+      "version": 2,
+      "params": {
+        "csvid": 16453,
+        "mana": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, you get {E}{E} (two energy counters).\n{T}, Pay {E}: Target player mills three cards.",
+      "variants": [
+        "mill_foe_0",
+        "mill_foe_1",
+        "mill_self_0",
+        "mill_self_1",
+        "exhaust_0",
+        "exhaust_1",
+        "fresh_sick_0",
+        "fresh_sick_1"
+      ]
+    }
+  ]
+}

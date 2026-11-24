@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Frogmite",
+  "csvid": 1624,
+  "recipes": [
+    {
+      "family": "artifact_affinity",
+      "version": 2,
+      "oracle_text": "Affinity for artifacts (This spell costs {1} less to cast for each artifact you control.)",
+      "params": {
+        "printed": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "artifact": true,
+        "flying": false,
+        "power": 2,
+        "toughness": 2
+      },
+      "variants": [
+        "full_price_0",
+        "own_exact_0",
+        "short_own_0",
+        "other_permanents_0",
+        "opponent_only_0",
+        "mixed_controllers_0",
+        "other_zones_0",
+        "artifact_land_0",
+        "tapped_artifact_0",
+        "floor_surplus_0",
+        "generic_from_black_0",
+        "enter_artifact_0",
+        "remove_artifact_0",
+        "stolen_artifact_0",
+        "second_cast_0",
+        "pending_snapshot_0",
+        "full_price_1",
+        "own_exact_1",
+        "short_own_1",
+        "other_permanents_1",
+        "opponent_only_1",
+        "mixed_controllers_1",
+        "other_zones_1",
+        "artifact_land_1",
+        "tapped_artifact_1",
+        "floor_surplus_1",
+        "generic_from_black_1",
+        "enter_artifact_1",
+        "remove_artifact_1",
+        "stolen_artifact_1",
+        "second_cast_1",
+        "pending_snapshot_1"
+      ]
+    }
+  ]
+}

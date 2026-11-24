@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Rites of Flourishing",
+  "csvid": 9004,
+  "recipes": [
+    {
+      "family": "draw_step_additional_draw",
+      "version": 2,
+      "params": {
+        "csvid": 9004,
+        "extra": 1,
+        "price": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "modes": [
+          "owner_quota",
+          "opposing_quota",
+          "granted_after_first",
+          "removed_quota",
+          "stacked_quota",
+          "quota_replay"
+        ],
+        "clauses": [
+          "At the beginning of each player's draw step, that player draws an additional card.",
+          "Each player may play an additional land on each of their turns."
+        ]
+      },
+      "oracle_text": "At the beginning of each player's draw step, that player draws an additional card.\nEach player may play an additional land on each of their turns.",
+      "variants": [
+        "owner_quota_0",
+        "owner_quota_1",
+        "opposing_quota_0",
+        "opposing_quota_1",
+        "granted_after_first_0",
+        "granted_after_first_1",
+        "removed_quota_0",
+        "removed_quota_1",
+        "stacked_quota_0",
+        "stacked_quota_1",
+        "quota_replay_0",
+        "quota_replay_1"
+      ]
+    }
+  ]
+}

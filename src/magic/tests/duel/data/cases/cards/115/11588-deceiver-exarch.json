@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Deceiver Exarch",
+  "csvid": 11588,
+  "recipes": [
+    {
+      "family": "flash_entry_untap_and_temporary_stats",
+      "version": 2,
+      "params": {
+        "csvid": 11588,
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, choose one —\n• Untap target permanent you control.\n• Tap target permanent an opponent controls.",
+      "variants": [
+        "untap_land_0",
+        "untap_land_1",
+        "tap_land_0",
+        "tap_land_1",
+        "untap_creature_0",
+        "untap_creature_1",
+        "tap_creature_0",
+        "tap_creature_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

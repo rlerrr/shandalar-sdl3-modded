@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 4938,
+  "card": "Aether Rift",
+  "recipes": [
+    {
+      "family": "upkeep_payment_and_sacrifice",
+      "version": 2,
+      "params": {
+        "csvid": 4938,
+        "printed_cost": "{1}{R}{G}",
+        "keywords": []
+      },
+      "oracle_text": "At the beginning of your upkeep, discard a card at random. If you discard a creature card this way, return it from your graveyard to the battlefield unless any player pays 5 life.",
+      "variants": [
+        "return_creature_0",
+        "return_creature_1",
+        "opponent_pays_0",
+        "opponent_pays_1",
+        "controller_pays_0",
+        "controller_pays_1",
+        "noncreature_0",
+        "noncreature_1"
+      ]
+    }
+  ]
+}

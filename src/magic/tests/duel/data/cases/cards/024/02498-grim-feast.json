@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Grim Feast",
+  "csvid": 2498,
+  "recipes": [
+    {
+      "family": "upkeep_damage_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 2498
+      },
+      "oracle_text": "At the beginning of your upkeep, this enchantment deals 1 damage to you.\nWhenever a creature is put into an opponent's graveyard from the battlefield, you gain life equal to its toughness.",
+      "variants": [
+        "opposing_death_0",
+        "opposing_death_1",
+        "own_death_0",
+        "own_death_1",
+        "bounce_0",
+        "bounce_1"
+      ]
+    }
+  ]
+}

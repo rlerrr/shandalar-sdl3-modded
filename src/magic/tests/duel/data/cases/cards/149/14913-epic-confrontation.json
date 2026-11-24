@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Epic Confrontation",
+  "csvid": 14913,
+  "recipes": [
+    {
+      "family": "fight_targeted_spells",
+      "version": 2,
+      "params": {
+        "csvid": 14913,
+        "mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "timing": "Sorcery",
+        "boost": [
+          1,
+          2
+        ],
+        "clauses": [
+          "Target creature you control gets +1/+2 until end of turn. It fights target creature you don't control. (Each deals damage equal to its power to the other.)"
+        ],
+        "modes": [
+          "mutual",
+          "enemy_bounced",
+          "own_bounced",
+          "no_opposing_target",
+          "lethal_toughness",
+          "through_fog"
+        ]
+      },
+      "oracle_text": "Target creature you control gets +1/+2 until end of turn. It fights target creature you don't control. (Each deals damage equal to its power to the other.)",
+      "variants": [
+        "mutual_0",
+        "mutual_1",
+        "enemy_bounced_0",
+        "enemy_bounced_1",
+        "own_bounced_0",
+        "own_bounced_1",
+        "no_opposing_target_0",
+        "no_opposing_target_1",
+        "lethal_toughness_0",
+        "lethal_toughness_1",
+        "through_fog_0",
+        "through_fog_1"
+      ]
+    }
+  ]
+}

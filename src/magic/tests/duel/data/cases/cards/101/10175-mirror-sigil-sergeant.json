@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Mirror-Sigil Sergeant",
+  "csvid": 10175,
+  "recipes": [
+    {
+      "family": "upkeep_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 10175,
+        "mana_cost": "{5}{W}"
+      },
+      "oracle_text": "Trample\nAt the beginning of your upkeep, if you control a blue permanent, you may create a token that's a copy of this creature.",
+      "variants": [
+        "copy_0",
+        "copy_1",
+        "foe_blue_0",
+        "foe_blue_1",
+        "trample_0",
+        "trample_1"
+      ]
+    }
+  ]
+}

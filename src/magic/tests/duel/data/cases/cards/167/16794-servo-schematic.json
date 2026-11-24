@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Servo Schematic",
+  "csvid": 16794,
+  "recipes": [
+    {
+      "family": "death_fixed_token_creation",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "trigger": "self_artifact_entry",
+        "kind": "Artifact",
+        "keywords": [],
+        "mana_ability": false,
+        "token": {
+          "name": "Servo",
+          "count": 1,
+          "power": 1,
+          "toughness": 1,
+          "color": 0,
+          "artifact": true,
+          "subtypes": [
+            "Servo"
+          ],
+          "tapped": false,
+          "legendary": false
+        }
+      },
+      "oracle_text": "When this artifact enters or is put into a graveyard from the battlefield, create a 1/1 colorless Servo artifact creature token.",
+      "variants": [
+        "effect_0",
+        "owned_elsewhere_0",
+        "bounce_0",
+        "exile_0",
+        "kill_created_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cast_only_0",
+        "unaffordable_0",
+        "countered_0",
+        "entry_then_death_0",
+        "other_death_0",
+        "effect_1",
+        "owned_elsewhere_1",
+        "bounce_1",
+        "exile_1",
+        "kill_created_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cast_only_1",
+        "unaffordable_1",
+        "countered_1",
+        "entry_then_death_1",
+        "other_death_1"
+      ]
+    }
+  ]
+}

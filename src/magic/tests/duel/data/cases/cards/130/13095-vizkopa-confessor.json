@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Vizkopa Confessor",
+  "csvid": 13095,
+  "recipes": [
+    {
+      "family": "remaining_entry_zone_and_permissions",
+      "version": 2,
+      "params": {
+        "csvid": 13095,
+        "cost": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Extort (Whenever you cast a spell, you may pay {W/B}. If you do, each opponent loses 1 life and you gain that much life.)\nWhen this creature enters, pay any amount of life. Target opponent reveals that many cards from their hand. You choose one of them and exile it.",
+      "variants": [
+        "life_two_0",
+        "life_two_1",
+        "life_zero_0",
+        "extort_paid_0",
+        "extort_paid_1",
+        "extort_short_0",
+        "extort_short_1",
+        "enemy_cast_0",
+        "enemy_cast_1"
+      ]
+    }
+  ]
+}

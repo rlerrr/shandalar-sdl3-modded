@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "csvid": 6169,
+  "card": "Grinning Demon",
+  "recipes": [
+    {
+      "family": "morph_battlefield_riders",
+      "version": 2,
+      "oracle_text": "At the beginning of your upkeep, you lose 2 life.\nMorph {2}{B}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+      "params": {
+        "mode": "demon",
+        "mana": [
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "morph": [
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 6,
+        "toughness": 6,
+        "keywords": [],
+        "color": 2
+      },
+      "variants": [
+        "printed_cast_0",
+        "printed_cast_1",
+        "hidden_cast_0",
+        "hidden_cast_1",
+        "hidden_choice_0",
+        "hidden_choice_1",
+        "cast_short_0",
+        "cast_short_1",
+        "reveal_ready_0",
+        "reveal_ready_1",
+        "reveal_short_0",
+        "reveal_short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "offturn_reveal_0",
+        "offturn_reveal_1",
+        "reveal_replay_0",
+        "reveal_replay_1",
+        "own_upkeep_0",
+        "own_upkeep_1",
+        "opposing_upkeep_0",
+        "opposing_upkeep_1",
+        "hidden_upkeep_0",
+        "hidden_upkeep_1",
+        "double_upkeep_0",
+        "double_upkeep_1",
+        "printed_effect_0",
+        "printed_effect_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Worldspine Wurm",
+  "csvid": 12873,
+  "recipes": [
+    {
+      "family": "departure_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 12873,
+        "mana_cost": "{8}{G}{G}{G}"
+      },
+      "oracle_text": "Trample\nWhen this creature dies, create three 5/5 green Wurm creature tokens with trample.\nWhen Worldspine Wurm is put into a graveyard from anywhere, shuffle it into its owner's library.",
+      "variants": [
+        "destroy_0",
+        "destroy_1",
+        "exile_0",
+        "exile_1",
+        "countered_0",
+        "countered_1",
+        "trample_0",
+        "trample_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Chromanticore",
+  "csvid": 13678,
+  "recipes": [
+    {
+      "family": "bestow_combined_keywords",
+      "version": 2,
+      "params": {
+        "csvid": 13678,
+        "normal": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "bestowed": [
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "bonus": [
+          4,
+          4
+        ],
+        "creature": [
+          4,
+          4
+        ]
+      },
+      "oracle_text": "Bestow {2}{W}{U}{B}{R}{G} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nFlying, first strike, vigilance, trample, lifelink\nEnchanted creature gets +4/+4 and has flying, first strike, vigilance, trample, and lifelink.",
+      "variants": [
+        "regular_combat_0",
+        "regular_combat_1",
+        "bestowed_combat_0",
+        "bestowed_combat_1",
+        "detach_combat_0",
+        "detach_combat_1",
+        "pending_host_lost_0",
+        "pending_host_lost_1",
+        "flight_0",
+        "flight_1"
+      ]
+    }
+  ]
+}

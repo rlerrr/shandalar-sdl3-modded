@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 11225,
+  "card": "Contagion Clasp",
+  "recipes": [
+    {
+      "family": "entry_interaction_counters",
+      "version": 2,
+      "params": {
+        "csvid": 11225,
+        "printed_cost": "{2}"
+      },
+      "oracle_text": "When this artifact enters, put a -1/-1 counter on target creature.\n{4}, {T}: Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+      "variants": [
+        "entry_enemy_0",
+        "entry_own_0",
+        "proliferate_0",
+        "decline_0",
+        "short_0",
+        "countered_0",
+        "entry_enemy_1",
+        "entry_own_1",
+        "proliferate_1",
+        "short_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

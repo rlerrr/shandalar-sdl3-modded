@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "csvid": 13372,
+  "card": "Anax and Cymede",
+  "recipes": [
+    {
+      "family": "heroic_basic_riders",
+      "version": 2,
+      "oracle_text": "First strike, vigilance\nHeroic — Whenever you cast a spell that targets Anax and Cymede, creatures you control get +1/+1 and gain trample until end of turn.",
+      "params": {
+        "name": "Anax and Cymede",
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "effect": "team_pump",
+        "power": 3,
+        "toughness": 2,
+        "keywords": [
+          "First strike",
+          "Vigilance"
+        ]
+      },
+      "variants": [
+        "own_0",
+        "own_1",
+        "opponent_0",
+        "opponent_1",
+        "other_target_0",
+        "other_target_1",
+        "repeat_0",
+        "repeat_1",
+        "team_trample_0",
+        "team_trample_1",
+        "base_combat_0",
+        "base_combat_1",
+        "expires_0",
+        "expires_1"
+      ]
+    }
+  ]
+}

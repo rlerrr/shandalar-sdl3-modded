@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Hidden Stockpile",
+  "csvid": 16720,
+  "recipes": [
+    {
+      "family": "library_scry_activated_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 16720,
+        "mana": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Revolt — At the beginning of your end step, if a permanent left the battlefield under your control this turn, create a 1/1 colorless Servo artifact creature token.\n{1}, Sacrifice a creature: Scry 1.",
+      "variants": [
+        "revolt_sac_0",
+        "revolt_sac_1",
+        "foe_departure_0",
+        "foe_departure_1",
+        "no_own_creature_0",
+        "no_own_creature_1"
+      ]
+    }
+  ]
+}

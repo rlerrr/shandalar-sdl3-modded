@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "csvid": 5956,
+  "card": "Guiltfeeder",
+  "recipes": [
+    {
+      "family": "attack_follow_on_sabotage_and_poison",
+      "version": 2,
+      "params": {
+        "csvid": 5956,
+        "printed_cost": "{3}{B}{B}",
+        "keywords": [
+          "Fear"
+        ]
+      },
+      "oracle_text": "Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)\nWhenever this creature attacks and isn't blocked, defending player loses 1 life for each card in their graveyard.",
+      "variants": [
+        "empty_defender_0",
+        "three_0",
+        "ground_denied_0",
+        "black_blocker_0",
+        "artifact_blocker_0",
+        "other_attack_0",
+        "empty_defender_1",
+        "three_1",
+        "ground_denied_1",
+        "black_blocker_1",
+        "artifact_blocker_1",
+        "other_attack_1"
+      ]
+    }
+  ]
+}

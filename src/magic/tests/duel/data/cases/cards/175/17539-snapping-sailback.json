@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 17539,
+  "card": "Snapping Sailback",
+  "recipes": [
+    {
+      "family": "flash_remaining_combat_and_activated",
+      "version": 2,
+      "params": {
+        "csvid": 17539,
+        "printed_cost": "{4}{G}"
+      },
+      "oracle_text": "Flash\nEnrage — Whenever this creature is dealt damage, put a +1/+1 counter on it. (It must survive the damage to get the counter.)",
+      "variants": [
+        "combat_growth_0",
+        "noncombat_twice_0",
+        "lethal_0",
+        "prevented_0",
+        "expiry_0",
+        "combat_growth_1",
+        "noncombat_twice_1",
+        "lethal_1",
+        "prevented_1",
+        "expiry_1"
+      ]
+    }
+  ]
+}

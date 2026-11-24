@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 16420,
+  "card": "Janjeet Sentry",
+  "recipes": [
+    {
+      "family": "entry_rider_energy_and_mana",
+      "version": 2,
+      "params": {
+        "csvid": 16420,
+        "printed_cost": "{2}{U}"
+      },
+      "oracle_text": "When this creature enters, you get {E}{E} (two energy counters).\n{T}, Pay {E}{E}: You may tap or untap target artifact or creature.",
+      "variants": [
+        "entry_0",
+        "tap_0",
+        "untap_0",
+        "decline_0",
+        "countered_0",
+        "entry_1",
+        "tap_1",
+        "untap_1",
+        "decline_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

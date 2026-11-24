@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "csvid": 13601,
+  "card": "Witches' Eye",
+  "recipes": [
+    {
+      "family": "library_scry_modes_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 13601,
+        "printed_cost": "{1}"
+      },
+      "oracle_text": "Equipped creature has \"{1}, {T}: Scry 1.\" (To scry 1, look at the top card of your library, then you may put that card on the bottom.)\nEquip {1}",
+      "variants": [
+        "own_host_0",
+        "off_turn_0",
+        "detach_0",
+        "own_host_1",
+        "off_turn_1",
+        "detach_1"
+      ]
+    }
+  ]
+}

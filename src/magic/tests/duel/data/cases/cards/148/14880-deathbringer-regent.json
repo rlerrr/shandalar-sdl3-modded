@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 14880,
+  "card": "Deathbringer Regent",
+  "recipes": [
+    {
+      "family": "entry_follow_on_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 14880,
+        "printed_cost": "{5}{B}{B}",
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, if you cast it from your hand and there are five or more other creatures on the battlefield, destroy all other creatures.",
+      "variants": [
+        "five_0",
+        "four_0",
+        "indestructible_0",
+        "reanimated_0",
+        "flying_0",
+        "five_1",
+        "four_1",
+        "indestructible_1",
+        "reanimated_1",
+        "flying_1"
+      ]
+    }
+  ]
+}

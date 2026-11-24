@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "csvid": 15482,
+  "card": "Vile Aggregate",
+  "recipes": [
+    {
+      "family": "devoid_cast_and_control",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\nVile Aggregate's power is equal to the number of colorless creatures you control.\nTrample\nIngest (Whenever this creature deals combat damage to a player, that player exiles the top card of their library.)",
+      "params": {
+        "effect": "aggregate",
+        "price": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "power": null,
+        "toughness": 5,
+        "fee": null
+      },
+      "variants": [
+        "solo_0",
+        "solo_1",
+        "mixed_0",
+        "mixed_1",
+        "lose_ally_0",
+        "lose_ally_1",
+        "trample_excess_0",
+        "trample_excess_1",
+        "blocked_0",
+        "blocked_1",
+        "empty_library_0",
+        "empty_library_1",
+        "unblocked_0",
+        "unblocked_1"
+      ]
+    }
+  ]
+}

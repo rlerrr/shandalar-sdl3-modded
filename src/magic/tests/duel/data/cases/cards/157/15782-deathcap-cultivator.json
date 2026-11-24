@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "csvid": 15782,
+  "card": "Deathcap Cultivator",
+  "recipes": [
+    {
+      "family": "delirium_static_stats_and_mana",
+      "version": 2,
+      "oracle_text": "{T}: Add {B} or {G}.\nDelirium — This creature has deathtouch as long as there are four or more card types among cards in your graveyard.",
+      "params": {
+        "csvid": 15782,
+        "keyword": "deathtouch",
+        "delirium_delta": [
+          0,
+          0
+        ],
+        "source_pt": [
+          2,
+          1
+        ],
+        "price": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "clauses": [
+          "{T}: Add {B} or {G}.",
+          "Delirium — This creature has deathtouch as long as there are four or more card types among cards in your graveyard."
+        ]
+      },
+      "variants": [
+        "three_duplicates_0",
+        "three_duplicates_1",
+        "four_types_0",
+        "four_types_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "mana_black_0",
+        "mana_black_1",
+        "mana_green_0",
+        "mana_green_1",
+        "crossing_0",
+        "crossing_1",
+        "lose_threshold_0",
+        "lose_threshold_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "mana_repeat_0",
+        "mana_repeat_1"
+      ]
+    }
+  ]
+}

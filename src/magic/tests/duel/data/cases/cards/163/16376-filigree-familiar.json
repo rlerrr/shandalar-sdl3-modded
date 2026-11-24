@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 16376,
+  "card": "Filigree Familiar",
+  "recipes": [
+    {
+      "family": "entry_trigger_life_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 16376,
+        "printed_cost": "{3}"
+      },
+      "oracle_text": "When this creature enters, you gain 2 life.\nWhen this creature dies, draw a card.",
+      "variants": [
+        "entry_0",
+        "dies_0",
+        "bounce_0",
+        "countered_0",
+        "entry_1",
+        "dies_1",
+        "bounce_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

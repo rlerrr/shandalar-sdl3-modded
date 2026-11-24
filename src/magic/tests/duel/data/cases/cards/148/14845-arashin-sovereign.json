@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Arashin Sovereign",
+  "csvid": 14845,
+  "recipes": [
+    {
+      "family": "departure_graveyard_and_return",
+      "version": 2,
+      "params": {
+        "csvid": 14845,
+        "cost": [
+          5,
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature dies, you may put it on your choice of the top or bottom of its owner's library.",
+      "variants": [
+        "top_0",
+        "top_1",
+        "bottom_0",
+        "bottom_1",
+        "decline_0",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

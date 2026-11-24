@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Jadelight Ranger",
+  "csvid": 18230,
+  "recipes": [
+    {
+      "family": "entry_interaction_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 18230,
+        "printed_mana": "{1}{G}{G}",
+        "rules": "When this creature enters, it explores, then it explores again. (Reveal the top card of your library. Put that card into your hand if it's a land. Otherwise, put a +1/+1 counter on this creature, then put the card back or put it into your graveyard. Then repeat this process.)"
+      },
+      "oracle_text": "When this creature enters, it explores, then it explores again. (Reveal the top card of your library. Put that card into your hand if it's a land. Otherwise, put a +1/+1 counter on this creature, then put the card back or put it into your graveyard. Then repeat this process.)",
+      "variants": [
+        "land_then_mill_0",
+        "land_then_mill_1",
+        "keep_twice_0",
+        "keep_twice_1",
+        "empty_twice_0",
+        "empty_twice_1"
+      ]
+    }
+  ]
+}

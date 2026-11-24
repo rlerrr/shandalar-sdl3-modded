@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Aligned Hedron Network",
+  "csvid": 15262,
+  "recipes": [
+    {
+      "family": "entry_trigger_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 15262,
+        "cost": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this artifact enters, exile all creatures with power 5 or greater until this artifact leaves the battlefield. (Those creatures return under their owners' control.)",
+      "variants": [
+        "power_boundary_0",
+        "power_boundary_1",
+        "return_owner_0",
+        "return_owner_1",
+        "no_match_0",
+        "no_match_1"
+      ]
+    }
+  ]
+}

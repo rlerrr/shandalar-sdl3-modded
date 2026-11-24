@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Tunneler Wurm",
+  "csvid": 6023,
+  "recipes": [
+    {
+      "family": "regeneration_costs_and_zones",
+      "version": 2,
+      "params": {
+        "csvid": 6023,
+        "cost": [
+          6,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Discard a card: Regenerate this creature.",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "denied_cost_0",
+        "denied_cost_1",
+        "declined_0",
+        "declined_1",
+        "cannot_regenerate_0",
+        "cannot_regenerate_1",
+        "proactive_0",
+        "proactive_1",
+        "damage_0",
+        "damage_1",
+        "combat_0",
+        "combat_1"
+      ]
+    }
+  ]
+}

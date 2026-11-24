@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Dance of the Dead",
+  "csvid": 1897,
+  "recipes": [
+    {
+      "family": "entry_rider_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 1897,
+        "cost": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Enchant creature card in a graveyard\nWhen this Aura enters, if it's on the battlefield, it loses \"enchant creature card in a graveyard\" and gains \"enchant creature put onto the battlefield with this Aura.\" Put enchanted creature card onto the battlefield tapped under your control and attach this Aura to it. When this Aura leaves the battlefield, that creature's controller sacrifices it.\nEnchanted creature gets +1/+1 and doesn't untap during its controller's untap step.\nAt the beginning of the upkeep of enchanted creature's controller, that player may pay {1}{B}. If the player does, untap that creature.",
+      "variants": [
+        "upkeep_pay_0",
+        "upkeep_pay_1",
+        "upkeep_decline_0",
+        "upkeep_decline_1",
+        "upkeep_short_0",
+        "upkeep_short_1",
+        "opponent_owner_0",
+        "opponent_owner_1"
+      ]
+    }
+  ]
+}

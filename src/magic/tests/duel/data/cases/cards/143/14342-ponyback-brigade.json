@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "csvid": 14342,
+  "card": "Ponyback Brigade",
+  "recipes": [
+    {
+      "family": "morph_turn_up_tokens",
+      "version": 2,
+      "oracle_text": "When this creature enters or is turned face up, create three 1/1 red Goblin creature tokens.\nMorph {2}{R}{W}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "kind": "fixed",
+          "printed": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "morph": [
+            2,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "token": "Goblin",
+          "token_color": 16,
+          "quantity": 3,
+          "entry": true,
+          "anthem": false,
+          "clauses": [
+            "When this creature enters or is turned face up, create three 1/1 red Goblin creature tokens.",
+            "Morph {2}{R}{W}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)"
+          ],
+          "power": 2,
+          "toughness": 2,
+          "color": 50,
+          "subtypes": [
+            "Goblin",
+            "Warrior"
+          ]
+        }
+      },
+      "variants": [
+        "hidden_0",
+        "hidden_1",
+        "faceup_0",
+        "faceup_1",
+        "cast_short_0",
+        "cast_short_1",
+        "countered_0",
+        "countered_1",
+        "flip_0",
+        "flip_1",
+        "offturn_0",
+        "offturn_1",
+        "flip_wrong_color_0",
+        "flip_wrong_color_1",
+        "repeat_0",
+        "repeat_1",
+        "replay_0",
+        "replay_1",
+        "flip_short_0",
+        "flip_short_1",
+        "reenter_0",
+        "reenter_1"
+      ]
+    }
+  ]
+}

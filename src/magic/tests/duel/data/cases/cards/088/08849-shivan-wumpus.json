@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 8849,
+  "card": "Shivan Wumpus",
+  "recipes": [
+    {
+      "family": "remaining_entry_turn_and_choices",
+      "version": 2,
+      "params": {
+        "csvid": 8849,
+        "printed_cost": "{3}{R}",
+        "keywords": [
+          "Trample"
+        ]
+      },
+      "oracle_text": "Trample\nWhen this creature enters, any player may sacrifice a land of their choice. If a player does, put this creature on top of its owner's library.",
+      "variants": [
+        "owner_sacrifice_0",
+        "opponent_sacrifice_0",
+        "both_decline_0",
+        "no_land_combat_0",
+        "draw_recast_0",
+        "owner_sacrifice_1",
+        "opponent_sacrifice_1",
+        "both_decline_1",
+        "no_land_combat_1",
+        "draw_recast_1"
+      ]
+    }
+  ]
+}

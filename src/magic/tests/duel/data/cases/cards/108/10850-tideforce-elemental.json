@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Tideforce Elemental",
+  "csvid": 10850,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "landfall_targets_and_payment",
+      "version": 2,
+      "oracle_text": "{U}, {T}: You may tap or untap another target creature.\nLandfall — Whenever a land you control enters, you may untap this creature.",
+      "params": {
+        "effect": "creature_twiddle",
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "fee": [],
+        "stats": [
+          2,
+          1
+        ]
+      },
+      "variants": [
+        "own_0",
+        "own_1",
+        "enemy_0",
+        "enemy_1",
+        "offturn_0",
+        "offturn_1",
+        "repeat_0",
+        "repeat_1",
+        "replay_0",
+        "replay_1",
+        "removed_0",
+        "removed_1",
+        "ability_untap_0",
+        "ability_untap_1",
+        "ability_own_0",
+        "ability_own_1",
+        "fresh_0",
+        "fresh_1",
+        "ability_filter_0",
+        "ability_filter_1",
+        "ability_short_0",
+        "ability_short_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

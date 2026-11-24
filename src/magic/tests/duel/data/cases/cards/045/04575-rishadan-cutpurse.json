@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 4575,
+  "card": "Rishadan Cutpurse",
+  "recipes": [
+    {
+      "family": "entry_rider_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 4575,
+        "printed_cost": "{2}{U}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, each opponent sacrifices a permanent of their choice unless they pay {1}.",
+      "variants": [
+        "pay_0",
+        "short_0",
+        "no_permanent_0",
+        "pay_1",
+        "short_1",
+        "no_permanent_1"
+      ]
+    }
+  ]
+}

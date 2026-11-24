@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Kor Haven",
+  "csvid": 4704,
+  "recipes": [
+    {
+      "family": "targeted_damage_defense",
+      "version": 2,
+      "oracle_text": "{T}: Add {C}.\n{1}{W}, {T}: Prevent all combat damage that would be dealt by target attacking creature this turn.",
+      "params": {
+        "kind": "land",
+        "activation_mana": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "mana_ability": true,
+        "combat_only": true,
+        "incoming": false,
+        "attacking_target": true,
+        "own_target": false,
+        "untap": false,
+        "toughness_by_mana_value": false
+      },
+      "variants": [
+        "unblocked_0",
+        "blocked_0",
+        "unprotected_0",
+        "noncombat_incoming_0",
+        "noncombat_outgoing_0",
+        "no_eligible_target_0",
+        "target_lost_pending_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "bare_zones_0",
+        "own_attacker_0",
+        "tapped_source_0",
+        "mana_0",
+        "exact_payment_0",
+        "no_white_mana_0",
+        "mode_cancel_0",
+        "unblocked_1",
+        "blocked_1",
+        "unprotected_1",
+        "noncombat_incoming_1",
+        "noncombat_outgoing_1",
+        "no_eligible_target_1",
+        "target_lost_pending_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "bare_zones_1",
+        "own_attacker_1",
+        "tapped_source_1",
+        "mana_1",
+        "exact_payment_1",
+        "no_white_mana_1",
+        "mode_cancel_1"
+      ]
+    }
+  ]
+}

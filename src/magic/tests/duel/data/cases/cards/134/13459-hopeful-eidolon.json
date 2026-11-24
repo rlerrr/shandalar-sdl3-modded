@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Hopeful Eidolon",
+  "csvid": 13459,
+  "recipes": [
+    {
+      "family": "bestow_combined_keywords",
+      "version": 2,
+      "params": {
+        "csvid": 13459,
+        "normal": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "bestowed": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "bonus": [
+          1,
+          1
+        ],
+        "creature": [
+          1,
+          1
+        ]
+      },
+      "oracle_text": "Bestow {3}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nLifelink (Damage dealt by this creature also causes you to gain that much life.)\nEnchanted creature gets +1/+1 and has lifelink.",
+      "variants": [
+        "regular_combat_0",
+        "regular_combat_1",
+        "bestowed_combat_0",
+        "bestowed_combat_1",
+        "detach_combat_0",
+        "detach_combat_1",
+        "pending_host_lost_0",
+        "pending_host_lost_1",
+        "foe_link_0",
+        "foe_link_1",
+        "creature_link_0",
+        "creature_link_1"
+      ]
+    }
+  ]
+}

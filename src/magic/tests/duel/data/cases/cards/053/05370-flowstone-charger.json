@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 5370,
+  "card": "Flowstone Charger",
+  "recipes": [
+    {
+      "family": "attack_trigger_stat_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 5370,
+        "printed_cost": "{2}{R}{W}"
+      },
+      "oracle_text": "Whenever this creature attacks, it gets +3/-3 until end of turn.",
+      "variants": [
+        "solo_0",
+        "blocked_0",
+        "only_ally_0",
+        "blocks_0",
+        "repeat_0",
+        "solo_1",
+        "blocked_1",
+        "only_ally_1",
+        "blocks_1",
+        "repeat_1"
+      ]
+    }
+  ]
+}

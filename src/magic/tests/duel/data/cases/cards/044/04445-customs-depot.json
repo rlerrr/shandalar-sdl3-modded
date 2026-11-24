@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Customs Depot",
+  "csvid": 4445,
+  "recipes": [
+    {
+      "family": "cast_creature_riders",
+      "version": 2,
+      "oracle_text": "Whenever you cast a creature spell, you may pay {1}. If you do, draw a card, then discard a card.",
+      "params": {
+        "effect": "loot",
+        "price": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "fee": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "own_0",
+        "opponent_0",
+        "noncreature_0",
+        "countered_0",
+        "replay_0",
+        "unfunded_0",
+        "colored_fee_0",
+        "own_1",
+        "opponent_1",
+        "noncreature_1",
+        "countered_1",
+        "replay_1",
+        "unfunded_1",
+        "colored_fee_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

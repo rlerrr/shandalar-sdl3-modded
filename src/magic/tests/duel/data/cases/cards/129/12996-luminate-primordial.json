@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Luminate Primordial",
+  "csvid": 12996,
+  "recipes": [
+    {
+      "family": "entry_rider_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 12996,
+        "cost": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "Vigilance\nWhen this creature enters, for each opponent, exile up to one target creature that player controls and that player gains life equal to its power.",
+      "variants": [
+        "positive_power_0",
+        "positive_power_1",
+        "zero_power_0",
+        "zero_power_1",
+        "modified_power_0",
+        "modified_power_1",
+        "decline_0",
+        "decline_1",
+        "own_only_0",
+        "own_only_1",
+        "vigilance_0",
+        "vigilance_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,781 @@
+{
+  "version": 1,
+  "sources": {
+    "Jeskai Ascendancy": {
+      "oracle": {
+        "oracle_id": "c3c802ba-dfbb-4f63-ae9a-e29c2e30013d",
+        "name": "Jeskai Ascendancy",
+        "oracle_text": "Whenever you cast a noncreature spell, creatures you control get +1/+1 until end of turn. Untap those creatures.\nWhenever you cast a noncreature spell, you may draw a card. If you do, discard a card.",
+        "mana_cost": "{U}{R}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R",
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/231/jeskai-ascendancy?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14295,
+        "iid": 5043,
+        "name": "Jeskai Ascendancy",
+        "handler": "manalinkeh_card_jeskai_ascendancy",
+        "kind": "card"
+      }
+    },
+    "Primeval Bounty": {
+      "oracle": {
+        "oracle_id": "f633c16d-d943-421c-ad18-af35db9ec9fc",
+        "name": "Primeval Bounty",
+        "oracle_text": "Whenever you cast a creature spell, create a 3/3 green Beast creature token.\nWhenever you cast a noncreature spell, put three +1/+1 counters on target creature you control.\nLandfall — Whenever a land you control enters, you gain 3 life.",
+        "mana_cost": "{5}{G}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/644/primeval-bounty?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13323,
+        "iid": 7377,
+        "name": "Primeval Bounty",
+        "handler": "manalinkeh_card_primeval_bounty",
+        "kind": "card"
+      }
+    },
+    "Quiet Contemplation": {
+      "oracle": {
+        "oracle_id": "f87dfde4-8c57-4543-826c-6b3cf9c11b90",
+        "name": "Quiet Contemplation",
+        "oracle_text": "Whenever you cast a noncreature spell, you may pay {1}. If you do, tap target creature an opponent controls and it doesn't untap during its controller's next untap step.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/50/quiet-contemplation?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14343,
+        "iid": 7555,
+        "name": "Quiet Contemplation",
+        "handler": "manalinkeh_card_quiet_contemplation",
+        "kind": "card"
+      }
+    },
+    "Monastery Mentor": {
+      "oracle": {
+        "oracle_id": "3979067a-9c68-443d-a85f-d9f07be880b9",
+        "name": "Monastery Mentor",
+        "oracle_text": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhenever you cast a noncreature spell, create a 1/1 white Monk creature token with prowess.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Monk",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Prowess"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/125/monastery-mentor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14594,
+        "iid": 11330,
+        "name": "Monastery Mentor",
+        "handler": "manalinkeh_card_monastery_mentor",
+        "kind": "card"
+      }
+    },
+    "Cathar's Companion": {
+      "oracle": {
+        "oracle_id": "668f646b-94f0-4f1a-badd-2d69b559d8a2",
+        "name": "Cathar's Companion",
+        "oracle_text": "Whenever you cast a noncreature spell, this creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Dog",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/94/cathars-companion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15763,
+        "iid": 15838,
+        "name": "Cathar's Companion",
+        "handler": "manalinkeh_card_cathars_companion",
+        "kind": "card"
+      }
+    },
+    "Sage of the Inward Eye": {
+      "oracle": {
+        "oracle_id": "02c741d0-99d3-48e5-9846-0fea5a0a29fe",
+        "name": "Sage of the Inward Eye",
+        "oracle_text": "Flying\nWhenever you cast a noncreature spell, creatures you control gain lifelink until end of turn.",
+        "mana_cost": "{2}{U}{R}{W}",
+        "type_line": "Creature — Djinn Wizard",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R",
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "U",
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/195/sage-of-the-inward-eye?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14358,
+        "iid": 8177,
+        "name": "Sage of the Inward Eye",
+        "handler": "manalinkeh_card_sage_of_the_inward_eye",
+        "kind": "card"
+      }
+    },
+    "Mistfire Adept": {
+      "oracle": {
+        "oracle_id": "794255b1-d94d-4de4-ac0a-87ef743f9102",
+        "name": "Mistfire Adept",
+        "oracle_text": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhenever you cast a noncreature spell, target creature gains flying until end of turn.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Human Monk",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Prowess"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/59/mistfire-adept?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14592,
+        "iid": 11328,
+        "name": "Mistfire Adept",
+        "handler": "manalinkeh_card_mistfire_adept",
+        "kind": "card"
+      }
+    },
+    "Shu Yun, the Silent Tempest": {
+      "oracle": {
+        "oracle_id": "7b22f31c-9caa-4afd-8c44-f88346bfa79c",
+        "name": "Shu Yun, the Silent Tempest",
+        "oracle_text": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhenever you cast a noncreature spell, you may pay {R/W}{R/W}. If you do, target creature gains double strike until end of turn.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Legendary Creature — Human Monk",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Prowess"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frf/52/shu-yun-the-silent-tempest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14625,
+        "iid": 11360,
+        "name": "Shu Yun, the Silent Tempest",
+        "handler": "manalinkeh_card_shun_yun_the_silent_tempest",
+        "kind": "card"
+      }
+    },
+    "Elusive Spellfist": {
+      "oracle": {
+        "oracle_id": "b9ba00f2-b11c-45d8-9c38-f9ade5d07d0f",
+        "name": "Elusive Spellfist",
+        "oracle_text": "Whenever you cast a noncreature spell, this creature gets +1/+0 until end of turn and can't be blocked this turn.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Human Monk",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ima/54/elusive-spellfist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14909,
+        "iid": 12434,
+        "name": "Elusive Spellfist",
+        "handler": "manalinkeh_card_elusive_spellfist",
+        "kind": "card"
+      }
+    },
+    "Myth Realized": {
+      "oracle": {
+        "oracle_id": "3a726e40-829c-47ec-81a7-58a04164fc3f",
+        "name": "Myth Realized",
+        "oracle_text": "Whenever you cast a noncreature spell, put a lore counter on this enchantment.\n{2}{W}: Put a lore counter on this enchantment.\n{W}: Until end of turn, this enchantment becomes a Monk Avatar creature in addition to its other types and gains \"This creature's power and toughness are each equal to the number of lore counters on it.\"",
+        "mana_cost": "{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/22/myth-realized?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14964,
+        "iid": 13738,
+        "name": "Myth Realized",
+        "handler": "manalinkeh_card_myth_realized",
+        "kind": "card"
+      }
+    },
+    "Ojutai Exemplars": {
+      "oracle": {
+        "oracle_id": "4405db13-7b36-4dc2-9a5d-1d31d568abf5",
+        "name": "Ojutai Exemplars",
+        "oracle_text": "Whenever you cast a noncreature spell, choose one —\n• Tap target creature.\n• This creature gains first strike and lifelink until end of turn.\n• Exile this creature, then return it to the battlefield tapped under its owner's control.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Creature — Human Monk",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/27/ojutai-exemplars?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14969,
+        "iid": 13842,
+        "name": "Ojutai Exemplars",
+        "handler": "manalinkeh_card_ojutai_exemplars",
+        "kind": "card"
+      }
+    },
+    "Pristine Skywise": {
+      "oracle": {
+        "oracle_id": "de80c742-4da0-4d67-9711-2b4e6452e2d0",
+        "name": "Pristine Skywise",
+        "oracle_text": "Flying\nWhenever you cast a noncreature spell, untap this creature. It gains protection from the color of your choice until end of turn.",
+        "mana_cost": "{4}{W}{U}",
+        "type_line": "Creature — Dragon",
+        "power": "6",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c19/196/pristine-skywise?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14980,
+        "iid": 14047,
+        "name": "Pristine Skywise",
+        "handler": "manalinkeh_card_pristine_skywise",
+        "kind": "card"
+      }
+    },
+    "Skywise Teachings": {
+      "oracle": {
+        "oracle_id": "95a5e444-39f6-4f42-a83f-befa76350bc1",
+        "name": "Skywise Teachings",
+        "oracle_text": "Whenever you cast a noncreature spell, you may pay {1}{U}. If you do, create a 2/2 blue Djinn Monk creature token with flying.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ima/73/skywise-teachings?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15034,
+        "iid": 14682,
+        "name": "Skywise Teachings",
+        "handler": "manalinkeh_card_skywise_teachings",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Beast": {
+      "oracle": {
+        "oracle_id": "d2f35b1a-1eba-4007-8f27-737d26b7a6a2",
+        "name": "Beast",
+        "oracle_text": "This creature can't attack or block alone.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tdsk/3/beast?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18695,
+        "iid": 944,
+        "name": "Beast",
+        "handler": "manalinkeh_card_beast_token",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Djinn Monk": {
+      "oracle": {
+        "oracle_id": "28571b5c-f7f5-4f9c-9891-405b54a28f60",
+        "name": "Djinn Monk",
+        "oracle_text": "Flying",
+        "mana_cost": "",
+        "type_line": "Token Creature — Djinn Monk",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tima/4/djinn-monk?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18718,
+        "iid": 12309,
+        "name": "Djinn Monk",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Monk": {
+      "oracle": {
+        "oracle_id": "bfa57f61-3811-43da-b73e-90e3e5b0b2c2",
+        "name": "Monk",
+        "oracle_text": "Prowess",
+        "mana_cost": "",
+        "type_line": "Token Creature — Monk",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Prowess"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmom/1/monk?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18789,
+        "iid": 11398,
+        "name": "Monk",
+        "handler": "manalinkeh_card_monk_token",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Pressure Point": {
+      "oracle": {
+        "oracle_id": "d4bbdd0c-e578-49ed-b2f7-b1decb04ee87",
+        "name": "Pressure Point",
+        "oracle_text": "Tap target creature.\nDraw a card.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/znr/33/pressure-point?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14603,
+        "iid": 11338,
+        "name": "Pressure Point",
+        "handler": "manalinkeh_card_pressure_point",
+        "kind": "card"
+      }
+    },
+    "Suntail Hawk": {
+      "oracle": {
+        "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+        "name": "Suntail Hawk",
+        "oracle_text": "Flying",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/40/suntail-hawk?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1195,
+        "iid": 9548,
+        "name": "Suntail Hawk",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Traveler's Amulet": {
+      "oracle": {
+        "oracle_id": "48b561dd-f23d-409a-87c8-e49902b2477b",
+        "name": "Traveler's Amulet",
+        "oracle_text": "{1}, Sacrifice this artifact: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/273/travelers-amulet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12102,
+        "iid": 10166,
+        "name": "Traveler's Amulet",
+        "handler": "manalinkeh_card_travelers_amulet",
+        "kind": "card"
+      }
+    }
+  }
+}

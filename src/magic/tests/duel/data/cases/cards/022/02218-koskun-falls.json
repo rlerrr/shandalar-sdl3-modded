@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "csvid": 2218,
+  "card": "Koskun Falls",
+  "recipes": [
+    {
+      "family": "global_attack_tax",
+      "version": 2,
+      "params": {
+        "cost": [
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "composition": "koskun",
+        "tax_formula": "fixed",
+        "amount": 2,
+        "protects_walker": false,
+        "flying": false
+      },
+      "oracle_text": "At the beginning of your upkeep, sacrifice this enchantment unless you tap an untapped creature you control.\nCreatures can't attack you unless their controller pays {2} for each creature they control that's attacking you.",
+      "variants": [
+        "pay_exact_0",
+        "underfunded_0",
+        "stack_distinct_0",
+        "walker_short_0",
+        "upkeep_tap_0",
+        "upkeep_decline_0",
+        "upkeep_empty_0",
+        "upkeep_enemy_0",
+        "upkeep_tapped_0",
+        "world_replaced_0",
+        "cast_source_0",
+        "pay_exact_1",
+        "underfunded_1",
+        "stack_distinct_1",
+        "walker_short_1",
+        "upkeep_tap_1",
+        "upkeep_decline_1",
+        "upkeep_empty_1",
+        "upkeep_enemy_1",
+        "upkeep_tapped_1",
+        "world_replaced_1",
+        "cast_source_1"
+      ]
+    }
+  ]
+}

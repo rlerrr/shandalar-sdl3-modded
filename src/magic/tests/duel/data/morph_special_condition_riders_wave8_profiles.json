@@ -1,0 +1,278 @@
+{
+  "sources": {
+    "Dwarven Blastminer": {
+      "oracle": {
+        "oracle_id": "b373e978-c58b-465a-b68a-9d4acec9dce0",
+        "name": "Dwarven Blastminer",
+        "oracle_text": "{2}{R}, {T}: Destroy target nonbasic land.\nMorph {R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Dwarf",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ons/199/dwarven-blastminer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6125,
+        "iid": 2834,
+        "name": "Dwarven Blastminer",
+        "handler": "manalinkeh_card_dwarven_blastminer",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/onslaught.c",
+        "sha256": "83d381fa08bde10870e016e85b516ff5c97e76ea6347cbc2023f7c12078de57c",
+        "symbol": "card_dwarven_blastminer",
+        "line": 2318
+      }
+    },
+    "Fledgling Mawcor": {
+      "oracle": {
+        "oracle_id": "195f4bda-a5b9-4ac7-aa32-9ae5e5b0d374",
+        "name": "Fledgling Mawcor",
+        "oracle_text": "Flying\n{T}: This creature deals 1 damage to any target.\nMorph {U}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Beast",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Morph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jvc/10/fledgling-mawcor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8547,
+        "iid": 3497,
+        "name": "Fledgling Mawcor",
+        "handler": "manalinkeh_card_fledgling_mawcor",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/time_spiral.c",
+        "sha256": "c16649db59add837dc6a3b382999a70690a831fc4d582582db2d9a30102bb845",
+        "symbol": "card_fledgling_mawcor",
+        "line": 2361
+      }
+    },
+    "Wall of Deceit": {
+      "oracle": {
+        "oracle_id": "73714a40-5e8d-4aea-87fe-5aa0db53d6ff",
+        "name": "Wall of Deceit",
+        "oracle_text": "Defender (This creature can't attack.)\n{3}: Turn this creature face down.\nMorph {U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Morph",
+          "Defender"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jvc/5/wall-of-deceit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6458,
+        "iid": 10756,
+        "name": "Wall of Deceit",
+        "handler": "manalinkeh_card_wall_of_deceit",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/legions.c",
+        "sha256": "fa7d6520bc194c56378d1cf1d602aa5db9e9e559685c150bf6ed0b4f72c50ae0",
+        "symbol": "card_wall_of_deceit",
+        "line": 2156
+      }
+    },
+    "Zoetic Cavern": {
+      "oracle": {
+        "oracle_id": "3763de30-28e1-4689-a71c-07d2fea3a466",
+        "name": "Zoetic Cavern",
+        "oracle_text": "{T}: Add {C}.\nMorph {2} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mkc/311/zoetic-cavern?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9056,
+        "iid": 11218,
+        "name": "Zoetic Cavern",
+        "handler": "manalinkeh_card_zoetic_cavern",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/commander_2014.c",
+        "sha256": "7374bfc4453a78f6a90237b3760c4f5aeb9c0e24ad9af2a832fa10750da396b0",
+        "symbol": "card_zoetic_cavern",
+        "line": 3089
+      }
+    }
+  },
+  "witnesses": {
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Sol Ring": {
+      "oracle": {
+        "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+        "name": "Sol Ring",
+        "oracle_text": "{T}: Add {C}{C}.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+      },
+      "registry": {
+        "csvid": 230,
+        "iid": 8968,
+        "name": "Sol Ring",
+        "handler": "manalinkeh_card_sol_ring",
+        "kind": "card"
+      }
+    },
+    "Wasteland": {
+      "oracle": {
+        "oracle_id": "09a70ae8-3859-4a09-901d-dce063fa3b5f",
+        "name": "Wasteland",
+        "oracle_text": "{T}: Add {C}.\n{T}, Sacrifice this land: Destroy target nonbasic land.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/248/wasteland?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3329,
+        "iid": 10850,
+        "name": "Wasteland",
+        "handler": "manalinkeh_card_wasteland",
+        "kind": "card"
+      }
+    }
+  },
+  "face_down": {
+    "csvid": 13252,
+    "iid": 3230,
+    "name": "Face-Down Creature",
+    "handler": "manalinkeh_card_face_down_creature",
+    "kind": "card"
+  }
+}

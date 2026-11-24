@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "csvid": 5405,
+  "card": "Mystic Snake",
+  "recipes": [
+    {
+      "family": "flash_entry_stack_control",
+      "version": 2,
+      "params": {
+        "csvid": 5405,
+        "mana": [
+          1,
+          0,
+          2,
+          1,
+          0,
+          0
+        ],
+        "stats": [
+          2,
+          2
+        ]
+      },
+      "oracle_text": "Flash\nWhen this creature enters, counter target spell.",
+      "variants": [
+        "low_0",
+        "low_1",
+        "high_0",
+        "high_1",
+        "uncounterable_0",
+        "uncounterable_1",
+        "empty_0",
+        "empty_1"
+      ]
+    }
+  ]
+}

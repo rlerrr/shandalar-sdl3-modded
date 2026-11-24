@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 15223,
+  "card": "Sphinx's Tutelage",
+  "recipes": [
+    {
+      "family": "mill_combat_and_draw",
+      "version": 2,
+      "params": {
+        "csvid": 15223,
+        "printed_cost": "{2}{U}"
+      },
+      "oracle_text": "Whenever you draw a card, target opponent mills two cards. If two nonland cards that share a color were milled this way, repeat this process.\n{5}{U}: Draw a card, then discard a card.",
+      "variants": [
+        "turn_chain_0",
+        "foe_draw_0",
+        "paid_loot_0",
+        "two_draws_0",
+        "short_library_0",
+        "turn_chain_1",
+        "foe_draw_1",
+        "paid_loot_1",
+        "two_draws_1",
+        "short_library_1"
+      ]
+    }
+  ]
+}

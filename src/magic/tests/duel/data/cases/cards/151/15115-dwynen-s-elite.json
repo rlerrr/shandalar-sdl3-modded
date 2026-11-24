@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Dwynen's Elite",
+  "csvid": 15115,
+  "recipes": [
+    {
+      "family": "entry_trigger_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 15115,
+        "mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, if you control another Elf, create a 1/1 green Elf Warrior creature token.",
+      "variants": [
+        "alone_0",
+        "alone_1",
+        "owner_elf_0",
+        "owner_elf_1",
+        "foe_elf_0",
+        "foe_elf_1",
+        "tapped_elf_0",
+        "tapped_elf_1",
+        "changeling_0",
+        "changeling_1",
+        "elf_removed_0",
+        "elf_removed_1",
+        "nonelf_0",
+        "nonelf_1"
+      ]
+    }
+  ]
+}

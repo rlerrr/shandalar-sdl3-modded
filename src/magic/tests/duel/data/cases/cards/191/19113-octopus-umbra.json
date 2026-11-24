@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Octopus Umbra",
+  "csvid": 19113,
+  "recipes": [
+    {
+      "family": "attack_trigger_block_and_target",
+      "version": 2,
+      "params": {
+        "csvid": 19113,
+        "cost": "{3}{U}{U}",
+        "choices": [
+          "tap_0",
+          "tap_1",
+          "decline_0",
+          "decline_1",
+          "armor_0",
+          "armor_1"
+        ]
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature has base power and toughness 8/8 and has \"Whenever this creature attacks, you may tap target creature with power 8 or less.\"\nUmbra armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)",
+      "variants": [
+        "tap_0",
+        "tap_1",
+        "decline_0",
+        "decline_1",
+        "armor_0",
+        "armor_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Rubblebelt Recluse",
+  "csvid": 19720,
+  "recipes": [
+    {
+      "family": "required_attack_creature",
+      "version": 2,
+      "oracle_text": "This creature attacks each combat if able.",
+      "params": {
+        "costs": {
+          "red": [
+            4,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        "power": 6,
+        "toughness": 5
+      },
+      "variants": [
+        "omitted_0",
+        "already_selected_0",
+        "optional_ally_0",
+        "competing_selected_0",
+        "two_required_0",
+        "tapped_0",
+        "sick_0",
+        "pacified_0",
+        "opponent_turn_0",
+        "blocked_0",
+        "paid_fresh_0",
+        "paid_next_turn_0",
+        "unfunded_0",
+        "wrong_color_0",
+        "later_combat_0",
+        "proposed_replay_0",
+        "other_registration_0",
+        "omitted_1",
+        "already_selected_1",
+        "optional_ally_1",
+        "competing_selected_1",
+        "two_required_1",
+        "tapped_1",
+        "sick_1",
+        "pacified_1",
+        "opponent_turn_1",
+        "blocked_1",
+        "paid_fresh_1",
+        "paid_next_turn_1",
+        "unfunded_1",
+        "wrong_color_1",
+        "later_combat_1",
+        "proposed_replay_1",
+        "other_registration_1"
+      ]
+    }
+  ]
+}

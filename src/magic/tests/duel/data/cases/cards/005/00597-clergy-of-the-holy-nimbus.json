@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Clergy of the Holy Nimbus",
+  "csvid": 597,
+  "recipes": [
+    {
+      "family": "regeneration_conditional",
+      "version": 2,
+      "params": {
+        "csvid": 597,
+        "printed_mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "rules": "If this creature would be destroyed, regenerate it.\n{1}: This creature can't be regenerated this turn. Only your opponents may activate this ability."
+      },
+      "oracle_text": "If this creature would be destroyed, regenerate it.\n{1}: This creature can't be regenerated this turn. Only your opponents may activate this ability.",
+      "variants": [
+        "automatic_0",
+        "automatic_1",
+        "deny_fee_0",
+        "deny_fee_1",
+        "decline_fee_0",
+        "decline_fee_1",
+        "cannot_regenerate_0",
+        "cannot_regenerate_1"
+      ]
+    }
+  ]
+}

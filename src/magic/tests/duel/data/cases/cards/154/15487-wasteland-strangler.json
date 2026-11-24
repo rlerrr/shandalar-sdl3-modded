@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Wasteland Strangler",
+  "csvid": 15487,
+  "recipes": [
+    {
+      "family": "devoid_opponent_exile_costs",
+      "version": 2,
+      "params": {
+        "model": "shrink",
+        "cost": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fee": null,
+        "exile_cost": 1
+      },
+      "oracle_text": "Devoid (This card has no color.)\nWhen this creature enters, you may put a card an opponent owns from exile into that player's graveyard. If you do, target creature gets -3/-3 until end of turn.",
+      "variants": [
+        "paid_0",
+        "own_exile_0",
+        "empty_0",
+        "mixed_0",
+        "replay_0",
+        "decline_0",
+        "lethal_0",
+        "expiry_0",
+        "paid_1",
+        "own_exile_1",
+        "empty_1",
+        "mixed_1",
+        "replay_1",
+        "decline_1",
+        "lethal_1",
+        "expiry_1"
+      ]
+    }
+  ]
+}

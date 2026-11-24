@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Rogue Refiner",
+  "csvid": 16788,
+  "recipes": [
+    {
+      "family": "entry_trigger_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 16788,
+        "printed_mana": "{1}{G}{U}",
+        "rules": "When this creature enters, draw a card and you get {E}{E} (two energy counters)."
+      },
+      "oracle_text": "When this creature enters, draw a card and you get {E}{E} (two energy counters).",
+      "variants": [
+        "paid_entry_0",
+        "paid_entry_1",
+        "spend_energy_0",
+        "spend_energy_1",
+        "bounce_recast_0",
+        "bounce_recast_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "csvid": 9900,
+  "card": "Voracious Hatchling",
+  "recipes": [
+    {
+      "family": "cast_spell_color_riders",
+      "version": 2,
+      "params": {
+        "effect": "hatchling",
+        "colors": [
+          "W",
+          "B"
+        ],
+        "price": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "other_price": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hybrid": true,
+        "base": [
+          6,
+          6
+        ],
+        "clauses": [
+          "Lifelink",
+          "This creature enters with four -1/-1 counters on it.",
+          "Whenever you cast a white spell, remove a -1/-1 counter from this creature.",
+          "Whenever you cast a black spell, remove a -1/-1 counter from this creature."
+        ],
+        "hatch_rider": "lifelink"
+      },
+      "oracle_text": "Lifelink\nThis creature enters with four -1/-1 counters on it.\nWhenever you cast a white spell, remove a -1/-1 counter from this creature.\nWhenever you cast a black spell, remove a -1/-1 counter from this creature.",
+      "variants": [
+        "first_0",
+        "first_1",
+        "opponent_0",
+        "opponent_1",
+        "unmatched_0",
+        "unmatched_1",
+        "colorless_0",
+        "colorless_1",
+        "replay_0",
+        "replay_1",
+        "second_0",
+        "second_1",
+        "both_0",
+        "both_1",
+        "lifelink_combat_0",
+        "lifelink_combat_1"
+      ]
+    }
+  ]
+}

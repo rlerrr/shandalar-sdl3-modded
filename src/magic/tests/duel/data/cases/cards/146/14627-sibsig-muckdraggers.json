@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Sibsig Muckdraggers",
+  "csvid": 14627,
+  "recipes": [
+    {
+      "family": "entry_trigger_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 14627,
+        "cost": [
+          8,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)\nWhen this creature enters, return target creature card from your graveyard to your hand.",
+      "variants": [
+        "delve_return_0",
+        "delve_return_1",
+        "ordinary_return_0",
+        "ordinary_return_1",
+        "foreign_grave_0",
+        "foreign_grave_1"
+      ]
+    }
+  ]
+}

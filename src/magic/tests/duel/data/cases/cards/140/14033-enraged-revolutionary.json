@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 14033,
+  "card": "Enraged Revolutionary",
+  "recipes": [
+    {
+      "family": "attack_follow_on_counters_and_dethrone",
+      "version": 2,
+      "params": {
+        "csvid": 14033,
+        "printed_cost": "{2}{R}"
+      },
+      "oracle_text": "Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.)",
+      "variants": [
+        "tie_0",
+        "defender_ahead_0",
+        "defender_behind_0",
+        "repeat_0",
+        "block_0",
+        "tie_1",
+        "defender_ahead_1",
+        "defender_behind_1",
+        "repeat_1",
+        "block_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,545 @@
+{
+  "sources": {
+    "Eradicate": {
+      "oracle_id": "782ff740-ff43-4c07-af0b-433cb9770661",
+      "name": "Eradicate",
+      "oracle_text": "Exile target nonblack creature. Search its controller's graveyard, hand, and library for all cards with the same name as that creature and exile them. Then that player shuffles.",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/bok/65/eradicate?utm_source=api"
+    },
+    "Scour": {
+      "oracle_id": "f18622da-81f3-4854-a1bb-8d658751d8db",
+      "name": "Scour",
+      "oracle_text": "Exile target enchantment. Search its controller's graveyard, hand, and library for all cards with the same name as that enchantment and exile them. Then that player shuffles.",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/bok/20/scour?utm_source=api"
+    },
+    "Sowing Salt": {
+      "oracle_id": "131d2b70-959d-4814-b0c8-38031f141718",
+      "name": "Sowing Salt",
+      "oracle_text": "Exile target nonbasic land. Search its controller's graveyard, hand, and library for all cards with the same name as that land and exile them. Then that player shuffles.",
+      "mana_cost": "{2}{R}{R}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/bok/118/sowing-salt?utm_source=api"
+    },
+    "Splinter": {
+      "oracle_id": "90f01e9f-68f1-4e41-97dc-8de990a91504",
+      "name": "Splinter",
+      "oracle_text": "Exile target artifact. Search its controller's graveyard, hand, and library for all cards with the same name as that artifact and exile them. Then that player shuffles.",
+      "mana_cost": "{2}{G}{G}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/bok/146/splinter?utm_source=api"
+    },
+    "Crumble to Dust": {
+      "oracle_id": "c13da0f4-917f-4e07-b484-21cb4bec4da6",
+      "name": "Crumble to Dust",
+      "oracle_text": "Devoid (This card has no color.)\nExile target nonbasic land. Search its controller's graveyard, hand, and library for any number of cards with the same name as that land and exile them. Then that player shuffles.",
+      "mana_cost": "{3}{R}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Devoid"
+      ],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/bfz/128/crumble-to-dust?utm_source=api"
+    }
+  },
+  "witnesses": {
+    "Boomerang": {
+      "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+      "name": "Boomerang",
+      "oracle_text": "Return target permanent to its owner's hand.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+    },
+    "Ceremonious Rejection": {
+      "oracle_id": "6aa5aa3d-fb46-47e5-bcf1-51a28e0f9974",
+      "name": "Ceremonious Rejection",
+      "oracle_text": "Counter target colorless spell.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/kld/40/ceremonious-rejection?utm_source=api"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Darksteel Citadel": {
+      "oracle_id": "8dc067bf-f78f-4ac4-b6e7-b305c42cf0bc",
+      "name": "Darksteel Citadel",
+      "oracle_text": "Indestructible\n{T}: Add {C}.",
+      "mana_cost": "",
+      "type_line": "Artifact Land",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/c21/285/darksteel-citadel?utm_source=api"
+    },
+    "Darksteel Relic": {
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "name": "Darksteel Relic",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+    },
+    "Fervor": {
+      "oracle_id": "8e0cea9c-3110-4728-9378-76849e33bb90",
+      "name": "Fervor",
+      "oracle_text": "Creatures you control have haste. (They can attack and {T} as soon as they come under your control.)",
+      "mana_cost": "{2}{R}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m13/129/fervor?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Golgari Guildmage": {
+      "oracle_id": "46dad873-11f5-4269-8ec2-f126419fbd7d",
+      "name": "Golgari Guildmage",
+      "oracle_text": "{4}{B}, Sacrifice a creature: Return target creature card from your graveyard to your hand.\n{4}{G}: Put a +1/+1 counter on target creature.",
+      "mana_cost": "{B/G}{B/G}",
+      "type_line": "Creature — Elf Shaman",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/clu/194/golgari-guildmage?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Naturalize": {
+      "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+      "name": "Naturalize",
+      "oracle_text": "Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+    },
+    "Nyxborn Shieldmate": {
+      "oracle_id": "a1012f33-7ebd-47c6-b670-1b0dc046fbce",
+      "name": "Nyxborn Shieldmate",
+      "oracle_text": "Bestow {2}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nEnchanted creature gets +1/+2.",
+      "mana_cost": "{W}",
+      "type_line": "Enchantment Creature — Human Soldier",
+      "power": "1",
+      "toughness": "2",
+      "keywords": [
+        "Bestow"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/bng/21/nyxborn-shieldmate?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Taiga": {
+      "oracle_id": "22e3cf1d-3559-4ce1-954c-8dc815342979",
+      "name": "Taiga",
+      "oracle_text": "({T}: Add {R} or {G}.)",
+      "mana_cost": "",
+      "type_line": "Land — Mountain Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/vma/317/taiga?utm_source=api"
+    },
+    "Walking Corpse": {
+      "oracle_id": "fea95888-e16a-4209-9cd4-623f7f4d2f67",
+      "name": "Walking Corpse",
+      "oracle_text": "",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Zombie",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m21/128/walking-corpse?utm_source=api"
+    },
+    "Wojek Halberdiers": {
+      "oracle_id": "96d6a400-f1bc-40f8-91ef-1d3cb96926f1",
+      "name": "Wojek Halberdiers",
+      "oracle_text": "Battalion — Whenever this creature and at least two other creatures attack, this creature gains first strike until end of turn.",
+      "mana_cost": "{R}{W}",
+      "type_line": "Creature — Human Soldier",
+      "power": "3",
+      "toughness": "2",
+      "keywords": [
+        "Battalion"
+      ],
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/gtc/208/wojek-halberdiers?utm_source=api"
+    }
+  },
+  "registry": {
+    "Boomerang": {
+      "csvid": 585,
+      "iid": 1233,
+      "name": "Boomerang",
+      "handler": "manalinkeh_card_boomerang",
+      "kind": "card"
+    },
+    "Ceremonious Rejection": {
+      "csvid": 16313,
+      "iid": 16402,
+      "name": "Ceremonious Rejection",
+      "handler": "manalinkeh_card_ceremonious_rejection",
+      "kind": "card"
+    },
+    "Counterspell": {
+      "csvid": 48,
+      "iid": 1996,
+      "name": "Counterspell",
+      "handler": "manalinkeh_card_counterspell",
+      "kind": "card"
+    },
+    "Crumble to Dust": {
+      "csvid": 15302,
+      "iid": 12128,
+      "name": "Crumble to Dust",
+      "handler": "manalinkeh_card_crumble_to_dust",
+      "kind": "card"
+    },
+    "Darksteel Citadel": {
+      "csvid": 6870,
+      "iid": 2248,
+      "name": "Darksteel Citadel",
+      "handler": "manalinkeh_card_darksteel_citadel",
+      "kind": "card"
+    },
+    "Darksteel Relic": {
+      "csvid": 11586,
+      "iid": 2259,
+      "name": "Darksteel Relic",
+      "handler": "manalinkeh_card_darksteel_myr",
+      "kind": "card"
+    },
+    "Eradicate": {
+      "csvid": 4121,
+      "iid": 3097,
+      "name": "Eradicate",
+      "handler": "manalinkeh_card_eradicate",
+      "kind": "card"
+    },
+    "Fervor": {
+      "csvid": 1604,
+      "iid": 3365,
+      "name": "Fervor",
+      "handler": "manalinkeh_card_fervor",
+      "kind": "card"
+    },
+    "Forest": {
+      "csvid": 91,
+      "iid": 2,
+      "name": "Forest",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Golgari Guildmage": {
+      "csvid": 7863,
+      "iid": 4106,
+      "name": "Golgari Guildmage",
+      "handler": "manalinkeh_card_golgari_guildmage",
+      "kind": "card"
+    },
+    "Grizzly Bears": {
+      "csvid": 106,
+      "iid": 4259,
+      "name": "Grizzly Bears",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Hill Giant": {
+      "csvid": 110,
+      "iid": 4570,
+      "name": "Hill Giant",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Island": {
+      "csvid": 126,
+      "iid": 1,
+      "name": "Island",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Naturalize": {
+      "csvid": 1096,
+      "iid": 6485,
+      "name": "Naturalize",
+      "handler": "manalinkeh_card_disenchant",
+      "kind": "card"
+    },
+    "Nyxborn Shieldmate": {
+      "csvid": 13765,
+      "iid": 6736,
+      "name": "Nyxborn Shieldmate",
+      "handler": "manalinkeh_card_nyxborn_shieldmate",
+      "kind": "card"
+    },
+    "Plains": {
+      "csvid": 188,
+      "iid": 4,
+      "name": "Plains",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Scour": {
+      "csvid": 4188,
+      "iid": 8337,
+      "name": "Scour",
+      "handler": "manalinkeh_card_scour",
+      "kind": "card"
+    },
+    "Sowing Salt": {
+      "csvid": 4193,
+      "iid": 9073,
+      "name": "Sowing Salt",
+      "handler": "manalinkeh_card_sowing_salt",
+      "kind": "card"
+    },
+    "Splinter": {
+      "csvid": 4194,
+      "iid": 9231,
+      "name": "Splinter",
+      "handler": "manalinkeh_card_splinter2",
+      "kind": "card"
+    },
+    "Taiga": {
+      "csvid": 241,
+      "iid": 10,
+      "name": "Taiga",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Walking Corpse": {
+      "csvid": 12124,
+      "iid": 10747,
+      "name": "Walking Corpse",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Wojek Halberdiers": {
+      "csvid": 13104,
+      "iid": 11054,
+      "name": "Wojek Halberdiers",
+      "handler": "manalinkeh_card_wojek_halberdier",
+      "kind": "card"
+    }
+  }
+}

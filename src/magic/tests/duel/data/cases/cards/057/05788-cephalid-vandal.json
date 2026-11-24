@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Cephalid Vandal",
+  "csvid": 5788,
+  "recipes": [
+    {
+      "family": "mill_upkeep_and_untap",
+      "version": 2,
+      "params": {
+        "csvid": 5788,
+        "printed_mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "rules": "At the beginning of your upkeep, put a shred counter on this creature. Then mill a card for each shred counter on this creature."
+      },
+      "oracle_text": "At the beginning of your upkeep, put a shred counter on this creature. Then mill a card for each shred counter on this creature.",
+      "variants": [
+        "typed_recurrence_0",
+        "typed_recurrence_1",
+        "returned_source_0",
+        "returned_source_1"
+      ]
+    }
+  ]
+}

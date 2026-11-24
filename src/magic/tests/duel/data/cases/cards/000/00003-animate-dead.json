@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Animate Dead",
+  "csvid": 3,
+  "recipes": [
+    {
+      "family": "entry_rider_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 3,
+        "cost": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Enchant creature card in a graveyard\nWhen this Aura enters, if it's on the battlefield, it loses \"enchant creature card in a graveyard\" and gains \"enchant creature put onto the battlefield with this Aura.\" Return enchanted creature card to the battlefield under your control and attach this Aura to it. When this Aura leaves the battlefield, that creature's controller sacrifices it.\nEnchanted creature gets -1/-0.",
+      "variants": [
+        "own_grave_0",
+        "own_grave_1",
+        "foreign_grave_0",
+        "foreign_grave_1",
+        "both_choose_foreign_0",
+        "both_choose_foreign_1",
+        "sacrifice_indestructible_0",
+        "sacrifice_indestructible_1",
+        "lost_grave_target_0",
+        "lost_grave_target_1",
+        "no_creature_0",
+        "no_creature_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 11264,
+  "card": "Glimmerpost",
+  "recipes": [
+    {
+      "family": "entry_follow_on_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 11264,
+        "printed_cost": ""
+      },
+      "oracle_text": "When this land enters, you gain 1 life for each Locus on the battlefield.\n{T}: Add {C}.",
+      "variants": [
+        "solo_0",
+        "friendly_0",
+        "opposing_0",
+        "mixed_0",
+        "mana_0",
+        "second_turn_0",
+        "solo_1",
+        "friendly_1",
+        "opposing_1",
+        "mixed_1",
+        "mana_1",
+        "second_turn_1"
+      ]
+    }
+  ]
+}

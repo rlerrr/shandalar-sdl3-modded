@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "card": "Shower of Coals",
+  "csvid": 5696,
+  "recipes": [
+    {
+      "family": "threshold_global_effects",
+      "version": 2,
+      "params": {
+        "csvid": 5696,
+        "branch": "coals",
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "oracle_text": "Shower of Coals deals 2 damage to each of up to three targets.\nThreshold — Shower of Coals deals 4 damage to each of those permanents and/or players instead if there are seven or more cards in your graveyard.",
+      "variants": [
+        "six_0",
+        "six_1",
+        "seven_0",
+        "seven_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "one_target_0",
+        "one_target_1",
+        "zero_targets_0",
+        "zero_targets_1",
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "countered_0",
+        "countered_1",
+        "gain_seventh_0",
+        "gain_seventh_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

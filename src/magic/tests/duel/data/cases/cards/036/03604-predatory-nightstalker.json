@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 3604,
+  "card": "Predatory Nightstalker",
+  "recipes": [
+    {
+      "family": "entry_trigger_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 3604,
+        "printed_cost": "{3}{B}{B}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, you may have target opponent sacrifice a creature of their choice.",
+      "variants": [
+        "chosen_0",
+        "indestructible_0",
+        "no_foe_0",
+        "decline_0",
+        "chosen_1",
+        "indestructible_1",
+        "no_foe_1"
+      ]
+    }
+  ]
+}

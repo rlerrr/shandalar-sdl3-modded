@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "card": "Tangle Kelp",
+  "csvid": 949,
+  "recipes": [
+    {
+      "family": "remaining_entry_attachments",
+      "version": 2,
+      "params": {
+        "csvid": 949,
+        "mana_cost": "{U}"
+      },
+      "oracle_text": "Enchant creature\nWhen this Aura enters, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step if it attacked during its controller's last turn.",
+      "variants": [
+        "last_attack_0",
+        "last_attack_1",
+        "idle_0",
+        "idle_1"
+      ]
+    }
+  ]
+}

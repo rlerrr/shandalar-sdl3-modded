@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 2939,
+  "card": "Barrow Ghoul",
+  "recipes": [
+    {
+      "family": "upkeep_payment_and_sacrifice",
+      "version": 2,
+      "params": {
+        "csvid": 2939,
+        "printed_cost": "{1}{B}",
+        "keywords": []
+      },
+      "oracle_text": "At the beginning of your upkeep, sacrifice this creature unless you exile the top creature card of your graveyard.",
+      "variants": [
+        "top_creature_0",
+        "top_creature_1",
+        "no_creature_0",
+        "no_creature_1",
+        "decline_0",
+        "decline_1"
+      ]
+    }
+  ]
+}

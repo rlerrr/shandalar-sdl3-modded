@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Coral Barrier",
+  "csvid": 14087,
+  "recipes": [
+    {
+      "family": "entry_trigger_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 14087,
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Defender (This creature can't attack.)\nWhen this creature enters, create a 1/1 blue Squid creature token with islandwalk. (It can't be blocked as long as defending player controls an Island.)",
+      "variants": [
+        "islandwalk_0",
+        "islandwalk_1",
+        "own_island_0",
+        "own_island_1",
+        "nonisland_0",
+        "nonisland_1",
+        "squid_type_0",
+        "squid_type_1",
+        "defend_0",
+        "defend_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "csvid": 3292,
+  "card": "Soltari Trooper",
+  "recipes": [
+    {
+      "family": "attack_trigger_stat_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 3292,
+        "printed_cost": "{1}{W}"
+      },
+      "oracle_text": "Shadow (This creature can block or be blocked by only creatures with shadow.)\nWhenever this creature attacks, it gets +1/+1 until end of turn.",
+      "variants": [
+        "ground_illegal_0",
+        "shadow_blocks_0",
+        "shadow_defends_0",
+        "ground_illegal_1",
+        "shadow_blocks_1",
+        "shadow_defends_1"
+      ]
+    }
+  ]
+}

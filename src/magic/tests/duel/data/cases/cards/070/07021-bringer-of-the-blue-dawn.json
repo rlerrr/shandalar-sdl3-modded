@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Bringer of the Blue Dawn",
+  "csvid": 7021,
+  "recipes": [
+    {
+      "family": "upkeep_draw_and_discard",
+      "version": 2,
+      "params": {
+        "csvid": 7021,
+        "printed_mana": "{7}{U}{U}",
+        "rules": "You may pay {W}{U}{B}{R}{G} rather than pay this spell's mana cost.\nTrample\nAt the beginning of your upkeep, you may draw two cards."
+      },
+      "oracle_text": "You may pay {W}{U}{B}{R}{G} rather than pay this spell's mana cost.\nTrample\nAt the beginning of your upkeep, you may draw two cards.",
+      "variants": [
+        "printed_trample_0",
+        "printed_trample_1",
+        "rainbow_draw_0",
+        "rainbow_draw_1",
+        "short_rainbow_0",
+        "short_rainbow_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

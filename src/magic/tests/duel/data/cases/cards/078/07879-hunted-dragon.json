@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Hunted Dragon",
+  "csvid": 7879,
+  "recipes": [
+    {
+      "family": "entry_follow_on_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 7879,
+        "mana_cost": "{3}{R}{R}"
+      },
+      "oracle_text": "Flying, haste\nWhen this creature enters, target opponent creates three 2/2 white Knight creature tokens with first strike.",
+      "variants": [
+        "entry_0",
+        "entry_1",
+        "haste_0",
+        "haste_1",
+        "knight_first_strike_0",
+        "knight_first_strike_1",
+        "untargetable_0",
+        "untargetable_1"
+      ]
+    }
+  ]
+}

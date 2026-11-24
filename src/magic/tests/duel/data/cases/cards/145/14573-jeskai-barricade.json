@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Jeskai Barricade",
+  "csvid": 14573,
+  "recipes": [
+    {
+      "family": "flash_entry_battlefield_targeting",
+      "version": 2,
+      "params": {
+        "csvid": 14573,
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "stats": [
+          0,
+          4
+        ],
+        "clauses": [
+          "Flash (You may cast this spell any time you could cast an instant.)",
+          "Defender",
+          "When this creature enters, you may return another target creature you control to its owner's hand."
+        ],
+        "modes": [
+          "own_bounce",
+          "foreign_owned_bounce",
+          "no_other",
+          "defender"
+        ]
+      },
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nDefender\nWhen this creature enters, you may return another target creature you control to its owner's hand.",
+      "variants": [
+        "own_bounce_0",
+        "own_bounce_1",
+        "foreign_owned_bounce_0",
+        "foreign_owned_bounce_1",
+        "no_other_0",
+        "no_other_1",
+        "defender_0",
+        "defender_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

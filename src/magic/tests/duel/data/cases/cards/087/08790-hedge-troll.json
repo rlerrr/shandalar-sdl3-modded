@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 8790,
+  "card": "Hedge Troll",
+  "recipes": [
+    {
+      "family": "regeneration_self_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 8790,
+        "printed_cost": "{2}{G}"
+      },
+      "oracle_text": "This creature gets +1/+1 as long as you control a Plains.\n{W}: Regenerate this creature.",
+      "variants": [
+        "regenerate_0",
+        "short_0",
+        "terminate_0",
+        "proactive_0",
+        "type_control_0",
+        "type_enter_leave_0",
+        "two_types_0",
+        "regenerate_1",
+        "short_1",
+        "terminate_1",
+        "proactive_1",
+        "type_control_1",
+        "type_enter_leave_1",
+        "two_types_1"
+      ]
+    }
+  ]
+}

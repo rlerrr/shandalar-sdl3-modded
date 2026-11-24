@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Impervious Greatwurm",
+  "csvid": 19397,
+  "recipes": [
+    {
+      "family": "convoke_large_and_defensive",
+      "version": 2,
+      "params": {
+        "csvid": 19397,
+        "mana": [
+          7,
+          0,
+          0,
+          3,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nIndestructible",
+      "variants": [
+        "mixed_0",
+        "mixed_1",
+        "full_creatures_0",
+        "full_creatures_1",
+        "paid_0",
+        "paid_1",
+        "tapped_short_0",
+        "tapped_short_1",
+        "mixed_rider_0",
+        "mixed_rider_1"
+      ]
+    }
+  ]
+}

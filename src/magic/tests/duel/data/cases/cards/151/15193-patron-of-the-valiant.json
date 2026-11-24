@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 15193,
+  "card": "Patron of the Valiant",
+  "recipes": [
+    {
+      "family": "entry_follow_on_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 15193,
+        "printed_cost": "{3}{W}{W}"
+      },
+      "oracle_text": "Flying\nWhen this creature enters, put a +1/+1 counter on each creature you control with a +1/+1 counter on it.",
+      "variants": [
+        "alone_0",
+        "boost_0",
+        "flying_0",
+        "countered_0",
+        "alone_1",
+        "boost_1",
+        "flying_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

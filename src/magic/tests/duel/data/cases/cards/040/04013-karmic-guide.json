@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Karmic Guide",
+  "csvid": 4013,
+  "recipes": [
+    {
+      "family": "reanimation_additional_riders",
+      "version": 2,
+      "params": {
+        "rider": "echo",
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "threshold": null
+      },
+      "oracle_text": "Flying, protection from black\nEcho {3}{W}{W} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters, return target creature card from your graveyard to the battlefield.",
+      "variants": [
+        "effect_0",
+        "underpaid_0",
+        "countered_0",
+        "replay_0",
+        "empty_0",
+        "wrong_type_0",
+        "alternate_0",
+        "opponent_only_0",
+        "shroud_0",
+        "echo_pay_0",
+        "echo_decline_0",
+        "echo_short_0",
+        "echo_wrong_color_0",
+        "flight_ground_0",
+        "protection_black_0",
+        "flight_artifact_0",
+        "target_protection_0",
+        "effect_1",
+        "underpaid_1",
+        "countered_1",
+        "replay_1",
+        "empty_1",
+        "wrong_type_1",
+        "alternate_1",
+        "opponent_only_1",
+        "shroud_1",
+        "echo_pay_1",
+        "echo_decline_1",
+        "echo_short_1",
+        "echo_wrong_color_1",
+        "flight_ground_1",
+        "protection_black_1",
+        "flight_artifact_1",
+        "target_protection_1"
+      ]
+    }
+  ]
+}

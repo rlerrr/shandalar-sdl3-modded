@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Dega Sanctuary",
+  "csvid": 5353,
+  "recipes": [
+    {
+      "family": "upkeep_damage_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 5353
+      },
+      "oracle_text": "At the beginning of your upkeep, if you control a black or red permanent, you gain 2 life. If you control a black permanent and a red permanent, you gain 4 life instead.",
+      "variants": [
+        "black_0",
+        "black_1",
+        "red_0",
+        "red_1",
+        "both_0",
+        "both_1",
+        "dual_0",
+        "dual_1",
+        "foreign_only_0",
+        "foreign_only_1"
+      ]
+    }
+  ]
+}

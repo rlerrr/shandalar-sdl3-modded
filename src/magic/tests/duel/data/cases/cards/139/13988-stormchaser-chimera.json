@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Stormchaser Chimera",
+  "csvid": 13988,
+  "recipes": [
+    {
+      "family": "library_scry_activated_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 13988,
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Flying\n{2}{U}{R}: Scry 1, then reveal the top card of your library. This creature gets +X/+0 until end of turn, where X is that card's mana value. (To scry 1, look at the top card of your library, then you may put that card on the bottom.)",
+      "variants": [
+        "pump_bottom_0",
+        "pump_bottom_1",
+        "flight_0",
+        "flight_1",
+        "short_red_0",
+        "short_red_1",
+        "empty_deck_0",
+        "empty_deck_1"
+      ]
+    }
+  ]
+}

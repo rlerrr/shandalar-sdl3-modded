@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "csvid": 11486,
+  "card": "Mortarpod",
+  "recipes": [
+    {
+      "family": "living_weapon_equipment",
+      "version": 2,
+      "params": {
+        "effect": "living_weapon",
+        "rider": "sacrifice",
+        "cast_mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "equip_generic": 2,
+        "power_delta": 0,
+        "toughness_delta": 1,
+        "keyword": ""
+      },
+      "oracle_text": "Living weapon (When this Equipment enters, create a 0/0 black Phyrexian Germ creature token, then attach this to it.)\nEquipped creature gets +0/+1 and has \"Sacrifice this creature: This creature deals 1 damage to any target.\"\nEquip {2}",
+      "variants": [
+        "enter_0",
+        "cast_short_0",
+        "countered_0",
+        "move_0",
+        "remove_source_0",
+        "bounce_germ_0",
+        "equip_target_leaves_0",
+        "replay_entry_0",
+        "replay_move_0",
+        "ping_player_0",
+        "ping_self_0",
+        "ping_creature_0",
+        "ping_lethal_0",
+        "ping_walker_0",
+        "ping_host_0",
+        "ping_lifelink_0",
+        "ping_replay_0",
+        "no_host_equip_short_0",
+        "enter_1",
+        "cast_short_1",
+        "countered_1",
+        "move_1",
+        "remove_source_1",
+        "bounce_germ_1",
+        "equip_target_leaves_1",
+        "replay_entry_1",
+        "replay_move_1",
+        "ping_player_1",
+        "ping_self_1",
+        "ping_creature_1",
+        "ping_lethal_1",
+        "ping_walker_1",
+        "ping_host_1",
+        "ping_lifelink_1",
+        "ping_replay_1",
+        "no_host_equip_short_1"
+      ]
+    }
+  ]
+}

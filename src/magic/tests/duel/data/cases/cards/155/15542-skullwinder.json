@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Skullwinder",
+  "csvid": 15542,
+  "recipes": [
+    {
+      "family": "entry_rider_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 15542,
+        "cost": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Deathtouch\nWhen this creature enters, return target card from your graveyard to your hand, then choose an opponent. That player returns a card from their graveyard to their hand.",
+      "variants": [
+        "both_graves_0",
+        "both_graves_1",
+        "own_only_0",
+        "own_only_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "deathtouch_0",
+        "deathtouch_1"
+      ]
+    }
+  ]
+}

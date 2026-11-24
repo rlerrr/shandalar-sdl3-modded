@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "csvid": 16683,
+  "card": "Daredevil Dragster",
+  "recipes": [
+    {
+      "family": "vehicle_crew_utility",
+      "version": 2,
+      "params": {
+        "effect": "velocity",
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "threshold": 2,
+        "power": 4,
+        "toughness": 4,
+        "keywords": []
+      },
+      "oracle_text": "At end of combat, if this Vehicle attacked or blocked this combat, put a velocity counter on it. Then if it has two or more velocity counters on it, sacrifice it and draw two cards.\nCrew 2 (Tap any number of creatures you control with total power 2 or more: This Vehicle becomes an artifact creature until end of turn.)",
+      "variants": [
+        "cast_0",
+        "cast_1",
+        "cast_short_0",
+        "cast_short_1",
+        "ordered_exact_0",
+        "ordered_exact_1",
+        "underpowered_0",
+        "underpowered_1",
+        "partial_cancel_0",
+        "partial_cancel_1",
+        "expires_0",
+        "expires_1",
+        "pending_replay_0",
+        "pending_replay_1",
+        "attack_once_0",
+        "attack_once_1",
+        "block_once_0",
+        "block_once_1",
+        "no_participation_0",
+        "no_participation_1",
+        "attack_twice_0",
+        "attack_twice_1",
+        "attack_then_block_0",
+        "attack_then_block_1",
+        "attack_replay_0",
+        "attack_replay_1"
+      ]
+    }
+  ]
+}

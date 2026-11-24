@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "card": "Spark of Creativity",
+  "csvid": 16527,
+  "recipes": [
+    {
+      "family": "own_exile_specializations",
+      "version": 2,
+      "params": {
+        "model": "spark",
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "count": 1
+      },
+      "oracle_text": "Choose target creature. Exile the top card of your library. You may have Spark of Creativity deal damage to that creature equal to the exiled card's mana value. If you don't, you may play that card until end of turn.",
+      "variants": [
+        "empty_0",
+        "wrong_source_mana_0",
+        "countered_0",
+        "expiry_0",
+        "damage_0",
+        "lethal_0",
+        "zero_damage_0",
+        "own_target_0",
+        "removed_target_0",
+        "no_target_0",
+        "play_land_0",
+        "paid_spell_0",
+        "wrong_spell_color_0",
+        "wrong_seat_0",
+        "spent_land_drop_0",
+        "replay_0",
+        "empty_1",
+        "wrong_source_mana_1",
+        "countered_1",
+        "expiry_1",
+        "damage_1",
+        "lethal_1",
+        "zero_damage_1",
+        "own_target_1",
+        "removed_target_1",
+        "no_target_1",
+        "play_land_1",
+        "paid_spell_1",
+        "wrong_spell_color_1",
+        "wrong_seat_1",
+        "spent_land_drop_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

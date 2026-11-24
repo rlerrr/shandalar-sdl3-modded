@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Bottle of Suleiman",
+  "csvid": 400,
+  "recipes": [
+    {
+      "family": "seeded_coin_riders",
+      "version": 2,
+      "params": {
+        "shape": "bottle",
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "oracle_text": "{1}, Sacrifice this artifact: Flip a coin. If you win the flip, create a 5/5 colorless Djinn artifact creature token with flying. If you lose the flip, this artifact deals 5 damage to you.",
+      "variants": [
+        "win_0",
+        "lose_0",
+        "replay_0",
+        "unfunded_0",
+        "flight_0",
+        "win_1",
+        "lose_1",
+        "replay_1",
+        "unfunded_1",
+        "flight_1"
+      ]
+    }
+  ]
+}

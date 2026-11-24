@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "csvid": 5354,
+  "card": "Degavolver",
+  "recipes": [
+    {
+      "family": "kicker_volvers",
+      "version": 2,
+      "oracle_text": "Kicker {1}{B} and/or {R} (You may pay an additional {1}{B} and/or {R} as you cast this spell.)\nIf this creature was kicked with its {1}{B} kicker, it enters with two +1/+1 counters on it and with \"Pay 3 life: Regenerate this creature.\"\nIf this creature was kicked with its {R} kicker, it enters with a +1/+1 counter on it and with first strike.",
+      "params": {
+        "price": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "kickers": [
+          {
+            "cost": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "counters": 2,
+            "trait": "regenerate"
+          },
+          {
+            "cost": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "counters": 1,
+            "trait": "first_strike"
+          }
+        ],
+        "pt": [
+          1,
+          1
+        ],
+        "clauses": [
+          "Kicker {1}{B} and/or {R} (You may pay an additional {1}{B} and/or {R} as you cast this spell.)",
+          "If this creature was kicked with its {1}{B} kicker, it enters with two +1/+1 counters on it and with \"Pay 3 life: Regenerate this creature.\"",
+          "If this creature was kicked with its {R} kicker, it enters with a +1/+1 counter on it and with first strike."
+        ]
+      },
+      "variants": [
+        "decline_0",
+        "decline_1",
+        "first_0",
+        "first_1",
+        "second_0",
+        "second_1",
+        "both_0",
+        "both_1",
+        "short_generic_0",
+        "short_generic_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "bounce_recast_0",
+        "bounce_recast_1"
+      ]
+    }
+  ]
+}

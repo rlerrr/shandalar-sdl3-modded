@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Surrakar Spellblade",
+  "csvid": 11058,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "cast_instant_or_sorcery_riders",
+      "version": 2,
+      "oracle_text": "Whenever you cast an instant or sorcery spell, you may put a charge counter on this creature.\nWhenever this creature deals combat damage to a player, you may draw X cards, where X is the number of charge counters on it.",
+      "params": {
+        "effect": "spellblade",
+        "mana": [
+          1,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "hybrid": [],
+        "stats": [
+          2,
+          1
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "instant_0",
+        "instant_1",
+        "sorcery_0",
+        "sorcery_1",
+        "own_creature_0",
+        "own_creature_1",
+        "enemy_instant_0",
+        "enemy_instant_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "scaled_combat_0",
+        "scaled_combat_1",
+        "blocked_draw_0",
+        "blocked_draw_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

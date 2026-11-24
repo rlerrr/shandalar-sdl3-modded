@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "First Response",
+  "csvid": 14100,
+  "recipes": [
+    {
+      "family": "upkeep_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 14100,
+        "mana_cost": "{3}{W}"
+      },
+      "oracle_text": "At the beginning of each upkeep, if you lost life last turn, create a 1/1 white Soldier creature token.",
+      "variants": [
+        "own_loss_0",
+        "own_loss_1",
+        "foe_loss_0",
+        "foe_loss_1",
+        "next_clean_0",
+        "next_clean_1"
+      ]
+    }
+  ]
+}

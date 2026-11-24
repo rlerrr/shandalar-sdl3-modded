@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Psychotic Episode",
+  "csvid": 8642,
+  "recipes": [
+    {
+      "family": "madness_variable_and_zones",
+      "version": 2,
+      "params": {
+        "csvid": 8642,
+        "normal": [
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "madness_fixed": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Target player reveals their hand and the top card of their library. You choose a card revealed this way. That player puts the chosen card on the bottom of their library.\nMadness {1}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "variants": [
+        "normal_top_0",
+        "normal_top_1",
+        "normal_hand_0",
+        "normal_hand_1",
+        "paid_top_0",
+        "paid_top_1",
+        "short_0",
+        "short_1",
+        "normal_countered_0",
+        "normal_countered_1"
+      ]
+    }
+  ]
+}

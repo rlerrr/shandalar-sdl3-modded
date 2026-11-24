@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Hunt the Hunter",
+  "csvid": 13464,
+  "recipes": [
+    {
+      "family": "fight_targeted_spells",
+      "version": 2,
+      "params": {
+        "csvid": 13464,
+        "mana": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "timing": "Sorcery",
+        "boost": [
+          2,
+          2
+        ],
+        "clauses": [
+          "Target green creature you control gets +2/+2 until end of turn. It fights target green creature an opponent controls."
+        ],
+        "modes": [
+          "mutual",
+          "enemy_bounced",
+          "own_bounced",
+          "no_opposing_target",
+          "wrong_own_color",
+          "through_fog"
+        ]
+      },
+      "oracle_text": "Target green creature you control gets +2/+2 until end of turn. It fights target green creature an opponent controls.",
+      "variants": [
+        "mutual_0",
+        "mutual_1",
+        "enemy_bounced_0",
+        "enemy_bounced_1",
+        "own_bounced_0",
+        "own_bounced_1",
+        "no_opposing_target_0",
+        "no_opposing_target_1",
+        "wrong_own_color_0",
+        "wrong_own_color_1",
+        "through_fog_0",
+        "through_fog_1"
+      ]
+    }
+  ]
+}

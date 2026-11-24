@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Gore Vassal",
+  "csvid": 11453,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_sacrifice_and_team",
+      "version": 2,
+      "params": {
+        "csvid": 11453,
+        "printed_cost": "{2}{W}",
+        "choices": [
+          "survives_0",
+          "survives_1",
+          "foreign_0",
+          "foreign_1",
+          "lethal_0",
+          "lethal_1"
+        ]
+      },
+      "oracle_text": "Sacrifice this creature: Put a -1/-1 counter on target creature. Then if that creature's toughness is 1 or greater, regenerate it.",
+      "variants": [
+        "survives_0",
+        "survives_1",
+        "foreign_0",
+        "foreign_1",
+        "lethal_0",
+        "lethal_1"
+      ]
+    }
+  ]
+}

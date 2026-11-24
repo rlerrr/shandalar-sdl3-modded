@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "card": "Shattering Pulse",
+  "csvid": 1434,
+  "recipes": [
+    {
+      "family": "buyback_spell",
+      "version": 2,
+      "oracle_text": "Buyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nDestroy target artifact.",
+      "params": {
+        "mana": "{1}{R}",
+        "fee": "{3}",
+        "effect": "destroy_artifact",
+        "instant": true
+      },
+      "variants": [
+        "paid_0",
+        "ordinary_0",
+        "decline_0",
+        "short_fee_0",
+        "countered_0",
+        "recast_0",
+        "repeat_paid_0",
+        "pending_replay_0",
+        "wrong_base_0",
+        "fizzle_0",
+        "cancel_target_0",
+        "wrong_type_0",
+        "indestructible_0",
+        "offturn_0",
+        "paid_1",
+        "ordinary_1",
+        "decline_1",
+        "short_fee_1",
+        "countered_1",
+        "recast_1",
+        "repeat_paid_1",
+        "pending_replay_1",
+        "wrong_base_1",
+        "fizzle_1",
+        "cancel_target_1",
+        "wrong_type_1",
+        "indestructible_1",
+        "offturn_1"
+      ]
+    }
+  ]
+}

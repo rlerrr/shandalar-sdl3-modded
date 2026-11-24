@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Survival Cache",
+  "csvid": 11060,
+  "recipes": [
+    {
+      "family": "untargeted_rebound",
+      "version": 2,
+      "params": {
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "keywords": [],
+        "mode": "life",
+        "life": 2,
+        "draw": 1
+      },
+      "oracle_text": "You gain 2 life. Then if you have more life than an opponent, draw a card.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
+      "variants": [
+        "scheduled_0",
+        "countered_0",
+        "snapshot_0",
+        "wrong_color_0",
+        "equal_then_ahead_0",
+        "still_behind_0",
+        "scheduled_1",
+        "countered_1",
+        "snapshot_1",
+        "wrong_color_1",
+        "equal_then_ahead_1",
+        "still_behind_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

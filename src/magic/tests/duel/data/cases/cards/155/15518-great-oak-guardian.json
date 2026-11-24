@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Great Oak Guardian",
+  "csvid": 15518,
+  "recipes": [
+    {
+      "family": "flash_entry_untap_and_temporary_stats",
+      "version": 2,
+      "params": {
+        "csvid": 15518,
+        "mana": [
+          5,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nReach\nWhen this creature enters, creatures target player controls get +2/+2 until end of turn. Untap them.",
+      "variants": [
+        "own_mass_0",
+        "own_mass_1",
+        "foe_mass_0",
+        "foe_mass_1",
+        "reach_block_0",
+        "reach_block_1",
+        "empty_foe_0",
+        "empty_foe_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

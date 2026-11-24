@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "csvid": 5311,
+  "card": "Stormscape Familiar",
+  "recipes": [
+    {
+      "family": "multi_type_discounts",
+      "version": 2,
+      "params": {
+        "effect": "color_discount",
+        "cost": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "colors": [
+          "W",
+          "B"
+        ],
+        "amount": 1,
+        "rider": "none",
+        "keyword": "Flying",
+        "regeneration_cost": null
+      },
+      "oracle_text": "Flying\nWhite spells and black spells you cast cost {1} less to cast.",
+      "variants": [
+        "first_color_0",
+        "first_color_1",
+        "second_color_0",
+        "second_color_1",
+        "both_colors_0",
+        "both_colors_1",
+        "both_payment_0",
+        "both_payment_1",
+        "nonmatching_color_0",
+        "nonmatching_color_1",
+        "colorless_0",
+        "colorless_1",
+        "opposing_caster_0",
+        "opposing_caster_1",
+        "source_cast_0",
+        "source_cast_1",
+        "source_short_0",
+        "source_short_1",
+        "source_grave_0",
+        "source_grave_1",
+        "source_bounce_0",
+        "source_bounce_1",
+        "combined_0",
+        "combined_1",
+        "countered_0",
+        "countered_1",
+        "paid_replay_0",
+        "paid_replay_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "one_short_0",
+        "one_short_1",
+        "ground_denied_0",
+        "ground_denied_1",
+        "flying_block_0",
+        "flying_block_1"
+      ]
+    }
+  ]
+}

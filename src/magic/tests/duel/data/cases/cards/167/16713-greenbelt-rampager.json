@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Greenbelt Rampager",
+  "csvid": 16713,
+  "recipes": [
+    {
+      "family": "entry_trigger_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 16713,
+        "cost": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, pay {E}{E} (two energy counters). If you can't, return this creature to its owner's hand and you get {E}.",
+      "variants": [
+        "zero_0",
+        "zero_1",
+        "one_0",
+        "one_1",
+        "pay_two_0",
+        "pay_two_1",
+        "opponent_energy_0",
+        "opponent_energy_1"
+      ]
+    }
+  ]
+}

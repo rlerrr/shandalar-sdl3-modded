@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Merrow Harbinger",
+  "csvid": 9210,
+  "recipes": [
+    {
+      "family": "entry_rider_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 9210,
+        "printed_mana": "{3}{U}",
+        "rules": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)\nWhen this creature enters, you may search your library for a Merfolk card, reveal it, then shuffle and put that card on top."
+      },
+      "oracle_text": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)\nWhen this creature enters, you may search your library for a Merfolk card, reveal it, then shuffle and put that card on top.",
+      "variants": [
+        "take_islandwalk_0",
+        "take_islandwalk_1",
+        "take_no_island_0",
+        "take_no_island_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

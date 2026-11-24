@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Spawning Pool",
+  "csvid": 4062,
+  "recipes": [
+    {
+      "family": "regeneration_land_and_grants",
+      "version": 2,
+      "params": {
+        "csvid": 4062,
+        "mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "This land enters tapped.\n{T}: Add {B}.\n{1}{B}: This land becomes a 1/1 black Skeleton creature with \"{B}: Regenerate this creature\" until end of turn. It's still a land. (If it regenerates, the next time it would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "variants": [
+        "mana_0",
+        "mana_1",
+        "animate_tapped_0",
+        "animate_tapped_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "regenerate_0",
+        "regenerate_1",
+        "double_destroy_0",
+        "double_destroy_1",
+        "skeleton_0",
+        "skeleton_1",
+        "still_land_0",
+        "still_land_1"
+      ]
+    }
+  ]
+}

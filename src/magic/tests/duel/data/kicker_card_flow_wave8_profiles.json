@@ -1,0 +1,647 @@
+{
+  "sources": {
+    "Probe": {
+      "oracle": {
+        "oracle_id": "f8d227b6-1627-4ea1-b815-887094497abf",
+        "name": "Probe",
+        "oracle_text": "Kicker {1}{B} (You may pay an additional {1}{B} as you cast this spell.)\nDraw three cards, then discard two cards. If this spell was kicked, target player discards two cards.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inv/66/probe?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5071,
+        "iid": 7400,
+        "name": "Probe",
+        "handler": "manalinkeh_card_probe",
+        "kind": "card"
+      }
+    },
+    "Thicket Elemental": {
+      "oracle": {
+        "oracle_id": "a85390b6-e90b-4d0c-9573-eb67ce01a0aa",
+        "name": "Thicket Elemental",
+        "oracle_text": "Kicker {1}{G} (You may pay an additional {1}{G} as you cast this spell.)\nWhen this creature enters, if it was kicked, you may reveal cards from the top of your library until you reveal a creature card. If you do, put that card onto the battlefield and shuffle all other cards revealed this way into your library.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddr/21/thicket-elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5147,
+        "iid": 9883,
+        "name": "Thicket Elemental",
+        "handler": "manalinkeh_card_thicket_elemental",
+        "kind": "card"
+      }
+    },
+    "Jilt": {
+      "oracle": {
+        "oracle_id": "382bc554-d170-4c19-82dd-829f254e855e",
+        "name": "Jilt",
+        "oracle_text": "Kicker {1}{R} (You may pay an additional {1}{R} as you cast this spell.)\nReturn target creature to its owner's hand. If this spell was kicked, it deals 2 damage to another target creature.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/apc/27/jilt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5388,
+        "iid": 5063,
+        "name": "Jilt",
+        "handler": "manalinkeh_card_jilt",
+        "kind": "card"
+      }
+    },
+    "Citanul Woodreaders": {
+      "oracle": {
+        "oracle_id": "a4555bd2-be42-442a-8ead-3398318e91c5",
+        "name": "Citanul Woodreaders",
+        "oracle_text": "Kicker {2}{G} (You may pay an additional {2}{G} as you cast this spell.)\nWhen this creature enters, if it was kicked, draw two cards.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Human Druid",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/199/citanul-woodreaders?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8757,
+        "iid": 1764,
+        "name": "Citanul Woodreaders",
+        "handler": "manalinkeh_card_citanul_woodreaders",
+        "kind": "card"
+      }
+    },
+    "Gigantiform": {
+      "oracle": {
+        "oracle_id": "d9e1bae6-2d56-45d1-bdac-2431a18aab3e",
+        "name": "Gigantiform",
+        "oracle_text": "Kicker {4}\nEnchant creature\nEnchanted creature has base power and toughness 8/8 and has trample.\nWhen this Aura enters, if it was kicked, you may search your library for a card named Gigantiform, put it onto the battlefield, then shuffle.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant",
+          "Kicker"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/162/gigantiform?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10545,
+        "iid": 3890,
+        "name": "Gigantiform",
+        "handler": "manalinkeh_card_gigantiform",
+        "kind": "card"
+      }
+    },
+    "Sphinx of Lost Truths": {
+      "oracle": {
+        "oracle_id": "25597913-aa17-4e3b-a4e9-371ce1459160",
+        "name": "Sphinx of Lost Truths",
+        "oracle_text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nFlying\nWhen this creature enters, draw three cards. Then if it wasn't kicked, discard three cards.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature — Sphinx",
+        "power": "3",
+        "toughness": "5",
+        "keywords": [
+          "Kicker",
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/69/sphinx-of-lost-truths?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10672,
+        "iid": 9137,
+        "name": "Sphinx of Lost Truths",
+        "handler": "manalinkeh_card_sphinx_of_lost_truths",
+        "kind": "card"
+      }
+    },
+    "Slinn Voda, the Rising Deep": {
+      "oracle": {
+        "oracle_id": "753d98d3-d534-42c1-b728-a4f14c7f29ec",
+        "name": "Slinn Voda, the Rising Deep",
+        "oracle_text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nWhen Slinn Voda enters, if it was kicked, return all creatures to their owners' hands except for Merfolk, Krakens, Leviathans, Octopuses, and Serpents.",
+        "mana_cost": "{6}{U}{U}",
+        "type_line": "Legendary Creature — Leviathan",
+        "power": "8",
+        "toughness": "8",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/405/slinn-voda-the-rising-deep?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18509,
+        "iid": 18616,
+        "name": "Slinn Voda, the Rising Deep",
+        "handler": "manalinkeh_card_slinn_voda_the_rising_deep",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Control Magic": {
+      "oracle": {
+        "oracle_id": "cd0d7141-46d2-4aa3-bc77-6b3b4513803e",
+        "name": "Control Magic",
+        "oracle_text": "Enchant creature\nYou control enchanted creature.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cma/34/control-magic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 44,
+        "iid": 1938,
+        "name": "Control Magic",
+        "handler": "manalinkeh_card_control_magic",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Frilled Sea Serpent": {
+      "oracle": {
+        "oracle_id": "6dc534e8-e22b-4e3c-aa30-c6e4c84f698c",
+        "name": "Frilled Sea Serpent",
+        "oracle_text": "{5}{U}{U}: This creature can't be blocked this turn.",
+        "mana_cost": "{4}{U}{U}",
+        "type_line": "Creature — Serpent",
+        "power": "4",
+        "toughness": "6",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/61/frilled-sea-serpent?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18923,
+        "iid": 18856,
+        "name": "Frilled Sea Serpent",
+        "handler": "manalinkeh_card_frilled_sea_serpent",
+        "kind": "card"
+      }
+    },
+    "Giant Octopus": {
+      "oracle": {
+        "oracle_id": "c181d2a4-5959-4409-9bd3-ecedf8ec9516",
+        "name": "Giant Octopus",
+        "oracle_text": "",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Octopus",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/S4/giant-octopus?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2851,
+        "iid": 12779,
+        "name": "Giant Octopus",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Inkwell Leviathan": {
+      "oracle": {
+        "oracle_id": "dbdd0963-b395-4cb8-ad9a-ed85a3e9f2e5",
+        "name": "Inkwell Leviathan",
+        "oracle_text": "Trample\nIslandwalk (This creature can't be blocked as long as defending player controls an Island.)\nShroud (This creature can't be the target of spells or abilities.)",
+        "mana_cost": "{7}{U}{U}",
+        "type_line": "Artifact Creature — Leviathan",
+        "power": "7",
+        "toughness": "11",
+        "keywords": [
+          "Landwalk",
+          "Shroud",
+          "Trample",
+          "Islandwalk"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 9.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/55/inkwell-leviathan?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1598,
+        "iid": 4885,
+        "name": "Inkwell Leviathan",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Kraken Hatchling": {
+      "oracle": {
+        "oracle_id": "08e6c786-d553-4c23-9137-cfad84146739",
+        "name": "Kraken Hatchling",
+        "oracle_text": "",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Kraken",
+        "power": "0",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bbd/121/kraken-hatchling?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10591,
+        "iid": 5378,
+        "name": "Kraken Hatchling",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Merfolk of the Pearl Trident": {
+      "oracle": {
+        "oracle_id": "218d9277-c179-4de3-9c7f-79b5a6d4fa38",
+        "name": "Merfolk of the Pearl Trident",
+        "oracle_text": "",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Merfolk",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/60/merfolk-of-the-pearl-trident?utm_source=api"
+      },
+      "registry": {
+        "csvid": 160,
+        "iid": 6055,
+        "name": "Merfolk of the Pearl Trident",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Moldervine Cloak": {
+      "oracle": {
+        "oracle_id": "dd106f2d-5ede-43f0-928a-1ab392b90854",
+        "name": "Moldervine Cloak",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +3/+3.\nDredge 2 (If you would draw a card, you may mill two cards instead. If you do, return this card from your graveyard to your hand.)",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Dredge",
+          "Enchant",
+          "Mill"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/150/moldervine-cloak?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7904,
+        "iid": 6263,
+        "name": "Moldervine Cloak",
+        "handler": "manalinkeh_card_moldervine_cloak",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Runeclaw Bear": {
+      "oracle": {
+        "oracle_id": "ec49dfcf-d16d-4621-af4b-4a6f09043221",
+        "name": "Runeclaw Bear",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/197/runeclaw-bear?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10461,
+        "iid": 8117,
+        "name": "Runeclaw Bear",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Spellbook": {
+      "oracle": {
+        "oracle_id": "83133f51-bfbd-4db5-9be0-f660e3b66435",
+        "name": "Spellbook",
+        "oracle_text": "You have no maximum hand size.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact — Book",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/220/spellbook?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1154,
+        "iid": 9121,
+        "name": "Spellbook",
+        "handler": "manalinkeh_card_spellbook",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    }
+  }
+}

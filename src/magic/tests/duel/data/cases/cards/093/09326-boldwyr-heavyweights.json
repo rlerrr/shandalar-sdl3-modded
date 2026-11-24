@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Boldwyr Heavyweights",
+  "csvid": 9326,
+  "recipes": [
+    {
+      "family": "remaining_entry_library_and_hand",
+      "version": 2,
+      "params": {
+        "csvid": 9326,
+        "printed_mana": "{2}{R}{R}",
+        "rules": "Trample\nWhen this creature enters, each opponent may search their library for a creature card and put it onto the battlefield. Then each player who searched their library this way shuffles."
+      },
+      "oracle_text": "Trample\nWhen this creature enters, each opponent may search their library for a creature card and put it onto the battlefield. Then each player who searched their library this way shuffles.",
+      "variants": [
+        "foe_search_trample_0",
+        "foe_search_trample_1",
+        "foe_decline_0",
+        "foe_decline_1"
+      ]
+    }
+  ]
+}

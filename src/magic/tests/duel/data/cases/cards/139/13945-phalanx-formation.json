@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "card": "Phalanx Formation",
+  "csvid": 13945,
+  "recipes": [
+    {
+      "family": "strive_target_rewards",
+      "version": 2,
+      "oracle_text": "Strive — This spell costs {1}{W} more to cast for each target beyond the first.\nAny number of target creatures each gain double strike until end of turn. (They deal both first-strike and regular combat damage.)",
+      "params": {
+        "effect": "double",
+        "delta": [
+          0,
+          0
+        ],
+        "base": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "extra": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "color": 5
+      },
+      "variants": [
+        "one_0",
+        "opposing_0",
+        "two_mixed_0",
+        "three_0",
+        "spare_all_0",
+        "short_generic_0",
+        "short_color_0",
+        "zero_0",
+        "stop_one_0",
+        "all_unavailable_0",
+        "wrong_base_color_0",
+        "empty_pool_0",
+        "late_first_0",
+        "late_last_0",
+        "late_all_0",
+        "offturn_0",
+        "countered_0",
+        "cleanup_0",
+        "replay_0",
+        "combat_0",
+        "one_1",
+        "opposing_1",
+        "two_mixed_1",
+        "three_1",
+        "spare_all_1",
+        "short_generic_1",
+        "short_color_1",
+        "zero_1",
+        "stop_one_1",
+        "all_unavailable_1",
+        "wrong_base_color_1",
+        "empty_pool_1",
+        "late_first_1",
+        "late_last_1",
+        "late_all_1",
+        "offturn_1",
+        "countered_1",
+        "cleanup_1",
+        "replay_1",
+        "combat_1"
+      ]
+    }
+  ]
+}

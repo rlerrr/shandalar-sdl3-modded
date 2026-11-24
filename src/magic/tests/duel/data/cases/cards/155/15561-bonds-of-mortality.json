@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Bonds of Mortality",
+  "csvid": 15561,
+  "recipes": [
+    {
+      "family": "entry_follow_on_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 15561,
+        "printed_mana": "{1}{G}",
+        "rules": "When this enchantment enters, draw a card.\n{G}: Creatures your opponents control lose hexproof and indestructible until end of turn."
+      },
+      "oracle_text": "When this enchantment enters, draw a card.\n{G}: Creatures your opponents control lose hexproof and indestructible until end of turn.",
+      "variants": [
+        "strip_destroy_0",
+        "strip_destroy_1",
+        "cleanup_restores_0",
+        "cleanup_restores_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,928 @@
+{
+  "version": 1,
+  "oracle_sha256": "c11dcfedde2ed4ce99ff355f5cf30c187c2b3745c87a03319e715bbfec17cf50",
+  "sources": {
+    "Mongrel Pack": {
+      "oracle": {
+        "oracle_id": "e1208d39-86e7-4eae-8dd6-b5bfb29def84",
+        "name": "Mongrel Pack",
+        "oracle_text": "When this creature dies during combat, create four 1/1 green Dog creature tokens.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Dog",
+        "power": "4",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tmp/237/mongrel-pack?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3211,
+        "iid": 6288,
+        "name": "Mongrel Pack",
+        "handler": "manalinkeh_card_mongrel_pack",
+        "kind": "card"
+      },
+      "token_registry": {
+        "csvid": 18763,
+        "iid": 4671,
+        "name": "Dog",
+        "handler": "manalinkeh_card_ooze",
+        "kind": "card"
+      },
+      "token_oracle_if_available": null
+    },
+    "Tuktuk the Explorer": {
+      "oracle": {
+        "oracle_id": "754e227b-ff31-4b5c-b612-2221c2b44246",
+        "name": "Tuktuk the Explorer",
+        "oracle_text": "Haste\nWhen Tuktuk the Explorer dies, create Tuktuk the Returned, a legendary 5/5 colorless Goblin Golem artifact creature token.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Legendary Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/149/tuktuk-the-explorer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11068,
+        "iid": 10258,
+        "name": "Tuktuk the Explorer",
+        "handler": "manalinkeh_card_tuktuk_the_explorer",
+        "kind": "card"
+      },
+      "token_registry": {
+        "csvid": 18845,
+        "iid": 10259,
+        "name": "Tuktuk the Returned",
+        "handler": "manalinkeh_card_tuktuk_the_returned",
+        "kind": "card"
+      },
+      "token_oracle_if_available": {
+        "oracle_id": "9ccb2b2a-23a9-42c4-947f-47c7eafdb018",
+        "name": "Tuktuk the Returned",
+        "oracle_text": "Tuktuk the Returned is legendary.",
+        "mana_cost": "",
+        "type_line": "Token Artifact Creature — Goblin Golem",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/t2xm/28/tuktuk-the-returned?utm_source=api"
+      }
+    },
+    "Servo Schematic": {
+      "oracle": {
+        "oracle_id": "6b8c6104-c537-4025-83e2-e89c8668f3ba",
+        "name": "Servo Schematic",
+        "oracle_text": "When this artifact enters or is put into a graveyard from the battlefield, create a 1/1 colorless Servo artifact creature token.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/aer/176/servo-schematic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16794,
+        "iid": 16888,
+        "name": "Servo Schematic",
+        "handler": "manalinkeh_card_servo_schematic",
+        "kind": "card"
+      },
+      "token_registry": {
+        "csvid": 18816,
+        "iid": 16669,
+        "name": "Servo",
+        "handler": "manalinkeh_card_rhino_token",
+        "kind": "card"
+      },
+      "token_oracle_if_available": {
+        "oracle_id": "b6ca7bd1-d72e-4260-8b52-997ee1377279",
+        "name": "Servo",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Artifact Creature — Servo",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmh3/33/servo?utm_source=api"
+      }
+    },
+    "Dunes of the Dead": {
+      "oracle": {
+        "oracle_id": "c761f71c-785c-4533-a2b7-2da3667688b8",
+        "name": "Dunes of the Dead",
+        "oracle_text": "{T}: Add {C}.\nWhen this land is put into a graveyard from the battlefield, create a 2/2 black Zombie creature token.",
+        "mana_cost": "",
+        "type_line": "Land — Desert",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/otc/291/dunes-of-the-dead?utm_source=api"
+      },
+      "registry": {
+        "csvid": 17126,
+        "iid": 17220,
+        "name": "Dunes of the Dead",
+        "handler": "manalinkeh_card_dunes_of_the_dead",
+        "kind": "card"
+      },
+      "token_registry": {
+        "csvid": 18860,
+        "iid": 11220,
+        "name": "Zombie",
+        "handler": "manalinkeh_card_zombie",
+        "kind": "card"
+      },
+      "token_oracle_if_available": {
+        "oracle_id": "ec6e76e8-e80e-4534-990a-03c3bbeda53a",
+        "name": "Zombie",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Zombie",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tinr/12/zombie?utm_source=api"
+      }
+    },
+    "Promise of Bunrei": {
+      "oracle": {
+        "oracle_id": "6158ab85-a929-472c-9618-8e76d2d4b228",
+        "name": "Promise of Bunrei",
+        "oracle_text": "When a creature you control dies, sacrifice this enchantment. If you do, create four 1/1 colorless Spirit creature tokens.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/voc/96/promise-of-bunrei?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7718,
+        "iid": 7412,
+        "name": "Promise of Bunrei",
+        "handler": "manalinkeh_card_promise_of_the_bunrei",
+        "kind": "card"
+      },
+      "token_registry": {
+        "csvid": 18829,
+        "iid": 9193,
+        "name": "Spirit",
+        "handler": "manalinkeh_card_spirit2",
+        "kind": "card"
+      },
+      "token_oracle_if_available": {
+        "oracle_id": "f39a3005-bc92-49bf-9e32-28e99c4de5c5",
+        "name": "Spirit",
+        "oracle_text": "Flying",
+        "mana_cost": "",
+        "type_line": "Token Creature — Spirit",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmoc/13/spirit?utm_source=api"
+      }
+    },
+    "Xathrid Necromancer": {
+      "oracle": {
+        "oracle_id": "a6b38874-c8be-47f7-a656-ba49ec9e967f",
+        "name": "Xathrid Necromancer",
+        "oracle_text": "Whenever this creature or another Human creature you control dies, create a tapped 2/2 black Zombie creature token.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c20/141/xathrid-necromancer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13363,
+        "iid": 11146,
+        "name": "Xathrid Necromancer",
+        "handler": "manalinkeh_card_xathrid_necromancer",
+        "kind": "card"
+      },
+      "token_registry": {
+        "csvid": 18860,
+        "iid": 11220,
+        "name": "Zombie",
+        "handler": "manalinkeh_card_zombie",
+        "kind": "card"
+      },
+      "token_oracle_if_available": {
+        "oracle_id": "ec6e76e8-e80e-4534-990a-03c3bbeda53a",
+        "name": "Zombie",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Zombie",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tinr/12/zombie?utm_source=api"
+      }
+    },
+    "Sek'Kuar, Deathkeeper": {
+      "oracle": {
+        "oracle_id": "94426127-65c2-435e-ba92-423a3c102061",
+        "name": "Sek'Kuar, Deathkeeper",
+        "oracle_text": "Whenever another nontoken creature you control dies, create a 3/1 black and red Graveborn creature token with haste.",
+        "mana_cost": "{2}{B}{R}{G}",
+        "type_line": "Legendary Creature — Orc Shaman",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "G",
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/354/sekkuar-deathkeeper?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8440,
+        "iid": 8465,
+        "name": "Sek'Kuar, Deathkeeper",
+        "handler": "manalinkeh_card_sek_kuar_death_keeper",
+        "kind": "card"
+      },
+      "token_registry": {
+        "csvid": 18753,
+        "iid": 4162,
+        "name": "Graveborn",
+        "handler": "manalinkeh_card_graveborn_token",
+        "kind": "card"
+      },
+      "token_oracle_if_available": {
+        "oracle_id": "3b2ccc79-67d6-437d-9696-fbd887c7d8b6",
+        "name": "Graveborn",
+        "oracle_text": "Haste",
+        "mana_cost": "",
+        "type_line": "Token Creature — Graveborn",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tcmm/38/graveborn?utm_source=api"
+      }
+    }
+  },
+  "cards": {
+    "Ashnod's Altar": {
+      "oracle_id": "4d18bcba-a346-445e-a182-6cc30b7e066d",
+      "name": "Ashnod's Altar",
+      "oracle_text": "Sacrifice a creature: Add {C}{C}.",
+      "mana_cost": "{3}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/368/ashnods-altar?utm_source=api"
+    },
+    "Boomerang": {
+      "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+      "name": "Boomerang",
+      "oracle_text": "Return target permanent to its owner's hand.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Eager Cadet": {
+      "oracle_id": "39780477-01ba-40c6-8fe6-2178efb10b92",
+      "name": "Eager Cadet",
+      "oracle_text": "",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Soldier",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/9ed/S1/eager-cadet?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Fume Spitter": {
+      "oracle_id": "6556a15b-be4b-45ea-867d-3a8e26202b42",
+      "name": "Fume Spitter",
+      "oracle_text": "Sacrifice this creature: Put a -1/-1 counter on target creature.",
+      "mana_cost": "{B}",
+      "type_line": "Creature — Phyrexian Horror",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/uma/95/fume-spitter?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature — Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "scryfall_uri": "https://scryfall.com/card/ttsr/12/llanowar-elves?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Muck Rats": {
+      "oracle_id": "bca13a12-6723-4a5e-8f1b-21646a8b3e7e",
+      "name": "Muck Rats",
+      "oracle_text": "",
+      "mana_cost": "{B}",
+      "type_line": "Creature — Rat",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/s99/84/muck-rats?utm_source=api"
+    },
+    "Murder": {
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "name": "Murder",
+      "oracle_text": "Destroy target creature.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+    },
+    "Naturalize": {
+      "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+      "name": "Naturalize",
+      "oracle_text": "Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Pyroclasm": {
+      "oracle_id": "e4bcd4ea-e7cd-4471-8f3b-18bb51d3d70c",
+      "name": "Pyroclasm",
+      "oracle_text": "Pyroclasm deals 2 damage to each creature.",
+      "mana_cost": "{1}{R}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/149/pyroclasm?utm_source=api"
+    },
+    "Runeclaw Bear": {
+      "oracle_id": "ec49dfcf-d16d-4621-af4b-4a6f09043221",
+      "name": "Runeclaw Bear",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m15/197/runeclaw-bear?utm_source=api"
+    },
+    "Scour from Existence": {
+      "oracle_id": "241a50c5-f65f-4847-89c7-5c0ef6025dc1",
+      "name": "Scour from Existence",
+      "oracle_text": "Exile target permanent.",
+      "mana_cost": "{7}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 7.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/bfz/13/scour-from-existence?utm_source=api"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+    },
+    "Stone Rain": {
+      "oracle_id": "6e880df6-fc00-43d2-a9c8-f575f40b78c6",
+      "name": "Stone Rain",
+      "oracle_text": "Destroy target land.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/9ed/221/stone-rain?utm_source=api"
+    },
+    "Walking Atlas": {
+      "oracle_id": "855a4837-7fc8-4b97-afbd-daa88e322c89",
+      "name": "Walking Atlas",
+      "oracle_text": "{T}: You may put a land card from your hand onto the battlefield.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact Creature — Construct",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/wwk/131/walking-atlas?utm_source=api"
+    },
+    "Howling Mine": {
+      "oracle_id": "d26b27db-a567-4631-b4b6-7294222fbdd1",
+      "name": "Howling Mine",
+      "oracle_text": "At the beginning of each player's draw step, if this artifact is untapped, that player draws an additional card.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/c16/257/howling-mine?utm_source=api"
+    },
+    "Inferno": {
+      "oracle_id": "69e2df4e-c7f3-4c3a-be5b-1c4afb29cead",
+      "name": "Inferno",
+      "oracle_text": "Inferno deals 6 damage to each creature and each player.",
+      "mana_cost": "{5}{R}{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 7.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/8ed/196/inferno?utm_source=api"
+    }
+  },
+  "registry": {
+    "Ashnod's Altar": {
+      "csvid": 474,
+      "iid": 662,
+      "name": "Ashnod's Altar",
+      "handler": "manalinkeh_card_ashnods_altar",
+      "kind": "card"
+    },
+    "Boomerang": {
+      "csvid": 585,
+      "iid": 1233,
+      "name": "Boomerang",
+      "handler": "manalinkeh_card_boomerang",
+      "kind": "card"
+    },
+    "Counterspell": {
+      "csvid": 48,
+      "iid": 1996,
+      "name": "Counterspell",
+      "handler": "manalinkeh_card_counterspell",
+      "kind": "card"
+    },
+    "Eager Cadet": {
+      "csvid": 4363,
+      "iid": 12406,
+      "name": "Eager Cadet",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Forest": {
+      "csvid": 91,
+      "iid": 2,
+      "name": "Forest",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Fume Spitter": {
+      "csvid": 11257,
+      "iid": 3674,
+      "name": "Fume Spitter",
+      "handler": "manalinkeh_card_fume_spitter",
+      "kind": "card"
+    },
+    "Giant Growth": {
+      "csvid": 97,
+      "iid": 3862,
+      "name": "Giant Growth",
+      "handler": "manalinkeh_card_giant_growth",
+      "kind": "card"
+    },
+    "Grizzly Bears": {
+      "csvid": 106,
+      "iid": 4259,
+      "name": "Grizzly Bears",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Island": {
+      "csvid": 126,
+      "iid": 1,
+      "name": "Island",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Lightning Bolt": {
+      "csvid": 145,
+      "iid": 5596,
+      "name": "Lightning Bolt",
+      "handler": "manalinkeh_card_lightning_bolt",
+      "kind": "card"
+    },
+    "Llanowar Elves": {
+      "csvid": 149,
+      "iid": 5655,
+      "name": "Llanowar Elves",
+      "handler": "manalinkeh_card_elvish_mystic",
+      "kind": "card"
+    },
+    "Mountain": {
+      "csvid": 164,
+      "iid": 3,
+      "name": "Mountain",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Muck Rats": {
+      "csvid": 2829,
+      "iid": 13708,
+      "name": "Muck Rats",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Murder": {
+      "csvid": 12594,
+      "iid": 6382,
+      "name": "Murder",
+      "handler": "manalinkeh_card_murder2",
+      "kind": "card"
+    },
+    "Naturalize": {
+      "csvid": 1096,
+      "iid": 6485,
+      "name": "Naturalize",
+      "handler": "manalinkeh_card_disenchant",
+      "kind": "card"
+    },
+    "Plains": {
+      "csvid": 188,
+      "iid": 4,
+      "name": "Plains",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Pyroclasm": {
+      "csvid": 1121,
+      "iid": 7515,
+      "name": "Pyroclasm",
+      "handler": "manalinkeh_card_pyroclasm",
+      "kind": "card"
+    },
+    "Runeclaw Bear": {
+      "csvid": 10461,
+      "iid": 8117,
+      "name": "Runeclaw Bear",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Scour from Existence": {
+      "csvid": 15429,
+      "iid": 14443,
+      "name": "Scour from Existence",
+      "handler": "manalinkeh_card_scour_from_existence",
+      "kind": "card"
+    },
+    "Sol Ring": {
+      "csvid": 230,
+      "iid": 8968,
+      "name": "Sol Ring",
+      "handler": "manalinkeh_card_sol_ring",
+      "kind": "card"
+    },
+    "Stone Rain": {
+      "csvid": 236,
+      "iid": 9381,
+      "name": "Stone Rain",
+      "handler": "manalinkeh_card_ice_storm",
+      "kind": "card"
+    },
+    "Walking Atlas": {
+      "csvid": 10860,
+      "iid": 10746,
+      "name": "Walking Atlas",
+      "handler": "manalinkeh_card_sakura_tribe_scout",
+      "kind": "card"
+    },
+    "Howling Mine": {
+      "csvid": 114,
+      "iid": 4683,
+      "name": "Howling Mine",
+      "handler": "manalinkeh_card_howling_mine",
+      "kind": "card"
+    },
+    "Inferno": {
+      "csvid": 337,
+      "iid": 4866,
+      "name": "Inferno",
+      "handler": "manalinkeh_card_inferno2",
+      "kind": "card"
+    }
+  },
+  "static_only": {
+    "Eager Cadet": "Printed characteristics and base engine behavior",
+    "Grizzly Bears": "Printed characteristics and base engine behavior",
+    "Muck Rats": "Printed characteristics and base engine behavior",
+    "Runeclaw Bear": "Printed characteristics and base engine behavior"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "csvid": 16019,
+  "card": "Watcher in the Web",
+  "recipes": [
+    {
+      "family": "additional_blocker",
+      "version": 2,
+      "params": {
+        "cost": [
+          4,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 5,
+        "reach": true,
+        "trample": false,
+        "additional": 7
+      },
+      "oracle_text": "Reach (This creature can block creatures with flying.)\nThis creature can block an additional seven creatures each combat.",
+      "variants": [
+        "two_ground_0",
+        "reverse_0",
+        "duplicate_rejected_0",
+        "ordinary_limit_0",
+        "one_damage_0",
+        "tapped_0",
+        "leave_unblocked_0",
+        "flyer_second_0",
+        "after_blocks_replay_0",
+        "next_combat_0",
+        "cast_then_block_0",
+        "unfunded_0",
+        "wrong_color_0",
+        "flyer_first_0",
+        "two_flyers_0",
+        "three_ground_0",
+        "four_ground_0",
+        "eight_at_limit_0",
+        "ninth_rejected_0",
+        "two_ground_1",
+        "reverse_1",
+        "duplicate_rejected_1",
+        "ordinary_limit_1",
+        "one_damage_1",
+        "tapped_1",
+        "leave_unblocked_1",
+        "flyer_second_1",
+        "after_blocks_replay_1",
+        "next_combat_1",
+        "cast_then_block_1",
+        "unfunded_1",
+        "wrong_color_1",
+        "flyer_first_1",
+        "two_flyers_1",
+        "three_ground_1",
+        "four_ground_1",
+        "eight_at_limit_1",
+        "ninth_rejected_1"
+      ]
+    }
+  ]
+}

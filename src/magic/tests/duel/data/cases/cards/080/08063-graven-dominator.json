@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "csvid": 8063,
+  "card": "Graven Dominator",
+  "recipes": [
+    {
+      "family": "entry_interaction_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 8063,
+        "printed_cost": "{4}{W}{W}",
+        "keywords": [
+          "Flying",
+          "Haunt"
+        ]
+      },
+      "oracle_text": "Flying\nHaunt (When this creature dies, exile it haunting target creature.)\nWhen this creature enters or the creature it haunts dies, each other creature has base power and toughness 1/1 until end of turn.",
+      "variants": [
+        "scope_0",
+        "counter_layer_0",
+        "haunt_death_0",
+        "haunt_bounce_0",
+        "no_carrier_0",
+        "flying_0",
+        "scope_1",
+        "counter_layer_1",
+        "haunt_death_1",
+        "haunt_bounce_1",
+        "no_carrier_1",
+        "flying_1"
+      ]
+    }
+  ]
+}

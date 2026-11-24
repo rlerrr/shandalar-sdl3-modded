@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Quarantine Field",
+  "csvid": 15406,
+  "recipes": [
+    {
+      "family": "entry_interaction_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 15406,
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "This enchantment enters with X isolation counters on it.\nWhen this enchantment enters, for each isolation counter on it, exile up to one target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "variants": [
+        "zero_0",
+        "zero_1",
+        "one_0",
+        "one_1",
+        "two_0",
+        "two_1",
+        "up_to_one_0",
+        "up_to_one_1",
+        "opponent_only_0",
+        "opponent_only_1"
+      ]
+    }
+  ]
+}

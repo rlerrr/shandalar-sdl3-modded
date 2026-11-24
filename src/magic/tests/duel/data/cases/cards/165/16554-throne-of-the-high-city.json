@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Throne of the High City",
+  "csvid": 16554,
+  "recipes": [
+    {
+      "family": "monarch_additional_riders",
+      "version": 2,
+      "params": {
+        "model": "throne",
+        "cost": null
+      },
+      "oracle_text": "{T}: Add {C}.\n{4}, {T}, Sacrifice this land: You become the monarch.",
+      "variants": [
+        "mana_0",
+        "paid_0",
+        "short_0",
+        "tapped_0",
+        "retake_0",
+        "replay_0",
+        "mana_1",
+        "paid_1",
+        "short_1",
+        "tapped_1",
+        "retake_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

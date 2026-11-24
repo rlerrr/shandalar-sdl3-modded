@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Spring Cleaning",
+  "csvid": 9268,
+  "recipes": [
+    {
+      "family": "pending_spell_composition",
+      "version": 2,
+      "oracle_text": "Destroy target enchantment. Clash with an opponent. If you win, destroy all enchantments your opponents control. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",
+      "params": {
+        "effect": "enchantments",
+        "mana": "{1}{G}"
+      },
+      "variants": [
+        "win_0",
+        "win_1",
+        "tie_0",
+        "tie_1",
+        "loss_0",
+        "loss_1",
+        "human_bottom_0",
+        "human_bottom_1",
+        "snapshot_0",
+        "snapshot_1",
+        "own_target_0",
+        "own_target_1",
+        "fizzle_0",
+        "fizzle_1",
+        "wrong_type_0",
+        "wrong_type_1"
+      ]
+    }
+  ]
+}

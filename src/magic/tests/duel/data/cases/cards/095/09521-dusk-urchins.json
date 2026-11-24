@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 9521,
+  "card": "Dusk Urchins",
+  "recipes": [
+    {
+      "family": "attack_follow_on_counters_and_dethrone",
+      "version": 2,
+      "params": {
+        "csvid": 9521,
+        "printed_cost": "{2}{B}"
+      },
+      "oracle_text": "Whenever this creature attacks or blocks, put a -1/-1 counter on it.\nWhen this creature dies, draw a card for each -1/-1 counter on it.",
+      "variants": [
+        "attack_then_death_0",
+        "block_then_death_0",
+        "natural_third_0",
+        "no_counter_death_0",
+        "attack_then_death_1",
+        "block_then_death_1",
+        "natural_third_1",
+        "no_counter_death_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "csvid": 15639,
+  "card": "Maw of Kozilek",
+  "recipes": [
+    {
+      "family": "devoid_colorless_activations",
+      "version": 2,
+      "params": {
+        "price": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "base": [
+          2,
+          5
+        ],
+        "generic": 0,
+        "colorless": 1,
+        "effect": "pump",
+        "delta": [
+          2,
+          -2
+        ],
+        "once": false
+      },
+      "oracle_text": "Devoid (This card has no color.)\n{C}: This creature gets +2/-2 until end of turn. ({C} represents colorless mana.)",
+      "variants": [
+        "exact_0",
+        "exact_1",
+        "colored_only_0",
+        "colored_only_1",
+        "short_0",
+        "short_1",
+        "replay_0",
+        "replay_1",
+        "cleanup_0",
+        "cleanup_1",
+        "lethal_0",
+        "lethal_1"
+      ]
+    }
+  ]
+}

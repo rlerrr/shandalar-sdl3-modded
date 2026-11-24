@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "card": "Gluttonous Slime",
+  "csvid": 10149,
+  "recipes": [
+    {
+      "family": "devour_permanent_rewards",
+      "version": 2,
+      "params": {
+        "reward": "flash",
+        "multiplier": 1,
+        "keywords": [
+          "Flash"
+        ],
+        "mana": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 2
+      },
+      "oracle_text": "Flash\nDevour 1 (As this creature enters, you may sacrifice any number of creatures. It enters with that many +1/+1 counters on it.)",
+      "variants": [
+        "none_0",
+        "paid_one_0",
+        "wrong_color_0",
+        "countered_0",
+        "snapshot_0",
+        "flash_response_0",
+        "none_1",
+        "paid_one_1",
+        "wrong_color_1",
+        "countered_1",
+        "snapshot_1",
+        "flash_response_1",
+        "paid_two_0",
+        "partial_0",
+        "decline_0"
+      ]
+    }
+  ]
+}

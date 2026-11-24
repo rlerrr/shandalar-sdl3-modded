@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 9502,
+  "card": "Cragganwick Cremator",
+  "recipes": [
+    {
+      "family": "entry_interaction_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 9502,
+        "printed_cost": "{2}{R}{R}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, discard a card at random. If you discard a creature card this way, this creature deals damage equal to that card's power to target player or planeswalker.",
+      "variants": [
+        "player_0",
+        "walker_0",
+        "noncreature_0",
+        "empty_0",
+        "random_equal_power_0",
+        "player_1",
+        "walker_1",
+        "noncreature_1",
+        "empty_1",
+        "random_equal_power_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Fool's Tome",
+  "csvid": 3152,
+  "recipes": [
+    {
+      "family": "gated_tap_draw",
+      "version": 2,
+      "oracle_text": "{2}, {T}: Draw a card. Activate only if you have no cards in hand.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "card_type": "Artifact",
+          "cast_mana": [
+            4,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "generic": 2,
+          "colorless": 0,
+          "hand_size": 0,
+          "mana_mode": false,
+          "discard": false,
+          "clauses": [
+            "{2}, {T}: Draw a card. Activate only if you have no cards in hand."
+          ]
+        }
+      },
+      "variants": [
+        "effect_0",
+        "entry_0",
+        "tapped_denied_0",
+        "repeat_denied_0",
+        "offturn_0",
+        "ready_replay_0",
+        "pending_replay_0",
+        "source_removed_0",
+        "cast_unfunded_0",
+        "hand_above_0",
+        "hand_enters_limit_0",
+        "opponent_hand_0",
+        "insufficient_mana_0",
+        "effect_1",
+        "entry_1",
+        "tapped_denied_1",
+        "repeat_denied_1",
+        "offturn_1",
+        "ready_replay_1",
+        "pending_replay_1",
+        "source_removed_1",
+        "cast_unfunded_1",
+        "hand_above_1",
+        "hand_enters_limit_1",
+        "opponent_hand_1",
+        "insufficient_mana_1"
+      ]
+    }
+  ]
+}

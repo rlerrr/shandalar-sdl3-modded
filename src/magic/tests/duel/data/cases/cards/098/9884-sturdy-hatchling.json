@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "csvid": 9884,
+  "card": "Sturdy Hatchling",
+  "recipes": [
+    {
+      "family": "cast_spell_color_riders",
+      "version": 2,
+      "params": {
+        "effect": "hatchling",
+        "colors": [
+          "G",
+          "U"
+        ],
+        "price": [
+          3,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "other_price": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "hybrid": true,
+        "base": [
+          6,
+          6
+        ],
+        "clauses": [
+          "This creature enters with four -1/-1 counters on it.",
+          "{G/U}: This creature gains shroud until end of turn. (It can't be the target of spells or abilities.)",
+          "Whenever you cast a green spell, remove a -1/-1 counter from this creature.",
+          "Whenever you cast a blue spell, remove a -1/-1 counter from this creature."
+        ],
+        "hatch_rider": "shroud"
+      },
+      "oracle_text": "This creature enters with four -1/-1 counters on it.\n{G/U}: This creature gains shroud until end of turn. (It can't be the target of spells or abilities.)\nWhenever you cast a green spell, remove a -1/-1 counter from this creature.\nWhenever you cast a blue spell, remove a -1/-1 counter from this creature.",
+      "variants": [
+        "first_0",
+        "first_1",
+        "opponent_0",
+        "opponent_1",
+        "unmatched_0",
+        "unmatched_1",
+        "colorless_0",
+        "colorless_1",
+        "replay_0",
+        "replay_1",
+        "second_0",
+        "second_1",
+        "both_0",
+        "both_1",
+        "pay_first_0",
+        "pay_first_1",
+        "pay_second_0",
+        "pay_second_1",
+        "activation_expiry_0",
+        "activation_expiry_1",
+        "activation_denied_0",
+        "activation_denied_1"
+      ]
+    }
+  ]
+}

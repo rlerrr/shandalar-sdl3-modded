@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "card": "Archive Trap",
+  "csvid": 10494,
+  "recipes": [
+    {
+      "family": "mill_library_spells",
+      "version": 2,
+      "params": {
+        "csvid": 10494,
+        "printed_cost": "{3}{U}{U}",
+        "clauses": [
+          "If an opponent searched their library this turn, you may pay {0} rather than pay this spell's mana cost.",
+          "Target opponent mills thirteen cards."
+        ],
+        "modes": [
+          "normal_paid",
+          "short_paid",
+          "alternate",
+          "no_search",
+          "own_search_only",
+          "prior_turn"
+        ],
+        "human_modes": [
+          "paid_after_search"
+        ]
+      },
+      "oracle_text": "If an opponent searched their library this turn, you may pay {0} rather than pay this spell's mana cost.\nTarget opponent mills thirteen cards.",
+      "variants": [
+        "normal_paid_0",
+        "normal_paid_1",
+        "short_paid_0",
+        "short_paid_1",
+        "alternate_0",
+        "alternate_1",
+        "no_search_0",
+        "no_search_1",
+        "own_search_only_0",
+        "own_search_only_1",
+        "prior_turn_0",
+        "prior_turn_1",
+        "paid_after_search_0"
+      ]
+    }
+  ]
+}

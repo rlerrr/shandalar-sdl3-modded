@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 16705,
+  "card": "Fourth Bridge Prowler",
+  "recipes": [
+    {
+      "family": "entry_interaction_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 16705,
+        "printed_cost": "{B}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, you may have target creature get -1/-1 until end of turn.",
+      "variants": [
+        "opposing_0",
+        "own_0",
+        "decline_0",
+        "self_0",
+        "expiry_0",
+        "opposing_1",
+        "own_1",
+        "decline_1",
+        "self_1",
+        "expiry_1"
+      ]
+    }
+  ]
+}

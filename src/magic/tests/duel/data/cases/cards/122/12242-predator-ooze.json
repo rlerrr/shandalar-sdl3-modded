@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 12242,
+  "card": "Predator Ooze",
+  "recipes": [
+    {
+      "family": "attack_trigger_stat_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 12242,
+        "printed_cost": "{G}{G}{G}"
+      },
+      "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature.)\nWhenever this creature attacks, put a +1/+1 counter on it.\nWhenever a creature dealt damage by this creature this turn dies, put a +1/+1 counter on this creature.",
+      "variants": [
+        "destroy_0",
+        "death_combat_0",
+        "later_death_0",
+        "different_victim_0",
+        "destroy_1",
+        "death_combat_1",
+        "later_death_1",
+        "different_victim_1"
+      ]
+    }
+  ]
+}

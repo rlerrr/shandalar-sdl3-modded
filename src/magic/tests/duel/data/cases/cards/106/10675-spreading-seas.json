@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Spreading Seas",
+  "csvid": 10675,
+  "recipes": [
+    {
+      "family": "entry_trigger_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 10675,
+        "printed_mana": "{1}{U}",
+        "rules": "Enchant land\nWhen this Aura enters, draw a card.\nEnchanted land is an Island."
+      },
+      "oracle_text": "Enchant land\nWhen this Aura enters, draw a card.\nEnchanted land is an Island.",
+      "variants": [
+        "island_conversion_0",
+        "island_conversion_1",
+        "countered_aura_0",
+        "countered_aura_1"
+      ]
+    }
+  ]
+}

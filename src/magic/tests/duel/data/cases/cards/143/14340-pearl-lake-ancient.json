@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "csvid": 14340,
+  "card": "Pearl Lake Ancient",
+  "recipes": [
+    {
+      "family": "flash_remaining_casting_and_counterability",
+      "version": 2,
+      "params": {
+        "csvid": 14340,
+        "mana": [
+          5,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          6,
+          7
+        ]
+      },
+      "oracle_text": "Flash\nThis spell can't be countered.\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nReturn three lands you control to their owner's hand: Return this creature to its owner's hand.",
+      "variants": [
+        "counter_0",
+        "counter_1",
+        "prowess_0",
+        "prowess_1",
+        "bounce_three_0",
+        "bounce_three_1",
+        "short_lands_0",
+        "short_lands_1"
+      ]
+    }
+  ]
+}

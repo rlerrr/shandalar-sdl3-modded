@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Sibilant Spirit",
+  "csvid": 2093,
+  "recipes": [
+    {
+      "family": "attack_trigger_costs_and_damage",
+      "version": 2,
+      "params": {
+        "csvid": 2093,
+        "printed_mana": "{5}{U}",
+        "rules": "Flying\nWhenever this creature attacks, defending player may draw a card."
+      },
+      "oracle_text": "Flying\nWhenever this creature attacks, defending player may draw a card.",
+      "variants": [
+        "draw_accept_0",
+        "draw_accept_1",
+        "draw_decline_0",
+        "draw_decline_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "card": "Cackling Counterpart",
+  "csvid": 11897,
+  "recipes": [
+    {
+      "family": "flashback_spell_lifecycle",
+      "version": 2,
+      "oracle_text": "Create a token that's a copy of target creature you control.\nFlashback {5}{U}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "params": {
+        "effect": "own_creature_copy",
+        "mana": [
+          1,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "flashback_mana": [
+          5,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "instant": true
+      },
+      "variants": [
+        "hand_effect_0",
+        "grave_effect_0",
+        "same_card_recast_0",
+        "hand_countered_0",
+        "grave_countered_0",
+        "hand_insufficient_0",
+        "grave_insufficient_0",
+        "grave_wrong_color_0",
+        "grave_printed_cost_only_0",
+        "grave_off_turn_0",
+        "grave_shrouded_0",
+        "grave_absent_after_exile_0",
+        "hand_pending_replay_0",
+        "hand_artifact_copy_0",
+        "grave_artifact_copy_0",
+        "hand_copy_tapped_0",
+        "grave_copy_stolen_0",
+        "hand_no_own_target_0",
+        "grave_no_own_target_0",
+        "hand_target_lost_0",
+        "grave_copied_token_0",
+        "hand_effect_1",
+        "grave_effect_1",
+        "same_card_recast_1",
+        "hand_countered_1",
+        "grave_countered_1",
+        "hand_insufficient_1",
+        "grave_insufficient_1",
+        "grave_wrong_color_1",
+        "grave_printed_cost_only_1",
+        "grave_off_turn_1",
+        "grave_shrouded_1",
+        "grave_absent_after_exile_1",
+        "hand_pending_replay_1",
+        "hand_artifact_copy_1",
+        "grave_artifact_copy_1",
+        "hand_copy_tapped_1",
+        "grave_copy_stolen_1",
+        "hand_no_own_target_1",
+        "grave_no_own_target_1",
+        "hand_target_lost_1",
+        "grave_copied_token_1"
+      ]
+    }
+  ]
+}

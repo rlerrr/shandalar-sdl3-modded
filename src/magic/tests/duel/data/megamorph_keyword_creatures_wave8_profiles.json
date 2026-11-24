@@ -1,0 +1,446 @@
+{
+  "sources": {
+    "Aerie Bowmasters": {
+      "csvid": 14664,
+      "handler": "manalinkeh_card_aerie_bowmasters",
+      "oracle": {
+        "oracle_id": "43ace4d5-9006-4bad-bd17-3d368c20564d",
+        "name": "Aerie Bowmasters",
+        "oracle_text": "Reach (This creature can block creatures with flying.)\nMegamorph {5}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Dog Archer",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Reach",
+          "Megamorph"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/170/aerie-bowmasters?utm_source=api"
+      }
+    },
+    "Aven Sunstriker": {
+      "csvid": 14854,
+      "handler": "manalinkeh_card_aven_sunstriker",
+      "oracle": {
+        "oracle_id": "60b0fd7c-a4cc-4a41-8455-debcfeccff81",
+        "name": "Aven Sunstriker",
+        "oracle_text": "Flying\nDouble strike (This creature deals both first-strike and regular combat damage.)\nMegamorph {4}{W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Creature — Bird Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Double strike",
+          "Megamorph"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/5/aven-sunstriker?utm_source=api"
+      }
+    },
+    "Dirgur Nemesis": {
+      "csvid": 14885,
+      "handler": "manalinkeh_card_dirgur_nemesis",
+      "oracle": {
+        "oracle_id": "c08b444b-6617-4199-b9da-5d4e81cd7597",
+        "name": "Dirgur Nemesis",
+        "oracle_text": "Defender\nMegamorph {6}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)",
+        "mana_cost": "{5}{U}",
+        "type_line": "Creature — Serpent",
+        "power": "6",
+        "toughness": "5",
+        "keywords": [
+          "Defender",
+          "Megamorph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/51/dirgur-nemesis?utm_source=api"
+      }
+    },
+    "Gudul Lurker": {
+      "csvid": 14928,
+      "handler": "manalinkeh_card_gudul_lurker",
+      "oracle": {
+        "oracle_id": "bde976c6-afed-44bb-8e3d-4103289dff5e",
+        "name": "Gudul Lurker",
+        "oracle_text": "This creature can't be blocked.\nMegamorph {U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Salamander",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Megamorph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/56/gudul-lurker?utm_source=api"
+      }
+    },
+    "Marsh Hulk": {
+      "csvid": 14958,
+      "handler": "manalinkeh_card_marsh_hulk",
+      "oracle": {
+        "oracle_id": "979a581b-22a0-4461-8638-d219587323d7",
+        "name": "Marsh Hulk",
+        "oracle_text": "Megamorph {6}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)",
+        "mana_cost": "{4}{B}{B}",
+        "type_line": "Creature — Zombie Ogre",
+        "power": "4",
+        "toughness": "6",
+        "keywords": [
+          "Megamorph"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/109/marsh-hulk?utm_source=api"
+      }
+    },
+    "Misthoof Kirin": {
+      "csvid": 14961,
+      "handler": "manalinkeh_card_misthoof_kirin",
+      "oracle": {
+        "oracle_id": "678eee7a-549d-4f40-a81c-70d036fc299d",
+        "name": "Misthoof Kirin",
+        "oracle_text": "Flying, vigilance\nMegamorph {1}{W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Kirin",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Vigilance",
+          "Megamorph"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/25/misthoof-kirin?utm_source=api"
+      }
+    },
+    "Segmented Krotiq": {
+      "csvid": 15011,
+      "handler": "manalinkeh_card_segmented_krotiq",
+      "oracle": {
+        "oracle_id": "05221ba6-53fd-4f45-b8b4-493724f75963",
+        "name": "Segmented Krotiq",
+        "oracle_text": "Megamorph {6}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)",
+        "mana_cost": "{5}{G}",
+        "type_line": "Creature — Insect",
+        "power": "6",
+        "toughness": "5",
+        "keywords": [
+          "Megamorph"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/202/segmented-krotiq?utm_source=api"
+      }
+    },
+    "Stormcrag Elemental": {
+      "csvid": 15037,
+      "handler": "manalinkeh_card_stormcrag_elemental",
+      "oracle": {
+        "oracle_id": "f28c18a1-13f8-4360-adc7-9d828ab1e933",
+        "name": "Stormcrag Elemental",
+        "oracle_text": "Trample\nMegamorph {4}{R}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)",
+        "mana_cost": "{5}{R}",
+        "type_line": "Creature — Elemental",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Trample",
+          "Megamorph"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/158/stormcrag-elemental?utm_source=api"
+      }
+    },
+    "Ojutai Interceptor": {
+      "csvid": 14970,
+      "handler": "manalinkeh_card_ojutai_interceptor",
+      "oracle": {
+        "oracle_id": "ecc42076-5cce-4e00-a21b-34846ea41df2",
+        "name": "Ojutai Interceptor",
+        "oracle_text": "Flying\nMegamorph {3}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Bird Soldier",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Megamorph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/66/ojutai-interceptor?utm_source=api"
+      }
+    },
+    "Sandstorm Charger": {
+      "csvid": 15001,
+      "handler": "manalinkeh_card_aven_sunstriker",
+      "oracle": {
+        "oracle_id": "aa7a9689-e79a-4562-a621-eadc45966ce8",
+        "name": "Sandstorm Charger",
+        "oracle_text": "Megamorph {4}{W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Beast",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Megamorph"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/34/sandstorm-charger?utm_source=api"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "csvid": 48,
+      "handler": "manalinkeh_card_counterspell",
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      }
+    },
+    "Elvish Mystic": {
+      "csvid": 13284,
+      "handler": "manalinkeh_card_elvish_mystic",
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      }
+    },
+    "Forest": {
+      "csvid": 91,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      }
+    },
+    "Hunger of the Howlpack": {
+      "csvid": 12212,
+      "handler": "manalinkeh_card_hunger_of_the_howlpack",
+      "oracle": {
+        "oracle_id": "296dee6b-6ec1-4ea4-8dc3-23080dd37646",
+        "name": "Hunger of the Howlpack",
+        "oracle_text": "Put a +1/+1 counter on target creature.\nMorbid — Put three +1/+1 counters on that creature instead if a creature died this turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Morbid"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/168/hunger-of-the-howlpack?utm_source=api"
+      }
+    },
+    "Island": {
+      "csvid": 126,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      }
+    },
+    "Nessian Asp": {
+      "csvid": 13489,
+      "handler": "manalinkeh_card_nessian_asp",
+      "oracle": {
+        "oracle_id": "8b46e077-f667-432f-ab5b-8256a7378311",
+        "name": "Nessian Asp",
+        "oracle_text": "Reach\n{6}{G}: Monstrosity 4. (If this creature isn't monstrous, put four +1/+1 counters on it and it becomes monstrous.)",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Snake",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Reach",
+          "Monstrosity"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cn2/187/nessian-asp?utm_source=api"
+      }
+    },
+    "Unsummon": {
+      "csvid": 260,
+      "handler": "manalinkeh_card_unsummon",
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      }
+    },
+    "Welkin Tern": {
+      "csvid": 10709,
+      "handler": "manalinkeh_card_skywinder_drake",
+      "oracle": {
+        "oracle_id": "010c660a-a67b-48f0-a63a-15470eb89f69",
+        "name": "Welkin Tern",
+        "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nThis creature can block only creatures with flying.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Bird",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gs1/5/welkin-tern?utm_source=api"
+      }
+    }
+  },
+  "hidden_observer": {
+    "name": "Face-Down Creature",
+    "csvid": 13252,
+    "handler": "manalinkeh_card_face_down_creature"
+  }
+}

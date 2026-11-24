@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Omen Machine",
+  "csvid": 11650,
+  "recipes": [
+    {
+      "family": "draw_step_replacement_and_search",
+      "version": 2,
+      "params": {
+        "csvid": 11650,
+        "mana": [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Players can't draw cards.\nAt the beginning of each player's draw step, that player exiles the top card of their library. If it's a land card, the player puts it onto the battlefield. Otherwise, the player casts it without paying its mana cost if able.",
+      "variants": [
+        "land_0",
+        "land_1",
+        "free_spell_0",
+        "free_spell_1",
+        "uncastable_0",
+        "uncastable_1",
+        "permanent_0",
+        "permanent_1",
+        "spells_blocked_0",
+        "spells_blocked_1"
+      ]
+    }
+  ]
+}

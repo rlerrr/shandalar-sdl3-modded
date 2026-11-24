@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 12347,
+  "card": "Descent into Madness",
+  "recipes": [
+    {
+      "family": "upkeep_counters",
+      "version": 2,
+      "params": {
+        "csvid": 12347,
+        "printed_cost": "{3}{B}{B}"
+      },
+      "oracle_text": "At the beginning of your upkeep, put a despair counter on this enchantment, then each player exiles X permanents they control and/or cards from their hand, where X is the number of despair counters on this enchantment.",
+      "variants": [
+        "permanent_0",
+        "repeat_0",
+        "mixed_0",
+        "hand_only_0",
+        "permanent_1",
+        "repeat_1",
+        "mixed_1",
+        "hand_only_1"
+      ]
+    }
+  ]
+}

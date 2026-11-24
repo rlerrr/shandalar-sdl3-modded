@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Keeper of Keys",
+  "csvid": 16424,
+  "recipes": [
+    {
+      "family": "monarch_entry_riders",
+      "version": 2,
+      "params": {
+        "model": "keeper",
+        "cost": [
+          3,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, you become the monarch.\nAt the beginning of your upkeep, if you're the monarch, creatures you control can't be blocked this turn.",
+      "variants": [
+        "entry_0",
+        "transfer_0",
+        "noncombat_0",
+        "already_0",
+        "underpaid_0",
+        "countered_0",
+        "replay_0",
+        "upkeep_ally_0",
+        "upkeep_self_0",
+        "no_upkeep_0",
+        "lost_0",
+        "removed_0",
+        "entry_1",
+        "transfer_1",
+        "noncombat_1",
+        "already_1",
+        "underpaid_1",
+        "countered_1",
+        "replay_1",
+        "upkeep_ally_1",
+        "upkeep_self_1",
+        "no_upkeep_1",
+        "lost_1",
+        "removed_1"
+      ]
+    }
+  ]
+}

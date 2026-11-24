@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "GO TO JAIL",
+  "csvid": 17969,
+  "recipes": [
+    {
+      "family": "remaining_entry_zone_and_permissions",
+      "version": 2,
+      "params": {
+        "csvid": 17969,
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "When this enchantment enters, exile target creature an opponent controls until this enchantment leaves the battlefield.\nAt the beginning of the upkeep of the exiled card's owner, that player rolls two six-sided dice. If they roll doubles, sacrifice this enchantment.",
+      "variants": [
+        "manual_leave_0",
+        "manual_leave_1",
+        "wrong_upkeep_0",
+        "wrong_upkeep_1",
+        "no_enemy_creature_0",
+        "no_enemy_creature_1",
+        "doubles_1",
+        "not_doubles_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Aura Thief",
+  "csvid": 4095,
+  "recipes": [
+    {
+      "family": "departure_linked_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 4095
+      },
+      "oracle_text": "Flying\nWhen this creature dies, you gain control of all enchantments. (You don't get to move Auras.)",
+      "variants": [
+        "all_0",
+        "all_1",
+        "attachment_0",
+        "attachment_1",
+        "bounce_0",
+        "bounce_1",
+        "exile_0",
+        "exile_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "card": "Echo Mage",
+  "csvid": 10913,
+  "recipes": [
+    {
+      "family": "level_activated_riders",
+      "version": 2,
+      "oracle_text": "Level up {1}{U} ({1}{U}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 2-3\n2/4\n{U}{U}, {T}: Copy target instant or sorcery spell. You may choose new targets for the copy.\nLEVEL 4+\n2/5\n{U}{U}, {T}: Copy target instant or sorcery spell twice. You may choose new targets for the copies.",
+      "params": {
+        "price": [
+          1,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "activation": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          2,
+          3
+        ],
+        "first": [
+          2,
+          2,
+          4
+        ],
+        "second": [
+          4,
+          2,
+          5
+        ],
+        "first_riders": [
+          "{U}{U}, {T}: Copy target instant or sorcery spell. You may choose new targets for the copy."
+        ],
+        "second_riders": [
+          "{U}{U}, {T}: Copy target instant or sorcery spell twice. You may choose new targets for the copies."
+        ],
+        "effect": "copy",
+        "rider_mana": [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "below_0",
+        "first_0",
+        "upper_0",
+        "short_0",
+        "no_parent_0",
+        "wrong_parent_0",
+        "retarget_0",
+        "replay_0",
+        "below_1",
+        "first_1",
+        "upper_1",
+        "short_1",
+        "no_parent_1",
+        "wrong_parent_1",
+        "retarget_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

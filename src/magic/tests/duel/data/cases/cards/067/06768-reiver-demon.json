@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 6768,
+  "card": "Reiver Demon",
+  "recipes": [
+    {
+      "family": "entry_follow_on_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 6768,
+        "printed_cost": "{4}{B}{B}{B}{B}",
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, if you cast it from your hand, destroy all nonartifact, nonblack creatures. They can't be regenerated.",
+      "variants": [
+        "mixed_0",
+        "no_regen_0",
+        "reanimated_0",
+        "flying_0",
+        "mixed_1",
+        "no_regen_1",
+        "reanimated_1",
+        "flying_1"
+      ]
+    }
+  ]
+}

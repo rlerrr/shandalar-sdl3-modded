@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 15869,
+  "card": "Invocation of Saint Traft",
+  "recipes": [
+    {
+      "family": "attack_trigger_tokens_and_combat",
+      "version": 2,
+      "params": {
+        "csvid": 15869,
+        "printed_cost": "{1}{W}{U}",
+        "keywords": [
+          "Enchant"
+        ]
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature has \"Whenever this creature attacks, create a 4/4 white Angel creature token with flying that's tapped and attacking. Exile that token at end of combat.\"",
+      "variants": [
+        "normal_0",
+        "air_block_0",
+        "foe_host_0",
+        "aura_removed_0",
+        "normal_1",
+        "air_block_1",
+        "foe_host_1",
+        "aura_removed_1"
+      ]
+    }
+  ]
+}

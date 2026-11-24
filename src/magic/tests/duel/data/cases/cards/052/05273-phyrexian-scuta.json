@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Phyrexian Scuta",
+  "csvid": 5273,
+  "recipes": [
+    {
+      "family": "kicker_entry_counters",
+      "version": 2,
+      "oracle_text": "Kicker—Pay 3 life. (You may pay 3 life in addition to any other costs as you cast this spell.)\nIf this creature was kicked, it enters with two +1/+1 counters on it.",
+      "params": {
+        "mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "life": 3,
+        "returned_card": null,
+        "counter": "plus1",
+        "base": 0,
+        "extra": 2,
+        "rider": "none"
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "kicker_short_0",
+        "kicker_short_1",
+        "base_short_0",
+        "base_short_1",
+        "countered_0",
+        "countered_1",
+        "blink_0",
+        "blink_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

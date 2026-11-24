@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Vile Redeemer",
+  "csvid": 15709,
+  "recipes": [
+    {
+      "family": "devoid_scions_and_sacrifice",
+      "version": 2,
+      "params": {
+        "role": "redeemer",
+        "mana": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Devoid (This card has no color.)\nFlash\nWhen you cast this spell, you may pay {C}. If you do, create a 1/1 colorless Eldrazi Scion creature token for each nontoken creature that died under your control this turn. Those tokens have \"Sacrifice this token: Add {C}.\"",
+      "variants": [
+        "on_cast_0",
+        "no_colorless_0",
+        "decline_0",
+        "offturn_0",
+        "zero_deaths_0",
+        "replay_0",
+        "on_cast_1",
+        "no_colorless_1",
+        "decline_1",
+        "offturn_1",
+        "zero_deaths_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

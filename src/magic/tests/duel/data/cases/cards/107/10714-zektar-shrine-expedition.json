@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Zektar Shrine Expedition",
+  "csvid": 10714,
+  "recipes": [
+    {
+      "family": "landfall_quest_expedition",
+      "version": 2,
+      "params": {
+        "schema": 8,
+        "quest_cost": 3,
+        "effect": {
+          "kind": "delayed_token",
+          "power": 7,
+          "toughness": 1,
+          "color": "R",
+          "subtype": "Elemental",
+          "keywords": [
+            "Trample",
+            "Haste"
+          ],
+          "expires": "next_end_step"
+        }
+      },
+      "oracle_text": "Landfall — Whenever a land you control enters, you may put a quest counter on this enchantment.\nRemove three quest counters from this enchantment and sacrifice it: Create a 7/1 red Elemental creature token with trample and haste. Exile it at the beginning of the next end step.",
+      "variants": [
+        "cast_0",
+        "unfunded_0",
+        "threshold_0",
+        "activate_0",
+        "extra_counter_0",
+        "pending_replay_0",
+        "opponent_land_0",
+        "removed_source_0",
+        "cleanup_0",
+        "offturn_0",
+        "haste_trample_0",
+        "expiry_replay_0",
+        "cast_1",
+        "unfunded_1",
+        "threshold_1",
+        "activate_1",
+        "extra_counter_1",
+        "pending_replay_1",
+        "opponent_land_1",
+        "removed_source_1",
+        "cleanup_1",
+        "offturn_1",
+        "haste_trample_1",
+        "expiry_replay_1",
+        "decline_0",
+        "decline_then_pay_0"
+      ]
+    }
+  ]
+}

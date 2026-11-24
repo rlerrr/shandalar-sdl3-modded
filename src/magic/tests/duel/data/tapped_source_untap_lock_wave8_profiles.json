@@ -1,0 +1,339 @@
+{
+  "sources": {
+    "Amber Prison": {
+      "csvid": 2393,
+      "handler": "manalinkeh_card_amber_prison",
+      "oracle": {
+        "oracle_id": "1c69fdcf-ba87-480a-88df-70aa4ec9fff0",
+        "name": "Amber Prison",
+        "oracle_text": "You may choose not to untap this artifact during your untap step.\n{4}, {T}: Tap target artifact, creature, or land. That permanent doesn't untap during its controller's untap step for as long as this artifact remains tapped.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/6ed/272/amber-prison?utm_source=api"
+      }
+    },
+    "Deserter's Quarters": {
+      "csvid": 13869,
+      "handler": "manalinkeh_card_deserters_quarters",
+      "oracle": {
+        "oracle_id": "aa8e0e77-4bbe-42d3-a3db-034fd114f9d7",
+        "name": "Deserter's Quarters",
+        "oracle_text": "You may choose not to untap this artifact during your untap step.\n{6}, {T}: Tap target creature. It doesn't untap during its controller's untap step for as long as this artifact remains tapped.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/160/deserters-quarters?utm_source=api"
+      }
+    },
+    "Phyrexian Gremlins": {
+      "csvid": 515,
+      "handler": "manalinkeh_card_phyrexian_gremlins",
+      "oracle": {
+        "oracle_id": "407a0761-7ccc-4607-8df6-e744d30a81a0",
+        "name": "Phyrexian Gremlins",
+        "oracle_text": "You may choose not to untap this creature during your untap step.\n{T}: Tap target artifact. It doesn't untap during its controller's untap step for as long as this creature remains tapped.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Phyrexian Gremlin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/atq/18/phyrexian-gremlins?utm_source=api"
+      }
+    },
+    "Rust Tick": {
+      "csvid": 11349,
+      "handler": "manalinkeh_card_rust_tick",
+      "oracle": {
+        "oracle_id": "c7f20899-2625-4b3a-8bd8-0bcee07ed86e",
+        "name": "Rust Tick",
+        "oracle_text": "You may choose not to untap this creature during your untap step.\n{1}, {T}: Tap target artifact. It doesn't untap during its controller's untap step for as long as this creature remains tapped.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Insect",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/198/rust-tick?utm_source=api"
+      }
+    },
+    "Mole Worms": {
+      "csvid": 2039,
+      "handler": "manalinkeh_card_mole_worms",
+      "oracle": {
+        "oracle_id": "b86ccfc1-a26b-4942-9d77-fef7676c77be",
+        "name": "Mole Worms",
+        "oracle_text": "You may choose not to untap this creature during your untap step.\n{T}: Tap target land. It doesn't untap during its controller's untap step for as long as this creature remains tapped.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Worm",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5ed/179/mole-worms?utm_source=api"
+      }
+    },
+    "Mana Leech": {
+      "csvid": 3824,
+      "handler": "manalinkeh_card_mole_worms",
+      "oracle": {
+        "oracle_id": "cad05528-917b-4296-9d23-ba9433612709",
+        "name": "Mana Leech",
+        "oracle_text": "You may choose not to untap this creature during your untap step.\n{T}: Tap target land. It doesn't untap during its controller's untap step for as long as this creature remains tapped.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Leech",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/usg/141/mana-leech?utm_source=api"
+      }
+    }
+  },
+  "witnesses": {
+    "Boomerang": {
+      "csvid": 585,
+      "handler": "manalinkeh_card_boomerang",
+      "oracle": {
+        "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+        "name": "Boomerang",
+        "oracle_text": "Return target permanent to its owner's hand.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+      }
+    },
+    "Counterspell": {
+      "csvid": 48,
+      "handler": "manalinkeh_card_counterspell",
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      }
+    },
+    "Darksteel Citadel": {
+      "csvid": 6870,
+      "handler": "manalinkeh_card_darksteel_citadel",
+      "oracle": {
+        "oracle_id": "8dc067bf-f78f-4ac4-b6e7-b305c42cf0bc",
+        "name": "Darksteel Citadel",
+        "oracle_text": "Indestructible\n{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Artifact Land",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c21/285/darksteel-citadel?utm_source=api"
+      }
+    },
+    "Forest": {
+      "csvid": 91,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      }
+    },
+    "Grizzly Bears": {
+      "csvid": 106,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      }
+    },
+    "Hill Giant": {
+      "csvid": 110,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      }
+    },
+    "Island": {
+      "csvid": 126,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      }
+    },
+    "Ornithopter": {
+      "csvid": 514,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+        "name": "Ornithopter",
+        "oracle_text": "Flying",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Thopter",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+      }
+    },
+    "Swamp": {
+      "csvid": 239,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      }
+    },
+    "Twiddle": {
+      "csvid": 256,
+      "handler": "manalinkeh_card_twiddle",
+      "oracle": {
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "name": "Twiddle",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+      }
+    }
+  },
+  "static_witnesses": [
+    "Grizzly Bears",
+    "Hill Giant",
+    "Ornithopter"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "csvid": 19629,
+  "card": "Frilled Mystic",
+  "recipes": [
+    {
+      "family": "flash_entry_stack_control",
+      "version": 2,
+      "params": {
+        "csvid": 19629,
+        "mana": [
+          0,
+          0,
+          2,
+          2,
+          0,
+          0
+        ],
+        "stats": [
+          3,
+          2
+        ]
+      },
+      "oracle_text": "Flash\nWhen this creature enters, you may counter target spell.",
+      "variants": [
+        "low_0",
+        "low_1",
+        "decline_0",
+        "decline_1",
+        "uncounterable_0",
+        "uncounterable_1",
+        "empty_countered_0",
+        "empty_countered_1"
+      ]
+    }
+  ]
+}

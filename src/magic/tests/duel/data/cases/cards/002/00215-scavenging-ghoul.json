@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Scavenging Ghoul",
+  "csvid": 215,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_conditional_costs",
+      "version": 2,
+      "params": {
+        "csvid": 215,
+        "printed_mana": "{3}{B}",
+        "rules": "At the beginning of each end step, put a corpse counter on this creature for each creature that died this turn.\nRemove a corpse counter from this creature: Regenerate this creature."
+      },
+      "oracle_text": "At the beginning of each end step, put a corpse counter on this creature for each creature that died this turn.\nRemove a corpse counter from this creature: Regenerate this creature.",
+      "variants": [
+        "own_end_0",
+        "own_end_1",
+        "opposing_end_0",
+        "opposing_end_1",
+        "two_deaths_0",
+        "two_deaths_1",
+        "noncreature_only_0",
+        "noncreature_only_1"
+      ]
+    }
+  ]
+}

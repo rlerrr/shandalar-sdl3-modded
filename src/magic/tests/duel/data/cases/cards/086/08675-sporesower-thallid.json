@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Sporesower Thallid",
+  "csvid": 8675,
+  "recipes": [
+    {
+      "family": "spore_synergy_riders",
+      "version": 2,
+      "params": {
+        "shape": "upkeep_team",
+        "mana": [
+          2,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "keywords": [],
+        "power": 4,
+        "toughness": 4
+      },
+      "oracle_text": "At the beginning of your upkeep, put a spore counter on each Fungus you control.\nRemove three spore counters from this creature: Create a 1/1 green Saproling creature token.",
+      "variants": [
+        "team_threshold_0",
+        "team_replay_0",
+        "team_threshold_1",
+        "team_replay_1"
+      ]
+    }
+  ]
+}

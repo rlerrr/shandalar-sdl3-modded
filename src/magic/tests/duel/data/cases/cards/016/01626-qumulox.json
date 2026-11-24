@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "card": "Qumulox",
+  "csvid": 1626,
+  "recipes": [
+    {
+      "family": "artifact_affinity",
+      "version": 2,
+      "oracle_text": "Affinity for artifacts (This spell costs {1} less to cast for each artifact you control.)\nFlying",
+      "params": {
+        "printed": [
+          6,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "artifact": false,
+        "flying": true,
+        "power": 5,
+        "toughness": 4
+      },
+      "variants": [
+        "full_price_0",
+        "own_exact_0",
+        "short_own_0",
+        "other_permanents_0",
+        "opponent_only_0",
+        "mixed_controllers_0",
+        "other_zones_0",
+        "artifact_land_0",
+        "tapped_artifact_0",
+        "floor_surplus_0",
+        "generic_from_black_0",
+        "enter_artifact_0",
+        "remove_artifact_0",
+        "stolen_artifact_0",
+        "second_cast_0",
+        "pending_snapshot_0",
+        "colored_floor_short_0",
+        "ground_block_denied_0",
+        "reach_block_allowed_0",
+        "block_flyer_0",
+        "full_price_1",
+        "own_exact_1",
+        "short_own_1",
+        "other_permanents_1",
+        "opponent_only_1",
+        "mixed_controllers_1",
+        "other_zones_1",
+        "artifact_land_1",
+        "tapped_artifact_1",
+        "floor_surplus_1",
+        "generic_from_black_1",
+        "enter_artifact_1",
+        "remove_artifact_1",
+        "stolen_artifact_1",
+        "second_cast_1",
+        "pending_snapshot_1",
+        "colored_floor_short_1",
+        "ground_block_denied_1",
+        "reach_block_allowed_1",
+        "block_flyer_1"
+      ]
+    }
+  ]
+}

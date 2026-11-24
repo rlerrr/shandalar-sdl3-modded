@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Pardic Dragon",
+  "csvid": 8626,
+  "recipes": [
+    {
+      "family": "suspend_time_and_recurring_exile",
+      "version": 2,
+      "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn.\nSuspend 2—{R}{R}\nWhenever an opponent casts a spell, if this card is suspended, that player may put a time counter on this card.",
+      "params": {
+        "source": 8626,
+        "duration": 2,
+        "suspend_fee": [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "variants": [
+        "countdown_0",
+        "countdown_1",
+        "own_spell_0",
+        "own_spell_1",
+        "opponent_spell_0",
+        "opponent_spell_1",
+        "replay_0",
+        "replay_1",
+        "countered_0",
+        "countered_1",
+        "exile_loss_0",
+        "exile_loss_1",
+        "unfunded_0",
+        "unfunded_1",
+        "normal_entry_0",
+        "normal_entry_1",
+        "opponent_declines_1"
+      ]
+    }
+  ]
+}

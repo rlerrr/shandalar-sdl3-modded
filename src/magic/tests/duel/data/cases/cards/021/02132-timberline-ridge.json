@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "card": "Timberline Ridge",
+  "csvid": 2132,
+  "recipes": [
+    {
+      "family": "depletion_dual_land",
+      "version": 2,
+      "oracle_text": "This land doesn't untap during your untap step if it has a depletion counter on it.\nAt the beginning of your upkeep, remove a depletion counter from this land.\n{T}: Add {R} or {G}. Put a depletion counter on this land.",
+      "params": {
+        "outputs": [
+          "R",
+          "G"
+        ],
+        "add_depletion": 1,
+        "remove_in_own_upkeep": 1
+      },
+      "variants": [
+        "ordinary_entry_0",
+        "one_land_allowance_0",
+        "spend_first_0",
+        "spend_second_0",
+        "tapped_repeat_denied_0",
+        "zero_depletion_untaps_0",
+        "single_upkeep_cycle_0",
+        "two_upkeep_cycles_0",
+        "manual_untap_0",
+        "split_controller_upkeeps_0",
+        "opposing_turn_atlas_0",
+        "offturn_mana_0",
+        "reentry_reset_0",
+        "upkeep_ready_snapshot_0",
+        "atlas_pending_snapshot_0",
+        "ordinary_entry_1",
+        "one_land_allowance_1",
+        "spend_first_1",
+        "spend_second_1",
+        "tapped_repeat_denied_1",
+        "zero_depletion_untaps_1",
+        "single_upkeep_cycle_1",
+        "two_upkeep_cycles_1",
+        "manual_untap_1",
+        "split_controller_upkeeps_1",
+        "opposing_turn_atlas_1",
+        "offturn_mana_1",
+        "reentry_reset_1",
+        "upkeep_ready_snapshot_1",
+        "atlas_pending_snapshot_1"
+      ]
+    }
+  ]
+}

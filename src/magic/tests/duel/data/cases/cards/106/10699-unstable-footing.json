@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Unstable Footing",
+  "csvid": 10699,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "kicker_alternate_payment_and_damage",
+      "version": 2,
+      "oracle_text": "Kicker {3}{R} (You may pay an additional {3}{R} as you cast this spell.)\nDamage can't be prevented this turn. If this spell was kicked, it deals 5 damage to target player or planeswalker.",
+      "params": {
+        "model": 10699,
+        "mana": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "kicker_mana": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "x": null
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "walker_0",
+        "walker_1",
+        "shield_only_0",
+        "shield_only_1",
+        "paid_unshielded_0",
+        "paid_unshielded_1",
+        "declined_unshielded_0",
+        "declined_unshielded_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 3768,
+  "card": "Fiery Mantle",
+  "recipes": [
+    {
+      "family": "departure_counters_and_search",
+      "version": 2,
+      "params": {
+        "csvid": 3768,
+        "printed_cost": "{1}{R}"
+      },
+      "oracle_text": "Enchant creature\n{R}: Enchanted creature gets +1/+0 until end of turn.\nWhen this Aura is put into a graveyard from the battlefield, return it to its owner's hand.",
+      "variants": [
+        "pump_0",
+        "host_dies_0",
+        "destroy_0",
+        "bounce_0",
+        "pump_1",
+        "host_dies_1",
+        "destroy_1",
+        "bounce_1"
+      ]
+    }
+  ]
+}

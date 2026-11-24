@@ -1,0 +1,315 @@
+{
+  "sources": {
+    "Crooked Scales": {
+      "oracle": {
+        "oracle_id": "49c47768-fcc7-4091-b06d-d8a2bd7d1cc9",
+        "name": "Crooked Scales",
+        "oracle_text": "{4}, {T}: Flip a coin. If you win the flip, destroy target creature an opponent controls. If you lose the flip, destroy target creature you control unless you pay {3} and repeat this process.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/291/crooked-scales?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4443,
+        "iid": 2062,
+        "name": "Crooked Scales",
+        "handler": "manalinkeh_card_crooked_scales",
+        "kind": "card"
+      }
+    },
+    "Goblin Bangchuckers": {
+      "oracle": {
+        "oracle_id": "f2561cc9-3840-4bd7-ad8b-a85d35e47f71",
+        "name": "Goblin Bangchuckers",
+        "oracle_text": "{T}: Flip a coin. If you win the flip, this creature deals 2 damage to any target. If you lose the flip, this creature deals 2 damage to itself.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m12/137/goblin-bangchuckers?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11811,
+        "iid": 3981,
+        "name": "Goblin Bangchuckers",
+        "handler": "manalinkeh_card_goblin_bangchuckers",
+        "kind": "card"
+      }
+    },
+    "Goblin Lyre": {
+      "oracle": {
+        "oracle_id": "0709e9c8-dbe7-4806-ae75-d2e2d745d6a4",
+        "name": "Goblin Lyre",
+        "oracle_text": "Sacrifice this artifact: Flip a coin. If you win the flip, this artifact deals damage to target opponent or planeswalker equal to the number of creatures you control. If you lose the flip, this artifact deals damage to you equal to the number of creatures that opponent or that planeswalker's controller controls.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ice/319/goblin-lyre?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1953,
+        "iid": 12841,
+        "name": "Goblin Lyre",
+        "handler": "manalinkeh_card_goblin_lyre",
+        "kind": "card"
+      }
+    },
+    "Mana Screw": {
+      "oracle": {
+        "oracle_id": "fc1b9c05-6ec0-4d00-9fa4-01d7d2976585",
+        "name": "Mana Screw",
+        "oracle_text": "{1}: Flip a coin. If you win the flip, add {C}{C}. Activate only as an instant.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/unh/123/mana-screw?utm_source=api"
+      },
+      "registry": {
+        "csvid": 17807,
+        "iid": 17907,
+        "name": "Mana Screw",
+        "handler": "manalinkeh_card_mana_screw",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Cho-Manno, Revolutionary": {
+      "oracle": {
+        "oracle_id": "91af5e35-b3b8-43ce-b1ea-997ed74e4ad2",
+        "name": "Cho-Manno, Revolutionary",
+        "oracle_text": "Prevent all damage that would be dealt to Cho-Manno.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Legendary Creature — Human Rebel",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/12/cho-manno-revolutionary?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4429,
+        "iid": 1710,
+        "name": "Cho-Manno, Revolutionary",
+        "handler": "manalinkeh_card_cho_manno_revolutionary",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Millstone": {
+      "oracle": {
+        "oracle_id": "3212e47a-5492-4c50-9d4a-6ea562f1a6e1",
+        "name": "Millstone",
+        "oracle_text": "{2}, {T}: Target player mills two cards.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/242/millstone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 507,
+        "iid": 6116,
+        "name": "Millstone",
+        "handler": "manalinkeh_card_millstone",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Squire": {
+      "oracle": {
+        "oracle_id": "aa6cdcc7-f5ea-47bf-9448-1c63e36b18d1",
+        "name": "Squire",
+        "oracle_text": "",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsb/15/squire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 948,
+        "iid": 9275,
+        "name": "Squire",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

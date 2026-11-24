@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Shipwreck Moray",
+  "csvid": 16796,
+  "recipes": [
+    {
+      "family": "remaining_entry_combat",
+      "version": 2,
+      "params": {
+        "csvid": 16796,
+        "cost": "{3}{U}",
+        "choices": [
+          "twice_0",
+          "twice_1",
+          "third_dies_0",
+          "third_dies_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, you get {E}{E}{E}{E} (four energy counters).\nPay {E}: This creature gets +2/-2 until end of turn.",
+      "variants": [
+        "twice_0",
+        "twice_1",
+        "third_dies_0",
+        "third_dies_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

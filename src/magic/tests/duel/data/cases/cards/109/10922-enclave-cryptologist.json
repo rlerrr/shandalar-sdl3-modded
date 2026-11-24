@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "card": "Enclave Cryptologist",
+  "csvid": 10922,
+  "recipes": [
+    {
+      "family": "level_activated_riders",
+      "version": 2,
+      "oracle_text": "Level up {1}{U} ({1}{U}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 1-2\n0/1\n{T}: Draw a card, then discard a card.\nLEVEL 3+\n0/1\n{T}: Draw a card.",
+      "params": {
+        "price": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "activation": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          0,
+          1
+        ],
+        "first": [
+          1,
+          0,
+          1
+        ],
+        "second": [
+          3,
+          0,
+          1
+        ],
+        "first_riders": [
+          "{T}: Draw a card, then discard a card."
+        ],
+        "second_riders": [
+          "{T}: Draw a card."
+        ],
+        "effect": "loot",
+        "rider_mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "below_0",
+        "first_0",
+        "last_lower_0",
+        "upper_0",
+        "fresh_0",
+        "empty_library_0",
+        "timing_0",
+        "replay_0",
+        "below_1",
+        "first_1",
+        "last_lower_1",
+        "upper_1",
+        "fresh_1",
+        "empty_library_1",
+        "timing_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Inquisitor Exarch",
+  "csvid": 11619,
+  "recipes": [
+    {
+      "family": "entry_interaction_choice_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 11619,
+        "mana_cost": "{W}{W}"
+      },
+      "oracle_text": "When this creature enters, choose one —\n• You gain 2 life.\n• Target opponent loses 2 life.",
+      "variants": [
+        "gain_0",
+        "gain_1",
+        "drain_0",
+        "drain_1",
+        "protected_opponent_0",
+        "protected_opponent_1",
+        "alternate_reentry_0",
+        "alternate_reentry_1"
+      ]
+    }
+  ]
+}

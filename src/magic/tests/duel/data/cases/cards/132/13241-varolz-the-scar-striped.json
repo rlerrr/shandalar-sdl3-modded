@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Varolz, the Scar-Striped",
+  "csvid": 13241,
+  "recipes": [
+    {
+      "family": "regeneration_costs_and_zones",
+      "version": 2,
+      "params": {
+        "csvid": 13241,
+        "cost": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Each creature card in your graveyard has scavenge. The scavenge cost is equal to its mana cost. (Exile a creature card from your graveyard and pay its mana cost: Put a number of +1/+1 counters equal to that card's power on target creature. Scavenge only as a sorcery.)\nSacrifice another creature: Regenerate Varolz.",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "denied_cost_0",
+        "denied_cost_1",
+        "declined_0",
+        "declined_1",
+        "cannot_regenerate_0",
+        "cannot_regenerate_1",
+        "proactive_0",
+        "proactive_1",
+        "damage_0",
+        "damage_1",
+        "combat_0",
+        "combat_1",
+        "scavenge_paid_0",
+        "scavenge_paid_1",
+        "scavenge_zero_0",
+        "scavenge_zero_1",
+        "scavenge_other_target_0",
+        "scavenge_other_target_1",
+        "scavenge_other_grave_0",
+        "scavenge_other_grave_1",
+        "scavenge_offturn_0",
+        "scavenge_offturn_1",
+        "scavenge_wrong_color_0",
+        "scavenge_wrong_color_1"
+      ]
+    }
+  ]
+}

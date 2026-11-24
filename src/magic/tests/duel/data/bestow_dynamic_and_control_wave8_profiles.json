@@ -1,0 +1,471 @@
+{
+  "sources": {
+    "Eidolon of Countless Battles": {
+      "oracle": {
+        "oracle_id": "441b51b0-ecd0-466d-9ca8-e754eb563aec",
+        "name": "Eidolon of Countless Battles",
+        "oracle_text": "Bestow {2}{W}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nThis creature and enchanted creature each get +1/+1 for each creature you control and +1/+1 for each Aura you control.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Enchantment Creature — Spirit",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [
+          "Bestow"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/144/eidolon-of-countless-battles?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13689,
+        "iid": 2898,
+        "name": "Eidolon of Countless Battles",
+        "handler": "manalinkeh_card_eidolon_of_countless_battles",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13690,
+        "iid": 2899,
+        "name": "Eidolon of Countless Battles Bestowed",
+        "handler": "manalinkeh_card_eidolon_of_countless_battles",
+        "kind": "card"
+      }
+    },
+    "Nighthowler": {
+      "oracle": {
+        "oracle_id": "57b3f7fc-1812-4134-a645-6cef48a8aa71",
+        "name": "Nighthowler",
+        "oracle_text": "Bestow {2}{B}{B} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nThis creature and enchanted creature each get +X/+X, where X is the number of creature cards in all graveyards.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Enchantment Creature — Horror",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [
+          "Bestow"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clb/764/nighthowler?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13490,
+        "iid": 6608,
+        "name": "Nighthowler",
+        "handler": "manalinkeh_card_nighthowler",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13491,
+        "iid": 6609,
+        "name": "Nighthowler Bestowed",
+        "handler": "manalinkeh_card_nighthowler",
+        "kind": "card"
+      }
+    },
+    "Hypnotic Siren": {
+      "oracle": {
+        "oracle_id": "54aede54-4f7d-40f5-bad0-2448293e2cf0",
+        "name": "Hypnotic Siren",
+        "oracle_text": "Bestow {5}{U}{U} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nFlying\nYou control enchanted creature.\nEnchanted creature gets +1/+1 and has flying.",
+        "mana_cost": "{U}",
+        "type_line": "Enchantment Creature — Siren",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Bestow"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/42/hypnotic-siren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13912,
+        "iid": 4740,
+        "name": "Hypnotic Siren",
+        "handler": "manalinkeh_card_hypnotic_siren",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13913,
+        "iid": 4741,
+        "name": "Hypnotic Siren Bestowed",
+        "handler": "manalinkeh_card_hypnotic_siren",
+        "kind": "card"
+      }
+    },
+    "Crystalline Nautilus": {
+      "oracle": {
+        "oracle_id": "77661282-1c98-4f70-b617-c75633ab04c8",
+        "name": "Crystalline Nautilus",
+        "oracle_text": "Bestow {3}{U}{U} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nWhen this permanent becomes the target of a spell or ability, sacrifice it.\nEnchanted creature gets +4/+4 and has \"When this creature becomes the target of a spell or ability, sacrifice it.\"",
+        "mana_cost": "{2}{U}",
+        "type_line": "Enchantment Creature — Nautilus",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Bestow"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/34/crystalline-nautilus?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13861,
+        "iid": 2127,
+        "name": "Crystalline Nautilus",
+        "handler": "manalinkeh_card_crystalline_nautilus",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13862,
+        "iid": 2128,
+        "name": "Crystalline Nautilus Bestowed",
+        "handler": "manalinkeh_card_crystalline_nautilus",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Boomerang": {
+      "oracle": {
+        "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+        "name": "Boomerang",
+        "oracle_text": "Return target permanent to its owner's hand.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+      },
+      "registry": {
+        "csvid": 585,
+        "iid": 1233,
+        "name": "Boomerang",
+        "handler": "manalinkeh_card_boomerang",
+        "kind": "card"
+      }
+    },
+    "Flowstone Overseer": {
+      "oracle": {
+        "oracle_id": "89a3a6a3-e5f9-4e28-8372-99219db3f976",
+        "name": "Flowstone Overseer",
+        "oracle_text": "{R}{R}: Target creature gets +1/-1 until end of turn.",
+        "mana_cost": "{2}{R}{R}{R}",
+        "type_line": "Creature — Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nem/82/flowstone-overseer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4693,
+        "iid": 3548,
+        "name": "Flowstone Overseer",
+        "handler": "manalinkeh_card_flowstone_overseer",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Holy Strength": {
+      "oracle": {
+        "oracle_id": "9357de36-f8be-4f49-b2c8-9fe9eaf82b07",
+        "name": "Holy Strength",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +1/+2.",
+        "mana_cost": "{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m11/16/holy-strength?utm_source=api"
+      },
+      "registry": {
+        "csvid": 112,
+        "iid": 4610,
+        "name": "Holy Strength",
+        "handler": "manalinkeh_card_holy_strenght",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Naturalize": {
+      "oracle": {
+        "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+        "name": "Naturalize",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1096,
+        "iid": 6485,
+        "name": "Naturalize",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Tormod's Crypt": {
+      "oracle": {
+        "oracle_id": "1573f7f9-672c-421a-b1ac-3d0d8aea59ca",
+        "name": "Tormod's Crypt",
+        "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/235/tormods-crypt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 368,
+        "iid": 10094,
+        "name": "Tormod's Crypt",
+        "handler": "manalinkeh_card_tormods_crypt",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    }
+  }
+}

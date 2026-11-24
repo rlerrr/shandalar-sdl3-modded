@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "card": "Stun",
+  "csvid": 3306,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "block_restriction_spells",
+      "version": 2,
+      "oracle_text": "Target creature can't block this turn.\nDraw a card.",
+      "params": {
+        "mode": "targeted",
+        "mana": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "instant": true,
+        "keywords": []
+      },
+      "variants": [
+        "effect_0",
+        "effect_1",
+        "expiry_0",
+        "expiry_1",
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "flying_target_0",
+        "flying_target_1",
+        "only_target_0",
+        "only_target_1",
+        "own_target_0",
+        "own_target_1",
+        "no_target_0",
+        "no_target_1",
+        "removed_target_0",
+        "removed_target_1",
+        "one_card_0",
+        "one_card_1",
+        "defend_0",
+        "defend_1",
+        "preblock_0",
+        "preblock_1",
+        "afterblock_0",
+        "afterblock_1"
+      ]
+    }
+  ]
+}

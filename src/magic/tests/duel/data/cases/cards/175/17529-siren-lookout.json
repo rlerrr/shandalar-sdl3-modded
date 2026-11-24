@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Siren Lookout",
+  "csvid": 17529,
+  "recipes": [
+    {
+      "family": "entry_follow_on_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 17529,
+        "printed_mana": "{2}{U}",
+        "rules": "Flying\nWhen this creature enters, it explores. (Reveal the top card of your library. Put that card into your hand if it's a land. Otherwise, put a +1/+1 counter on this creature, then put the card back or put it into your graveyard.)"
+      },
+      "oracle_text": "Flying\nWhen this creature enters, it explores. (Reveal the top card of your library. Put that card into your hand if it's a land. Otherwise, put a +1/+1 counter on this creature, then put the card back or put it into your graveyard.)",
+      "variants": [
+        "land_flying_0",
+        "land_flying_1",
+        "nonland_mill_0",
+        "nonland_mill_1",
+        "nonland_keep_0",
+        "nonland_keep_1"
+      ]
+    }
+  ]
+}

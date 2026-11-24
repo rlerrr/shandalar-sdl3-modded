@@ -310,6 +310,31 @@ int reset_timestamp_players(void)
 // FUNCTION: SHANDALAR 0x00403eeb
 int check_duel_finished(void);
 
+/* The normal rotation is only advanced by an ordinary turn. A queued extra
+   turn consumes its dispatch flag while leaving the normal rotation pending. */
+int duel_select_scheduled_turn(int normal_player, int *is_extra)
+{
+  *is_extra = g_duel_state_0093a848 != 0;
+  if (!*is_extra)
+    return normal_player;
+
+  int player = (g_duel_state_0093a848 & 1U) != 0 ? 0 : 1;
+  g_duel_state_0093a848 = 0;
+  if (normal_player != player)
+    g_duel_extra_turn_player = -1;
+  return player;
+}
+
+int duel_finish_scheduled_turn(int normal_player, int was_extra)
+{
+  if (was_extra)
+  {
+    g_duel_extra_turn_player = -1;
+    return normal_player;
+  }
+  return 1 - normal_player;
+}
+
 // FUNCTION: MAGIC 0x0044a7e0
 // FUNCTION: SHANDALAR 0x00403160
 void run_duel_turn(unsigned int player)
@@ -2665,34 +2690,10 @@ idk:
 #endif
   while (g_adventure_world_exit_requested == 0 && check_duel_finished() == 0)
   {
-    if (g_duel_state_0093a848 != 0)
-    {
-      if ((g_duel_state_0093a848 & 1U) != 0)
-      {
-        g_duel_state_0093a848 = 0;
-        if (next_player == 1)
-        {
-          g_duel_extra_turn_player = -1;
-        }
-        run_duel_turn(0);
-        g_duel_extra_turn_player = -1;
-      }
-      else
-      {
-        g_duel_state_0093a848 = 0;
-        if (next_player == 0)
-        {
-          g_duel_extra_turn_player = -1;
-        }
-        run_duel_turn(1);
-        g_duel_extra_turn_player = -1;
-      }
-    }
-    else
-    {
-      run_duel_turn(next_player);
-      next_player = 1 - next_player;
-    }
+    int is_extra;
+    int turn_player = duel_select_scheduled_turn(next_player, &is_extra);
+    run_duel_turn(turn_player);
+    next_player = duel_finish_scheduled_turn(next_player, is_extra);
   }
 #ifndef SHANDALAR
   ReleaseMutex(global_mutex_GameInit);
@@ -2741,6 +2742,24 @@ idk:
 static jmp_buf g_duel_exit_jump;
 static DWORD g_duel_exit_result;
 static int g_duel_exit_jump_active;
+
+BOOL capture_headless_duel_exit(void (*operation)(void), DWORD *result)
+{
+  if (!duel_host_is_headless() || g_duel_exit_jump_active)
+  {
+    abort();
+  }
+  g_duel_exit_jump_active = 1;
+  if (setjmp(g_duel_exit_jump) != 0)
+  {
+    g_duel_exit_jump_active = 0;
+    *result = g_duel_exit_result;
+    return TRUE;
+  }
+  operation();
+  g_duel_exit_jump_active = 0;
+  return FALSE;
+}
 
 void abort_duel_run(DWORD result)
 {

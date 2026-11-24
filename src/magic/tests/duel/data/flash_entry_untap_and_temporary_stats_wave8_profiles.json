@@ -1,0 +1,459 @@
+{
+  "sources": {
+    "Breaching Hippocamp": {
+      "oracle": {
+        "oracle_id": "5ba04e0d-a3eb-448d-8a97-08c155ef9694",
+        "name": "Breaching Hippocamp",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, untap another target creature you control.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Horse Fish",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/43/breaching-hippocamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13397,
+        "iid": 1307,
+        "name": "Breaching Hippocamp",
+        "handler": "manalinkeh_card_breaching_hippocamp",
+        "kind": "card"
+      }
+    },
+    "Briarhorn": {
+      "oracle": {
+        "oracle_id": "fcc7dd32-2198-446c-9144-e50d56ef53ed",
+        "name": "Briarhorn",
+        "oracle_text": "Flash\nWhen this creature enters, target creature gets +3/+3 until end of turn.\nEvoke {1}{G} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Elemental",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Evoke",
+          "Flash"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddr/3/briarhorn?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9085,
+        "iid": 1324,
+        "name": "Briarhorn",
+        "handler": "manalinkeh_card_briarhorn",
+        "kind": "card"
+      }
+    },
+    "Crookclaw Transmuter": {
+      "oracle": {
+        "oracle_id": "53501112-bcdb-4bb5-9fd3-674cdba91951",
+        "name": "Crookclaw Transmuter",
+        "oracle_text": "Flash\nFlying\nWhen this creature enters, switch target creature's power and toughness until end of turn.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Bird Wizard",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/59/crookclaw-transmuter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8511,
+        "iid": 2061,
+        "name": "Crookclaw Transmuter",
+        "handler": "manalinkeh_card_crookclaw_transmuter",
+        "kind": "card"
+      }
+    },
+    "Deceiver Exarch": {
+      "oracle": {
+        "oracle_id": "3c939ea6-68b7-4965-b1d3-af1d3dc79778",
+        "name": "Deceiver Exarch",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, choose one —\n• Untap target permanent you control.\n• Tap target permanent an opponent controls.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Phyrexian Cleric",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cma/36/deceiver-exarch?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11588,
+        "iid": 2362,
+        "name": "Deceiver Exarch",
+        "handler": "manalinkeh_card_deceiver_exarch",
+        "kind": "card"
+      }
+    },
+    "Village Bell-Ringer": {
+      "oracle": {
+        "oracle_id": "d7b50175-b473-452a-bb30-19a71c42e649",
+        "name": "Village Bell-Ringer",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, untap all creatures you control.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Scout",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/moc/216/village-bell-ringer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12117,
+        "iid": 10595,
+        "name": "Village Bell-Ringer",
+        "handler": "manalinkeh_card_village_bell_ringer",
+        "kind": "card"
+      }
+    },
+    "Great Oak Guardian": {
+      "oracle": {
+        "oracle_id": "5dba7746-c087-4ec1-92ca-ab9882dea24d",
+        "name": "Great Oak Guardian",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nReach\nWhen this creature enters, creatures target player controls get +2/+2 until end of turn. Untap them.",
+        "mana_cost": "{5}{G}",
+        "type_line": "Creature — Treefolk",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Reach",
+          "Flash"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c19/170/great-oak-guardian?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15518,
+        "iid": 12896,
+        "name": "Great Oak Guardian",
+        "handler": "manalinkeh_card_great_oak_guardian",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Elvish Mystic": {
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13284,
+        "iid": 2982,
+        "name": "Elvish Mystic",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Horned Turtle": {
+      "oracle": {
+        "oracle_id": "7a4ae76b-6241-4fa8-b239-5ec941a0e7df",
+        "name": "Horned Turtle",
+        "oracle_text": "",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Turtle",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/53/horned-turtle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1057,
+        "iid": 4656,
+        "name": "Horned Turtle",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Squire": {
+      "oracle": {
+        "oracle_id": "aa6cdcc7-f5ea-47bf-9448-1c63e36b18d1",
+        "name": "Squire",
+        "oracle_text": "",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsb/15/squire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 948,
+        "iid": 9275,
+        "name": "Squire",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Wind Drake": {
+      "oracle": {
+        "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+        "name": "Wind Drake",
+        "oracle_text": "Flying",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/70/wind-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1197,
+        "iid": 10989,
+        "name": "Wind Drake",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

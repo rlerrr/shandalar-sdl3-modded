@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Rotting Giant",
+  "csvid": 5679,
+  "recipes": [
+    {
+      "family": "attack_trigger_costs_and_damage",
+      "version": 2,
+      "params": {
+        "csvid": 5679,
+        "printed_mana": "{1}{B}",
+        "rules": "Whenever this creature attacks or blocks, sacrifice it unless you exile a card from your graveyard."
+      },
+      "oracle_text": "Whenever this creature attacks or blocks, sacrifice it unless you exile a card from your graveyard.",
+      "variants": [
+        "exile_attack_0",
+        "exile_attack_1",
+        "empty_attack_0",
+        "empty_attack_1",
+        "exile_block_0",
+        "exile_block_1",
+        "empty_block_0",
+        "empty_block_1",
+        "decline_exile_0"
+      ]
+    }
+  ]
+}

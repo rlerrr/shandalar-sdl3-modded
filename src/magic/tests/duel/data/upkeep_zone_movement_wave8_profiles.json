@@ -1,0 +1,1182 @@
+{
+  "sources": {
+    "Complex Automaton": {
+      "oracle": {
+        "oracle_id": "e4951b4e-ba68-495c-8062-e89250d02cf3",
+        "name": "Complex Automaton",
+        "oracle_text": "At the beginning of your upkeep, if you control seven or more permanents, return this creature to its owner's hand.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nem/128/complex-automaton?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4678,
+        "iid": 1887,
+        "name": "Complex Automaton",
+        "handler": "manalinkeh_card_complex_automaton",
+        "kind": "card"
+      }
+    },
+    "Countryside Crusher": {
+      "oracle": {
+        "oracle_id": "1636c4d2-f699-4af7-8508-dbce2f0b7b52",
+        "name": "Countryside Crusher",
+        "oracle_text": "At the beginning of your upkeep, reveal the top card of your library. If it's a land card, put it into your graveyard and repeat this process.\nWhenever a land card is put into your graveyard from anywhere, put a +1/+1 counter on this creature.",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Giant Warrior",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mma/108/countryside-crusher?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9338,
+        "iid": 1998,
+        "name": "Countryside Crusher",
+        "handler": "manalinkeh_card_countryside_crusher",
+        "kind": "card"
+      }
+    },
+    "Death of a Thousand Stings": {
+      "oracle": {
+        "oracle_id": "25895c28-23c1-439e-858b-5cb31fdc31de",
+        "name": "Death of a Thousand Stings",
+        "oracle_text": "Target player loses 1 life and you gain 1 life.\nAt the beginning of your upkeep, if you have more cards in hand than each opponent, you may return this card from your graveyard to your hand.",
+        "mana_cost": "{4}{B}",
+        "type_line": "Instant — Arcane",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/64/death-of-a-thousand-stings?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7620,
+        "iid": 2323,
+        "name": "Death of a Thousand Stings",
+        "handler": "manalinkeh_card_death_of_a_thousand_stings",
+        "kind": "card"
+      }
+    },
+    "Equipoise": {
+      "oracle": {
+        "oracle_id": "aab905ef-b945-4523-b26f-fb5e6932bb56",
+        "name": "Equipoise",
+        "oracle_text": "At the beginning of your upkeep, for each land target player controls in excess of the number you control, choose a land that player controls, then the chosen permanents phase out. Repeat this process for artifacts and creatures. (While they're phased out, they're treated as though they don't exist. They phase in before that player untaps during their next untap step.)",
+        "mana_cost": "{2}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vis/3/equipoise?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2699,
+        "iid": 3096,
+        "name": "Equipoise",
+        "handler": "manalinkeh_card_equipoise",
+        "kind": "card"
+      }
+    },
+    "Ichorid": {
+      "oracle": {
+        "oracle_id": "5261ba70-b641-461d-9d9f-fce17764ad67",
+        "name": "Ichorid",
+        "oracle_text": "Haste\nAt the beginning of the end step, sacrifice this creature.\nAt the beginning of your upkeep, if this card is in your graveyard, you may exile a black creature card other than this card from your graveyard. If you do, return this card to the battlefield.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Horror",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/93/ichorid?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5824,
+        "iid": 4773,
+        "name": "Ichorid",
+        "handler": "manalinkeh_card_ichorid",
+        "kind": "card"
+      }
+    },
+    "Imaginary Pet": {
+      "oracle": {
+        "oracle_id": "afee3422-5490-411b-a36e-82e447c1bd0f",
+        "name": "Imaginary Pet",
+        "oracle_text": "At the beginning of your upkeep, if you have a card in hand, return this creature to its owner's hand.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Illusion",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/82/imaginary-pet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3811,
+        "iid": 4799,
+        "name": "Imaginary Pet",
+        "handler": "manalinkeh_card_imaginary_pet",
+        "kind": "card"
+      }
+    },
+    "Lightning Coils": {
+      "oracle": {
+        "oracle_id": "bbb16f23-fdb1-444b-bef8-ce3e177c2678",
+        "name": "Lightning Coils",
+        "oracle_text": "Whenever a nontoken creature you control dies, put a charge counter on this artifact.\nAt the beginning of your upkeep, if this artifact has five or more charge counters on it, remove all of them from it and create that many 3/1 red Elemental creature tokens with haste. Exile them at the beginning of the next end step.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mrd/198/lightning-coils?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6705,
+        "iid": 5598,
+        "name": "Lightning Coils",
+        "handler": "manalinkeh_card_lightning_coils",
+        "kind": "card"
+      }
+    },
+    "Mana Bloom": {
+      "oracle": {
+        "oracle_id": "7c699180-d18e-4599-acd1-27b951d82136",
+        "name": "Mana Bloom",
+        "oracle_text": "This enchantment enters with X charge counters on it.\nRemove a charge counter from this enchantment: Add one mana of any color. Activate only once each turn.\nAt the beginning of your upkeep, if this enchantment has no charge counters on it, return it to its owner's hand.",
+        "mana_cost": "{X}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/275/mana-bloom?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12770,
+        "iid": 5839,
+        "name": "Mana Bloom",
+        "handler": "manalinkeh_card_mana_bloom",
+        "kind": "card"
+      }
+    },
+    "Mark of Eviction": {
+      "oracle": {
+        "oracle_id": "d9193641-a7f4-40d3-ac62-15015acece4e",
+        "name": "Mark of Eviction",
+        "oracle_text": "Enchant creature\nAt the beginning of your upkeep, return enchanted creature and all Auras attached to that creature to their owners' hands.",
+        "mana_cost": "{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rav/58/mark-of-eviction?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7898,
+        "iid": 5902,
+        "name": "Mark of Eviction",
+        "handler": "manalinkeh_card_mark_of_eviction",
+        "kind": "card"
+      }
+    },
+    "Mist of Stagnation": {
+      "oracle": {
+        "oracle_id": "e78673c4-a969-443f-b1a4-0eb37b8111af",
+        "name": "Mist of Stagnation",
+        "oracle_text": "Permanents don't untap during their controllers' untap steps.\nAt the beginning of each player's upkeep, that player chooses a permanent for each card in their graveyard, then untaps those permanents.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jud/48/mist-of-stagnation?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5977,
+        "iid": 6217,
+        "name": "Mist of Stagnation",
+        "handler": "manalinkeh_card_mist_of_stagnation",
+        "kind": "card"
+      }
+    },
+    "Mortal Combat": {
+      "oracle": {
+        "oracle_id": "dc9d1d0c-5310-460a-a3cd-1ff1f4f83c8f",
+        "name": "Mortal Combat",
+        "oracle_text": "At the beginning of your upkeep, if twenty or more creature cards are in your graveyard, you win the game.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/160/mortal-combat?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5840,
+        "iid": 6330,
+        "name": "Mortal Combat",
+        "handler": "manalinkeh_card_mortal_combat",
+        "kind": "card"
+      }
+    },
+    "Myr Servitor": {
+      "oracle": {
+        "oracle_id": "b6a50858-a013-4703-a9d7-5b69ef9bd9ae",
+        "name": "Myr Servitor",
+        "oracle_text": "At the beginning of your upkeep, if this creature is on the battlefield, each player returns all cards named Myr Servitor from their graveyard to the battlefield.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/230/myr-servitor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7093,
+        "iid": 6427,
+        "name": "Myr Servitor",
+        "handler": "manalinkeh_card_myr_servitor",
+        "kind": "card"
+      }
+    },
+    "Nether Spirit": {
+      "oracle": {
+        "oracle_id": "194e2563-c0bf-4151-bbb0-0d626130b055",
+        "name": "Nether Spirit",
+        "oracle_text": "At the beginning of your upkeep, if this card is the only creature card in your graveyard, you may return this card to the battlefield.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh1/98/nether-spirit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4543,
+        "iid": 6567,
+        "name": "Nether Spirit",
+        "handler": "manalinkeh_card_nether_spirit",
+        "kind": "card"
+      }
+    },
+    "Noetic Scales": {
+      "oracle": {
+        "oracle_id": "aebddadd-f05b-4ad5-bda4-603a134f68dc",
+        "name": "Noetic Scales",
+        "oracle_text": "At the beginning of each player's upkeep, return to its owner's hand each creature that player controls with power greater than the number of cards in their hand.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/usg/304/noetic-scales?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3833,
+        "iid": 6674,
+        "name": "Noetic Scales",
+        "handler": "manalinkeh_card_noetic_scales",
+        "kind": "card"
+      }
+    },
+    "Oath of Druids": {
+      "oracle": {
+        "oracle_id": "cf0dcb27-f02e-4065-81dc-75fbbb09ea3f",
+        "name": "Oath of Druids",
+        "oracle_text": "At the beginning of each player's upkeep, that player chooses target player who controls more creatures than they do and is their opponent. The first player may reveal cards from the top of their library until they reveal a creature card. If the first player does, that player puts that card onto the battlefield and all other cards revealed this way into their graveyard.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c16/159/oath-of-druids?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3522,
+        "iid": 6747,
+        "name": "Oath of Druids",
+        "handler": "manalinkeh_card_oath_of_druids",
+        "kind": "card"
+      }
+    },
+    "Oath of Ghouls": {
+      "oracle": {
+        "oracle_id": "b9490b52-6c3f-437b-b2c2-9e81c4b43b61",
+        "name": "Oath of Ghouls",
+        "oracle_text": "At the beginning of each player's upkeep, that player chooses target player whose graveyard has fewer creature cards in it than their graveyard does and is their opponent. The first player may return a creature card from their graveyard to their hand.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/exo/69/oath-of-ghouls?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3523,
+        "iid": 6748,
+        "name": "Oath of Ghouls",
+        "handler": "manalinkeh_card_oath_of_ghouls",
+        "kind": "card"
+      }
+    },
+    "Shapeshifter's Marrow": {
+      "oracle": {
+        "oracle_id": "a5a2d17d-5759-46fb-8e44-694bd3b72f5d",
+        "name": "Shapeshifter's Marrow",
+        "oracle_text": "At the beginning of each opponent's upkeep, that player reveals the top card of their library. If it's a creature card, the player puts the card into their graveyard and this enchantment becomes a copy of that card. (If it does, it loses this ability.)",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fut/58/shapeshifters-marrow?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9014,
+        "iid": 8586,
+        "name": "Shapeshifter's Marrow",
+        "handler": "manalinkeh_card_shapeshifters_marrow",
+        "kind": "card"
+      }
+    },
+    "Squee, Goblin Nabob": {
+      "oracle": {
+        "oracle_id": "0ef760f4-bbec-4735-8d60-fc24d973452a",
+        "name": "Squee, Goblin Nabob",
+        "oracle_text": "At the beginning of your upkeep, you may return this card from your graveyard to your hand.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Legendary Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/254/squee-goblin-nabob?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4619,
+        "iid": 9268,
+        "name": "Squee, Goblin Nabob",
+        "handler": "manalinkeh_card_squee_goblin_nabob",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Sol Ring": {
+      "oracle": {
+        "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+        "name": "Sol Ring",
+        "oracle_text": "{T}: Add {C}{C}.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+      },
+      "registry": {
+        "csvid": 230,
+        "iid": 8968,
+        "name": "Sol Ring",
+        "handler": "manalinkeh_card_sol_ring",
+        "kind": "card"
+      }
+    },
+    "Control Magic": {
+      "oracle": {
+        "oracle_id": "cd0d7141-46d2-4aa3-bc77-6b3b4513803e",
+        "name": "Control Magic",
+        "oracle_text": "Enchant creature\nYou control enchanted creature.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cma/34/control-magic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 44,
+        "iid": 1938,
+        "name": "Control Magic",
+        "handler": "manalinkeh_card_control_magic",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Stone Rain": {
+      "oracle": {
+        "oracle_id": "6e880df6-fc00-43d2-a9c8-f575f40b78c6",
+        "name": "Stone Rain",
+        "oracle_text": "Destroy target land.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/221/stone-rain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 236,
+        "iid": 9381,
+        "name": "Stone Rain",
+        "handler": "manalinkeh_card_ice_storm",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Holy Strength": {
+      "oracle": {
+        "oracle_id": "9357de36-f8be-4f49-b2c8-9fe9eaf82b07",
+        "name": "Holy Strength",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +1/+2.",
+        "mana_cost": "{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m11/16/holy-strength?utm_source=api"
+      },
+      "registry": {
+        "csvid": 112,
+        "iid": 4610,
+        "name": "Holy Strength",
+        "handler": "manalinkeh_card_holy_strenght",
+        "kind": "card"
+      }
+    },
+    "Ivory Mask": {
+      "oracle": {
+        "oracle_id": "028bc726-0e86-4c53-9648-625153ae4b01",
+        "name": "Ivory Mask",
+        "oracle_text": "You have shroud. (You can't be the target of spells or abilities.)",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/23/ivory-mask?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1064,
+        "iid": 4976,
+        "name": "Ivory Mask",
+        "handler": "manalinkeh_card_ivory_mask",
+        "kind": "card"
+      }
+    },
+    "Duress": {
+      "oracle": {
+        "oracle_id": "33d405ea-7a9a-4970-b70f-9c05d90dd6f0",
+        "name": "Duress",
+        "oracle_text": "Target opponent reveals their hand. You choose a noncreature, nonland card from it. That player discards that card.",
+        "mana_cost": "{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/606/duress?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3755,
+        "iid": 2812,
+        "name": "Duress",
+        "handler": "manalinkeh_card_duress",
+        "kind": "card"
+      }
+    },
+    "Scathe Zombies": {
+      "oracle": {
+        "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+        "name": "Scathe Zombies",
+        "oracle_text": "",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/175/scathe-zombies?utm_source=api"
+      },
+      "registry": {
+        "csvid": 214,
+        "iid": 8302,
+        "name": "Scathe Zombies",
+        "handler": "card_scathe_zombies",
+        "kind": "card"
+      }
+    },
+    "Walking Corpse": {
+      "oracle": {
+        "oracle_id": "fea95888-e16a-4209-9cd4-623f7f4d2f67",
+        "name": "Walking Corpse",
+        "oracle_text": "",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/128/walking-corpse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12124,
+        "iid": 10747,
+        "name": "Walking Corpse",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Elemental": {
+      "oracle": {
+        "oracle_id": "ff9ee841-1174-4c4c-b9d3-56d79122acbb",
+        "name": "Elemental",
+        "oracle_text": "Whenever this creature becomes tapped, it deals 1 damage to target player.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Elemental",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmoc/22/elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18726,
+        "iid": 2926,
+        "name": "Elemental",
+        "handler": "manalinkeh_card_elemental_token",
+        "kind": "card"
+      }
+    },
+    "Unholy Strength": {
+      "oracle": {
+        "oracle_id": "090d88a9-7f2d-4bd1-a30a-7c48d05068be",
+        "name": "Unholy Strength",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +2/+1.",
+        "mana_cost": "{B}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dvd/47/unholy-strength?utm_source=api"
+      },
+      "registry": {
+        "csvid": 259,
+        "iid": 10368,
+        "name": "Unholy Strength",
+        "handler": "manalinkeh_card_unholy_strenght",
+        "kind": "card"
+      }
+    },
+    "Myr Servitor": {
+      "oracle": {
+        "oracle_id": "b6a50858-a013-4703-a9d7-5b69ef9bd9ae",
+        "name": "Myr Servitor",
+        "oracle_text": "At the beginning of your upkeep, if this creature is on the battlefield, each player returns all cards named Myr Servitor from their graveyard to the battlefield.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/230/myr-servitor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7093,
+        "iid": 6427,
+        "name": "Myr Servitor",
+        "handler": "manalinkeh_card_myr_servitor",
+        "kind": "card"
+      }
+    },
+    "Ornithopter": {
+      "oracle": {
+        "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+        "name": "Ornithopter",
+        "oracle_text": "Flying",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Thopter",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 514,
+        "iid": 6907,
+        "name": "Ornithopter",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Gold Myr": {
+      "oracle": {
+        "oracle_id": "bd6af7b3-b30f-4a65-a18f-8655f778e76a",
+        "name": "Gold Myr",
+        "oracle_text": "{T}: Add {W}.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nec/153/gold-myr?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1213,
+        "iid": 4082,
+        "name": "Gold Myr",
+        "handler": "manalinkeh_card_generic_noncombat_1_mana_producing_creature",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Nether Spirit": {
+      "oracle": {
+        "oracle_id": "194e2563-c0bf-4151-bbb0-0d626130b055",
+        "name": "Nether Spirit",
+        "oracle_text": "At the beginning of your upkeep, if this card is the only creature card in your graveyard, you may return this card to the battlefield.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh1/98/nether-spirit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4543,
+        "iid": 6567,
+        "name": "Nether Spirit",
+        "handler": "manalinkeh_card_nether_spirit",
+        "kind": "card"
+      }
+    },
+    "Savannah Lions": {
+      "oracle": {
+        "oracle_id": "60ba93eb-39e6-4af2-9c66-cd38f72daff2",
+        "name": "Savannah Lions",
+        "oracle_text": "",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Cat",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/146/savannah-lions?utm_source=api"
+      },
+      "registry": {
+        "csvid": 213,
+        "iid": 8272,
+        "name": "Savannah Lions",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Cathedral Sanctifier": {
+      "oracle": {
+        "oracle_id": "1050f029-60d4-4769-b39f-9100c949a822",
+        "name": "Cathedral Sanctifier",
+        "oracle_text": "When this creature enters, you gain 3 life.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddq/3/cathedral-sanctifier?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12327,
+        "iid": 1554,
+        "name": "Cathedral Sanctifier",
+        "handler": "manalinkeh_card_angel_of_mercy",
+        "kind": "card"
+      }
+    }
+  }
+}

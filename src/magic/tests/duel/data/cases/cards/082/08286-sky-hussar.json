@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Sky Hussar",
+  "csvid": 8286,
+  "recipes": [
+    {
+      "family": "remaining_entry_combat",
+      "version": 2,
+      "params": {
+        "csvid": 8286,
+        "cost": "{3}{W}{U}",
+        "choices": [
+          "untap_scope_0",
+          "untap_scope_1",
+          "flying_0",
+          "flying_1",
+          "forecast_0",
+          "forecast_1",
+          "forecast_once_reset_0",
+          "forecast_once_reset_1",
+          "only_one_0",
+          "only_one_1",
+          "foreign_upkeep_0",
+          "foreign_upkeep_1"
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, untap all creatures you control.\nForecast — Tap two untapped white and/or blue creatures you control, Reveal this card from your hand: Draw a card. (Activate only during your upkeep and only once each turn.)",
+      "variants": [
+        "untap_scope_0",
+        "untap_scope_1",
+        "flying_0",
+        "flying_1",
+        "forecast_0",
+        "forecast_1",
+        "forecast_once_reset_0",
+        "forecast_once_reset_1",
+        "only_one_0",
+        "only_one_1",
+        "foreign_upkeep_0",
+        "foreign_upkeep_1"
+      ]
+    }
+  ]
+}

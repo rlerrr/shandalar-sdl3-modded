@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "csvid": 13485,
+  "card": "Minotaur Skullcleaver",
+  "recipes": [
+    {
+      "family": "entry_trigger_life_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 13485,
+        "printed_cost": "{2}{R}"
+      },
+      "oracle_text": "Haste\nWhen this creature enters, it gets +2/+0 until end of turn.",
+      "variants": [
+        "hit_0",
+        "blocked_0",
+        "countered_0",
+        "hit_1",
+        "blocked_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

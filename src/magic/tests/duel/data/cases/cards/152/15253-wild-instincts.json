@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Wild Instincts",
+  "csvid": 15253,
+  "recipes": [
+    {
+      "family": "fight_targeted_spells",
+      "version": 2,
+      "params": {
+        "csvid": 15253,
+        "mana": [
+          3,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "timing": "Sorcery",
+        "boost": [
+          2,
+          2
+        ],
+        "clauses": [
+          "Target creature you control gets +2/+2 until end of turn. It fights target creature an opponent controls. (Each deals damage equal to its power to the other.)"
+        ],
+        "modes": [
+          "mutual",
+          "enemy_bounced",
+          "own_bounced",
+          "no_opposing_target",
+          "non_green_targets",
+          "countered"
+        ]
+      },
+      "oracle_text": "Target creature you control gets +2/+2 until end of turn. It fights target creature an opponent controls. (Each deals damage equal to its power to the other.)",
+      "variants": [
+        "mutual_0",
+        "mutual_1",
+        "enemy_bounced_0",
+        "enemy_bounced_1",
+        "own_bounced_0",
+        "own_bounced_1",
+        "no_opposing_target_0",
+        "no_opposing_target_1",
+        "non_green_targets_0",
+        "non_green_targets_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

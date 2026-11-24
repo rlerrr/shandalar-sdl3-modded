@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Sandbar Crocodile",
+  "csvid": 2592,
+  "recipes": [
+    {
+      "family": "phase_untap_creature",
+      "version": 2,
+      "params": {
+        "mana": [
+          4,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "power": 6,
+        "toughness": 5,
+        "flying": false,
+        "islandwalk": false,
+        "imp": false
+      },
+      "oracle_text": "Phasing (This phases in or out before you untap during each of your untap steps. While it's phased out, it's treated as though it doesn't exist.)",
+      "variants": [
+        "cycle_0",
+        "untap_order_0",
+        "retained_attachments_0",
+        "foreign_aura_0",
+        "target_visibility_0",
+        "no_zone_change_triggers_0",
+        "skip_out_0",
+        "skip_in_0",
+        "replay_phase_in_0",
+        "attack_after_return_0",
+        "block_while_out_0",
+        "wrong_color_0",
+        "insufficient_mana_0",
+        "countered_0",
+        "cycle_1",
+        "untap_order_1",
+        "retained_attachments_1",
+        "foreign_aura_1",
+        "target_visibility_1",
+        "no_zone_change_triggers_1",
+        "skip_out_1",
+        "skip_in_1",
+        "replay_phase_in_1",
+        "attack_after_return_1",
+        "block_while_out_1",
+        "wrong_color_1",
+        "insufficient_mana_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

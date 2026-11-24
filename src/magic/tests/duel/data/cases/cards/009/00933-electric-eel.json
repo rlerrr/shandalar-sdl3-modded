@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 933,
+  "card": "Electric Eel",
+  "recipes": [
+    {
+      "family": "remaining_entry_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 933,
+        "printed_cost": "{U}"
+      },
+      "oracle_text": "When this creature enters, it deals 1 damage to you.\n{R}{R}: This creature gets +2/+0 until end of turn and deals 1 damage to you.",
+      "variants": [
+        "entry_0",
+        "pump_0",
+        "wrong_color_0",
+        "prevented_0",
+        "countered_0",
+        "entry_1",
+        "pump_1",
+        "wrong_color_1",
+        "prevented_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

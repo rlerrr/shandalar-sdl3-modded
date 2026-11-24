@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Noyan Dar, Roil Shaper",
+  "csvid": 15386,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "cast_instant_or_sorcery_riders",
+      "version": 2,
+      "oracle_text": "Whenever you cast an instant or sorcery spell, you may put three +1/+1 counters on target land you control. If you do, that land becomes a 0/0 Elemental creature with haste that's still a land.",
+      "params": {
+        "effect": "animate",
+        "mana": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "hybrid": [],
+        "stats": [
+          4,
+          4
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "instant_0",
+        "instant_1",
+        "sorcery_0",
+        "sorcery_1",
+        "own_creature_0",
+        "own_creature_1",
+        "enemy_instant_0",
+        "enemy_instant_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "fresh_land_attack_0",
+        "fresh_land_attack_1",
+        "later_land_mana_0",
+        "later_land_mana_1",
+        "no_own_land_0",
+        "no_own_land_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

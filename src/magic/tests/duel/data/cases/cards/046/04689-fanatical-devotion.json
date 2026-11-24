@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Fanatical Devotion",
+  "csvid": 4689,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_sacrifice_and_team",
+      "version": 2,
+      "params": {
+        "csvid": 4689,
+        "printed_cost": "{2}{W}",
+        "choices": [
+          "friendly_0",
+          "friendly_1",
+          "foreign_0",
+          "foreign_1",
+          "no_fodder_0",
+          "no_fodder_1",
+          "proactive_0",
+          "proactive_1"
+        ]
+      },
+      "oracle_text": "Sacrifice a creature: Regenerate target creature.",
+      "variants": [
+        "friendly_0",
+        "friendly_1",
+        "foreign_0",
+        "foreign_1",
+        "no_fodder_0",
+        "no_fodder_1",
+        "proactive_0",
+        "proactive_1"
+      ]
+    }
+  ]
+}

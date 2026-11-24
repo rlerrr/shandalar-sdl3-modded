@@ -301,6 +301,16 @@ int put_card_on_stack(int player, int card, int mode)
       goto finish_put_card_on_stack;
     }
 
+    /* A paid alternate hand action can retire the source during the cast
+     * callback. Stop before the response stage can refund the removed card. */
+    if (PLAYER_CARD_INSTANCE(player, card).internal_card_id == -1)
+    {
+      obliterate_top_card_of_stack();
+      g_land_can_be_played &= ~LCBP_SPELL_BEING_PLAYED;
+      g_spell_fizzled = 0;
+      return 0;
+    }
+
     if (player == g_other_player && (g_duel_network_flags & 2) == 0 && g_duel_ai_mode_state == 1 && card_data->cc[1] == -1)
     {
       g_ai_modifier -= count_colored_cards_in_hand(player) * 12;

@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "csvid": 10774,
+  "card": "Halimar Excavator",
+  "recipes": [
+    {
+      "family": "mill_death_and_entry",
+      "version": 2,
+      "params": {
+        "csvid": 10774,
+        "mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          1,
+          3
+        ]
+      },
+      "oracle_text": "Whenever this creature or another Ally you control enters, target player mills X cards, where X is the number of Allies you control.",
+      "variants": [
+        "self_entry_0",
+        "self_entry_1",
+        "own_ally_0",
+        "own_ally_1",
+        "foe_ally_0",
+        "foe_ally_1",
+        "nonally_0",
+        "nonally_1",
+        "short_0",
+        "short_1"
+      ]
+    }
+  ]
+}

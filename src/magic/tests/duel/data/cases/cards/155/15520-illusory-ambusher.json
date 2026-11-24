@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 15520,
+  "card": "Illusory Ambusher",
+  "recipes": [
+    {
+      "family": "flash_remaining_combat_and_activated",
+      "version": 2,
+      "params": {
+        "csvid": 15520,
+        "printed_cost": "{4}{U}"
+      },
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhenever this creature is dealt damage, draw that many cards.",
+      "variants": [
+        "combat_lethal_0",
+        "spell_lethal_0",
+        "prevented_0",
+        "unrelated_0",
+        "spell_survives_0",
+        "combat_lethal_1",
+        "spell_lethal_1",
+        "prevented_1",
+        "unrelated_1",
+        "spell_survives_1"
+      ]
+    }
+  ]
+}

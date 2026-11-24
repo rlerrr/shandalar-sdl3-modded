@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Thornbow Archer",
+  "csvid": 15235,
+  "recipes": [
+    {
+      "family": "attack_trigger_costs_and_damage",
+      "version": 2,
+      "params": {
+        "csvid": 15235,
+        "printed_mana": "{B}",
+        "rules": "Whenever this creature attacks, each opponent who doesn't control an Elf loses 1 life."
+      },
+      "oracle_text": "Whenever this creature attacks, each opponent who doesn't control an Elf loses 1 life.",
+      "variants": [
+        "no_elf_0",
+        "no_elf_1",
+        "creature_elf_0",
+        "creature_elf_1",
+        "kindred_elf_0",
+        "kindred_elf_1",
+        "loss_not_damage_0",
+        "loss_not_damage_1"
+      ]
+    }
+  ]
+}

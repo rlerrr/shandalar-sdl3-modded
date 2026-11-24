@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "csvid": 5944,
+  "card": "Fledgling Dragon",
+  "recipes": [
+    {
+      "family": "threshold_combat_activated",
+      "version": 2,
+      "oracle_text": "Flying\nThreshold — As long as there are seven or more cards in your graveyard, this creature gets +3/+3 and has \"{R}: This creature gets +1/+0 until end of turn.\"",
+      "params": {
+        "csvid": 5944,
+        "delta": 3,
+        "clauses": [
+          "Flying",
+          "Threshold — As long as there are seven or more cards in your graveyard, this creature gets +3/+3 and has \"{R}: This creature gets +1/+0 until end of turn.\""
+        ],
+        "price": [
+          2,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "base": [
+          2,
+          2
+        ]
+      },
+      "variants": [
+        "six_0",
+        "six_1",
+        "seven_0",
+        "seven_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "wrong_red_0",
+        "wrong_red_1",
+        "countered_0",
+        "countered_1",
+        "lose_threshold_0",
+        "lose_threshold_1",
+        "replay_0",
+        "replay_1",
+        "crossing_0",
+        "crossing_1"
+      ]
+    }
+  ]
+}

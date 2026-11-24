@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Search the City",
+  "csvid": 12811,
+  "recipes": [
+    {
+      "family": "remaining_entry_library_and_hand",
+      "version": 2,
+      "params": {
+        "csvid": 12811,
+        "printed_mana": "{4}{U}",
+        "rules": "When this enchantment enters, exile the top five cards of your library.\nWhenever you play a card with the same name as one of the exiled cards, you may put one of those cards with that name into its owner's hand. Then if there are no cards exiled with this enchantment, sacrifice it. If you do, take an extra turn after this one."
+      },
+      "oracle_text": "When this enchantment enters, exile the top five cards of your library.\nWhenever you play a card with the same name as one of the exiled cards, you may put one of those cards with that name into its owner's hand. Then if there are no cards exiled with this enchantment, sacrifice it. If you do, take an extra turn after this one.",
+      "variants": [
+        "last_spell_extra_turn_0",
+        "last_spell_extra_turn_1",
+        "opposing_spell_0",
+        "opposing_spell_1",
+        "matching_land_0"
+      ]
+    }
+  ]
+}

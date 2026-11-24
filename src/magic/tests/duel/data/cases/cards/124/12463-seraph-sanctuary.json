@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 12463,
+  "card": "Seraph Sanctuary",
+  "recipes": [
+    {
+      "family": "entry_follow_on_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 12463,
+        "printed_cost": ""
+      },
+      "oracle_text": "When this land enters, you gain 1 life.\nWhenever an Angel you control enters, you gain 1 life.\n{T}: Add {C}.",
+      "variants": [
+        "entry_0",
+        "mana_0",
+        "own_angel_0",
+        "foe_angel_0",
+        "nonangel_0",
+        "entry_1",
+        "mana_1",
+        "own_angel_1",
+        "foe_angel_1",
+        "nonangel_1"
+      ]
+    }
+  ]
+}

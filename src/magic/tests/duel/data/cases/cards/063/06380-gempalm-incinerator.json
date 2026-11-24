@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "card": "Gempalm Incinerator",
+  "csvid": 6380,
+  "recipes": [
+    {
+      "family": "gempalm_tribal_cycling",
+      "version": 2,
+      "oracle_text": "Cycling {1}{R} ({1}{R}, Discard this card: Draw a card.)\nWhen you cycle this card, you may have it deal X damage to target creature, where X is the number of Goblins on the battlefield.",
+      "params": {
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "cycling_mana": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "power": 2,
+        "toughness": 1,
+        "effect": "damage",
+        "tribe": "Goblin",
+        "delta": [
+          0,
+          0
+        ],
+        "keyword": null
+      },
+      "variants": [
+        "effect_0",
+        "off_turn_0",
+        "repeated_0",
+        "pending_replay_0",
+        "cancel_cycle_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "source_cast_0",
+        "source_cast_denied_0",
+        "plain_discard_0",
+        "unrelated_cycle_0",
+        "zero_tribe_0",
+        "changeling_0",
+        "opponent_only_0",
+        "own_only_0",
+        "decline_effect_0",
+        "own_target_0",
+        "count_changes_pending_0",
+        "kindred_goblin_0",
+        "effect_before_draw_0",
+        "draw_watcher_survives_0",
+        "effect_1",
+        "off_turn_1",
+        "repeated_1",
+        "pending_replay_1",
+        "cancel_cycle_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "source_cast_1",
+        "source_cast_denied_1",
+        "plain_discard_1",
+        "unrelated_cycle_1",
+        "zero_tribe_1",
+        "changeling_1",
+        "opponent_only_1",
+        "own_only_1",
+        "decline_effect_1",
+        "own_target_1",
+        "count_changes_pending_1",
+        "kindred_goblin_1",
+        "effect_before_draw_1",
+        "draw_watcher_survives_1"
+      ]
+    }
+  ]
+}

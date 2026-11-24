@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 4285,
+  "card": "Wei Assassins",
+  "recipes": [
+    {
+      "family": "entry_trigger_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 4285,
+        "printed_cost": "{3}{B}{B}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, target opponent chooses a creature they control. Destroy that creature.",
+      "variants": [
+        "chosen_0",
+        "indestructible_0",
+        "no_foe_0",
+        "chosen_1",
+        "indestructible_1",
+        "no_foe_1"
+      ]
+    }
+  ]
+}

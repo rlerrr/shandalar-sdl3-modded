@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Sedge Sliver",
+  "csvid": 8661,
+  "recipes": [
+    {
+      "family": "regeneration_land_and_grants",
+      "version": 2,
+      "params": {
+        "csvid": 8661,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "All Sliver creatures have \"This creature gets +1/+1 as long as you control a Swamp.\"\nAll Slivers have \"{B}: Regenerate this permanent.\" (The next time it would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "variants": [
+        "no_swamp_0",
+        "no_swamp_1",
+        "own_swamp_0",
+        "own_swamp_1",
+        "foreign_swamp_0",
+        "foreign_swamp_1",
+        "both_swamps_0",
+        "both_swamps_1",
+        "lose_swamp_0",
+        "lose_swamp_1",
+        "lose_provider_0",
+        "lose_provider_1"
+      ]
+    }
+  ]
+}

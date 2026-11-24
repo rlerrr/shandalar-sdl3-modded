@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "csvid": 16320,
+  "card": "Combustible Gearhulk",
+  "recipes": [
+    {
+      "family": "mill_remaining_entry_and_token_riders",
+      "version": 2,
+      "params": {
+        "csvid": 16320,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "stats": [
+          6,
+          6
+        ]
+      },
+      "oracle_text": "First strike\nWhen this creature enters, target opponent may have you draw three cards. If the player doesn't, you mill three cards, then this creature deals damage to that player equal to the total mana value of those cards.",
+      "variants": [
+        "draw_0",
+        "draw_1",
+        "mill_0",
+        "mill_1",
+        "short_mill_0",
+        "short_mill_1",
+        "zero_value_0",
+        "zero_value_1",
+        "hexproof_0",
+        "hexproof_1",
+        "first_strike_0",
+        "first_strike_1"
+      ]
+    }
+  ]
+}

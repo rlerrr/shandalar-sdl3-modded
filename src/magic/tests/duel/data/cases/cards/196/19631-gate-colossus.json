@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Gate Colossus",
+  "csvid": 19631,
+  "recipes": [
+    {
+      "family": "land_type_affinity",
+      "version": 2,
+      "oracle_text": "Affinity for Gates (This spell costs {1} less to cast for each Gate you control.)\nThis creature can't be blocked by creatures with power 2 or less.\nWhenever a Gate you control enters, you may put this card from your graveyard on top of your library.",
+      "params": {
+        "mana": 8,
+        "land_type": "Gate",
+        "keyword": "",
+        "power": 8,
+        "toughness": 8,
+        "gate_colossus": true
+      },
+      "variants": [
+        "full_price_0",
+        "short_full_0",
+        "own_gates_0",
+        "short_discount_0",
+        "foe_only_0",
+        "unrelated_0",
+        "zero_exact_0",
+        "floor_surplus_0",
+        "gate_play_0",
+        "power_two_0",
+        "power_three_0",
+        "grave_accept_0",
+        "grave_decline_0",
+        "grave_wrong_land_0",
+        "grave_foe_gate_0",
+        "grave_recast_0",
+        "grave_snapshot_0",
+        "pending_replay_0",
+        "full_price_1",
+        "short_full_1",
+        "own_gates_1",
+        "short_discount_1",
+        "foe_only_1",
+        "unrelated_1",
+        "zero_exact_1",
+        "floor_surplus_1",
+        "gate_play_1",
+        "power_two_1",
+        "power_three_1",
+        "grave_accept_1",
+        "grave_wrong_land_1",
+        "grave_foe_gate_1",
+        "grave_recast_1",
+        "grave_snapshot_1",
+        "pending_replay_1"
+      ]
+    }
+  ]
+}

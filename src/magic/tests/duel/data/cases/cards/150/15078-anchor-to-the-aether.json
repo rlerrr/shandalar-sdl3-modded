@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Anchor to the Aether",
+  "csvid": 15078,
+  "recipes": [
+    {
+      "family": "library_scry_targeted_spells",
+      "version": 2,
+      "params": {
+        "csvid": 15078,
+        "cost": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "scry": 1
+      },
+      "oracle_text": "Put target creature on top of its owner's library. Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "variants": [
+        "own_keep_0",
+        "own_keep_1",
+        "own_bottom_0",
+        "own_bottom_1",
+        "opponent_0",
+        "opponent_1",
+        "borrowed_0",
+        "borrowed_1",
+        "target_lost_0",
+        "target_lost_1"
+      ]
+    }
+  ]
+}

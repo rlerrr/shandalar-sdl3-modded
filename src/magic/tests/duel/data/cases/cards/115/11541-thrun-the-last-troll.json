@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 11541,
+  "card": "Thrun, the Last Troll",
+  "recipes": [
+    {
+      "family": "regeneration_self_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 11541,
+        "printed_cost": "{2}{G}{G}"
+      },
+      "oracle_text": "This spell can't be countered.\nHexproof (This creature can't be the target of spells or abilities your opponents control.)\n{1}{G}: Regenerate Thrun.",
+      "variants": [
+        "regenerate_0",
+        "short_0",
+        "terminate_0",
+        "proactive_0",
+        "hexproof_0",
+        "uncounterable_0",
+        "regenerate_1",
+        "short_1",
+        "terminate_1",
+        "proactive_1",
+        "hexproof_1",
+        "uncounterable_1"
+      ]
+    }
+  ]
+}

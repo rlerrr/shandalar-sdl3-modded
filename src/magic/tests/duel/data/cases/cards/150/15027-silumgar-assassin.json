@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "card": "Silumgar Assassin",
+  "csvid": 15027,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "megamorph_target_effects",
+      "version": 2,
+      "oracle_text": "Creatures with power greater than this creature's power can't block it.\nMegamorph {2}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\nWhen this creature is turned face up, destroy target creature with power 3 or less an opponent controls.",
+      "params": {
+        "mode": "destroy_low",
+        "mana": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "morph": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 1,
+        "keywords": [],
+        "color": 2
+      },
+      "variants": [
+        "normal_cast_0",
+        "normal_cast_1",
+        "hidden_choice_0",
+        "hidden_choice_1",
+        "short_cast_0",
+        "short_cast_1",
+        "reveal_short_0",
+        "reveal_short_1",
+        "reveal_wrong_color_0",
+        "reveal_wrong_color_1",
+        "paid_reveal_0",
+        "paid_reveal_1",
+        "persist_replay_0",
+        "persist_replay_1",
+        "offturn_0",
+        "offturn_1",
+        "no_eligible_0",
+        "no_eligible_1",
+        "block_over_0",
+        "block_over_1",
+        "block_equal_0",
+        "block_equal_1",
+        "block_dynamic_0",
+        "block_dynamic_1",
+        "hidden_block_0",
+        "hidden_block_1"
+      ]
+    }
+  ]
+}

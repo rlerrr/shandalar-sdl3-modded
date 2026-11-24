@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Pathrazer of Ulamog",
+  "csvid": 11013,
+  "recipes": [
+    {
+      "family": "attack_trigger_follow_on_annihilator_and_myriad",
+      "version": 2,
+      "params": {
+        "csvid": 11013,
+        "printed_mana": "{11}",
+        "rules": "Annihilator 3 (Whenever this creature attacks, defending player sacrifices three permanents of their choice.)\nThis creature can't be blocked except by three or more creatures."
+      },
+      "oracle_text": "Annihilator 3 (Whenever this creature attacks, defending player sacrifices three permanents of their choice.)\nThis creature can't be blocked except by three or more creatures.",
+      "variants": [
+        "annihilator_short_0",
+        "annihilator_short_1",
+        "one_blocker_0",
+        "one_blocker_1",
+        "two_blockers_0",
+        "two_blockers_1",
+        "three_blockers_0",
+        "three_blockers_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 16311,
+  "card": "Cataclysmic Gearhulk",
+  "recipes": [
+    {
+      "family": "entry_follow_on_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 16311,
+        "printed_cost": "{3}{W}{W}",
+        "keywords": [
+          "Vigilance"
+        ]
+      },
+      "oracle_text": "Vigilance\nWhen this creature enters, each player chooses an artifact, a creature, an enchantment, and a planeswalker from among the nonland permanents they control, then sacrifices the rest.",
+      "variants": [
+        "all_types_0",
+        "dual_pick_0",
+        "vigilance_0",
+        "dual_pick_1",
+        "vigilance_1"
+      ]
+    }
+  ]
+}

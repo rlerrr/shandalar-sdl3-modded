@@ -1,0 +1,344 @@
+{
+  "sources": {
+    "Kavu Titan": {
+      "oracle": {
+        "oracle_id": "df166d0e-f944-404d-83b9-8cf53e220774",
+        "name": "Kavu Titan",
+        "oracle_text": "Kicker {2}{G} (You may pay an additional {2}{G} as you cast this spell.)\nIf this creature was kicked, it enters with three +1/+1 counters on it and with trample.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Kavu",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inv/194/kavu-titan?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5028,
+        "iid": 5184,
+        "name": "Kavu Titan",
+        "handler": "manalinkeh_card_kavu_titan",
+        "kind": "card"
+      }
+    },
+    "Arctic Merfolk": {
+      "oracle": {
+        "oracle_id": "c56671e1-28a6-40c3-bad5-b5e617ddb7da",
+        "name": "Arctic Merfolk",
+        "oracle_text": "Kicker—Return a creature you control to its owner's hand. (You may return a creature you control to its owner's hand in addition to any other costs as you cast this spell.)\nIf this creature was kicked, it enters with a +1/+1 counter on it.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Merfolk",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pls/21/arctic-merfolk?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5201,
+        "iid": 571,
+        "name": "Arctic Merfolk",
+        "handler": "manalinkeh_card_arctic_merfolk",
+        "kind": "card"
+      }
+    },
+    "Phyrexian Scuta": {
+      "oracle": {
+        "oracle_id": "af2845cf-8770-4efa-8a83-bf9eb4122b78",
+        "name": "Phyrexian Scuta",
+        "oracle_text": "Kicker—Pay 3 life. (You may pay 3 life in addition to any other costs as you cast this spell.)\nIf this creature was kicked, it enters with two +1/+1 counters on it.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Phyrexian Zombie",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/100/phyrexian-scuta?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5273,
+        "iid": 7181,
+        "name": "Phyrexian Scuta",
+        "handler": "manalinkeh_card_phyrexian_scuta",
+        "kind": "card"
+      }
+    },
+    "Ravaging Riftwurm": {
+      "oracle": {
+        "oracle_id": "a71448ce-8d57-418e-b862-bd526726074d",
+        "name": "Ravaging Riftwurm",
+        "oracle_text": "Kicker {4} (You may pay an additional {4} as you cast this spell.)\nVanishing 2 (This creature enters with two time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nIf this creature was kicked, it enters with three additional time counters on it.",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Vanishing",
+          "Kicker"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fut/135/ravaging-riftwurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8999,
+        "iid": 7687,
+        "name": "Ravaging Riftwurm",
+        "handler": "manalinkeh_card_ravaging_riftwurm",
+        "kind": "card"
+      }
+    },
+    "Aether Figment": {
+      "oracle": {
+        "oracle_id": "15fee0bd-ede2-4f65-a9a1-2da4623679d5",
+        "name": "Aether Figment",
+        "oracle_text": "Kicker {3} (You may pay an additional {3} as you cast this spell.)\nIf this creature was kicked, it enters with two +1/+1 counters on it.\nThis creature can't be blocked.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Illusion",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddm/5/aether-figment?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10499,
+        "iid": 259,
+        "name": "Aether Figment",
+        "handler": "manalinkeh_card_aether_figment",
+        "kind": "card"
+      }
+    },
+    "Grunn, the Lonely King": {
+      "oracle": {
+        "oracle_id": "e3d6d146-47f4-46f9-9a15-2ea649093668",
+        "name": "Grunn, the Lonely King",
+        "oracle_text": "Kicker {3} (You may pay an additional {3} as you cast this spell.)\nIf Grunn was kicked, it enters with five +1/+1 counters on it.\nWhenever Grunn attacks alone, double its power and toughness until end of turn.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Legendary Creature — Ape Warrior",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Double",
+          "Kicker"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dom/165/grunn-the-lonely-king?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18420,
+        "iid": 18527,
+        "name": "Grunn, the Lonely King",
+        "handler": "manalinkeh_card_grunn_the_lonely_king",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Cloudshift": {
+      "oracle": {
+        "oracle_id": "6879f5ce-7a1b-4606-bad1-885779b0d456",
+        "name": "Cloudshift",
+        "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tle/152/cloudshift?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12330,
+        "iid": 1828,
+        "name": "Cloudshift",
+        "handler": "manalinkeh_card_cloudshift",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    }
+  }
+}

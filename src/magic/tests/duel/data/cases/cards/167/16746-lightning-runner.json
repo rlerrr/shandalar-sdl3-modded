@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "csvid": 16746,
+  "card": "Lightning Runner",
+  "recipes": [
+    {
+      "family": "attack_trigger_tokens_and_combat",
+      "version": 2,
+      "params": {
+        "csvid": 16746,
+        "printed_cost": "{3}{R}{R}",
+        "keywords": [
+          "Haste",
+          "Double strike"
+        ]
+      },
+      "oracle_text": "Double strike, haste\nWhenever this creature attacks, you get {E}{E} (two energy counters), then you may pay eight {E}. If you pay, untap all creatures you control, and after this phase, there is an additional combat phase.",
+      "variants": [
+        "below_eight_0",
+        "pay_0",
+        "decline_0",
+        "other_only_0",
+        "extra_pay_0",
+        "extra_decline_0",
+        "below_eight_1",
+        "pay_1",
+        "decline_1",
+        "other_only_1",
+        "extra_pay_1",
+        "extra_decline_1"
+      ]
+    }
+  ]
+}

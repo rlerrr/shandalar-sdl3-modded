@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "card": "Lifelace",
+  "csvid": 143,
+  "recipes": [
+    {
+      "family": "spell_or_permanent_recolor",
+      "version": 2,
+      "oracle_text": "Target spell or permanent becomes green. (Mana symbols on that permanent remain unchanged.)",
+      "params": {
+        "color": "G",
+        "mask": 8,
+        "printed_mana": "{G}",
+        "targets": [
+          "spell",
+          "permanent"
+        ],
+        "changes_mana_symbols": false
+      },
+      "variants": [
+        "permanent_own_0",
+        "permanent_opposing_0",
+        "permanent_multicolored_0",
+        "permanent_artifact_0",
+        "permanent_enchantment_0",
+        "permanent_land_mana_0",
+        "permanent_tapped_0",
+        "persist_cleanup_0",
+        "printed_symbols_0",
+        "spell_becomes_permanent_0",
+        "spell_own_becomes_permanent_0",
+        "spell_protection_0",
+        "spell_protection_control_0",
+        "target_leaves_0",
+        "target_hexproof_0",
+        "source_countered_0",
+        "no_target_0",
+        "no_mana_0",
+        "same_color_eligible_0",
+        "replace_previous_color_0",
+        "recast_after_change_0",
+        "pending_permanent_replay_0",
+        "pending_spell_replay_0",
+        "permanent_own_1",
+        "permanent_opposing_1",
+        "permanent_multicolored_1",
+        "permanent_artifact_1",
+        "permanent_enchantment_1",
+        "permanent_land_mana_1",
+        "permanent_tapped_1",
+        "persist_cleanup_1",
+        "printed_symbols_1",
+        "spell_becomes_permanent_1",
+        "spell_own_becomes_permanent_1",
+        "spell_protection_1",
+        "spell_protection_control_1",
+        "target_leaves_1",
+        "target_hexproof_1",
+        "source_countered_1",
+        "no_target_1",
+        "no_mana_1",
+        "same_color_eligible_1",
+        "replace_previous_color_1",
+        "recast_after_change_1",
+        "pending_permanent_replay_1",
+        "pending_spell_replay_1"
+      ]
+    }
+  ]
+}

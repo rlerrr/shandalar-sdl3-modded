@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Myr Servitor",
+  "csvid": 7093,
+  "recipes": [
+    {
+      "family": "upkeep_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 7093,
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "At the beginning of your upkeep, if this creature is on the battlefield, each player returns all cards named Myr Servitor from their graveyard to the battlefield.",
+      "variants": [
+        "both_return_0",
+        "both_return_1",
+        "copies_0",
+        "copies_1",
+        "source_removed_0",
+        "source_removed_1",
+        "foe_upkeep_0",
+        "foe_upkeep_1"
+      ]
+    }
+  ]
+}

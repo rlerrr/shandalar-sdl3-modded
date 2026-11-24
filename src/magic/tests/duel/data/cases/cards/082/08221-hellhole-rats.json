@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Hellhole Rats",
+  "csvid": 8221,
+  "recipes": [
+    {
+      "family": "entry_interaction_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 8221,
+        "printed_mana": "{2}{B}{R}",
+        "rules": "Haste\nWhen this creature enters, target player discards a card. This creature deals damage to that player equal to that card's mana value."
+      },
+      "oracle_text": "Haste\nWhen this creature enters, target player discards a card. This creature deals damage to that player equal to that card's mana value.",
+      "variants": [
+        "foe_value_0",
+        "foe_value_1",
+        "self_land_haste_0",
+        "self_land_haste_1"
+      ]
+    }
+  ]
+}

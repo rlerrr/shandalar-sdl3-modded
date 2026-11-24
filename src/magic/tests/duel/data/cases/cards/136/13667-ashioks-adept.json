@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Ashiok's Adept",
+  "csvid": 13667,
+  "recipes": [
+    {
+      "family": "heroic_composition_riders",
+      "version": 2,
+      "params": {
+        "model": "discard",
+        "cost": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, each opponent discards a card.",
+      "variants": [
+        "own_0",
+        "enemy_0",
+        "other_target_0",
+        "replay_0",
+        "empty_0",
+        "two_cards_0",
+        "own_1",
+        "enemy_1",
+        "other_target_1",
+        "replay_1",
+        "empty_1",
+        "two_cards_1"
+      ]
+    }
+  ]
+}

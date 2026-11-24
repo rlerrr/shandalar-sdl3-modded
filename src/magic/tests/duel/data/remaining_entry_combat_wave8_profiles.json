@@ -1,0 +1,896 @@
+{
+  "sources": {
+    "Furystoke Giant": {
+      "oracle": {
+        "oracle_id": "0cc62807-aeb4-4dfb-b001-4e40bf703497",
+        "name": "Furystoke Giant",
+        "oracle_text": "When this creature enters, other creatures you control gain \"{T}: This creature deals 2 damage to any target\" until end of turn.\nPersist (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)",
+        "mana_cost": "{3}{R}{R}",
+        "type_line": "Creature — Giant Warrior",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Persist"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/shm/93/furystoke-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9540,
+        "iid": 3693,
+        "name": "Furystoke Giant",
+        "handler": "manalinkeh_card_furystoke_giant",
+        "kind": "card"
+      }
+    },
+    "Sky Hussar": {
+      "oracle": {
+        "oracle_id": "21b41dd6-bff7-4e3d-aa28-551a30194225",
+        "name": "Sky Hussar",
+        "oracle_text": "Flying\nWhen this creature enters, untap all creatures you control.\nForecast — Tap two untapped white and/or blue creatures you control, Reveal this card from your hand: Draw a card. (Activate only during your upkeep and only once each turn.)",
+        "mana_cost": "{3}{W}{U}",
+        "type_line": "Creature — Human Knight",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Forecast"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/224/sky-hussar?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8286,
+        "iid": 8854,
+        "name": "Sky Hussar",
+        "handler": "manalinkeh_card_sky_hussar",
+        "kind": "card"
+      }
+    },
+    "Nephalia Moondrakes": {
+      "oracle": {
+        "oracle_id": "95649140-7978-4684-a1f1-af771e1d345a",
+        "name": "Nephalia Moondrakes",
+        "oracle_text": "Flying\nWhen this creature enters, target creature gains flying until end of turn.\n{4}{U}{U}, Exile this card from your graveyard: Creatures you control gain flying until end of turn.",
+        "mana_cost": "{5}{U}{U}",
+        "type_line": "Creature — Drake",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/75/nephalia-moondrakes?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15904,
+        "iid": 15977,
+        "name": "Nephalia Moondrakes",
+        "handler": "manalinkeh_card_nephalia_moondrakes",
+        "kind": "card"
+      }
+    },
+    "Voldaren Duelist": {
+      "oracle": {
+        "oracle_id": "a96d0496-babc-4774-9b72-bea9d2b22743",
+        "name": "Voldaren Duelist",
+        "oracle_text": "Haste\nWhen this creature enters, target creature can't block this turn.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Vampire Warrior",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/181/voldaren-duelist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16017,
+        "iid": 16090,
+        "name": "Voldaren Duelist",
+        "handler": "manalinkeh_card_fervent_cathar",
+        "kind": "card"
+      }
+    },
+    "Orzhov Pontiff": {
+      "oracle": {
+        "oracle_id": "3620ef25-d9e2-4460-b25f-592ff7df681b",
+        "name": "Orzhov Pontiff",
+        "oracle_text": "Haunt (When this creature dies, exile it haunting target creature.)\nWhen this creature enters or the creature it haunts dies, choose one —\n• Creatures you control get +1/+1 until end of turn.\n• Creatures you don't control get -1/-1 until end of turn.",
+        "mana_cost": "{1}{W}{B}",
+        "type_line": "Creature — Human Cleric",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Haunt"
+        ],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/261/orzhov-pontiff?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8100,
+        "iid": 6920,
+        "name": "Orzhov Pontiff",
+        "handler": "manalinkeh_card_orzhov_pontiff",
+        "kind": "card"
+      }
+    },
+    "Tormentor Exarch": {
+      "oracle": {
+        "oracle_id": "ebc52f9a-ba0c-48ed-bb04-ed086efeb060",
+        "name": "Tormentor Exarch",
+        "oracle_text": "When this creature enters, choose one —\n• Target creature gets +2/+0 until end of turn.\n• Target creature gets -0/-2 until end of turn.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Phyrexian Cleric",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/97/tormentor-exarch?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11698,
+        "iid": 10092,
+        "name": "Tormentor Exarch",
+        "handler": "manalinkeh_card_tormentor_exarch",
+        "kind": "card"
+      }
+    },
+    "Ubul Sar Gatekeepers": {
+      "oracle": {
+        "oracle_id": "f4e15575-2277-4cb1-a343-e9407c050eb1",
+        "name": "Ubul Sar Gatekeepers",
+        "oracle_text": "When this creature enters, if you control two or more Gates, target creature an opponent controls gets -2/-2 until end of turn.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Zombie Soldier",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dgm/30/ubul-sar-gatekeepers?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13238,
+        "iid": 10306,
+        "name": "Ubul Sar Gatekeepers",
+        "handler": "manalinkeh_card_ubal_sar_gatekeeper",
+        "kind": "card"
+      }
+    },
+    "Ancestral Vengeance": {
+      "oracle": {
+        "oracle_id": "321c4586-d27e-45ae-ba1f-3efea334a697",
+        "name": "Ancestral Vengeance",
+        "oracle_text": "Enchant creature\nWhen this Aura enters, put a +1/+1 counter on target creature you control.\nEnchanted creature gets -1/-1.",
+        "mana_cost": "{B}{B}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frf/61/ancestral-vengeance?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14511,
+        "iid": 11248,
+        "name": "Ancestral Vengeance",
+        "handler": "manalinkeh_card_ancestral_vengeance",
+        "kind": "card"
+      }
+    },
+    "Foundry Hornet": {
+      "oracle": {
+        "oracle_id": "e5342529-dc1a-4ebb-a0fd-843e01147402",
+        "name": "Foundry Hornet",
+        "oracle_text": "Flying\nWhen this creature enters, if you control a creature with a +1/+1 counter on it, creatures your opponents control get -1/-1 until end of turn.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Insect",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/aer/59/foundry-hornet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16704,
+        "iid": 16796,
+        "name": "Foundry Hornet",
+        "handler": "manalinkeh_card_foundry_hornet",
+        "kind": "card"
+      }
+    },
+    "Shipwreck Moray": {
+      "oracle": {
+        "oracle_id": "6c0b07c4-bb7c-4100-81e5-b0ee95d18625",
+        "name": "Shipwreck Moray",
+        "oracle_text": "When this creature enters, you get {E}{E}{E}{E} (four energy counters).\nPay {E}: This creature gets +2/-2 until end of turn.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Fish",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/aer/45/shipwreck-moray?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16796,
+        "iid": 16890,
+        "name": "Shipwreck Moray",
+        "handler": "manalinkeh_card_shipwreck_moray",
+        "kind": "card"
+      }
+    },
+    "Gideon's Resolve": {
+      "oracle": {
+        "oracle_id": "71c5718f-580d-4993-8492-81b7a557d10c",
+        "name": "Gideon's Resolve",
+        "oracle_text": "When this enchantment enters, you may search your library and/or graveyard for a card named Gideon, Martial Paragon, reveal it, and put it into your hand. If you search your library this way, shuffle.\nCreatures you control get +1/+1.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/akh/272/gideons-resolve?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16918,
+        "iid": 17012,
+        "name": "Gideon's Resolve",
+        "handler": "manalinkeh_card_gideons_resolve",
+        "kind": "card"
+      }
+    },
+    "Primeval Protector": {
+      "oracle": {
+        "oracle_id": "a9581345-87dc-4fbd-acc1-bb629f2cf40f",
+        "name": "Primeval Protector",
+        "oracle_text": "This spell costs {1} less to cast for each creature your opponents control.\nWhen this creature enters, put a +1/+1 counter on each other creature you control.",
+        "mana_cost": "{10}{G}",
+        "type_line": "Creature — Avatar",
+        "power": "10",
+        "toughness": "10",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 11.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nec/124/primeval-protector?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16621,
+        "iid": 16712,
+        "name": "Primeval Protector",
+        "handler": "manalinkeh_card_primeval_protector",
+        "kind": "card"
+      }
+    },
+    "Haazda Officer": {
+      "oracle": {
+        "oracle_id": "35023c04-ae62-47bf-80a0-faa2d7a67788",
+        "name": "Haazda Officer",
+        "oracle_text": "When this creature enters, target creature you control gets +1/+1 until end of turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/305/haazda-officer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19650,
+        "iid": 19584,
+        "name": "Haazda Officer",
+        "handler": "manalinkeh_card_herald_of_the_fair",
+        "kind": "card"
+      }
+    },
+    "War Elemental": {
+      "oracle": {
+        "oracle_id": "07947d01-ebb1-46b7-9bdd-ea00e034805b",
+        "name": "War Elemental",
+        "oracle_text": "When this creature enters, sacrifice it unless an opponent was dealt damage this turn.\nWhenever an opponent is dealt damage, put that many +1/+1 counters on this creature.",
+        "mana_cost": "{R}{R}{R}",
+        "type_line": "Creature — Elemental",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mrd/112/war-elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6835,
+        "iid": 10805,
+        "name": "War Elemental",
+        "handler": "manalinkeh_card_war_elemental",
+        "kind": "card"
+      }
+    },
+    "Singing Bell Strike": {
+      "oracle": {
+        "oracle_id": "dad07f8c-1f24-4f56-b8a6-7c4b82e27e0f",
+        "name": "Singing Bell Strike",
+        "oracle_text": "Enchant creature\nWhen this Aura enters, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step.\nEnchanted creature has \"{6}: Untap this creature.\"",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/55/singing-bell-strike?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14382,
+        "iid": 8780,
+        "name": "Singing Bell Strike",
+        "handler": "manalinkeh_card_singing_bell_strike",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Azorius Guildgate": {
+      "oracle": {
+        "oracle_id": "ad1712d8-809f-410c-8b91-ffe6fb8a69a1",
+        "name": "Azorius Guildgate",
+        "oracle_text": "This land enters tapped.\n{T}: Add {W} or {U}.",
+        "mana_cost": "",
+        "type_line": "Land — Gate",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/683/azorius-guildgate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12662,
+        "iid": 787,
+        "name": "Azorius Guildgate",
+        "handler": "manalinkeh_plain_mana_producer_tapped",
+        "kind": "card"
+      }
+    },
+    "Burst of Strength": {
+      "oracle": {
+        "oracle_id": "1ab592fa-adfb-4879-af6c-0204eab323fb",
+        "name": "Burst of Strength",
+        "oracle_text": "Put a +1/+1 counter on target creature and untap it.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/115/burst-of-strength?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12904,
+        "iid": 1417,
+        "name": "Burst of Strength",
+        "handler": "manalinkeh_card_burst_of_strength",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Essence Scatter": {
+      "oracle": {
+        "oracle_id": "46665089-aa3d-44c3-964d-6638dfbb5782",
+        "name": "Essence Scatter",
+        "oracle_text": "Counter target creature spell.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sos/47/essence-scatter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10416,
+        "iid": 3131,
+        "name": "Essence Scatter",
+        "handler": "manalinkeh_card_remove_soul",
+        "kind": "card"
+      }
+    },
+    "Fiery Hellhound": {
+      "oracle": {
+        "oracle_id": "ab71c8ba-c7ac-4ad2-a6db-29d903bbca78",
+        "name": "Fiery Hellhound",
+        "oracle_text": "{R}: This creature gets +1/+0 until end of turn.",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Elemental Dog",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ori/284/fiery-hellhound?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10417,
+        "iid": 3392,
+        "name": "Fiery Hellhound",
+        "handler": "manalinkeh_card_furnace_whelp",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Gideon, Martial Paragon": {
+      "oracle": {
+        "oracle_id": "4cbce730-7b70-41bd-b463-bfec46afe3b0",
+        "name": "Gideon, Martial Paragon",
+        "oracle_text": "+2: Untap all creatures you control. Those creatures get +1/+1 until end of turn.\n0: Until end of turn, Gideon becomes a 5/5 Human Soldier creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.\n−10: Creatures you control get +2/+2 until end of turn. Tap all creatures your opponents control.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Legendary Planeswalker — Gideon",
+        "loyalty": "5",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/akh/270/gideon-martial-paragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16919,
+        "iid": 17013,
+        "name": "Gideon, Martial Paragon",
+        "handler": "manalinkeh_card_gideon_martial_paragon",
+        "kind": "card"
+      }
+    },
+    "Goblin Guide": {
+      "oracle": {
+        "oracle_id": "51d9564b-44fc-4de1-9119-09d7b4089378",
+        "name": "Goblin Guide",
+        "oracle_text": "Haste\nWhenever this creature attacks, defending player reveals the top card of their library. If it's a land card, that player puts it into their hand.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin Scout",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/127/goblin-guide?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10547,
+        "iid": 4012,
+        "name": "Goblin Guide",
+        "handler": "manalinkeh_card_goblin_guide",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Healer's Hawk": {
+      "oracle": {
+        "oracle_id": "28a52ba1-95da-44e1-8ac5-0dc23c902394",
+        "name": "Healer's Hawk",
+        "oracle_text": "Flying\nLifelink (Damage dealt by this creature also causes you to gain that much life.)",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Lifelink"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/734/healers-hawk?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19391,
+        "iid": 19324,
+        "name": "Healer's Hawk",
+        "handler": "manalinkeh_card_child_of_night",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Selesnya Guildgate": {
+      "oracle": {
+        "oracle_id": "75b235d3-595a-4859-be45-9559d8445db5",
+        "name": "Selesnya Guildgate",
+        "oracle_text": "This land enters tapped.\n{T}: Add {G} or {W}.",
+        "mana_cost": "",
+        "type_line": "Land — Gate",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/694/selesnya-guildgate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12815,
+        "iid": 8470,
+        "name": "Selesnya Guildgate",
+        "handler": "manalinkeh_plain_mana_producer_tapped",
+        "kind": "card"
+      }
+    },
+    "Serra Angel": {
+      "oracle": {
+        "oracle_id": "4b7ac066-e5c7-43e6-9e7e-2739b24a905d",
+        "name": "Serra Angel",
+        "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/740/serra-angel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 221,
+        "iid": 8519,
+        "name": "Serra Angel",
+        "handler": "manalinkeh_card_serra_angel",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Welding Jar": {
+      "oracle": {
+        "oracle_id": "e4a6c421-bef1-4360-a2dc-ae9c61d86b2f",
+        "name": "Welding Jar",
+        "oracle_text": "Sacrifice this artifact: Regenerate target artifact.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/307/welding-jar?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6836,
+        "iid": 10899,
+        "name": "Welding Jar",
+        "handler": "manalinkeh_card_welding_jar",
+        "kind": "card"
+      }
+    }
+  }
+}

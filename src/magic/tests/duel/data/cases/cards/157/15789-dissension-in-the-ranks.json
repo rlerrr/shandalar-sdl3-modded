@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 15789,
+  "card": "Dissension in the Ranks",
+  "recipes": [
+    {
+      "family": "fight_two_target_and_granted",
+      "version": 2,
+      "params": {
+        "csvid": 15789,
+        "printed_cost": "{3}{R}{R}"
+      },
+      "oracle_text": "Target blocking creature fights another target blocking creature.",
+      "variants": [
+        "blocks_0",
+        "lose_blocker_0",
+        "one_blocker_0",
+        "no_blockers_0",
+        "blocks_1",
+        "lose_blocker_1",
+        "one_blocker_1",
+        "no_blockers_1"
+      ]
+    }
+  ]
+}

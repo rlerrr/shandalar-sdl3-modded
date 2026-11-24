@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Flayer Drone",
+  "csvid": 15600,
+  "recipes": [
+    {
+      "family": "devoid_scions_and_sacrifice",
+      "version": 2,
+      "params": {
+        "role": "drone",
+        "mana": [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Devoid (This card has no color.)\nFirst strike\nWhenever another colorless creature you control enters, target opponent loses 1 life.",
+      "variants": [
+        "scion_pair_0",
+        "colored_entry_0",
+        "enemy_entry_0",
+        "first_strike_0",
+        "replay_0",
+        "scion_pair_1",
+        "colored_entry_1",
+        "enemy_entry_1",
+        "first_strike_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

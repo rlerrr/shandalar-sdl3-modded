@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Bontu the Glorified",
+  "csvid": 16853,
+  "recipes": [
+    {
+      "family": "library_scry_activated_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 16853,
+        "mana": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Menace, indestructible\nBontu can't attack or block unless a creature died under your control this turn.\n{1}{B}, Sacrifice another creature: Scry 1. Each opponent loses 1 life and you gain 1 life.",
+      "variants": [
+        "no_other_0",
+        "no_other_1",
+        "need_death_0",
+        "need_death_1",
+        "menace_after_sac_0",
+        "menace_after_sac_1",
+        "block_before_sac_0",
+        "block_before_sac_1",
+        "block_after_sac_0",
+        "block_after_sac_1",
+        "indestructible_0",
+        "indestructible_1"
+      ]
+    }
+  ]
+}

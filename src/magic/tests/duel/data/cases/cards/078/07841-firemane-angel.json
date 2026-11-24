@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Firemane Angel",
+  "csvid": 7841,
+  "recipes": [
+    {
+      "family": "upkeep_damage_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 7841
+      },
+      "oracle_text": "Flying, first strike\nAt the beginning of your upkeep, if Firemane Angel is in your graveyard or on the battlefield, you may gain 1 life.\n{6}{R}{R}{W}{W}: Return this card from your graveyard to the battlefield. Activate only during your upkeep.",
+      "variants": [
+        "battlefield_0",
+        "battlefield_1",
+        "grave_gain_0",
+        "grave_gain_1",
+        "grave_return_0",
+        "first_strike_0",
+        "first_strike_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

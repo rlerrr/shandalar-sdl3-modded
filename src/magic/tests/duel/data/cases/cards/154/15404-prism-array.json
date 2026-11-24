@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Prism Array",
+  "csvid": 15404,
+  "recipes": [
+    {
+      "family": "library_scry_activated_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 15404,
+        "mana": [
+          4,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Converge — This enchantment enters with a crystal counter on it for each color of mana spent to cast it.\nRemove a crystal counter from this enchantment: Tap target creature.\n{W}{U}{B}{R}{G}: Scry 3.",
+      "variants": [
+        "one_crystal_0",
+        "one_crystal_1",
+        "two_crystals_0",
+        "two_crystals_1",
+        "scry_three_0",
+        "scry_three_1",
+        "short_white_0",
+        "short_white_1"
+      ]
+    }
+  ]
+}

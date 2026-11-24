@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Underworld Cerberus",
+  "csvid": 13588,
+  "recipes": [
+    {
+      "family": "departure_graveyard_and_return",
+      "version": 2,
+      "params": {
+        "csvid": 13588,
+        "cost": [
+          3,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "This creature can't be blocked except by three or more creatures.\nCards in graveyards can't be the targets of spells or abilities.\nWhen this creature dies, exile it and each player returns all creature cards from their graveyard to their hand.",
+      "variants": [
+        "both_graves_0",
+        "both_graves_1",
+        "shroud_0",
+        "shroud_1",
+        "blocks_0",
+        "blocks_1"
+      ]
+    }
+  ]
+}

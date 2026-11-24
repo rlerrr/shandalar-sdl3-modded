@@ -1,0 +1,1075 @@
+{
+  "sources": {
+    "Balefire Liege": {
+      "oracle": {
+        "oracle_id": "ee35ed62-d5a2-4e65-a7eb-fcdcb3665532",
+        "name": "Balefire Liege",
+        "oracle_text": "Other red creatures you control get +1/+1.\nOther white creatures you control get +1/+1.\nWhenever you cast a red spell, this creature deals 3 damage to target player or planeswalker.\nWhenever you cast a white spell, you gain 3 life.",
+        "mana_cost": "{2}{R/W}{R/W}{R/W}",
+        "type_line": "Creature — Spirit Horror",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/295/balefire-liege?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9736,
+        "iid": 821,
+        "name": "Balefire Liege",
+        "handler": "manalinkeh_card_balefire_liege",
+        "kind": "card"
+      }
+    },
+    "Belligerent Hatchling": {
+      "oracle": {
+        "oracle_id": "7bd4e504-541e-4b2c-9f1d-3c67957aef2e",
+        "name": "Belligerent Hatchling",
+        "oracle_text": "First strike\nThis creature enters with four -1/-1 counters on it.\nWhenever you cast a red spell, remove a -1/-1 counter from this creature.\nWhenever you cast a white spell, remove a -1/-1 counter from this creature.",
+        "mana_cost": "{3}{R/W}",
+        "type_line": "Creature — Elemental",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "First strike"
+        ],
+        "colors": [
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eve/134/belligerent-hatchling?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9742,
+        "iid": 966,
+        "name": "Belligerent Hatchling",
+        "handler": "manalinkeh_card_belligerent_hatchling",
+        "kind": "card"
+      }
+    },
+    "Circu, Dimir Lobotomist": {
+      "oracle": {
+        "oracle_id": "c87d547b-00a4-4fdd-ade4-f3f032e5ea3b",
+        "name": "Circu, Dimir Lobotomist",
+        "oracle_text": "Whenever you cast a blue spell, exile the top card of target player's library.\nWhenever you cast a black spell, exile the top card of target player's library.\nYour opponents can't cast spells with the same name as a card exiled with Circu.",
+        "mana_cost": "{2}{U}{B}",
+        "type_line": "Legendary Creature — Human Wizard",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rav/196/circu-dimir-lobotomist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7794,
+        "iid": 1759,
+        "name": "Circu, Dimir Lobotomist",
+        "handler": "manalinkeh_card_circu_dimir_lobotomist",
+        "kind": "card"
+      }
+    },
+    "Deathbringer Liege": {
+      "oracle": {
+        "oracle_id": "caf89756-fb78-4e58-a730-001393ffa0a8",
+        "name": "Deathbringer Liege",
+        "oracle_text": "Other white creatures you control get +1/+1.\nOther black creatures you control get +1/+1.\nWhenever you cast a white spell, you may tap target creature.\nWhenever you cast a black spell, you may destroy target creature if it's tapped.",
+        "mana_cost": "{2}{W/B}{W/B}{W/B}",
+        "type_line": "Creature — Horror",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/200/deathbringer-liege?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9761,
+        "iid": 2341,
+        "name": "Deathbringer Liege",
+        "handler": "manalinkeh_card_deathbringer_liege",
+        "kind": "card"
+      }
+    },
+    "Goblin Battle Jester": {
+      "oracle": {
+        "oracle_id": "eba01ee1-55c4-48db-843b-fd6d48c32eda",
+        "name": "Goblin Battle Jester",
+        "oracle_text": "Whenever you cast a red spell, target creature can't block this turn.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Goblin",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/135/goblin-battle-jester?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12574,
+        "iid": 3982,
+        "name": "Goblin Battle Jester",
+        "handler": "manalinkeh_card_goblin_battle_jester",
+        "kind": "card"
+      }
+    },
+    "Noxious Hatchling": {
+      "oracle": {
+        "oracle_id": "36072943-7823-434d-b898-f0a2c4e00af2",
+        "name": "Noxious Hatchling",
+        "oracle_text": "This creature enters with four -1/-1 counters on it.\nWither (This deals damage to creatures in the form of -1/-1 counters.)\nWhenever you cast a black spell, remove a -1/-1 counter from this creature.\nWhenever you cast a green spell, remove a -1/-1 counter from this creature.",
+        "mana_cost": "{3}{B/G}",
+        "type_line": "Creature — Elemental",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Wither"
+        ],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eve/124/noxious-hatchling?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9840,
+        "iid": 6703,
+        "name": "Noxious Hatchling",
+        "handler": "manalinkeh_card_noxious_hatchling",
+        "kind": "card"
+      }
+    },
+    "Shrewd Hatchling": {
+      "oracle": {
+        "oracle_id": "011371f0-a7f1-47a5-9883-22a14cfe4de9",
+        "name": "Shrewd Hatchling",
+        "oracle_text": "This creature enters with four -1/-1 counters on it.\n{U/R}: Target creature can't block this creature this turn.\nWhenever you cast a blue spell, remove a -1/-1 counter from this creature.\nWhenever you cast a red spell, remove a -1/-1 counter from this creature.",
+        "mana_cost": "{3}{U/R}",
+        "type_line": "Creature — Elemental",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm2/198/shrewd-hatchling?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9869,
+        "iid": 8673,
+        "name": "Shrewd Hatchling",
+        "handler": "manalinkeh_card_shrewd_hatchling",
+        "kind": "card"
+      }
+    },
+    "Sturdy Hatchling": {
+      "oracle": {
+        "oracle_id": "08e95b6c-9f4c-42d9-ad64-2d905d781d49",
+        "name": "Sturdy Hatchling",
+        "oracle_text": "This creature enters with four -1/-1 counters on it.\n{G/U}: This creature gains shroud until end of turn. (It can't be the target of spells or abilities.)\nWhenever you cast a green spell, remove a -1/-1 counter from this creature.\nWhenever you cast a blue spell, remove a -1/-1 counter from this creature.",
+        "mana_cost": "{3}{G/U}",
+        "type_line": "Creature — Elemental",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eve/163/sturdy-hatchling?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9884,
+        "iid": 9471,
+        "name": "Sturdy Hatchling",
+        "handler": "manalinkeh_card_sturdy_hatchling",
+        "kind": "card"
+      }
+    },
+    "Tibor and Lumia": {
+      "oracle": {
+        "oracle_id": "ee6d6f2f-68d5-466a-86c6-20fdb360e629",
+        "name": "Tibor and Lumia",
+        "oracle_text": "Whenever you cast a blue spell, target creature gains flying until end of turn.\nWhenever you cast a red spell, Tibor and Lumia deals 1 damage to each creature without flying.",
+        "mana_cost": "{2}{U}{R}",
+        "type_line": "Legendary Creature — Human Wizard",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gpt/135/tibor-and-lumia?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8148,
+        "iid": 9999,
+        "name": "Tibor and Lumia",
+        "handler": "manalinkeh_card_tibor_and_lumia",
+        "kind": "card"
+      }
+    },
+    "Voracious Hatchling": {
+      "oracle": {
+        "oracle_id": "eab5eb29-bed6-456b-8929-5b9b820aa5a3",
+        "name": "Voracious Hatchling",
+        "oracle_text": "Lifelink\nThis creature enters with four -1/-1 counters on it.\nWhenever you cast a white spell, remove a -1/-1 counter from this creature.\nWhenever you cast a black spell, remove a -1/-1 counter from this creature.",
+        "mana_cost": "{3}{W/B}",
+        "type_line": "Creature — Elemental",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Lifelink"
+        ],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eve/97/voracious-hatchling?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9900,
+        "iid": 10705,
+        "name": "Voracious Hatchling",
+        "handler": "manalinkeh_card_voracious_hatchling",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Boggart Ram-Gang": {
+      "oracle": {
+        "oracle_id": "30d2437a-87c9-4f88-8fb8-b686d6522677",
+        "name": "Boggart Ram-Gang",
+        "oracle_text": "Haste\nWither (This deals damage to creatures in the form of -1/-1 counters.)",
+        "mana_cost": "{R/G}{R/G}{R/G}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Haste",
+          "Wither"
+        ],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/shm/203/boggart-ram-gang?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9488,
+        "iid": 1196,
+        "name": "Boggart Ram-Gang",
+        "handler": "manalinkeh_card_boggart_ramgang",
+        "kind": "card"
+      }
+    },
+    "Boros Guildmage": {
+      "oracle": {
+        "oracle_id": "266c2f49-82eb-48e9-a7ea-e0da787fa40e",
+        "name": "Boros Guildmage",
+        "oracle_text": "{1}{R}: Target creature gains haste until end of turn.\n{1}{W}: Target creature gains first strike until end of turn.",
+        "mana_cost": "{R/W}{R/W}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/168/boros-guildmage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7779,
+        "iid": 1254,
+        "name": "Boros Guildmage",
+        "handler": "manalinkeh_card_boros_guildmage",
+        "kind": "card"
+      }
+    },
+    "Dark Ritual": {
+      "oracle": {
+        "oracle_id": "53f7c868-b03e-4fc2-8dcf-a75bbfa3272b",
+        "name": "Dark Ritual",
+        "oracle_text": "Add {B}{B}{B}.",
+        "mana_cost": "{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/793/dark-ritual?utm_source=api"
+      },
+      "registry": {
+        "csvid": 55,
+        "iid": 2232,
+        "name": "Dark Ritual",
+        "handler": "manalinkeh_card_dark_ritual",
+        "kind": "card"
+      }
+    },
+    "Dimir Infiltrator": {
+      "oracle": {
+        "oracle_id": "d215127b-5f1d-4d3c-935b-c228c9c7f874",
+        "name": "Dimir Infiltrator",
+        "oracle_text": "This creature can't be blocked.\nTransmute {1}{U}{B} ({1}{U}{B}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.)",
+        "mana_cost": "{U}{B}",
+        "type_line": "Creature — Spirit",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [
+          "Transmute"
+        ],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pca/86/dimir-infiltrator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7818,
+        "iid": 2544,
+        "name": "Dimir Infiltrator",
+        "handler": "manalinkeh_card_dimir_infiltrator",
+        "kind": "card"
+      }
+    },
+    "Fog": {
+      "oracle": {
+        "oracle_id": "27e9db49-7af7-4bef-ad4c-bf5dfb92030d",
+        "name": "Fog",
+        "oracle_text": "Prevent all combat damage that would be dealt this turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/167/fog?utm_source=api"
+      },
+      "registry": {
+        "csvid": 88,
+        "iid": 3563,
+        "name": "Fog",
+        "handler": "manalinkeh_card_fog",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Holy Day": {
+      "oracle": {
+        "oracle_id": "98423a34-f044-4811-b288-56981d604b6e",
+        "name": "Holy Day",
+        "oracle_text": "Prevent all combat damage that would be dealt this turn.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/21/holy-day?utm_source=api"
+      },
+      "registry": {
+        "csvid": 672,
+        "iid": 4606,
+        "name": "Holy Day",
+        "handler": "manalinkeh_card_fog",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Kozilek's Sentinel": {
+      "oracle": {
+        "oracle_id": "86ae05d6-f1ba-456d-bbc0-f35cd0d0537d",
+        "name": "Kozilek's Sentinel",
+        "oracle_text": "Devoid (This card has no color.)\nWhenever you cast a colorless spell, this creature gets +1/+0 until end of turn.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/129/kozileks-sentinel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15363,
+        "iid": 13319,
+        "name": "Kozilek's Sentinel",
+        "handler": "manalinkeh_card_kozileks_sentinel",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Lightning Helix": {
+      "oracle": {
+        "oracle_id": "800c258a-cfc4-4a54-a667-065ea8dea69e",
+        "name": "Lightning Helix",
+        "oracle_text": "Lightning Helix deals 3 damage to any target and you gain 3 life.",
+        "mana_cost": "{R}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mkm/218/lightning-helix?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1328,
+        "iid": 5604,
+        "name": "Lightning Helix",
+        "handler": "manalinkeh_card_lightning_helix",
+        "kind": "card"
+      }
+    },
+    "Mother of Runes": {
+      "oracle": {
+        "oracle_id": "60433b48-d27f-413c-905c-43839b1943f1",
+        "name": "Mother of Runes",
+        "oracle_text": "{T}: Target creature you control gains protection from the color of your choice until end of turn.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clb/702/mother-of-runes?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4022,
+        "iid": 6352,
+        "name": "Mother of Runes",
+        "handler": "manalinkeh_card_mother_of_runes",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Think Twice": {
+      "oracle": {
+        "oracle_id": "fa85c5a2-8e83-4624-a35a-a0bbf17ecbb4",
+        "name": "Think Twice",
+        "oracle_text": "Draw a card.\nFlashback {2}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/787/think-twice?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8702,
+        "iid": 9890,
+        "name": "Think Twice",
+        "handler": "manalinkeh_card_think_twice",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Viscera Seer": {
+      "oracle": {
+        "oracle_id": "f82a4e85-526d-4456-b700-7760043a31be",
+        "name": "Viscera Seer",
+        "oracle_text": "Sacrifice a creature: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Vampire Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/229/viscera-seer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11187,
+        "iid": 10629,
+        "name": "Viscera Seer",
+        "handler": "manalinkeh_card_viscera_seer",
+        "kind": "card"
+      }
+    },
+    "Vizkopa Guildmage": {
+      "oracle": {
+        "oracle_id": "f19e7c5c-67fa-4ae4-89b8-afa0e08a6c48",
+        "name": "Vizkopa Guildmage",
+        "oracle_text": "{1}{W}{B}: Target creature gains lifelink until end of turn.\n{1}{W}{B}: Whenever you gain life this turn, each opponent loses that much life.",
+        "mana_cost": "{W}{B}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ima/211/vizkopa-guildmage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13096,
+        "iid": 10650,
+        "name": "Vizkopa Guildmage",
+        "handler": "manalinkeh_card_vizkopa_guildmage",
+        "kind": "card"
+      }
+    },
+    "Elvish Mystic": {
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13284,
+        "iid": 2982,
+        "name": "Elvish Mystic",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Goblin Chariot": {
+      "oracle": {
+        "oracle_id": "6ef0dd51-31df-4fd3-8153-49a427a7fdcf",
+        "name": "Goblin Chariot",
+        "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/191/goblin-chariot?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1047,
+        "iid": 3992,
+        "name": "Goblin Chariot",
+        "handler": "manalinkeh_card_ambush_party",
+        "kind": "card"
+      }
+    },
+    "Kiora's Follower": {
+      "oracle": {
+        "oracle_id": "22c044ad-77d7-4c93-953d-e2daa9686ff7",
+        "name": "Kiora's Follower",
+        "oracle_text": "{T}: Untap another target permanent.",
+        "mana_cost": "{G}{U}",
+        "type_line": "Creature — Merfolk",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lcc/273/kioras-follower?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13743,
+        "iid": 5273,
+        "name": "Kiora's Follower",
+        "handler": "manalinkeh_card_kioras_follower",
+        "kind": "card"
+      }
+    },
+    "Krosan Tusker": {
+      "oracle": {
+        "oracle_id": "82406175-63b3-4972-be8b-db0e70c908cb",
+        "name": "Krosan Tusker",
+        "oracle_text": "Cycling {2}{G} ({2}{G}, Discard this card: Draw a card.)\nWhen you cycle this card, you may search your library for a basic land card, reveal that card, put it into your hand, then shuffle. (Do this before you draw.)",
+        "mana_cost": "{5}{G}{G}",
+        "type_line": "Creature — Boar Beast",
+        "power": "6",
+        "toughness": "5",
+        "keywords": [
+          "Cycling"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/302/krosan-tusker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6196,
+        "iid": 5405,
+        "name": "Krosan Tusker",
+        "handler": "manalinkeh_card_krosan_tusker",
+        "kind": "card"
+      }
+    },
+    "Nivix Guildmage": {
+      "oracle": {
+        "oracle_id": "d04356f1-0e1a-4689-8e54-f88c4c6dd936",
+        "name": "Nivix Guildmage",
+        "oracle_text": "{1}{U}{R}: Draw a card, then discard a card.\n{2}{U}{R}: Copy target instant or sorcery spell you control. You may choose new targets for the copy.",
+        "mana_cost": "{U}{R}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c17/186/nivix-guildmage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12778,
+        "iid": 6660,
+        "name": "Nivix Guildmage",
+        "handler": "manalinkeh_card_nivix_guildmage",
+        "kind": "card"
+      }
+    },
+    "Shambling Shell": {
+      "oracle": {
+        "oracle_id": "9c50f6b1-8850-4b08-a994-3ccc17f25b83",
+        "name": "Shambling Shell",
+        "oracle_text": "Sacrifice this creature: Put a +1/+1 counter on target creature.\nDredge 3 (If you would draw a card, you may mill three cards instead. If you do, return this card from your graveyard to your hand.)",
+        "mana_cost": "{1}{B}{G}",
+        "type_line": "Creature — Plant Zombie",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Dredge",
+          "Mill"
+        ],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddj/57/shambling-shell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7957,
+        "iid": 8576,
+        "name": "Shambling Shell",
+        "handler": "manalinkeh_card_shambling_shell",
+        "kind": "card"
+      }
+    },
+    "Welkin Tern": {
+      "oracle": {
+        "oracle_id": "010c660a-a67b-48f0-a63a-15470eb89f69",
+        "name": "Welkin Tern",
+        "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nThis creature can block only creatures with flying.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Bird",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gs1/5/welkin-tern?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10709,
+        "iid": 10901,
+        "name": "Welkin Tern",
+        "handler": "manalinkeh_card_skywinder_drake",
+        "kind": "card"
+      }
+    }
+  }
+}

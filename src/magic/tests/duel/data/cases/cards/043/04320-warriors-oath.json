@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "csvid": 4320,
+  "card": "Warrior's Oath",
+  "recipes": [
+    {
+      "family": "extra_turn_spell",
+      "version": 2,
+      "params": {
+        "cast_cost": [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "instant": false,
+        "lose_at_linked_end": true
+      },
+      "oracle_text": "Take an extra turn after this one. At the beginning of that turn's end step, you lose the game.",
+      "variants": [
+        "single_0",
+        "stacked_0",
+        "older_plain_0",
+        "newer_plain_0",
+        "countered_0",
+        "counter_extra_only_0",
+        "unfunded_0",
+        "wrong_color_0",
+        "suppress_foe_0",
+        "suppress_own_0",
+        "suppress_nexus_0",
+        "skip_meditate_0",
+        "normal_skip_0",
+        "opposing_schedule_0",
+        "untap_probe_0",
+        "pending_replay_0",
+        "scheduled_replay_0",
+        "protected_end_0",
+        "single_1",
+        "stacked_1",
+        "older_plain_1",
+        "newer_plain_1",
+        "countered_1",
+        "counter_extra_only_1",
+        "unfunded_1",
+        "wrong_color_1",
+        "suppress_foe_1",
+        "suppress_own_1",
+        "suppress_nexus_1",
+        "skip_meditate_1",
+        "normal_skip_1",
+        "opposing_schedule_1",
+        "untap_probe_1",
+        "pending_replay_1",
+        "scheduled_replay_1",
+        "protected_end_1",
+        "cancel_0"
+      ]
+    }
+  ]
+}

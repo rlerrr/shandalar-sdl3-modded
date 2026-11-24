@@ -1,0 +1,259 @@
+{
+  "sources": {
+    "Conclave Equenaut": {
+      "oracle": {
+        "oracle_id": "4127794b-84d1-4efb-b0e9-543a02b07fa8",
+        "name": "Conclave Equenaut",
+        "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nFlying",
+        "mana_cost": "{4}{W}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Convoke"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/13/conclave-equenaut?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7801,
+        "iid": 12049,
+        "name": "Conclave Equenaut",
+        "handler": "manalinkeh_card_siege_wurm",
+        "kind": "card"
+      }
+    },
+    "Flight of Equenauts": {
+      "oracle": {
+        "oracle_id": "5212e707-b487-46b6-aa51-cea3be8cbe00",
+        "name": "Flight of Equenauts",
+        "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nFlying",
+        "mana_cost": "{7}{W}",
+        "type_line": "Creature — Human Knight",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Convoke"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/moc/186/flight-of-equenauts?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19365,
+        "iid": 19298,
+        "name": "Flight of Equenauts",
+        "handler": "manalinkeh_card_autochthon_wurm",
+        "kind": "card"
+      }
+    },
+    "Ledev Guardian": {
+      "oracle": {
+        "oracle_id": "edcf36b4-dea4-4314-94da-e0ee5e30cd37",
+        "name": "Ledev Guardian",
+        "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Human Knight",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Convoke"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/grn/18/ledev-guardian?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19422,
+        "iid": 19355,
+        "name": "Ledev Guardian",
+        "handler": "manalinkeh_card_autochthon_wurm",
+        "kind": "card"
+      }
+    },
+    "Will-Forged Golem": {
+      "oracle": {
+        "oracle_id": "25fb0396-7355-4ff1-8ad3-d5a82adf6cc1",
+        "name": "Will-Forged Golem",
+        "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)",
+        "mana_cost": "{6}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Convoke"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/239/will-forged-golem?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14200,
+        "iid": 10981,
+        "name": "Will-Forged Golem",
+        "handler": "manalinkeh_card_siege_wurm",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Elvish Mystic": {
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13284,
+        "iid": 2982,
+        "name": "Elvish Mystic",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Goblin Balloon Brigade": {
+      "oracle": {
+        "oracle_id": "10bc98b0-3fdc-46d1-8d3b-6d160e9dd62f",
+        "name": "Goblin Balloon Brigade",
+        "oracle_text": "{R}: This creature gains flying until end of turn.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cn2/159/goblin-balloon-brigade?utm_source=api"
+      },
+      "registry": {
+        "csvid": 101,
+        "iid": 3980,
+        "name": "Goblin Balloon Brigade",
+        "handler": "manalinkeh_card_goblin_balloon_brigade",
+        "kind": "card"
+      }
+    },
+    "Topan Freeblade": {
+      "oracle": {
+        "oracle_id": "9e2cd0d5-1537-412b-9ecd-989ab4ac2700",
+        "name": "Topan Freeblade",
+        "oracle_text": "Vigilance (Attacking doesn't cause this creature to tap.)\nRenown 1 (When this creature deals combat damage to a player, if it isn't renowned, put a +1/+1 counter on it and it becomes renowned.)",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Renown",
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gn2/14/topan-freeblade?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15238,
+        "iid": 15131,
+        "name": "Topan Freeblade",
+        "handler": "manalinkeh_card_topan_freeblade",
+        "kind": "card"
+      }
+    },
+    "Traveler's Amulet": {
+      "oracle": {
+        "oracle_id": "48b561dd-f23d-409a-87c8-e49902b2477b",
+        "name": "Traveler's Amulet",
+        "oracle_text": "{1}, Sacrifice this artifact: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/273/travelers-amulet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12102,
+        "iid": 10166,
+        "name": "Traveler's Amulet",
+        "handler": "manalinkeh_card_travelers_amulet",
+        "kind": "card"
+      }
+    }
+  }
+}

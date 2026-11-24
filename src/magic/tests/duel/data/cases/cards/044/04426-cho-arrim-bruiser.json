@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Cho-Arrim Bruiser",
+  "csvid": 4426,
+  "recipes": [
+    {
+      "family": "attack_tap_creatures",
+      "version": 2,
+      "oracle_text": "Whenever this creature attacks, you may tap up to two target creatures.",
+      "params": {
+        "mana": "{5}{W}",
+        "flying": false,
+        "target_type": "creature",
+        "target_controller": "any",
+        "optional": true,
+        "power": 3,
+        "toughness": 4,
+        "tap_limit": 2
+      },
+      "variants": [
+        "zero_targets_0",
+        "decline_trigger_0",
+        "one_legal_0",
+        "two_targets_0",
+        "mixed_targets_0",
+        "tapped_denied_0",
+        "fresh_cast_denied_0",
+        "snapshot_0",
+        "zero_targets_1",
+        "one_legal_1",
+        "two_targets_1",
+        "mixed_targets_1",
+        "tapped_denied_1",
+        "fresh_cast_denied_1",
+        "snapshot_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "csvid": 11251,
+  "card": "Ezuri, Renegade Leader",
+  "recipes": [
+    {
+      "family": "regeneration_targeted_abilities",
+      "version": 2,
+      "params": {
+        "csvid": 11251,
+        "mana": [
+          1,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "activation": "{G}",
+        "tap": false,
+        "stats": [
+          2,
+          2
+        ]
+      },
+      "oracle_text": "{G}: Regenerate another target Elf.\n{2}{G}{G}{G}: Elf creatures you control get +3/+3 and gain trample until end of turn.",
+      "variants": [
+        "own_0",
+        "own_1",
+        "foreign_0",
+        "foreign_1",
+        "self_0",
+        "self_1",
+        "wrong_type_0",
+        "wrong_type_1",
+        "short_0",
+        "short_1",
+        "proactive_0",
+        "proactive_1",
+        "overrun_0",
+        "overrun_1"
+      ]
+    }
+  ]
+}

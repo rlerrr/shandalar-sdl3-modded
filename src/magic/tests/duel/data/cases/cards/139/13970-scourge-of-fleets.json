@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Scourge of Fleets",
+  "csvid": 13970,
+  "recipes": [
+    {
+      "family": "entry_interaction_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 13970,
+        "cost": [
+          5,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, return each creature your opponents control with toughness X or less to its owner's hand, where X is the number of Islands you control.",
+      "variants": [
+        "two_islands_0",
+        "two_islands_1",
+        "no_islands_0",
+        "no_islands_1",
+        "borrowed_owner_0",
+        "borrowed_owner_1",
+        "one_island_0",
+        "one_island_1"
+      ]
+    }
+  ]
+}

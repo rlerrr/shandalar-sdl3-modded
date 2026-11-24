@@ -1,0 +1,680 @@
+{
+  "sources": {
+    "Druid's Familiar": {
+      "csvid": 12356,
+      "handler": "manalinkeh_card_druids_familiar",
+      "oracle": {
+        "oracle_id": "6a5b1cd4-e597-4122-8fc7-4dce241d7c01",
+        "name": "Druid's Familiar",
+        "oracle_text": "Soulbond (You may pair this creature with another unpaired creature when either enters. They remain paired for as long as you control both of them.)\nAs long as this creature is paired with another creature, each of those creatures gets +2/+2.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Soulbond"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/175/druids-familiar?utm_source=api"
+      }
+    },
+    "Trusted Forcemage": {
+      "csvid": 12494,
+      "handler": "manalinkeh_card_trusted_forcemage",
+      "oracle": {
+        "oracle_id": "663ef3c9-f897-4875-b029-82ee6672db00",
+        "name": "Trusted Forcemage",
+        "oracle_text": "Soulbond (You may pair this creature with another unpaired creature when either enters. They remain paired for as long as you control both of them.)\nAs long as this creature is paired with another creature, each of those creatures gets +1/+1.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Human Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Soulbond"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/199/trusted-forcemage?utm_source=api"
+      }
+    },
+    "Wolfir Silverheart": {
+      "csvid": 12512,
+      "handler": "manalinkeh_card_wolfir_silverheart",
+      "oracle": {
+        "oracle_id": "dccf9497-cc7b-42df-9b46-f5ffea0c7474",
+        "name": "Wolfir Silverheart",
+        "oracle_text": "Soulbond (You may pair this creature with another unpaired creature when either enters. They remain paired for as long as you control both of them.)\nAs long as this creature is paired with another creature, each of those creatures gets +4/+4.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Wolf Warrior",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Soulbond"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/206/wolfir-silverheart?utm_source=api"
+      }
+    },
+    "Geist Trappers": {
+      "csvid": 12376,
+      "handler": "manalinkeh_card_geist_trapper",
+      "oracle": {
+        "oracle_id": "7116da4a-96c1-4183-b123-29c6b70ef543",
+        "name": "Geist Trappers",
+        "oracle_text": "Soulbond (You may pair this creature with another unpaired creature when either enters. They remain paired for as long as you control both of them.)\nAs long as this creature is paired with another creature, both creatures have reach.",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Human Warrior",
+        "power": "3",
+        "toughness": "5",
+        "keywords": [
+          "Soulbond"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/179/geist-trappers?utm_source=api"
+      }
+    },
+    "Hanweir Lancer": {
+      "csvid": 12390,
+      "handler": "manalinkeh_card_hanveir_lancer",
+      "oracle": {
+        "oracle_id": "5fa9de04-6b70-4162-9ffb-6334277a4f30",
+        "name": "Hanweir Lancer",
+        "oracle_text": "Soulbond (You may pair this creature with another unpaired creature when either enters. They remain paired for as long as you control both of them.)\nAs long as this creature is paired with another creature, both creatures have first strike.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Human Knight",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Soulbond"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm3/97/hanweir-lancer?utm_source=api"
+      }
+    },
+    "Lightning Mauler": {
+      "csvid": 12412,
+      "handler": "manalinkeh_card_lightning_mauler",
+      "oracle": {
+        "oracle_id": "6c5664b1-fbb5-477e-80fd-cf2285014a10",
+        "name": "Lightning Mauler",
+        "oracle_text": "Soulbond (You may pair this creature with another unpaired creature when either enters. They remain paired for as long as you control both of them.)\nAs long as this creature is paired with another creature, both creatures have haste.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Human Berserker",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Soulbond"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/163/lightning-mauler?utm_source=api"
+      }
+    },
+    "Nearheath Pilgrim": {
+      "csvid": 12432,
+      "handler": "manalinkeh_card_nearheath_pilgrim",
+      "oracle": {
+        "oracle_id": "54c10a1d-360a-42cb-bb3b-c3ab57e1d7ea",
+        "name": "Nearheath Pilgrim",
+        "oracle_text": "Soulbond (You may pair this creature with another unpaired creature when either enters. They remain paired for as long as you control both of them.)\nAs long as this creature is paired with another creature, both creatures have lifelink.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Soulbond"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/31/nearheath-pilgrim?utm_source=api"
+      }
+    },
+    "Nightshade Peddler": {
+      "csvid": 12436,
+      "handler": "manalinkeh_card_nightshade_peddler",
+      "oracle": {
+        "oracle_id": "afd6089a-38cc-4a0f-853b-94d6be2d4470",
+        "name": "Nightshade Peddler",
+        "oracle_text": "Soulbond (You may pair this creature with another unpaired creature when either enters. They remain paired for as long as you control both of them.)\nAs long as this creature is paired with another creature, both creatures have deathtouch.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Human Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Soulbond"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/187/nightshade-peddler?utm_source=api"
+      }
+    },
+    "Pathbreaker Wurm": {
+      "csvid": 12439,
+      "handler": "manalinkeh_card_pathbreaker_wurm",
+      "oracle": {
+        "oracle_id": "ab342d57-240a-4c56-aed6-ac3cdc51af8d",
+        "name": "Pathbreaker Wurm",
+        "oracle_text": "Soulbond (You may pair this creature with another unpaired creature when either enters. They remain paired for as long as you control both of them.)\nAs long as this creature is paired with another creature, both creatures have trample.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "6",
+        "toughness": "4",
+        "keywords": [
+          "Soulbond"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/188/pathbreaker-wurm?utm_source=api"
+      }
+    },
+    "Silverblade Paladin": {
+      "csvid": 12466,
+      "handler": "manalinkeh_card_silverblade_paladin",
+      "oracle": {
+        "oracle_id": "ded0316f-5eed-4a80-91ad-ca236fd16f01",
+        "name": "Silverblade Paladin",
+        "oracle_text": "Soulbond (You may pair this creature with another unpaired creature when either enters. They remain paired for as long as you control both of them.)\nAs long as this creature is paired with another creature, both creatures have double strike.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Creature — Human Knight",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Soulbond"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c14/88/silverblade-paladin?utm_source=api"
+      }
+    },
+    "Spectral Gateguards": {
+      "csvid": 12473,
+      "handler": "manalinkeh_card_spectral_gateguards",
+      "oracle": {
+        "oracle_id": "334f7cd5-6c7b-4592-b564-8a0edac4a1b4",
+        "name": "Spectral Gateguards",
+        "oracle_text": "Soulbond (You may pair this creature with another unpaired creature when either enters. They remain paired for as long as you control both of them.)\nAs long as this creature is paired with another creature, both creatures have vigilance.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Spirit Soldier",
+        "power": "2",
+        "toughness": "5",
+        "keywords": [
+          "Soulbond"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddq/19/spectral-gateguards?utm_source=api"
+      }
+    },
+    "Wingcrafter": {
+      "csvid": 12510,
+      "handler": "manalinkeh_card_wingcrafter",
+      "oracle": {
+        "oracle_id": "55d1f44f-8554-49e7-b36f-92682926e6d0",
+        "name": "Wingcrafter",
+        "oracle_text": "Soulbond (You may pair this creature with another unpaired creature when either enters. They remain paired for as long as you control both of them.)\nAs long as this creature is paired with another creature, both creatures have flying.",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Soulbond"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm3/58/wingcrafter?utm_source=api"
+      }
+    },
+    "Elgaud Shieldmate": {
+      "csvid": 12360,
+      "handler": "manalinkeh_card_elgaud_shieldmate",
+      "oracle": {
+        "oracle_id": "a85f7e34-7783-474c-ac96-9b075b296b8f",
+        "name": "Elgaud Shieldmate",
+        "oracle_text": "Soulbond (You may pair this creature with another unpaired creature when either enters. They remain paired for as long as you control both of them.)\nAs long as this creature is paired with another creature, both creatures have hexproof. (They can't be the targets of spells or abilities your opponents control.)",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Human Soldier",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Soulbond"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/50/elgaud-shieldmate?utm_source=api"
+      }
+    }
+  },
+  "witnesses": {
+    "Control Magic": {
+      "csvid": 44,
+      "handler": "manalinkeh_card_control_magic",
+      "oracle": {
+        "oracle_id": "cd0d7141-46d2-4aa3-bc77-6b3b4513803e",
+        "name": "Control Magic",
+        "oracle_text": "Enchant creature\nYou control enchanted creature.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cma/34/control-magic?utm_source=api"
+      }
+    },
+    "Counterspell": {
+      "csvid": 48,
+      "handler": "manalinkeh_card_counterspell",
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      }
+    },
+    "Deadly Insect": {
+      "csvid": 1684,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "98273b0d-2b41-486b-9498-30a692c03982",
+        "name": "Deadly Insect",
+        "oracle_text": "Shroud (This creature can't be the target of spells or abilities.)",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Insect",
+        "power": "6",
+        "toughness": "1",
+        "keywords": [
+          "Shroud"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/238/deadly-insect?utm_source=api"
+      }
+    },
+    "Druid's Familiar": {
+      "csvid": 12356,
+      "handler": "manalinkeh_card_druids_familiar",
+      "oracle": {
+        "oracle_id": "6a5b1cd4-e597-4122-8fc7-4dce241d7c01",
+        "name": "Druid's Familiar",
+        "oracle_text": "Soulbond (You may pair this creature with another unpaired creature when either enters. They remain paired for as long as you control both of them.)\nAs long as this creature is paired with another creature, each of those creatures gets +2/+2.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Soulbond"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/175/druids-familiar?utm_source=api"
+      }
+    },
+    "Goblin Piker": {
+      "csvid": 10423,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "50608184-90d3-43d2-a221-deb186c78323",
+        "name": "Goblin Piker",
+        "oracle_text": "",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m12/141/goblin-piker?utm_source=api"
+      }
+    },
+    "Grizzly Bears": {
+      "csvid": 106,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      }
+    },
+    "Hill Giant": {
+      "csvid": 110,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      }
+    },
+    "Ray of Command": {
+      "csvid": 2075,
+      "handler": "manalinkeh_card_ray_of_command",
+      "oracle": {
+        "oracle_id": "adf41d29-403d-4936-9689-3148d103e700",
+        "name": "Ray of Command",
+        "oracle_text": "Untap target creature an opponent controls and gain control of it until end of turn. That creature gains haste until end of turn. When you lose control of the creature, tap it.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddm/29/ray-of-command?utm_source=api"
+      }
+    },
+    "Suntail Hawk": {
+      "csvid": 1195,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+        "name": "Suntail Hawk",
+        "oracle_text": "Flying",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/40/suntail-hawk?utm_source=api"
+      }
+    },
+    "Trusted Forcemage": {
+      "csvid": 12494,
+      "handler": "manalinkeh_card_trusted_forcemage",
+      "oracle": {
+        "oracle_id": "663ef3c9-f897-4875-b029-82ee6672db00",
+        "name": "Trusted Forcemage",
+        "oracle_text": "Soulbond (You may pair this creature with another unpaired creature when either enters. They remain paired for as long as you control both of them.)\nAs long as this creature is paired with another creature, each of those creatures gets +1/+1.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Human Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Soulbond"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/199/trusted-forcemage?utm_source=api"
+      }
+    },
+    "Unsummon": {
+      "csvid": 260,
+      "handler": "manalinkeh_card_unsummon",
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      }
+    },
+    "Dazzling Ramparts": {
+      "csvid": 14247,
+      "handler": "manalinkeh_card_dazzling_ramparts",
+      "oracle": {
+        "oracle_id": "0527fc47-2bfc-4d02-90fa-5a1284f89a0a",
+        "name": "Dazzling Ramparts",
+        "oracle_text": "Defender\n{1}{W}, {T}: Tap target creature.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "7",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/6/dazzling-ramparts?utm_source=api"
+      }
+    },
+    "Elvish Mystic": {
+      "csvid": 13284,
+      "handler": "manalinkeh_card_elvish_mystic",
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      }
+    },
+    "Giant Spider": {
+      "csvid": 98,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      }
+    },
+    "Insurrection": {
+      "csvid": 6185,
+      "handler": "manalinkeh_card_insurrection",
+      "oracle": {
+        "oracle_id": "7f7c204f-be1a-47e4-91c6-ba6f906d9012",
+        "name": "Insurrection",
+        "oracle_text": "Untap all creatures and gain control of them until end of turn. They gain haste until end of turn.",
+        "mana_cost": "{5}{R}{R}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/236/insurrection?utm_source=api"
+      }
+    }
+  }
+}

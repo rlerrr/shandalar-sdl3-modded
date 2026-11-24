@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Return to the Ranks",
+  "csvid": 14162,
+  "recipes": [
+    {
+      "family": "convoke_variable_and_choices",
+      "version": 2,
+      "params": {
+        "csvid": 14162,
+        "fixed_cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "variable": true
+      },
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nReturn X target creature cards with mana value 2 or less from your graveyard to the battlefield.",
+      "variants": [
+        "two_taps_0",
+        "two_taps_1",
+        "mixed_x_0",
+        "mixed_x_1",
+        "zero_0",
+        "zero_1",
+        "insufficient_white_0",
+        "insufficient_white_1"
+      ]
+    }
+  ]
+}

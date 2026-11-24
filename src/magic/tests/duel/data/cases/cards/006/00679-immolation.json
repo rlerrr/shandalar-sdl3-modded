@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Immolation",
+  "csvid": 679,
+  "recipes": [
+    {
+      "family": "static_aura_stats",
+      "version": 2,
+      "params": {
+        "power": 2,
+        "toughness": -2,
+        "menace": false,
+        "cost": "{R}"
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature gets +2/-2.",
+      "variants": [
+        "own_0",
+        "opponent_0",
+        "fizzle_0",
+        "remove_aura_0",
+        "leave_host_0",
+        "short_0",
+        "replay_0",
+        "cleanup_0",
+        "no_target_0",
+        "lethal_0",
+        "own_1",
+        "opponent_1",
+        "fizzle_1",
+        "remove_aura_1",
+        "leave_host_1",
+        "short_1",
+        "replay_1",
+        "cleanup_1",
+        "no_target_1",
+        "lethal_1"
+      ]
+    }
+  ]
+}

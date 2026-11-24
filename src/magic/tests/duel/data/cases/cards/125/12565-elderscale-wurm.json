@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "csvid": 12565,
+  "card": "Elderscale Wurm",
+  "recipes": [
+    {
+      "family": "remaining_entry_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 12565,
+        "printed_cost": "{4}{G}{G}{G}"
+      },
+      "oracle_text": "Trample\nWhen this creature enters, if your life total is less than 7, your life total becomes 7.\nAs long as you have 7 or more life, damage that would reduce your life total to less than 7 reduces it to 7 instead.",
+      "variants": [
+        "repair_0",
+        "above_0",
+        "floor_0",
+        "payment_below_0",
+        "foe_unprotected_0",
+        "removed_0",
+        "trample_0",
+        "countered_0",
+        "repair_1",
+        "above_1",
+        "floor_1",
+        "payment_below_1",
+        "foe_unprotected_1",
+        "removed_1",
+        "trample_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

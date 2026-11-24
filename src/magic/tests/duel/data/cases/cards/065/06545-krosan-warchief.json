@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "card": "Krosan Warchief",
+  "csvid": 6545,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "cast_reducers_with_riders",
+      "version": 2,
+      "oracle_text": "Beast spells you cast cost {1} less to cast.\n{1}{G}: Regenerate target Beast.",
+      "params": {
+        "subtype": "Beast",
+        "reduction": 1,
+        "mode": "regen",
+        "cost": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "keywords": [],
+        "regen_cost": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "match_0",
+        "match_1",
+        "surplus_0",
+        "surplus_1",
+        "short_0",
+        "short_1",
+        "opponent_0",
+        "opponent_1",
+        "nonmatch_0",
+        "nonmatch_1",
+        "removed_0",
+        "removed_1",
+        "source_short_0",
+        "source_short_1",
+        "replay_0",
+        "replay_1",
+        "save_self_0",
+        "save_self_1",
+        "save_own_0",
+        "save_own_1",
+        "save_enemy_0",
+        "save_enemy_1",
+        "proactive_0",
+        "proactive_1",
+        "forbidden_regeneration_0",
+        "forbidden_regeneration_1",
+        "wrong_regen_cost_0",
+        "wrong_regen_cost_1",
+        "wrong_type_0",
+        "wrong_type_1"
+      ]
+    }
+  ]
+}

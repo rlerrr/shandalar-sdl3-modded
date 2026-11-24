@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "csvid": 13730,
+  "card": "Herald of Torment",
+  "recipes": [
+    {
+      "family": "bestow_activated_and_tempo",
+      "version": 2,
+      "params": {
+        "csvid": 13730,
+        "normal_cost": "{1}{B}{B}",
+        "bestow_cost": "{3}{B}{B}",
+        "bonus": [
+          3,
+          3
+        ],
+        "creature": [
+          3,
+          3
+        ]
+      },
+      "oracle_text": "Bestow {3}{B}{B} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nFlying\nAt the beginning of your upkeep, you lose 1 life.\nEnchanted creature gets +3/+3 and has flying.",
+      "variants": [
+        "creature_0",
+        "aura_own_0",
+        "aura_foreign_0",
+        "detach_0",
+        "creature_1",
+        "aura_own_1",
+        "aura_foreign_1",
+        "detach_1"
+      ]
+    }
+  ]
+}

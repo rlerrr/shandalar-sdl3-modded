@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Master of Waves",
+  "csvid": 13481,
+  "recipes": [
+    {
+      "family": "entry_follow_on_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 13481,
+        "mana_cost": "{3}{U}"
+      },
+      "oracle_text": "Protection from red\nElemental creatures you control get +1/+1.\nWhen this creature enters, create a number of 1/0 blue Elemental creature tokens equal to your devotion to blue. (Each {U} in the mana costs of permanents you control counts toward your devotion to blue.)",
+      "variants": [
+        "base_0",
+        "base_1",
+        "devotion_0",
+        "devotion_1",
+        "lord_removed_0",
+        "lord_removed_1",
+        "red_block_0",
+        "red_block_1",
+        "red_sweep_0",
+        "red_sweep_1"
+      ]
+    }
+  ]
+}

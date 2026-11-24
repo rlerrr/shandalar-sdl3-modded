@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "csvid": 11564,
+  "card": "Batterskull",
+  "recipes": [
+    {
+      "family": "living_weapon_equipment",
+      "version": 2,
+      "params": {
+        "effect": "living_weapon",
+        "rider": "return",
+        "cast_mana": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "equip_generic": 5,
+        "power_delta": 4,
+        "toughness_delta": 4,
+        "keyword": ""
+      },
+      "oracle_text": "Living weapon (When this Equipment enters, create a 0/0 black Phyrexian Germ creature token, then attach this to it.)\nEquipped creature gets +4/+4 and has vigilance and lifelink.\n{3}: Return this Equipment to its owner's hand.\nEquip {5}",
+      "variants": [
+        "enter_0",
+        "cast_short_0",
+        "countered_0",
+        "move_0",
+        "remove_source_0",
+        "bounce_germ_0",
+        "equip_target_leaves_0",
+        "replay_entry_0",
+        "replay_move_0",
+        "return_0",
+        "return_short_0",
+        "return_offturn_0",
+        "return_foreign_0",
+        "return_host_0",
+        "return_recast_0",
+        "germ_combat_0",
+        "host_combat_0",
+        "blocked_combat_0",
+        "enter_1",
+        "cast_short_1",
+        "countered_1",
+        "move_1",
+        "remove_source_1",
+        "bounce_germ_1",
+        "equip_target_leaves_1",
+        "replay_entry_1",
+        "replay_move_1",
+        "return_1",
+        "return_short_1",
+        "return_offturn_1",
+        "return_foreign_1",
+        "return_host_1",
+        "return_recast_1",
+        "germ_combat_1",
+        "host_combat_1",
+        "blocked_combat_1"
+      ]
+    }
+  ]
+}

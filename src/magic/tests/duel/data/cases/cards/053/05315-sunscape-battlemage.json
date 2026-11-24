@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Sunscape Battlemage",
+  "csvid": 5315,
+  "recipes": [
+    {
+      "family": "kicker_battlemages",
+      "version": 2,
+      "params": {
+        "base": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "kicker": [
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effects": [
+          "destroy_flyer",
+          "draw2"
+        ]
+      },
+      "oracle_text": "Kicker {1}{G} and/or {2}{U} (You may pay an additional {1}{G} and/or {2}{U} as you cast this spell.)\nWhen this creature enters, if it was kicked with its {1}{G} kicker, destroy target creature with flying.\nWhen this creature enters, if it was kicked with its {2}{U} kicker, draw two cards.",
+      "variants": [
+        "normal_0",
+        "normal_1",
+        "first_0",
+        "first_1",
+        "second_0",
+        "second_1",
+        "both_0",
+        "both_1",
+        "base_only_0",
+        "base_only_1",
+        "first_funded_0",
+        "first_funded_1",
+        "second_funded_0",
+        "second_funded_1",
+        "scope_0",
+        "scope_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

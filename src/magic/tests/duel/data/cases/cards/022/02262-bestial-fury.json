@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Bestial Fury",
+  "csvid": 2262,
+  "recipes": [
+    {
+      "family": "entry_follow_on_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 2262,
+        "printed_mana": "{2}{R}",
+        "rules": "Enchant creature\nWhen this Aura enters, draw a card at the beginning of the next turn's upkeep.\nWhenever enchanted creature becomes blocked, it gets +4/+0 and gains trample until end of turn."
+      },
+      "oracle_text": "Enchant creature\nWhen this Aura enters, draw a card at the beginning of the next turn's upkeep.\nWhenever enchanted creature becomes blocked, it gets +4/+0 and gains trample until end of turn.",
+      "variants": [
+        "blocked_trample_0",
+        "blocked_trample_1",
+        "unblocked_0",
+        "unblocked_1"
+      ]
+    }
+  ]
+}

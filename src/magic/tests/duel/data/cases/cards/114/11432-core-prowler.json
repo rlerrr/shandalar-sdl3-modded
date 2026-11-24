@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Core Prowler",
+  "csvid": 11432,
+  "recipes": [
+    {
+      "family": "departure_resources",
+      "version": 2,
+      "params": {
+        "csvid": 11432,
+        "printed_mana": "{4}",
+        "rules": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nWhen this creature dies, proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)"
+      },
+      "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nWhen this creature dies, proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+      "variants": [
+        "infect_poison_0",
+        "infect_poison_1",
+        "infect_block_0",
+        "infect_block_1",
+        "decline_proliferate_0"
+      ]
+    }
+  ]
+}

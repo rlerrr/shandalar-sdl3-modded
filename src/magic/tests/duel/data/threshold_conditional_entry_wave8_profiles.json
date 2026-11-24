@@ -1,0 +1,530 @@
+{
+  "sources": {
+    "Centaur Chieftain": {
+      "oracle": {
+        "oracle_id": "3010ff0c-8ee6-4df3-96c1-a58096586469",
+        "name": "Centaur Chieftain",
+        "oracle_text": "Haste\nThreshold — As long as there are seven or more cards in your graveyard, this creature has \"When this creature enters, creatures you control get +1/+1 and gain trample until end of turn.\"",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Centaur",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Haste",
+          "Threshold"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/160/centaur-chieftain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5782,
+        "iid": 1595,
+        "name": "Centaur Chieftain",
+        "handler": "manalinkeh_card_centaur_chieftain",
+        "kind": "card"
+      }
+    },
+    "Cephalid Sage": {
+      "oracle": {
+        "oracle_id": "29182a24-3bdb-4fd0-8a1d-a196340c0858",
+        "name": "Cephalid Sage",
+        "oracle_text": "Threshold — As long as there are seven or more cards in your graveyard, this creature has \"When this creature enters, draw three cards, then discard two cards.\"",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Octopus",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Threshold"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/41/cephalid-sage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5786,
+        "iid": 1609,
+        "name": "Cephalid Sage",
+        "handler": "manalinkeh_card_cephalid_sage",
+        "kind": "card"
+      }
+    },
+    "Gloomdrifter": {
+      "oracle": {
+        "oracle_id": "cfc1156c-b787-4212-96e0-a8e3609069b7",
+        "name": "Gloomdrifter",
+        "oracle_text": "Flying\nThreshold — As long as there are seven or more cards in your graveyard, this creature has \"When this creature enters, nonblack creatures get -2/-2 until end of turn.\"",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Zombie Minion",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Threshold"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tor/61/gloomdrifter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5814,
+        "iid": 3946,
+        "name": "Gloomdrifter",
+        "handler": "manalinkeh_card_gloomdrifter",
+        "kind": "card"
+      }
+    },
+    "Pardic Arsonist": {
+      "oracle": {
+        "oracle_id": "9ece4b78-9554-4e4e-8491-68a6091f9c6a",
+        "name": "Pardic Arsonist",
+        "oracle_text": "Threshold — As long as there are seven or more cards in your graveyard, this creature has \"When this creature enters, it deals 3 damage to any target.\"",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Human Barbarian",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Threshold"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tor/105/pardic-arsonist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5853,
+        "iid": 7017,
+        "name": "Pardic Arsonist",
+        "handler": "manalinkeh_card_pardic_arsonist",
+        "kind": "card"
+      }
+    },
+    "Hunting Grounds": {
+      "oracle": {
+        "oracle_id": "2f3fec87-3dd2-4e5d-835c-eae535da4ecb",
+        "name": "Hunting Grounds",
+        "oracle_text": "Threshold — As long as there are seven or more cards in your graveyard, this enchantment has \"Whenever an opponent casts a spell, you may put a creature card from your hand onto the battlefield.\"",
+        "mana_cost": "{G}{W}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Threshold"
+        ],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/191/hunting-grounds?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5959,
+        "iid": 4716,
+        "name": "Hunting Grounds",
+        "handler": "manalinkeh_card_hunting_grounds",
+        "kind": "card"
+      }
+    },
+    "Chlorophant": {
+      "oracle": {
+        "oracle_id": "ad80d9a8-187f-4ecf-94be-e23ac3a57179",
+        "name": "Chlorophant",
+        "oracle_text": "At the beginning of your upkeep, you may put a +1/+1 counter on this creature.\nThreshold — As long as there are seven or more cards in your graveyard, this creature has \"At the beginning of your upkeep, you may put another +1/+1 counter on this creature.\"",
+        "mana_cost": "{G}{G}{G}",
+        "type_line": "Creature — Elemental",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Threshold"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ody/234/chlorophant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5519,
+        "iid": 1707,
+        "name": "Chlorophant",
+        "handler": "manalinkeh_card_chlorophant",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Bottle Gnomes": {
+      "oracle": {
+        "oracle_id": "54b5e429-7a44-480d-bea4-4f8eeb7449b5",
+        "name": "Bottle Gnomes",
+        "oracle_text": "Sacrifice this creature: You gain 3 life.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Gnome",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cm2/177/bottle-gnomes?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1705,
+        "iid": 1265,
+        "name": "Bottle Gnomes",
+        "handler": "manalinkeh_card_bottle_gnomes",
+        "kind": "card"
+      }
+    },
+    "Cloudfin Raptor": {
+      "oracle": {
+        "oracle_id": "cb0e1afa-fd9e-4bf9-bcb1-6e8110d6e2ff",
+        "name": "Cloudfin Raptor",
+        "oracle_text": "Flying\nEvolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Bird Mutant",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Evolve"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/37/cloudfin-raptor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12909,
+        "iid": 1823,
+        "name": "Cloudfin Raptor",
+        "handler": "manalinkeh_card_cloudfin_raptor",
+        "kind": "card"
+      }
+    },
+    "Dazzling Ramparts": {
+      "oracle": {
+        "oracle_id": "0527fc47-2bfc-4d02-90fa-5a1284f89a0a",
+        "name": "Dazzling Ramparts",
+        "oracle_text": "Defender\n{1}{W}, {T}: Tap target creature.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "7",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/6/dazzling-ramparts?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14247,
+        "iid": 2299,
+        "name": "Dazzling Ramparts",
+        "handler": "manalinkeh_card_dazzling_ramparts",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Ember Beast": {
+      "oracle": {
+        "oracle_id": "58edb282-a124-47bc-b123-1c34b6804f48",
+        "name": "Ember Beast",
+        "oracle_text": "This creature can't attack or block alone.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Beast",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/117/ember-beast?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5556,
+        "iid": 2997,
+        "name": "Ember Beast",
+        "handler": "manalinkeh_card_mogg_flunkies",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Royal Assassin": {
+      "oracle": {
+        "oracle_id": "9ed6f28f-a3db-48c5-9ab0-b90a7fba5f57",
+        "name": "Royal Assassin",
+        "oracle_text": "{T}: Destroy target tapped creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Human Assassin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/101/royal-assassin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 209,
+        "iid": 8088,
+        "name": "Royal Assassin",
+        "handler": "manalinkeh_card_royal_assassin",
+        "kind": "card"
+      }
+    },
+    "Saltfield Recluse": {
+      "oracle": {
+        "oracle_id": "c87e056a-6067-49e6-b3f7-bba8234777de",
+        "name": "Saltfield Recluse",
+        "oracle_text": "{T}: Target creature gets -2/-0 until end of turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Rebel Cleric",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/40/saltfield-recluse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8842,
+        "iid": 8196,
+        "name": "Saltfield Recluse",
+        "handler": "manalinkeh_card_saltfield_recluse",
+        "kind": "card"
+      }
+    },
+    "Traveler's Amulet": {
+      "oracle": {
+        "oracle_id": "48b561dd-f23d-409a-87c8-e49902b2477b",
+        "name": "Traveler's Amulet",
+        "oracle_text": "{1}, Sacrifice this artifact: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/273/travelers-amulet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12102,
+        "iid": 10166,
+        "name": "Traveler's Amulet",
+        "handler": "manalinkeh_card_travelers_amulet",
+        "kind": "card"
+      }
+    }
+  }
+}

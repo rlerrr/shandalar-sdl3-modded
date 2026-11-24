@@ -250,7 +250,7 @@ int save_or_load_supplement(int status)
 #undef BACKUP
 extern size_t duel_rules_snapshot_size(void);
 extern void duel_rules_snapshot_capture(void *), duel_rules_snapshot_restore(const void *);
-#define DUEL_EXTRA_STATE(X) X(player_bits) X(stack_phase) X(mana_paid)
+#define DUEL_EXTRA_STATE(X) X(player_bits) X(stack_phase) X(mana_paid) X(cards_drawn_this_turn) X(lands_played)
 /* Caller-owned supplement, independent of the AI's two singleton backups. */
 size_t duel_manalink_snapshot_size(void)
 {

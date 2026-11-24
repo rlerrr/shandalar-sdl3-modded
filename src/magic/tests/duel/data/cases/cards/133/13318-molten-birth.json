@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Molten Birth",
+  "csvid": 13318,
+  "recipes": [
+    {
+      "family": "seeded_coin_riders",
+      "version": 2,
+      "params": {
+        "shape": "birth",
+        "mana": [
+          1,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "keywords": []
+      },
+      "oracle_text": "Create two 1/1 red Elemental creature tokens, then flip a coin. If you win the flip, return Molten Birth to its owner's hand.",
+      "variants": [
+        "win_0",
+        "lose_0",
+        "replay_0",
+        "unfunded_0",
+        "win_1",
+        "lose_1",
+        "replay_1",
+        "unfunded_1"
+      ]
+    }
+  ]
+}

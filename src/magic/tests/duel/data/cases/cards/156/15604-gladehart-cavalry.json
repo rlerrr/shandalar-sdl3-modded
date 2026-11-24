@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 15604,
+  "card": "Gladehart Cavalry",
+  "recipes": [
+    {
+      "family": "entry_interaction_counters",
+      "version": 2,
+      "params": {
+        "csvid": 15604,
+        "printed_cost": "{5}{G}{G}"
+      },
+      "oracle_text": "When this creature enters, support 6. (Put a +1/+1 counter on each of up to six other target creatures.)\nWhenever a creature you control with a +1/+1 counter on it dies, you gain 2 life.",
+      "variants": [
+        "cap_0",
+        "partial_0",
+        "empty_0",
+        "death_0",
+        "no_counter_death_0",
+        "foreign_death_0",
+        "countered_0",
+        "cap_1",
+        "partial_1",
+        "empty_1",
+        "death_1",
+        "no_counter_death_1",
+        "foreign_death_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

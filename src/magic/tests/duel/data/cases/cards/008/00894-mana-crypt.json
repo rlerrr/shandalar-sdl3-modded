@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Mana Crypt",
+  "csvid": 894,
+  "recipes": [
+    {
+      "family": "seeded_coin_riders",
+      "version": 2,
+      "params": {
+        "shape": "crypt",
+        "mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "oracle_text": "At the beginning of your upkeep, flip a coin. If you lose the flip, this artifact deals 3 damage to you.\n{T}: Add {C}{C}.",
+      "variants": [
+        "win_0",
+        "lose_0",
+        "replay_0",
+        "opponent_only_0",
+        "mana_0",
+        "win_1",
+        "lose_1",
+        "replay_1",
+        "opponent_only_1",
+        "mana_1"
+      ]
+    }
+  ]
+}

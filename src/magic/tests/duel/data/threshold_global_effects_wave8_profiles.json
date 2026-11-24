@@ -1,0 +1,669 @@
+{
+  "sources": {
+    "Cleansing Meditation": {
+      "oracle": {
+        "oracle_id": "658bccf8-fe73-4d6a-b37b-7a58034e5e5d",
+        "name": "Cleansing Meditation",
+        "oracle_text": "Destroy all enchantments.\nThreshold — If there are seven or more cards in your graveyard, instead destroy all enchantments, then return all cards in your graveyard destroyed this way to the battlefield.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Threshold"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tor/3/cleansing-meditation?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5793,
+        "iid": 1785,
+        "name": "Cleansing Meditation",
+        "handler": "manalinkeh_card_cleansing_meditation",
+        "kind": "card"
+      }
+    },
+    "Demoralize": {
+      "oracle": {
+        "oracle_id": "d0741810-0772-47f3-a709-4739fbf85576",
+        "name": "Demoralize",
+        "oracle_text": "All creatures gain menace until end of turn. (They can't be blocked except by two or more creatures.)\nThreshold — If there are seven or more cards in your graveyard, creatures can't block this turn.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Instant",
+        "keywords": [
+          "Threshold"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ody/184/demoralize?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5538,
+        "iid": 2439,
+        "name": "Demoralize",
+        "handler": "manalinkeh_card_demoralize",
+        "kind": "card"
+      }
+    },
+    "Kirtar's Wrath": {
+      "oracle": {
+        "oracle_id": "4f66d82a-492f-4638-9f77-190d4a33ad7f",
+        "name": "Kirtar's Wrath",
+        "oracle_text": "Destroy all creatures. They can't be regenerated.\nThreshold — If there are seven or more cards in your graveyard, instead destroy all creatures, then create two 1/1 white Spirit creature tokens with flying. Creatures destroyed this way can't be regenerated.",
+        "mana_cost": "{4}{W}{W}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Threshold"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/35/kirtars-wrath?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5591,
+        "iid": 5279,
+        "name": "Kirtar's Wrath",
+        "handler": "manalinkeh_card_kirtars_wrath",
+        "kind": "card"
+      }
+    },
+    "Nut Collector": {
+      "oracle": {
+        "oracle_id": "4e1bc03c-e131-4422-beba-0a45a26fdf43",
+        "name": "Nut Collector",
+        "oracle_text": "At the beginning of your upkeep, you may create a 1/1 green Squirrel creature token.\nThreshold — All Squirrels get +2/+2 as long as there are seven or more cards in your graveyard.",
+        "mana_cost": "{5}{G}",
+        "type_line": "Creature — Human Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Threshold"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/171/nut-collector?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5640,
+        "iid": 6720,
+        "name": "Nut Collector",
+        "handler": "manalinkeh_card_nut_collector",
+        "kind": "card"
+      }
+    },
+    "Shower of Coals": {
+      "oracle": {
+        "oracle_id": "08261613-1af3-4bd7-9a4d-a366fd508d5f",
+        "name": "Shower of Coals",
+        "oracle_text": "Shower of Coals deals 2 damage to each of up to three targets.\nThreshold — Shower of Coals deals 4 damage to each of those permanents and/or players instead if there are seven or more cards in your graveyard.",
+        "mana_cost": "{3}{R}{R}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Threshold"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ody/221/shower-of-coals?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5696,
+        "iid": 8668,
+        "name": "Shower of Coals",
+        "handler": "manalinkeh_card_shower_of_coals",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Bad Moon": {
+      "oracle": {
+        "oracle_id": "fc5d3341-cbce-49e5-93cc-8add92479dca",
+        "name": "Bad Moon",
+        "oracle_text": "Black creatures get +1/+1.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gvl/48/bad-moon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8,
+        "iid": 803,
+        "name": "Bad Moon",
+        "handler": "manalinkeh_card_bad_moon",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Darksteel Myr": {
+      "oracle": {
+        "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+        "name": "Darksteel Myr",
+        "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11238,
+        "iid": 2255,
+        "name": "Darksteel Myr",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Drudge Skeletons": {
+      "oracle": {
+        "oracle_id": "c180ed02-07f4-4538-9bea-8c249234a8e2",
+        "name": "Drudge Skeletons",
+        "oracle_text": "{B}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Skeleton",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Heal",
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gvl/36/drudge-skeletons?utm_source=api"
+      },
+      "registry": {
+        "csvid": 70,
+        "iid": 2782,
+        "name": "Drudge Skeletons",
+        "handler": "manalinkeh_card_drudge_skeletons",
+        "kind": "card"
+      }
+    },
+    "Enormous Baloth": {
+      "oracle": {
+        "oracle_id": "6189cd17-61aa-420a-ba53-5ddaf2bbc2ba",
+        "name": "Enormous Baloth",
+        "oracle_text": "",
+        "mana_cost": "{6}{G}",
+        "type_line": "Creature — Beast",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/180/enormous-baloth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6374,
+        "iid": 3062,
+        "name": "Enormous Baloth",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Fervor": {
+      "oracle": {
+        "oracle_id": "8e0cea9c-3110-4728-9378-76849e33bb90",
+        "name": "Fervor",
+        "oracle_text": "Creatures you control have haste. (They can attack and {T} as soon as they come under your control.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/129/fervor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1604,
+        "iid": 3365,
+        "name": "Fervor",
+        "handler": "manalinkeh_card_fervor",
+        "kind": "card"
+      }
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Glorious Anthem": {
+      "oracle": {
+        "oracle_id": "e3886fe8-9b76-4613-8891-4ec74657c087",
+        "name": "Glorious Anthem",
+        "oracle_text": "Creatures you control get +1/+1.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/21/glorious-anthem?utm_source=api"
+      },
+      "registry": {
+        "csvid": 966,
+        "iid": 3948,
+        "name": "Glorious Anthem",
+        "handler": "manalinkeh_card_gaeas_anthem",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Tormod's Crypt": {
+      "oracle": {
+        "oracle_id": "1573f7f9-672c-421a-b1ac-3d0d8aea59ca",
+        "name": "Tormod's Crypt",
+        "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/235/tormods-crypt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 368,
+        "iid": 10094,
+        "name": "Tormod's Crypt",
+        "handler": "manalinkeh_card_tormods_crypt",
+        "kind": "card"
+      }
+    },
+    "Traveler's Amulet": {
+      "oracle": {
+        "oracle_id": "48b561dd-f23d-409a-87c8-e49902b2477b",
+        "name": "Traveler's Amulet",
+        "oracle_text": "{1}, Sacrifice this artifact: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/273/travelers-amulet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12102,
+        "iid": 10166,
+        "name": "Traveler's Amulet",
+        "handler": "manalinkeh_card_travelers_amulet",
+        "kind": "card"
+      }
+    },
+    "Wind Drake": {
+      "oracle": {
+        "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+        "name": "Wind Drake",
+        "oracle_text": "Flying",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/70/wind-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1197,
+        "iid": 10989,
+        "name": "Wind Drake",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Woodland Changeling": {
+      "oracle": {
+        "oracle_id": "338f0ab6-f744-4e5a-a358-05e71b93758d",
+        "name": "Woodland Changeling",
+        "oracle_text": "Changeling (This card is every creature type.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Shapeshifter",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Changeling"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/242/woodland-changeling?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9315,
+        "iid": 11079,
+        "name": "Woodland Changeling",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Wrap in Vigor": {
+      "oracle": {
+        "oracle_id": "39da2aa8-f4d9-44f6-a446-488beaec821f",
+        "name": "Wrap in Vigor",
+        "oracle_text": "Regenerate each creature you control.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/183/wrap-in-vigor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9054,
+        "iid": 11120,
+        "name": "Wrap in Vigor",
+        "handler": "manalinkeh_card_wrap_in_vigor",
+        "kind": "card"
+      }
+    }
+  },
+  "token_registry": {
+    "Spirit": {
+      "csvid": 18829,
+      "iid": 9193,
+      "name": "Spirit",
+      "handler": "manalinkeh_card_spirit2",
+      "kind": "card"
+    },
+    "Squirrel": {
+      "csvid": 18833,
+      "iid": 9276,
+      "name": "Squirrel",
+      "handler": "card_dummy",
+      "kind": "card"
+    }
+  }
+}

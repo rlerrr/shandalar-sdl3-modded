@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Benthic Djinn",
+  "csvid": 2409,
+  "recipes": [
+    {
+      "family": "upkeep_damage_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 2409
+      },
+      "oracle_text": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)\nAt the beginning of your upkeep, you lose 2 life.",
+      "variants": [
+        "repeat_0",
+        "repeat_1",
+        "islandwalk_0",
+        "islandwalk_1",
+        "ordinary_block_0",
+        "ordinary_block_1",
+        "removed_0",
+        "removed_1"
+      ]
+    }
+  ]
+}

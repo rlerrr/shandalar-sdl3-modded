@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Viscera Seer",
+  "csvid": 11187,
+  "recipes": [
+    {
+      "family": "library_scry_activated_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 11187,
+        "mana": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Sacrifice a creature: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "variants": [
+        "self_0",
+        "self_1",
+        "fresh_self_0",
+        "fresh_self_1",
+        "other_creature_0"
+      ]
+    }
+  ]
+}

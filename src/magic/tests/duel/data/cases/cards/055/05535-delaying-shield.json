@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "csvid": 5535,
+  "card": "Delaying Shield",
+  "recipes": [
+    {
+      "family": "upkeep_counters",
+      "version": 2,
+      "params": {
+        "csvid": 5535,
+        "printed_cost": "{3}{W}"
+      },
+      "oracle_text": "If damage would be dealt to you, put that many delay counters on this enchantment instead.\nAt the beginning of your upkeep, remove all delay counters from this enchantment. For each delay counter removed this way, you lose 1 life unless you pay {1}{W}.",
+      "variants": [
+        "unpaid_0",
+        "partial_0",
+        "opposing_damage_0",
+        "unpaid_1",
+        "partial_1",
+        "opposing_damage_1"
+      ]
+    }
+  ]
+}

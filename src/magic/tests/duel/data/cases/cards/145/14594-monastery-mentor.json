@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Monastery Mentor",
+  "csvid": 14594,
+  "recipes": [
+    {
+      "family": "cast_noncreature_riders",
+      "version": 2,
+      "params": {
+        "role": "mentor",
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhenever you cast a noncreature spell, create a 1/1 white Monk creature token with prowess.",
+      "variants": [
+        "own_0",
+        "creature_0",
+        "opponent_0",
+        "countered_0",
+        "second_0",
+        "expiry_0",
+        "replay_0",
+        "own_1",
+        "creature_1",
+        "opponent_1",
+        "countered_1",
+        "second_1",
+        "expiry_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

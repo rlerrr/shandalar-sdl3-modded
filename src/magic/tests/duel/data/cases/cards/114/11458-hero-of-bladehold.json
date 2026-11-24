@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 11458,
+  "card": "Hero of Bladehold",
+  "recipes": [
+    {
+      "family": "attack_trigger_tokens_and_combat",
+      "version": 2,
+      "params": {
+        "csvid": 11458,
+        "printed_cost": "{2}{W}{W}",
+        "keywords": [
+          "Battle Cry"
+        ]
+      },
+      "oracle_text": "Battle cry (Whenever this creature attacks, each other attacking creature gets +1/+0 until end of turn.)\nWhenever this creature attacks, create two 1/1 white Soldier creature tokens that are tapped and attacking.",
+      "variants": [
+        "ordinary_0",
+        "teammate_0",
+        "soldiers_blocked_0",
+        "late_teammate_0",
+        "other_only_0",
+        "ordinary_1",
+        "teammate_1",
+        "soldiers_blocked_1",
+        "late_teammate_1",
+        "other_only_1"
+      ]
+    }
+  ]
+}

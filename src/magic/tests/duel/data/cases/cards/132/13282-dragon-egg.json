@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Dragon Egg",
+  "csvid": 13282,
+  "recipes": [
+    {
+      "family": "departure_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 13282,
+        "mana_cost": "{2}{R}"
+      },
+      "oracle_text": "Defender\nWhen this creature dies, create a 2/2 red Dragon creature token with flying and \"{R}: This token gets +1/+0 until end of turn.\"",
+      "variants": [
+        "defender_0",
+        "defender_1",
+        "combat_death_0",
+        "combat_death_1",
+        "pump_flight_0",
+        "pump_flight_1",
+        "exile_0",
+        "exile_1"
+      ]
+    }
+  ]
+}

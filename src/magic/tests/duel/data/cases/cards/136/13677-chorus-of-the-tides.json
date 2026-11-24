@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "csvid": 13677,
+  "card": "Chorus of the Tides",
+  "recipes": [
+    {
+      "family": "heroic_counter_riders",
+      "version": 2,
+      "params": {
+        "effect": "flying_scry",
+        "clauses": [
+          "Flying",
+          "Heroic — Whenever you cast a spell that targets this creature, scry 1. (To scry 1, look at the top card of your library, then you may put that card on the bottom.)"
+        ],
+        "price": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          3,
+          2
+        ]
+      },
+      "oracle_text": "Flying\nHeroic — Whenever you cast a spell that targets this creature, scry 1. (To scry 1, look at the top card of your library, then you may put that card on the bottom.)",
+      "variants": [
+        "own_0",
+        "own_1",
+        "opponent_0",
+        "opponent_1",
+        "elsewhere_0",
+        "elsewhere_1",
+        "scry_bottom_0",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

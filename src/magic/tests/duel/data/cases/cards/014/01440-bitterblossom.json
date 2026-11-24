@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Bitterblossom",
+  "csvid": 1440,
+  "recipes": [
+    {
+      "family": "upkeep_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 1440,
+        "mana_cost": "{1}{B}"
+      },
+      "oracle_text": "At the beginning of your upkeep, you lose 1 life and create a 1/1 black Faerie Rogue creature token with flying.",
+      "variants": [
+        "repeat_0",
+        "repeat_1",
+        "flying_0",
+        "flying_1",
+        "kindred_0",
+        "kindred_1",
+        "removed_0",
+        "removed_1"
+      ]
+    }
+  ]
+}

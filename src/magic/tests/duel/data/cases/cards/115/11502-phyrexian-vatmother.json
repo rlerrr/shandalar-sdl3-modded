@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Phyrexian Vatmother",
+  "csvid": 11502,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "infect_combat_riders",
+      "version": 2,
+      "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nAt the beginning of your upkeep, you get a poison counter.",
+      "params": {
+        "rider": "upkeep_self",
+        "mana": [
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 4,
+        "toughness": 5,
+        "artifact": false
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "unblocked_0",
+        "unblocked_1",
+        "blocked_0",
+        "blocked_1",
+        "defending_0",
+        "defending_1",
+        "replay_0",
+        "replay_1",
+        "upkeep_each_0",
+        "upkeep_each_1",
+        "upkeep_removed_0",
+        "upkeep_removed_1"
+      ]
+    }
+  ]
+}

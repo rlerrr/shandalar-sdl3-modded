@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "csvid": 10826,
+  "card": "Searing Blaze",
+  "recipes": [
+    {
+      "family": "landfall_land_type_riders",
+      "version": 2,
+      "oracle_text": "Searing Blaze deals 1 damage to target player or planeswalker and 1 damage to target creature that player or that planeswalker's controller controls.\nLandfall — If you had a land enter the battlefield under your control this turn, Searing Blaze deals 3 damage to that player or planeswalker and 3 damage to that creature instead.",
+      "params": {
+        "effect": "blaze",
+        "subtype": "Mountain",
+        "dual": "Taiga",
+        "modes": [
+          "no_land",
+          "matched",
+          "different_land",
+          "foreign",
+          "next_turn",
+          "planeswalker",
+          "self_pair",
+          "no_pair",
+          "vanished_creature",
+          "rejected_land"
+        ],
+        "cast_price": [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "power": null,
+        "toughness": null
+      },
+      "variants": [
+        "no_land_0",
+        "no_land_1",
+        "matched_0",
+        "matched_1",
+        "different_land_0",
+        "different_land_1",
+        "foreign_0",
+        "foreign_1",
+        "next_turn_0",
+        "next_turn_1",
+        "planeswalker_0",
+        "planeswalker_1",
+        "self_pair_0",
+        "self_pair_1",
+        "no_pair_0",
+        "no_pair_1",
+        "vanished_creature_0",
+        "vanished_creature_1",
+        "rejected_land_0",
+        "rejected_land_1"
+      ]
+    }
+  ]
+}

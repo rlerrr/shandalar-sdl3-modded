@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Glimmer of Genius",
+  "csvid": 16395,
+  "recipes": [
+    {
+      "family": "library_scry_before_draw",
+      "version": 2,
+      "params": {
+        "csvid": 16395,
+        "printed_cost": "{3}{U}",
+        "choices": [
+          "offturn_0",
+          "offturn_1",
+          "short_0",
+          "short_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "Scry 2, then draw two cards. You get {E}{E} (two energy counters).",
+      "variants": [
+        "offturn_0",
+        "offturn_1",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

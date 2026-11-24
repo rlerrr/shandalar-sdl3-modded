@@ -1,0 +1,642 @@
+{
+  "version": 1,
+  "sources": {
+    "School of Piranha": {
+      "oracle": {
+        "oracle_id": "fad69c20-d6f4-4cf5-8e4c-bbda8d268edd",
+        "name": "School of Piranha",
+        "oracle_text": "At the beginning of your upkeep, sacrifice this creature unless you pay {1}{U}.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Fish",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/exo/45/school-of-piranha?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3554,
+        "iid": 8322,
+        "name": "School of Piranha",
+        "handler": "manalinkeh_card_school_of_piranha",
+        "kind": "card"
+      }
+    },
+    "Darba": {
+      "oracle": {
+        "oracle_id": "c64c0cb5-5a8c-4a2f-a0fc-8b080aaf90bb",
+        "name": "Darba",
+        "oracle_text": "At the beginning of your upkeep, sacrifice this creature unless you pay {G}{G}.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Bird Beast",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pcy/111/darba?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4813,
+        "iid": 12174,
+        "name": "Darba",
+        "handler": "manalinkeh_card_hungry_mist",
+        "kind": "card"
+      }
+    },
+    "Hungry Mist": {
+      "oracle": {
+        "oracle_id": "dedfbd92-4f12-423c-9d56-167753f03bff",
+        "name": "Hungry Mist",
+        "oracle_text": "At the beginning of your upkeep, sacrifice this creature unless you pay {G}{G}.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Elemental",
+        "power": "6",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me1/121/hungry-mist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2213,
+        "iid": 13069,
+        "name": "Hungry Mist",
+        "handler": "manalinkeh_card_hungry_mist",
+        "kind": "card"
+      }
+    },
+    "Phantasmal Forces": {
+      "oracle": {
+        "oracle_id": "06a158c6-7e36-49f8-a8e0-a7b7df5fd7ed",
+        "name": "Phantasmal Forces",
+        "oracle_text": "Flying\nAt the beginning of your upkeep, sacrifice this creature unless you pay {U}.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Illusion",
+        "power": "4",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/55/phantasmal-forces?utm_source=api"
+      },
+      "registry": {
+        "csvid": 183,
+        "iid": 7116,
+        "name": "Phantasmal Forces",
+        "handler": "manalinkeh_card_phantasmal_forces",
+        "kind": "card"
+      }
+    },
+    "Drifter il-Dal": {
+      "oracle": {
+        "oracle_id": "dbe8ad46-d862-4ff6-bf17-238fb8341075",
+        "name": "Drifter il-Dal",
+        "oracle_text": "Shadow (This creature can block or be blocked by only creatures with shadow.)\nAt the beginning of your upkeep, sacrifice this creature unless you pay {U}.",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Shadow"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/65/drifter-il-dal?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8527,
+        "iid": 2754,
+        "name": "Drifter il-Dal",
+        "handler": "manalinkeh_card_drifter_il_dal",
+        "kind": "card"
+      }
+    },
+    "Spindrift Drake": {
+      "oracle": {
+        "oracle_id": "53599f89-1598-4d3d-8aa7-75b397b258eb",
+        "name": "Spindrift Drake",
+        "oracle_text": "Flying\nAt the beginning of your upkeep, sacrifice this creature unless you pay {U}.",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sth/44/spindrift-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3433,
+        "iid": 9173,
+        "name": "Spindrift Drake",
+        "handler": "manalinkeh_card_spindrift_drake",
+        "kind": "card"
+      }
+    },
+    "Fettergeist": {
+      "oracle": {
+        "oracle_id": "7ed73cff-137c-4ad1-b11d-c62aa746655e",
+        "name": "Fettergeist",
+        "oracle_text": "Flying\nAt the beginning of your upkeep, sacrifice this creature unless you pay {1} for each other creature you control.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Spirit",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/52/fettergeist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12370,
+        "iid": 3377,
+        "name": "Fettergeist",
+        "handler": "manalinkeh_card_fettergeist",
+        "kind": "card"
+      }
+    },
+    "Krosan Cloudscraper": {
+      "oracle": {
+        "oracle_id": "a0ff742b-f709-43ac-84d2-dc00c723bad6",
+        "name": "Krosan Cloudscraper",
+        "oracle_text": "At the beginning of your upkeep, sacrifice this creature unless you pay {G}{G}.\nMorph {7}{G}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+        "mana_cost": "{7}{G}{G}{G}",
+        "type_line": "Creature — Beast Mutant",
+        "power": "13",
+        "toughness": "13",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 10.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mkc/175/krosan-cloudscraper?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6406,
+        "iid": 5398,
+        "name": "Krosan Cloudscraper",
+        "handler": "manalinkeh_card_krosan_cloudscrapper",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Wastes": {
+      "oracle": {
+        "oracle_id": "05d24b0c-904a-46b6-b42a-96a4d91a0dd4",
+        "name": "Wastes",
+        "oracle_text": "{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Basic Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/191/wastes?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15719,
+        "iid": 15794,
+        "name": "Wastes",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Bazaar Trader": {
+      "oracle": {
+        "oracle_id": "21ad7067-3210-42d6-9009-0784b2834227",
+        "name": "Bazaar Trader",
+        "oracle_text": "{T}: Target player gains control of target artifact, creature, or land you control.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/72/bazaar-trader?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10729,
+        "iid": 930,
+        "name": "Bazaar Trader",
+        "handler": "manalinkeh_card_bazaar_trader",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Stone Rain": {
+      "oracle": {
+        "oracle_id": "6e880df6-fc00-43d2-a9c8-f575f40b78c6",
+        "name": "Stone Rain",
+        "oracle_text": "Destroy target land.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/221/stone-rain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 236,
+        "iid": 9381,
+        "name": "Stone Rain",
+        "handler": "manalinkeh_card_ice_storm",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Deadly Recluse": {
+      "oracle": {
+        "oracle_id": "6b941291-1802-4ced-9869-39fa43825550",
+        "name": "Deadly Recluse",
+        "oracle_text": "Reach (This creature can block creatures with flying.)\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Spider",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Reach",
+          "Deathtouch"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/282/deadly-recluse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10402,
+        "iid": 2312,
+        "name": "Deadly Recluse",
+        "handler": "manalinkeh_card_deadly_recluse",
+        "kind": "card"
+      }
+    },
+    "Spire Golem": {
+      "oracle": {
+        "oracle_id": "bfdc6bbc-7402-40ae-91be-658afca2f145",
+        "name": "Spire Golem",
+        "oracle_text": "Affinity for Islands (This spell costs {1} less to cast for each Island you control.)\nFlying",
+        "mana_cost": "{6}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Affinity"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jvc/16/spire-golem?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6964,
+        "iid": 9187,
+        "name": "Spire Golem",
+        "handler": "manalinkeh_card_spire_golem",
+        "kind": "card"
+      }
+    },
+    "Dauthi Marauder": {
+      "oracle": {
+        "oracle_id": "cb754749-a769-4c9c-b62b-4972dfc5069f",
+        "name": "Dauthi Marauder",
+        "oracle_text": "Shadow (This creature can block or be blocked by only creatures with shadow.)",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Dauthi Minion",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Shadow"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/96/dauthi-marauder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3118,
+        "iid": 2276,
+        "name": "Dauthi Marauder",
+        "handler": "manalinkeh_card_dauthi_marauder",
+        "kind": "card"
+      }
+    },
+    "Avacyn, Angel of Hope": {
+      "oracle": {
+        "oracle_id": "216cb26e-8da9-478b-bfbc-8030f7adee72",
+        "name": "Avacyn, Angel of Hope",
+        "oracle_text": "Flying, vigilance, indestructible\nOther permanents you control have indestructible.",
+        "mana_cost": "{5}{W}{W}{W}",
+        "type_line": "Legendary Creature — Angel",
+        "power": "8",
+        "toughness": "8",
+        "keywords": [
+          "Flying",
+          "Indestructible",
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/477/avacyn-angel-of-hope?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12310,
+        "iid": 734,
+        "name": "Avacyn, Angel of Hope",
+        "handler": "manalinkeh_card_avacyn_angel_of_hope",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    }
+  },
+  "hidden_observer": {
+    "csvid": 13252,
+    "iid": 3230,
+    "name": "Face-Down Creature",
+    "handler": "manalinkeh_card_face_down_creature",
+    "kind": "card"
+  }
+}

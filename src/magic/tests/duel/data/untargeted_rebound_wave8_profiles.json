@@ -1,0 +1,681 @@
+{
+  "version": 1,
+  "sources": {
+    "Nomads' Assembly": {
+      "oracle": {
+        "oracle_id": "a9a0088a-3c86-4baf-9754-79006f733ce1",
+        "name": "Nomads' Assembly",
+        "oracle_text": "Create a 1/1 white Kor Soldier creature token for each creature you control.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
+        "mana_cost": "{4}{W}{W}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Rebound"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c14/82/nomads-assembly?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11005,
+        "iid": 6682,
+        "name": "Nomads' Assembly",
+        "handler": "manalinkeh_card_nomads_assembly",
+        "kind": "card"
+      }
+    },
+    "Ojutai's Summons": {
+      "oracle": {
+        "oracle_id": "def45f3a-dba0-4d08-b086-5236d6e0edb1",
+        "name": "Ojutai's Summons",
+        "oracle_text": "Create a 2/2 blue Djinn Monk creature token with flying.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Rebound"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/68/ojutais-summons?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14974,
+        "iid": 13847,
+        "name": "Ojutai's Summons",
+        "handler": "manalinkeh_card_ojutais_summons",
+        "kind": "card"
+      }
+    },
+    "Survival Cache": {
+      "oracle": {
+        "oracle_id": "5fb8be5a-3666-4680-84e2-341cb269df07",
+        "name": "Survival Cache",
+        "oracle_text": "You gain 2 life. Then if you have more life than an opponent, draw a card.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
+        "mana_cost": "{2}{W}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Rebound"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ima/34/survival-cache?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11060,
+        "iid": 14960,
+        "name": "Survival Cache",
+        "handler": "manalinkeh_card_survival_cache",
+        "kind": "card"
+      }
+    },
+    "Great Teacher's Decree": {
+      "oracle": {
+        "oracle_id": "9a6e5834-a89c-44af-b297-1b8ccbfbc907",
+        "name": "Great Teacher's Decree",
+        "oracle_text": "Creatures you control get +2/+1 until end of turn.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
+        "mana_cost": "{3}{W}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Rebound"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ima/21/great-teachers-decree?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14926,
+        "iid": 12897,
+        "name": "Great Teacher's Decree",
+        "handler": "manalinkeh_card_great_teachers_decree",
+        "kind": "card"
+      }
+    },
+    "Sight Beyond Sight": {
+      "oracle": {
+        "oracle_id": "c2905e12-8af1-46f4-b888-be272a9b9748",
+        "name": "Sight Beyond Sight",
+        "oracle_text": "Look at the top two cards of your library. Put one of them into your hand and the other on the bottom of your library.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
+        "mana_cost": "{3}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Rebound"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/75/sight-beyond-sight?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15024,
+        "iid": 14602,
+        "name": "Sight Beyond Sight",
+        "handler": "manalinkeh_card_sight_beyond_sight",
+        "kind": "card"
+      }
+    },
+    "Surreal Memoir": {
+      "oracle": {
+        "oracle_id": "fa482ded-b24c-4f9e-948e-d0620e907b8b",
+        "name": "Surreal Memoir",
+        "oracle_text": "Return an instant card at random from your graveyard to your hand.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
+        "mana_cost": "{3}{R}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Rebound"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/127/surreal-memoir?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11059,
+        "iid": 9576,
+        "name": "Surreal Memoir",
+        "handler": "manalinkeh_card_surreal_memoir",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Coat of Arms": {
+      "oracle": {
+        "oracle_id": "5f7f133e-58ea-41ab-b1be-be4b400fac4c",
+        "name": "Coat of Arms",
+        "oracle_text": "Each creature gets +1/+1 for each other creature on the battlefield that shares at least one creature type with it. (For example, if two Goblin Warriors and a Goblin Shaman are on the battlefield, each gets +2/+2.)",
+        "mana_cost": "{5}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/58/coat-of-arms?utm_source=api"
+      },
+      "registry": {
+        "csvid": 996,
+        "iid": 1844,
+        "name": "Coat of Arms",
+        "handler": "manalinkeh_card_coat_of_arms",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Kor Cartographer": {
+      "oracle": {
+        "oracle_id": "a5f537f6-3254-45a3-a4e7-d4d4fd7a972d",
+        "name": "Kor Cartographer",
+        "oracle_text": "When this creature enters, you may search your library for a Plains card, put it onto the battlefield tapped, then shuffle.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Kor Scout",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/khc/28/kor-cartographer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10585,
+        "iid": 5354,
+        "name": "Kor Cartographer",
+        "handler": "manalinkeh_card_kor_cartographer",
+        "kind": "card"
+      }
+    },
+    "Mahamoti Djinn": {
+      "oracle": {
+        "oracle_id": "c39ea5f9-6ec0-4697-897b-779e326754a7",
+        "name": "Mahamoti Djinn",
+        "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)",
+        "mana_cost": "{4}{U}{U}",
+        "type_line": "Creature — Djinn",
+        "power": "5",
+        "toughness": "6",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/64/mahamoti-djinn?utm_source=api"
+      },
+      "registry": {
+        "csvid": 154,
+        "iid": 5822,
+        "name": "Mahamoti Djinn",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Squire": {
+      "oracle": {
+        "oracle_id": "aa6cdcc7-f5ea-47bf-9448-1c63e36b18d1",
+        "name": "Squire",
+        "oracle_text": "",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsb/15/squire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 948,
+        "iid": 9275,
+        "name": "Squire",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Wandering Champion": {
+      "oracle": {
+        "oracle_id": "54af9e23-459e-470d-9b0e-e91a0fa45c98",
+        "name": "Wandering Champion",
+        "oracle_text": "Whenever this creature deals combat damage to a player, if you control a blue or red permanent, you may discard a card. If you do, draw a card.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Monk",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/42/wandering-champion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14650,
+        "iid": 11385,
+        "name": "Wandering Champion",
+        "handler": "manalinkeh_card_wandering_champion",
+        "kind": "card"
+      }
+    },
+    "Divination": {
+      "oracle": {
+        "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+        "name": "Divination",
+        "oracle_text": "Draw two cards.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/51/divination?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10405,
+        "iid": 2609,
+        "name": "Divination",
+        "handler": "manalinkeh_card_divination",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    }
+  },
+  "tokens": {
+    "Djinn Monk": {
+      "oracle": {
+        "oracle_id": "28571b5c-f7f5-4f9c-9891-405b54a28f60",
+        "name": "Djinn Monk",
+        "oracle_text": "Flying",
+        "mana_cost": "",
+        "type_line": "Token Creature — Djinn Monk",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tima/4/djinn-monk?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18718,
+        "iid": 12309,
+        "name": "Djinn Monk",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Kor Soldier": {
+      "oracle": {
+        "oracle_id": "8d8945e4-efa0-4656-8b3c-ddcf86df5190",
+        "name": "Kor Soldier",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Kor Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tcmm/8/kor-soldier?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18779,
+        "iid": 5363,
+        "name": "Kor Soldier",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

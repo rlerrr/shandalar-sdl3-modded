@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "csvid": 12755,
+  "card": "Izzet Keyrune",
+  "recipes": [
+    {
+      "family": "dual_mana_artifact_animation",
+      "version": 2,
+      "oracle_text": "{T}: Add {U} or {R}.\n{U}{R}: Until end of turn, this artifact becomes a 2/1 blue and red Elemental artifact creature.\nWhenever this artifact deals combat damage to a player, you may draw a card. If you do, discard a card.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "colors": [
+            "U",
+            "R"
+          ],
+          "fee": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "cast_mana": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "power": 2,
+          "toughness": 1,
+          "creature_type": "Elemental",
+          "extra": "loot",
+          "clauses": [
+            "{T}: Add {U} or {R}.",
+            "{U}{R}: Until end of turn, this artifact becomes a 2/1 blue and red Elemental artifact creature.",
+            "Whenever this artifact deals combat damage to a player, you may draw a card. If you do, discard a card."
+          ]
+        }
+      },
+      "variants": [
+        "mana_first_0",
+        "mana_second_0",
+        "entry_mana_0",
+        "wrong_mana_output_0",
+        "cast_unfunded_0",
+        "cast_countered_0",
+        "animate_0",
+        "cleanup_0",
+        "offturn_0",
+        "tapped_animate_0",
+        "short_fee_0",
+        "wrong_fee_0",
+        "ready_replay_0",
+        "pending_replay_0",
+        "fresh_attack_0",
+        "attack_0",
+        "destroy_animated_0",
+        "keyword_combat_0",
+        "loot_defending_0",
+        "loot_prevented_0",
+        "mana_first_1",
+        "mana_second_1",
+        "entry_mana_1",
+        "wrong_mana_output_1",
+        "cast_unfunded_1",
+        "cast_countered_1",
+        "animate_1",
+        "cleanup_1",
+        "offturn_1",
+        "tapped_animate_1",
+        "short_fee_1",
+        "wrong_fee_1",
+        "ready_replay_1",
+        "pending_replay_1",
+        "fresh_attack_1",
+        "attack_1",
+        "destroy_animated_1",
+        "keyword_combat_1",
+        "loot_defending_1",
+        "loot_prevented_1",
+        "loot_decline_0",
+        "loot_choice_0"
+      ]
+    }
+  ]
+}

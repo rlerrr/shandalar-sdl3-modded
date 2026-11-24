@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 15125,
+  "card": "Eyeblight Assassin",
+  "recipes": [
+    {
+      "family": "entry_interaction_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 15125,
+        "printed_cost": "{2}{B}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, target creature an opponent controls gets -1/-1 until end of turn.",
+      "variants": [
+        "opposing_0",
+        "owner_only_0",
+        "expiry_0",
+        "opposing_1",
+        "owner_only_1",
+        "expiry_1"
+      ]
+    }
+  ]
+}

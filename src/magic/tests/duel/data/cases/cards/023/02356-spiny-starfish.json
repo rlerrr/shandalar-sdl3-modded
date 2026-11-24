@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Spiny Starfish",
+  "csvid": 2356,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_conditional_costs",
+      "version": 2,
+      "params": {
+        "csvid": 2356,
+        "printed_mana": "{2}{U}",
+        "rules": "{U}: Regenerate this creature.\nAt the beginning of each end step, if this creature regenerated this turn, create a 0/1 blue Starfish creature token for each time it regenerated this turn."
+      },
+      "oracle_text": "{U}: Regenerate this creature.\nAt the beginning of each end step, if this creature regenerated this turn, create a 0/1 blue Starfish creature token for each time it regenerated this turn.",
+      "variants": [
+        "once_0",
+        "once_1",
+        "twice_0",
+        "twice_1",
+        "opposing_end_0",
+        "opposing_end_1",
+        "no_regeneration_0",
+        "no_regeneration_1"
+      ]
+    }
+  ]
+}

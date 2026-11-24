@@ -57,10 +57,10 @@ static int provoke(int player, int card, event_t event)
 /* ManalinkEh 2022: 0x24a5c50; original cards/legions.c:55. */
 static int test_shares_creature_subtype(int iid, intptr_t value, int player, int card)
 {
-  int result;
-
-  result = shares_creature_subtype((unsigned int)value >> 0x10, value & 0xffff, player, card);
-  return result;
+  int source_player = (unsigned int)value >> 0x10;
+  int source_card = value & 0xffff;
+  return card < 0 ? shares_creature_subtype_by_iid(source_player, source_card, player, iid)
+                  : shares_creature_subtype(source_player, source_card, player, card);
 }
 
 #ifndef SHANDALAR

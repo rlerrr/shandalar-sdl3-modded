@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Wispweaver Angel",
+  "csvid": 16580,
+  "recipes": [
+    {
+      "family": "entry_rider_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 16580,
+        "cost": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, you may exile another target creature you control, then return that card to the battlefield under its owner's control.",
+      "variants": [
+        "returned_etb_0",
+        "returned_etb_1",
+        "borrowed_owner_0",
+        "borrowed_owner_1",
+        "untaps_0",
+        "untaps_1",
+        "decline_0",
+        "decline_1",
+        "enemy_only_0",
+        "enemy_only_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

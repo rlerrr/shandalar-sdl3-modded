@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Mishra's War Machine",
+  "csvid": 509,
+  "recipes": [
+    {
+      "family": "upkeep_draw_and_discard",
+      "version": 2,
+      "params": {
+        "csvid": 509,
+        "printed_mana": "{7}",
+        "rules": "Banding (Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are blocking or being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's being blocked by or is blocking.)\nAt the beginning of your upkeep, this creature deals 3 damage to you unless you discard a card. If it deals damage to you this way, tap it."
+      },
+      "oracle_text": "Banding (Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are blocking or being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's being blocked by or is blocking.)\nAt the beginning of your upkeep, this creature deals 3 damage to you unless you discard a card. If it deals damage to you this way, tap it.",
+      "variants": [
+        "unpaid_0",
+        "unpaid_1",
+        "discard_0",
+        "damage_prevented_0",
+        "damage_prevented_1"
+      ]
+    }
+  ]
+}

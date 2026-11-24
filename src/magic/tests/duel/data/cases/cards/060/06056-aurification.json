@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Aurification",
+  "csvid": 6056,
+  "recipes": [
+    {
+      "family": "departure_linked_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 6056
+      },
+      "oracle_text": "Whenever a creature deals damage to you, put a gold counter on it.\nEach creature with a gold counter on it is a Wall in addition to its other creature types and has defender. (Those creatures can't attack.)\nWhen this enchantment leaves the battlefield, remove all gold counters from all creatures.",
+      "variants": [
+        "defender_0",
+        "defender_1",
+        "wall_0",
+        "wall_1",
+        "leaves_0",
+        "leaves_1",
+        "noncombat_0",
+        "noncombat_1",
+        "spell_0",
+        "spell_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Molten Primordial",
+  "csvid": 13011,
+  "recipes": [
+    {
+      "family": "entry_rider_control",
+      "version": 2,
+      "params": {
+        "csvid": 13011,
+        "mana": [
+          5,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "oracle_text": "Haste\nWhen this creature enters, for each opponent, gain control of up to one target creature that player controls until end of turn. Untap those creatures. They gain haste until end of turn.",
+      "variants": [
+        "borrow_0",
+        "borrow_1",
+        "decline_0",
+        "decline_1"
+      ]
+    }
+  ]
+}

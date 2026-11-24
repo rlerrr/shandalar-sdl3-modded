@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 5155,
+  "card": "Traveler's Cloak",
+  "recipes": [
+    {
+      "family": "remaining_entry_turn_and_choices",
+      "version": 2,
+      "params": {
+        "csvid": 5155,
+        "printed_cost": "{2}{U}",
+        "keywords": [
+          "Enchant"
+        ]
+      },
+      "oracle_text": "Enchant creature\nAs this Aura enters, choose a land type.\nWhen this Aura enters, draw a card.\nEnchanted creature has landwalk of the chosen type. (It can't be blocked as long as defending player controls a land of that type.)",
+      "variants": [
+        "landwalk_0",
+        "wrong_land_0",
+        "removed_0",
+        "islandwalk_0",
+        "landwalk_1",
+        "wrong_land_1",
+        "removed_1",
+        "islandwalk_1"
+      ]
+    }
+  ]
+}

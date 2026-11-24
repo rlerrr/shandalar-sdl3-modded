@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Gilded Drake",
+  "csvid": 3777,
+  "recipes": [
+    {
+      "family": "entry_rider_control",
+      "version": 2,
+      "params": {
+        "csvid": 3777,
+        "mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, exchange control of this creature and up to one target creature an opponent controls. If you don't or can't make an exchange, sacrifice this creature. This ability still resolves if its target becomes illegal.",
+      "variants": [
+        "exchange_0",
+        "exchange_1",
+        "decline_0",
+        "decline_1",
+        "protected_0",
+        "protected_1",
+        "noncreature_0",
+        "noncreature_1"
+      ]
+    }
+  ]
+}

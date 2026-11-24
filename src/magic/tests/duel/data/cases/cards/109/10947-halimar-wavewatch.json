@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "csvid": 10947,
+  "card": "Halimar Wavewatch",
+  "recipes": [
+    {
+      "family": "level_keyword_combat",
+      "version": 2,
+      "oracle_text": "Level up {2} ({2}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 1-4\n0/6\nLEVEL 5+\n6/6\nIslandwalk (This creature can't be blocked as long as defending player controls an Island.)",
+      "params": {
+        "price": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "activation": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          0,
+          3
+        ],
+        "first": [
+          1,
+          0,
+          6
+        ],
+        "second": [
+          5,
+          6,
+          6
+        ],
+        "first_riders": [],
+        "second_riders": [
+          "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)"
+        ],
+        "rider": "islandwalk"
+      },
+      "variants": [
+        "thresholds_0",
+        "thresholds_1",
+        "short_payment_0",
+        "short_payment_1",
+        "offturn_0",
+        "offturn_1",
+        "pending_spell_0",
+        "pending_spell_1",
+        "first_defense_island_0",
+        "first_defense_island_1",
+        "second_defense_island_0",
+        "second_defense_island_1",
+        "second_own_island_0",
+        "second_own_island_1",
+        "second_no_island_0",
+        "second_no_island_1"
+      ]
+    }
+  ]
+}

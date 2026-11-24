@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 3507,
+  "card": "Limited Resources",
+  "recipes": [
+    {
+      "family": "entry_interaction_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 3507,
+        "printed_cost": "{W}",
+        "keywords": []
+      },
+      "oracle_text": "When this enchantment enters, each player chooses five lands they control and sacrifices the rest.\nPlayers can't play lands as long as ten or more lands are on the battlefield.",
+      "variants": [
+        "over_five_0",
+        "threshold_0",
+        "below_0",
+        "removed_0",
+        "over_five_1",
+        "threshold_1",
+        "below_1",
+        "removed_1"
+      ]
+    }
+  ]
+}

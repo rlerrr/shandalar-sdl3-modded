@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Aether Theorist",
+  "csvid": 16272,
+  "recipes": [
+    {
+      "family": "library_scry_activated_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 16272,
+        "mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, you get {E}{E}{E} (three energy counters).\n{T}, Pay {E}: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "variants": [
+        "first_energy_0",
+        "first_energy_1",
+        "exhaust_0",
+        "exhaust_1",
+        "fresh_0",
+        "fresh_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Heron's Grace Champion",
+  "csvid": 16127,
+  "recipes": [
+    {
+      "family": "flash_entry_tribal_and_team",
+      "version": 2,
+      "params": {
+        "csvid": 16127,
+        "cost": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Flash\nLifelink\nWhen this creature enters, other Humans you control get +1/+1 and gain lifelink until end of turn.",
+      "variants": [
+        "team_0",
+        "team_1",
+        "combat_lifelink_0",
+        "combat_lifelink_1",
+        "intrinsic_lifelink_0",
+        "intrinsic_lifelink_1",
+        "only_source_0",
+        "only_source_1"
+      ]
+    }
+  ]
+}

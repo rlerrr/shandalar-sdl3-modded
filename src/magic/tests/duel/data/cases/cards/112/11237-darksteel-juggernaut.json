@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "csvid": 11237,
+  "card": "Darksteel Juggernaut",
+  "recipes": [
+    {
+      "family": "required_attack_combat_riders",
+      "version": 2,
+      "oracle_text": "Indestructible\nDarksteel Juggernaut's power and toughness are each equal to the number of artifacts you control.\nThis creature attacks each combat if able.",
+      "params": {
+        "mode": "darksteel",
+        "costs": {
+          "printed": [
+            5,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "power": null,
+        "toughness": null,
+        "keywords": [
+          "Indestructible"
+        ]
+      },
+      "variants": [
+        "omitted_0",
+        "omitted_1",
+        "tapped_0",
+        "tapped_1",
+        "sick_0",
+        "sick_1",
+        "pacified_0",
+        "pacified_1",
+        "opponent_turn_0",
+        "opponent_turn_1",
+        "competing_selected_0",
+        "competing_selected_1",
+        "two_required_0",
+        "two_required_1",
+        "paid_fresh_0",
+        "paid_fresh_1",
+        "paid_next_turn_0",
+        "paid_next_turn_1",
+        "unfunded_0",
+        "unfunded_1",
+        "proposed_replay_0",
+        "proposed_replay_1",
+        "own_artifacts_0",
+        "own_artifacts_1",
+        "opponent_artifacts_0",
+        "opponent_artifacts_1",
+        "other_zones_0",
+        "other_zones_1",
+        "gain_artifact_0",
+        "gain_artifact_1",
+        "lose_artifact_0",
+        "lose_artifact_1",
+        "indestructible_destroy_0",
+        "indestructible_destroy_1",
+        "indestructible_combat_0",
+        "indestructible_combat_1",
+        "exiled_0",
+        "exiled_1"
+      ]
+    }
+  ]
+}

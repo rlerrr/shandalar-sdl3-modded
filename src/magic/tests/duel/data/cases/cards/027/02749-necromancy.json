@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Necromancy",
+  "csvid": 2749,
+  "recipes": [
+    {
+      "family": "entry_rider_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 2749,
+        "cost": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "You may cast this spell as though it had flash. If you cast it any time a sorcery couldn't have been cast, the controller of the permanent it becomes sacrifices it at the beginning of the next cleanup step.\nWhen this enchantment enters, if it's on the battlefield, it becomes an Aura with \"enchant creature put onto the battlefield with Necromancy.\" Put target creature card from a graveyard onto the battlefield under your control and attach this enchantment to it. When this enchantment leaves the battlefield, that creature's controller sacrifices it.",
+      "variants": [
+        "ordinary_persists_0",
+        "ordinary_persists_1",
+        "flash_cleanup_0",
+        "flash_cleanup_1",
+        "source_removed_0",
+        "source_removed_1",
+        "foreign_grave_0",
+        "foreign_grave_1"
+      ]
+    }
+  ]
+}

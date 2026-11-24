@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Seer's Lantern",
+  "csvid": 15677,
+  "recipes": [
+    {
+      "family": "library_scry_activated_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 15677,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{T}: Add {C}.\n{2}, {T}: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "variants": [
+        "mana_0",
+        "mana_1",
+        "scry_0",
+        "scry_1",
+        "two_printed_0",
+        "two_printed_1",
+        "already_tapped_0",
+        "already_tapped_1"
+      ]
+    }
+  ]
+}

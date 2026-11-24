@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Naga Oracle",
+  "csvid": 16972,
+  "recipes": [
+    {
+      "family": "entry_interaction_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 16972,
+        "printed_mana": "{3}{U}",
+        "rules": "When this creature enters, surveil 3. (Look at the top three cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)"
+      },
+      "oracle_text": "When this creature enters, surveil 3. (Look at the top three cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)",
+      "variants": [
+        "mill_two_0",
+        "mill_two_1",
+        "keep_reorder_0",
+        "keep_reorder_1",
+        "surveil_triggers_0",
+        "surveil_triggers_1"
+      ]
+    }
+  ]
+}

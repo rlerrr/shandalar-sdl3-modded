@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Infernal Genesis",
+  "csvid": 4840,
+  "recipes": [
+    {
+      "family": "mill_upkeep_and_untap",
+      "version": 2,
+      "params": {
+        "csvid": 4840,
+        "printed_mana": [
+          4,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "rules": "At the beginning of each player's upkeep, that player mills a card. Then they create X 1/1 black Minion creature tokens, where X is the milled card's mana value."
+      },
+      "oracle_text": "At the beginning of each player's upkeep, that player mills a card. Then they create X 1/1 black Minion creature tokens, where X is the milled card's mana value.",
+      "variants": [
+        "alternating_values_0",
+        "alternating_values_1",
+        "zero_then_draw_0",
+        "zero_then_draw_1"
+      ]
+    }
+  ]
+}

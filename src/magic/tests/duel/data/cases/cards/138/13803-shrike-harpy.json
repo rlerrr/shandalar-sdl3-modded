@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 13803,
+  "card": "Shrike Harpy",
+  "recipes": [
+    {
+      "family": "entry_follow_on_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 13803,
+        "printed_cost": "{3}{B}{B}",
+        "keywords": [
+          "Flying",
+          "Tribute"
+        ]
+      },
+      "oracle_text": "Flying\nTribute 2 (As this creature enters, an opponent of your choice may put two +1/+1 counters on it.)\nWhen this creature enters, if tribute wasn't paid, target opponent sacrifices a creature of their choice.",
+      "variants": [
+        "paid_0",
+        "unpaid_0",
+        "empty_foe_0",
+        "flying_0",
+        "paid_1",
+        "unpaid_1",
+        "empty_foe_1",
+        "flying_1"
+      ]
+    }
+  ]
+}

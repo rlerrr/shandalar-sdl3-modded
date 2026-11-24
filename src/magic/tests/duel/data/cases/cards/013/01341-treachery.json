@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 1341,
+  "card": "Treachery",
+  "recipes": [
+    {
+      "family": "entry_rider_energy_and_mana",
+      "version": 2,
+      "params": {
+        "csvid": 1341,
+        "printed_cost": "{3}{U}{U}"
+      },
+      "oracle_text": "Enchant creature\nWhen this Aura enters, untap up to five lands.\nYou control enchanted creature.",
+      "variants": [
+        "capped_0",
+        "partial_0",
+        "control_0",
+        "release_0",
+        "countered_0",
+        "capped_1",
+        "partial_1",
+        "control_1",
+        "release_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

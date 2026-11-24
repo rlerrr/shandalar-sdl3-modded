@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 11015,
+  "card": "Pelakka Wurm",
+  "recipes": [
+    {
+      "family": "entry_follow_on_counters_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 11015,
+        "printed_cost": "{4}{G}{G}{G}"
+      },
+      "oracle_text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nWhen this creature enters, you gain 7 life.\nWhen this creature dies, draw a card.",
+      "variants": [
+        "entry_0",
+        "countered_0",
+        "die_draw_0",
+        "bounce_0",
+        "trample_0",
+        "prevented_0",
+        "combat_death_0",
+        "entry_1",
+        "countered_1",
+        "die_draw_1",
+        "bounce_1",
+        "trample_1",
+        "prevented_1",
+        "combat_death_1"
+      ]
+    }
+  ]
+}

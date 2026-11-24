@@ -19991,7 +19991,8 @@ int exile_top_x_card_you_may_play_them(int player, int card, int howmany, test_d
       scnprintf(buffer + pos, sizeof(buffer) - pos, " by %s", cards_ptr[id]->name);
     }
     int *deck = deck_ptr[t_player];
-    show_deck(player, deck, amount, buffer, 0, gs_done_008b40e0);
+    if (!duel_host_is_headless() || duel_host_scripted_input())
+      show_deck(player, deck, amount, buffer, 0, gs_done_008b40e0);
     int legacy = -1;
     for (int count = 0; *deck != -1 && count < amount; ++count)
     {

@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Hammerhand",
+  "csvid": 14110,
+  "recipes": [
+    {
+      "family": "entry_rider_combat_modifiers",
+      "version": 2,
+      "params": {
+        "csvid": 14110,
+        "cost": "{R}",
+        "choices": [
+          "host_haste_0",
+          "host_haste_1",
+          "separate_target_0",
+          "separate_target_1",
+          "remove_aura_0",
+          "remove_aura_1",
+          "expire_0",
+          "expire_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "Enchant creature\nWhen this Aura enters, target creature can't block this turn.\nEnchanted creature gets +1/+1 and has haste.",
+      "variants": [
+        "host_haste_0",
+        "host_haste_1",
+        "separate_target_0",
+        "separate_target_1",
+        "remove_aura_0",
+        "remove_aura_1",
+        "expire_0",
+        "expire_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Mending Touch",
+  "csvid": 13179,
+  "recipes": [
+    {
+      "family": "regeneration_spells_and_auras",
+      "version": 2,
+      "params": {
+        "csvid": 13179,
+        "printed_cost": "{G}",
+        "choices": [
+          "proactive_0",
+          "proactive_1",
+          "wounded_0",
+          "wounded_1",
+          "foreign_0",
+          "foreign_1"
+        ]
+      },
+      "oracle_text": "Regenerate target creature.",
+      "variants": [
+        "proactive_0",
+        "proactive_1",
+        "wounded_0",
+        "wounded_1",
+        "foreign_0",
+        "foreign_1"
+      ]
+    }
+  ]
+}

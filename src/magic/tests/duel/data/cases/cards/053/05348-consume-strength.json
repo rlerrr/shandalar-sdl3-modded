@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Consume Strength",
+  "csvid": 5348,
+  "recipes": [
+    {
+      "family": "distinct_creature_stat_modifiers",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "timing": "instant",
+        "positive": [
+          2,
+          2
+        ],
+        "negative": [
+          -2,
+          -2
+        ],
+        "distinct": true
+      },
+      "oracle_text": "Target creature gets +2/+2 until end of turn. Another target creature gets -2/-2 until end of turn.",
+      "variants": [
+        "ordered_pair_0",
+        "swapped_pair_0",
+        "own_pair_0",
+        "opponent_pair_0",
+        "singleton_0",
+        "cancel_second_0",
+        "unfunded_0",
+        "lost_plus_0",
+        "lost_minus_0",
+        "reentered_plus_0",
+        "pending_replay_0",
+        "lethal_shrink_0",
+        "offturn_0",
+        "instant_response_0",
+        "ordered_pair_1",
+        "swapped_pair_1",
+        "own_pair_1",
+        "opponent_pair_1",
+        "singleton_1",
+        "cancel_second_1",
+        "unfunded_1",
+        "lost_plus_1",
+        "lost_minus_1",
+        "reentered_plus_1",
+        "pending_replay_1",
+        "lethal_shrink_1",
+        "offturn_1",
+        "instant_response_1"
+      ]
+    }
+  ]
+}

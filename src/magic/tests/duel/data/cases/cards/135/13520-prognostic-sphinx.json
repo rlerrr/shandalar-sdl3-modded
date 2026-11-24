@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "csvid": 13520,
+  "card": "Prognostic Sphinx",
+  "recipes": [
+    {
+      "family": "library_scry_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 13520,
+        "mana": [
+          3,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          3,
+          5
+        ]
+      },
+      "oracle_text": "Flying\nDiscard a card: This creature gains hexproof until end of turn. Tap it.\nWhenever this creature attacks, scry 3.",
+      "variants": [
+        "bottom_0",
+        "bottom_1",
+        "short_0",
+        "short_1",
+        "top_reorder_0",
+        "flying_0",
+        "flying_1",
+        "discard_0",
+        "discard_1",
+        "empty_hand_0",
+        "empty_hand_1"
+      ]
+    }
+  ]
+}

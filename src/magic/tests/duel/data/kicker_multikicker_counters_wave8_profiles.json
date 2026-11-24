@@ -1,0 +1,406 @@
+{
+  "sources": {
+    "Apex Hawks": {
+      "oracle": {
+        "oracle_id": "c025d558-aae8-4146-923b-a98035025a42",
+        "name": "Apex Hawks",
+        "oracle_text": "Multikicker {1}{W} (You may pay an additional {1}{W} any number of times as you cast this spell.)\nFlying\nThis creature enters with a +1/+1 counter on it for each time it was kicked.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Bird",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Multikicker"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/67/apex-hawks?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10722,
+        "iid": 497,
+        "name": "Apex Hawks",
+        "handler": "manalinkeh_card_apex_hawks",
+        "kind": "card"
+      }
+    },
+    "Enclave Elite": {
+      "oracle": {
+        "oracle_id": "27c84b2e-fc66-45a6-a5ad-d3ef204d5077",
+        "name": "Enclave Elite",
+        "oracle_text": "Multikicker {1}{U} (You may pay an additional {1}{U} any number of times as you cast this spell.)\nIslandwalk (This creature can't be blocked as long as defending player controls an Island.)\nThis creature enters with a +1/+1 counter on it for each time it was kicked.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Merfolk Soldier",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Landwalk",
+          "Multikicker",
+          "Islandwalk"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/96/enclave-elite?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10758,
+        "iid": 3030,
+        "name": "Enclave Elite",
+        "handler": "manalinkeh_card_enclave_elite",
+        "kind": "card"
+      }
+    },
+    "Gnarlid Pack": {
+      "oracle": {
+        "oracle_id": "be6e835c-822e-45ff-a992-249d4d9781dc",
+        "name": "Gnarlid Pack",
+        "oracle_text": "Multikicker {1}{G} (You may pay an additional {1}{G} any number of times as you cast this spell.)\nThis creature enters with a +1/+1 counter on it for each time it was kicked.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Beast",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Multikicker"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm2/144/gnarlid-pack?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10764,
+        "iid": 3966,
+        "name": "Gnarlid Pack",
+        "handler": "manalinkeh_card_gnarlid_pack",
+        "kind": "card"
+      }
+    },
+    "Joraga Warcaller": {
+      "oracle": {
+        "oracle_id": "8959a147-75b1-4f4a-a699-cb354ff55e59",
+        "name": "Joraga Warcaller",
+        "oracle_text": "Multikicker {1}{G} (You may pay an additional {1}{G} any number of times as you cast this spell.)\nThis creature enters with a +1/+1 counter on it for each time it was kicked.\nOther Elf creatures you control get +1/+1 for each +1/+1 counter on this creature.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Multikicker"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cma/120/joraga-warcaller?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10783,
+        "iid": 5081,
+        "name": "Joraga Warcaller",
+        "handler": "manalinkeh_card_joraga_warcaller",
+        "kind": "card"
+      }
+    },
+    "Quag Vampires": {
+      "oracle": {
+        "oracle_id": "1d28ed9a-cc4e-48d9-a1a6-7504fc6cc56d",
+        "name": "Quag Vampires",
+        "oracle_text": "Multikicker {1}{B} (You may pay an additional {1}{B} any number of times as you cast this spell.)\nSwampwalk (This creature can't be blocked as long as defending player controls a Swamp.)\nThis creature enters with a +1/+1 counter on it for each time it was kicked.",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Vampire Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Landwalk",
+          "Swampwalk",
+          "Multikicker"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/122/quag-vampires?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10810,
+        "iid": 7533,
+        "name": "Quag Vampires",
+        "handler": "manalinkeh_card_quag_vampires",
+        "kind": "card"
+      }
+    },
+    "Skitter of Lizards": {
+      "oracle": {
+        "oracle_id": "14646c85-12ad-4b99-a2af-e4a790e034ef",
+        "name": "Skitter of Lizards",
+        "oracle_text": "Multikicker {1}{R} (You may pay an additional {1}{R} any number of times as you cast this spell.)\nHaste\nThis creature enters with a +1/+1 counter on it for each time it was kicked.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Lizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Haste",
+          "Multikicker"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/151/skitter-of-lizards?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10832,
+        "iid": 8832,
+        "name": "Skitter of Lizards",
+        "handler": "manalinkeh_card_skitter_of_the_lizard",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Drift of Phantasms": {
+      "oracle": {
+        "oracle_id": "6ee51134-c4ad-4101-8ce2-23dde9359cd4",
+        "name": "Drift of Phantasms",
+        "oracle_text": "Defender (This creature can't attack.)\nFlying\nTransmute {1}{U}{U} ({1}{U}{U}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Spirit",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Defender",
+          "Transmute"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/42/drift-of-phantasms?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7828,
+        "iid": 2753,
+        "name": "Drift of Phantasms",
+        "handler": "manalinkeh_card_drift_of_phantasms",
+        "kind": "card"
+      }
+    },
+    "Elvish Mystic": {
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13284,
+        "iid": 2982,
+        "name": "Elvish Mystic",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Saltfield Recluse": {
+      "oracle": {
+        "oracle_id": "c87e056a-6067-49e6-b3f7-bba8234777de",
+        "name": "Saltfield Recluse",
+        "oracle_text": "{T}: Target creature gets -2/-0 until end of turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Rebel Cleric",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/40/saltfield-recluse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8842,
+        "iid": 8196,
+        "name": "Saltfield Recluse",
+        "handler": "manalinkeh_card_saltfield_recluse",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    }
+  },
+  "menu": {
+    "pay": 0,
+    "pass": 1
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Diluvian Primordial",
+  "csvid": 12924,
+  "recipes": [
+    {
+      "family": "remaining_entry_zone_and_permissions",
+      "version": 2,
+      "params": {
+        "csvid": 12924,
+        "cost": [
+          5,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, for each opponent, you may cast up to one target instant or sorcery card from that player's graveyard without paying its mana cost. If a spell cast this way would be put into a graveyard, exile it instead.",
+      "variants": [
+        "draw_and_exile_0",
+        "draw_and_exile_1",
+        "damage_and_exile_0",
+        "damage_and_exile_1",
+        "decline_0",
+        "decline_1",
+        "own_grave_only_0",
+        "own_grave_only_1",
+        "flying_combat_0",
+        "flying_combat_1"
+      ]
+    }
+  ]
+}

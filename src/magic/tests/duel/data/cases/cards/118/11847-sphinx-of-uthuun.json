@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Sphinx of Uthuun",
+  "csvid": 11847,
+  "recipes": [
+    {
+      "family": "entry_rider_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 11847,
+        "printed_mana": "{5}{U}{U}",
+        "rules": "Flying\nWhen this creature enters, reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard."
+      },
+      "oracle_text": "Flying\nWhen this creature enters, reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+      "variants": [
+        "split_five_0",
+        "split_five_1",
+        "one_card_flight_0",
+        "one_card_flight_1"
+      ]
+    }
+  ]
+}

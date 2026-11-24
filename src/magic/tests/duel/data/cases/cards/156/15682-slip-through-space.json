@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Slip Through Space",
+  "csvid": 15682,
+  "recipes": [
+    {
+      "family": "targeted_evasion_spells",
+      "version": 2,
+      "params": {
+        "targets": 1,
+        "attack_only": false,
+        "draw": true,
+        "devoid": true,
+        "instant": false,
+        "cost": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Devoid (This card has no color.)\nTarget creature can't be blocked this turn.\nDraw a card.",
+      "variants": [
+        "effect_0",
+        "expiry_0",
+        "fizzle_0",
+        "countered_0",
+        "short_0",
+        "replay_0",
+        "color_gate_0",
+        "effect_1",
+        "expiry_1",
+        "fizzle_1",
+        "countered_1",
+        "short_1",
+        "replay_1",
+        "color_gate_1"
+      ]
+    }
+  ]
+}

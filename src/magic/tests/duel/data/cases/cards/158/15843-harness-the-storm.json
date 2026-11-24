@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Harness the Storm",
+  "csvid": 15843,
+  "recipes": [
+    {
+      "family": "nonhand_cast_rewards",
+      "version": 2,
+      "oracle_text": "Whenever you cast an instant or sorcery spell from your hand, you may cast target card with the same name as that spell from your graveyard. (You still pay its costs.)",
+      "params": {
+        "model": "matching",
+        "cost": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "variants": [
+        "paid_0",
+        "underpaid_0",
+        "decline_0",
+        "other_name_0",
+        "grave_0",
+        "exile_0",
+        "opponent_0",
+        "artifact_0",
+        "replay_0",
+        "paid_1",
+        "underpaid_1",
+        "decline_1",
+        "other_name_1",
+        "grave_1",
+        "exile_1",
+        "opponent_1",
+        "artifact_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 10737,
+  "card": "Calcite Snapper",
+  "recipes": [
+    {
+      "family": "landfall_combat_and_animation",
+      "version": 2,
+      "oracle_text": "Shroud (This creature can't be the target of spells or abilities.)\nLandfall — Whenever a land you control enters, you may switch this creature's power and toughness until end of turn.",
+      "params": {
+        "effect": "switch"
+      },
+      "variants": [
+        "opponent_land_0",
+        "cleanup_0",
+        "switch_0",
+        "double_switch_0",
+        "shroud_own_0",
+        "shroud_foe_0",
+        "opponent_land_1",
+        "cleanup_1",
+        "switch_1",
+        "double_switch_1",
+        "shroud_own_1",
+        "shroud_foe_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

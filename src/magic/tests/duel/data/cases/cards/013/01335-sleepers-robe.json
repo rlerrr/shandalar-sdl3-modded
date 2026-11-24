@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Sleeper's Robe",
+  "csvid": 1335,
+  "recipes": [
+    {
+      "family": "attachment_combat_draw",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "attachment": "aura",
+        "equip": 0,
+        "fear": true,
+        "recipient": "opponent",
+        "ability": "attachment"
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature has fear. (It can't be blocked except by artifact creatures and/or black creatures.)\nWhenever enchanted creature deals combat damage to an opponent, you may draw a card.",
+      "variants": [
+        "hit_0",
+        "blocked_0",
+        "other_attacker_0",
+        "noncombat_0",
+        "source_removed_0",
+        "unaffordable_cast_0",
+        "ready_snapshot_0",
+        "damage_snapshot_0",
+        "foreign_owned_host_0",
+        "opposing_host_0",
+        "fear_green_0",
+        "fear_artifact_0",
+        "hit_1",
+        "blocked_1",
+        "other_attacker_1",
+        "noncombat_1",
+        "source_removed_1",
+        "unaffordable_cast_1",
+        "ready_snapshot_1",
+        "damage_snapshot_1",
+        "foreign_owned_host_1",
+        "opposing_host_1",
+        "fear_green_1",
+        "fear_artifact_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

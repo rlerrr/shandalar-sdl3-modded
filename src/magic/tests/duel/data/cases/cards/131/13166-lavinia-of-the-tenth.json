@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Lavinia of the Tenth",
+  "csvid": 13166,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "detain_effects",
+      "version": 2,
+      "oracle_text": "Protection from red\nWhen Lavinia enters, detain each nonland permanent your opponents control with mana value 4 or less. (Until your next turn, those permanents can't attack or block and their activated abilities can't be activated.)",
+      "params": {
+        "follow": "lavinia",
+        "callback": "lavinia_of_the_tenth",
+        "etb": true,
+        "flying": false,
+        "draw": false,
+        "maximum": 1,
+        "nonland": true,
+        "mana": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "keywords": [
+          "Protection"
+        ]
+      },
+      "variants": [
+        "mass_0",
+        "mass_1",
+        "artifact_cutoff_0",
+        "artifact_cutoff_1",
+        "mana_0",
+        "mana_1",
+        "no_targets_0",
+        "no_targets_1",
+        "protection_target_0",
+        "protection_target_1",
+        "protection_block_0",
+        "protection_block_1",
+        "protection_damage_0",
+        "protection_damage_1",
+        "expiry_0",
+        "expiry_1",
+        "short_0",
+        "short_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

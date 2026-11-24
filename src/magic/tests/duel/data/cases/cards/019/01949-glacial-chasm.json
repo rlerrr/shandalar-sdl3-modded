@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Glacial Chasm",
+  "csvid": 1949,
+  "recipes": [
+    {
+      "family": "cumulative_upkeep_nonmana_payment",
+      "version": 2,
+      "params": {
+        "csvid": 1949,
+        "payment": "Pay 2 life.",
+        "casting_cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Cumulative upkeep—Pay 2 life. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nWhen this land enters, sacrifice a land.\nCreatures you control can't attack.\nPrevent all damage that would be dealt to you.",
+      "variants": [
+        "pay_twice_protect_0",
+        "pay_twice_protect_1",
+        "decline_releases_0",
+        "decline_releases_1"
+      ]
+    }
+  ]
+}

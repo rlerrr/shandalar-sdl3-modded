@@ -1,0 +1,786 @@
+{
+  "version": 1,
+  "sources": {
+    "Dross Golem": {
+      "oracle": {
+        "oracle_id": "336d51cf-dcb3-4257-bd6c-926820a2f9de",
+        "name": "Dross Golem",
+        "oracle_text": "Affinity for Swamps (This spell costs {1} less to cast for each Swamp you control.)\nFear (This creature can't be blocked except by artifact creatures and/or black creatures.)",
+        "mana_cost": "{5}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Affinity",
+          "Fear"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dst/119/dross-golem?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6881,
+        "iid": 2769,
+        "name": "Dross Golem",
+        "handler": "manalinkeh_card_dross_golem",
+        "kind": "card"
+      },
+      "params": {
+        "mana": 5,
+        "land_type": "Swamp",
+        "keyword": "Fear",
+        "power": 3,
+        "toughness": 2
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/darksteel.c",
+        "sha256": "a5ead494687917cd828697821a9072c59133af428403aac05974a25dff71c75e",
+        "symbol": "card_dross_golem",
+        "line": 990
+      }
+    },
+    "Oxidda Golem": {
+      "oracle": {
+        "oracle_id": "9c51d843-d155-44ed-ab1f-dfa2ff848f53",
+        "name": "Oxidda Golem",
+        "oracle_text": "Affinity for Mountains (This spell costs {1} less to cast for each Mountain you control.)\nHaste",
+        "mana_cost": "{6}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Affinity",
+          "Haste"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jvc/46/oxidda-golem?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6929,
+        "iid": 6957,
+        "name": "Oxidda Golem",
+        "handler": "manalinkeh_card_oxidda_golem",
+        "kind": "card"
+      },
+      "params": {
+        "mana": 6,
+        "land_type": "Mountain",
+        "keyword": "Haste",
+        "power": 3,
+        "toughness": 2
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/darksteel.c",
+        "sha256": "a5ead494687917cd828697821a9072c59133af428403aac05974a25dff71c75e",
+        "symbol": "card_oxidda_golem",
+        "line": 1998
+      }
+    },
+    "Razor Golem": {
+      "oracle": {
+        "oracle_id": "c7b2188a-7571-48b8-ac66-ca741bf2e779",
+        "name": "Razor Golem",
+        "oracle_text": "Affinity for Plains (This spell costs {1} less to cast for each Plains you control.)\nVigilance",
+        "mana_cost": "{6}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Affinity",
+          "Vigilance"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dst/137/razor-golem?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6941,
+        "iid": 7707,
+        "name": "Razor Golem",
+        "handler": "manalinkeh_card_razor_golem",
+        "kind": "card"
+      },
+      "params": {
+        "mana": 6,
+        "land_type": "Plains",
+        "keyword": "Vigilance",
+        "power": 3,
+        "toughness": 4
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/darksteel.c",
+        "sha256": "a5ead494687917cd828697821a9072c59133af428403aac05974a25dff71c75e",
+        "symbol": "card_razor_golem",
+        "line": 2356
+      }
+    },
+    "Spire Golem": {
+      "oracle": {
+        "oracle_id": "bfdc6bbc-7402-40ae-91be-658afca2f145",
+        "name": "Spire Golem",
+        "oracle_text": "Affinity for Islands (This spell costs {1} less to cast for each Island you control.)\nFlying",
+        "mana_cost": "{6}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Affinity"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jvc/16/spire-golem?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6964,
+        "iid": 9187,
+        "name": "Spire Golem",
+        "handler": "manalinkeh_card_spire_golem",
+        "kind": "card"
+      },
+      "params": {
+        "mana": 6,
+        "land_type": "Island",
+        "keyword": "Flying",
+        "power": 2,
+        "toughness": 4
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/darksteel.c",
+        "sha256": "a5ead494687917cd828697821a9072c59133af428403aac05974a25dff71c75e",
+        "symbol": "card_spire_golem",
+        "line": 2819
+      }
+    },
+    "Tangle Golem": {
+      "oracle": {
+        "oracle_id": "733c6e30-3c0c-41f0-b1e9-4c2eb76f7b82",
+        "name": "Tangle Golem",
+        "oracle_text": "Affinity for Forests (This spell costs {1} less to cast for each Forest you control.)",
+        "mana_cost": "{7}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [
+          "Affinity"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dst/151/tangle-golem?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6974,
+        "iid": 9698,
+        "name": "Tangle Golem",
+        "handler": "manalinkeh_card_tangle_golem",
+        "kind": "card"
+      },
+      "params": {
+        "mana": 7,
+        "land_type": "Forest",
+        "keyword": "",
+        "power": 5,
+        "toughness": 4
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/darksteel.c",
+        "sha256": "a5ead494687917cd828697821a9072c59133af428403aac05974a25dff71c75e",
+        "symbol": "card_tangle_golem",
+        "line": 3222
+      }
+    },
+    "Gate Colossus": {
+      "oracle": {
+        "oracle_id": "386c5895-9713-4c28-9ba8-8ca0caa06c13",
+        "name": "Gate Colossus",
+        "oracle_text": "Affinity for Gates (This spell costs {1} less to cast for each Gate you control.)\nThis creature can't be blocked by creatures with power 2 or less.\nWhenever a Gate you control enters, you may put this card from your graveyard on top of your library.",
+        "mana_cost": "{8}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "8",
+        "toughness": "8",
+        "keywords": [
+          "Affinity"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/675/gate-colossus?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19631,
+        "iid": 19565,
+        "name": "Gate Colossus",
+        "handler": "manalinkeh_card_gate_colossus",
+        "kind": "card"
+      },
+      "params": {
+        "mana": 8,
+        "land_type": "Gate",
+        "keyword": "",
+        "power": 8,
+        "toughness": 8,
+        "gate_colossus": true
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/ravnica_allegiance.c",
+        "symbol": "card_gate_colossus",
+        "line": 1626,
+        "sha256": "06870c24b55bdfcb26384a8a3206324d046e019b576cbf90d320319c06613490"
+      }
+    }
+  },
+  "witnesses": {
+    "Darksteel Citadel": {
+      "oracle": {
+        "oracle_id": "8dc067bf-f78f-4ac4-b6e7-b305c42cf0bc",
+        "name": "Darksteel Citadel",
+        "oracle_text": "Indestructible\n{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Artifact Land",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c21/285/darksteel-citadel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6870,
+        "iid": 2248,
+        "name": "Darksteel Citadel",
+        "handler": "manalinkeh_card_darksteel_citadel",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Leechridden Swamp": {
+      "oracle": {
+        "oracle_id": "d83c86c1-126d-49e9-9b13-9e55784c49c5",
+        "name": "Leechridden Swamp",
+        "oracle_text": "({T}: Add {B}.)\nThis land enters tapped.\n{B}, {T}: Each opponent loses 1 life. Activate only if you control two or more black permanents.",
+        "mana_cost": "",
+        "type_line": "Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/286/leechridden-swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9587,
+        "iid": 5520,
+        "name": "Leechridden Swamp",
+        "handler": "manalinkeh_card_leechridden_swamp",
+        "kind": "card"
+      }
+    },
+    "Madblind Mountain": {
+      "oracle": {
+        "oracle_id": "0ee0b090-3f1e-49d6-bcad-91e0cf1d12ae",
+        "name": "Madblind Mountain",
+        "oracle_text": "({T}: Add {R}.)\nThis land enters tapped.\n{R}, {T}: Shuffle your library. Activate only if you control two or more red permanents.",
+        "mana_cost": "",
+        "type_line": "Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/shm/274/madblind-mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9592,
+        "iid": 5771,
+        "name": "Madblind Mountain",
+        "handler": "manalinkeh_card_madblind_mountain",
+        "kind": "card"
+      }
+    },
+    "Mistveil Plains": {
+      "oracle": {
+        "oracle_id": "bb5c1817-ac22-4779-9005-251bc354f181",
+        "name": "Mistveil Plains",
+        "oracle_text": "({T}: Add {W}.)\nThis land enters tapped.\n{W}, {T}: Put target card from your graveyard on the bottom of your library. Activate only if you control two or more white permanents.",
+        "mana_cost": "",
+        "type_line": "Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/386/mistveil-plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9607,
+        "iid": 6227,
+        "name": "Mistveil Plains",
+        "handler": "manalinkeh_card_mistveil_plains",
+        "kind": "card"
+      }
+    },
+    "Moonring Island": {
+      "oracle": {
+        "oracle_id": "cf620c66-7db1-4db8-ae56-ee4bc2f77d74",
+        "name": "Moonring Island",
+        "oracle_text": "({T}: Add {U}.)\nThis land enters tapped.\n{U}, {T}: Look at the top card of target player's library. Activate only if you control two or more blue permanents.",
+        "mana_cost": "",
+        "type_line": "Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/shm/276/moonring-island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9608,
+        "iid": 6305,
+        "name": "Moonring Island",
+        "handler": "manalinkeh_card_moonring_island",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Prismatic Omen": {
+      "oracle": {
+        "oracle_id": "d90882ae-6572-4214-8d9c-0bdfb75f9be2",
+        "name": "Prismatic Omen",
+        "oracle_text": "Lands you control are every basic land type in addition to their other types.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/shm/126/prismatic-omen?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9632,
+        "iid": 7392,
+        "name": "Prismatic Omen",
+        "handler": "manalinkeh_card_prismatic_omen",
+        "kind": "card"
+      }
+    },
+    "Sapseep Forest": {
+      "oracle": {
+        "oracle_id": "8d4dcab0-86e5-4ff8-a90f-78a062664e16",
+        "name": "Sapseep Forest",
+        "oracle_text": "({T}: Add {G}.)\nThis land enters tapped.\n{G}, {T}: You gain 1 life. Activate only if you control two or more green permanents.",
+        "mana_cost": "",
+        "type_line": "Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c21/313/sapseep-forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9664,
+        "iid": 8239,
+        "name": "Sapseep Forest",
+        "handler": "manalinkeh_card_sapseep_forest",
+        "kind": "card"
+      }
+    },
+    "Steel Wall": {
+      "oracle": {
+        "oracle_id": "5ccb57e1-ca94-4b5a-8e5f-b8b5e692cfb9",
+        "name": "Steel Wall",
+        "oracle_text": "Defender (This creature can't attack.)",
+        "mana_cost": "{1}",
+        "type_line": "Artifact Creature — Wall",
+        "power": "0",
+        "toughness": "4",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/td2/3/steel-wall?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1300,
+        "iid": 9342,
+        "name": "Steel Wall",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Stone Rain": {
+      "oracle": {
+        "oracle_id": "6e880df6-fc00-43d2-a9c8-f575f40b78c6",
+        "name": "Stone Rain",
+        "oracle_text": "Destroy target land.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/221/stone-rain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 236,
+        "iid": 9381,
+        "name": "Stone Rain",
+        "handler": "manalinkeh_card_ice_storm",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Walking Corpse": {
+      "oracle": {
+        "oracle_id": "fea95888-e16a-4209-9cd4-623f7f4d2f67",
+        "name": "Walking Corpse",
+        "oracle_text": "",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/128/walking-corpse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12124,
+        "iid": 10747,
+        "name": "Walking Corpse",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Azorius Guildgate": {
+      "oracle": {
+        "oracle_id": "ad1712d8-809f-410c-8b91-ffe6fb8a69a1",
+        "name": "Azorius Guildgate",
+        "oracle_text": "This land enters tapped.\n{T}: Add {W} or {U}.",
+        "mana_cost": "",
+        "type_line": "Land — Gate",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/683/azorius-guildgate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12662,
+        "iid": 787,
+        "name": "Azorius Guildgate",
+        "handler": "manalinkeh_plain_mana_producer_tapped",
+        "kind": "card"
+      }
+    },
+    "Shatter": {
+      "oracle": {
+        "oracle_id": "84d32e68-72b9-432d-a023-7bc6a26b8ad0",
+        "name": "Shatter",
+        "oracle_text": "Destroy target artifact.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rix/114/shatter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 223,
+        "iid": 8597,
+        "name": "Shatter",
+        "handler": "manalinkeh_card_shatter",
+        "kind": "card"
+      }
+    },
+    "Reach Through Mists": {
+      "oracle": {
+        "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+        "name": "Reach Through Mists",
+        "oracle_text": "Draw a card.",
+        "mana_cost": "{U}",
+        "type_line": "Instant — Arcane",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/7/reach-through-mists?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7353,
+        "iid": 7720,
+        "name": "Reach Through Mists",
+        "handler": "manalinkeh_card_reach_through_mists",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  },
+  "static_characteristics_only_witnesses": [
+    "Giant Spider",
+    "Hill Giant",
+    "Steel Wall",
+    "Walking Corpse",
+    "Grizzly Bears"
+  ]
+}

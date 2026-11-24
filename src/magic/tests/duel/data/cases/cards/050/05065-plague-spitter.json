@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 5065,
+  "card": "Plague Spitter",
+  "recipes": [
+    {
+      "family": "departure_damage_and_removal",
+      "version": 2,
+      "params": {
+        "csvid": 5065,
+        "printed_cost": "{2}{B}",
+        "keywords": []
+      },
+      "oracle_text": "At the beginning of your upkeep, this creature deals 1 damage to each creature and each player.\nWhen this creature dies, it deals 1 damage to each creature and each player.",
+      "variants": [
+        "upkeep_0",
+        "death_0",
+        "exile_0",
+        "upkeep_1",
+        "death_1",
+        "exile_1"
+      ]
+    }
+  ]
+}

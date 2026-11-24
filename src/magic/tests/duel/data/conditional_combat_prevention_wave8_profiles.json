@@ -1,0 +1,419 @@
+{
+  "version": 1,
+  "sources": {
+    "Enchanted Being": {
+      "oracle": {
+        "oracle_id": "c98b725e-ca16-4576-bf53-653d4028d861",
+        "name": "Enchanted Being",
+        "oracle_text": "Prevent all combat damage that would be dealt to this creature by enchanted creatures.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Creature — Human",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/leg/12/enchanted-being?utm_source=api"
+      },
+      "handler": "manalinkeh_card_enchanted_being"
+    },
+    "Wall of Putrid Flesh": {
+      "oracle": {
+        "oracle_id": "e31d4be7-cd24-4287-b8ca-66f8612731a6",
+        "name": "Wall of Putrid Flesh",
+        "oracle_text": "Defender (This creature can't attack.)\nProtection from white\nPrevent all damage that would be dealt to this creature by enchanted creatures.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Wall",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Protection",
+          "Defender"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/leg/127/wall-of-putrid-flesh?utm_source=api"
+      },
+      "handler": "manalinkeh_card_wall_of_putrid_flesh"
+    },
+    "Wall of Shadows": {
+      "oracle": {
+        "oracle_id": "0e6ff89e-9ae7-4dc3-98b7-05401c5df266",
+        "name": "Wall of Shadows",
+        "oracle_text": "Defender (This creature can't attack.)\nPrevent all damage that would be dealt to this creature by creatures it's blocking.\nThis creature can't be the target of spells that can target only Walls or of abilities that can target only Walls.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chr/41/wall-of-shadows?utm_source=api"
+      },
+      "handler": "manalinkeh_card_wall_of_shadows"
+    },
+    "Marble Priest": {
+      "oracle": {
+        "oracle_id": "96bcabee-e84e-409f-8439-80f5308d73e9",
+        "name": "Marble Priest",
+        "oracle_text": "All Walls able to block this creature do so.\nPrevent all combat damage that would be dealt to this creature by Walls.",
+        "mana_cost": "{5}",
+        "type_line": "Artifact Creature — Cleric",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/leg/286/marble-priest?utm_source=api"
+      },
+      "handler": "manalinkeh_card_marble_priest"
+    }
+  },
+  "witnesses": {
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Pillarfield Ox": {
+      "oracle": {
+        "oracle_id": "0f7c70c4-9795-4c76-8b27-043942a963c6",
+        "name": "Pillarfield Ox",
+        "oracle_text": "",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Ox",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/76/pillarfield-ox?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "handler": "manalinkeh_card_prodigal_sorcerer"
+    },
+    "Wall of Heat": {
+      "oracle": {
+        "oracle_id": "c7bbfd32-2a6f-44e9-b51e-9b272f48d458",
+        "name": "Wall of Heat",
+        "oracle_text": "Defender (This creature can't attack.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Wall",
+        "power": "2",
+        "toughness": "6",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chr/55/wall-of-heat?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Wall of Wood": {
+      "oracle": {
+        "oracle_id": "aa5e6894-8c97-46f8-a0fd-07c6db51e9a7",
+        "name": "Wall of Wood",
+        "oracle_text": "Defender (This creature can't attack.)",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "3",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/309/wall-of-wood?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Dwarven Demolition Team": {
+      "oracle": {
+        "oracle_id": "caf3c6ec-d17e-497c-8fe7-6f818ce93f96",
+        "name": "Dwarven Demolition Team",
+        "oracle_text": "{T}: Destroy target Wall.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Dwarf",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/184/dwarven-demolition-team?utm_source=api"
+      },
+      "handler": "manalinkeh_card_dwarven_demolition_team"
+    },
+    "Unholy Strength": {
+      "oracle": {
+        "oracle_id": "090d88a9-7f2d-4bd1-a30a-7c48d05068be",
+        "name": "Unholy Strength",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +2/+1.",
+        "mana_cost": "{B}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dvd/47/unholy-strength?utm_source=api"
+      },
+      "handler": "manalinkeh_card_unholy_strenght"
+    },
+    "Holy Strength": {
+      "oracle": {
+        "oracle_id": "9357de36-f8be-4f49-b2c8-9fe9eaf82b07",
+        "name": "Holy Strength",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +1/+2.",
+        "mana_cost": "{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m11/16/holy-strength?utm_source=api"
+      },
+      "handler": "manalinkeh_card_holy_strenght"
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "handler": "manalinkeh_card_disenchant"
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "handler": "manalinkeh_card_lightning_bolt"
+    },
+    "Tunnel": {
+      "oracle": {
+        "oracle_id": "80559618-9dd9-4987-b3bc-1a1b5537bbc5",
+        "name": "Tunnel",
+        "oracle_text": "Destroy target Wall. It can't be regenerated.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/4ed/227/tunnel?utm_source=api"
+      },
+      "handler": "manalinkeh_card_tunnel"
+    },
+    "Vitalize": {
+      "oracle": {
+        "oracle_id": "cd3226c6-bd47-4246-8ab3-01316c5d1809",
+        "name": "Vitalize",
+        "oracle_text": "Untap all creatures you control.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/6ed/265/vitalize?utm_source=api"
+      },
+      "handler": "manalinkeh_card_vitalize"
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    }
+  }
+}

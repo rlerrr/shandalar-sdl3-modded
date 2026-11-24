@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Strategic Planning",
+  "csvid": 4255,
+  "recipes": [
+    {
+      "family": "top_library_selection",
+      "version": 2,
+      "params": {
+        "method": "one",
+        "window": 3,
+        "cap": 1,
+        "required": true,
+        "eligible": [],
+        "life_loss": 0,
+        "cost": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "instant": false
+      },
+      "oracle_text": "Look at the top three cards of your library. Put one of them into your hand and the rest into your graveyard.",
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "empty_0",
+        "short_0",
+        "outside_0",
+        "duplicates_0",
+        "wrong_mana_0",
+        "short_mana_0",
+        "countered_0",
+        "replay_0",
+        "effect_1",
+        "alternate_1",
+        "empty_1",
+        "short_1",
+        "outside_1",
+        "duplicates_1",
+        "wrong_mana_1",
+        "short_mana_1",
+        "countered_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

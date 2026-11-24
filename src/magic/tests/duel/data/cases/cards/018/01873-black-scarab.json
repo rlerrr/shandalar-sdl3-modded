@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Black Scarab",
+  "csvid": 1873,
+  "recipes": [
+    {
+      "family": "scarab_color_aura",
+      "version": 2,
+      "oracle_text": "Enchant creature\nEnchanted creature can't be blocked by black creatures.\nEnchanted creature gets +2/+2 as long as an opponent controls a black permanent.",
+      "params": {
+        "color": "black",
+        "power_bonus": 2,
+        "toughness_bonus": 2
+      },
+      "variants": [
+        "plain_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "no_creature_0",
+        "owner_match_0",
+        "matching_land_0",
+        "opponent_match_0",
+        "match_arrives_leaves_0",
+        "last_match_leaves_0",
+        "matched_block_denied_0",
+        "other_block_allowed_0",
+        "unenchanted_attacker_0",
+        "foreign_host_block_denied_0",
+        "foreign_host_boost_0",
+        "host_can_block_0",
+        "aura_removed_combat_0",
+        "host_returns_0",
+        "pending_snapshot_0",
+        "plain_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "no_creature_1",
+        "owner_match_1",
+        "matching_land_1",
+        "opponent_match_1",
+        "match_arrives_leaves_1",
+        "last_match_leaves_1",
+        "matched_block_denied_1",
+        "other_block_allowed_1",
+        "unenchanted_attacker_1",
+        "foreign_host_block_denied_1",
+        "foreign_host_boost_1",
+        "host_can_block_1",
+        "aura_removed_combat_1",
+        "host_returns_1",
+        "pending_snapshot_1"
+      ]
+    }
+  ]
+}

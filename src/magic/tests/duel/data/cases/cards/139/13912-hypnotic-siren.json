@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Hypnotic Siren",
+  "csvid": 13912,
+  "recipes": [
+    {
+      "family": "bestow_dynamic_and_control",
+      "version": 2,
+      "params": {
+        "csvid": 13912,
+        "normal": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "bestowed": [
+          5,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "creature": [
+          1,
+          1
+        ],
+        "riders": [
+          "Flying",
+          "You control enchanted creature.",
+          "Enchanted creature gets +1/+1 and has flying."
+        ]
+      },
+      "oracle_text": "Bestow {5}{U}{U} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nFlying\nYou control enchanted creature.\nEnchanted creature gets +1/+1 and has flying.",
+      "variants": [
+        "regular_flying_0",
+        "regular_flying_1",
+        "steal_fly_release_0",
+        "steal_fly_release_1",
+        "pending_host_lost_0",
+        "pending_host_lost_1",
+        "stolen_dies_0",
+        "stolen_dies_1"
+      ]
+    }
+  ]
+}

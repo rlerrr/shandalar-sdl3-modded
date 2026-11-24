@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "csvid": 14324,
+  "card": "Master of Pearls",
+  "recipes": [
+    {
+      "family": "morph_turn_up_team",
+      "version": 2,
+      "params": {
+        "effect": "team",
+        "power_delta": 2,
+        "toughness_delta": 2,
+        "cast_mana": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "flip_mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "variable": false,
+        "power": 2,
+        "toughness": 2
+      },
+      "oracle_text": "Morph {3}{W}{W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, creatures you control get +2/+2 until end of turn.",
+      "variants": [
+        "hidden_0",
+        "faceup_0",
+        "hidden_choice_0",
+        "hidden_short_0",
+        "flip_short_0",
+        "flip_wrong_0",
+        "offturn_0",
+        "replay_0",
+        "team_0",
+        "late_entry_0",
+        "blocked_0",
+        "blocked_hidden_0",
+        "hidden_1",
+        "faceup_1",
+        "hidden_choice_1",
+        "hidden_short_1",
+        "flip_short_1",
+        "flip_wrong_1",
+        "offturn_1",
+        "replay_1",
+        "team_1",
+        "late_entry_1",
+        "blocked_1",
+        "blocked_hidden_1"
+      ]
+    }
+  ]
+}

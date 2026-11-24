@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "sources": {
+    "Vivid Crag": {
+      "oracle": {
+        "oracle_id": "d8e2efe0-33a4-4303-9e83-ac42ea5df8cb",
+        "name": "Vivid Crag",
+        "oracle_text": "This land enters tapped with two charge counters on it.\n{T}: Add {R}.\n{T}, Remove a charge counter from this land: Add one mana of any color.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cm2/276/vivid-crag?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9298,
+        "iid": 10643,
+        "name": "Vivid Crag",
+        "handler": "manalinkeh_card_vivid_crag",
+        "kind": "card"
+      }
+    },
+    "Vivid Creek": {
+      "oracle": {
+        "oracle_id": "2da7c49f-cc1e-45d9-9cbf-067e92b0daef",
+        "name": "Vivid Creek",
+        "oracle_text": "This land enters tapped with two charge counters on it.\n{T}: Add {U}.\n{T}, Remove a charge counter from this land: Add one mana of any color.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ncc/444/vivid-creek?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9299,
+        "iid": 10644,
+        "name": "Vivid Creek",
+        "handler": "manalinkeh_card_vivid_creek",
+        "kind": "card"
+      }
+    },
+    "Vivid Grove": {
+      "oracle": {
+        "oracle_id": "b7a68899-c0d3-49e0-854b-19268ae9b89d",
+        "name": "Vivid Grove",
+        "oracle_text": "This land enters tapped with two charge counters on it.\n{T}: Add {G}.\n{T}, Remove a charge counter from this land: Add one mana of any color.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ncc/445/vivid-grove?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9300,
+        "iid": 10645,
+        "name": "Vivid Grove",
+        "handler": "manalinkeh_card_vivid_grove",
+        "kind": "card"
+      }
+    },
+    "Vivid Marsh": {
+      "oracle": {
+        "oracle_id": "20b32052-f66f-4eb8-b56e-00d531907f19",
+        "name": "Vivid Marsh",
+        "oracle_text": "This land enters tapped with two charge counters on it.\n{T}: Add {B}.\n{T}, Remove a charge counter from this land: Add one mana of any color.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c17/292/vivid-marsh?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9301,
+        "iid": 10646,
+        "name": "Vivid Marsh",
+        "handler": "manalinkeh_card_vivid_marsh",
+        "kind": "card"
+      }
+    },
+    "Vivid Meadow": {
+      "oracle": {
+        "oracle_id": "dee99df5-628f-4a4e-a203-4dfddc927373",
+        "name": "Vivid Meadow",
+        "oracle_text": "This land enters tapped with two charge counters on it.\n{T}: Add {W}.\n{T}, Remove a charge counter from this land: Add one mana of any color.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ncc/446/vivid-meadow?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9302,
+        "iid": 10647,
+        "name": "Vivid Meadow",
+        "handler": "manalinkeh_card_vivid_meadow",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Walking Atlas": {
+      "oracle": {
+        "oracle_id": "855a4837-7fc8-4b97-afbd-daa88e322c89",
+        "name": "Walking Atlas",
+        "oracle_text": "{T}: You may put a land card from your hand onto the battlefield.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/131/walking-atlas?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10860,
+        "iid": 10746,
+        "name": "Walking Atlas",
+        "handler": "manalinkeh_card_sakura_tribe_scout",
+        "kind": "card"
+      }
+    },
+    "Twiddle": {
+      "oracle": {
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "name": "Twiddle",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 256,
+        "iid": 10281,
+        "name": "Twiddle",
+        "handler": "manalinkeh_card_twiddle",
+        "kind": "card"
+      }
+    },
+    "Boomerang": {
+      "oracle": {
+        "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+        "name": "Boomerang",
+        "oracle_text": "Return target permanent to its owner's hand.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+      },
+      "registry": {
+        "csvid": 585,
+        "iid": 1233,
+        "name": "Boomerang",
+        "handler": "manalinkeh_card_boomerang",
+        "kind": "card"
+      }
+    }
+  }
+}

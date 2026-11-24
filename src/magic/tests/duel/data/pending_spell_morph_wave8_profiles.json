@@ -1,0 +1,478 @@
+{
+  "sources": {
+    "Silumgar Spell-Eater": {
+      "oracle": {
+        "oracle_id": "34d90f98-7af5-4c67-8fb3-620237d94d14",
+        "name": "Silumgar Spell-Eater",
+        "oracle_text": "Megamorph {4}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\nWhen this creature is turned face up, counter target spell unless its controller pays {3}.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Snake Wizard",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Megamorph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/77/silumgar-spell-eater?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15031,
+        "iid": 14623,
+        "name": "Silumgar Spell-Eater",
+        "handler": "manalinkeh_card_silumgar_spell_eater",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/dragons_of_tarkir.c",
+        "sha256": "14dd8202d63ea181932903c78f51988cb9d8a63d877549ea66d50c9b829c29ef",
+        "symbol": "card_silumgar_spell_eater",
+        "line": 1560
+      }
+    },
+    "Stratus Dancer": {
+      "oracle": {
+        "oracle_id": "5b6a821c-51e4-44dc-8353-f4d10eab7fcb",
+        "name": "Stratus Dancer",
+        "oracle_text": "Flying\nMegamorph {1}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\nWhen this creature is turned face up, counter target instant or sorcery spell.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Djinn Monk",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Megamorph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c19/96/stratus-dancer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15040,
+        "iid": 14907,
+        "name": "Stratus Dancer",
+        "handler": "manalinkeh_card_stratus_dancer",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/dragons_of_tarkir.c",
+        "sha256": "14dd8202d63ea181932903c78f51988cb9d8a63d877549ea66d50c9b829c29ef",
+        "symbol": "card_stratus_dancer",
+        "line": 1651
+      }
+    },
+    "Kheru Spellsnatcher": {
+      "oracle": {
+        "oracle_id": "c01411e0-77b2-4e65-a369-5dbe13745769",
+        "name": "Kheru Spellsnatcher",
+        "oracle_text": "Morph {4}{U}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, counter target spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard. You may cast that card without paying its mana cost for as long as it remains exiled.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Snake Wizard",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/119/kheru-spellsnatcher?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14305,
+        "iid": 5244,
+        "name": "Kheru Spellsnatcher",
+        "handler": "manalinkeh_card_khero_spellsnatcher",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/khans_of_tarkir.c",
+        "sha256": "5029c2f100745690cc2b99df89484e2be27def5f7112a410226f1fb893b36067",
+        "symbol": "card_khero_spellsnatcher",
+        "line": 958
+      }
+    },
+    "Voidmage Apprentice": {
+      "oracle": {
+        "oracle_id": "980939db-d867-4c16-a288-52f6528f2376",
+        "name": "Voidmage Apprentice",
+        "oracle_text": "Morph {2}{U}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, counter target spell.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jvc/4/voidmage-apprentice?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6457,
+        "iid": 10672,
+        "name": "Voidmage Apprentice",
+        "handler": "manalinkeh_card_voidmage_apprentice",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/legions.c",
+        "sha256": "fa7d6520bc194c56378d1cf1d602aa5db9e9e559685c150bf6ed0b4f72c50ae0",
+        "symbol": "card_voidmage_apprentice",
+        "line": 2109
+      }
+    }
+  },
+  "witnesses": {
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Divination": {
+      "oracle": {
+        "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+        "name": "Divination",
+        "oracle_text": "Draw two cards.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/51/divination?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10405,
+        "iid": 2609,
+        "name": "Divination",
+        "handler": "manalinkeh_card_divination",
+        "kind": "card"
+      }
+    },
+    "Crater Elemental": {
+      "oracle": {
+        "oracle_id": "8ea607cd-c14b-4bb1-aba1-c5cdc397a825",
+        "name": "Crater Elemental",
+        "oracle_text": "{R}, {T}, Sacrifice this creature: It deals 4 damage to target creature.\nFormidable — {2}{R}: This creature has base power 8 until end of turn. Activate only if creatures you control have total power 8 or greater.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Elemental",
+        "power": "0",
+        "toughness": "6",
+        "keywords": [
+          "Formidable"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/132/crater-elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14874,
+        "iid": 12106,
+        "name": "Crater Elemental",
+        "handler": "manalinkeh_card_crater_elemental",
+        "kind": "card"
+      }
+    },
+    "Thrun, the Last Troll": {
+      "oracle": {
+        "oracle_id": "1149e5ac-554a-41b1-84ae-bac42579c1aa",
+        "name": "Thrun, the Last Troll",
+        "oracle_text": "This spell can't be countered.\nHexproof (This creature can't be the target of spells or abilities your opponents control.)\n{1}{G}: Regenerate Thrun.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Legendary Creature — Troll Shaman",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Hexproof",
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbs/92/thrun-the-last-troll?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11541,
+        "iid": 9973,
+        "name": "Thrun, the Last Troll",
+        "handler": "manalinkeh_card_thrun_the_last_troll",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Elvish Mystic": {
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13284,
+        "iid": 2982,
+        "name": "Elvish Mystic",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Nessian Asp": {
+      "oracle": {
+        "oracle_id": "8b46e077-f667-432f-ab5b-8256a7378311",
+        "name": "Nessian Asp",
+        "oracle_text": "Reach\n{6}{G}: Monstrosity 4. (If this creature isn't monstrous, put four +1/+1 counters on it and it becomes monstrous.)",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Snake",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Reach",
+          "Monstrosity"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cn2/187/nessian-asp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13489,
+        "iid": 6556,
+        "name": "Nessian Asp",
+        "handler": "manalinkeh_card_nessian_asp",
+        "kind": "card"
+      }
+    },
+    "Visions of Beyond": {
+      "oracle": {
+        "oracle_id": "c68964df-51ae-43b0-abea-74735016c13f",
+        "name": "Visions of Beyond",
+        "oracle_text": "Draw a card. If a graveyard has twenty or more cards in it, draw three cards instead.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/81/visions-of-beyond?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11865,
+        "iid": 10634,
+        "name": "Visions of Beyond",
+        "handler": "manalinkeh_card_visions_of_beyond",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    }
+  },
+  "face_down": {
+    "csvid": 13252,
+    "iid": 3230,
+    "name": "Face-Down Creature",
+    "handler": "manalinkeh_card_face_down_creature",
+    "kind": "card"
+  }
+}

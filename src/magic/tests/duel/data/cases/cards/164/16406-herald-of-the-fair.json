@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Herald of the Fair",
+  "csvid": 16406,
+  "recipes": [
+    {
+      "family": "entry_interaction_combat",
+      "version": 2,
+      "params": {
+        "csvid": 16406,
+        "cost": "{2}{W}",
+        "choices": [
+          "own_0",
+          "own_1",
+          "self_0",
+          "self_1",
+          "expire_0",
+          "expire_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, target creature you control gets +1/+1 until end of turn.",
+      "variants": [
+        "own_0",
+        "own_1",
+        "self_0",
+        "self_1",
+        "expire_0",
+        "expire_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 13336,
+  "card": "Shadowborn Demon",
+  "recipes": [
+    {
+      "family": "entry_follow_on_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 13336,
+        "printed_cost": "{3}{B}{B}",
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, destroy target non-Demon creature.\nAt the beginning of your upkeep, if there are fewer than six creature cards in your graveyard, sacrifice a creature.",
+      "variants": [
+        "non_demon_0",
+        "demons_only_0",
+        "five_upkeep_0",
+        "six_upkeep_0",
+        "flying_0",
+        "non_demon_1",
+        "demons_only_1",
+        "five_upkeep_1",
+        "six_upkeep_1",
+        "flying_1"
+      ]
+    }
+  ]
+}

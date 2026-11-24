@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Sage's Reverie",
+  "csvid": 14616,
+  "recipes": [
+    {
+      "family": "entry_follow_on_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 14616,
+        "printed_mana": "{3}{W}",
+        "rules": "Enchant creature\nWhen this Aura enters, draw a card for each Aura you control that's attached to a creature.\nEnchanted creature gets +1/+1 for each Aura you control that's attached to a creature."
+      },
+      "oracle_text": "Enchant creature\nWhen this Aura enters, draw a card for each Aura you control that's attached to a creature.\nEnchanted creature gets +1/+1 for each Aura you control that's attached to a creature.",
+      "variants": [
+        "creature_aura_0",
+        "creature_aura_1",
+        "land_aura_0",
+        "land_aura_1"
+      ]
+    }
+  ]
+}

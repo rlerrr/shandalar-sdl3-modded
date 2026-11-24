@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Chained Throatseeker",
+  "csvid": 11576,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "infect_combat_riders",
+      "version": 2,
+      "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nThis creature can't attack unless defending player is poisoned.",
+      "params": {
+        "rider": "poison_gate",
+        "mana": [
+          5,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "power": 5,
+        "toughness": 5,
+        "artifact": false
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "fresh_0",
+        "fresh_1",
+        "unblocked_0",
+        "unblocked_1",
+        "blocked_0",
+        "blocked_1",
+        "defending_0",
+        "defending_1",
+        "fogged_0",
+        "fogged_1",
+        "replay_0",
+        "replay_1",
+        "unpoisoned_0",
+        "unpoisoned_1",
+        "self_only_0",
+        "self_only_1"
+      ]
+    }
+  ]
+}

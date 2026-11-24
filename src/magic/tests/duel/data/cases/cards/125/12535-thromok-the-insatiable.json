@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Thromok the Insatiable",
+  "csvid": 12535,
+  "recipes": [
+    {
+      "family": "devour_permanent_rewards",
+      "version": 2,
+      "params": {
+        "reward": "square",
+        "multiplier": null,
+        "keywords": [],
+        "mana": [
+          3,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "power": 0,
+        "toughness": 0
+      },
+      "oracle_text": "Devour X, where X is the number of creatures devoured this way (As this creature enters, you may sacrifice any number of creatures. It enters with X +1/+1 counters on it for each of those creatures.)",
+      "variants": [
+        "none_0",
+        "paid_one_0",
+        "wrong_color_0",
+        "countered_0",
+        "snapshot_0",
+        "none_1",
+        "paid_one_1",
+        "wrong_color_1",
+        "countered_1",
+        "snapshot_1",
+        "paid_two_0",
+        "partial_0",
+        "decline_0",
+        "three_0",
+        "legend_0"
+      ]
+    }
+  ]
+}

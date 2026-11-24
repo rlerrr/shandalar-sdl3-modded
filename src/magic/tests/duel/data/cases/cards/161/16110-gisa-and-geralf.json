@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "csvid": 16110,
+  "card": "Gisa and Geralf",
+  "recipes": [
+    {
+      "family": "mill_remaining_entry_and_token_riders",
+      "version": 2,
+      "params": {
+        "csvid": 16110,
+        "mana": [
+          2,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          4,
+          4
+        ]
+      },
+      "oracle_text": "When Gisa and Geralf enters, mill four cards.\nOnce during each of your turns, you may cast a Zombie creature spell from your graveyard.",
+      "variants": [
+        "entry_0",
+        "entry_1",
+        "short_0",
+        "short_1",
+        "zombie_once_0",
+        "zombie_once_1",
+        "zombie_offturn_0",
+        "zombie_offturn_1",
+        "foe_zombie_only_0",
+        "foe_zombie_only_1",
+        "zombie_underpaid_0",
+        "zombie_underpaid_1"
+      ]
+    }
+  ]
+}

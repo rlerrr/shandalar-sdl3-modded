@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Rift Bolt",
+  "csvid": 8648,
+  "recipes": [
+    {
+      "family": "suspend_paid_countdown",
+      "version": 2,
+      "params": {
+        "csvid": 8648,
+        "duration": 1,
+        "effect": "damage",
+        "suspend": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "normal": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Rift Bolt deals 3 damage to any target.\nSuspend 1—{R} (Rather than cast this card from your hand, you may pay {R} and exile it with a time counter on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost.)",
+      "variants": [
+        "parked_0",
+        "parked_1",
+        "countdown_0",
+        "countdown_1",
+        "unfunded_0",
+        "unfunded_1",
+        "normal_0",
+        "normal_1",
+        "normal_countered_0",
+        "normal_countered_1",
+        "replay_0",
+        "replay_1",
+        "removed_0",
+        "removed_1"
+      ]
+    }
+  ]
+}

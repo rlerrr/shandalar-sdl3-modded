@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Belfry Spirit",
+  "csvid": 8024,
+  "recipes": [
+    {
+      "family": "entry_trigger_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 8024,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "Flying\nHaunt (When this creature dies, exile it haunting target creature.)\nWhen this creature enters or the creature it haunts dies, create two 1/1 black Bat creature tokens with flying.",
+      "variants": [
+        "entry_0",
+        "entry_1",
+        "haunt_0",
+        "haunt_1",
+        "unlinked_0",
+        "unlinked_1"
+      ]
+    }
+  ]
+}

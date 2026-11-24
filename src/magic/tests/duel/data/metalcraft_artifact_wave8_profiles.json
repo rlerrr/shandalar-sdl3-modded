@@ -1,0 +1,699 @@
+{
+  "version": 1,
+  "sources": {
+    "Argent Sphinx": {
+      "oracle": {
+        "oracle_id": "7220c391-8d0e-4f43-94fc-ff77ffa2ee8d",
+        "name": "Argent Sphinx",
+        "oracle_text": "Flying\nMetalcraft — {U}: Exile this creature. Return it to the battlefield under your control at the beginning of the next end step. Activate only if you control three or more artifacts.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Creature — Sphinx",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Metalcraft"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm2/41/argent-sphinx?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11199,
+        "iid": 582,
+        "name": "Argent Sphinx",
+        "handler": "manalinkeh_card_argent_sphynx",
+        "kind": "card"
+      }
+    },
+    "Blade-Tribe Berserkers": {
+      "oracle": {
+        "oracle_id": "655847c6-7c5e-4659-870e-825d0cf5e90c",
+        "name": "Blade-Tribe Berserkers",
+        "oracle_text": "Metalcraft — When this creature enters, if you control three or more artifacts, this creature gets +3/+3 and gains haste until end of turn.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Human Berserker",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Metalcraft"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/84/blade-tribe-berserkers?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11211,
+        "iid": 1035,
+        "name": "Blade-Tribe Berserkers",
+        "handler": "manalinkeh_card_blade_tribe_berserkers",
+        "kind": "card"
+      }
+    },
+    "Etched Champion": {
+      "oracle": {
+        "oracle_id": "7cd7102d-6413-4f46-9434-9130aefa2f88",
+        "name": "Etched Champion",
+        "oracle_text": "Metalcraft — This creature has protection from each color as long as you control three or more artifacts.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Soldier",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Metalcraft"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm2/209/etched-champion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11247,
+        "iid": 3135,
+        "name": "Etched Champion",
+        "handler": "manalinkeh_card_etched_champion",
+        "kind": "card"
+      }
+    },
+    "Indomitable Archangel": {
+      "oracle": {
+        "oracle_id": "0f9269eb-6a6c-4b32-8b3d-73724c12ca6b",
+        "name": "Indomitable Archangel",
+        "oracle_text": "Flying\nMetalcraft — Artifacts you control have shroud as long as you control three or more artifacts. (An artifact with shroud can't be the target of spells or abilities.)",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Metalcraft"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nec/85/indomitable-archangel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11283,
+        "iid": 4846,
+        "name": "Indomitable Archangel",
+        "handler": "manalinkeh_card_indomitable_archangel",
+        "kind": "card"
+      }
+    },
+    "Lumengrid Drake": {
+      "oracle": {
+        "oracle_id": "0700d889-d235-49fe-8b92-698d486b2539",
+        "name": "Lumengrid Drake",
+        "oracle_text": "Flying\nMetalcraft — When this creature enters, if you control three or more artifacts, return target creature to its owner's hand.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Metalcraft"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/36/lumengrid-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11300,
+        "iid": 5734,
+        "name": "Lumengrid Drake",
+        "handler": "manalinkeh_card_lumengrid_drake",
+        "kind": "card"
+      }
+    },
+    "Rusted Relic": {
+      "oracle": {
+        "oracle_id": "57b22bc3-23e8-4632-b10a-495fac5c77c7",
+        "name": "Rusted Relic",
+        "oracle_text": "Metalcraft — This artifact is a 5/5 Golem artifact creature as long as you control three or more artifacts.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Metalcraft"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm2/227/rusted-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11350,
+        "iid": 8143,
+        "name": "Rusted Relic",
+        "handler": "manalinkeh_card_rusted_relic",
+        "kind": "card"
+      }
+    },
+    "Vedalken Certarch": {
+      "oracle": {
+        "oracle_id": "337533fb-2783-493c-856f-c41a83cca443",
+        "name": "Vedalken Certarch",
+        "oracle_text": "Metalcraft — {T}: Tap target artifact, creature, or land. Activate only if you control three or more artifacts.",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Vedalken Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Metalcraft"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/td2/5/vedalken-certarch?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11400,
+        "iid": 10492,
+        "name": "Vedalken Certarch",
+        "handler": "manalinkeh_card_vedalken_certarch",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Swords to Plowshares": {
+      "oracle": {
+        "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+        "name": "Swords to Plowshares",
+        "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+      },
+      "registry": {
+        "csvid": 240,
+        "iid": 9616,
+        "name": "Swords to Plowshares",
+        "handler": "manalinkeh_card_swords_to_plowshares",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Bonesplitter": {
+      "oracle": {
+        "oracle_id": "452e3f5f-ce17-4682-966b-5cc100210aee",
+        "name": "Bonesplitter",
+        "oracle_text": "Equipped creature gets +2/+0.\nEquip {1}",
+        "mana_cost": "{1}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/458/bonesplitter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6627,
+        "iid": 1226,
+        "name": "Bonesplitter",
+        "handler": "manalinkeh_card_bonesplitter",
+        "kind": "card"
+      }
+    },
+    "Sparring Collar": {
+      "oracle": {
+        "oracle_id": "81bfbc5a-c448-4124-ac25-79bd0944136d",
+        "name": "Sparring Collar",
+        "oracle_text": "Equipped creature has first strike.\n{R}{R}: Attach this Equipment to target creature you control.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+        "mana_cost": "{2}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5dn/154/sparring-collar?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7124,
+        "iid": 9083,
+        "name": "Sparring Collar",
+        "handler": "manalinkeh_card_sparring_collar",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Furnace of Rath": {
+      "oracle": {
+        "oracle_id": "68715465-6cf9-4006-87e9-31f227fe9ed3",
+        "name": "Furnace of Rath",
+        "oracle_text": "If a source would deal damage to a permanent or player, it deals double that damage to that permanent or player instead.",
+        "mana_cost": "{1}{R}{R}{R}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Double"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hop/55/furnace-of-rath?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1041,
+        "iid": 3686,
+        "name": "Furnace of Rath",
+        "handler": "manalinkeh_card_furnace_of_rath",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Deadly Recluse": {
+      "oracle": {
+        "oracle_id": "6b941291-1802-4ced-9869-39fa43825550",
+        "name": "Deadly Recluse",
+        "oracle_text": "Reach (This creature can block creatures with flying.)\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Spider",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Reach",
+          "Deathtouch"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/282/deadly-recluse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10402,
+        "iid": 2312,
+        "name": "Deadly Recluse",
+        "handler": "manalinkeh_card_deadly_recluse",
+        "kind": "card"
+      }
+    },
+    "Bazaar Trader": {
+      "oracle": {
+        "oracle_id": "21ad7067-3210-42d6-9009-0784b2834227",
+        "name": "Bazaar Trader",
+        "oracle_text": "{T}: Target player gains control of target artifact, creature, or land you control.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/72/bazaar-trader?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10729,
+        "iid": 930,
+        "name": "Bazaar Trader",
+        "handler": "manalinkeh_card_bazaar_trader",
+        "kind": "card"
+      }
+    },
+    "Shimmer Myr": {
+      "oracle": {
+        "oracle_id": "e110ee80-37af-4989-a5fb-95d51dc7f102",
+        "name": "Shimmer Myr",
+        "oracle_text": "Flash\nYou may cast artifact spells as though they had flash.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/409/shimmer-myr?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11522,
+        "iid": 8637,
+        "name": "Shimmer Myr",
+        "handler": "manalinkeh_card_shimmer_myr",
+        "kind": "card"
+      }
+    },
+    "Darksteel Myr": {
+      "oracle": {
+        "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+        "name": "Darksteel Myr",
+        "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11238,
+        "iid": 2255,
+        "name": "Darksteel Myr",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Shatter": {
+      "oracle": {
+        "oracle_id": "84d32e68-72b9-432d-a023-7bc6a26b8ad0",
+        "name": "Shatter",
+        "oracle_text": "Destroy target artifact.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rix/114/shatter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 223,
+        "iid": 8597,
+        "name": "Shatter",
+        "handler": "manalinkeh_card_shatter",
+        "kind": "card"
+      }
+    },
+    "Rod of Ruin": {
+      "oracle": {
+        "oracle_id": "c29a04ab-4e14-45d8-a993-3fffd0e2f6eb",
+        "name": "Rod of Ruin",
+        "oracle_text": "{3}, {T}: This artifact deals 1 damage to any target.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/217/rod-of-ruin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 208,
+        "iid": 8037,
+        "name": "Rod of Ruin",
+        "handler": "manalinkeh_card_rod_of_ruin",
+        "kind": "card"
+      }
+    },
+    "Tormod's Crypt": {
+      "oracle": {
+        "oracle_id": "1573f7f9-672c-421a-b1ac-3d0d8aea59ca",
+        "name": "Tormod's Crypt",
+        "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/235/tormods-crypt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 368,
+        "iid": 10094,
+        "name": "Tormod's Crypt",
+        "handler": "manalinkeh_card_tormods_crypt",
+        "kind": "card"
+      }
+    }
+  }
+}

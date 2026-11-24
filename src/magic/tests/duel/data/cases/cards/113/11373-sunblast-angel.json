@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 11373,
+  "card": "Sunblast Angel",
+  "recipes": [
+    {
+      "family": "entry_trigger_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 11373,
+        "printed_cost": "{4}{W}{W}",
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, destroy all tapped creatures.",
+      "variants": [
+        "both_controllers_0",
+        "untapped_0",
+        "indestructible_0",
+        "self_tapped_0",
+        "flying_0",
+        "both_controllers_1",
+        "untapped_1",
+        "indestructible_1",
+        "self_tapped_1",
+        "flying_1"
+      ]
+    }
+  ]
+}

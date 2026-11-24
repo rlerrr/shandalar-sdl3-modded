@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Twisted Image",
+  "csvid": 11396,
+  "recipes": [
+    {
+      "family": "instant_switch_stats",
+      "version": 2,
+      "params": {
+        "generic": 0,
+        "colors": "U",
+        "draw": 1
+      },
+      "oracle_text": "Switch target creature's power and toughness until end of turn.\nDraw a card.",
+      "variants": [
+        "cast_0",
+        "offturn_0",
+        "expiry_0",
+        "twice_0",
+        "fizzle_0",
+        "countered_0",
+        "short_0",
+        "combat_0",
+        "equal_stats_0",
+        "cast_1",
+        "offturn_1",
+        "expiry_1",
+        "twice_1",
+        "fizzle_1",
+        "countered_1",
+        "short_1",
+        "combat_1",
+        "equal_stats_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 10115,
+  "card": "Blood Tyrant",
+  "recipes": [
+    {
+      "family": "upkeep_counters",
+      "version": 2,
+      "params": {
+        "csvid": 10115,
+        "printed_cost": "{4}{U}{B}{R}"
+      },
+      "oracle_text": "Flying, trample\nAt the beginning of your upkeep, each player loses 1 life. Put a +1/+1 counter on this creature for each 1 life lost this way.\nWhenever a player loses the game, put five +1/+1 counters on this creature.",
+      "variants": [
+        "repeat_0",
+        "locked_0",
+        "combat_0",
+        "terminal_0",
+        "repeat_1",
+        "locked_1",
+        "combat_1",
+        "terminal_1"
+      ]
+    }
+  ]
+}

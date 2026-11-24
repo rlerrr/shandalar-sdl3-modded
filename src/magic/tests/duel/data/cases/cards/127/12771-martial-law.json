@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Martial Law",
+  "csvid": 12771,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "detain_effects",
+      "version": 2,
+      "oracle_text": "At the beginning of your upkeep, detain target creature an opponent controls. (Until your next turn, that creature can't attack or block and its activated abilities can't be activated.)",
+      "params": {
+        "follow": "martial",
+        "callback": "martial_law",
+        "etb": false,
+        "flying": false,
+        "draw": false,
+        "maximum": 1,
+        "nonland": false,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "upkeep_0",
+        "upkeep_1",
+        "alternate_targets_0",
+        "alternate_targets_1",
+        "expiry_0",
+        "expiry_1",
+        "no_target_0",
+        "no_target_1",
+        "before_upkeep_0",
+        "before_upkeep_1",
+        "source_removed_0",
+        "source_removed_1",
+        "short_0",
+        "short_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

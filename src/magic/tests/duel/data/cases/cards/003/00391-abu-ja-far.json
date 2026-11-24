@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 391,
+  "card": "Abu Ja'far",
+  "recipes": [
+    {
+      "family": "departure_damage_and_removal",
+      "version": 2,
+      "params": {
+        "csvid": 391,
+        "printed_cost": "{W}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature dies, destroy all creatures blocking or blocked by it. They can't be regenerated.",
+      "variants": [
+        "attacking_two_0",
+        "defending_0",
+        "regeneration_block_0",
+        "living_combat_0",
+        "bounce_blocked_0",
+        "noncombat_0",
+        "attacking_two_1",
+        "defending_1",
+        "regeneration_block_1",
+        "living_combat_1",
+        "bounce_blocked_1",
+        "noncombat_1"
+      ]
+    }
+  ]
+}

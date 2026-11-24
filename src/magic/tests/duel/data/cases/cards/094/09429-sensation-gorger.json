@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Sensation Gorger",
+  "csvid": 9429,
+  "recipes": [
+    {
+      "family": "library_kinship_upkeep",
+      "version": 2,
+      "params": {
+        "csvid": 9429,
+        "printed_mana": [
+          1,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "rules": "Kinship — At the beginning of your upkeep, you may look at the top card of your library. If it shares a creature type with this creature, you may reveal it. If you do, each player discards their hand, then draws four cards."
+      },
+      "oracle_text": "Kinship — At the beginning of your upkeep, you may look at the top card of your library. If it shares a creature type with this creature, you may reveal it. If you do, each player discards their hand, then draws four cards.",
+      "variants": [
+        "both_hands_0",
+        "both_hands_1",
+        "empty_hands_0",
+        "empty_hands_1",
+        "nonmatch_0",
+        "nonmatch_1",
+        "decline_reveal_0"
+      ]
+    }
+  ]
+}

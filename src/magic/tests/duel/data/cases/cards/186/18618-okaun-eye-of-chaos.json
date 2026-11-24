@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Okaun, Eye of Chaos",
+  "csvid": 18618,
+  "recipes": [
+    {
+      "family": "coin_flip_partner_and_recurring",
+      "version": 2,
+      "params": {
+        "csvid": 18618,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Partner with Zndrsplt, Eye of Wisdom (When this creature enters, target player may put Zndrsplt into their hand from their library, then shuffle.)\nAt the beginning of combat on your turn, flip a coin until you lose a flip.\nWhenever a player wins a coin flip, double Okaun's power and toughness until end of turn.",
+      "variants": [
+        "external_win_0",
+        "external_win_1",
+        "external_loss_0",
+        "external_loss_1",
+        "opponent_library_0",
+        "opponent_library_1",
+        "own_flip_win_0",
+        "own_flip_win_1",
+        "fail_to_find_0",
+        "fail_to_find_1"
+      ]
+    }
+  ]
+}

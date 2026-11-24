@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Act of Authority",
+  "csvid": 13604,
+  "recipes": [
+    {
+      "family": "entry_rider_control",
+      "version": 2,
+      "params": {
+        "csvid": 13604,
+        "mana": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "When this enchantment enters, you may exile target artifact or enchantment.\nAt the beginning of your upkeep, you may exile target artifact or enchantment. If you do, its controller gains control of this enchantment.",
+      "variants": [
+        "entry_artifact_0",
+        "entry_artifact_1",
+        "decline_0",
+        "decline_1",
+        "foreign_upkeep_target_0",
+        "foreign_upkeep_target_1",
+        "own_upkeep_target_0",
+        "own_upkeep_target_1"
+      ]
+    }
+  ]
+}

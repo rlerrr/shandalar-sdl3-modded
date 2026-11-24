@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "card": "Pieces of the Puzzle",
+  "csvid": 15917,
+  "recipes": [
+    {
+      "family": "top_library_selection",
+      "version": 2,
+      "params": {
+        "method": "spells",
+        "window": 5,
+        "cap": 2,
+        "required": false,
+        "eligible": [
+          "Instant",
+          "Sorcery"
+        ],
+        "life_loss": 0,
+        "cost": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "instant": false
+      },
+      "oracle_text": "Reveal the top five cards of your library. Put up to two instant and/or sorcery cards from among them into your hand and the rest into your graveyard.",
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "empty_0",
+        "short_0",
+        "outside_0",
+        "duplicates_0",
+        "wrong_mana_0",
+        "short_mana_0",
+        "countered_0",
+        "replay_0",
+        "one_pick_0",
+        "one_available_0",
+        "decline_0",
+        "no_match_0",
+        "ineligible_0",
+        "effect_1",
+        "alternate_1",
+        "empty_1",
+        "short_1",
+        "outside_1",
+        "duplicates_1",
+        "wrong_mana_1",
+        "short_mana_1",
+        "countered_1",
+        "replay_1",
+        "one_pick_1",
+        "one_available_1",
+        "decline_1",
+        "no_match_1",
+        "ineligible_1"
+      ]
+    }
+  ]
+}

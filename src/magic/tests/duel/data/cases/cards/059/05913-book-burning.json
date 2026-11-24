@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Book Burning",
+  "csvid": 5913,
+  "recipes": [
+    {
+      "family": "mill_remaining_spells_and_modes",
+      "version": 2,
+      "params": {
+        "csvid": 5913,
+        "printed_cost": "{1}{R}",
+        "clauses": [
+          "Any player may have Book Burning deal 6 damage to them. If no one does, target player mills six cards."
+        ],
+        "modes": [
+          "both_decline",
+          "seat0_accept",
+          "seat1_accept",
+          "short_library"
+        ],
+        "human_modes": [
+          "self_target"
+        ]
+      },
+      "oracle_text": "Any player may have Book Burning deal 6 damage to them. If no one does, target player mills six cards.",
+      "variants": [
+        "both_decline_0",
+        "both_decline_1",
+        "seat0_accept_0",
+        "seat0_accept_1",
+        "seat1_accept_0",
+        "seat1_accept_1",
+        "short_library_0",
+        "short_library_1",
+        "self_target_0"
+      ]
+    }
+  ]
+}

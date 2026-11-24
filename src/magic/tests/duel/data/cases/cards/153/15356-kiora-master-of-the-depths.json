@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Kiora, Master of the Depths",
+  "csvid": 15356,
+  "recipes": [
+    {
+      "family": "fight_conditional_and_multiple",
+      "version": 2,
+      "params": {
+        "csvid": 15356,
+        "cost": [
+          2,
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "+1: Untap up to one target creature and up to one target land.\n−2: Reveal the top four cards of your library. You may put a creature card and/or a land card from among them into your hand. Put the rest into your graveyard.\n−8: You get an emblem with \"Whenever a creature you control enters, you may have it fight target creature.\" Then create three 8/8 blue Octopus creature tokens.",
+      "variants": [
+        "untap_0",
+        "untap_1",
+        "reveal_both_0",
+        "reveal_both_1",
+        "reveal_neither_0",
+        "reveal_neither_1",
+        "ultimate_0",
+        "ultimate_1",
+        "reveal_creature_only_0",
+        "reveal_creature_only_1"
+      ]
+    }
+  ]
+}

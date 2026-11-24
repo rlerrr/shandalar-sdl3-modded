@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Argentum Armor",
+  "csvid": 11200,
+  "recipes": [
+    {
+      "family": "equipment_combat_attack_board_effects",
+      "version": 2,
+      "params": {
+        "csvid": 11200,
+        "cast_mana": [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "equip_generic": 6,
+        "bonus": [
+          6,
+          6
+        ],
+        "clauses": [
+          "Equipped creature gets +6/+6.",
+          "Whenever equipped creature attacks, destroy target permanent.",
+          "Equip {6}"
+        ],
+        "modes": [
+          "own_attack",
+          "other_attack",
+          "reequip_attack",
+          "unfunded",
+          "detached",
+          "destroy_own"
+        ]
+      },
+      "oracle_text": "Equipped creature gets +6/+6.\nWhenever equipped creature attacks, destroy target permanent.\nEquip {6}",
+      "variants": [
+        "own_attack_0",
+        "own_attack_1",
+        "other_attack_0",
+        "other_attack_1",
+        "reequip_attack_0",
+        "reequip_attack_1",
+        "unfunded_0",
+        "unfunded_1",
+        "detached_0",
+        "detached_1",
+        "destroy_own_0",
+        "destroy_own_1"
+      ]
+    }
+  ]
+}

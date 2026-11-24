@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "csvid": 15828,
+  "card": "Geier Reach Bandit",
+  "recipes": [
+    {
+      "family": "werewolf_triggered_riders",
+      "version": 2,
+      "params": {
+        "model": "bandit",
+        "price": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "front": {
+          "name": "Geier Reach Bandit",
+          "power": 3,
+          "toughness": 2,
+          "color": 16,
+          "keywords": [
+            "Haste"
+          ],
+          "clauses": [
+            "Haste",
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Vildin-Pack Alpha",
+          "power": 4,
+          "toughness": 3,
+          "color": 16,
+          "keywords": [],
+          "clauses": [
+            "Whenever a Werewolf you control enters, you may transform it.",
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        }
+      },
+      "variants": [
+        "short_cast_0",
+        "short_cast_1",
+        "split_stays_0",
+        "split_stays_1",
+        "replay_0",
+        "replay_1",
+        "haste_0",
+        "haste_1",
+        "own_wolf_0",
+        "own_wolf_1",
+        "other_wolf_0",
+        "other_wolf_1",
+        "not_werewolf_0",
+        "not_werewolf_1",
+        "decline_0"
+      ],
+      "oracle_text": "Haste\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+    }
+  ]
+}

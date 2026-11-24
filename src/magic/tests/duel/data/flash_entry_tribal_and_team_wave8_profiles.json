@@ -1,0 +1,630 @@
+{
+  "sources": {
+    "Pack Guardian": {
+      "oracle": {
+        "oracle_id": "61ad6bd2-c079-44e7-a1d9-8089f086ec69",
+        "name": "Pack Guardian",
+        "oracle_text": "Flash\nWhen this creature enters, you may discard a land card. If you do, create a 2/2 green Wolf creature token.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Wolf Spirit",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/211/pack-guardian?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15913,
+        "iid": 15988,
+        "name": "Pack Guardian",
+        "handler": "manalinkeh_card_pack_guardian",
+        "kind": "card"
+      }
+    },
+    "Rattlechains": {
+      "oracle": {
+        "oracle_id": "ee2ca311-7639-436d-8ecb-d2aad075f25f",
+        "name": "Rattlechains",
+        "oracle_text": "Flash\nFlying\nWhen this creature enters, target Spirit gains hexproof until end of turn.\nYou may cast Spirit spells as though they had flash.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/voc/110/rattlechains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15928,
+        "iid": 16004,
+        "name": "Rattlechains",
+        "handler": "manalinkeh_card_rattlechains",
+        "kind": "card"
+      }
+    },
+    "Drogskol Shieldmate": {
+      "oracle": {
+        "oracle_id": "470028cf-0b99-4dd1-bb9d-aba91c52ee28",
+        "name": "Drogskol Shieldmate",
+        "oracle_text": "Flash\nWhen this creature enters, other creatures you control get +0/+1 until end of turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Spirit Soldier",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/20/drogskol-shieldmate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16082,
+        "iid": 16169,
+        "name": "Drogskol Shieldmate",
+        "handler": "manalinkeh_card_drogskol_shieldmate",
+        "kind": "card"
+      }
+    },
+    "Heron's Grace Champion": {
+      "oracle": {
+        "oracle_id": "86b5a853-9035-4490-9d0f-7c719bedfd58",
+        "name": "Heron's Grace Champion",
+        "oracle_text": "Flash\nLifelink\nWhen this creature enters, other Humans you control get +1/+1 and gain lifelink until end of turn.",
+        "mana_cost": "{2}{G}{W}",
+        "type_line": "Creature — Human Knight",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Lifelink",
+          "Flash"
+        ],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mic/152/herons-grace-champion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16127,
+        "iid": 16217,
+        "name": "Heron's Grace Champion",
+        "handler": "manalinkeh_card_herons_grace_champion",
+        "kind": "card"
+      }
+    },
+    "Spirit of the Hunt": {
+      "oracle": {
+        "oracle_id": "3a81a3a6-4940-4d69-94c1-d431023b275c",
+        "name": "Spirit of the Hunt",
+        "oracle_text": "Flash\nWhen this creature enters, each other creature you control that's a Wolf or a Werewolf gets +0/+3 until end of turn.",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Creature — Wolf Spirit",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/emn/170/spirit-of-the-hunt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16193,
+        "iid": 16281,
+        "name": "Spirit of the Hunt",
+        "handler": "manalinkeh_card_spirit_of_the_hunt",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Expedition Envoy": {
+      "oracle": {
+        "oracle_id": "8bc7c769-33e0-4482-95fc-b344b772e174",
+        "name": "Expedition Envoy",
+        "oracle_text": "",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Scout Ally",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/24/expedition-envoy?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15322,
+        "iid": 12528,
+        "name": "Expedition Envoy",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Glory Seeker": {
+      "oracle": {
+        "oracle_id": "55c60b29-52c5-428c-9229-11ed0e26bd71",
+        "name": "Glory Seeker",
+        "oracle_text": "",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/w17/2/glory-seeker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1045,
+        "iid": 3952,
+        "name": "Glory Seeker",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Goblin Piker": {
+      "oracle": {
+        "oracle_id": "50608184-90d3-43d2-a221-deb186c78323",
+        "name": "Goblin Piker",
+        "oracle_text": "",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m12/141/goblin-piker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10423,
+        "iid": 4027,
+        "name": "Goblin Piker",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Kami of Ancient Law": {
+      "oracle": {
+        "oracle_id": "e937e0f5-ca35-4dce-9f05-8f2075731628",
+        "name": "Kami of Ancient Law",
+        "oracle_text": "Sacrifice this creature: Destroy target enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/150/kami-of-ancient-law?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7264,
+        "iid": 5142,
+        "name": "Kami of Ancient Law",
+        "handler": "manalinkeh_card_kami_of_ancient_law",
+        "kind": "card"
+      }
+    },
+    "Lantern Kami": {
+      "oracle": {
+        "oracle_id": "bddb6b9b-5120-48d2-a57f-eb5d46d38cec",
+        "name": "Lantern Kami",
+        "oracle_text": "Flying",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Spirit",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/32/lantern-kami?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7294,
+        "iid": 5462,
+        "name": "Lantern Kami",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Walking Corpse": {
+      "oracle": {
+        "oracle_id": "fea95888-e16a-4209-9cd4-623f7f4d2f67",
+        "name": "Walking Corpse",
+        "oracle_text": "",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/128/walking-corpse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12124,
+        "iid": 10747,
+        "name": "Walking Corpse",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Wolf": {
+      "oracle": {
+        "oracle_id": "b2224843-8274-4872-a7ca-2adf69cc066b",
+        "name": "Wolf",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Wolf",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/thob/9/wolf?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18856,
+        "iid": 11056,
+        "name": "Wolf",
+        "handler": "manalinkeh_card_wolf_token",
+        "kind": "card"
+      }
+    },
+    "Quilled Wolf": {
+      "oracle": {
+        "oracle_id": "607f9177-fea0-464c-a15f-65842865546a",
+        "name": "Quilled Wolf",
+        "oracle_text": "{5}{G}: This creature gets +4/+4 until end of turn.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Wolf",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/222/quilled-wolf?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15925,
+        "iid": 16001,
+        "name": "Quilled Wolf",
+        "handler": "manalinkeh_card_quilled_wolf",
+        "kind": "card"
+      }
+    },
+    "Lesser Werewolf": {
+      "oracle": {
+        "oracle_id": "5542afeb-285f-4889-9d09-46ce20d0d189",
+        "name": "Lesser Werewolf",
+        "oracle_text": "{B}: If this creature's power is 1 or more, it gets -1/-0 until end of turn and put a -0/-1 counter on target creature blocking or blocked by this creature. Activate only during the declare blockers step.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Werewolf",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/71/lesser-werewolf?utm_source=api"
+      },
+      "registry": {
+        "csvid": 712,
+        "iid": 5542,
+        "name": "Lesser Werewolf",
+        "handler": "manalinkeh_card_lesser_werewolf",
+        "kind": "card"
+      }
+    },
+    "Mothdust Changeling": {
+      "oracle": {
+        "oracle_id": "52237e6b-19f6-405c-a668-545c4ccb1b6d",
+        "name": "Mothdust Changeling",
+        "oracle_text": "Changeling (This card is every creature type.)\nTap an untapped creature you control: This creature gains flying until end of turn.",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Shapeshifter",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Changeling"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mma/53/mothdust-changeling?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9390,
+        "iid": 6351,
+        "name": "Mothdust Changeling",
+        "handler": "manalinkeh_card_mothdust_changeling",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Craw Wurm": {
+      "oracle": {
+        "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+        "name": "Craw Wurm",
+        "oracle_text": "",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "6",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/173/craw-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 49,
+        "iid": 2032,
+        "name": "Craw Wurm",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

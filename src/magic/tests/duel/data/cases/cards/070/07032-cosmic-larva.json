@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 7032,
+  "card": "Cosmic Larva",
+  "recipes": [
+    {
+      "family": "upkeep_payment_and_sacrifice",
+      "version": 2,
+      "params": {
+        "csvid": 7032,
+        "printed_cost": "{1}{R}{R}",
+        "keywords": [
+          "Trample"
+        ]
+      },
+      "oracle_text": "Trample\nAt the beginning of your upkeep, sacrifice this creature unless you sacrifice two lands.",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "short_0",
+        "short_1",
+        "decline_0",
+        "trample_0",
+        "trample_1"
+      ]
+    }
+  ]
+}

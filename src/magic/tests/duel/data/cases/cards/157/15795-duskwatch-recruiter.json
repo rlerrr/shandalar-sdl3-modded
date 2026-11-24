@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "csvid": 15795,
+  "card": "Duskwatch Recruiter",
+  "recipes": [
+    {
+      "family": "werewolf_face_ability_riders",
+      "version": 2,
+      "params": {
+        "effect": "recruit",
+        "price": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "front": {
+          "name": "Duskwatch Recruiter",
+          "power": 2,
+          "toughness": 2,
+          "color": 8,
+          "keywords": [],
+          "clauses": [
+            "{2}{G}: Look at the top three cards of your library. You may reveal a creature card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Krallenhorde Howler",
+          "power": 3,
+          "toughness": 3,
+          "color": 8,
+          "keywords": [],
+          "clauses": [
+            "Creature spells you cast cost {1} less to cast.",
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        }
+      },
+      "variants": [
+        "paid_front_0",
+        "paid_front_1",
+        "front_ready_0",
+        "front_ready_1",
+        "back_ready_0",
+        "back_ready_1",
+        "revert_replay_0",
+        "revert_replay_1",
+        "front_reveal_0",
+        "front_reveal_1",
+        "front_decline_0",
+        "front_decline_1",
+        "back_own_creature_0",
+        "back_own_creature_1",
+        "back_noncreature_0",
+        "back_noncreature_1",
+        "back_foe_creature_0",
+        "back_foe_creature_1"
+      ],
+      "oracle_text": "{2}{G}: Look at the top three cards of your library. You may reveal a creature card from among them and put it into your hand. Put the rest on the bottom of your library in any order.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+    }
+  ]
+}

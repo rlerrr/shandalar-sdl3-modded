@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "card": "Unquestioned Authority",
+  "csvid": 6024,
+  "recipes": [
+    {
+      "family": "aura_entry_draw",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "scope": "any",
+        "entry_draw": 1,
+        "attached_effect": "creature_protection"
+      },
+      "oracle_text": "Enchant creature\nWhen this Aura enters, draw a card.\nEnchanted creature has protection from creatures.",
+      "variants": [
+        "entry_0",
+        "last_card_0",
+        "empty_library_0",
+        "insufficient_mana_0",
+        "countered_0",
+        "no_legal_host_0",
+        "target_lost_0",
+        "host_bounced_0",
+        "aura_removed_0",
+        "recast_0",
+        "pending_snapshot_0",
+        "foreign_owned_host_0",
+        "opposing_host_0",
+        "protection_attack_0",
+        "protection_defend_0",
+        "protection_target_0",
+        "entry_1",
+        "last_card_1",
+        "empty_library_1",
+        "insufficient_mana_1",
+        "countered_1",
+        "no_legal_host_1",
+        "target_lost_1",
+        "host_bounced_1",
+        "aura_removed_1",
+        "recast_1",
+        "pending_snapshot_1",
+        "foreign_owned_host_1",
+        "opposing_host_1",
+        "protection_attack_1",
+        "protection_defend_1",
+        "protection_target_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Slab Hammer",
+  "csvid": 15444,
+  "recipes": [
+    {
+      "family": "equipment_combat_attack_land_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 15444,
+        "spell_fee": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "equip_fee": 2,
+        "static_bonus": [
+          0,
+          0
+        ],
+        "rules": "Whenever equipped creature attacks, you may return a land you control to its owner's hand. If you do, the creature gets +2/+2 until end of turn.\nEquip {2}"
+      },
+      "oracle_text": "Whenever equipped creature attacks, you may return a land you control to its owner's hand. If you do, the creature gets +2/+2 until end of turn.\nEquip {2}",
+      "variants": [
+        "return_own_0",
+        "return_own_1",
+        "return_borrowed_0",
+        "return_borrowed_1",
+        "decline_0",
+        "decline_1",
+        "only_enemy_land_0",
+        "only_enemy_land_1"
+      ]
+    }
+  ]
+}

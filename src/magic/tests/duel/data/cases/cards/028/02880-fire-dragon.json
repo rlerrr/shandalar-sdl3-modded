@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 2880,
+  "card": "Fire Dragon",
+  "recipes": [
+    {
+      "family": "entry_rider_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 2880,
+        "printed_cost": "{6}{R}{R}{R}",
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, it deals damage to target creature equal to the number of Mountains you control.",
+      "variants": [
+        "typed_count_0",
+        "zero_0",
+        "own_0",
+        "flying_0",
+        "typed_count_1",
+        "zero_1",
+        "own_1",
+        "flying_1"
+      ]
+    }
+  ]
+}

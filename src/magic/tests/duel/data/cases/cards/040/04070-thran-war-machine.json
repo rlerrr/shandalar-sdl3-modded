@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Thran War Machine",
+  "csvid": 4070,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "mandatory_attack_lifecycle_riders",
+      "version": 2,
+      "oracle_text": "Echo {4} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nThis creature attacks each combat if able.",
+      "params": {
+        "mode": "echo",
+        "costs": {
+          "printed": [
+            4,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "echo": [
+            4,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "power": 4,
+        "toughness": 5,
+        "keywords": [
+          "Echo"
+        ],
+        "quantity": 0
+      },
+      "variants": [
+        "omitted_0",
+        "omitted_1",
+        "tapped_0",
+        "tapped_1",
+        "sick_0",
+        "sick_1",
+        "pacified_0",
+        "pacified_1",
+        "opponent_turn_0",
+        "opponent_turn_1",
+        "paid_fresh_0",
+        "paid_fresh_1",
+        "unfunded_0",
+        "unfunded_1",
+        "replay_0",
+        "replay_1",
+        "echo_pay_0",
+        "echo_pay_1",
+        "echo_decline_0",
+        "echo_decline_1",
+        "echo_unfunded_0",
+        "echo_unfunded_1",
+        "echo_once_0",
+        "echo_once_1"
+      ]
+    }
+  ]
+}

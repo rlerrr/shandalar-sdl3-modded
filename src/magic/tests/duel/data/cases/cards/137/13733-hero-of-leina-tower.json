@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "csvid": 13733,
+  "card": "Hero of Leina Tower",
+  "recipes": [
+    {
+      "family": "heroic_counter_riders",
+      "version": 2,
+      "params": {
+        "effect": "variable",
+        "clauses": [
+          "Heroic — Whenever you cast a spell that targets this creature, you may pay {X}. If you do, put X +1/+1 counters on this creature."
+        ],
+        "price": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "base": [
+          1,
+          1
+        ]
+      },
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, you may pay {X}. If you do, put X +1/+1 counters on this creature.",
+      "variants": [
+        "own_0",
+        "own_1",
+        "opponent_0",
+        "opponent_1",
+        "elsewhere_0",
+        "elsewhere_1",
+        "zero_payment_0",
+        "zero_payment_1"
+      ]
+    }
+  ]
+}

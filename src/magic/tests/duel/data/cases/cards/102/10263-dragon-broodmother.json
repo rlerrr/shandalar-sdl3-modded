@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "card": "Dragon Broodmother",
+  "csvid": 10263,
+  "recipes": [
+    {
+      "family": "upkeep_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 10263,
+        "mana_cost": "{2}{R}{R}{R}{G}"
+      },
+      "oracle_text": "Flying\nAt the beginning of each upkeep, create a 1/1 red and green Dragon creature token with flying and devour 2. (As the token enters, you may sacrifice any number of creatures. It enters with twice that many +1/+1 counters on it.)",
+      "variants": [
+        "each_0",
+        "devour_0",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

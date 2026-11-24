@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "csvid": 16107,
+  "card": "Geist of the Archives",
+  "recipes": [
+    {
+      "family": "library_scry_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 16107,
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          0,
+          4
+        ]
+      },
+      "oracle_text": "Defender\nAt the beginning of your upkeep, scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "variants": [
+        "upkeep_0",
+        "upkeep_1",
+        "empty_upkeep_0",
+        "empty_upkeep_1",
+        "defender_0",
+        "defender_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Spectral Force",
+  "csvid": 8671,
+  "recipes": [
+    {
+      "family": "attack_follow_on_requirements_and_legality",
+      "version": 2,
+      "params": {
+        "csvid": 8671,
+        "cost": "{3}{G}{G}",
+        "choices": [
+          "empty_0",
+          "empty_1",
+          "black_noncreature_0",
+          "black_noncreature_1",
+          "own_black_0",
+          "own_black_1",
+          "black_token_0",
+          "black_token_1",
+          "trample_0",
+          "trample_1"
+        ]
+      },
+      "oracle_text": "Trample\nWhenever this creature attacks, if defending player controls no black permanents, it doesn't untap during your next untap step.",
+      "variants": [
+        "empty_0",
+        "empty_1",
+        "black_noncreature_0",
+        "black_noncreature_1",
+        "own_black_0",
+        "own_black_1",
+        "black_token_0",
+        "black_token_1",
+        "trample_0",
+        "trample_1"
+      ]
+    }
+  ]
+}

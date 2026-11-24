@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Inner-Flame Acolyte",
+  "csvid": 9183,
+  "recipes": [
+    {
+      "family": "entry_rider_combat_modifiers",
+      "version": 2,
+      "params": {
+        "csvid": 9183,
+        "cost": "{1}{R}{R}",
+        "choices": [
+          "normal_0",
+          "normal_1",
+          "foe_0",
+          "foe_1",
+          "self_0",
+          "self_1",
+          "evoke_0",
+          "evoke_1",
+          "evoke_countered_0",
+          "evoke_countered_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, target creature gets +2/+0 and gains haste until end of turn.\nEvoke {R} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+      "variants": [
+        "normal_0",
+        "normal_1",
+        "foe_0",
+        "foe_1",
+        "self_0",
+        "self_1",
+        "evoke_0",
+        "evoke_1",
+        "evoke_countered_0",
+        "evoke_countered_1"
+      ]
+    }
+  ]
+}

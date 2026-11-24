@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Vulturous Aven",
+  "csvid": 15063,
+  "recipes": [
+    {
+      "family": "exploit_entry_effects",
+      "version": 2,
+      "params": {
+        "reward": "draw_loss",
+        "mana": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": [
+          "Flying"
+        ],
+        "power": 2,
+        "toughness": 3
+      },
+      "oracle_text": "Flying\nExploit (When this creature enters, you may sacrifice a creature.)\nWhen this creature exploits a creature, you draw two cards and you lose 2 life.",
+      "variants": [
+        "other_0",
+        "self_0",
+        "countered_0",
+        "wrong_color_0",
+        "snapshot_0",
+        "prevention_0",
+        "flying_ground_0",
+        "flying_reach_0",
+        "other_1",
+        "self_1",
+        "countered_1",
+        "wrong_color_1",
+        "snapshot_1",
+        "prevention_1",
+        "flying_ground_1",
+        "flying_reach_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

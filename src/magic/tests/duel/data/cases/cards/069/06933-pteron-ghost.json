@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Pteron Ghost",
+  "csvid": 6933,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_sacrifice_and_team",
+      "version": 2,
+      "params": {
+        "csvid": 6933,
+        "printed_cost": "{1}{W}",
+        "choices": [
+          "friendly_0",
+          "friendly_1",
+          "foreign_0",
+          "foreign_1",
+          "wounded_0",
+          "wounded_1",
+          "flight_0",
+          "flight_1",
+          "proactive_0",
+          "proactive_1"
+        ]
+      },
+      "oracle_text": "Flying\nSacrifice this creature: Regenerate target artifact.",
+      "variants": [
+        "friendly_0",
+        "friendly_1",
+        "foreign_0",
+        "foreign_1",
+        "wounded_0",
+        "wounded_1",
+        "flight_0",
+        "flight_1",
+        "proactive_0",
+        "proactive_1"
+      ]
+    }
+  ]
+}

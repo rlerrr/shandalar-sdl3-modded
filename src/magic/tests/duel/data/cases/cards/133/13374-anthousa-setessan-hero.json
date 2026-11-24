@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Anthousa, Setessan Hero",
+  "csvid": 13374,
+  "recipes": [
+    {
+      "family": "heroic_composition_riders",
+      "version": 2,
+      "params": {
+        "model": "lands",
+        "cost": [
+          3,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Heroic — Whenever you cast a spell that targets Anthousa, up to three target lands you control each become 2/2 Warrior creatures until end of turn. They're still lands.",
+      "variants": [
+        "own_0",
+        "enemy_0",
+        "other_target_0",
+        "replay_0",
+        "fewer_0",
+        "zero_0",
+        "warrior_0",
+        "own_1",
+        "enemy_1",
+        "other_target_1",
+        "replay_1",
+        "fewer_1",
+        "zero_1",
+        "warrior_1"
+      ]
+    }
+  ]
+}

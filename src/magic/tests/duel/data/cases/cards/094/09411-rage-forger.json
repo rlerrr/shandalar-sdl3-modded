@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "csvid": 9411,
+  "card": "Rage Forger",
+  "recipes": [
+    {
+      "family": "attack_damage_triggers",
+      "version": 2,
+      "oracle_text": "When this creature enters, put a +1/+1 counter on each other Shaman creature you control.\nWhenever a creature you control with a +1/+1 counter on it attacks, you may have that creature deal 1 damage to target player or planeswalker.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "kind": "forger",
+          "printed": [
+            2,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "equip": 0,
+          "creature": true,
+          "clauses": [
+            "When this creature enters, put a +1/+1 counter on each other Shaman creature you control.",
+            "Whenever a creature you control with a +1/+1 counter on it attacks, you may have that creature deal 1 damage to target player or planeswalker."
+          ]
+        }
+      },
+      "variants": [
+        "cast_0",
+        "cast_1",
+        "short_cast_0",
+        "short_cast_1",
+        "fresh_attack_0",
+        "fresh_attack_1",
+        "cast_attack_0",
+        "cast_attack_1",
+        "counted_lifelink_0",
+        "counted_lifelink_1",
+        "counted_source_0",
+        "counted_source_1",
+        "walker_target_0",
+        "walker_target_1",
+        "uncounted_0",
+        "uncounted_1",
+        "opponent_counted_0",
+        "opponent_counted_1",
+        "replay_0",
+        "replay_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

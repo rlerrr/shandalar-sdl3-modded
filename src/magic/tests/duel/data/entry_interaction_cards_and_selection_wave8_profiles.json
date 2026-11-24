@@ -1,0 +1,1068 @@
+{
+  "sources": {
+    "Disciple of Phenax": {
+      "oracle": {
+        "oracle_id": "d7cbe54b-f217-45f5-8583-c254a1c80bb8",
+        "name": "Disciple of Phenax",
+        "oracle_text": "When this creature enters, target player reveals a number of cards from their hand equal to your devotion to black. You choose one of them. That player discards that card. (Each {B} in the mana costs of permanents you control counts toward your devotion to black.)",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Creature — Human Cleric",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/84/disciple-of-phenax?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13423,
+        "iid": 2565,
+        "name": "Disciple of Phenax",
+        "handler": "manalinkeh_card_disciple_of_phenax",
+        "kind": "card"
+      }
+    },
+    "Thought Gorger": {
+      "oracle": {
+        "oracle_id": "ec5dc165-c760-4060-99fb-ec50f87374cb",
+        "name": "Thought Gorger",
+        "oracle_text": "Trample\nWhen this creature enters, put a +1/+1 counter on it for each card in your hand. If you do, discard your hand.\nWhen this creature leaves the battlefield, draw a card for each +1/+1 counter on it.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Creature — Horror",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/roe/129/thought-gorger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11062,
+        "iid": 9914,
+        "name": "Thought Gorger",
+        "handler": "manalinkeh_card_thought_gorger",
+        "kind": "card"
+      }
+    },
+    "Naga Oracle": {
+      "oracle": {
+        "oracle_id": "249e18a4-12c5-4836-a172-cb4e9b9cb7d7",
+        "name": "Naga Oracle",
+        "oracle_text": "When this creature enters, surveil 3. (Look at the top three cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Snake Cleric",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Surveil"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/akh/62/naga-oracle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16972,
+        "iid": 17066,
+        "name": "Naga Oracle",
+        "handler": "manalinkeh_card_naga_oracle",
+        "kind": "card"
+      }
+    },
+    "Emissary of Sunrise": {
+      "oracle": {
+        "oracle_id": "e2155e61-f389-4b1d-9598-9a79cbccaaa2",
+        "name": "Emissary of Sunrise",
+        "oracle_text": "First strike\nWhen this creature enters, it explores. (Reveal the top card of your library. Put that card into your hand if it's a land. Otherwise, put a +1/+1 counter on this creature, then put the card back or put it into your graveyard.)",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "First strike",
+          "Explore"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/xln/10/emissary-of-sunrise?utm_source=api"
+      },
+      "registry": {
+        "csvid": 17405,
+        "iid": 17501,
+        "name": "Emissary of Sunrise",
+        "handler": "manalinkeh_card_merfolk_branchwalker",
+        "kind": "card"
+      }
+    },
+    "Hellhole Rats": {
+      "oracle": {
+        "oracle_id": "7491e0bf-8335-44e4-8e05-b9a737a0f2e7",
+        "name": "Hellhole Rats",
+        "oracle_text": "Haste\nWhen this creature enters, target player discards a card. This creature deals damage to that player equal to that card's mana value.",
+        "mana_cost": "{2}{B}{R}",
+        "type_line": "Creature — Rat",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dis/113/hellhole-rats?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8221,
+        "iid": 4489,
+        "name": "Hellhole Rats",
+        "handler": "manalinkeh_card_hellhole_rats",
+        "kind": "card"
+      }
+    },
+    "Knollspine Dragon": {
+      "oracle": {
+        "oracle_id": "9d834f1b-a4b5-4676-bb6d-2ffc6b3bccd2",
+        "name": "Knollspine Dragon",
+        "oracle_text": "Flying\nWhen this creature enters, you may discard your hand and draw cards equal to the damage dealt to target opponent this turn.",
+        "mana_cost": "{5}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "7",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/shm/98/knollspine-dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9583,
+        "iid": 5330,
+        "name": "Knollspine Dragon",
+        "handler": "manalinkeh_card_knollspine_dragon",
+        "kind": "card"
+      }
+    },
+    "Mind Maggots": {
+      "oracle": {
+        "oracle_id": "fcaa5a54-eb73-4d78-96a3-826d1902f642",
+        "name": "Mind Maggots",
+        "oracle_text": "When this creature enters, discard any number of creature cards. For each card discarded this way, put two +1/+1 counters on this creature.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Insect",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/exo/66/mind-maggots?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3514,
+        "iid": 6129,
+        "name": "Mind Maggots",
+        "handler": "manalinkeh_card_mind_maggots",
+        "kind": "card"
+      }
+    },
+    "Mournwhelk": {
+      "oracle": {
+        "oracle_id": "10277cc5-f53b-4b33-bd68-edb0534a2040",
+        "name": "Mournwhelk",
+        "oracle_text": "When this creature enters, target player discards two cards.\nEvoke {3}{B} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+        "mana_cost": "{6}{B}",
+        "type_line": "Creature — Elemental",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Evoke"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/127/mournwhelk?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9216,
+        "iid": 6358,
+        "name": "Mournwhelk",
+        "handler": "manalinkeh_card_mournwhelk",
+        "kind": "card"
+      }
+    },
+    "Nantuko Cultivator": {
+      "oracle": {
+        "oracle_id": "b8dab16c-681c-4abe-b164-fcfb5dc66678",
+        "name": "Nantuko Cultivator",
+        "oracle_text": "When this creature enters, you may discard any number of land cards. Put that many +1/+1 counters on this creature and draw that many cards.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Insect Druid",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/otc/198/nantuko-cultivator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5846,
+        "iid": 6461,
+        "name": "Nantuko Cultivator",
+        "handler": "manalinkeh_card_nantuko_cultivator",
+        "kind": "card"
+      }
+    },
+    "Obstinate Baloth": {
+      "oracle": {
+        "oracle_id": "ee2ab1ab-be1e-4e56-99f2-7784f7350b41",
+        "name": "Obstinate Baloth",
+        "oracle_text": "When this creature enters, you gain 4 life.\nIf a spell or ability an opponent controls causes you to discard this card, put it onto the battlefield instead of putting it into your graveyard.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bro/187/obstinate-baloth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11155,
+        "iid": 6778,
+        "name": "Obstinate Baloth",
+        "handler": "manalinkeh_card_staunch_defenders",
+        "kind": "card"
+      }
+    },
+    "Thought-Knot Seer": {
+      "oracle": {
+        "oracle_id": "cef7396d-2168-4282-bf38-670ca9eebd91",
+        "name": "Thought-Knot Seer",
+        "oracle_text": "({C} represents colorless mana.)\nWhen this creature enters, target opponent reveals their hand. You choose a nonland card from it and exile that card.\nWhen this creature leaves the battlefield, target opponent draws a card.",
+        "mana_cost": "{3}{C}",
+        "type_line": "Creature — Eldrazi",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/9/thought-knot-seer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15700,
+        "iid": 15775,
+        "name": "Thought-Knot Seer",
+        "handler": "manalinkeh_card_thought_knot_seer",
+        "kind": "card"
+      }
+    },
+    "Jadelight Ranger": {
+      "oracle": {
+        "oracle_id": "0b5d174c-7d4d-4c31-a582-8169d3bc932a",
+        "name": "Jadelight Ranger",
+        "oracle_text": "When this creature enters, it explores, then it explores again. (Reveal the top card of your library. Put that card into your hand if it's a land. Otherwise, put a +1/+1 counter on this creature, then put the card back or put it into your graveyard. Then repeat this process.)",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Creature — Merfolk Scout Ranger",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Explore"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rix/136/jadelight-ranger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18230,
+        "iid": 18336,
+        "name": "Jadelight Ranger",
+        "handler": "manalinkeh_card_jadelight_ranger",
+        "kind": "card"
+      }
+    },
+    "Azra Bladeseeker": {
+      "oracle": {
+        "oracle_id": "ac4d065e-7eb6-4224-8a7c-e57f2c1a2733",
+        "name": "Azra Bladeseeker",
+        "oracle_text": "When this creature enters, each player on your team may discard a card, then each player who discarded a card this way draws a card.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Azra Warrior",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bbd/55/azra-bladeseeker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18575,
+        "iid": 18685,
+        "name": "Azra Bladeseeker",
+        "handler": "manalinkeh_card_viashino_racketeer",
+        "kind": "card"
+      }
+    },
+    "Liliana's Contract": {
+      "oracle": {
+        "oracle_id": "6858702a-e563-4dcb-a50d-65406cea7c86",
+        "name": "Liliana's Contract",
+        "oracle_text": "When this enchantment enters, you draw four cards and you lose 4 life.\nAt the beginning of your upkeep, if you control four or more Demons with different names, you win the game.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/107/lilianas-contract?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18956,
+        "iid": 18889,
+        "name": "Liliana's Contract",
+        "handler": "manalinkeh_card_lilianas_contract",
+        "kind": "card"
+      }
+    },
+    "Guild Summit": {
+      "oracle": {
+        "oracle_id": "38a3e144-93ad-497b-9b29-7040b6f337e1",
+        "name": "Guild Summit",
+        "oracle_text": "When this enchantment enters, you may tap any number of untapped Gates you control. Draw a card for each Gate tapped this way.\nWhenever a Gate you control enters, draw a card.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/grn/41/guild-summit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19386,
+        "iid": 19319,
+        "name": "Guild Summit",
+        "handler": "manalinkeh_card_guild_summit",
+        "kind": "card"
+      }
+    },
+    "Pendulum of Patterns": {
+      "oracle": {
+        "oracle_id": "992075d5-f413-4896-b75e-7bb2d589c50e",
+        "name": "Pendulum of Patterns",
+        "oracle_text": "When this artifact enters, you gain 3 life.\n{5}, {T}, Sacrifice this artifact: Draw a card.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/288/pendulum-of-patterns?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16766,
+        "iid": 16859,
+        "name": "Pendulum of Patterns",
+        "handler": "manalinkeh_card_pendulum_of_patterns",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Azorius Guildgate": {
+      "oracle": {
+        "oracle_id": "ad1712d8-809f-410c-8b91-ffe6fb8a69a1",
+        "name": "Azorius Guildgate",
+        "oracle_text": "This land enters tapped.\n{T}: Add {W} or {U}.",
+        "mana_cost": "",
+        "type_line": "Land — Gate",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/683/azorius-guildgate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12662,
+        "iid": 787,
+        "name": "Azorius Guildgate",
+        "handler": "manalinkeh_plain_mana_producer_tapped",
+        "kind": "card"
+      }
+    },
+    "Demon of Death's Gate": {
+      "oracle": {
+        "oracle_id": "be465805-1a37-4212-acf1-5dfec890b338",
+        "name": "Demon of Death's Gate",
+        "oracle_text": "You may pay 6 life and sacrifice three black creatures rather than pay this spell's mana cost.\nFlying, trample",
+        "mana_cost": "{6}{B}{B}{B}",
+        "type_line": "Creature — Demon",
+        "power": "9",
+        "toughness": "9",
+        "keywords": [
+          "Flying",
+          "Trample"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 9.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m11/92/demon-of-deaths-gate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11113,
+        "iid": 2423,
+        "name": "Demon of Death's Gate",
+        "handler": "manalinkeh_card_demon_of_deaths_gate",
+        "kind": "card"
+      }
+    },
+    "Dimir Guildgate": {
+      "oracle": {
+        "oracle_id": "52d14717-0cbc-4d7e-b546-54ea91580338",
+        "name": "Dimir Guildgate",
+        "oracle_text": "This land enters tapped.\n{T}: Add {U} or {B}.",
+        "mana_cost": "",
+        "type_line": "Land — Gate",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/688/dimir-guildgate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12926,
+        "iid": 2541,
+        "name": "Dimir Guildgate",
+        "handler": "manalinkeh_plain_mana_producer_tapped",
+        "kind": "card"
+      }
+    },
+    "Disinformation Campaign": {
+      "oracle": {
+        "oracle_id": "1dd336b0-9b13-4180-b80a-e8ba5d63d04f",
+        "name": "Disinformation Campaign",
+        "oracle_text": "When this enchantment enters, you draw a card and each opponent discards a card.\nWhenever you surveil, return this enchantment to its owner's hand.",
+        "mana_cost": "{1}{U}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mkc/208/disinformation-campaign?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19340,
+        "iid": 19273,
+        "name": "Disinformation Campaign",
+        "handler": "manalinkeh_card_disinformation_campaign",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Griselbrand": {
+      "oracle": {
+        "oracle_id": "f759d112-76db-4091-a22b-b9f19ab6fa5f",
+        "name": "Griselbrand",
+        "oracle_text": "Flying, lifelink\nPay 7 life: Draw seven cards.",
+        "mana_cost": "{4}{B}{B}{B}{B}",
+        "type_line": "Legendary Creature — Demon",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [
+          "Flying",
+          "Lifelink"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/115/griselbrand?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12386,
+        "iid": 4246,
+        "name": "Griselbrand",
+        "handler": "manalinkeh_card_griselbrand",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hellcarver Demon": {
+      "oracle": {
+        "oracle_id": "90514aa5-84b6-4be7-b6d0-b05529c97140",
+        "name": "Hellcarver Demon",
+        "oracle_text": "Flying\nWhenever this creature deals combat damage to a player, sacrifice all other permanents you control and discard your hand. Exile the top six cards of your library. You may cast any number of spells from among cards exiled this way without paying their mana costs.",
+        "mana_cost": "{3}{B}{B}{B}",
+        "type_line": "Creature — Demon",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/roe/113/hellcarver-demon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10953,
+        "iid": 4484,
+        "name": "Hellcarver Demon",
+        "handler": "manalinkeh_card_hellcarver_demon",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Increasing Savagery": {
+      "oracle": {
+        "oracle_id": "616c7f45-5295-4b8c-a828-ff3a5ba4d917",
+        "name": "Increasing Savagery",
+        "oracle_text": "Put five +1/+1 counters on target creature. If this spell was cast from a graveyard, put ten +1/+1 counters on that creature instead.\nFlashback {5}{G}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/47/increasing-savagery?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12219,
+        "iid": 4837,
+        "name": "Increasing Savagery",
+        "handler": "manalinkeh_card_increasing_savagery",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Lord of the Void": {
+      "oracle": {
+        "oracle_id": "626b85f8-8889-46e6-9659-460bac79ae9b",
+        "name": "Lord of the Void",
+        "oracle_text": "Flying\nWhenever this creature deals combat damage to a player, exile the top seven cards of that player's library, then put a creature card from among them onto the battlefield under your control.",
+        "mana_cost": "{4}{B}{B}{B}",
+        "type_line": "Creature — Demon",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/81/lord-of-the-void?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12995,
+        "iid": 5692,
+        "name": "Lord of the Void",
+        "handler": "manalinkeh_card_lord_of_the_void",
+        "kind": "card"
+      }
+    },
+    "Mind Rot": {
+      "oracle": {
+        "oracle_id": "ad44cf74-b717-48fb-9fa2-77512024d76a",
+        "name": "Mind Rot",
+        "oracle_text": "Target player discards two cards.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/115/mind-rot?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1087,
+        "iid": 6132,
+        "name": "Mind Rot",
+        "handler": "manalinkeh_card_mind_rot",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Rakdos Guildgate": {
+      "oracle": {
+        "oracle_id": "361f534b-39d1-4421-b5a8-d3813c62f86d",
+        "name": "Rakdos Guildgate",
+        "oracle_text": "This land enters tapped.\n{T}: Add {B} or {R}.",
+        "mana_cost": "",
+        "type_line": "Land — Gate",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/693/rakdos-guildgate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12794,
+        "iid": 7626,
+        "name": "Rakdos Guildgate",
+        "handler": "manalinkeh_plain_mana_producer_tapped",
+        "kind": "card"
+      }
+    },
+    "Scathe Zombies": {
+      "oracle": {
+        "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+        "name": "Scathe Zombies",
+        "oracle_text": "",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/175/scathe-zombies?utm_source=api"
+      },
+      "registry": {
+        "csvid": 214,
+        "iid": 8302,
+        "name": "Scathe Zombies",
+        "handler": "card_scathe_zombies",
+        "kind": "card"
+      }
+    },
+    "Searing Blaze": {
+      "oracle": {
+        "oracle_id": "74b08a70-b0bb-4340-98a0-b1d5b7c9d2cc",
+        "name": "Searing Blaze",
+        "oracle_text": "Searing Blaze deals 1 damage to target player or planeswalker and 1 damage to target creature that player or that planeswalker's controller controls.\nLandfall — If you had a land enter the battlefield under your control this turn, Searing Blaze deals 3 damage to that player or planeswalker and 3 damage to that creature instead.",
+        "mana_cost": "{R}{R}",
+        "type_line": "Instant",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddi/67/searing-blaze?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10826,
+        "iid": 8406,
+        "name": "Searing Blaze",
+        "handler": "manalinkeh_card_searing_blaze",
+        "kind": "card"
+      }
+    },
+    "Spellbook": {
+      "oracle": {
+        "oracle_id": "83133f51-bfbd-4db5-9be0-f660e3b66435",
+        "name": "Spellbook",
+        "oracle_text": "You have no maximum hand size.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact — Book",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/220/spellbook?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1154,
+        "iid": 9121,
+        "name": "Spellbook",
+        "handler": "manalinkeh_card_spellbook",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Swords to Plowshares": {
+      "oracle": {
+        "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+        "name": "Swords to Plowshares",
+        "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+      },
+      "registry": {
+        "csvid": 240,
+        "iid": 9616,
+        "name": "Swords to Plowshares",
+        "handler": "manalinkeh_card_swords_to_plowshares",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    }
+  }
+}

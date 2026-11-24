@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Unnatural Aggression",
+  "csvid": 15476,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "devoid_zone_and_spell_choices",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\nTarget creature you control fights target creature an opponent controls. If the creature an opponent controls would die this turn, exile it instead.",
+      "params": {
+        "model": "fight",
+        "mana": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "kind": "instant"
+      },
+      "variants": [
+        "both_die_0",
+        "both_die_1",
+        "enemy_survives_0",
+        "enemy_survives_1",
+        "later_death_0",
+        "later_death_1",
+        "expiry_0",
+        "expiry_1",
+        "no_own_0",
+        "no_own_1",
+        "no_enemy_0",
+        "no_enemy_1",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

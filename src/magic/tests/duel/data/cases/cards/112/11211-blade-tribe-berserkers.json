@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "csvid": 11211,
+  "card": "Blade-Tribe Berserkers",
+  "recipes": [
+    {
+      "family": "metalcraft_artifact",
+      "version": 2,
+      "params": {
+        "effect": "berserk",
+        "flying": false,
+        "artifact": false,
+        "cast_mana": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "power": 3,
+        "toughness": 3
+      },
+      "oracle_text": "Metalcraft — When this creature enters, if you control three or more artifacts, this creature gets +3/+3 and gains haste until end of turn.",
+      "variants": [
+        "cast_below_0",
+        "cast_threshold_0",
+        "unfunded_0",
+        "enemy_scope_0",
+        "pending_gain_0",
+        "pending_drop_0",
+        "late_gain_0",
+        "drop_0",
+        "duration_0",
+        "replay_0",
+        "wrong_color_0",
+        "cast_below_1",
+        "cast_threshold_1",
+        "unfunded_1",
+        "enemy_scope_1",
+        "pending_gain_1",
+        "pending_drop_1",
+        "late_gain_1",
+        "drop_1",
+        "duration_1",
+        "replay_1",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

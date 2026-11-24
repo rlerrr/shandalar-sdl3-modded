@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 6882,
+  "card": "Eater of Days",
+  "recipes": [
+    {
+      "family": "remaining_entry_turn_and_choices",
+      "version": 2,
+      "params": {
+        "csvid": 6882,
+        "printed_cost": "{4}",
+        "keywords": [
+          "Flying",
+          "Trample"
+        ]
+      },
+      "oracle_text": "Flying, trample\nWhen this creature enters, you skip your next two turns.",
+      "variants": [
+        "schedule_0",
+        "removed_0",
+        "countered_0",
+        "combat_0",
+        "schedule_1",
+        "removed_1",
+        "countered_1",
+        "combat_1"
+      ]
+    }
+  ]
+}

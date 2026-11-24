@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "csvid": 18362,
+  "card": "Broken Bond",
+  "recipes": [
+    {
+      "family": "land_from_hand",
+      "version": 2,
+      "oracle_text": "Destroy target artifact or enchantment. You may put a land card from your hand onto the battlefield.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "cast": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "spell": "destroy"
+        }
+      },
+      "variants": [
+        "choose_land_0",
+        "decline_0",
+        "nonland_only_0",
+        "tapped_entry_0",
+        "before_normal_0",
+        "after_normal_0",
+        "cast_short_0",
+        "wrong_color_0",
+        "countered_0",
+        "pending_replay_0",
+        "empty_0",
+        "target_enchantment_0",
+        "own_target_0",
+        "target_indestructible_0",
+        "target_gone_0",
+        "no_legal_target_0",
+        "choose_land_1",
+        "decline_1",
+        "nonland_only_1",
+        "tapped_entry_1",
+        "before_normal_1",
+        "after_normal_1",
+        "cast_short_1",
+        "wrong_color_1",
+        "countered_1",
+        "pending_replay_1",
+        "empty_1",
+        "target_enchantment_1",
+        "own_target_1",
+        "target_indestructible_1",
+        "target_gone_1",
+        "no_legal_target_1"
+      ]
+    }
+  ]
+}

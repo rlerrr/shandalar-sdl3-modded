@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "csvid": 6575,
+  "card": "Scornful Egotist",
+  "recipes": [
+    {
+      "family": "morph_creature",
+      "version": 2,
+      "oracle_text": "Morph {U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "printed": [
+            7,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "unmorph": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "subtypes": [
+            "Human",
+            "Wizard"
+          ],
+          "power": 1,
+          "toughness": 1,
+          "color": 4,
+          "clauses": [
+            "Morph {U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)"
+          ]
+        }
+      },
+      "variants": [
+        "cast_default_0",
+        "cast_colored_0",
+        "cast_faceup_0",
+        "choose_facedown_0",
+        "cancel_cast_0",
+        "cast_short_0",
+        "countered_0",
+        "unmorph_0",
+        "unmorph_offturn_0",
+        "wrong_color_0",
+        "short_fee_0",
+        "already_up_0",
+        "pending_shock_0",
+        "pending_smother_0",
+        "mv_facedown_0",
+        "mv_faceup_0",
+        "sick_attack_0",
+        "attack_revealed_0",
+        "ready_replay_0",
+        "face_down_replay_0",
+        "bounce_recast_0",
+        "cast_default_1",
+        "cast_colored_1",
+        "cast_faceup_1",
+        "choose_facedown_1",
+        "cancel_cast_1",
+        "cast_short_1",
+        "countered_1",
+        "unmorph_1",
+        "unmorph_offturn_1",
+        "wrong_color_1",
+        "short_fee_1",
+        "already_up_1",
+        "pending_shock_1",
+        "pending_smother_1",
+        "mv_facedown_1",
+        "mv_faceup_1",
+        "sick_attack_1",
+        "attack_revealed_1",
+        "ready_replay_1",
+        "face_down_replay_1",
+        "bounce_recast_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Followed Footsteps",
+  "csvid": 7849,
+  "recipes": [
+    {
+      "family": "upkeep_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 7849,
+        "mana_cost": "{3}{U}{U}"
+      },
+      "oracle_text": "Enchant creature\nAt the beginning of your upkeep, create a token that's a copy of enchanted creature.",
+      "variants": [
+        "copy_foe_0",
+        "copy_foe_1",
+        "copy_own_0",
+        "copy_own_1",
+        "original_removed_0",
+        "original_removed_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Battlefield Scrounger",
+  "csvid": 5910,
+  "recipes": [
+    {
+      "family": "threshold_modal_activations",
+      "version": 2,
+      "oracle_text": "Threshold — Put three cards from your graveyard on the bottom of your library: This creature gets +3/+3 until end of turn. Activate only once each turn and only if there are seven or more cards in your graveyard.",
+      "params": {
+        "source": 5910
+      },
+      "variants": [
+        "six_duplicates_0",
+        "six_duplicates_1",
+        "seven_duplicates_0",
+        "seven_duplicates_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "once_per_turn_0",
+        "once_per_turn_1",
+        "cancel_cost_0",
+        "cancel_cost_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

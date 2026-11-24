@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Weatherseed Totem",
+  "csvid": 8729,
+  "recipes": [
+    {
+      "family": "departure_graveyard_and_return",
+      "version": 2,
+      "params": {
+        "csvid": 8729,
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{T}: Add {G}.\n{2}{G}{G}{G}: This artifact becomes a 5/3 green Treefolk artifact creature with trample until end of turn.\nWhen this artifact is put into a graveyard from the battlefield, if it was a creature, return this card to its owner's hand.",
+      "variants": [
+        "unanimated_dies_0",
+        "unanimated_dies_1",
+        "animated_dies_0",
+        "animated_dies_1",
+        "expired_dies_0",
+        "expired_dies_1",
+        "trample_0",
+        "trample_1"
+      ]
+    }
+  ]
+}

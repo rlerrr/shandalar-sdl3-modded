@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 16727,
+  "card": "Implement of Combustion",
+  "recipes": [
+    {
+      "family": "departure_damage_and_removal",
+      "version": 2,
+      "params": {
+        "csvid": 16727,
+        "printed_cost": "{1}",
+        "keywords": []
+      },
+      "oracle_text": "{R}, Sacrifice this artifact: It deals 1 damage to target player or planeswalker.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+      "variants": [
+        "activate_0",
+        "walker_0",
+        "destroy_0",
+        "bounce_0",
+        "wrong_color_0",
+        "activate_1",
+        "walker_1",
+        "destroy_1",
+        "bounce_1",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

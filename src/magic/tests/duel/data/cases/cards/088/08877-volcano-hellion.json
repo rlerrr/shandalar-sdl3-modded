@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "csvid": 8877,
+  "card": "Volcano Hellion",
+  "recipes": [
+    {
+      "family": "entry_rider_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 8877,
+        "printed_cost": "{2}{R}{R}",
+        "keywords": []
+      },
+      "oracle_text": "This creature has echo {X}, where X is your life total. (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters, it deals an amount of damage of your choice to you and target creature. The damage can't be prevented.",
+      "variants": [
+        "damage_0",
+        "zero_0",
+        "cannot_prevent_0",
+        "echo_pay_0",
+        "echo_short_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Guild Feud",
+  "csvid": 12742,
+  "recipes": [
+    {
+      "family": "fight_conditional_and_multiple",
+      "version": 2,
+      "params": {
+        "csvid": 12742,
+        "cost": [
+          5,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "At the beginning of your upkeep, target opponent reveals the top three cards of their library, may put a creature card from among them onto the battlefield, then puts the rest into their graveyard. You do the same with the top three cards of your library. If two creatures are put onto the battlefield this way, those creatures fight each other.",
+      "variants": [
+        "both_fight_0",
+        "both_fight_1",
+        "opponent_declines_0",
+        "opponent_declines_1",
+        "own_declines_0",
+        "own_declines_1",
+        "no_creatures_0",
+        "no_creatures_1",
+        "opponent_upkeep_0",
+        "opponent_upkeep_1",
+        "opponent_hexproof_0",
+        "opponent_hexproof_1"
+      ]
+    }
+  ]
+}

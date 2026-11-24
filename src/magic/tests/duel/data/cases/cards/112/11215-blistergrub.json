@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Blistergrub",
+  "csvid": 11215,
+  "recipes": [
+    {
+      "family": "departure_resources",
+      "version": 2,
+      "params": {
+        "csvid": 11215,
+        "printed_mana": "{2}{B}",
+        "rules": "Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)\nWhen this creature dies, each opponent loses 2 life."
+      },
+      "oracle_text": "Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)\nWhen this creature dies, each opponent loses 2 life.",
+      "variants": [
+        "swampwalk_dies_0",
+        "swampwalk_dies_1",
+        "ground_block_dies_0",
+        "ground_block_dies_1",
+        "exile_0",
+        "exile_1"
+      ]
+    }
+  ]
+}

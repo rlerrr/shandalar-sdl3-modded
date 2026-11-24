@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Bane of Bala Ged",
+  "csvid": 15267,
+  "recipes": [
+    {
+      "family": "attack_trigger_zones_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 15267,
+        "cost": [
+          7,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks, defending player exiles two permanents they control.",
+      "variants": [
+        "two_0",
+        "two_1",
+        "only_one_0",
+        "only_one_1",
+        "empty_0",
+        "empty_1",
+        "planeswalker_0",
+        "planeswalker_1"
+      ]
+    }
+  ]
+}

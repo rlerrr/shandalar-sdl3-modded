@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "csvid": 16015,
+  "card": "Village Messenger",
+  "recipes": [
+    {
+      "family": "werewolf_combat_riders",
+      "version": 2,
+      "oracle_text": "Haste\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+      "params": {
+        "price": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "front": {
+          "name": "Village Messenger",
+          "power": 1,
+          "toughness": 1,
+          "color": 16,
+          "clauses": [
+            "Haste",
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Moonrise Intruder",
+          "power": 2,
+          "toughness": 2,
+          "color": 16,
+          "clauses": [
+            "Menace (This creature can't be blocked except by two or more creatures.)",
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        },
+        "rider": "haste_menace"
+      },
+      "variants": [
+        "front_split_0",
+        "front_split_1",
+        "back_split_0",
+        "back_split_1",
+        "back_two_0",
+        "back_two_1",
+        "fresh_attack_0",
+        "fresh_attack_1",
+        "front_single_0",
+        "front_single_1",
+        "back_single_0",
+        "back_single_1",
+        "back_pair_0",
+        "back_pair_1"
+      ]
+    }
+  ]
+}

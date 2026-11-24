@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "csvid": 16513,
+  "card": "Servant of the Conduit",
+  "recipes": [
+    {
+      "family": "entry_rider_energy_and_mana",
+      "version": 2,
+      "params": {
+        "csvid": 16513,
+        "printed_cost": "{1}{G}"
+      },
+      "oracle_text": "When this creature enters, you get {E}{E} (two energy counters).\n{T}, Pay {E}: Add one mana of any color.",
+      "variants": [
+        "sick_0",
+        "countered_0",
+        "black_0",
+        "blue_0",
+        "green_0",
+        "red_0",
+        "white_0",
+        "deplete_0",
+        "sick_1",
+        "countered_1",
+        "black_1",
+        "blue_1",
+        "green_1",
+        "red_1",
+        "white_1",
+        "deplete_1"
+      ]
+    }
+  ]
+}

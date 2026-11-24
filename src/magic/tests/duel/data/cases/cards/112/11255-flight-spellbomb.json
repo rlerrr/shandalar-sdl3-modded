@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "card": "Flight Spellbomb",
+  "csvid": 11255,
+  "recipes": [
+    {
+      "family": "spellbomb_death_draw",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "active_effect": "flying",
+        "activation_generic": 0,
+        "tap": true,
+        "sacrifice": true,
+        "draw_color": "U"
+      },
+      "oracle_text": "{T}, Sacrifice this artifact: Target creature gains flying until end of turn.\nWhen this artifact is put into a graveyard from the battlefield, you may pay {U}. If you do, draw a card.",
+      "variants": [
+        "activate_pay_0",
+        "activate_unfunded_0",
+        "activate_wrong_color_0",
+        "destroy_pay_0",
+        "destroy_wrong_color_0",
+        "exile_0",
+        "bounce_0",
+        "cast_then_activate_0",
+        "tapped_0",
+        "foreign_owned_destroy_0",
+        "pending_snapshot_0",
+        "effect_enemy_0",
+        "expired_0",
+        "no_target_0",
+        "activate_pay_1",
+        "activate_unfunded_1",
+        "activate_wrong_color_1",
+        "destroy_pay_1",
+        "destroy_wrong_color_1",
+        "exile_1",
+        "bounce_1",
+        "cast_then_activate_1",
+        "tapped_1",
+        "foreign_owned_destroy_1",
+        "pending_snapshot_1",
+        "effect_enemy_1",
+        "expired_1",
+        "no_target_1",
+        "activate_decline_0",
+        "destroy_decline_0"
+      ]
+    }
+  ]
+}

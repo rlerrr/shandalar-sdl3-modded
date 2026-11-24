@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "csvid": 4752,
+  "card": "Saproling Burst",
+  "recipes": [
+    {
+      "family": "spore_upkeep_additional_riders",
+      "version": 2,
+      "params": {
+        "shape": "fade",
+        "mana": [
+          4,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "keywords": [
+          "Fading"
+        ]
+      },
+      "variants": [
+        "upkeep_0",
+        "upkeep_1",
+        "two_tokens_0",
+        "two_tokens_1",
+        "last_counter_0",
+        "last_counter_1",
+        "natural_fade_0",
+        "natural_fade_1",
+        "destroyed_0",
+        "destroyed_1",
+        "bounced_0",
+        "bounced_1",
+        "no_regen_0",
+        "no_regen_1",
+        "replay_0",
+        "replay_1"
+      ],
+      "oracle_text": "Fading 7 (This enchantment enters with seven fade counters on it. At the beginning of your upkeep, remove a fade counter from it. If you can't, sacrifice it.)\nRemove a fade counter from this enchantment: Create a green Saproling creature token. It has \"This token's power and toughness are each equal to the number of fade counters on Saproling Burst.\"\nWhen this enchantment leaves the battlefield, destroy all tokens created with this enchantment. They can't be regenerated."
+    }
+  ]
+}

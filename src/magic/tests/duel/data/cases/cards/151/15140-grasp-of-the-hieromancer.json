@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Grasp of the Hieromancer",
+  "csvid": 15140,
+  "recipes": [
+    {
+      "family": "attack_trigger_block_and_target",
+      "version": 2,
+      "params": {
+        "csvid": 15140,
+        "cost": "{1}{W}",
+        "choices": [
+          "tap_0",
+          "tap_1",
+          "ally_attacks_0",
+          "ally_attacks_1",
+          "hexproof_0",
+          "hexproof_1"
+        ]
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature gets +1/+1 and has \"Whenever this creature attacks, tap target creature defending player controls.\"",
+      "variants": [
+        "tap_0",
+        "tap_1",
+        "ally_attacks_0",
+        "ally_attacks_1",
+        "hexproof_0",
+        "hexproof_1"
+      ]
+    }
+  ]
+}

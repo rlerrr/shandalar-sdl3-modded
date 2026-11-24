@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 13478,
+  "card": "Loathsome Catoblepas",
+  "recipes": [
+    {
+      "family": "departure_damage_and_removal",
+      "version": 2,
+      "params": {
+        "csvid": 13478,
+        "printed_cost": "{5}{B}",
+        "keywords": []
+      },
+      "oracle_text": "{2}{G}: This creature must be blocked this turn if able.\nWhen this creature dies, target creature an opponent controls gets -3/-3 until end of turn.",
+      "variants": [
+        "death_0",
+        "bounce_0",
+        "paid_block_0",
+        "death_1",
+        "bounce_1",
+        "paid_block_1"
+      ]
+    }
+  ]
+}

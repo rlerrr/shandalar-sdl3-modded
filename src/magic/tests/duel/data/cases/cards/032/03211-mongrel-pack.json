@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Mongrel Pack",
+  "csvid": 3211,
+  "recipes": [
+    {
+      "family": "death_fixed_token_creation",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "trigger": "self_combat",
+        "kind": "Creature",
+        "keywords": [],
+        "mana_ability": false,
+        "token": {
+          "name": "Dog",
+          "count": 4,
+          "power": 1,
+          "toughness": 1,
+          "color": 8,
+          "artifact": false,
+          "subtypes": [
+            "Dog"
+          ],
+          "tapped": false,
+          "legendary": false
+        }
+      },
+      "oracle_text": "When this creature dies during combat, create four 1/1 green Dog creature tokens.",
+      "variants": [
+        "effect_0",
+        "owned_elsewhere_0",
+        "bounce_0",
+        "exile_0",
+        "kill_created_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cast_only_0",
+        "unaffordable_0",
+        "countered_0",
+        "noncombat_death_0",
+        "combat_blocked_0",
+        "other_death_0",
+        "effect_1",
+        "owned_elsewhere_1",
+        "bounce_1",
+        "exile_1",
+        "kill_created_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cast_only_1",
+        "unaffordable_1",
+        "countered_1",
+        "noncombat_death_1",
+        "combat_blocked_1",
+        "other_death_1"
+      ]
+    }
+  ]
+}

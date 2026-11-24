@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "csvid": 13392,
+  "card": "Boon Satyr",
+  "recipes": [
+    {
+      "family": "bestow_activated_and_tempo",
+      "version": 2,
+      "params": {
+        "csvid": 13392,
+        "normal_cost": "{1}{G}{G}",
+        "bestow_cost": "{3}{G}{G}",
+        "bonus": [
+          4,
+          2
+        ],
+        "creature": [
+          4,
+          2
+        ]
+      },
+      "oracle_text": "Flash\nBestow {3}{G}{G} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nEnchanted creature gets +4/+2.",
+      "variants": [
+        "flash_creature_0",
+        "flash_bestow_0",
+        "flash_then_detach_0",
+        "flash_target_lost_0",
+        "flash_creature_1",
+        "flash_bestow_1",
+        "flash_then_detach_1",
+        "flash_target_lost_1"
+      ]
+    }
+  ]
+}

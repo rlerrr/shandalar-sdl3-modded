@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Spirit of the Hearth",
+  "csvid": 9876,
+  "recipes": [
+    {
+      "family": "player_hexproof",
+      "version": 2,
+      "oracle_text": "Flying\nYou have hexproof. (You can't be the target of spells or abilities your opponents control.)",
+      "params": {
+        "mana": "{4}{W}{W}",
+        "branch": "flying",
+        "type_line": "Creature — Cat Spirit",
+        "power": 4,
+        "toughness": 5
+      },
+      "variants": [
+        "unprotected_0",
+        "opponent_blocked_0",
+        "own_target_0",
+        "enemy_self_target_0",
+        "symmetric_damage_0",
+        "ability_blocked_0",
+        "ability_unprotected_0",
+        "removed_0",
+        "late_entry_0",
+        "snapshot_0",
+        "flying_ground_0",
+        "flying_blocked_0",
+        "unprotected_1",
+        "opponent_blocked_1",
+        "own_target_1",
+        "enemy_self_target_1",
+        "symmetric_damage_1",
+        "ability_blocked_1",
+        "ability_unprotected_1",
+        "removed_1",
+        "late_entry_1",
+        "snapshot_1",
+        "flying_ground_1",
+        "flying_blocked_1"
+      ]
+    }
+  ]
+}

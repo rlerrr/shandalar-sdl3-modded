@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Fiery Gambit",
+  "csvid": 6664,
+  "recipes": [
+    {
+      "family": "coin_flip_repeated_flips",
+      "version": 2,
+      "params": {
+        "csvid": 6664,
+        "casting_cost": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "rules": "Flip a coin until you lose a flip or choose to stop flipping. If you lose a flip, Fiery Gambit has no effect. If you win one or more flips, Fiery Gambit deals 3 damage to target creature. If you win two or more flips, Fiery Gambit deals 6 damage to each opponent. If you win three or more flips, draw nine cards and untap all lands you control."
+      },
+      "oracle_text": "Flip a coin until you lose a flip or choose to stop flipping. If you lose a flip, Fiery Gambit has no effect. If you win one or more flips, Fiery Gambit deals 3 damage to target creature. If you win two or more flips, Fiery Gambit deals 6 damage to each opponent. If you win three or more flips, draw nine cards and untap all lands you control.",
+      "variants": [
+        "lose_first_0",
+        "lose_first_1",
+        "stop_one_0",
+        "stop_one_1",
+        "stop_two_0",
+        "stop_two_1",
+        "stop_three_0",
+        "stop_three_1",
+        "lose_after_two_0",
+        "lose_after_two_1",
+        "lose_after_three_0",
+        "lose_after_three_1",
+        "target_fizzle_0",
+        "target_fizzle_1"
+      ]
+    }
+  ]
+}

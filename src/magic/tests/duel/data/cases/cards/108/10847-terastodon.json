@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 10847,
+  "card": "Terastodon",
+  "recipes": [
+    {
+      "family": "entry_follow_on_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 10847,
+        "printed_cost": "{6}{G}{G}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, you may destroy up to three target noncreature permanents. For each permanent put into a graveyard this way, its controller creates a 3/3 green Elephant creature token.",
+      "variants": [
+        "three_0",
+        "decline_0",
+        "indestructible_0",
+        "one_each_0",
+        "three_1",
+        "decline_1",
+        "indestructible_1",
+        "one_each_1"
+      ]
+    }
+  ]
+}

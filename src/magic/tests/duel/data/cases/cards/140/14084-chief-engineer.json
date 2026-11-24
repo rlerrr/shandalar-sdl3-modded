@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Chief Engineer",
+  "csvid": 14084,
+  "recipes": [
+    {
+      "family": "convoke_held_additions",
+      "version": 2,
+      "params": {
+        "csvid": 14084,
+        "printed_mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "rules": "Artifact spells you cast have convoke. (Your creatures can help cast those spells. Each creature you tap while casting an artifact spell pays for {1} or one mana of that creature's color.)"
+      },
+      "oracle_text": "Artifact spells you cast have convoke. (Your creatures can help cast those spells. Each creature you tap while casting an artifact spell pays for {1} or one mana of that creature's color.)",
+      "variants": [
+        "legacy_transport_0",
+        "legacy_transport_1",
+        "ordinary_cast_0",
+        "ordinary_cast_1",
+        "normal_payment_0",
+        "normal_payment_1",
+        "grant_lost_0",
+        "grant_lost_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Welkin Guide",
+  "csvid": 10101,
+  "recipes": [
+    {
+      "family": "entry_interaction_combat",
+      "version": 2,
+      "params": {
+        "csvid": 10101,
+        "cost": "{4}{W}",
+        "choices": [
+          "own_0",
+          "own_1",
+          "foe_0",
+          "foe_1",
+          "expire_0",
+          "expire_1",
+          "flying_source_0",
+          "flying_source_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, target creature gets +2/+2 and gains flying until end of turn.",
+      "variants": [
+        "own_0",
+        "own_1",
+        "foe_0",
+        "foe_1",
+        "expire_0",
+        "expire_1",
+        "flying_source_0",
+        "flying_source_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

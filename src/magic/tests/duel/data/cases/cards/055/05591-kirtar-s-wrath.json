@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "card": "Kirtar's Wrath",
+  "csvid": 5591,
+  "recipes": [
+    {
+      "family": "threshold_global_effects",
+      "version": 2,
+      "params": {
+        "csvid": 5591,
+        "branch": "wrath",
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "Destroy all creatures. They can't be regenerated.\nThreshold — If there are seven or more cards in your graveyard, instead destroy all creatures, then create two 1/1 white Spirit creature tokens with flying. Creatures destroyed this way can't be regenerated.",
+      "variants": [
+        "six_0",
+        "six_1",
+        "seven_0",
+        "seven_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "own_death_0",
+        "own_death_1",
+        "spirits_fly_0",
+        "spirits_fly_1",
+        "shield_0",
+        "shield_1",
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "countered_0",
+        "countered_1",
+        "gain_seventh_0",
+        "gain_seventh_1"
+      ]
+    }
+  ]
+}

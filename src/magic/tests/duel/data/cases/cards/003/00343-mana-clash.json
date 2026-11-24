@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Mana Clash",
+  "csvid": 343,
+  "recipes": [
+    {
+      "family": "coin_flip_repeated_flips",
+      "version": 2,
+      "params": {
+        "csvid": 343,
+        "casting_cost": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "rules": "You and target opponent each flip a coin. Mana Clash deals 1 damage to each player whose coin comes up tails. Repeat this process until both players' coins come up heads on the same flip."
+      },
+      "oracle_text": "You and target opponent each flip a coin. Mana Clash deals 1 damage to each player whose coin comes up tails. Repeat this process until both players' coins come up heads on the same flip.",
+      "variants": [
+        "immediate_0",
+        "immediate_1",
+        "repeat_0",
+        "repeat_1",
+        "asymmetric_0",
+        "asymmetric_1",
+        "no_target_0",
+        "no_target_1",
+        "armor_0",
+        "armor_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Magus of the Moon",
+  "csvid": 1261,
+  "recipes": [
+    {
+      "family": "land_type_mana_scope",
+      "version": 2,
+      "params": {
+        "schema": 8,
+        "form": "creature",
+        "scope": "nonbasic_lands",
+        "update": "replace",
+        "types": [
+          "Mountain"
+        ],
+        "draws": 0
+      },
+      "oracle_text": "Nonbasic lands are Mountains.",
+      "variants": [
+        "domain_0",
+        "owner_basic_0",
+        "owner_nonbasic_0",
+        "enemy_basic_0",
+        "enemy_nonbasic_0",
+        "later_own_entry_0",
+        "later_enemy_entry_0",
+        "restore_after_removal_0",
+        "pending_replay_0",
+        "nonland_unchanged_0",
+        "repeat_denied_0",
+        "unfunded_0",
+        "preserve_artifact_type_0",
+        "domain_1",
+        "owner_basic_1",
+        "owner_nonbasic_1",
+        "enemy_basic_1",
+        "enemy_nonbasic_1",
+        "later_own_entry_1",
+        "later_enemy_entry_1",
+        "restore_after_removal_1",
+        "pending_replay_1",
+        "nonland_unchanged_1",
+        "repeat_denied_1",
+        "unfunded_1",
+        "preserve_artifact_type_1"
+      ]
+    }
+  ]
+}

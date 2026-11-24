@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Kozilek, Butcher of Truth",
+  "csvid": 10974,
+  "recipes": [
+    {
+      "family": "attack_trigger_follow_on_annihilator_and_myriad",
+      "version": 2,
+      "params": {
+        "csvid": 10974,
+        "printed_mana": "{10}",
+        "rules": "When you cast this spell, draw four cards.\nAnnihilator 4 (Whenever this creature attacks, defending player sacrifices four permanents of their choice.)\nWhen Kozilek is put into a graveyard from anywhere, its owner shuffles their graveyard into their library."
+      },
+      "oracle_text": "When you cast this spell, draw four cards.\nAnnihilator 4 (Whenever this creature attacks, defending player sacrifices four permanents of their choice.)\nWhen Kozilek is put into a graveyard from anywhere, its owner shuffles their graveyard into their library.",
+      "variants": [
+        "draw_cast_attack_0",
+        "draw_cast_attack_1",
+        "murder_shuffle_0",
+        "murder_shuffle_1",
+        "discard_shuffle_0",
+        "discard_shuffle_1",
+        "short_defender_0",
+        "short_defender_1"
+      ]
+    }
+  ]
+}

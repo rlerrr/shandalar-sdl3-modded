@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "csvid": 7162,
+  "card": "Battle-Mad Ronin",
+  "recipes": [
+    {
+      "family": "required_attack_combat_riders",
+      "version": 2,
+      "oracle_text": "Bushido 2 (Whenever this creature blocks or becomes blocked, it gets +2/+2 until end of turn.)\nThis creature attacks each combat if able.",
+      "params": {
+        "mode": "ronin",
+        "costs": {
+          "printed": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        "power": 1,
+        "toughness": 1,
+        "keywords": [
+          "Bushido"
+        ]
+      },
+      "variants": [
+        "omitted_0",
+        "omitted_1",
+        "tapped_0",
+        "tapped_1",
+        "sick_0",
+        "sick_1",
+        "pacified_0",
+        "pacified_1",
+        "opponent_turn_0",
+        "opponent_turn_1",
+        "competing_selected_0",
+        "competing_selected_1",
+        "two_required_0",
+        "two_required_1",
+        "paid_fresh_0",
+        "paid_fresh_1",
+        "paid_next_turn_0",
+        "paid_next_turn_1",
+        "unfunded_0",
+        "unfunded_1",
+        "proposed_replay_0",
+        "proposed_replay_1",
+        "blocked_bushido_0",
+        "blocked_bushido_1",
+        "defend_bushido_0",
+        "defend_bushido_1",
+        "bushido_cleanup_0",
+        "bushido_cleanup_1",
+        "wrong_color_0",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

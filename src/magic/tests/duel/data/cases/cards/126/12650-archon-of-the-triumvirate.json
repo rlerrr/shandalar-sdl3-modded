@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Archon of the Triumvirate",
+  "csvid": 12650,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "detain_effects",
+      "version": 2,
+      "oracle_text": "Flying\nWhenever this creature attacks, detain up to two target nonland permanents your opponents control. (Until your next turn, those permanents can't attack or block and their activated abilities can't be activated.)",
+      "params": {
+        "follow": "archon",
+        "callback": "archon_of_the_triumvirate",
+        "etb": false,
+        "flying": true,
+        "draw": false,
+        "maximum": 2,
+        "nonland": true,
+        "mana": [
+          5,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "variants": [
+        "attack_two_0",
+        "attack_two_1",
+        "attack_one_0",
+        "attack_one_1",
+        "zero_0",
+        "zero_1",
+        "fresh_0",
+        "fresh_1",
+        "restraint_0",
+        "restraint_1",
+        "flying_ground_0",
+        "flying_ground_1",
+        "flying_reach_0",
+        "flying_reach_1",
+        "expiry_0",
+        "expiry_1",
+        "short_0",
+        "short_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "card": "Gravepurge",
+  "csvid": 12192,
+  "recipes": [
+    {
+      "family": "graveyard_library_top",
+      "version": 2,
+      "oracle_text": "Put any number of target creature cards from your graveyard on top of your library.\nDraw a card.",
+      "params": {
+        "scope": "creature",
+        "maximum": null,
+        "draw": "immediate",
+        "mana": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "instant": true
+      },
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "zero_targets_0",
+        "wrong_type_0",
+        "empty_graveyard_0",
+        "other_graveyard_0",
+        "graveyard_shroud_0",
+        "mixed_filter_0",
+        "duplicate_targets_0",
+        "target_lost_0",
+        "partially_lost_0",
+        "countered_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "pending_replay_0",
+        "off_turn_0",
+        "four_targets_0",
+        "effect_1",
+        "alternate_1",
+        "zero_targets_1",
+        "wrong_type_1",
+        "empty_graveyard_1",
+        "other_graveyard_1",
+        "graveyard_shroud_1",
+        "mixed_filter_1",
+        "duplicate_targets_1",
+        "target_lost_1",
+        "partially_lost_1",
+        "countered_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "pending_replay_1",
+        "off_turn_1",
+        "four_targets_1",
+        "order_forward_0",
+        "order_reverse_0"
+      ]
+    }
+  ]
+}

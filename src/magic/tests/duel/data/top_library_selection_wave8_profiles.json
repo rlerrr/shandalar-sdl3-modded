@@ -1,0 +1,630 @@
+{
+  "sources": {
+    "Strategic Planning": {
+      "oracle_id": "02b5acf3-47cb-4d39-9307-e02656f1879b",
+      "name": "Strategic Planning",
+      "oracle_text": "Look at the top three cards of your library. Put one of them into your hand and the rest into your graveyard.",
+      "mana_cost": "{1}{U}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/khm/77/strategic-planning?utm_source=api"
+    },
+    "Beast Hunt": {
+      "oracle_id": "069c8fa1-fa04-4620-9356-a618158dad3e",
+      "name": "Beast Hunt",
+      "oracle_text": "Reveal the top three cards of your library. Put all creature cards revealed this way into your hand and the rest into your graveyard.",
+      "mana_cost": "{3}{G}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/zen/158/beast-hunt?utm_source=api"
+    },
+    "Grisly Salvage": {
+      "oracle_id": "a89ebf63-63c9-42cd-98b4-ec852cd9b0a8",
+      "name": "Grisly Salvage",
+      "oracle_text": "Reveal the top five cards of your library. You may put a creature or land card from among them into your hand. Put the rest into your graveyard.",
+      "mana_cost": "{B}{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tdc/290/grisly-salvage?utm_source=api"
+    },
+    "Glimpse the Future": {
+      "oracle_id": "ff5a2bcf-efd0-4bdb-af52-21a93447c54c",
+      "name": "Glimpse the Future",
+      "oracle_text": "Look at the top three cards of your library. Put one of them into your hand and the rest into your graveyard.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m14/58/glimpse-the-future?utm_source=api"
+    },
+    "Commune with the Gods": {
+      "oracle_id": "6042a806-6e6a-4f1d-9563-5932a17f32f9",
+      "name": "Commune with the Gods",
+      "oracle_text": "Reveal the top five cards of your library. You may put a creature or enchantment card from among them into your hand. Put the rest into your graveyard.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ema/162/commune-with-the-gods?utm_source=api"
+    },
+    "Bitter Revelation": {
+      "oracle_id": "f3e025ce-6114-42d0-842f-73366c853657",
+      "name": "Bitter Revelation",
+      "oracle_text": "Look at the top four cards of your library. Put two of them into your hand and the rest into your graveyard. You lose 2 life.",
+      "mana_cost": "{3}{B}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmr/109/bitter-revelation?utm_source=api"
+    },
+    "Scout the Borders": {
+      "oracle_id": "08781f2a-0d43-495c-aac8-7ff7a2e5752f",
+      "name": "Scout the Borders",
+      "oracle_text": "Reveal the top five cards of your library. You may put a creature or land card from among them into your hand. Put the rest into your graveyard.",
+      "mana_cost": "{2}{G}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ktk/148/scout-the-borders?utm_source=api"
+    },
+    "Pieces of the Puzzle": {
+      "oracle_id": "7b599b4d-95bc-4ed2-a167-84a697944747",
+      "name": "Pieces of the Puzzle",
+      "oracle_text": "Reveal the top five cards of your library. Put up to two instant and/or sorcery cards from among them into your hand and the rest into your graveyard.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/soi/78/pieces-of-the-puzzle?utm_source=api"
+    },
+    "Gather the Pack": {
+      "oracle_id": "8f31d870-872d-4671-80d1-8d2ecd2c38d2",
+      "name": "Gather the Pack",
+      "oracle_text": "Reveal the top five cards of your library. You may put a creature card from among them into your hand. Put the rest into your graveyard.\nSpell mastery — If there are two or more instant and/or sorcery cards in your graveyard, put up to two creature cards from among the revealed cards into your hand instead of one.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Spell mastery"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ori/178/gather-the-pack?utm_source=api"
+    },
+    "Benefaction of Rhonas": {
+      "oracle_id": "02da2cbf-50d6-4c37-8a9f-40db1f7954be",
+      "name": "Benefaction of Rhonas",
+      "oracle_text": "Reveal the top five cards of your library. You may put a creature card and/or an enchantment card from among them into your hand. Put the rest into your graveyard.",
+      "mana_cost": "{2}{G}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/akh/156/benefaction-of-rhonas?utm_source=api"
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Darksteel Relic": {
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "name": "Darksteel Relic",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+    },
+    "Divination": {
+      "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+      "name": "Divination",
+      "oracle_text": "Draw two cards.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m19/51/divination?utm_source=api"
+    },
+    "Fervor": {
+      "oracle_id": "8e0cea9c-3110-4728-9378-76849e33bb90",
+      "name": "Fervor",
+      "oracle_text": "Creatures you control have haste. (They can attack and {T} as soon as they come under your control.)",
+      "mana_cost": "{2}{R}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m13/129/fervor?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Naturalize": {
+      "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+      "name": "Naturalize",
+      "oracle_text": "Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Shock": {
+      "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+      "name": "Shock",
+      "oracle_text": "Shock deals 2 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+    },
+    "Swamp": {
+      "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+    },
+    "Walking Corpse": {
+      "oracle_id": "fea95888-e16a-4209-9cd4-623f7f4d2f67",
+      "name": "Walking Corpse",
+      "oracle_text": "",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Zombie",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m21/128/walking-corpse?utm_source=api"
+    },
+    "Nyxborn Shieldmate": {
+      "oracle_id": "a1012f33-7ebd-47c6-b670-1b0dc046fbce",
+      "name": "Nyxborn Shieldmate",
+      "oracle_text": "Bestow {2}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nEnchanted creature gets +1/+2.",
+      "mana_cost": "{W}",
+      "type_line": "Enchantment Creature — Human Soldier",
+      "power": "1",
+      "toughness": "2",
+      "keywords": [
+        "Bestow"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/bng/21/nyxborn-shieldmate?utm_source=api"
+    },
+    "Tormod's Crypt": {
+      "oracle_id": "1573f7f9-672c-421a-b1ac-3d0d8aea59ca",
+      "name": "Tormod's Crypt",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/235/tormods-crypt?utm_source=api"
+    }
+  },
+  "registry": {
+    "Beast Hunt": {
+      "csvid": 10503,
+      "iid": 946,
+      "name": "Beast Hunt",
+      "handler": "manalinkeh_card_beast_hunt",
+      "kind": "card"
+    },
+    "Bitter Revelation": {
+      "csvid": 14228,
+      "iid": 1014,
+      "name": "Bitter Revelation",
+      "handler": "manalinkeh_card_bitter_revelation",
+      "kind": "card"
+    },
+    "Commune with the Gods": {
+      "csvid": 13411,
+      "iid": 1886,
+      "name": "Commune with the Gods",
+      "handler": "manalinkeh_card_commune_with_the_gods",
+      "kind": "card"
+    },
+    "Counterspell": {
+      "csvid": 48,
+      "iid": 1996,
+      "name": "Counterspell",
+      "handler": "manalinkeh_card_counterspell",
+      "kind": "card"
+    },
+    "Darksteel Relic": {
+      "csvid": 11586,
+      "iid": 2259,
+      "name": "Darksteel Relic",
+      "handler": "manalinkeh_card_darksteel_myr",
+      "kind": "card"
+    },
+    "Divination": {
+      "csvid": 10405,
+      "iid": 2609,
+      "name": "Divination",
+      "handler": "manalinkeh_card_divination",
+      "kind": "card"
+    },
+    "Fervor": {
+      "csvid": 1604,
+      "iid": 3365,
+      "name": "Fervor",
+      "handler": "manalinkeh_card_fervor",
+      "kind": "card"
+    },
+    "Forest": {
+      "csvid": 91,
+      "iid": 2,
+      "name": "Forest",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Glimpse the Future": {
+      "csvid": 13293,
+      "iid": 3930,
+      "name": "Glimpse the Future",
+      "handler": "manalinkeh_card_glimpse_the_future",
+      "kind": "card"
+    },
+    "Grisly Salvage": {
+      "csvid": 12739,
+      "iid": 4247,
+      "name": "Grisly Salvage",
+      "handler": "manalinkeh_card_grisly_salvage",
+      "kind": "card"
+    },
+    "Grizzly Bears": {
+      "csvid": 106,
+      "iid": 4259,
+      "name": "Grizzly Bears",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Hill Giant": {
+      "csvid": 110,
+      "iid": 4570,
+      "name": "Hill Giant",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Island": {
+      "csvid": 126,
+      "iid": 1,
+      "name": "Island",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Mountain": {
+      "csvid": 164,
+      "iid": 3,
+      "name": "Mountain",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Naturalize": {
+      "csvid": 1096,
+      "iid": 6485,
+      "name": "Naturalize",
+      "handler": "manalinkeh_card_disenchant",
+      "kind": "card"
+    },
+    "Pieces of the Puzzle": {
+      "csvid": 15917,
+      "iid": 15994,
+      "name": "Pieces of the Puzzle",
+      "handler": "manalinkeh_card_pieces_of_the_puzzle",
+      "kind": "card"
+    },
+    "Plains": {
+      "csvid": 188,
+      "iid": 4,
+      "name": "Plains",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Scout the Borders": {
+      "csvid": 14372,
+      "iid": 8351,
+      "name": "Scout the Borders",
+      "handler": "manalinkeh_card_grisly_salvage",
+      "kind": "card"
+    },
+    "Shock": {
+      "csvid": 1147,
+      "iid": 8661,
+      "name": "Shock",
+      "handler": "manalinkeh_card_shock2",
+      "kind": "card"
+    },
+    "Strategic Planning": {
+      "csvid": 4255,
+      "iid": 14905,
+      "name": "Strategic Planning",
+      "handler": "manalinkeh_card_glimpse_the_future",
+      "kind": "card"
+    },
+    "Swamp": {
+      "csvid": 239,
+      "iid": 0,
+      "name": "Swamp",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Walking Corpse": {
+      "csvid": 12124,
+      "iid": 10747,
+      "name": "Walking Corpse",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Gather the Pack": {
+      "csvid": 15133,
+      "iid": 12747,
+      "name": "Gather the Pack",
+      "handler": "manalinkeh_card_gather_the_pack",
+      "kind": "card"
+    },
+    "Benefaction of Rhonas": {
+      "csvid": 16845,
+      "iid": 16939,
+      "name": "Benefaction of Rhonas",
+      "handler": "manalinkeh_card_benefaction_of_rhonas",
+      "kind": "card"
+    },
+    "Nyxborn Shieldmate": {
+      "csvid": 13765,
+      "iid": 6736,
+      "name": "Nyxborn Shieldmate",
+      "handler": "manalinkeh_card_nyxborn_shieldmate",
+      "kind": "card"
+    },
+    "Tormod's Crypt": {
+      "csvid": 368,
+      "iid": 10094,
+      "name": "Tormod's Crypt",
+      "handler": "manalinkeh_card_tormods_crypt",
+      "kind": "card"
+    }
+  }
+}

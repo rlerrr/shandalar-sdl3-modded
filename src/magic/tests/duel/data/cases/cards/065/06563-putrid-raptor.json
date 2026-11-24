@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Putrid Raptor",
+  "csvid": 6563,
+  "recipes": [
+    {
+      "family": "morph_alternate_payments",
+      "version": 2,
+      "params": {
+        "payment": "Discard a Zombie card.",
+        "mode": "zombie",
+        "keywords": [],
+        "power": 4,
+        "toughness": 4,
+        "mana": [
+          4,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "color": 2
+      },
+      "oracle_text": "Morph—Discard a Zombie card. (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+      "variants": [
+        "hidden_0",
+        "printed_0",
+        "paid_0",
+        "denied_0",
+        "opponent_turn_0",
+        "pending_spell_0",
+        "replay_0",
+        "cast_short_0",
+        "hidden_1",
+        "printed_1",
+        "paid_1",
+        "denied_1",
+        "opponent_turn_1",
+        "pending_spell_1",
+        "replay_1",
+        "cast_short_1",
+        "cancel_0"
+      ]
+    }
+  ]
+}

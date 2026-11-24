@@ -1,0 +1,584 @@
+{
+  "sources": {
+    "Adventuring Gear": {
+      "oracle": {
+        "oracle_id": "17042684-7af4-43a6-88c7-885032cfb27c",
+        "name": "Adventuring Gear",
+        "oracle_text": "Landfall — Whenever a land you control enters, equipped creature gets +2/+2 until end of turn.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+        "mana_cost": "{1}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip",
+          "Landfall"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/249/adventuring-gear?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10492,
+        "iid": 240,
+        "name": "Adventuring Gear",
+        "handler": "manalinkeh_card_adventuring_gear",
+        "kind": "card"
+      }
+    },
+    "Calcite Snapper": {
+      "oracle": {
+        "oracle_id": "36593200-e53c-46e4-a04e-8deec8273c65",
+        "name": "Calcite Snapper",
+        "oracle_text": "Shroud (This creature can't be the target of spells or abilities.)\nLandfall — Whenever a land you control enters, you may switch this creature's power and toughness until end of turn.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Creature — Turtle",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Shroud",
+          "Landfall"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/25/calcite-snapper?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10737,
+        "iid": 1441,
+        "name": "Calcite Snapper",
+        "handler": "manalinkeh_card_calcite_snapper",
+        "kind": "card"
+      }
+    },
+    "Surrakar Marauder": {
+      "oracle": {
+        "oracle_id": "23c52252-1e65-4e04-98d3-0ac06a565016",
+        "name": "Surrakar Marauder",
+        "oracle_text": "Landfall — Whenever a land you control enters, this creature gains intimidate until end of turn. (It can't be blocked except by artifact creatures and/or creatures that share a color with it.)",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Surrakar",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/113/surrakar-marauder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10681,
+        "iid": 9574,
+        "name": "Surrakar Marauder",
+        "handler": "manalinkeh_card_surrakar_marauder",
+        "kind": "card"
+      }
+    },
+    "Turntimber Basilisk": {
+      "oracle": {
+        "oracle_id": "661a99ef-8d5b-4aac-98f6-52b17a8ecf52",
+        "name": "Turntimber Basilisk",
+        "oracle_text": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\nLandfall — Whenever a land you control enters, you may have target creature block this creature this turn if able.",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Creature — Basilisk",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Deathtouch",
+          "Landfall"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/e01/76/turntimber-basilisk?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10695,
+        "iid": 10275,
+        "name": "Turntimber Basilisk",
+        "handler": "manalinkeh_card_turntimber_basilisk",
+        "kind": "card"
+      }
+    },
+    "Geyserfield Stalker": {
+      "oracle": {
+        "oracle_id": "d93d98ef-a5b6-4d6f-9828-fd5943471d0f",
+        "name": "Geyserfield Stalker",
+        "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nLandfall — Whenever a land you control enters, this creature gets +2/+2 until end of turn.",
+        "mana_cost": "{4}{B}",
+        "type_line": "Creature — Elemental",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Menace",
+          "Landfall"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/111/geyserfield-stalker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15331,
+        "iid": 12755,
+        "name": "Geyserfield Stalker",
+        "handler": "manalinkeh_card_geyserfield_stalker",
+        "kind": "card"
+      }
+    },
+    "Embodiment of Fury": {
+      "oracle": {
+        "oracle_id": "0e8adf34-0834-4027-9cda-18df69239e2b",
+        "name": "Embodiment of Fury",
+        "oracle_text": "Trample\nLand creatures you control have trample.\nLandfall — Whenever a land you control enters, you may have target land you control become a 3/3 Elemental creature with haste until end of turn. It's still a land.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [
+          "Trample",
+          "Landfall"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/107/embodiment-of-fury?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15593,
+        "iid": 15668,
+        "name": "Embodiment of Fury",
+        "handler": "manalinkeh_card_embodiment_of_fury",
+        "kind": "card"
+      }
+    },
+    "Embodiment of Insight": {
+      "oracle": {
+        "oracle_id": "ee1c7532-dc97-432d-964f-1c4087ab5248",
+        "name": "Embodiment of Insight",
+        "oracle_text": "Vigilance\nLand creatures you control have vigilance.\nLandfall — Whenever a land you control enters, you may have target land you control become a 3/3 Elemental creature with haste until end of turn. It's still a land.",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Vigilance",
+          "Landfall"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/znc/64/embodiment-of-insight?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15594,
+        "iid": 15669,
+        "name": "Embodiment of Insight",
+        "handler": "manalinkeh_card_embodiment_of_insight",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Darksteel Myr": {
+      "oracle": {
+        "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+        "name": "Darksteel Myr",
+        "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11238,
+        "iid": 2255,
+        "name": "Darksteel Myr",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Drift of Phantasms": {
+      "oracle": {
+        "oracle_id": "6ee51134-c4ad-4101-8ce2-23dde9359cd4",
+        "name": "Drift of Phantasms",
+        "oracle_text": "Defender (This creature can't attack.)\nFlying\nTransmute {1}{U}{U} ({1}{U}{U}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Spirit",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Defender",
+          "Transmute"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/42/drift-of-phantasms?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7828,
+        "iid": 2753,
+        "name": "Drift of Phantasms",
+        "handler": "manalinkeh_card_drift_of_phantasms",
+        "kind": "card"
+      }
+    },
+    "Dryad Arbor": {
+      "oracle": {
+        "oracle_id": "e996cd67-739c-40f4-b276-0042acf26c71",
+        "name": "Dryad Arbor",
+        "oracle_text": "(This land isn't a spell, it's affected by summoning sickness, and it has \"{T}: Add {G}.\")",
+        "mana_cost": "",
+        "type_line": "Land Creature — Forest Dryad",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/273/dryad-arbor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8916,
+        "iid": 2792,
+        "name": "Dryad Arbor",
+        "handler": "manalinkeh_card_dryad_arbor",
+        "kind": "card"
+      }
+    },
+    "Elvish Mystic": {
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13284,
+        "iid": 2982,
+        "name": "Elvish Mystic",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Royal Assassin": {
+      "oracle": {
+        "oracle_id": "9ed6f28f-a3db-48c5-9ab0-b90a7fba5f57",
+        "name": "Royal Assassin",
+        "oracle_text": "{T}: Destroy target tapped creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Human Assassin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/101/royal-assassin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 209,
+        "iid": 8088,
+        "name": "Royal Assassin",
+        "handler": "manalinkeh_card_royal_assassin",
+        "kind": "card"
+      }
+    },
+    "Saltfield Recluse": {
+      "oracle": {
+        "oracle_id": "c87e056a-6067-49e6-b3f7-bba8234777de",
+        "name": "Saltfield Recluse",
+        "oracle_text": "{T}: Target creature gets -2/-0 until end of turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Rebel Cleric",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/40/saltfield-recluse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8842,
+        "iid": 8196,
+        "name": "Saltfield Recluse",
+        "handler": "manalinkeh_card_saltfield_recluse",
+        "kind": "card"
+      }
+    },
+    "Walking Atlas": {
+      "oracle": {
+        "oracle_id": "855a4837-7fc8-4b97-afbd-daa88e322c89",
+        "name": "Walking Atlas",
+        "oracle_text": "{T}: You may put a land card from your hand onto the battlefield.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/131/walking-atlas?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10860,
+        "iid": 10746,
+        "name": "Walking Atlas",
+        "handler": "manalinkeh_card_sakura_tribe_scout",
+        "kind": "card"
+      }
+    },
+    "Icy Manipulator": {
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 119,
+        "iid": 4775,
+        "name": "Icy Manipulator",
+        "handler": "manalinkeh_card_icy_manipulator",
+        "kind": "card"
+      }
+    }
+  }
+}

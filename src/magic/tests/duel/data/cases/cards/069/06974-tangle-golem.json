@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Tangle Golem",
+  "csvid": 6974,
+  "recipes": [
+    {
+      "family": "land_type_affinity",
+      "version": 2,
+      "oracle_text": "Affinity for Forests (This spell costs {1} less to cast for each Forest you control.)",
+      "params": {
+        "mana": 7,
+        "land_type": "Forest",
+        "keyword": "",
+        "power": 5,
+        "toughness": 4
+      },
+      "variants": [
+        "full_price_0",
+        "short_full_0",
+        "own_basics_0",
+        "short_discount_0",
+        "foe_only_0",
+        "unrelated_0",
+        "mixed_0",
+        "typed_nonbasic_0",
+        "hand_grave_library_only_0",
+        "zero_exact_0",
+        "floor_surplus_0",
+        "land_play_0",
+        "remove_land_0",
+        "type_grant_0",
+        "repeat_spell_0",
+        "pending_replay_0",
+        "fresh_attack_0",
+        "full_price_1",
+        "short_full_1",
+        "own_basics_1",
+        "short_discount_1",
+        "foe_only_1",
+        "unrelated_1",
+        "mixed_1",
+        "typed_nonbasic_1",
+        "hand_grave_library_only_1",
+        "zero_exact_1",
+        "floor_surplus_1",
+        "land_play_1",
+        "remove_land_1",
+        "type_grant_1",
+        "repeat_spell_1",
+        "pending_replay_1",
+        "fresh_attack_1"
+      ]
+    }
+  ]
+}

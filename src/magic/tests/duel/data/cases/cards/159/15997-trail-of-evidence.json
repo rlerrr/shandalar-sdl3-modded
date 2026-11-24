@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Trail of Evidence",
+  "csvid": 15997,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "cast_instant_or_sorcery_riders",
+      "version": 2,
+      "oracle_text": "Whenever you cast an instant or sorcery spell, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+      "params": {
+        "effect": "clue",
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "hybrid": [],
+        "stats": [],
+        "keywords": [
+          "Investigate"
+        ]
+      },
+      "variants": [
+        "instant_0",
+        "instant_1",
+        "sorcery_0",
+        "sorcery_1",
+        "own_creature_0",
+        "own_creature_1",
+        "enemy_instant_0",
+        "enemy_instant_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "double_0",
+        "double_1",
+        "clue_paid_0",
+        "clue_paid_1",
+        "clue_short_0",
+        "clue_short_1"
+      ]
+    }
+  ]
+}

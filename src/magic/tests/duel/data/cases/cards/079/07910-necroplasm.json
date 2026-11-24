@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "card": "Necroplasm",
+  "csvid": 7910,
+  "recipes": [
+    {
+      "family": "mill_remaining_dredge_and_graveyard",
+      "version": 2,
+      "params": {
+        "csvid": 7910,
+        "cost": [
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "dredge": 2
+      },
+      "oracle_text": "At the beginning of your upkeep, put a +1/+1 counter on this creature.\nAt the beginning of your end step, destroy each creature with mana value equal to the number of +1/+1 counters on this creature.\nDredge 2 (If you would draw a card, you may mill two cards instead. If you do, return this card from your graveyard to your hand.)",
+      "variants": [
+        "exact_0",
+        "exact_1",
+        "pass_0",
+        "pass_1",
+        "short_0",
+        "short_1",
+        "zero_end_0",
+        "zero_end_1",
+        "opponent_end_0",
+        "opponent_end_1",
+        "growth_self_0",
+        "growth_self_1"
+      ]
+    }
+  ]
+}

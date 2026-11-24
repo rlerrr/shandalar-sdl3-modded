@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 1008,
+  "card": "Death Pit Offering",
+  "recipes": [
+    {
+      "family": "entry_trigger_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 1008,
+        "printed_cost": "{2}{B}{B}",
+        "keywords": []
+      },
+      "oracle_text": "When this enchantment enters, sacrifice all creatures you control.\nCreatures you control get +2/+2.",
+      "variants": [
+        "own_population_0",
+        "empty_own_0",
+        "reload_0",
+        "anthem_removed_0",
+        "own_population_1",
+        "empty_own_1",
+        "reload_1",
+        "anthem_removed_1"
+      ]
+    }
+  ]
+}

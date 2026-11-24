@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 2735,
+  "card": "Knight of the Mists",
+  "recipes": [
+    {
+      "family": "entry_trigger_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 2735,
+        "printed_cost": "{2}{U}",
+        "keywords": [
+          "Flanking"
+        ]
+      },
+      "oracle_text": "Flanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)\nWhen this creature enters, you may pay {U}. If you don't, destroy target Knight and it can't be regenerated.",
+      "variants": [
+        "pay_0",
+        "suppress_regeneration_0",
+        "self_only_0",
+        "flanking_0",
+        "pay_1",
+        "suppress_regeneration_1",
+        "self_only_1",
+        "flanking_1"
+      ]
+    }
+  ]
+}

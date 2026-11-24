@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Reality Ripple",
+  "csvid": 2578,
+  "recipes": [
+    {
+      "family": "phase_untap_creature",
+      "version": 2,
+      "params": {
+        "mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "mechanism": "ripple"
+      },
+      "oracle_text": "Target artifact, creature, or land phases out. (While it's phased out, it's treated as though it doesn't exist. It phases in before its controller untaps during their next untap step.)",
+      "variants": [
+        "opponent_creature_0",
+        "own_creature_0",
+        "opponent_artifact_0",
+        "opponent_land_0",
+        "carry_aura_0",
+        "offturn_0",
+        "insufficient_mana_0",
+        "only_enchantment_0",
+        "lost_target_0",
+        "pending_replay_0",
+        "opponent_creature_1",
+        "own_creature_1",
+        "opponent_artifact_1",
+        "opponent_land_1",
+        "carry_aura_1",
+        "offturn_1",
+        "insufficient_mana_1",
+        "only_enchantment_1",
+        "lost_target_1",
+        "pending_replay_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "csvid": 4105,
+  "card": "Caltrops",
+  "recipes": [
+    {
+      "family": "attack_damage_triggers",
+      "version": 2,
+      "oracle_text": "Whenever a creature attacks, this artifact deals 1 damage to it.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "kind": "caltrops",
+          "printed": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "equip": 0,
+          "creature": false,
+          "clauses": [
+            "Whenever a creature attacks, this artifact deals 1 damage to it."
+          ]
+        }
+      },
+      "variants": [
+        "cast_0",
+        "cast_1",
+        "short_cast_0",
+        "short_cast_1",
+        "hit_0",
+        "hit_1",
+        "idle_0",
+        "idle_1",
+        "opponent_attack_0",
+        "opponent_attack_1",
+        "replay_0",
+        "replay_1",
+        "lethal_0",
+        "lethal_1",
+        "multiple_0",
+        "multiple_1",
+        "own_bystander_0",
+        "own_bystander_1"
+      ]
+    }
+  ]
+}

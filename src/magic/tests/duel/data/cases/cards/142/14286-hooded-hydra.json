@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "csvid": 14286,
+  "card": "Hooded Hydra",
+  "recipes": [
+    {
+      "family": "morph_turn_up_tokens",
+      "version": 2,
+      "oracle_text": "This creature enters with X +1/+1 counters on it.\nWhen this creature dies, create a 1/1 green Snake creature token for each +1/+1 counter on it.\nMorph {3}{G}{G}\nAs this creature is turned face up, put five +1/+1 counters on it.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "kind": "counter_death",
+          "printed": [
+            0,
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "morph": [
+            3,
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "token": "Snake",
+          "token_color": 8,
+          "quantity": 0,
+          "entry": false,
+          "anthem": false,
+          "clauses": [
+            "This creature enters with X +1/+1 counters on it.",
+            "When this creature dies, create a 1/1 green Snake creature token for each +1/+1 counter on it.",
+            "Morph {3}{G}{G}",
+            "As this creature is turned face up, put five +1/+1 counters on it."
+          ],
+          "power": 0,
+          "toughness": 0,
+          "color": 8,
+          "subtypes": [
+            "Snake",
+            "Hydra"
+          ]
+        }
+      },
+      "variants": [
+        "hidden_0",
+        "hidden_1",
+        "faceup_0",
+        "faceup_1",
+        "cast_short_0",
+        "cast_short_1",
+        "countered_0",
+        "countered_1",
+        "flip_0",
+        "flip_1",
+        "offturn_0",
+        "offturn_1",
+        "flip_wrong_color_0",
+        "flip_wrong_color_1",
+        "repeat_0",
+        "repeat_1",
+        "replay_0",
+        "replay_1",
+        "flip_short_0",
+        "flip_short_1",
+        "faceup_zero_0",
+        "faceup_zero_1",
+        "hardcast_death_0",
+        "hardcast_death_1",
+        "hidden_death_0",
+        "hidden_death_1",
+        "flip_death_0",
+        "flip_death_1",
+        "grown_flip_death_0",
+        "grown_flip_death_1",
+        "flip_bounce_0",
+        "flip_bounce_1"
+      ]
+    }
+  ]
+}

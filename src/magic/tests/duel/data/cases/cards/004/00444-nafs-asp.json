@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Nafs Asp",
+  "csvid": 444,
+  "recipes": [
+    {
+      "family": "draw_step_damage_and_upkeep",
+      "version": 2,
+      "params": {
+        "csvid": 444,
+        "printed_cost": "{G}"
+      },
+      "oracle_text": "Whenever this creature deals damage to a player, that player loses 1 life at the beginning of their next draw step unless they pay {1} before that draw step.",
+      "variants": [
+        "short_0",
+        "paid_0",
+        "fog_0",
+        "blocked_0",
+        "removed_after_hit_0",
+        "life_loss_0",
+        "short_1",
+        "paid_1",
+        "fog_1",
+        "blocked_1",
+        "removed_after_hit_1",
+        "life_loss_1"
+      ]
+    }
+  ]
+}

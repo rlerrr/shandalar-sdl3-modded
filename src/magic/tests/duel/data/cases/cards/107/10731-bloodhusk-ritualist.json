@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 10731,
+  "card": "Bloodhusk Ritualist",
+  "recipes": [
+    {
+      "family": "kicker_variable_and_multikicker",
+      "version": 2,
+      "oracle_text": "Multikicker {B} (You may pay an additional {B} any number of times as you cast this spell.)\nWhen this creature enters, target opponent discards a card for each time it was kicked.",
+      "params": {
+        "effect": "discard",
+        "kicker_cost": "{B}",
+        "base_cost": "{2}{B}",
+        "csvid": 10731
+      },
+      "variants": [
+        "declined_0",
+        "paid_0",
+        "once_0",
+        "short_base_0",
+        "countered_0",
+        "replay_0",
+        "declined_1",
+        "paid_1",
+        "once_1",
+        "short_base_1",
+        "countered_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

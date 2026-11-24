@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Seraph of the Masses",
+  "csvid": 14169,
+  "recipes": [
+    {
+      "family": "convoke_held_additions",
+      "version": 2,
+      "params": {
+        "csvid": 14169,
+        "printed_mana": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "rules": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nFlying\nSeraph of the Masses's power and toughness are each equal to the number of creatures you control."
+      },
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nFlying\nSeraph of the Masses's power and toughness are each equal to the number of creatures you control.",
+      "variants": [
+        "dynamic_flying_0",
+        "dynamic_flying_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "paid_entry_0",
+        "paid_entry_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

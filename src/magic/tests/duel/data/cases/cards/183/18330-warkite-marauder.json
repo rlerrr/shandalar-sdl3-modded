@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Warkite Marauder",
+  "csvid": 18330,
+  "recipes": [
+    {
+      "family": "attack_trigger_block_and_target",
+      "version": 2,
+      "params": {
+        "csvid": 18330,
+        "cost": "{1}{U}",
+        "choices": [
+          "lose_flying_0",
+          "lose_flying_1",
+          "layer_0",
+          "layer_1",
+          "lose_activation_0",
+          "lose_activation_1",
+          "hexproof_0",
+          "hexproof_1",
+          "ally_attacks_0",
+          "ally_attacks_1"
+        ]
+      },
+      "oracle_text": "Flying\nWhenever this creature attacks, target creature defending player controls loses all abilities and has base power and toughness 0/1 until end of turn.",
+      "variants": [
+        "lose_flying_0",
+        "lose_flying_1",
+        "layer_0",
+        "layer_1",
+        "lose_activation_0",
+        "lose_activation_1",
+        "hexproof_0",
+        "hexproof_1",
+        "ally_attacks_0",
+        "ally_attacks_1"
+      ]
+    }
+  ]
+}

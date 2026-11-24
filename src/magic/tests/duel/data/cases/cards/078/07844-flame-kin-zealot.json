@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Flame-Kin Zealot",
+  "csvid": 7844,
+  "recipes": [
+    {
+      "family": "entry_rider_combat_modifiers",
+      "version": 2,
+      "params": {
+        "csvid": 7844,
+        "cost": "{1}{R}{R}{W}",
+        "choices": [
+          "team_0",
+          "team_1",
+          "source_haste_0",
+          "source_haste_1",
+          "fresh_haste_0",
+          "fresh_haste_1",
+          "late_creature_0",
+          "late_creature_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, creatures you control get +1/+1 and gain haste until end of turn.",
+      "variants": [
+        "team_0",
+        "team_1",
+        "source_haste_0",
+        "source_haste_1",
+        "fresh_haste_0",
+        "fresh_haste_1",
+        "late_creature_0",
+        "late_creature_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

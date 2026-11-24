@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Molten Disaster",
+  "csvid": 8977,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "kicker_alternate_payment_and_damage",
+      "version": 2,
+      "oracle_text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nIf this spell was kicked, it has split second. (As long as this spell is on the stack, players can't cast spells or activate abilities that aren't mana abilities.)\nMolten Disaster deals X damage to each creature without flying and each player.",
+      "params": {
+        "model": 8977,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "kicker_mana": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "x": 3
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "lockout_0",
+        "lockout_1",
+        "base_response_0",
+        "base_response_1",
+        "mana_response_0",
+        "mana_response_1"
+      ]
+    }
+  ]
+}

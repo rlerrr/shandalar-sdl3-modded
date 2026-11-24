@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "card": "Dampen Thought",
+  "csvid": 7190,
+  "recipes": [
+    {
+      "family": "mill_library_spells",
+      "version": 2,
+      "params": {
+        "csvid": 7190,
+        "printed_cost": "{1}{U}",
+        "clauses": [
+          "Target player mills four cards.",
+          "Splice onto Arcane {1}{U} (As you cast an Arcane spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card's effects to that spell.)"
+        ],
+        "modes": [
+          "ordinary",
+          "short_library",
+          "offturn",
+          "countered"
+        ],
+        "human_modes": [
+          "self_target",
+          "splice",
+          "decline_splice",
+          "short_splice"
+        ]
+      },
+      "oracle_text": "Target player mills four cards.\nSplice onto Arcane {1}{U} (As you cast an Arcane spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card's effects to that spell.)",
+      "variants": [
+        "ordinary_0",
+        "ordinary_1",
+        "short_library_0",
+        "short_library_1",
+        "offturn_0",
+        "offturn_1",
+        "countered_0",
+        "countered_1",
+        "self_target_0",
+        "splice_0",
+        "decline_splice_0",
+        "short_splice_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,823 @@
+{
+  "sources": {
+    "Balustrade Spy": {
+      "oracle": {
+        "oracle_id": "39b4a47a-df51-4bd9-9a20-43ac80a5d352",
+        "name": "Balustrade Spy",
+        "oracle_text": "Flying\nWhen this creature enters, target player reveals cards from the top of their library until they reveal a land card, then puts those cards into their graveyard.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Vampire Rogue",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/66/balustrade-spy?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12888,
+        "iid": 834,
+        "name": "Balustrade Spy",
+        "handler": "manalinkeh_card_balustrade_spy",
+        "kind": "card"
+      }
+    },
+    "Merrow Harbinger": {
+      "oracle": {
+        "oracle_id": "035ee753-232f-4ba2-afbf-8d1eb162e6f8",
+        "name": "Merrow Harbinger",
+        "oracle_text": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)\nWhen this creature enters, you may search your library for a Merfolk card, reveal it, then shuffle and put that card on top.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Merfolk Wizard",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Landwalk",
+          "Islandwalk"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/73/merrow-harbinger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9210,
+        "iid": 6066,
+        "name": "Merrow Harbinger",
+        "handler": "manalinkeh_card_merrow_harbinger",
+        "kind": "card"
+      }
+    },
+    "Silvergill Adept": {
+      "oracle": {
+        "oracle_id": "cb66c5ec-e7a4-4bd2-b825-6c9b846ba40d",
+        "name": "Silvergill Adept",
+        "oracle_text": "As an additional cost to cast this spell, reveal a Merfolk card from your hand or pay {3}.\nWhen this creature enters, draw a card.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Merfolk Wizard",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rix/53/silvergill-adept?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1359,
+        "iid": 8754,
+        "name": "Silvergill Adept",
+        "handler": "manalinkeh_card_silvergill_adept",
+        "kind": "card"
+      }
+    },
+    "Bedlam Reveler": {
+      "oracle": {
+        "oracle_id": "01a7e0ce-c98f-4cf2-aba3-360aa0a9b9a7",
+        "name": "Bedlam Reveler",
+        "oracle_text": "This spell costs {1} less to cast for each instant and sorcery card in your graveyard.\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhen this creature enters, discard your hand, then draw three cards.",
+        "mana_cost": "{6}{R}{R}",
+        "type_line": "Creature — Devil Horror",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Prowess"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/142/bedlam-reveler?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16034,
+        "iid": 16123,
+        "name": "Bedlam Reveler",
+        "handler": "manalinkeh_card_bedlam_reveler",
+        "kind": "card"
+      }
+    },
+    "Brass Herald": {
+      "oracle": {
+        "oracle_id": "ea9b2e3d-2de4-4cde-b233-6d0ba5797c20",
+        "name": "Brass Herald",
+        "oracle_text": "As this creature enters, choose a creature type.\nWhen this creature enters, reveal the top four cards of your library. Put all creature cards of the chosen type revealed this way into your hand and the rest on the bottom of your library in any order.\nCreatures of the chosen type get +1/+1.",
+        "mana_cost": "{6}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/301/brass-herald?utm_source=api"
+      },
+      "registry": {
+        "csvid": 984,
+        "iid": 1298,
+        "name": "Brass Herald",
+        "handler": "manalinkeh_card_brass_herald",
+        "kind": "card"
+      }
+    },
+    "Chittering Rats": {
+      "oracle": {
+        "oracle_id": "08dfe42e-35c0-4be0-abba-57269792ff3d",
+        "name": "Chittering Rats",
+        "oracle_text": "When this creature enters, target opponent puts a card from their hand on top of their library.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Rat",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dst/39/chittering-rats?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6865,
+        "iid": 1706,
+        "name": "Chittering Rats",
+        "handler": "manalinkeh_card_chittering_rats",
+        "kind": "card"
+      }
+    },
+    "Dwarven Recruiter": {
+      "oracle": {
+        "oracle_id": "d047a819-5196-4a16-8d67-a4edaf6fdef0",
+        "name": "Dwarven Recruiter",
+        "oracle_text": "When this creature enters, search your library for any number of Dwarf cards, reveal them, then shuffle and put those cards on top in any order.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Dwarf",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ody/186/dwarven-recruiter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5550,
+        "iid": 2844,
+        "name": "Dwarven Recruiter",
+        "handler": "manalinkeh_card_dwarven_recruiter",
+        "kind": "card"
+      }
+    },
+    "Goblin Recruiter": {
+      "oracle": {
+        "oracle_id": "792e1072-00bf-4f63-b956-5f20cdf09f11",
+        "name": "Goblin Recruiter",
+        "oracle_text": "When this creature enters, search your library for any number of Goblin cards, reveal them, then shuffle and put those cards on top in any order.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/6ed/186/goblin-recruiter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2712,
+        "iid": 4035,
+        "name": "Goblin Recruiter",
+        "handler": "manalinkeh_card_goblin_recruiter",
+        "kind": "card"
+      }
+    },
+    "Hired Giant": {
+      "oracle": {
+        "oracle_id": "79c9a963-a428-45f1-a647-5a91ef64286e",
+        "name": "Hired Giant",
+        "oracle_text": "When this creature enters, each other player may search their library for a land card and put that card onto the battlefield. Then each player who searched their library this way shuffles.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/194/hired-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4492,
+        "iid": 4580,
+        "name": "Hired Giant",
+        "handler": "manalinkeh_card_hired_giant",
+        "kind": "card"
+      }
+    },
+    "Hag Hedge-Mage": {
+      "oracle": {
+        "oracle_id": "364e8bd6-52e5-4397-8d2a-10c4706e5a45",
+        "name": "Hag Hedge-Mage",
+        "oracle_text": "When this creature enters, if you control two or more Swamps, you may have target player discard a card.\nWhen this creature enters, if you control two or more Forests, you may put target card from your graveyard on top of your library.",
+        "mana_cost": "{2}{B/G}",
+        "type_line": "Creature — Hag Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eve/123/hag-hedge-mage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9797,
+        "iid": 4335,
+        "name": "Hag Hedge-Mage",
+        "handler": "manalinkeh_card_hag_hedge_mage",
+        "kind": "card"
+      }
+    },
+    "Nessian Game Warden": {
+      "oracle": {
+        "oracle_id": "b03397e5-56af-47c0-ab9a-746a0c99c568",
+        "name": "Nessian Game Warden",
+        "oracle_text": "When this creature enters, look at the top X cards of your library, where X is the number of Forests you control. You may reveal a creature card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/132/nessian-game-warden?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13936,
+        "iid": 6559,
+        "name": "Nessian Game Warden",
+        "handler": "manalinkeh_card_nessian_game_warden",
+        "kind": "card"
+      }
+    },
+    "Neurok Familiar": {
+      "oracle": {
+        "oracle_id": "8e11d1f7-fa98-4cd2-9912-081e9c9e37ee",
+        "name": "Neurok Familiar",
+        "oracle_text": "Flying\nWhen this creature enters, reveal the top card of your library. If it's an artifact card, put it into your hand. Otherwise, put it into your graveyard.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mrd/43/neurok-familiar?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6740,
+        "iid": 6576,
+        "name": "Neurok Familiar",
+        "handler": "manalinkeh_card_neurok_familiar",
+        "kind": "card"
+      }
+    },
+    "Sphinx of Uthuun": {
+      "oracle": {
+        "oracle_id": "4b4f268d-34ae-416d-a412-66f4fe37659c",
+        "name": "Sphinx of Uthuun",
+        "oracle_text": "Flying\nWhen this creature enters, reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+        "mana_cost": "{5}{U}{U}",
+        "type_line": "Creature — Sphinx",
+        "power": "5",
+        "toughness": "6",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/406/sphinx-of-uthuun?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11847,
+        "iid": 9141,
+        "name": "Sphinx of Uthuun",
+        "handler": "manalinkeh_card_sphinx_of_uthuun",
+        "kind": "card"
+      }
+    },
+    "Borderland Explorer": {
+      "oracle": {
+        "oracle_id": "65bc4f8a-3226-4648-862b-3f62736ff1ae",
+        "name": "Borderland Explorer",
+        "oracle_text": "When this creature enters, each player may discard a card. Each player who discarded a card this way may search their library for a basic land card, reveal it, put it into their hand, then shuffle.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Elf Scout",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c18/133/borderland-explorer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16301,
+        "iid": 16390,
+        "name": "Borderland Explorer",
+        "handler": "manalinkeh_card_borderland_explorer",
+        "kind": "card"
+      }
+    },
+    "New Perspectives": {
+      "oracle": {
+        "oracle_id": "e1b8a89a-b308-4fc5-ada7-61de6e21b7f9",
+        "name": "New Perspectives",
+        "oracle_text": "When this enchantment enters, draw three cards.\nAs long as you have seven or more cards in hand, you may pay {0} rather than pay cycling costs.",
+        "mana_cost": "{5}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c20/119/new-perspectives?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16978,
+        "iid": 17072,
+        "name": "New Perspectives",
+        "handler": "manalinkeh_card_new_perspectives",
+        "kind": "card"
+      }
+    },
+    "Generous Patron": {
+      "oracle": {
+        "oracle_id": "fb084141-cb80-479e-b5d4-114c1f31eb6c",
+        "name": "Generous Patron",
+        "oracle_text": "When this creature enters, support 2. (Put a +1/+1 counter on each of up to two other target creatures.)\nWhenever you put one or more counters on a creature you don't control, draw a card.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Elf Advisor",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Support"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bbd/70/generous-patron?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18597,
+        "iid": 18707,
+        "name": "Generous Patron",
+        "handler": "manalinkeh_card_generous_patron",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Barren Moor": {
+      "oracle": {
+        "oracle_id": "326ba371-124c-4949-a048-3a0c8962e567",
+        "name": "Barren Moor",
+        "oracle_text": "This land enters tapped.\n{T}: Add {B}.\nCycling {B} ({B}, Discard this card: Draw a card.)",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [
+          "Cycling"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/262/barren-moor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6063,
+        "iid": 876,
+        "name": "Barren Moor",
+        "handler": "manalinkeh_card_barren_moor",
+        "kind": "card"
+      }
+    },
+    "Dwarven Trader": {
+      "oracle": {
+        "oracle_id": "b40c5f3e-7080-4828-9215-79727c7a911f",
+        "name": "Dwarven Trader",
+        "oracle_text": "",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Dwarf",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hml/72a/dwarven-trader?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2199,
+        "iid": 12400,
+        "name": "Dwarven Trader",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Increasing Savagery": {
+      "oracle": {
+        "oracle_id": "616c7f45-5295-4b8c-a828-ff3a5ba4d917",
+        "name": "Increasing Savagery",
+        "oracle_text": "Put five +1/+1 counters on target creature. If this spell was cast from a graveyard, put ten +1/+1 counters on that creature instead.\nFlashback {5}{G}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/47/increasing-savagery?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12219,
+        "iid": 4837,
+        "name": "Increasing Savagery",
+        "handler": "manalinkeh_card_increasing_savagery",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Merrow Reejerey": {
+      "oracle": {
+        "oracle_id": "6b7e6ae4-2ee1-44bf-ac93-79fc87494515",
+        "name": "Merrow Reejerey",
+        "oracle_text": "Other Merfolk creatures you control get +1/+1.\nWhenever you cast a Merfolk spell, you may tap or untap target permanent.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Merfolk Soldier",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lcc/165/merrow-reejerey?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1458,
+        "iid": 6068,
+        "name": "Merrow Reejerey",
+        "handler": "manalinkeh_card_merrow_reejerey",
+        "kind": "card"
+      }
+    },
+    "Mons's Goblin Raiders": {
+      "oracle": {
+        "oracle_id": "a37159df-f6d7-4db6-85de-0ea77f425993",
+        "name": "Mons's Goblin Raiders",
+        "oracle_text": "",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/s00/32/monss-goblin-raiders?utm_source=api"
+      },
+      "registry": {
+        "csvid": 163,
+        "iid": 6293,
+        "name": "Mons's Goblin Raiders",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Naturalize": {
+      "oracle": {
+        "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+        "name": "Naturalize",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1096,
+        "iid": 6485,
+        "name": "Naturalize",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Spellbook": {
+      "oracle": {
+        "oracle_id": "83133f51-bfbd-4db5-9be0-f660e3b66435",
+        "name": "Spellbook",
+        "oracle_text": "You have no maximum hand size.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact — Book",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/220/spellbook?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1154,
+        "iid": 9121,
+        "name": "Spellbook",
+        "handler": "manalinkeh_card_spellbook",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    }
+  }
+}

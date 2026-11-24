@@ -1,0 +1,1056 @@
+{
+  "sources": {
+    "Gemini Engine": {
+      "oracle": {
+        "oracle_id": "eab4241d-a0d8-4914-85a4-56bc4ff718f2",
+        "name": "Gemini Engine",
+        "oracle_text": "Whenever this creature attacks, create a colorless Construct artifact creature token named Twin that's attacking. Its power is equal to this creature's power and its toughness is equal to this creature's toughness. Sacrifice the token at end of combat.",
+        "mana_cost": "{6}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dst/121/gemini-engine?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6894,
+        "iid": 3782,
+        "name": "Gemini Engine",
+        "handler": "manalinkeh_card_gemini_engine",
+        "kind": "card"
+      }
+    },
+    "Hero of Bladehold": {
+      "oracle": {
+        "oracle_id": "454a8902-8120-4373-96ee-bbf352b04e8d",
+        "name": "Hero of Bladehold",
+        "oracle_text": "Battle cry (Whenever this creature attacks, each other attacking creature gets +1/+0 until end of turn.)\nWhenever this creature attacks, create two 1/1 white Soldier creature tokens that are tapped and attacking.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Creature — Human Knight",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Battle Cry"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/119/hero-of-bladehold?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11458,
+        "iid": 4519,
+        "name": "Hero of Bladehold",
+        "handler": "manalinkeh_card_hero_of_bladehold",
+        "kind": "card"
+      }
+    },
+    "Kessig Cagebreakers": {
+      "oracle": {
+        "oracle_id": "d7407920-7596-497a-a135-b9343909a0cb",
+        "name": "Kessig Cagebreakers",
+        "oracle_text": "Whenever this creature attacks, create a 2/2 green Wolf creature token that's tapped and attacking for each creature card in your graveyard.",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Human Rogue",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mic/142/kessig-cagebreakers?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11996,
+        "iid": 5228,
+        "name": "Kessig Cagebreakers",
+        "handler": "manalinkeh_card_kessig_cagebreakers",
+        "kind": "card"
+      }
+    },
+    "Leonin Warleader": {
+      "oracle": {
+        "oracle_id": "8b1351e6-165e-4ca3-96d5-4774b3176362",
+        "name": "Leonin Warleader",
+        "oracle_text": "Whenever this creature attacks, create two 1/1 white Cat creature tokens with lifelink that are tapped and attacking.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Creature — Cat Soldier",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/23/leonin-warleader?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18953,
+        "iid": 18886,
+        "name": "Leonin Warleader",
+        "handler": "manalinkeh_card_leonin_warleader",
+        "kind": "card"
+      }
+    },
+    "Preeminent Captain": {
+      "oracle": {
+        "oracle_id": "b6801429-3995-4571-92f9-ef211675c5d5",
+        "name": "Preeminent Captain",
+        "oracle_text": "First strike (This creature deals combat damage before creatures without first strike.)\nWhenever this creature attacks, you may put a Soldier creature card from your hand onto the battlefield tapped and attacking.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Kithkin Soldier",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "First strike"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/25/preeminent-captain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9406,
+        "iid": 7340,
+        "name": "Preeminent Captain",
+        "handler": "manalinkeh_card_preeminent_captain",
+        "kind": "card"
+      }
+    },
+    "Yore-Tiller Nephilim": {
+      "oracle": {
+        "oracle_id": "7e9d61d3-6ba7-45ac-a55c-a2f36595c5d2",
+        "name": "Yore-Tiller Nephilim",
+        "oracle_text": "Whenever this creature attacks, return target creature card from your graveyard to the battlefield tapped and attacking.",
+        "mana_cost": "{W}{U}{B}{R}",
+        "type_line": "Creature — Nephilim",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R",
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "R",
+          "U",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gpt/140/yore-tiller-nephilim?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8164,
+        "iid": 11181,
+        "name": "Yore-Tiller Nephilim",
+        "handler": "manalinkeh_card_yore_tiller_nephilim",
+        "kind": "card"
+      }
+    },
+    "Flamerush Rider": {
+      "oracle": {
+        "oracle_id": "f797a325-ec2a-4142-b0ff-90cac1356da9",
+        "name": "Flamerush Rider",
+        "oracle_text": "Whenever this creature attacks, create a token that's a copy of another target attacking creature and that's tapped and attacking. Exile the token at end of combat.\nDash {2}{R}{R} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)",
+        "mana_cost": "{4}{R}",
+        "type_line": "Creature — Human Warrior",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Dash"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/moc/279/flamerush-rider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14550,
+        "iid": 11286,
+        "name": "Flamerush Rider",
+        "handler": "manalinkeh_card_flamerush_rider",
+        "kind": "card"
+      }
+    },
+    "Tilonalli's Summoner": {
+      "oracle": {
+        "oracle_id": "830d3450-18e7-4bac-b330-3906ef5e4514",
+        "name": "Tilonalli's Summoner",
+        "oracle_text": "Ascend (If you control ten or more permanents, you get the city's blessing for the rest of the game.)\nWhenever this creature attacks, you may pay {X}{R}. If you do, create X 1/1 red Elemental creature tokens that are tapped and attacking. At the beginning of the next end step, exile those tokens unless you have the city's blessing.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Human Shaman",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Ascend"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rix/121/tilonallis-summoner?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18318,
+        "iid": 18422,
+        "name": "Tilonalli's Summoner",
+        "handler": "manalinkeh_card_tilonallis_summoner",
+        "kind": "card"
+      }
+    },
+    "Invocation of Saint Traft": {
+      "oracle": {
+        "oracle_id": "cd6e9465-f4eb-482d-9c49-3a16b52c997c",
+        "name": "Invocation of Saint Traft",
+        "oracle_text": "Enchant creature\nEnchanted creature has \"Whenever this creature attacks, create a 4/4 white Angel creature token with flying that's tapped and attacking. Exile that token at end of combat.\"",
+        "mana_cost": "{1}{W}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/246/invocation-of-saint-traft?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15869,
+        "iid": 15940,
+        "name": "Invocation of Saint Traft",
+        "handler": "manalinkeh_card_invocation_of_saint_traft",
+        "kind": "card"
+      }
+    },
+    "Goblin Rabblemaster": {
+      "oracle": {
+        "oracle_id": "24661b81-6bee-4ad8-b3ab-53cb65005c51",
+        "name": "Goblin Rabblemaster",
+        "oracle_text": "Other Goblin creatures you control attack each combat if able.\nAt the beginning of combat on your turn, create a 1/1 red Goblin creature token with haste.\nWhenever this creature attacks, it gets +1/+0 until end of turn for each other attacking Goblin.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddt/46/goblin-rabblemaster?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14109,
+        "iid": 4031,
+        "name": "Goblin Rabblemaster",
+        "handler": "manalinkeh_card_goblin_rabblemaster",
+        "kind": "card"
+      }
+    },
+    "Launch the Fleet": {
+      "oracle": {
+        "oracle_id": "3362dec2-b157-4a00-8abf-0d7b5a14c6f8",
+        "name": "Launch the Fleet",
+        "oracle_text": "Strive — This spell costs {1} more to cast for each target beyond the first.\nUntil end of turn, any number of target creatures each gain \"Whenever this creature attacks, create a 1/1 white Soldier creature token that's tapped and attacking.\"",
+        "mana_cost": "{W}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Strive"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/15/launch-the-fleet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13926,
+        "iid": 5486,
+        "name": "Launch the Fleet",
+        "handler": "manalinkeh_card_launch_the_fleet",
+        "kind": "card"
+      }
+    },
+    "Scourge of the Throne": {
+      "oracle": {
+        "oracle_id": "06496a05-7f1a-402c-9594-304cd82bfefd",
+        "name": "Scourge of the Throne",
+        "oracle_text": "Flying\nDethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.)\nWhenever this creature attacks for the first time each turn, if it's attacking the player with the most life or tied for most life, untap all attacking creatures. After this phase, there is an additional combat phase.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Dethrone"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/230/scourge-of-the-throne?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14054,
+        "iid": 8345,
+        "name": "Scourge of the Throne",
+        "handler": "manalinkeh_card_scourge_of_the_throne",
+        "kind": "card"
+      }
+    },
+    "Hellkite Charger": {
+      "oracle": {
+        "oracle_id": "d4f28a4b-d821-4132-bdec-4c528318f8e2",
+        "name": "Hellkite Charger",
+        "oracle_text": "Flying, haste\nWhenever this creature attacks, you may pay {5}{R}{R}. If you do, untap all attacking creatures and after this phase, there is an additional combat phase.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/232/hellkite-charger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10566,
+        "iid": 4493,
+        "name": "Hellkite Charger",
+        "handler": "manalinkeh_card_hellkite_charger",
+        "kind": "card"
+      }
+    },
+    "Meandering Towershell": {
+      "oracle": {
+        "oracle_id": "45154dc6-ff0a-4e99-8528-689757d1778e",
+        "name": "Meandering Towershell",
+        "oracle_text": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)\nWhenever this creature attacks, exile it. Return it to the battlefield under your control tapped and attacking at the beginning of the declare attackers step on your next turn.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Turtle",
+        "power": "5",
+        "toughness": "9",
+        "keywords": [
+          "Landwalk",
+          "Islandwalk"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/141/meandering-towershell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14326,
+        "iid": 5996,
+        "name": "Meandering Towershell",
+        "handler": "manalinkeh_card_meandering_towershell",
+        "kind": "card"
+      }
+    },
+    "Lightning Runner": {
+      "oracle": {
+        "oracle_id": "2f82b232-21ff-44cc-bc35-0999a1d1c52f",
+        "name": "Lightning Runner",
+        "oracle_text": "Double strike, haste\nWhenever this creature attacks, you get {E}{E} (two energy counters), then you may pay eight {E}. If you pay, untap all creatures you control, and after this phase, there is an additional combat phase.",
+        "mana_cost": "{3}{R}{R}",
+        "type_line": "Creature — Human Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Haste",
+          "Double strike"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/aer/90/lightning-runner?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16746,
+        "iid": 16839,
+        "name": "Lightning Runner",
+        "handler": "manalinkeh_card_lightning_runner",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Dazzling Ramparts": {
+      "oracle": {
+        "oracle_id": "0527fc47-2bfc-4d02-90fa-5a1284f89a0a",
+        "name": "Dazzling Ramparts",
+        "oracle_text": "Defender\n{1}{W}, {T}: Tap target creature.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "7",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/6/dazzling-ramparts?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14247,
+        "iid": 2299,
+        "name": "Dazzling Ramparts",
+        "handler": "manalinkeh_card_dazzling_ramparts",
+        "kind": "card"
+      }
+    },
+    "Diregraf Ghoul": {
+      "oracle": {
+        "oracle_id": "6048fc70-0dcc-4b54-977d-16e240225f82",
+        "name": "Diregraf Ghoul",
+        "oracle_text": "This creature enters tapped.",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/171/diregraf-ghoul?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11931,
+        "iid": 2557,
+        "name": "Diregraf Ghoul",
+        "handler": "manalinkeh_card_diregraf_ghoul",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Drift of Phantasms": {
+      "oracle": {
+        "oracle_id": "6ee51134-c4ad-4101-8ce2-23dde9359cd4",
+        "name": "Drift of Phantasms",
+        "oracle_text": "Defender (This creature can't attack.)\nFlying\nTransmute {1}{U}{U} ({1}{U}{U}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Spirit",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Defender",
+          "Transmute"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/42/drift-of-phantasms?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7828,
+        "iid": 2753,
+        "name": "Drift of Phantasms",
+        "handler": "manalinkeh_card_drift_of_phantasms",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Icy Manipulator": {
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 119,
+        "iid": 4775,
+        "name": "Icy Manipulator",
+        "handler": "manalinkeh_card_icy_manipulator",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Loyal Sentry": {
+      "oracle": {
+        "oracle_id": "54b1a496-1f8e-4581-8260-bad57b25c6e3",
+        "name": "Loyal Sentry",
+        "oracle_text": "When this creature blocks a creature, destroy that creature and this creature.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/a25/22/loyal-sentry?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4364,
+        "iid": 5724,
+        "name": "Loyal Sentry",
+        "handler": "manalinkeh_card_alaborn_zealot",
+        "kind": "card"
+      }
+    },
+    "Millstone": {
+      "oracle": {
+        "oracle_id": "3212e47a-5492-4c50-9d4a-6ea562f1a6e1",
+        "name": "Millstone",
+        "oracle_text": "{2}, {T}: Target player mills two cards.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/242/millstone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 507,
+        "iid": 6116,
+        "name": "Millstone",
+        "handler": "manalinkeh_card_millstone",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Servant of the Conduit": {
+      "oracle": {
+        "oracle_id": "df1a8846-b4da-4e9b-8cf3-ee687e4c606b",
+        "name": "Servant of the Conduit",
+        "oracle_text": "When this creature enters, you get {E}{E} (two energy counters).\n{T}, Pay {E}: Add one mana of any color.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/169/servant-of-the-conduit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16513,
+        "iid": 16599,
+        "name": "Servant of the Conduit",
+        "handler": "manalinkeh_card_servant_of_the_conduit",
+        "kind": "card"
+      }
+    },
+    "Silent Gravestone": {
+      "oracle": {
+        "oracle_id": "803815c5-12be-48b3-a101-f416c1ef9b7b",
+        "name": "Silent Gravestone",
+        "oracle_text": "Cards in graveyards can't be the targets of spells or abilities.\n{4}, {T}: Exile this artifact and all cards from all graveyards. Draw a card.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rix/182/silent-gravestone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18287,
+        "iid": 18392,
+        "name": "Silent Gravestone",
+        "handler": "manalinkeh_card_silent_gravestone",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    }
+  },
+  "token_identities": {
+    "Angel": {
+      "registry": {
+        "csvid": 18687,
+        "iid": 435,
+        "name": "Angel",
+        "handler": "manalinkeh_card_angel_token",
+        "kind": "card"
+      },
+      "available_oracle_token_record": {
+        "oracle_id": "835fdf98-b2ca-4e08-8dc0-4294bc0744ad",
+        "name": "Angel",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Angel",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/ptdmu/2/angel?utm_source=api"
+      }
+    },
+    "Cat": {
+      "registry": {
+        "csvid": 18704,
+        "iid": 1530,
+        "name": "Cat",
+        "handler": "manalinkeh_card_cat_token",
+        "kind": "card"
+      },
+      "available_oracle_token_record": {
+        "oracle_id": "f6aa9961-6d5f-4ea6-8db0-4e03ffd8d5ea",
+        "name": "Cat",
+        "oracle_text": "Haste",
+        "mana_cost": "",
+        "type_line": "Token Creature — Cat",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tsnc/9/cat?utm_source=api"
+      }
+    },
+    "Elemental": {
+      "registry": {
+        "csvid": 18726,
+        "iid": 2926,
+        "name": "Elemental",
+        "handler": "manalinkeh_card_elemental_token",
+        "kind": "card"
+      },
+      "available_oracle_token_record": {
+        "oracle_id": "ff9ee841-1174-4c4c-b9d3-56d79122acbb",
+        "name": "Elemental",
+        "oracle_text": "Whenever this creature becomes tapped, it deals 1 damage to target player.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Elemental",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmoc/22/elemental?utm_source=api"
+      }
+    },
+    "Goblin": {
+      "registry": {
+        "csvid": 18746,
+        "iid": 3975,
+        "name": "Goblin",
+        "handler": "manalinkeh_card_goblin_token",
+        "kind": "card"
+      },
+      "available_oracle_token_record": {
+        "oracle_id": "fa8ea5cd-b390-41a1-9a2a-11af1bc6bfd0",
+        "name": "Goblin",
+        "oracle_text": "Haste",
+        "mana_cost": "",
+        "type_line": "Token Creature — Goblin",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/trvr/9/goblin?utm_source=api"
+      }
+    },
+    "Soldier": {
+      "registry": {
+        "csvid": 18822,
+        "iid": 8976,
+        "name": "Soldier",
+        "handler": "manalinkeh_card_rhino_token",
+        "kind": "card"
+      },
+      "available_oracle_token_record": {
+        "oracle_id": "eac25f12-6459-438c-a09e-93e23d2cf80d",
+        "name": "Soldier",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tfrc/3/soldier?utm_source=api"
+      }
+    },
+    "Twin": {
+      "registry": {
+        "csvid": 18846,
+        "iid": 10286,
+        "name": "Twin",
+        "handler": "manalinkeh_card_twin_token",
+        "kind": "card"
+      },
+      "available_oracle_token_record": null
+    },
+    "Wolf": {
+      "registry": {
+        "csvid": 18856,
+        "iid": 11056,
+        "name": "Wolf",
+        "handler": "manalinkeh_card_wolf_token",
+        "kind": "card"
+      },
+      "available_oracle_token_record": {
+        "oracle_id": "b2224843-8274-4872-a7ca-2adf69cc066b",
+        "name": "Wolf",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Wolf",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/thob/9/wolf?utm_source=api"
+      }
+    }
+  }
+}

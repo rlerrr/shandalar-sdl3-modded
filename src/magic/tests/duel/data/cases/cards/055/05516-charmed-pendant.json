@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Charmed Pendant",
+  "csvid": 5516,
+  "recipes": [
+    {
+      "family": "mill_remaining_costs_and_grants",
+      "version": 2,
+      "params": {
+        "csvid": 5516,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{T}, Mill a card: For each colored mana symbol in the milled card's mana cost, add one mana of that color. (Activate only as an instant. For example, if the card's mana cost is {3}{U}{U}{B}, you add {U}{U}{B}.)",
+      "variants": [
+        "colored_0",
+        "colored_1",
+        "generic_cost_0",
+        "generic_cost_1",
+        "zero_0",
+        "zero_1",
+        "hybrid_0",
+        "hybrid_1",
+        "empty_0",
+        "empty_1",
+        "response_0",
+        "response_1"
+      ]
+    }
+  ]
+}

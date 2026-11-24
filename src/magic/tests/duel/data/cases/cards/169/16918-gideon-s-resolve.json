@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Gideon's Resolve",
+  "csvid": 16918,
+  "recipes": [
+    {
+      "family": "remaining_entry_combat",
+      "version": 2,
+      "params": {
+        "csvid": 16918,
+        "cost": "{4}{W}",
+        "choices": [
+          "scope_0",
+          "scope_1",
+          "library_0",
+          "library_1",
+          "graveyard_0",
+          "graveyard_1",
+          "leaves_0",
+          "leaves_1"
+        ]
+      },
+      "oracle_text": "When this enchantment enters, you may search your library and/or graveyard for a card named Gideon, Martial Paragon, reveal it, and put it into your hand. If you search your library this way, shuffle.\nCreatures you control get +1/+1.",
+      "variants": [
+        "scope_0",
+        "scope_1",
+        "library_0",
+        "library_1",
+        "graveyard_0",
+        "graveyard_1",
+        "leaves_0",
+        "leaves_1"
+      ]
+    }
+  ]
+}

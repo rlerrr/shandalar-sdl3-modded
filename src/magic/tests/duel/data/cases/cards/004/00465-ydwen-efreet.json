@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Ydwen Efreet",
+  "csvid": 465,
+  "recipes": [
+    {
+      "family": "coin_flip_combat_flips",
+      "version": 2,
+      "params": {
+        "csvid": 465,
+        "mana": [
+          0,
+          0,
+          0,
+          0,
+          3,
+          0
+        ]
+      },
+      "oracle_text": "Whenever this creature blocks, flip a coin. If you lose the flip, remove this creature from combat and it can't block this turn. Creatures it was blocking that had become blocked by only this creature this combat become unblocked.",
+      "variants": [
+        "win_0",
+        "win_1",
+        "lose_0",
+        "lose_1",
+        "other_blocker_0",
+        "other_blocker_1",
+        "replay_block_0",
+        "replay_block_1"
+      ]
+    }
+  ]
+}

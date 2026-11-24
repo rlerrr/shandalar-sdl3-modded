@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Regisaur Alpha",
+  "csvid": 17498,
+  "recipes": [
+    {
+      "family": "entry_trigger_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 17498,
+        "mana": [
+          3,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Other Dinosaurs you control have haste.\nWhen this creature enters, create a 3/3 green Dinosaur creature token with trample.",
+      "variants": [
+        "trample_0",
+        "trample_1",
+        "haste_team_0",
+        "haste_team_1",
+        "lord_removed_0",
+        "lord_removed_1"
+      ]
+    }
+  ]
+}

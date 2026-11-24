@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 15151,
+  "card": "Hixus, Prison Warden",
+  "recipes": [
+    {
+      "family": "flash_remaining_combat_and_activated",
+      "version": 2,
+      "params": {
+        "csvid": 15151,
+        "printed_cost": "{3}{W}{W}"
+      },
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhenever a creature deals combat damage to you, if Hixus entered this turn, exile that creature until Hixus leaves the battlefield. (That creature returns under its owner's control.)",
+      "variants": [
+        "multiple_0",
+        "release_0",
+        "stale_0",
+        "noncombat_0",
+        "removed_before_0",
+        "multiple_1",
+        "release_1",
+        "stale_1",
+        "noncombat_1",
+        "removed_before_1"
+      ]
+    }
+  ]
+}

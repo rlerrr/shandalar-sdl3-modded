@@ -1,0 +1,1218 @@
+{
+  "sources": {
+    "Setessan Starbreaker": {
+      "oracle": {
+        "oracle_id": "bc84a4e7-5f5f-4105-b0f8-c06ebcde6218",
+        "name": "Setessan Starbreaker",
+        "oracle_text": "When this creature enters, you may destroy target Aura.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Human Warrior",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/139/setessan-starbreaker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13802,
+        "iid": 8542,
+        "name": "Setessan Starbreaker",
+        "handler": "manalinkeh_card_setessan_starbreaker",
+        "kind": "card"
+      }
+    },
+    "Ravenous Baboons": {
+      "oracle": {
+        "oracle_id": "1d9bd0a5-3ba0-44e5-9cb3-966f6b9dc14a",
+        "name": "Ravenous Baboons",
+        "oracle_text": "When this creature enters, destroy target nonbasic land.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Monkey",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/exo/97/ravenous-baboons?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3541,
+        "iid": 7691,
+        "name": "Ravenous Baboons",
+        "handler": "manalinkeh_card_ravenous_baboons",
+        "kind": "card"
+      }
+    },
+    "Sunblast Angel": {
+      "oracle": {
+        "oracle_id": "8b34d1df-4024-497d-bd28-a7caa8c3fa24",
+        "name": "Sunblast Angel",
+        "oracle_text": "Flying\nWhen this creature enters, destroy all tapped creatures.",
+        "mana_cost": "{4}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/afc/74/sunblast-angel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11373,
+        "iid": 9517,
+        "name": "Sunblast Angel",
+        "handler": "manalinkeh_card_sunblast_angel",
+        "kind": "card"
+      }
+    },
+    "Tin Street Hooligan": {
+      "oracle": {
+        "oracle_id": "a33073bf-66c1-425b-9f25-748b343f33fe",
+        "name": "Tin Street Hooligan",
+        "oracle_text": "When this creature enters, if {G} was spent to cast it, destroy target artifact.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Rogue",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gpt/78/tin-street-hooligan?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8149,
+        "iid": 10038,
+        "name": "Tin Street Hooligan",
+        "handler": "manalinkeh_card_tin_street_hooligan",
+        "kind": "card"
+      }
+    },
+    "Fleshpulper Giant": {
+      "oracle": {
+        "oracle_id": "7cdeecb5-354a-4a6c-989f-d8c9554befb7",
+        "name": "Fleshpulper Giant",
+        "oracle_text": "When this creature enters, you may destroy target creature with toughness 2 or less.",
+        "mana_cost": "{5}{R}{R}",
+        "type_line": "Creature — Giant",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/140/fleshpulper-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13289,
+        "iid": 3516,
+        "name": "Fleshpulper Giant",
+        "handler": "manalinkeh_card_fleshpulper_giant",
+        "kind": "card"
+      }
+    },
+    "Absolver Thrull": {
+      "oracle": {
+        "oracle_id": "a9002245-0f33-48cb-96d3-fde884236eb5",
+        "name": "Absolver Thrull",
+        "oracle_text": "Haunt (When this creature dies, exile it haunting target creature.)\nWhen this creature enters or the creature it haunts dies, destroy target enchantment.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Thrull Cleric",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Haunt"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gpt/1/absolver-thrull?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8018,
+        "iid": 179,
+        "name": "Absolver Thrull",
+        "handler": "manalinkeh_card_absolver_thrull",
+        "kind": "card"
+      }
+    },
+    "Predatory Nightstalker": {
+      "oracle": {
+        "oracle_id": "9d2ad65f-fba0-45e9-a5e6-bec63a9db979",
+        "name": "Predatory Nightstalker",
+        "oracle_text": "When this creature enters, you may have target opponent sacrifice a creature of their choice.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Creature — Nightstalker",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/134/predatory-nightstalker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3604,
+        "iid": 7336,
+        "name": "Predatory Nightstalker",
+        "handler": "manalinkeh_card_predatory_nightstalker",
+        "kind": "card"
+      }
+    },
+    "Megatherium": {
+      "oracle": {
+        "oracle_id": "b98123b2-c913-41b9-bb24-10a287d24bca",
+        "name": "Megatherium",
+        "oracle_text": "Trample\nWhen this creature enters, sacrifice it unless you pay {1} for each card in your hand.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/259/megatherium?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4529,
+        "iid": 6004,
+        "name": "Megatherium",
+        "handler": "manalinkeh_card_megatherium",
+        "kind": "card"
+      }
+    },
+    "Wei Assassins": {
+      "oracle": {
+        "oracle_id": "e87dd341-416c-4e93-8eb4-1519ecd2674c",
+        "name": "Wei Assassins",
+        "oracle_text": "When this creature enters, target opponent chooses a creature they control. Destroy that creature.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Creature — Human Soldier Assassin",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ptk/86/wei-assassins?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4285,
+        "iid": 10889,
+        "name": "Wei Assassins",
+        "handler": "manalinkeh_card_wei_assassins",
+        "kind": "card"
+      }
+    },
+    "Nessian Demolok": {
+      "oracle": {
+        "oracle_id": "2341b59b-ce46-4efe-be94-c3851d3cd9e8",
+        "name": "Nessian Demolok",
+        "oracle_text": "Tribute 3 (As this creature enters, an opponent of your choice may put three +1/+1 counters on it.)\nWhen this creature enters, if tribute wasn't paid, destroy target noncreature permanent.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Tribute"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/128/nessian-demolok?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13756,
+        "iid": 6558,
+        "name": "Nessian Demolok",
+        "handler": "manalinkeh_card_nessian_demolok",
+        "kind": "card"
+      }
+    },
+    "Death Pit Offering": {
+      "oracle": {
+        "oracle_id": "d445032b-b243-4203-9c88-a0ac357fb9b5",
+        "name": "Death Pit Offering",
+        "oracle_text": "When this enchantment enters, sacrifice all creatures you control.\nCreatures you control get +2/+2.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/124/death-pit-offering?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1008,
+        "iid": 2325,
+        "name": "Death Pit Offering",
+        "handler": "manalinkeh_card_death_pit_offering",
+        "kind": "card"
+      }
+    },
+    "Harvest Wurm": {
+      "oracle": {
+        "oracle_id": "cd539212-ef7b-4f78-8d62-c42289aedc51",
+        "name": "Harvest Wurm",
+        "oracle_text": "When this creature enters, sacrifice it unless you return a basic land card from your graveyard to your hand.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/130/harvest-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2987,
+        "iid": 4394,
+        "name": "Harvest Wurm",
+        "handler": "manalinkeh_card_harvest_wurm",
+        "kind": "card"
+      }
+    },
+    "Harvester Troll": {
+      "oracle": {
+        "oracle_id": "28c44f88-1d47-4894-86ce-4089bd761360",
+        "name": "Harvester Troll",
+        "oracle_text": "When this creature enters, you may sacrifice a creature or land. If you do, put two +1/+1 counters on this creature.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Troll",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/133/harvester-troll?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15609,
+        "iid": 15684,
+        "name": "Harvester Troll",
+        "handler": "manalinkeh_card_harvester_troll",
+        "kind": "card"
+      }
+    },
+    "Knight of the Mists": {
+      "oracle": {
+        "oracle_id": "e9893534-3d05-42c2-93ff-f28ffae89aa3",
+        "name": "Knight of the Mists",
+        "oracle_text": "Flanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)\nWhen this creature enters, you may pay {U}. If you don't, destroy target Knight and it can't be regenerated.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Knight",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flanking"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vis/36/knight-of-the-mists?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2735,
+        "iid": 5321,
+        "name": "Knight of the Mists",
+        "handler": "manalinkeh_card_knight_of_the_mists",
+        "kind": "card"
+      }
+    },
+    "Sundering Titan": {
+      "oracle": {
+        "oracle_id": "d17d071d-dbee-4d65-8435-137f35cd89ca",
+        "name": "Sundering Titan",
+        "oracle_text": "When this creature enters or leaves the battlefield, choose a land of each basic land type, then destroy those lands.",
+        "mana_cost": "{8}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "7",
+        "toughness": "10",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/292/sundering-titan?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6968,
+        "iid": 9523,
+        "name": "Sundering Titan",
+        "handler": "manalinkeh_card_sundering_titan",
+        "kind": "card"
+      }
+    },
+    "Phyrexian Dreadnought": {
+      "oracle": {
+        "oracle_id": "a7950edb-5670-46fd-a30e-0fe888a5a32b",
+        "name": "Phyrexian Dreadnought",
+        "oracle_text": "Trample\nWhen this creature enters, sacrifice it unless you sacrifice any number of creatures with total power 12 or greater.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact Creature — Phyrexian Dreadnought",
+        "power": "12",
+        "toughness": "12",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/315/phyrexian-dreadnought?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2558,
+        "iid": 7158,
+        "name": "Phyrexian Dreadnought",
+        "handler": "manalinkeh_card_phyrexian_dreadnought",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Bottle Gnomes": {
+      "oracle": {
+        "oracle_id": "54b5e429-7a44-480d-bea4-4f8eeb7449b5",
+        "name": "Bottle Gnomes",
+        "oracle_text": "Sacrifice this creature: You gain 3 life.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Gnome",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cm2/177/bottle-gnomes?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1705,
+        "iid": 1265,
+        "name": "Bottle Gnomes",
+        "handler": "manalinkeh_card_bottle_gnomes",
+        "kind": "card"
+      }
+    },
+    "Darksteel Citadel": {
+      "oracle": {
+        "oracle_id": "8dc067bf-f78f-4ac4-b6e7-b305c42cf0bc",
+        "name": "Darksteel Citadel",
+        "oracle_text": "Indestructible\n{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Artifact Land",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c21/285/darksteel-citadel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6870,
+        "iid": 2248,
+        "name": "Darksteel Citadel",
+        "handler": "manalinkeh_card_darksteel_citadel",
+        "kind": "card"
+      }
+    },
+    "Darksteel Ingot": {
+      "oracle": {
+        "oracle_id": "a2529491-7389-4cfa-92d2-145eda779603",
+        "name": "Darksteel Ingot",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)\n{T}: Add one mana of any color.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/otc/256/darksteel-ingot?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1561,
+        "iid": 2251,
+        "name": "Darksteel Ingot",
+        "handler": "manalinkeh_card_darksteel_ingot",
+        "kind": "card"
+      }
+    },
+    "Darksteel Myr": {
+      "oracle": {
+        "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+        "name": "Darksteel Myr",
+        "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11238,
+        "iid": 2255,
+        "name": "Darksteel Myr",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Dazzling Ramparts": {
+      "oracle": {
+        "oracle_id": "0527fc47-2bfc-4d02-90fa-5a1284f89a0a",
+        "name": "Dazzling Ramparts",
+        "oracle_text": "Defender\n{1}{W}, {T}: Tap target creature.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "7",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/6/dazzling-ramparts?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14247,
+        "iid": 2299,
+        "name": "Dazzling Ramparts",
+        "handler": "manalinkeh_card_dazzling_ramparts",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Drift of Phantasms": {
+      "oracle": {
+        "oracle_id": "6ee51134-c4ad-4101-8ce2-23dde9359cd4",
+        "name": "Drift of Phantasms",
+        "oracle_text": "Defender (This creature can't attack.)\nFlying\nTransmute {1}{U}{U} ({1}{U}{U}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Spirit",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Defender",
+          "Transmute"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/42/drift-of-phantasms?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7828,
+        "iid": 2753,
+        "name": "Drift of Phantasms",
+        "handler": "manalinkeh_card_drift_of_phantasms",
+        "kind": "card"
+      }
+    },
+    "Fervor": {
+      "oracle": {
+        "oracle_id": "8e0cea9c-3110-4728-9378-76849e33bb90",
+        "name": "Fervor",
+        "oracle_text": "Creatures you control have haste. (They can attack and {T} as soon as they come under your control.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/129/fervor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1604,
+        "iid": 3365,
+        "name": "Fervor",
+        "handler": "manalinkeh_card_fervor",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Holy Strength": {
+      "oracle": {
+        "oracle_id": "9357de36-f8be-4f49-b2c8-9fe9eaf82b07",
+        "name": "Holy Strength",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +1/+2.",
+        "mana_cost": "{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m11/16/holy-strength?utm_source=api"
+      },
+      "registry": {
+        "csvid": 112,
+        "iid": 4610,
+        "name": "Holy Strength",
+        "handler": "manalinkeh_card_holy_strenght",
+        "kind": "card"
+      }
+    },
+    "Icy Manipulator": {
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 119,
+        "iid": 4775,
+        "name": "Icy Manipulator",
+        "handler": "manalinkeh_card_icy_manipulator",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Kavu Chameleon": {
+      "oracle": {
+        "oracle_id": "82c583ab-8158-4074-a3ff-b7a05ecc8ab1",
+        "name": "Kavu Chameleon",
+        "oracle_text": "This spell can't be countered.\n{G}: This creature becomes the color of your choice until end of turn.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Kavu",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inv/191/kavu-chameleon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5022,
+        "iid": 5178,
+        "name": "Kavu Chameleon",
+        "handler": "manalinkeh_card_kavu_chameleon",
+        "kind": "card"
+      }
+    },
+    "Knight of the Holy Nimbus": {
+      "oracle": {
+        "oracle_id": "4e92c705-19c2-42df-ad12-808d272c505e",
+        "name": "Knight of the Holy Nimbus",
+        "oracle_text": "Flanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)\nIf this creature would be destroyed, regenerate it. (Tap it, remove it from combat, and heal all damage on it.)\n{2}: This creature can't be regenerated this turn. Only your opponents may activate this ability.",
+        "mana_cost": "{W}{W}",
+        "type_line": "Creature — Human Rebel Knight",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flanking",
+          "Heal",
+          "Regenerate"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/23/knight-of-the-holy-nimbus?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8591,
+        "iid": 5320,
+        "name": "Knight of the Holy Nimbus",
+        "handler": "manalinkeh_card_knight_of_the_holy_nimbus",
+        "kind": "card"
+      }
+    },
+    "Millstone": {
+      "oracle": {
+        "oracle_id": "3212e47a-5492-4c50-9d4a-6ea562f1a6e1",
+        "name": "Millstone",
+        "oracle_text": "{2}, {T}: Target player mills two cards.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/242/millstone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 507,
+        "iid": 6116,
+        "name": "Millstone",
+        "handler": "manalinkeh_card_millstone",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Shivan Dragon": {
+      "oracle": {
+        "oracle_id": "711eea87-0fa3-46e0-a42b-fa5a86455f04",
+        "name": "Shivan Dragon",
+        "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/763/shivan-dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 224,
+        "iid": 8648,
+        "name": "Shivan Dragon",
+        "handler": "manalinkeh_card_furnace_whelp",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Terramorphic Expanse": {
+      "oracle": {
+        "oracle_id": "1bd3e453-aa21-4ee6-95c2-d6d920ee8e7a",
+        "name": "Terramorphic Expanse",
+        "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/273/terramorphic-expanse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1468,
+        "iid": 9818,
+        "name": "Terramorphic Expanse",
+        "handler": "manalinkeh_card_terramorphic_expanse",
+        "kind": "card"
+      }
+    },
+    "Thorn Elemental": {
+      "oracle": {
+        "oracle_id": "9cdf840d-314e-46ef-9c04-74f145d9e65b",
+        "name": "Thorn Elemental",
+        "oracle_text": "You may have this creature assign its combat damage as though it weren't blocked.",
+        "mana_cost": "{5}{G}{G}",
+        "type_line": "Creature — Elemental",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dom/185/thorn-elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1173,
+        "iid": 9897,
+        "name": "Thorn Elemental",
+        "handler": "manalinkeh_card_thorn_elemental",
+        "kind": "card"
+      }
+    },
+    "Tropical Island": {
+      "oracle": {
+        "oracle_id": "74b7fe23-5d3a-4092-8d78-7c0eba8f6f73",
+        "name": "Tropical Island",
+        "oracle_text": "({T}: Add {G} or {U}.)",
+        "mana_cost": "",
+        "type_line": "Land — Forest Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/321/tropical-island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 252,
+        "iid": 11,
+        "name": "Tropical Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Urabrask the Hidden": {
+      "oracle": {
+        "oracle_id": "5b2ffb53-86b7-4665-a5c7-b85b035b6c81",
+        "name": "Urabrask the Hidden",
+        "oracle_text": "Creatures you control have haste.\nCreatures your opponents control enter tapped.",
+        "mana_cost": "{3}{R}{R}",
+        "type_line": "Legendary Creature — Phyrexian Praetor",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clb/811/urabrask-the-hidden?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11704,
+        "iid": 10400,
+        "name": "Urabrask the Hidden",
+        "handler": "manalinkeh_card_urabrask_the_hidden",
+        "kind": "card"
+      }
+    },
+    "Squee, Goblin Nabob": {
+      "oracle": {
+        "oracle_id": "0ef760f4-bbec-4735-8d60-fc24d973452a",
+        "name": "Squee, Goblin Nabob",
+        "oracle_text": "At the beginning of your upkeep, you may return this card from your graveyard to your hand.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Legendary Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/254/squee-goblin-nabob?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4619,
+        "iid": 9268,
+        "name": "Squee, Goblin Nabob",
+        "handler": "manalinkeh_card_squee_goblin_nabob",
+        "kind": "card"
+      }
+    },
+    "Withstand Death": {
+      "oracle": {
+        "oracle_id": "c462adf3-4ade-4b90-bdec-7247b080471f",
+        "name": "Withstand Death",
+        "oracle_text": "Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it. If its toughness is 0 or less, it still dies.)",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/134/withstand-death?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11412,
+        "iid": 11048,
+        "name": "Withstand Death",
+        "handler": "manalinkeh_card_withstand_death",
+        "kind": "card"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Silvergill Adept",
+  "csvid": 1359,
+  "recipes": [
+    {
+      "family": "entry_rider_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 1359,
+        "printed_mana": "{1}{U}",
+        "rules": "As an additional cost to cast this spell, reveal a Merfolk card from your hand or pay {3}.\nWhen this creature enters, draw a card."
+      },
+      "oracle_text": "As an additional cost to cast this spell, reveal a Merfolk card from your hand or pay {3}.\nWhen this creature enters, draw a card.",
+      "variants": [
+        "reveal_0",
+        "reveal_1",
+        "pay_three_0",
+        "pay_three_1",
+        "short_0",
+        "short_1"
+      ]
+    }
+  ]
+}

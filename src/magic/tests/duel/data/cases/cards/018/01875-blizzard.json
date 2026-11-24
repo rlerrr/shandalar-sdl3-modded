@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Blizzard",
+  "csvid": 1875,
+  "recipes": [
+    {
+      "family": "cumulative_upkeep_continuous_and_activated",
+      "version": 2,
+      "params": {
+        "csvid": 1875,
+        "cast": [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "upkeep": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Cast this spell only if you control a snow land.\nCumulative upkeep {2} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nCreatures with flying don't untap during their controllers' untap steps.",
+      "variants": [
+        "age_two_0",
+        "age_two_1",
+        "flying_decline_0",
+        "flying_decline_1",
+        "foe_snow_only_0",
+        "foe_snow_only_1"
+      ]
+    }
+  ]
+}

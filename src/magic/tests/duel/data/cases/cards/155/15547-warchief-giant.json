@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Warchief Giant",
+  "csvid": 15547,
+  "recipes": [
+    {
+      "family": "attack_trigger_follow_on_annihilator_and_myriad",
+      "version": 2,
+      "params": {
+        "csvid": 15547,
+        "printed_mana": "{3}{R}{R}",
+        "rules": "Haste\nMyriad (Whenever this creature attacks, for each opponent other than defending player, you may create a token copy that's tapped and attacking that player or a planeswalker they control. Exile the tokens at end of combat.)"
+      },
+      "oracle_text": "Haste\nMyriad (Whenever this creature attacks, for each opponent other than defending player, you may create a token copy that's tapped and attacking that player or a planeswalker they control. Exile the tokens at end of combat.)",
+      "variants": [
+        "fresh_haste_0",
+        "fresh_haste_1",
+        "fresh_blocked_0",
+        "fresh_blocked_1",
+        "other_attacker_0",
+        "other_attacker_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,436 @@
+{
+  "sources": {
+    "Conqueror's Pledge": {
+      "oracle": {
+        "oracle_id": "dcc59bd6-2c5f-48eb-8008-83ce6eb5a442",
+        "name": "Conqueror's Pledge",
+        "oracle_text": "Kicker {6} (You may pay an additional {6} as you cast this spell.)\nCreate six 1/1 white Kor Soldier creature tokens. If this spell was kicked, create twelve of those tokens instead.",
+        "mana_cost": "{2}{W}{W}{W}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/8/conquerors-pledge?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10523,
+        "iid": 1912,
+        "name": "Conqueror's Pledge",
+        "handler": "manalinkeh_card_conquerors_pledge",
+        "kind": "card"
+      }
+    },
+    "Elemental Appeal": {
+      "oracle": {
+        "oracle_id": "3bcfc82c-3523-40e3-b236-78ece8a8d69f",
+        "name": "Elemental Appeal",
+        "oracle_text": "Kicker {5} (You may pay an additional {5} as you cast this spell.)\nCreate a 7/1 red Elemental creature token with trample and haste. Exile it at the beginning of the next end step. If this spell was kicked, that creature gets +7/+0 until end of turn.",
+        "mana_cost": "{R}{R}{R}{R}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/123/elemental-appeal?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10533,
+        "iid": 2927,
+        "name": "Elemental Appeal",
+        "handler": "manalinkeh_card_elemental_appeal",
+        "kind": "card"
+      }
+    },
+    "Josu Vess, Lich Knight": {
+      "oracle": {
+        "oracle_id": "974a46f9-aa84-4b34-bee5-c635166e5841",
+        "name": "Josu Vess, Lich Knight",
+        "oracle_text": "Kicker {5}{B} (You may pay an additional {5}{B} as you cast this spell.)\nMenace\nWhen Josu Vess enters, if he was kicked, create eight 2/2 black Zombie Knight creature tokens with menace.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Legendary Creature — Zombie Knight",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Menace",
+          "Kicker"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/moc/253/josu-vess-lich-knight?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18437,
+        "iid": 18544,
+        "name": "Josu Vess, Lich Knight",
+        "handler": "manalinkeh_card_josu_vess_lich_knight",
+        "kind": "card"
+      }
+    },
+    "Rite of Replication": {
+      "oracle": {
+        "oracle_id": "fb60739e-1dc3-481d-a056-ad72e665c680",
+        "name": "Rite of Replication",
+        "oracle_text": "Kicker {5} (You may pay an additional {5} as you cast this spell.)\nCreate a token that's a copy of target creature. If this spell was kicked, create five of those tokens instead.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/202/rite-of-replication?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10648,
+        "iid": 7999,
+        "name": "Rite of Replication",
+        "handler": "manalinkeh_card_rite_of_replication",
+        "kind": "card"
+      }
+    },
+    "Saproling Migration": {
+      "oracle": {
+        "oracle_id": "bbbb80bd-76fa-4155-929b-4a3565d1cb35",
+        "name": "Saproling Migration",
+        "oracle_text": "Kicker {4} (You may pay an additional {4} as you cast this spell.)\nCreate two 1/1 green Saproling creature tokens. If this spell was kicked, create four of those tokens instead.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dom/178/saproling-migration?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18495,
+        "iid": 18602,
+        "name": "Saproling Migration",
+        "handler": "manalinkeh_card_saproling_migration",
+        "kind": "card"
+      }
+    },
+    "Verix Bladewing": {
+      "oracle": {
+        "oracle_id": "d7315b3b-6e5d-4d28-a503-bfae1daf6c43",
+        "name": "Verix Bladewing",
+        "oracle_text": "Kicker {3} (You may pay an additional {3} as you cast this spell.)\nFlying\nWhen Verix Bladewing enters, if it was kicked, create Karox Bladewing, a legendary 4/4 red Dragon creature token with flying.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Legendary Creature — Dragon",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Kicker",
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/243/verix-bladewing?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18552,
+        "iid": 18659,
+        "name": "Verix Bladewing",
+        "handler": "manalinkeh_card_verix_bladewing",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Elemental": {
+      "oracle": {
+        "oracle_id": "ff9ee841-1174-4c4c-b9d3-56d79122acbb",
+        "name": "Elemental",
+        "oracle_text": "Whenever this creature becomes tapped, it deals 1 damage to target player.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Elemental",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmoc/22/elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18726,
+        "iid": 2926,
+        "name": "Elemental",
+        "handler": "manalinkeh_card_elemental_token",
+        "kind": "card"
+      }
+    },
+    "Karox Bladewing": {
+      "oracle": {
+        "oracle_id": "2aa23bbf-ecd8-4ae8-b4a3-fd1e82e5e796",
+        "name": "Karox Bladewing",
+        "oracle_text": "Flying",
+        "mana_cost": "",
+        "type_line": "Token Legendary Creature — Dragon",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tdom/10/karox-bladewing?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18772,
+        "iid": 18677,
+        "name": "Karox Bladewing",
+        "handler": "manalinkeh_card_barktooth_warbeard",
+        "kind": "card"
+      }
+    },
+    "Kor Soldier": {
+      "oracle": {
+        "oracle_id": "8d8945e4-efa0-4656-8b3c-ddcf86df5190",
+        "name": "Kor Soldier",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Kor Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tcmm/8/kor-soldier?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18779,
+        "iid": 5363,
+        "name": "Kor Soldier",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Saproling": {
+      "oracle": {
+        "oracle_id": "2b7dba01-b08c-4218-9fc1-da55559d9155",
+        "name": "Saproling",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Saproling",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tsoc/18/saproling?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18813,
+        "iid": 8235,
+        "name": "Saproling",
+        "handler": "manalinkeh_card_saproling",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Wall of Roots": {
+      "oracle": {
+        "oracle_id": "3a21a6ae-b2f2-4f0c-acfd-5f3e8d63fd2f",
+        "name": "Wall of Roots",
+        "oracle_text": "Defender\nPut a -0/-1 counter on this creature: Add {G}. Activate only once each turn.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Plant Wall",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/278/wall-of-roots?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2656,
+        "iid": 10778,
+        "name": "Wall of Roots",
+        "handler": "manalinkeh_card_wall_of_roots",
+        "kind": "card"
+      }
+    },
+    "Welkin Tern": {
+      "oracle": {
+        "oracle_id": "010c660a-a67b-48f0-a63a-15470eb89f69",
+        "name": "Welkin Tern",
+        "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nThis creature can block only creatures with flying.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Bird",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gs1/5/welkin-tern?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10709,
+        "iid": 10901,
+        "name": "Welkin Tern",
+        "handler": "manalinkeh_card_skywinder_drake",
+        "kind": "card"
+      }
+    },
+    "Zombie Knight": {
+      "oracle": {
+        "oracle_id": "68a1cfb5-89d8-478c-b6e8-0706677f3217",
+        "name": "Zombie Knight",
+        "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)",
+        "mana_cost": "",
+        "type_line": "Token Creature — Zombie Knight",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Menace"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tfdc/6/zombie-knight?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18863,
+        "iid": 18679,
+        "name": "Zombie Knight",
+        "handler": "manalinkeh_card_beast_token",
+        "kind": "card"
+      }
+    }
+  }
+}

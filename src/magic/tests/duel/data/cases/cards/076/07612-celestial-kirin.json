@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "csvid": 7612,
+  "card": "Celestial Kirin",
+  "recipes": [
+    {
+      "family": "cast_spirit_or_arcane_riders",
+      "version": 2,
+      "oracle_text": "Flying\nWhenever you cast a Spirit or Arcane spell, destroy all permanents with that spell's mana value.",
+      "params": {
+        "effect": "sweep_mv",
+        "price": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "flying": true,
+        "power": 3,
+        "toughness": 3,
+        "extra": [
+          "self_mv",
+          "flight_ground",
+          "flight_reach"
+        ],
+        "human": []
+      },
+      "variants": [
+        "own_spirit_0",
+        "own_spirit_1",
+        "own_arcane_0",
+        "own_arcane_1",
+        "own_other_creature_0",
+        "own_other_creature_1",
+        "own_other_instant_0",
+        "own_other_instant_1",
+        "enemy_spirit_0",
+        "enemy_spirit_1",
+        "enemy_arcane_0",
+        "enemy_arcane_1",
+        "self_mv_0",
+        "self_mv_1",
+        "flight_ground_0",
+        "flight_ground_1",
+        "flight_reach_0",
+        "flight_reach_1"
+      ]
+    }
+  ]
+}

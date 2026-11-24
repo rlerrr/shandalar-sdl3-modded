@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "csvid": 3282,
+  "card": "Skyshroud Ranger",
+  "recipes": [
+    {
+      "family": "land_from_hand",
+      "version": 2,
+      "oracle_text": "{T}: You may put a land card from your hand onto the battlefield. Activate only as a sorcery.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "cast": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "artifact": false,
+          "sorcery": true,
+          "power": 1,
+          "toughness": 1
+        }
+      },
+      "variants": [
+        "cast_short_0",
+        "fresh_then_ready_0",
+        "choose_basic_0",
+        "choose_artifact_0",
+        "decline_0",
+        "empty_0",
+        "nonland_only_0",
+        "tapped_entry_0",
+        "immediate_mana_0",
+        "before_normal_0",
+        "after_normal_0",
+        "next_turn_slot_0",
+        "opposing_turn_0",
+        "combat_0",
+        "second_main_0",
+        "stack_busy_0",
+        "source_leaves_pending_0",
+        "foreign_controller_0",
+        "pending_replay_0",
+        "cast_short_1",
+        "fresh_then_ready_1",
+        "choose_basic_1",
+        "choose_artifact_1",
+        "decline_1",
+        "empty_1",
+        "nonland_only_1",
+        "tapped_entry_1",
+        "immediate_mana_1",
+        "before_normal_1",
+        "after_normal_1",
+        "next_turn_slot_1",
+        "opposing_turn_1",
+        "combat_1",
+        "second_main_1",
+        "stack_busy_1",
+        "source_leaves_pending_1",
+        "foreign_controller_1",
+        "pending_replay_1"
+      ]
+    }
+  ]
+}

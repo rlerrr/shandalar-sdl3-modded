@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Skeletal Changeling",
+  "csvid": 9260,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_conditional_costs",
+      "version": 2,
+      "params": {
+        "csvid": 9260,
+        "printed_mana": "{1}{B}",
+        "rules": "Changeling (This card is every creature type.)\n{1}{B}: Regenerate this creature."
+      },
+      "oracle_text": "Changeling (This card is every creature type.)\n{1}{B}: Regenerate this creature.",
+      "variants": [
+        "pay_regenerate_0",
+        "pay_regenerate_1",
+        "short_generic_0",
+        "short_generic_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "shared_types_0",
+        "shared_types_1"
+      ]
+    }
+  ]
+}

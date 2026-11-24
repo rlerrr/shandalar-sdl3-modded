@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Garna, the Bloodflame",
+  "csvid": 18411,
+  "recipes": [
+    {
+      "family": "flash_remaining_triggers_and_copy",
+      "version": 2,
+      "params": {
+        "csvid": 18411,
+        "cost": [
+          3,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Flash\nWhen Garna enters, return to your hand all creature cards in your graveyard that were put there from anywhere this turn.\nOther creatures you control have haste.",
+      "variants": [
+        "battlefield_deaths_0",
+        "battlefield_deaths_1",
+        "milled_0",
+        "milled_1",
+        "discarded_0",
+        "discarded_1",
+        "haste_0",
+        "haste_1"
+      ]
+    }
+  ]
+}

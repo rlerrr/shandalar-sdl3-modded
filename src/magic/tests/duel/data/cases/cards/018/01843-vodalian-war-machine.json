@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 1843,
+  "card": "Vodalian War Machine",
+  "recipes": [
+    {
+      "family": "departure_counters_and_search",
+      "version": 2,
+      "params": {
+        "csvid": 1843,
+        "printed_cost": "{1}{U}{U}"
+      },
+      "oracle_text": "Defender (This creature can't attack.)\nTap an untapped Merfolk you control: This creature can attack this turn as though it didn't have defender.\nTap an untapped Merfolk you control: This creature gets +2/+1 until end of turn.\nWhen this creature dies, destroy all Merfolk tapped this turn to pay for its abilities.",
+      "variants": [
+        "foreign_only_0",
+        "reassign_0",
+        "pump_0",
+        "pump_twice_0",
+        "expiry_0",
+        "foreign_only_1",
+        "reassign_1",
+        "pump_1",
+        "pump_twice_1",
+        "expiry_1"
+      ]
+    }
+  ]
+}

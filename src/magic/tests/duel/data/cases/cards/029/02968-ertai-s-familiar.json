@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Ertai's Familiar",
+  "csvid": 2968,
+  "recipes": [
+    {
+      "family": "mill_remaining_phase_and_mill_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 2968,
+        "printed_mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "rules": "Phasing (This phases in or out before you untap during each of your untap steps. While it's phased out, it's treated as though it doesn't exist.)\nWhen this creature phases out or leaves the battlefield, mill three cards.\n{U}: Until your next upkeep, this creature can't phase out."
+      },
+      "oracle_text": "Phasing (This phases in or out before you untap during each of your untap steps. While it's phased out, it's treated as though it doesn't exist.)\nWhen this creature phases out or leaves the battlefield, mill three cards.\n{U}: Until your next upkeep, this creature can't phase out.",
+      "variants": [
+        "phase_and_leave_0",
+        "phase_and_leave_1",
+        "prevention_expires_0",
+        "prevention_expires_1"
+      ]
+    }
+  ]
+}

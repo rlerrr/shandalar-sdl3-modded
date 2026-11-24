@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Ink Dissolver",
+  "csvid": 9369,
+  "recipes": [
+    {
+      "family": "mill_remaining_phase_and_mill_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 9369,
+        "printed_mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "rules": "Kinship — At the beginning of your upkeep, you may look at the top card of your library. If it shares a creature type with this creature, you may reveal it. If you do, each opponent mills three cards."
+      },
+      "oracle_text": "Kinship — At the beginning of your upkeep, you may look at the top card of your library. If it shares a creature type with this creature, you may reveal it. If you do, each opponent mills three cards.",
+      "variants": [
+        "matched_reveal_0",
+        "matched_reveal_1",
+        "nonmatch_0",
+        "nonmatch_1",
+        "kindred_reveal_0",
+        "kindred_reveal_1",
+        "decline_reveal_0"
+      ]
+    }
+  ]
+}

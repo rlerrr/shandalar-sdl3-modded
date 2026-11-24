@@ -1,0 +1,593 @@
+{
+  "sources": {
+    "Imperial Hellkite": {
+      "oracle": {
+        "oracle_id": "99642419-ab24-4770-9f1c-84d2806441b5",
+        "name": "Imperial Hellkite",
+        "oracle_text": "Flying\nMorph {6}{R}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, you may search your library for a Dragon card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{5}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Flying",
+          "Morph"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mkc/155/imperial-hellkite?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6401,
+        "iid": 4811,
+        "name": "Imperial Hellkite",
+        "handler": "manalinkeh_card_imperial_hellkite",
+        "kind": "card"
+      }
+    },
+    "Infernal Caretaker": {
+      "oracle": {
+        "oracle_id": "bd310727-1091-4474-8d9e-ce56f7dac7c1",
+        "name": "Infernal Caretaker",
+        "oracle_text": "Morph {3}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, return all Zombie cards from all graveyards to their owners' hands.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Human Cleric",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lgn/76/infernal-caretaker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6402,
+        "iid": 4857,
+        "name": "Infernal Caretaker",
+        "handler": "manalinkeh_card_infernal_caretaker",
+        "kind": "card"
+      }
+    },
+    "Riptide Survivor": {
+      "oracle": {
+        "oracle_id": "10a64ae9-919f-4c04-8c8a-cce12554502c",
+        "name": "Riptide Survivor",
+        "oracle_text": "Morph {1}{U}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, discard two cards, then draw three cards.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c14/121/riptide-survivor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6570,
+        "iid": 7981,
+        "name": "Riptide Survivor",
+        "handler": "manalinkeh_card_riptide_survivor",
+        "kind": "card"
+      }
+    },
+    "Root Elemental": {
+      "oracle": {
+        "oracle_id": "182d38b4-48bb-4050-a19a-c0a6bb241bbd",
+        "name": "Root Elemental",
+        "oracle_text": "Morph {5}{G}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, you may put a creature card from your hand onto the battlefield.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Elemental",
+        "power": "6",
+        "toughness": "5",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mkc/182/root-elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6572,
+        "iid": 8058,
+        "name": "Root Elemental",
+        "handler": "manalinkeh_card_root_elemental",
+        "kind": "card"
+      }
+    },
+    "Thousand Winds": {
+      "oracle": {
+        "oracle_id": "81b50d34-d778-4606-80de-0e0780610d1f",
+        "name": "Thousand Winds",
+        "oracle_text": "Flying\nMorph {5}{U}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, return all other tapped creatures to their owners' hands.",
+        "mana_cost": "{4}{U}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "5",
+        "toughness": "6",
+        "keywords": [
+          "Flying",
+          "Morph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c19/100/thousand-winds?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14407,
+        "iid": 9931,
+        "name": "Thousand Winds",
+        "handler": "manalinkeh_card_thousand_winds",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Bazaar Trader": {
+      "oracle": {
+        "oracle_id": "21ad7067-3210-42d6-9009-0784b2834227",
+        "name": "Bazaar Trader",
+        "oracle_text": "{T}: Target player gains control of target artifact, creature, or land you control.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/72/bazaar-trader?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10729,
+        "iid": 930,
+        "name": "Bazaar Trader",
+        "handler": "manalinkeh_card_bazaar_trader",
+        "kind": "card"
+      }
+    },
+    "Crib Swap": {
+      "oracle": {
+        "oracle_id": "2987c385-011a-4032-a516-a46d1e9dc9e8",
+        "name": "Crib Swap",
+        "oracle_text": "Changeling (This card is every creature type.)\nExile target creature. Its controller creates a 1/1 colorless Shapeshifter creature token with changeling.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Kindred Instant — Shapeshifter",
+        "keywords": [
+          "Changeling"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ecl/11/crib-swap?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9103,
+        "iid": 2049,
+        "name": "Crib Swap",
+        "handler": "manalinkeh_card_crib_swap",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Dragon Whelp": {
+      "oracle": {
+        "oracle_id": "705a1985-ed39-4a4b-812e-a677170b596e",
+        "name": "Dragon Whelp",
+        "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn. If this ability has been activated four or more times this turn, sacrifice this creature at the beginning of the next end step.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/plst/DMR-116/dragon-whelp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 67,
+        "iid": 2689,
+        "name": "Dragon Whelp",
+        "handler": "manalinkeh_card_dragon_whelp",
+        "kind": "card"
+      }
+    },
+    "Elvish Visionary": {
+      "oracle": {
+        "oracle_id": "c6a3a882-a127-4590-93d7-679ef4313efe",
+        "name": "Elvish Visionary",
+        "oracle_text": "When this creature enters, draw a card.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Elf Shaman",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/206/elvish-visionary?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1363,
+        "iid": 2992,
+        "name": "Elvish Visionary",
+        "handler": "manalinkeh_card_carven_caryatid",
+        "kind": "card"
+      }
+    },
+    "Festering Goblin": {
+      "oracle": {
+        "oracle_id": "66fb4764-d309-4c30-a2a4-474f9030dc87",
+        "name": "Festering Goblin",
+        "oracle_text": "When this creature dies, target creature gets -1/-1 until end of turn.",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Zombie Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/85/festering-goblin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6142,
+        "iid": 3370,
+        "name": "Festering Goblin",
+        "handler": "manalinkeh_card_festering_goblin",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Scathe Zombies": {
+      "oracle": {
+        "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+        "name": "Scathe Zombies",
+        "oracle_text": "",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/175/scathe-zombies?utm_source=api"
+      },
+      "registry": {
+        "csvid": 214,
+        "iid": 8302,
+        "name": "Scathe Zombies",
+        "handler": "card_scathe_zombies",
+        "kind": "card"
+      }
+    },
+    "Shivan Dragon": {
+      "oracle": {
+        "oracle_id": "711eea87-0fa3-46e0-a42b-fa5a86455f04",
+        "name": "Shivan Dragon",
+        "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/763/shivan-dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 224,
+        "iid": 8648,
+        "name": "Shivan Dragon",
+        "handler": "manalinkeh_card_furnace_whelp",
+        "kind": "card"
+      }
+    },
+    "Silent Gravestone": {
+      "oracle": {
+        "oracle_id": "803815c5-12be-48b3-a101-f416c1ef9b7b",
+        "name": "Silent Gravestone",
+        "oracle_text": "Cards in graveyards can't be the targets of spells or abilities.\n{4}, {T}: Exile this artifact and all cards from all graveyards. Draw a card.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rix/182/silent-gravestone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18287,
+        "iid": 18392,
+        "name": "Silent Gravestone",
+        "handler": "manalinkeh_card_silent_gravestone",
+        "kind": "card"
+      }
+    },
+    "Twiddle": {
+      "oracle": {
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "name": "Twiddle",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 256,
+        "iid": 10281,
+        "name": "Twiddle",
+        "handler": "manalinkeh_card_twiddle",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    }
+  },
+  "hidden_observer": {
+    "csvid": 13252,
+    "iid": 3230,
+    "name": "Face-Down Creature",
+    "handler": "manalinkeh_card_face_down_creature",
+    "kind": "card"
+  }
+}

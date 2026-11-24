@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "csvid": 7265,
+  "card": "Kami of Fire's Roar",
+  "recipes": [
+    {
+      "family": "cast_spirit_or_arcane_riders",
+      "version": 2,
+      "oracle_text": "Whenever you cast a Spirit or Arcane spell, target creature can't block this turn.",
+      "params": {
+        "effect": "cannot_block",
+        "price": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "flying": false,
+        "power": 2,
+        "toughness": 3,
+        "extra": [
+          "other_blocker",
+          "expires"
+        ],
+        "human": []
+      },
+      "variants": [
+        "own_spirit_0",
+        "own_spirit_1",
+        "own_arcane_0",
+        "own_arcane_1",
+        "own_other_creature_0",
+        "own_other_creature_1",
+        "own_other_instant_0",
+        "own_other_instant_1",
+        "enemy_spirit_0",
+        "enemy_spirit_1",
+        "enemy_arcane_0",
+        "enemy_arcane_1",
+        "other_blocker_0",
+        "other_blocker_1",
+        "expires_0",
+        "expires_1"
+      ]
+    }
+  ]
+}

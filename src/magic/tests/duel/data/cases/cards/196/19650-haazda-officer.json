@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Haazda Officer",
+  "csvid": 19650,
+  "recipes": [
+    {
+      "family": "remaining_entry_combat",
+      "version": 2,
+      "params": {
+        "csvid": 19650,
+        "cost": "{2}{W}",
+        "choices": [
+          "ally_0",
+          "ally_1",
+          "self_0",
+          "self_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, target creature you control gets +1/+1 until end of turn.",
+      "variants": [
+        "ally_0",
+        "ally_1",
+        "self_0",
+        "self_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

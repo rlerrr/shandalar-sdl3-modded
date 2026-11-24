@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Aleatory",
+  "csvid": 2392,
+  "recipes": [
+    {
+      "family": "next_upkeep_cantrip_additional_riders",
+      "version": 2,
+      "params": {
+        "mode": "coin",
+        "instant": true,
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "keywords": []
+      },
+      "oracle_text": "Cast this spell only during combat after blockers are declared.\nFlip a coin. If you win the flip, target creature gets +1/+1 until end of turn.\nDraw a card at the beginning of the next turn's upkeep.",
+      "variants": [
+        "win_0",
+        "lose_0",
+        "offturn_win_0",
+        "replay_0",
+        "main_denied_0",
+        "before_blocks_0",
+        "win_1",
+        "lose_1",
+        "offturn_win_1",
+        "replay_1",
+        "main_denied_1",
+        "before_blocks_1"
+      ]
+    }
+  ]
+}

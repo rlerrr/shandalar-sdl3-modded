@@ -1,0 +1,692 @@
+{
+  "sources": {
+    "Prosperous Pirates": {
+      "oracle_id": "9dc6281b-08e0-4c66-9aef-abc7184ca36a",
+      "name": "Prosperous Pirates",
+      "oracle_text": "When this creature enters, create two Treasure tokens. (They're artifacts with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "mana_cost": "{4}{U}",
+      "type_line": "Creature — Human Pirate",
+      "power": "3",
+      "toughness": "4",
+      "keywords": [
+        "Treasure"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmr/85/prosperous-pirates?utm_source=api"
+    },
+    "Sailor of Means": {
+      "oracle_id": "c4efae03-99de-4439-925b-504602623bfd",
+      "name": "Sailor of Means",
+      "oracle_text": "When this creature enters, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Human Pirate",
+      "power": "1",
+      "toughness": "4",
+      "keywords": [
+        "Treasure"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmr/88/sailor-of-means?utm_source=api"
+    },
+    "Wily Goblin": {
+      "oracle_id": "d27ffb4c-3a34-41aa-b464-6b897132c4ea",
+      "name": "Wily Goblin",
+      "oracle_text": "When this creature enters, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "mana_cost": "{R}{R}",
+      "type_line": "Creature — Goblin Pirate",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Treasure"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/xln/174/wily-goblin?utm_source=api"
+    },
+    "Brazen Freebooter": {
+      "oracle_id": "13e8d063-eece-4f38-83f6-02403130defa",
+      "name": "Brazen Freebooter",
+      "oracle_text": "When this creature enters, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Human Pirate",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [
+        "Treasure"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmr/164/brazen-freebooter?utm_source=api"
+    },
+    "Brass's Bounty": {
+      "oracle_id": "63b0538e-aa94-4e23-adf1-704cbf5bc3e5",
+      "name": "Brass's Bounty",
+      "oracle_text": "For each land you control, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "mana_cost": "{6}{R}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Treasure"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 7.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fdn/190/brasss-bounty?utm_source=api"
+    },
+    "Pitiless Plunderer": {
+      "oracle_id": "a784481f-eccb-4112-bb38-04a659319660",
+      "name": "Pitiless Plunderer",
+      "oracle_text": "Whenever another creature you control dies, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "mana_cost": "{3}{B}",
+      "type_line": "Creature — Human Pirate",
+      "power": "1",
+      "toughness": "4",
+      "keywords": [
+        "Treasure"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/lcc/208/pitiless-plunderer?utm_source=api"
+    }
+  },
+  "witnesses": {
+    "Cloudshift": {
+      "oracle_id": "6879f5ce-7a1b-4606-bad1-885779b0d456",
+      "name": "Cloudshift",
+      "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tle/152/cloudshift?utm_source=api"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Darksteel Relic": {
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "name": "Darksteel Relic",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Murder": {
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "name": "Murder",
+      "oracle_text": "Destroy target creature.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+    },
+    "Reach Through Mists": {
+      "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+      "name": "Reach Through Mists",
+      "oracle_text": "Draw a card.",
+      "mana_cost": "{U}",
+      "type_line": "Instant — Arcane",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dds/7/reach-through-mists?utm_source=api"
+    },
+    "Treasure": {
+      "oracle_id": "3c549374-6c37-42e0-8d88-a8555d46732d",
+      "name": "Treasure",
+      "oracle_text": "{T}, Sacrifice this token: Add one mana of any color.",
+      "mana_cost": "",
+      "type_line": "Token Artifact — Treasure",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "token",
+      "scryfall_uri": "https://scryfall.com/card/tfra/15/treasure?utm_source=api"
+    },
+    "Twiddle": {
+      "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+      "name": "Twiddle",
+      "oracle_text": "You may tap or untap target artifact, creature, or land.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    },
+    "Wily Goblin": {
+      "oracle_id": "d27ffb4c-3a34-41aa-b464-6b897132c4ea",
+      "name": "Wily Goblin",
+      "oracle_text": "When this creature enters, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "mana_cost": "{R}{R}",
+      "type_line": "Creature — Goblin Pirate",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Treasure"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/xln/174/wily-goblin?utm_source=api"
+    },
+    "Control Magic": {
+      "oracle_id": "cd0d7141-46d2-4aa3-bc77-6b3b4513803e",
+      "name": "Control Magic",
+      "oracle_text": "Enchant creature\nYou control enchanted creature.",
+      "mana_cost": "{2}{U}{U}",
+      "type_line": "Enchantment — Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cma/34/control-magic?utm_source=api"
+    },
+    "Dragon Fodder": {
+      "oracle_id": "d0d2c45b-b6e3-4999-bdab-976e8f0d6617",
+      "name": "Dragon Fodder",
+      "oracle_text": "Create two 1/1 red Goblin creature tokens.",
+      "mana_cost": "{1}{R}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fdn/535/dragon-fodder?utm_source=api"
+    },
+    "Fissure": {
+      "oracle_id": "c8b1e9f3-b014-4e57-b278-6d84a7e88b23",
+      "name": "Fissure",
+      "oracle_text": "Destroy target creature or land. It can't be regenerated.",
+      "mana_cost": "{3}{R}{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/me1/93/fissure?utm_source=api"
+    },
+    "Goblin": {
+      "oracle_id": "fa8ea5cd-b390-41a1-9a2a-11af1bc6bfd0",
+      "name": "Goblin",
+      "oracle_text": "Haste",
+      "mana_cost": "",
+      "type_line": "Token Creature — Goblin",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [
+        "Haste"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "scryfall_uri": "https://scryfall.com/card/trvr/9/goblin?utm_source=api"
+    },
+    "Icy Manipulator": {
+      "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+      "name": "Icy Manipulator",
+      "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+      "mana_cost": "{4}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+    },
+    "Naturalize": {
+      "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+      "name": "Naturalize",
+      "oracle_text": "Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+    },
+    "Pyroclasm": {
+      "oracle_id": "e4bcd4ea-e7cd-4471-8f3b-18bb51d3d70c",
+      "name": "Pyroclasm",
+      "oracle_text": "Pyroclasm deals 2 damage to each creature.",
+      "mana_cost": "{1}{R}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/149/pyroclasm?utm_source=api"
+    },
+    "Swords to Plowshares": {
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "name": "Swords to Plowshares",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+    },
+    "Tropical Island": {
+      "oracle_id": "74b7fe23-5d3a-4092-8d78-7c0eba8f6f73",
+      "name": "Tropical Island",
+      "oracle_text": "({T}: Add {G} or {U}.)",
+      "mana_cost": "",
+      "type_line": "Land — Forest Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/vma/321/tropical-island?utm_source=api"
+    },
+    "Wrath of God": {
+      "oracle_id": "34515b16-c9a4-4f98-8c77-416a7a523407",
+      "name": "Wrath of God",
+      "oracle_text": "Destroy all creatures. They can't be regenerated.",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/70/wrath-of-god?utm_source=api"
+    }
+  },
+  "registry": {
+    "Brazen Freebooter": {
+      "csvid": 18169,
+      "iid": 18276,
+      "name": "Brazen Freebooter",
+      "handler": "manalinkeh_card_sailor_of_means",
+      "kind": "card"
+    },
+    "Cloudshift": {
+      "csvid": 12330,
+      "iid": 1828,
+      "name": "Cloudshift",
+      "handler": "manalinkeh_card_cloudshift",
+      "kind": "card"
+    },
+    "Counterspell": {
+      "csvid": 48,
+      "iid": 1996,
+      "name": "Counterspell",
+      "handler": "manalinkeh_card_counterspell",
+      "kind": "card"
+    },
+    "Darksteel Relic": {
+      "csvid": 11586,
+      "iid": 2259,
+      "name": "Darksteel Relic",
+      "handler": "manalinkeh_card_darksteel_myr",
+      "kind": "card"
+    },
+    "Forest": {
+      "csvid": 91,
+      "iid": 2,
+      "name": "Forest",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Grizzly Bears": {
+      "csvid": 106,
+      "iid": 4259,
+      "name": "Grizzly Bears",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Island": {
+      "csvid": 126,
+      "iid": 1,
+      "name": "Island",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Murder": {
+      "csvid": 12594,
+      "iid": 6382,
+      "name": "Murder",
+      "handler": "manalinkeh_card_murder2",
+      "kind": "card"
+    },
+    "Prosperous Pirates": {
+      "csvid": 17484,
+      "iid": 17580,
+      "name": "Prosperous Pirates",
+      "handler": "manalinkeh_card_prosperous_pirates",
+      "kind": "card"
+    },
+    "Reach Through Mists": {
+      "csvid": 7353,
+      "iid": 7720,
+      "name": "Reach Through Mists",
+      "handler": "manalinkeh_card_reach_through_mists",
+      "kind": "card"
+    },
+    "Sailor of Means": {
+      "csvid": 17512,
+      "iid": 17608,
+      "name": "Sailor of Means",
+      "handler": "manalinkeh_card_sailor_of_means",
+      "kind": "card"
+    },
+    "Treasure": {
+      "csvid": 18840,
+      "iid": 17691,
+      "name": "Treasure",
+      "handler": "manalinkeh_card_treasure",
+      "kind": "card"
+    },
+    "Twiddle": {
+      "csvid": 256,
+      "iid": 10281,
+      "name": "Twiddle",
+      "handler": "manalinkeh_card_twiddle",
+      "kind": "card"
+    },
+    "Unsummon": {
+      "csvid": 260,
+      "iid": 10388,
+      "name": "Unsummon",
+      "handler": "manalinkeh_card_unsummon",
+      "kind": "card"
+    },
+    "Wily Goblin": {
+      "csvid": 17591,
+      "iid": 17687,
+      "name": "Wily Goblin",
+      "handler": "manalinkeh_card_sailor_of_means",
+      "kind": "card"
+    },
+    "Control Magic": {
+      "csvid": 44,
+      "iid": 1938,
+      "name": "Control Magic",
+      "handler": "manalinkeh_card_control_magic",
+      "kind": "card"
+    },
+    "Dragon Fodder": {
+      "csvid": 1448,
+      "iid": 2677,
+      "name": "Dragon Fodder",
+      "handler": "manalinkeh_card_dragon_fodder",
+      "kind": "card"
+    },
+    "Fissure": {
+      "csvid": 321,
+      "iid": 3449,
+      "name": "Fissure",
+      "handler": "manalinkeh_card_fissure",
+      "kind": "card"
+    },
+    "Goblin": {
+      "csvid": 18746,
+      "iid": 3975,
+      "name": "Goblin",
+      "handler": "manalinkeh_card_goblin_token",
+      "kind": "card"
+    },
+    "Icy Manipulator": {
+      "csvid": 119,
+      "iid": 4775,
+      "name": "Icy Manipulator",
+      "handler": "manalinkeh_card_icy_manipulator",
+      "kind": "card"
+    },
+    "Naturalize": {
+      "csvid": 1096,
+      "iid": 6485,
+      "name": "Naturalize",
+      "handler": "manalinkeh_card_disenchant",
+      "kind": "card"
+    },
+    "Pyroclasm": {
+      "csvid": 1121,
+      "iid": 7515,
+      "name": "Pyroclasm",
+      "handler": "manalinkeh_card_pyroclasm",
+      "kind": "card"
+    },
+    "Swords to Plowshares": {
+      "csvid": 240,
+      "iid": 9616,
+      "name": "Swords to Plowshares",
+      "handler": "manalinkeh_card_swords_to_plowshares",
+      "kind": "card"
+    },
+    "Tropical Island": {
+      "csvid": 252,
+      "iid": 11,
+      "name": "Tropical Island",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Wrath of God": {
+      "csvid": 290,
+      "iid": 11121,
+      "name": "Wrath of God",
+      "handler": "manalinkeh_card_wrath_of_god",
+      "kind": "card"
+    },
+    "Brass's Bounty": {
+      "csvid": 18168,
+      "iid": 18275,
+      "name": "Brass's Bounty",
+      "handler": "manalinkeh_card_brasss_bounty",
+      "kind": "card"
+    },
+    "Pitiless Plunderer": {
+      "csvid": 18262,
+      "iid": 18367,
+      "name": "Pitiless Plunderer",
+      "handler": "manalinkeh_card_pitiless_plunderer",
+      "kind": "card"
+    }
+  }
+}

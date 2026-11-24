@@ -1,0 +1,562 @@
+{
+  "sources": {
+    "Damia, Sage of Stone": {
+      "oracle": {
+        "oracle_id": "eb7ae3e8-0489-4f3a-8343-7e7ec2fe3f01",
+        "name": "Damia, Sage of Stone",
+        "oracle_text": "Deathtouch\nSkip your draw step.\nAt the beginning of your upkeep, if you have fewer than seven cards in hand, draw cards equal to the difference.",
+        "mana_cost": "{4}{B}{G}{U}",
+        "type_line": "Legendary Creature — Gorgon Wizard",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Deathtouch"
+        ],
+        "colors": [
+          "B",
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "G",
+          "U"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cm2/2/damia-sage-of-stone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11753,
+        "iid": 2203,
+        "name": "Damia, Sage of Stone",
+        "handler": "manalinkeh_card_damia_sage_of_stone",
+        "kind": "card"
+      }
+    },
+    "Null Profusion": {
+      "oracle": {
+        "oracle_id": "7077ee9a-59c6-4b8e-bf33-9b094412ad38",
+        "name": "Null Profusion",
+        "oracle_text": "Skip your draw step.\nWhenever you play a card, draw a card.\nYour maximum hand size is two.",
+        "mana_cost": "{4}{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/plc/89/null-profusion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8815,
+        "iid": 6710,
+        "name": "Null Profusion",
+        "handler": "manalinkeh_card_recycle",
+        "kind": "card"
+      }
+    },
+    "Symbiotic Deployment": {
+      "oracle": {
+        "oracle_id": "a6872d7a-b647-4baf-bd1e-06707ccbb71a",
+        "name": "Symbiotic Deployment",
+        "oracle_text": "Skip your draw step.\n{1}, Tap two untapped creatures you control: Draw a card.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/apc/88/symbiotic-deployment?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5443,
+        "iid": 9641,
+        "name": "Symbiotic Deployment",
+        "handler": "manalinkeh_card_symbiotic_deployment",
+        "kind": "card"
+      }
+    },
+    "Solitary Confinement": {
+      "oracle": {
+        "oracle_id": "d41ab41d-07c8-4f6d-be5e-7aec9f5f6365",
+        "name": "Solitary Confinement",
+        "oracle_text": "At the beginning of your upkeep, sacrifice this enchantment unless you discard a card.\nSkip your draw step.\nYou have shroud. (You can't be the target of spells or abilities.)\nPrevent all damage that would be dealt to you.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh2/265/solitary-confinement?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6004,
+        "iid": 8985,
+        "name": "Solitary Confinement",
+        "handler": "manalinkeh_card_solitary_confinement",
+        "kind": "card"
+      }
+    },
+    "Recycle": {
+      "oracle": {
+        "oracle_id": "8cef3ce7-8fbc-4e68-93f9-d6adfc2c2cbf",
+        "name": "Recycle",
+        "oracle_text": "Skip your draw step.\nWhenever you play a card, draw a card.\nYour maximum hand size is two.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/189/recycle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3243,
+        "iid": 7769,
+        "name": "Recycle",
+        "handler": "manalinkeh_card_recycle",
+        "kind": "card"
+      }
+    },
+    "Island Sanctuary": {
+      "oracle": {
+        "oracle_id": "7d1769d0-d942-45b3-a31c-2bbe45e68661",
+        "name": "Island Sanctuary",
+        "oracle_text": "If you would draw a card during your draw step, instead you may skip that draw. If you do, until your next turn, you can't be attacked except by creatures with flying and/or islandwalk.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/15/island-sanctuary?utm_source=api"
+      },
+      "registry": {
+        "csvid": 127,
+        "iid": 4960,
+        "name": "Island Sanctuary",
+        "handler": "manalinkeh_card_island_sanctuary",
+        "kind": "card"
+      }
+    },
+    "Fasting": {
+      "oracle": {
+        "oracle_id": "0d787c6b-ab82-42c5-b840-8f3a09af30ac",
+        "name": "Fasting",
+        "oracle_text": "At the beginning of your upkeep, put a hunger counter on this enchantment. Then destroy this enchantment if it has five or more hunger counters on it.\nIf you would begin your draw step, you may skip that step instead. If you do, you gain 2 life.\nWhen you draw a card, destroy this enchantment.",
+        "mana_cost": "{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/drk/7/fasting?utm_source=api"
+      },
+      "registry": {
+        "csvid": 317,
+        "iid": 3297,
+        "name": "Fasting",
+        "handler": "manalinkeh_card_fasting",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Air Elemental": {
+      "oracle": {
+        "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+        "name": "Air Elemental",
+        "oracle_text": "Flying",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/44/air-elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 0,
+        "iid": 298,
+        "name": "Air Elemental",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Divination": {
+      "oracle": {
+        "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+        "name": "Divination",
+        "oracle_text": "Draw two cards.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/51/divination?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10405,
+        "iid": 2609,
+        "name": "Divination",
+        "handler": "manalinkeh_card_divination",
+        "kind": "card"
+      }
+    },
+    "Duress": {
+      "oracle": {
+        "oracle_id": "33d405ea-7a9a-4970-b70f-9c05d90dd6f0",
+        "name": "Duress",
+        "oracle_text": "Target opponent reveals their hand. You choose a noncreature, nonland card from it. That player discards that card.",
+        "mana_cost": "{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/606/duress?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3755,
+        "iid": 2812,
+        "name": "Duress",
+        "handler": "manalinkeh_card_duress",
+        "kind": "card"
+      }
+    },
+    "Flame Rift": {
+      "oracle": {
+        "oracle_id": "28479aa8-d1cd-421a-8bbb-0594bb4dd410",
+        "name": "Flame Rift",
+        "oracle_text": "Flame Rift deals 4 damage to each player.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh2/278/flame-rift?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1535,
+        "iid": 3461,
+        "name": "Flame Rift",
+        "handler": "manalinkeh_card_flame_rift",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Howling Mine": {
+      "oracle": {
+        "oracle_id": "d26b27db-a567-4631-b4b6-7294222fbdd1",
+        "name": "Howling Mine",
+        "oracle_text": "At the beginning of each player's draw step, if this artifact is untapped, that player draws an additional card.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c16/257/howling-mine?utm_source=api"
+      },
+      "registry": {
+        "csvid": 114,
+        "iid": 4683,
+        "name": "Howling Mine",
+        "handler": "manalinkeh_card_howling_mine",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "River Boa": {
+      "oracle": {
+        "oracle_id": "86187aed-77ce-4b2d-aab0-0a8f807a9451",
+        "name": "River Boa",
+        "oracle_text": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)\n{G}: Regenerate this creature.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Snake",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Landwalk",
+          "Regenerate",
+          "Islandwalk"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddm/49/river-boa?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1256,
+        "iid": 8014,
+        "name": "River Boa",
+        "handler": "manalinkeh_card_wall_of_brambles",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Wall of Stone": {
+      "oracle": {
+        "oracle_id": "cd4cadb4-3156-49bd-b36e-12ba5c85938b",
+        "name": "Wall of Stone",
+        "oracle_text": "Defender (This creature can't attack.)",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "8",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/232/wall-of-stone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 272,
+        "iid": 10783,
+        "name": "Wall of Stone",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    }
+  }
+}

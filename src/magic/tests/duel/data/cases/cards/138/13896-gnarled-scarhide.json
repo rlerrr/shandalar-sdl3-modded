@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Gnarled Scarhide",
+  "csvid": 13896,
+  "recipes": [
+    {
+      "family": "bestow_evasion_and_blocking",
+      "version": 2,
+      "params": {
+        "csvid": 13896,
+        "normal": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "bestowed": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "creature": [
+          2,
+          1
+        ],
+        "bonus": [
+          2,
+          1
+        ]
+      },
+      "oracle_text": "Bestow {3}{B} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nThis creature can't block.\nEnchanted creature gets +2/+1 and can't block.",
+      "variants": [
+        "regular_0",
+        "regular_1",
+        "bestowed_0",
+        "bestowed_1",
+        "foreign_host_0",
+        "foreign_host_1",
+        "removed_aura_0",
+        "removed_aura_1",
+        "pending_fallback_0",
+        "pending_fallback_1"
+      ]
+    }
+  ]
+}

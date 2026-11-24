@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "csvid": 12494,
+  "card": "Trusted Forcemage",
+  "recipes": [
+    {
+      "family": "soulbond_creature",
+      "version": 2,
+      "oracle_text": "Soulbond (You may pair this creature with another unpaired creature when either enters. They remain paired for as long as you control both of them.)\nAs long as this creature is paired with another creature, each of those creatures gets +1/+1.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "mana": [
+            2,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "stats": [
+            1,
+            1
+          ],
+          "keyword": null,
+          "clauses": [
+            "Soulbond (You may pair this creature with another unpaired creature when either enters. They remain paired for as long as you control both of them.)",
+            "As long as this creature is paired with another creature, each of those creatures gets +1/+1."
+          ],
+          "power": 2,
+          "toughness": 2
+        }
+      },
+      "variants": [
+        "source_entry_0",
+        "partner_entry_0",
+        "source_decline_0",
+        "no_partner_0",
+        "enemy_entry_0",
+        "already_paired_entrant_0",
+        "already_paired_only_0",
+        "partner_leave_0",
+        "partner_reentry_0",
+        "source_reentry_0",
+        "control_partner_0",
+        "control_source_0",
+        "shroud_partner_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "countered_0",
+        "pending_replay_0",
+        "source_entry_1",
+        "partner_entry_1",
+        "source_decline_1",
+        "no_partner_1",
+        "enemy_entry_1",
+        "already_paired_entrant_1",
+        "already_paired_only_1",
+        "partner_leave_1",
+        "partner_reentry_1",
+        "source_reentry_1",
+        "control_partner_1",
+        "control_source_1",
+        "shroud_partner_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "countered_1",
+        "pending_replay_1",
+        "partner_decline_0"
+      ]
+    }
+  ]
+}

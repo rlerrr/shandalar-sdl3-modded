@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Kor Outfitter",
+  "csvid": 10588,
+  "recipes": [
+    {
+      "family": "remaining_entry_attachments",
+      "version": 2,
+      "params": {
+        "csvid": 10588,
+        "mana_cost": "{W}{W}"
+      },
+      "oracle_text": "When this creature enters, you may attach target Equipment you control to target creature you control.",
+      "variants": [
+        "attach_0",
+        "attach_1",
+        "move_0",
+        "move_1",
+        "decline_0",
+        "decline_1",
+        "foreign_equipment_0",
+        "foreign_equipment_1"
+      ]
+    }
+  ]
+}

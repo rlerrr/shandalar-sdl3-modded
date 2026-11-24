@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Batwing Brume",
+  "csvid": 9740,
+  "recipes": [
+    {
+      "family": "combat_wide_fog",
+      "version": 2,
+      "oracle_text": "Prevent all combat damage that would be dealt this turn if {W} was spent to cast this spell. Each player loses 1 life for each attacking creature they control if {B} was spent to cast this spell. (Do both if {W}{B} was spent.)",
+      "params": {
+        "model": "color_fog_loss",
+        "cast_mana": null,
+        "activation_mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "defend_0",
+        "own_attack_0",
+        "no_effect_0",
+        "noncombat_0",
+        "insufficient_0",
+        "wrong_color_0",
+        "pending_snapshot_0",
+        "zero_attackers_0",
+        "after_turn_0",
+        "black_0",
+        "both_0",
+        "black_own_attack_0",
+        "both_own_attack_0",
+        "black_zero_0",
+        "both_zero_0",
+        "defend_1",
+        "own_attack_1",
+        "no_effect_1",
+        "noncombat_1",
+        "insufficient_1",
+        "wrong_color_1",
+        "pending_snapshot_1",
+        "zero_attackers_1",
+        "after_turn_1",
+        "black_1",
+        "both_1",
+        "black_own_attack_1",
+        "both_own_attack_1",
+        "black_zero_1",
+        "both_zero_1"
+      ]
+    }
+  ]
+}

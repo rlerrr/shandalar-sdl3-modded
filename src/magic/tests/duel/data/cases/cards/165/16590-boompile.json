@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Boompile",
+  "csvid": 16590,
+  "recipes": [
+    {
+      "family": "seeded_coin_riders",
+      "version": 2,
+      "params": {
+        "shape": "boom",
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "oracle_text": "{T}: Flip a coin. If you win the flip, destroy all nonland permanents.",
+      "variants": [
+        "win_0",
+        "lose_0",
+        "replay_0",
+        "tapped_0",
+        "win_1",
+        "lose_1",
+        "replay_1",
+        "tapped_1"
+      ]
+    }
+  ]
+}

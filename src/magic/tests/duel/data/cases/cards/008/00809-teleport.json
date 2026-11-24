@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Teleport",
+  "csvid": 809,
+  "recipes": [
+    {
+      "family": "targeted_evasion_spells",
+      "version": 2,
+      "params": {
+        "targets": 1,
+        "attack_only": true,
+        "draw": false,
+        "devoid": false,
+        "instant": true,
+        "cost": [
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Cast this spell only during the declare attackers step.\nTarget creature can't be blocked this turn.",
+      "variants": [
+        "effect_0",
+        "expiry_0",
+        "fizzle_0",
+        "countered_0",
+        "short_0",
+        "replay_0",
+        "offturn_0",
+        "phase_0",
+        "effect_1",
+        "expiry_1",
+        "fizzle_1",
+        "countered_1",
+        "short_1",
+        "replay_1",
+        "offturn_1",
+        "phase_1"
+      ]
+    }
+  ]
+}

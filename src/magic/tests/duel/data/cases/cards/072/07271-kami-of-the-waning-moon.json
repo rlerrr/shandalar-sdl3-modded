@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "csvid": 7271,
+  "card": "Kami of the Waning Moon",
+  "recipes": [
+    {
+      "family": "cast_spirit_or_arcane_riders",
+      "version": 2,
+      "oracle_text": "Flying\nWhenever you cast a Spirit or Arcane spell, target creature gains fear until end of turn. (It can't be blocked except by artifact creatures and/or black creatures.)",
+      "params": {
+        "effect": "fear",
+        "price": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "flying": true,
+        "power": 1,
+        "toughness": 1,
+        "extra": [
+          "black_blocks",
+          "artifact_blocks",
+          "expires",
+          "flight_ground",
+          "flight_reach"
+        ],
+        "human": []
+      },
+      "variants": [
+        "own_spirit_0",
+        "own_spirit_1",
+        "own_arcane_0",
+        "own_arcane_1",
+        "own_other_creature_0",
+        "own_other_creature_1",
+        "own_other_instant_0",
+        "own_other_instant_1",
+        "enemy_spirit_0",
+        "enemy_spirit_1",
+        "enemy_arcane_0",
+        "enemy_arcane_1",
+        "black_blocks_0",
+        "black_blocks_1",
+        "artifact_blocks_0",
+        "artifact_blocks_1",
+        "expires_0",
+        "expires_1",
+        "flight_ground_0",
+        "flight_ground_1",
+        "flight_reach_0",
+        "flight_reach_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "card": "Untamed Hunger",
+  "csvid": 15707,
+  "recipes": [
+    {
+      "family": "static_aura_stats",
+      "version": 2,
+      "params": {
+        "power": 2,
+        "toughness": 1,
+        "menace": true,
+        "cost": "{2}{B}"
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature gets +2/+1 and has menace. (It can't be blocked except by two or more creatures.)",
+      "variants": [
+        "own_0",
+        "opponent_0",
+        "fizzle_0",
+        "remove_aura_0",
+        "leave_host_0",
+        "short_0",
+        "replay_0",
+        "cleanup_0",
+        "no_target_0",
+        "menace_single_0",
+        "menace_pair_0",
+        "own_1",
+        "opponent_1",
+        "fizzle_1",
+        "remove_aura_1",
+        "leave_host_1",
+        "short_1",
+        "replay_1",
+        "cleanup_1",
+        "no_target_1",
+        "menace_single_1",
+        "menace_pair_1"
+      ]
+    }
+  ]
+}

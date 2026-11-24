@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Jolrael's Centaur",
+  "csvid": 2515,
+  "recipes": [
+    {
+      "family": "combat_flanking_composition",
+      "version": 2,
+      "oracle_text": "Shroud (This creature can't be the target of spells or abilities.)\nFlanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)",
+      "params": {
+        "role": "shroud",
+        "printed_mana": "{1}{G}{G}",
+        "intrinsic_flanking": true,
+        "grant_cost": "",
+        "grant_taps_source": false
+      },
+      "variants": [
+        "cast_payment_0",
+        "cast_unaffordable_0",
+        "countered_cast_0",
+        "normal_block_0",
+        "lethal_declaration_0",
+        "flanking_blocker_0",
+        "two_blockers_0",
+        "defending_0",
+        "unblocked_0",
+        "empty_attack_0",
+        "declared_snapshot_0",
+        "cleanup_0",
+        "shroud_targets_0",
+        "cast_payment_1",
+        "cast_unaffordable_1",
+        "countered_cast_1",
+        "normal_block_1",
+        "lethal_declaration_1",
+        "flanking_blocker_1",
+        "two_blockers_1",
+        "defending_1",
+        "unblocked_1",
+        "empty_attack_1",
+        "declared_snapshot_1",
+        "cleanup_1",
+        "shroud_targets_1"
+      ]
+    }
+  ]
+}

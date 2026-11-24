@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 12503,
+  "card": "Vexing Devil",
+  "recipes": [
+    {
+      "family": "entry_follow_on_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 12503,
+        "printed_cost": "{R}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, any opponent may have it deal 4 damage to them. If a player does, sacrifice this creature.",
+      "variants": [
+        "take_0",
+        "decline_0",
+        "take_low_0",
+        "prevented_0",
+        "real_attack_0",
+        "take_1",
+        "decline_1",
+        "take_low_1",
+        "prevented_1",
+        "real_attack_1"
+      ]
+    }
+  ]
+}

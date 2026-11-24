@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Vizier of Deferment",
+  "csvid": 17059,
+  "recipes": [
+    {
+      "family": "flash_entry_battlefield_targeting",
+      "version": 2,
+      "params": {
+        "csvid": 17059,
+        "cost": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "stats": [
+          2,
+          2
+        ],
+        "clauses": [
+          "Flash",
+          "When this creature enters, you may exile target creature if it attacked or blocked this turn. Return that card to the battlefield under its owner's control at the beginning of the next end step."
+        ],
+        "modes": [
+          "attacked",
+          "idle_target",
+          "blocked",
+          "foreign_attacker"
+        ]
+      },
+      "oracle_text": "Flash\nWhen this creature enters, you may exile target creature if it attacked or blocked this turn. Return that card to the battlefield under its owner's control at the beginning of the next end step.",
+      "variants": [
+        "attacked_0",
+        "attacked_1",
+        "idle_target_0",
+        "idle_target_1",
+        "blocked_0",
+        "blocked_1",
+        "foreign_attacker_0",
+        "foreign_attacker_1"
+      ]
+    }
+  ]
+}

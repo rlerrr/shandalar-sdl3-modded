@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Bloodwater Entity",
+  "csvid": 17092,
+  "recipes": [
+    {
+      "family": "entry_rider_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 17092,
+        "cost": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Flying\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhen this creature enters, you may put target instant or sorcery card from your graveyard on top of your library.",
+      "variants": [
+        "instant_0",
+        "instant_1",
+        "sorcery_0",
+        "sorcery_1",
+        "decline_0",
+        "decline_1",
+        "wrong_type_0",
+        "wrong_type_1",
+        "prowess_flying_0",
+        "prowess_flying_1"
+      ]
+    }
+  ]
+}

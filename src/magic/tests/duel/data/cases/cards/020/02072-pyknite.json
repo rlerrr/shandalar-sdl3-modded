@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Pyknite",
+  "csvid": 2072,
+  "recipes": [
+    {
+      "family": "entry_trigger_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 2072,
+        "printed_mana": "{2}{G}",
+        "rules": "When this creature enters, draw a card at the beginning of the next turn's upkeep."
+      },
+      "oracle_text": "When this creature enters, draw a card at the beginning of the next turn's upkeep.",
+      "variants": [
+        "next_upkeep_0",
+        "next_upkeep_1",
+        "removed_before_upkeep_0",
+        "removed_before_upkeep_1"
+      ]
+    }
+  ]
+}

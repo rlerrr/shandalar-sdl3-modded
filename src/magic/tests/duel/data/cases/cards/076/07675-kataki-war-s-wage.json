@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "card": "Kataki, War's Wage",
+  "csvid": 7675,
+  "recipes": [
+    {
+      "family": "grant_upkeep_sacrifice",
+      "version": 2,
+      "params": {
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "source_type": "Creature",
+        "subject": "artifact",
+        "other_only": false,
+        "fee": 1,
+        "unpaid": "sacrifice"
+      },
+      "oracle_text": "All artifacts have \"At the beginning of your upkeep, sacrifice this artifact unless you pay {1}.\"",
+      "variants": [
+        "paid_other_0",
+        "short_other_0",
+        "decline_other_0",
+        "paid_own_0",
+        "short_own_0",
+        "scope_0",
+        "source_in_hand_0",
+        "source_removed_0",
+        "source_enters_0",
+        "two_short_0",
+        "two_paid_0",
+        "dual_type_0",
+        "opposing_funds_0",
+        "colored_mana_0",
+        "repeat_pay_0",
+        "paid_other_1",
+        "short_other_1",
+        "decline_other_1",
+        "paid_own_1",
+        "short_own_1",
+        "scope_1",
+        "source_in_hand_1",
+        "source_removed_1",
+        "source_enters_1",
+        "two_short_1",
+        "two_paid_1",
+        "dual_type_1",
+        "opposing_funds_1",
+        "colored_mana_1",
+        "repeat_pay_1"
+      ]
+    }
+  ]
+}

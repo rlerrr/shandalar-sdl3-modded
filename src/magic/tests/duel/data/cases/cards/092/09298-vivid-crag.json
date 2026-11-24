@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Vivid Crag",
+  "csvid": 9298,
+  "recipes": [
+    {
+      "family": "vivid_land_mana",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "fixed_color": "R",
+        "entry_tapped": true,
+        "entry_charge": 2,
+        "alternate_cost": 1
+      },
+      "oracle_text": "This land enters tapped with two charge counters on it.\n{T}: Add {R}.\n{T}, Remove a charge counter from this land: Add one mana of any color.",
+      "variants": [
+        "entry_tapped_0",
+        "fixed_charged_0",
+        "deplete_0",
+        "free_interleaved_0",
+        "repeat_denied_0",
+        "offturn_alternate_0",
+        "pending_entry_replay_0",
+        "one_charge_replay_0",
+        "reentry_reset_0",
+        "spend_blue_0",
+        "alternate_b_0",
+        "alternate_u_0",
+        "alternate_g_0",
+        "alternate_w_0",
+        "entry_tapped_1",
+        "fixed_charged_1",
+        "deplete_1",
+        "free_interleaved_1",
+        "repeat_denied_1",
+        "offturn_alternate_1",
+        "pending_entry_replay_1",
+        "one_charge_replay_1",
+        "reentry_reset_1",
+        "spend_blue_1",
+        "alternate_b_1",
+        "alternate_u_1",
+        "alternate_g_1",
+        "alternate_w_1"
+      ]
+    }
+  ]
+}

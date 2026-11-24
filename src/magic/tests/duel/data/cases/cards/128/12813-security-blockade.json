@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Security Blockade",
+  "csvid": 12813,
+  "recipes": [
+    {
+      "family": "entry_follow_on_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 12813,
+        "mana_cost": "{2}{W}"
+      },
+      "oracle_text": "Enchant land\nWhen this Aura enters, create a 2/2 white Knight creature token with vigilance.\nEnchanted land has \"{T}: Prevent the next 1 damage that would be dealt to you this turn.\"",
+      "variants": [
+        "own_land_0",
+        "own_land_1",
+        "no_land_0",
+        "no_land_1",
+        "foreign_land_0",
+        "foreign_land_1"
+      ]
+    }
+  ]
+}

@@ -37,6 +37,25 @@ class RunnerExpectationsTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             validate_expectation_signature('case', dict(leaf, platform='native', platform_signatures={'wasm':leaf}))
 
+    def test_platform_signatures_allow_crash_with_no_prior_assertions(self):
+        native = dict(kind='crash', assertion_count=0, reason='Native faults before returning',
+                      patterns=['SEH exception'], pattern_counts=[1])
+        record = dict(kind='assertion', assertion_count=2, reason='Wasm fails to regenerate the target',
+                      patterns=['target died'], pattern_counts=[1], platform_signatures={'native':native})
+        baseline = {'case':record}
+        for platform, kind, count, text in (('native', 'crash', 0, 'SEH exception'),
+                                             ('wasm', 'assertion', 2, 'target died')):
+            with self.subTest(platform=platform):
+                expected = expectations_for_platform(baseline, platform)
+                self.assertEqual(classify_outcome('case', kind, count, text, expected), 'known_failure')
+                self.assertEqual(classify_outcome('case', kind, count+1, text, expected), 'failed')
+                self.assertEqual(classify_outcome('case', kind, count, text+'\n'+text, expected), 'failed')
+                self.assertEqual(classify_outcome('case', 'passed', 0, '', expected), 'unexpected_pass')
+        for count in (None, False, 1):
+            with self.subTest(count=count), self.assertRaises(ValueError):
+                validate_expectation_signature('case', dict(record, platform_signatures={
+                    'native':dict(native, assertion_count=count)}))
+
     def test_fatal_engine_error_without_xml_cannot_hide_earlier_assertions(self):
         error = 'DUEL_ENGINE_ERROR: bad parameters: get_card_instance(-1, -1)'
         record = dict(kind='crash', reason='Reviewed zero-target engine error', patterns=[re.escape(error)], pattern_counts=[1])

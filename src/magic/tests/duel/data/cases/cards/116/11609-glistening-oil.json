@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Glistening Oil",
+  "csvid": 11609,
+  "recipes": [
+    {
+      "family": "departure_graveyard_and_return",
+      "version": 2,
+      "params": {
+        "csvid": 11609,
+        "cost": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature has infect.\nAt the beginning of your upkeep, put a -1/-1 counter on enchanted creature.\nWhen this Aura is put into a graveyard from the battlefield, return it to its owner's hand.",
+      "variants": [
+        "upkeep_0",
+        "upkeep_1",
+        "aura_destroyed_0",
+        "aura_destroyed_1",
+        "infect_0",
+        "infect_1"
+      ]
+    }
+  ]
+}

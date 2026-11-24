@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 16885,
+  "card": "Defiant Greatmaw",
+  "recipes": [
+    {
+      "family": "entry_interaction_counters",
+      "version": 2,
+      "params": {
+        "csvid": 16885,
+        "printed_cost": "{2}{G}"
+      },
+      "oracle_text": "When this creature enters, put two -1/-1 counters on target creature you control.\nWhenever you put one or more -1/-1 counters on this creature, remove a -1/-1 counter from another target creature you control.",
+      "variants": [
+        "other_0",
+        "self_0",
+        "clear_0",
+        "alone_0",
+        "countered_0",
+        "other_1",
+        "self_1",
+        "clear_1",
+        "alone_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

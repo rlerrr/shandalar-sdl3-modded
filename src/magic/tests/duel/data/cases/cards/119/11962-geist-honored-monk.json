@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Geist-Honored Monk",
+  "csvid": 11962,
+  "recipes": [
+    {
+      "family": "entry_follow_on_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 11962,
+        "mana_cost": "{3}{W}{W}"
+      },
+      "oracle_text": "Vigilance\nGeist-Honored Monk's power and toughness are each equal to the number of creatures you control.\nWhen this creature enters, create two 1/1 white Spirit creature tokens with flying.",
+      "variants": [
+        "base_0",
+        "base_1",
+        "scope_0",
+        "scope_1",
+        "shrinks_0",
+        "shrinks_1",
+        "blink_0",
+        "blink_1"
+      ]
+    }
+  ]
+}

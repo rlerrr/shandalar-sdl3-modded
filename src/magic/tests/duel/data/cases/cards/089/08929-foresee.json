@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "card": "Foresee",
+  "csvid": 8929,
+  "recipes": [
+    {
+      "family": "library_scry_before_draw",
+      "version": 2,
+      "params": {
+        "csvid": 8929,
+        "printed_cost": "{3}{U}",
+        "choices": [
+          "short_0",
+          "short_1",
+          "countered_0",
+          "countered_1",
+          "reverse_top_0",
+          "split_bottom_0",
+          "all_bottom_0",
+          "ai_sweep_1",
+          "ai_keep_land_1"
+        ]
+      },
+      "oracle_text": "Scry 4, then draw two cards.",
+      "variants": [
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "reverse_top_0",
+        "split_bottom_0",
+        "all_bottom_0",
+        "ai_sweep_1",
+        "ai_keep_land_1"
+      ]
+    }
+  ]
+}

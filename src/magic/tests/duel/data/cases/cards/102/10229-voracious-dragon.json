@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Voracious Dragon",
+  "csvid": 10229,
+  "recipes": [
+    {
+      "family": "devour_entry_rewards",
+      "version": 2,
+      "params": {
+        "reward": "goblin_damage",
+        "multiplier": 1,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "keywords": [
+          "Flying"
+        ],
+        "power": 4,
+        "toughness": 4
+      },
+      "oracle_text": "Flying\nDevour 1 (As this creature enters, you may sacrifice any number of creatures. It enters with that many +1/+1 counters on it.)\nWhen this creature enters, it deals damage to any target equal to twice the number of Goblins it devoured.",
+      "variants": [
+        "none_0",
+        "paid_one_0",
+        "countered_0",
+        "wrong_color_0",
+        "snapshot_0",
+        "fly_ground_0",
+        "fly_reach_0",
+        "zero_goblins_0",
+        "none_1",
+        "paid_one_1",
+        "countered_1",
+        "wrong_color_1",
+        "snapshot_1",
+        "fly_ground_1",
+        "fly_reach_1",
+        "zero_goblins_1",
+        "paid_two_0",
+        "partial_0",
+        "decline_0",
+        "borrowed_meal_0",
+        "two_goblins_0",
+        "creature_recipient_0"
+      ]
+    }
+  ]
+}

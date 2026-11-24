@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Prophetic Prism",
+  "csvid": 11021,
+  "recipes": [
+    {
+      "family": "entry_trigger_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 11021,
+        "printed_mana": "{2}",
+        "rules": "When this artifact enters, draw a card.\n{1}, {T}: Add one mana of any color."
+      },
+      "oracle_text": "When this artifact enters, draw a card.\n{1}, {T}: Add one mana of any color.",
+      "variants": [
+        "filter_blue_0",
+        "filter_blue_1",
+        "insufficient_0",
+        "insufficient_1"
+      ]
+    }
+  ]
+}

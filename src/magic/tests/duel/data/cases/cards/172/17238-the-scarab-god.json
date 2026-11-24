@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "csvid": 17238,
+  "card": "The Scarab God",
+  "recipes": [
+    {
+      "family": "library_scry_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 17238,
+        "mana": [
+          3,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          5,
+          5
+        ]
+      },
+      "oracle_text": "At the beginning of your upkeep, each opponent loses X life and you scry X, where X is the number of Zombies you control.\n{2}{U}{B}: Exile target creature card from a graveyard. Create a token that's a copy of it, except it's a 4/4 black Zombie.\nWhen The Scarab God dies, return it to its owner's hand at the beginning of the next end step.",
+      "variants": [
+        "upkeep_zero_0",
+        "upkeep_zero_1",
+        "upkeep_two_0",
+        "upkeep_two_1",
+        "copy_own_0",
+        "copy_own_1",
+        "copy_foe_0",
+        "copy_foe_1",
+        "dies_0",
+        "dies_1",
+        "exile_0",
+        "exile_1"
+      ]
+    }
+  ]
+}

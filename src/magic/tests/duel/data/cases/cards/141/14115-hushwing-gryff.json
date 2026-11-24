@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Hushwing Gryff",
+  "csvid": 14115,
+  "recipes": [
+    {
+      "family": "flash_remaining_rule_effects",
+      "version": 2,
+      "params": {
+        "csvid": 14115,
+        "printed_mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "rules": "Flash\nFlying\nCreatures entering don't cause abilities to trigger."
+      },
+      "oracle_text": "Flash\nFlying\nCreatures entering don't cause abilities to trigger.",
+      "variants": [
+        "creature_enter_0",
+        "creature_enter_1",
+        "artifact_enter_0",
+        "artifact_enter_1"
+      ]
+    }
+  ]
+}

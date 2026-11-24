@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "csvid": 11360,
+  "card": "Skinrender",
+  "recipes": [
+    {
+      "family": "entry_trigger_life_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 11360,
+        "printed_cost": "{2}{B}{B}"
+      },
+      "oracle_text": "When this creature enters, put three -1/-1 counters on target creature.",
+      "variants": [
+        "short_0",
+        "countered_0",
+        "target_enemy_0",
+        "target_own_0",
+        "self_only_0",
+        "lethal_0",
+        "protected_0",
+        "snapshot_0",
+        "short_1",
+        "countered_1",
+        "target_enemy_1",
+        "target_own_1",
+        "self_only_1",
+        "lethal_1",
+        "protected_1",
+        "snapshot_1"
+      ]
+    }
+  ]
+}

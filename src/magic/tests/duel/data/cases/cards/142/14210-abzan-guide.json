@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "card": "Abzan Guide",
+  "csvid": 14210,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "morph_with_keywords",
+      "version": 2,
+      "oracle_text": "Lifelink (Damage dealt by this creature also causes you to gain that much life.)\nMorph {2}{W}{B}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+      "params": {
+        "mode": "lifelink",
+        "mana": [
+          3,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "morph": [
+          2,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "power": 4,
+        "toughness": 4,
+        "keywords": [
+          "Lifelink"
+        ],
+        "color": 42
+      },
+      "variants": [
+        "printed_cast_0",
+        "printed_cast_1",
+        "hidden_cast_0",
+        "hidden_cast_1",
+        "hidden_choice_0",
+        "hidden_choice_1",
+        "cast_short_0",
+        "cast_short_1",
+        "paid_reveal_0",
+        "paid_reveal_1",
+        "reveal_short_0",
+        "reveal_short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "reveal_offturn_0",
+        "reveal_offturn_1",
+        "pending_damage_0",
+        "pending_damage_1",
+        "fresh_reveal_0",
+        "fresh_reveal_1",
+        "hidden_hit_0",
+        "hidden_hit_1",
+        "revealed_hit_0",
+        "revealed_hit_1",
+        "hidden_block_0",
+        "hidden_block_1",
+        "hidden_countered_0",
+        "hidden_countered_1",
+        "reveal_replay_0",
+        "reveal_replay_1",
+        "blocked_life_0",
+        "blocked_life_1",
+        "noncombat_life_0",
+        "noncombat_life_1",
+        "prevented_life_0",
+        "prevented_life_1"
+      ]
+    }
+  ]
+}

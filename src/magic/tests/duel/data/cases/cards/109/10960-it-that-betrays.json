@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "It That Betrays",
+  "csvid": 10960,
+  "recipes": [
+    {
+      "family": "attack_trigger_follow_on_annihilator_and_myriad",
+      "version": 2,
+      "params": {
+        "csvid": 10960,
+        "printed_mana": "{12}",
+        "rules": "Annihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents of their choice.)\nWhenever an opponent sacrifices a nontoken permanent, put that card onto the battlefield under your control."
+      },
+      "oracle_text": "Annihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents of their choice.)\nWhenever an opponent sacrifices a nontoken permanent, put that card onto the battlefield under your control.",
+      "variants": [
+        "annihilator_take_0",
+        "annihilator_take_1",
+        "sacrifice_tokens_0",
+        "sacrifice_tokens_1",
+        "destroy_not_sacrifice_0",
+        "destroy_not_sacrifice_1",
+        "own_sacrifice_0",
+        "own_sacrifice_1"
+      ]
+    }
+  ]
+}

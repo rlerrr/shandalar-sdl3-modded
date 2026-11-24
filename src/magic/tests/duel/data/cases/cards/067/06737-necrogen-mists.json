@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Necrogen Mists",
+  "csvid": 6737,
+  "recipes": [
+    {
+      "family": "upkeep_draw_and_discard",
+      "version": 2,
+      "params": {
+        "csvid": 6737,
+        "printed_mana": "{2}{B}",
+        "rules": "At the beginning of each player's upkeep, that player discards a card."
+      },
+      "oracle_text": "At the beginning of each player's upkeep, that player discards a card.",
+      "variants": [
+        "each_active_0",
+        "each_active_1",
+        "empty_active_0",
+        "empty_active_1"
+      ]
+    }
+  ]
+}

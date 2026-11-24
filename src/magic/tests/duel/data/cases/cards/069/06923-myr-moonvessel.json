@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Myr Moonvessel",
+  "csvid": 6923,
+  "recipes": [
+    {
+      "family": "departure_resources",
+      "version": 2,
+      "params": {
+        "csvid": 6923,
+        "printed_mana": "{1}",
+        "rules": "When this creature dies, add {C}."
+      },
+      "oracle_text": "When this creature dies, add {C}.",
+      "variants": [
+        "dies_0",
+        "dies_1",
+        "borrowed_0",
+        "borrowed_1",
+        "exile_0",
+        "exile_1"
+      ]
+    }
+  ]
+}

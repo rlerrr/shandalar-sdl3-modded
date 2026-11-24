@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Looter il-Kor",
+  "csvid": 8598,
+  "recipes": [
+    {
+      "family": "damage_loot_creatures",
+      "version": 2,
+      "params": {
+        "mode": "shadow",
+        "keywords": [
+          "Shadow"
+        ],
+        "mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "morph": [],
+        "power": 1,
+        "toughness": 1,
+        "optional": false,
+        "combat_only": false
+      },
+      "oracle_text": "Shadow (This creature can block or be blocked by only creatures with shadow.)\nWhenever this creature deals damage to an opponent, draw a card, then discard a card.",
+      "variants": [
+        "connect_0",
+        "blocked_0",
+        "evasion_0",
+        "prevented_0",
+        "noncombat_0",
+        "self_damage_0",
+        "source_blocks_0",
+        "snapshot_0",
+        "cast_short_0",
+        "connect_1",
+        "blocked_1",
+        "evasion_1",
+        "prevented_1",
+        "noncombat_1",
+        "self_damage_1",
+        "source_blocks_1",
+        "snapshot_1",
+        "cast_short_1",
+        "discard_drawn_0",
+        "discard_old_0"
+      ]
+    }
+  ]
+}

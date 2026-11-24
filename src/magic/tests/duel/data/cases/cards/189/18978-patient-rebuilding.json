@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Patient Rebuilding",
+  "csvid": 18978,
+  "recipes": [
+    {
+      "family": "mill_upkeep_and_untap",
+      "version": 2,
+      "params": {
+        "csvid": 18978,
+        "printed_mana": [
+          3,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "rules": "At the beginning of your upkeep, target opponent mills three cards, then you draw a card for each land card put into their graveyard this way."
+      },
+      "oracle_text": "At the beginning of your upkeep, target opponent mills three cards, then you draw a card for each land card put into their graveyard this way.",
+      "variants": [
+        "mixed_draw_0",
+        "mixed_draw_1",
+        "short_no_lands_0",
+        "short_no_lands_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Mulldrifter",
+  "csvid": 1695,
+  "recipes": [
+    {
+      "family": "entry_trigger_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 1695,
+        "printed_mana": "{4}{U}",
+        "rules": "Flying\nWhen this creature enters, draw two cards.\nEvoke {2}{U} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)"
+      },
+      "oracle_text": "Flying\nWhen this creature enters, draw two cards.\nEvoke {2}{U} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+      "variants": [
+        "normal_flying_0",
+        "normal_flying_1",
+        "evoke_exact_0",
+        "evoke_exact_1",
+        "evoke_choice_0",
+        "evoke_choice_1",
+        "evoke_countered_0",
+        "evoke_countered_1"
+      ]
+    }
+  ]
+}

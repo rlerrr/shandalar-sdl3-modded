@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Pallid Mycoderm",
+  "csvid": 8819,
+  "recipes": [
+    {
+      "family": "spore_synergy_riders",
+      "version": 2,
+      "params": {
+        "shape": "team_pump",
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "keywords": [],
+        "power": 2,
+        "toughness": 4
+      },
+      "oracle_text": "At the beginning of your upkeep, put a spore counter on this creature.\nRemove three spore counters from this creature: Create a 1/1 green Saproling creature token.\nSacrifice a Saproling: Each creature you control that's a Fungus or a Saproling gets +1/+1 until end of turn.",
+      "variants": [
+        "threshold_0",
+        "pump_expiry_0",
+        "pump_replay_0",
+        "threshold_1",
+        "pump_expiry_1",
+        "pump_replay_1"
+      ]
+    }
+  ]
+}

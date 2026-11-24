@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "card": "Nighthowler",
+  "csvid": 13490,
+  "recipes": [
+    {
+      "family": "bestow_dynamic_and_control",
+      "version": 2,
+      "params": {
+        "csvid": 13490,
+        "normal": [
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "bestowed": [
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "creature": [
+          0,
+          0
+        ],
+        "riders": [
+          "This creature and enchanted creature each get +X/+X, where X is the number of creature cards in all graveyards."
+        ]
+      },
+      "oracle_text": "Bestow {2}{B}{B} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nThis creature and enchanted creature each get +X/+X, where X is the number of creature cards in all graveyards.",
+      "variants": [
+        "regular_graves_0",
+        "regular_graves_1",
+        "bestowed_graves_0",
+        "bestowed_graves_1",
+        "empty_graves_0",
+        "empty_graves_1",
+        "last_grave_exiled_0",
+        "last_grave_exiled_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 7625,
+  "card": "Descendant of Masumaro",
+  "recipes": [
+    {
+      "family": "upkeep_counters",
+      "version": 2,
+      "params": {
+        "csvid": 7625,
+        "printed_cost": "{2}{G}"
+      },
+      "oracle_text": "At the beginning of your upkeep, put a +1/+1 counter on this creature for each card in your hand, then remove a +1/+1 counter from this creature for each card in target opponent's hand.",
+      "variants": [
+        "ahead_0",
+        "behind_0",
+        "equal_0",
+        "growth_0",
+        "ahead_1",
+        "behind_1",
+        "equal_1",
+        "growth_1"
+      ]
+    }
+  ]
+}

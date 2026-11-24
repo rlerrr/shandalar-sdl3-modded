@@ -1564,7 +1564,7 @@ Shuffle your library, then put them on top of it in any order. */
 		shuffle(player);
 		if( t_index ){
 			int i;
-			for(i=0; i<=t_index; i++){
+			for(i=0; i<t_index; i++){
 				raw_put_iid_on_top_of_deck(player, tutored[i]);
 			}
 			if( t_index > 1 ){

@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Stormscape Battlemage",
+  "csvid": 5310,
+  "recipes": [
+    {
+      "family": "kicker_battlemages",
+      "version": 2,
+      "params": {
+        "base": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "kicker": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effects": [
+          "gain3",
+          "bury_creature"
+        ]
+      },
+      "oracle_text": "Kicker {W} and/or {2}{B} (You may pay an additional {W} and/or {2}{B} as you cast this spell.)\nWhen this creature enters, if it was kicked with its {W} kicker, you gain 3 life.\nWhen this creature enters, if it was kicked with its {2}{B} kicker, destroy target nonblack creature. That creature can't be regenerated.",
+      "variants": [
+        "normal_0",
+        "normal_1",
+        "first_0",
+        "first_1",
+        "second_0",
+        "second_1",
+        "both_0",
+        "both_1",
+        "base_only_0",
+        "base_only_1",
+        "first_funded_0",
+        "first_funded_1",
+        "second_funded_0",
+        "second_funded_1",
+        "scope_0",
+        "scope_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

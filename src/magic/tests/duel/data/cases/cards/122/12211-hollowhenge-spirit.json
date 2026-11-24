@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 12211,
+  "card": "Hollowhenge Spirit",
+  "recipes": [
+    {
+      "family": "flash_entry_combat_and_damage",
+      "version": 2,
+      "params": {
+        "csvid": 12211,
+        "printed_cost": "{3}{W}"
+      },
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nFlying\nWhen this creature enters, remove target attacking or blocking creature from combat.",
+      "variants": [
+        "remove_attacker_0",
+        "remove_blocker_0",
+        "separate_flyer_0",
+        "empty_0",
+        "short_0",
+        "remove_attacker_1",
+        "remove_blocker_1",
+        "separate_flyer_1",
+        "empty_1",
+        "short_1"
+      ]
+    }
+  ]
+}

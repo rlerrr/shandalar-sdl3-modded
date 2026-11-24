@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "csvid": 15215,
+  "card": "Shadows of the Past",
+  "recipes": [
+    {
+      "family": "library_scry_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 15215,
+        "mana": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "stats": null
+      },
+      "oracle_text": "Whenever a creature dies, scry 1. (Look at the top card of your library. You may put that card on the bottom.)\n{4}{B}: Each opponent loses 2 life and you gain 2 life. Activate only if there are four or more creature cards in your graveyard.",
+      "variants": [
+        "own_death_0",
+        "own_death_1",
+        "foe_death_0",
+        "foe_death_1",
+        "drain_0",
+        "drain_1",
+        "three_0",
+        "three_1",
+        "foe_grave_0",
+        "foe_grave_1"
+      ]
+    }
+  ]
+}

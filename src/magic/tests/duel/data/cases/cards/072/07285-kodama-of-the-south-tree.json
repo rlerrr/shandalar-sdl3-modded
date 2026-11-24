@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "csvid": 7285,
+  "card": "Kodama of the South Tree",
+  "recipes": [
+    {
+      "family": "cast_spirit_or_arcane_riders",
+      "version": 2,
+      "oracle_text": "Whenever you cast a Spirit or Arcane spell, each other creature you control gets +1/+1 and gains trample until end of turn.",
+      "params": {
+        "effect": "team",
+        "price": [
+          2,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "flying": false,
+        "power": 4,
+        "toughness": 4,
+        "extra": [
+          "trample",
+          "expires"
+        ],
+        "human": []
+      },
+      "variants": [
+        "own_spirit_0",
+        "own_spirit_1",
+        "own_arcane_0",
+        "own_arcane_1",
+        "own_other_creature_0",
+        "own_other_creature_1",
+        "own_other_instant_0",
+        "own_other_instant_1",
+        "enemy_spirit_0",
+        "enemy_spirit_1",
+        "enemy_arcane_0",
+        "enemy_arcane_1",
+        "trample_0",
+        "trample_1",
+        "expires_0",
+        "expires_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Selkie Hedge-Mage",
+  "csvid": 9866,
+  "recipes": [
+    {
+      "family": "entry_interaction_choice_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 9866,
+        "mana_cost": "{2}{G/U}"
+      },
+      "oracle_text": "When this creature enters, if you control two or more Forests, you may gain 3 life.\nWhen this creature enters, if you control two or more Islands, you may return target tapped creature to its owner's hand.",
+      "variants": [
+        "both_types_0",
+        "both_types_1",
+        "forests_only_0",
+        "forests_only_1",
+        "foe_types_0",
+        "foe_types_1"
+      ]
+    }
+  ]
+}

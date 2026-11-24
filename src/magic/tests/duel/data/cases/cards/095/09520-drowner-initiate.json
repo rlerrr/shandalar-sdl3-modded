@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Drowner Initiate",
+  "csvid": 9520,
+  "recipes": [
+    {
+      "family": "mill_remaining_phase_and_mill_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 9520,
+        "printed_mana": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "rules": "Whenever a player casts a blue spell, you may pay {1}. If you do, target player mills two cards."
+      },
+      "oracle_text": "Whenever a player casts a blue spell, you may pay {1}. If you do, target player mills two cards.",
+      "variants": [
+        "own_blue_paid_0",
+        "own_blue_paid_1",
+        "foe_blue_paid_0",
+        "foe_blue_paid_1",
+        "nonblue_0",
+        "nonblue_1"
+      ]
+    }
+  ]
+}

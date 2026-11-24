@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Oracle's Vault",
+  "csvid": 16987,
+  "recipes": [
+    {
+      "family": "own_exile_specializations",
+      "version": 2,
+      "params": {
+        "model": "vault",
+        "cost": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "count": 1,
+        "paid_fee": 2,
+        "brick_required": 3
+      },
+      "oracle_text": "{2}, {T}: Exile the top card of your library. Until end of turn, you may play that card. Put a brick counter on this artifact.\n{T}: Exile the top card of your library. Until end of turn, you may play that card without paying its mana cost. Activate only if there are three or more brick counters on this artifact.",
+      "variants": [
+        "paid_spell_0",
+        "paid_land_0",
+        "wrong_spell_color_0",
+        "wrong_seat_0",
+        "affordability_0",
+        "tapped_0",
+        "empty_0",
+        "expiry_0",
+        "free_funded_0",
+        "free_zero_0",
+        "free_land_0",
+        "paid_at_three_0",
+        "empty_third_0",
+        "replay_0",
+        "paid_spell_1",
+        "paid_land_1",
+        "wrong_spell_color_1",
+        "wrong_seat_1",
+        "affordability_1",
+        "tapped_1",
+        "empty_1",
+        "expiry_1",
+        "free_funded_1",
+        "free_zero_1",
+        "free_land_1",
+        "paid_at_three_1",
+        "empty_third_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

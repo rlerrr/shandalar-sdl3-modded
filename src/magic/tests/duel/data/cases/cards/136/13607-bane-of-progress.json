@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 13607,
+  "card": "Bane of Progress",
+  "recipes": [
+    {
+      "family": "entry_follow_on_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 13607,
+        "printed_cost": "{4}{G}{G}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, destroy all artifacts and enchantments. Put a +1/+1 counter on this creature for each permanent destroyed this way.",
+      "variants": [
+        "mixed_0",
+        "dual_type_0",
+        "indestructible_0",
+        "untouched_0",
+        "artifact_land_0",
+        "mixed_1",
+        "dual_type_1",
+        "indestructible_1",
+        "untouched_1",
+        "artifact_land_1"
+      ]
+    }
+  ]
+}

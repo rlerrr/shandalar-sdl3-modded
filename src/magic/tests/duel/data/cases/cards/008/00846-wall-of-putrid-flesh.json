@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Wall of Putrid Flesh",
+  "csvid": 846,
+  "recipes": [
+    {
+      "family": "conditional_combat_prevention",
+      "version": 2,
+      "oracle_text": "Defender (This creature can't attack.)\nProtection from white\nPrevent all damage that would be dealt to this creature by enchanted creatures.",
+      "params": {
+        "condition": "enchanted",
+        "combat_only": false,
+        "defender": true,
+        "white_protection": true,
+        "wall_only_target_shield": false,
+        "mandatory_wall_block": false,
+        "cost": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "cast_0",
+        "insufficient_0",
+        "source_attack_0",
+        "combat_match_0",
+        "combat_other_0",
+        "unblocked_side_damage_0",
+        "spell_damage_0",
+        "blocked_snapshot_0",
+        "wrong_color_0",
+        "aura_removed_0",
+        "enchanted_ping_0",
+        "unenchanted_ping_0",
+        "white_combat_0",
+        "white_aura_denied_0",
+        "black_aura_control_0",
+        "cast_1",
+        "insufficient_1",
+        "source_attack_1",
+        "combat_match_1",
+        "combat_other_1",
+        "unblocked_side_damage_1",
+        "spell_damage_1",
+        "blocked_snapshot_1",
+        "wrong_color_1",
+        "aura_removed_1",
+        "enchanted_ping_1",
+        "unenchanted_ping_1",
+        "white_combat_1",
+        "white_aura_denied_1",
+        "black_aura_control_1"
+      ]
+    }
+  ]
+}

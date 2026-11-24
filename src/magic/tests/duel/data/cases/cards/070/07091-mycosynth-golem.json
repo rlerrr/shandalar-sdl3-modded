@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "csvid": 7091,
+  "card": "Mycosynth Golem",
+  "recipes": [
+    {
+      "family": "artifact_discount_composition",
+      "version": 2,
+      "oracle_text": "Affinity for artifacts (This spell costs {1} less to cast for each artifact you control.)\nArtifact creature spells you cast have affinity for artifacts. (They cost {1} less to cast for each artifact you control.)",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "printed": [
+            11,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "role": "grant",
+          "clauses": [
+            "Affinity for artifacts (This spell costs {1} less to cast for each artifact you control.)",
+            "Artifact creature spells you cast have affinity for artifacts. (They cost {1} less to cast for each artifact you control.)"
+          ],
+          "artifact": true,
+          "power": 4,
+          "toughness": 5
+        }
+      },
+      "variants": [
+        "full_price_0",
+        "full_price_1",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "paid_replay_0",
+        "paid_replay_1",
+        "own_exact_0",
+        "own_exact_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "nonartifact_only_0",
+        "nonartifact_only_1",
+        "off_battlefield_0",
+        "off_battlefield_1",
+        "artifact_land_0",
+        "artifact_land_1",
+        "zero_generic_0",
+        "zero_generic_1",
+        "artifact_creature_0",
+        "artifact_creature_1",
+        "artifact_noncreature_0",
+        "artifact_noncreature_1",
+        "nonartifact_0",
+        "nonartifact_1",
+        "opposing_caster_0",
+        "opposing_caster_1",
+        "colored_floor_0",
+        "colored_floor_1",
+        "wrong_colored_floor_0",
+        "wrong_colored_floor_1",
+        "source_leaves_0",
+        "source_leaves_1",
+        "multiple_reducers_0",
+        "multiple_reducers_1",
+        "intrinsic_affinity_0",
+        "intrinsic_affinity_1",
+        "two_golems_0",
+        "two_golems_1",
+        "flat_composition_0",
+        "flat_composition_1"
+      ]
+    }
+  ]
+}

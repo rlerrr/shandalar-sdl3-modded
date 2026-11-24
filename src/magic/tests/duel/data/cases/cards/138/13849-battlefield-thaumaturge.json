@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "csvid": 13849,
+  "card": "Battlefield Thaumaturge",
+  "recipes": [
+    {
+      "family": "heroic_counter_riders",
+      "version": 2,
+      "params": {
+        "effect": "hexproof_reducer",
+        "clauses": [
+          "Each instant and sorcery spell you cast costs {1} less to cast for each creature it targets.",
+          "Heroic — Whenever you cast a spell that targets this creature, this creature gains hexproof until end of turn."
+        ],
+        "price": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          2,
+          1
+        ]
+      },
+      "oracle_text": "Each instant and sorcery spell you cast costs {1} less to cast for each creature it targets.\nHeroic — Whenever you cast a spell that targets this creature, this creature gains hexproof until end of turn.",
+      "variants": [
+        "own_0",
+        "own_1",
+        "opponent_0",
+        "opponent_1",
+        "elsewhere_0",
+        "elsewhere_1",
+        "hexproof_0",
+        "hexproof_1",
+        "discount_one_0",
+        "discount_one_1",
+        "discount_two_0",
+        "discount_two_1",
+        "enemy_discount_control_0",
+        "enemy_discount_control_1"
+      ]
+    }
+  ]
+}

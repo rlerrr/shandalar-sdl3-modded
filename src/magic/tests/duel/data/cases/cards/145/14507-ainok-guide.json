@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Ainok Guide",
+  "csvid": 14507,
+  "recipes": [
+    {
+      "family": "entry_interaction_choice_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 14507,
+        "mana_cost": "{1}{G}"
+      },
+      "oracle_text": "When this creature enters, choose one —\n• Put a +1/+1 counter on this creature.\n• Search your library for a basic land card, reveal it, then shuffle and put that card on top.",
+      "variants": [
+        "counter_0",
+        "counter_1",
+        "find_snow_0",
+        "find_snow_1",
+        "fail_to_find_0",
+        "fail_to_find_1",
+        "draw_found_0",
+        "draw_found_1"
+      ]
+    }
+  ]
+}

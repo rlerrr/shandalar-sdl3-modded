@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Krosan Restorer",
+  "csvid": 5830,
+  "recipes": [
+    {
+      "family": "threshold_modal_activations",
+      "version": 2,
+      "oracle_text": "{T}: Untap target land.\nThreshold — {T}: Untap up to three target lands. Activate only if there are seven or more cards in your graveyard.",
+      "params": {
+        "source": 5830
+      },
+      "variants": [
+        "six_duplicates_0",
+        "six_duplicates_1",
+        "seven_duplicates_0",
+        "seven_duplicates_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "choose_two_0",
+        "choose_two_1",
+        "zero_eligible_0",
+        "zero_eligible_1",
+        "choose_one_0",
+        "choose_one_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

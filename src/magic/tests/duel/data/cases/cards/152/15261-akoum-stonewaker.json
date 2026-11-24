@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "csvid": 15261,
+  "card": "Akoum Stonewaker",
+  "recipes": [
+    {
+      "family": "landfall_tokens_and_mana",
+      "version": 2,
+      "oracle_text": "Landfall — Whenever a land you control enters, you may pay {2}{R}. If you do, create a 3/1 red Elemental creature token with trample and haste. Exile that token at the beginning of the next end step.",
+      "params": {
+        "effect": "stonewaker",
+        "price": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "clauses": [
+          "Landfall — Whenever a land you control enters, you may pay {2}{R}. If you do, create a 3/1 red Elemental creature token with trample and haste. Exile that token at the beginning of the next end step."
+        ]
+      },
+      "variants": [
+        "own_0",
+        "own_1",
+        "opponent_0",
+        "opponent_1",
+        "repeat_0",
+        "repeat_1",
+        "late_source_0",
+        "late_source_1",
+        "unfunded_0",
+        "unfunded_1",
+        "decline_0",
+        "attack_0",
+        "attack_1",
+        "expires_0",
+        "expires_1"
+      ]
+    }
+  ]
+}

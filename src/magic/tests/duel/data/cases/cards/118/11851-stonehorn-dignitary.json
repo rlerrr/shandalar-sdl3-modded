@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Stonehorn Dignitary",
+  "csvid": 11851,
+  "recipes": [
+    {
+      "family": "entry_follow_on_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 11851,
+        "cost": "{3}{W}",
+        "choices": [
+          "lock_0",
+          "lock_1",
+          "source_removed_0",
+          "source_removed_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, target opponent skips their next combat phase.",
+      "variants": [
+        "lock_0",
+        "lock_1",
+        "source_removed_0",
+        "source_removed_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Obstinate Baloth",
+  "csvid": 11155,
+  "recipes": [
+    {
+      "family": "entry_interaction_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 11155,
+        "printed_mana": "{2}{G}{G}",
+        "rules": "When this creature enters, you gain 4 life.\nIf a spell or ability an opponent controls causes you to discard this card, put it onto the battlefield instead of putting it into your graveyard."
+      },
+      "oracle_text": "When this creature enters, you gain 4 life.\nIf a spell or ability an opponent controls causes you to discard this card, put it onto the battlefield instead of putting it into your graveyard.",
+      "variants": [
+        "normal_0",
+        "normal_1",
+        "enemy_discard_0",
+        "enemy_discard_1",
+        "self_discard_0",
+        "self_discard_1"
+      ]
+    }
+  ]
+}

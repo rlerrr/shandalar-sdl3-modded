@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "card": "Kabira Vindicator",
+  "csvid": 10964,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "level_resource_riders",
+      "version": 2,
+      "oracle_text": "Level up {2}{W} ({2}{W}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 2-4\n3/6\nOther creatures you control get +1/+1.\nLEVEL 5+\n4/8\nOther creatures you control get +2/+2.",
+      "params": {
+        "price": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "activation": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "base": [
+          2,
+          4
+        ],
+        "first": [
+          2,
+          3,
+          6
+        ],
+        "second": [
+          5,
+          4,
+          8
+        ],
+        "first_riders": [
+          "Other creatures you control get +1/+1."
+        ],
+        "second_riders": [
+          "Other creatures you control get +2/+2."
+        ],
+        "rider": "lord"
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "opponent_timing_0",
+        "opponent_timing_1",
+        "before_tier_0",
+        "before_tier_1",
+        "tier_one_0",
+        "tier_one_1",
+        "tier_two_0",
+        "tier_two_1",
+        "lord_removed_0",
+        "lord_removed_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

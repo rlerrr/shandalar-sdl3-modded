@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Primeval Bounty",
+  "csvid": 13323,
+  "recipes": [
+    {
+      "family": "cast_noncreature_riders",
+      "version": 2,
+      "params": {
+        "role": "bounty",
+        "mana": [
+          5,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever you cast a creature spell, create a 3/3 green Beast creature token.\nWhenever you cast a noncreature spell, put three +1/+1 counters on target creature you control.\nLandfall — Whenever a land you control enters, you gain 3 life.",
+      "variants": [
+        "own_0",
+        "creature_0",
+        "opponent_0",
+        "countered_0",
+        "landfall_0",
+        "foe_land_0",
+        "no_recipient_0",
+        "replay_0",
+        "own_1",
+        "creature_1",
+        "opponent_1",
+        "countered_1",
+        "landfall_1",
+        "foe_land_1",
+        "no_recipient_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

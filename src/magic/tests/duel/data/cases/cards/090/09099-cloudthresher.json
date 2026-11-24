@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 9099,
+  "card": "Cloudthresher",
+  "recipes": [
+    {
+      "family": "flash_entry_combat_and_damage",
+      "version": 2,
+      "params": {
+        "csvid": 9099,
+        "printed_cost": "{2}{G}{G}{G}{G}"
+      },
+      "oracle_text": "Flash\nReach\nWhen this creature enters, it deals 2 damage to each creature with flying and each player.\nEvoke {2}{G}{G} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+      "variants": [
+        "reach_block_0",
+        "evoke_0",
+        "evoke_response_0",
+        "flying_scope_0",
+        "short_0",
+        "reach_block_1",
+        "evoke_1",
+        "evoke_response_1",
+        "flying_scope_1",
+        "short_1"
+      ]
+    }
+  ]
+}

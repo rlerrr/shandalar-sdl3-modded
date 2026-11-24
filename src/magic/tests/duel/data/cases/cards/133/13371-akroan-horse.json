@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Akroan Horse",
+  "csvid": 13371,
+  "recipes": [
+    {
+      "family": "entry_rider_control",
+      "version": 2,
+      "params": {
+        "csvid": 13371,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Defender\nWhen this creature enters, an opponent gains control of it.\nAt the beginning of your upkeep, each opponent creates a 1/1 white Soldier creature token.",
+      "variants": [
+        "controller_upkeep_0",
+        "controller_upkeep_1",
+        "defender_0",
+        "defender_1"
+      ]
+    }
+  ]
+}

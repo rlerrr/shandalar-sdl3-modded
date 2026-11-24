@@ -15,6 +15,9 @@ extern int g_life[2];
 extern char g_duel_winner;
 extern int g_duel_action_pending;
 #ifdef SHANDALAR
+extern int forbid_attack;
+#endif
+#ifdef SHANDALAR
 char g_shell_art_directory[300];
 #else
 extern char g_shell_art_directory[300];
@@ -107,6 +110,32 @@ int main_phase_selected_card;
 // GLOBAL: MAGIC 0x0093f4ac
 // GLOBAL: SHANDALAR 0x0097f1a8
 int legal_attacker_count;
+
+int duel_pay_to_declare_attacker(int player, int card)
+{
+  g_combat_assignment_cancelled = 0;
+  if ((g_battlefield_extra_ability_flags & EA_PAID_ATTACK) != 0)
+  {
+#ifdef SHANDALAR
+    int previous_forbid_attack = forbid_attack;
+    forbid_attack = 0;
+#endif
+    push_affected_card_stack();
+    strcpy(g_duel_main_phase_text_buffer, g_ui_message_buffer);
+    g_trigger_cause_controller = player;
+    g_trigger_cause = card;
+    dispatch_trigger(player, TRIGGER_PAY_TO_ATTACK, gs_pay_for_attacker_007a7880, 1);
+    strcpy(g_ui_message_buffer, g_duel_main_phase_text_buffer);
+    pop_affected_card_stack();
+#ifdef SHANDALAR
+    // ManalinkEh payment callbacks veto the selection through their host flag.
+    if (forbid_attack)
+      g_combat_assignment_cancelled = 1;
+    forbid_attack = previous_forbid_attack;
+#endif
+  }
+  return g_combat_assignment_cancelled == 0;
+}
 
 // FUNCTION: MAGIC 0x0044118f
 // FUNCTION: SHANDALAR 0x0040ca0f
@@ -914,18 +943,7 @@ restart_main_phase_action_loop:
                   player, main_phase_selected_card);
           append_to_trace_txt(trace_assign_attacker);
         }
-        g_combat_assignment_cancelled = 0;
-        if ((g_battlefield_extra_ability_flags & 0x400000) != 0)
-        {
-          push_affected_card_stack();
-          strcpy(g_duel_main_phase_text_buffer, g_ui_message_buffer);
-          g_trigger_cause_controller = player;
-          g_trigger_cause = main_phase_selected_card;
-          dispatch_trigger(player, 0xdc, gs_pay_for_attacker_007a7880, 1);
-          strcpy(g_ui_message_buffer, g_duel_main_phase_text_buffer);
-          pop_affected_card_stack();
-        }
-        if (g_combat_assignment_cancelled == 0)
+        if (duel_pay_to_declare_attacker(player, main_phase_selected_card))
         {
           global_card_instances[player][main_phase_selected_card].blocking = 0xff;
           if (g_attacking_creature_count++ == 0)
@@ -1012,16 +1030,7 @@ restart_main_phase_action_loop:
         if ((global_card_instances[g_trigger_cause_controller][g_trigger_cause].internal_card_id != -1) &&
             ((global_card_instances[g_trigger_cause_controller][g_trigger_cause].state & (STATE_OUBLIETTED | STATE_ATTACKING | STATE_IN_PLAY)) == (STATE_ATTACKING | STATE_IN_PLAY)))
         {
-          g_combat_assignment_cancelled = 0;
-          if ((g_battlefield_extra_ability_flags & 0x400000) != 0)
-          {
-            push_affected_card_stack();
-            strcpy(g_duel_main_phase_text_buffer, g_ui_message_buffer);
-            dispatch_trigger(player, 0xdc, gs_pay_for_attacker_007a7880, 1);
-            strcpy(g_ui_message_buffer, g_duel_main_phase_text_buffer);
-            pop_affected_card_stack();
-          }
-          if (g_combat_assignment_cancelled != 0)
+          if (!duel_pay_to_declare_attacker(player, g_trigger_cause))
           {
             *(unsigned int *)&global_card_instances[g_trigger_cause_controller][g_trigger_cause].state &= 0xfffffffb;
             if (global_card_instances[g_trigger_cause_controller][g_trigger_cause].blocking != 255)

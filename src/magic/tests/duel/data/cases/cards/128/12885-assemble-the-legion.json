@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Assemble the Legion",
+  "csvid": 12885,
+  "recipes": [
+    {
+      "family": "upkeep_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 12885,
+        "mana_cost": "{3}{R}{W}"
+      },
+      "oracle_text": "At the beginning of your upkeep, put a muster counter on this enchantment. Then create a 1/1 red and white Soldier creature token with haste for each muster counter on this enchantment.",
+      "variants": [
+        "ramp_0",
+        "ramp_1",
+        "haste_0",
+        "haste_1",
+        "reset_0",
+        "reset_1",
+        "removed_0",
+        "removed_1"
+      ]
+    }
+  ]
+}

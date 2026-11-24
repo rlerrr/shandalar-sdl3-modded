@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Sigil of Valor",
+  "csvid": 15218,
+  "recipes": [
+    {
+      "family": "equipment_combat_counters_and_copies",
+      "version": 2,
+      "params": {
+        "csvid": 15218,
+        "fee": 1,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever equipped creature attacks alone, it gets +1/+1 until end of turn for each other creature you control.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "variants": [
+        "alone_0",
+        "alone_1",
+        "group_0",
+        "group_1",
+        "other_attacker_0",
+        "other_attacker_1",
+        "no_others_0",
+        "no_others_1",
+        "offturn_0",
+        "offturn_1"
+      ]
+    }
+  ]
+}

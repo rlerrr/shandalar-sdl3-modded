@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "The Immortal Sun",
+  "csvid": 18314,
+  "recipes": [
+    {
+      "family": "draw_step_return_control_and_board",
+      "version": 2,
+      "params": {
+        "csvid": 18314,
+        "cost": [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Players can't activate planeswalkers' loyalty abilities.\nAt the beginning of your draw step, draw an additional card.\nSpells you cast cost {1} less to cast.\nCreatures you control get +1/+1.",
+      "variants": [
+        "draw_and_anthem_0",
+        "draw_and_anthem_1",
+        "loyalty_lock_0",
+        "loyalty_lock_1",
+        "cost_scope_0",
+        "cost_scope_1"
+      ]
+    }
+  ]
+}

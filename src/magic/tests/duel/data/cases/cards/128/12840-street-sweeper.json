@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Street Sweeper",
+  "csvid": 12840,
+  "recipes": [
+    {
+      "family": "attack_follow_on_attack_riders",
+      "version": 2,
+      "params": {
+        "csvid": 12840,
+        "mana": [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks, destroy all Auras attached to target land.",
+      "variants": [
+        "own_land_0",
+        "own_land_1",
+        "foreign_land_0",
+        "foreign_land_1",
+        "empty_land_0",
+        "empty_land_1",
+        "no_land_0",
+        "no_land_1",
+        "idle_0",
+        "idle_1"
+      ]
+    }
+  ]
+}

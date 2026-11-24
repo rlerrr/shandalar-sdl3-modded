@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 2297,
+  "card": "Helm of Obedience",
+  "recipes": [
+    {
+      "family": "mill_remaining_activated_and_loyalty",
+      "version": 2,
+      "params": {
+        "csvid": 2297,
+        "printed_cost": "{4}"
+      },
+      "oracle_text": "{X}, {T}: Target opponent mills a card, then repeats this process until a creature card or X cards have been put into their graveyard this way, whichever comes first. If one or more creature cards were put into that graveyard this way, sacrifice this artifact and put one of them onto the battlefield under your control. X can't be 0.",
+      "variants": [
+        "creature_first_0",
+        "creature_second_0",
+        "limit_0",
+        "short_deck_0",
+        "zero_0",
+        "creature_first_1",
+        "creature_second_1",
+        "limit_1",
+        "short_deck_1",
+        "zero_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "csvid": 15588,
+  "card": "Eldrazi Aggressor",
+  "recipes": [
+    {
+      "family": "devoid_cast_and_control",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\nThis creature has haste as long as you control another colorless creature.",
+      "params": {
+        "effect": "gated_haste",
+        "price": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "power": 2,
+        "toughness": 3,
+        "fee": null
+      },
+      "variants": [
+        "alone_0",
+        "alone_1",
+        "ally_devoid_0",
+        "ally_devoid_1",
+        "ally_artifact_0",
+        "ally_artifact_1",
+        "ally_colored_0",
+        "ally_colored_1",
+        "enemy_only_0",
+        "enemy_only_1",
+        "noncreature_0",
+        "noncreature_1",
+        "lose_ally_0",
+        "lose_ally_1",
+        "gain_after_0",
+        "gain_after_1"
+      ]
+    }
+  ]
+}

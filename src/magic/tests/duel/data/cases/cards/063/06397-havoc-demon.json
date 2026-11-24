@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 6397,
+  "card": "Havoc Demon",
+  "recipes": [
+    {
+      "family": "departure_damage_and_removal",
+      "version": 2,
+      "params": {
+        "csvid": 6397,
+        "printed_cost": "{5}{B}{B}",
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature dies, all creatures get -5/-5 until end of turn.",
+      "variants": [
+        "death_0",
+        "bounce_0",
+        "flying_0",
+        "death_1",
+        "bounce_1",
+        "flying_1"
+      ]
+    }
+  ]
+}

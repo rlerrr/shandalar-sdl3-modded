@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "csvid": 16192,
+  "card": "Spell Queller",
+  "recipes": [
+    {
+      "family": "flash_entry_stack_control",
+      "version": 2,
+      "params": {
+        "csvid": 16192,
+        "mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "stats": [
+          2,
+          3
+        ]
+      },
+      "oracle_text": "Flash\nFlying\nWhen this creature enters, exile target spell with mana value 4 or less.\nWhen this creature leaves the battlefield, the exiled card's owner may cast that card without paying its mana cost.",
+      "variants": [
+        "four_0",
+        "four_1",
+        "five_0",
+        "five_1",
+        "uncounterable_0",
+        "uncounterable_1",
+        "leave_cast_0",
+        "leave_cast_1",
+        "leave_decline_0",
+        "leave_decline_1",
+        "flight_0",
+        "flight_1"
+      ]
+    }
+  ]
+}

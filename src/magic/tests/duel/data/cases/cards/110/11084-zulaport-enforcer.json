@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "csvid": 11084,
+  "card": "Zulaport Enforcer",
+  "recipes": [
+    {
+      "family": "level_upper_combat_riders",
+      "version": 2,
+      "params": {
+        "price": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "activation": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          1,
+          1
+        ],
+        "first": [
+          1,
+          3,
+          3
+        ],
+        "second": [
+          3,
+          5,
+          5
+        ],
+        "first_riders": [],
+        "second_riders": [
+          "This creature can't be blocked except by black creatures."
+        ],
+        "effect": "color"
+      },
+      "oracle_text": "Level up {4} ({4}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 1-2\n3/3\nLEVEL 3+\n5/5\nThis creature can't be blocked except by black creatures.",
+      "variants": [
+        "paid_bands_0",
+        "paid_bands_1",
+        "offturn_denied_0",
+        "offturn_denied_1",
+        "pending_denied_0",
+        "pending_denied_1",
+        "nonblack_middle_0",
+        "nonblack_middle_1",
+        "nonblack_upper_0",
+        "nonblack_upper_1",
+        "black_upper_0",
+        "black_upper_1"
+      ]
+    }
+  ]
+}

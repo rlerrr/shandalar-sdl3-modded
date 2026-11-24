@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Protector of the Crown",
+  "csvid": 16483,
+  "recipes": [
+    {
+      "family": "monarch_entry_riders",
+      "version": 2,
+      "params": {
+        "model": "protector",
+        "cost": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "When this creature enters, you become the monarch.\nAll damage that would be dealt to you is dealt to this creature instead.",
+      "variants": [
+        "entry_0",
+        "transfer_0",
+        "noncombat_0",
+        "already_0",
+        "underpaid_0",
+        "countered_0",
+        "replay_0",
+        "redirect_foe_0",
+        "source_gone_0",
+        "redirect_lethal_0",
+        "entry_1",
+        "transfer_1",
+        "noncombat_1",
+        "already_1",
+        "underpaid_1",
+        "countered_1",
+        "replay_1",
+        "redirect_foe_1",
+        "source_gone_1",
+        "redirect_lethal_1"
+      ]
+    }
+  ]
+}

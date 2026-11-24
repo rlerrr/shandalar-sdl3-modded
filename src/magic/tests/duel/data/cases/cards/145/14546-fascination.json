@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "card": "Fascination",
+  "csvid": 14546,
+  "recipes": [
+    {
+      "family": "mill_library_spells",
+      "version": 2,
+      "params": {
+        "csvid": 14546,
+        "printed_cost": "{X}{U}{U}",
+        "clauses": [
+          "Choose one —",
+          "• Each player draws X cards.",
+          "• Each player mills X cards."
+        ],
+        "modes": [
+          "draw_x2",
+          "mill_x3_short",
+          "zero_draw",
+          "zero_mill"
+        ],
+        "human_modes": []
+      },
+      "oracle_text": "Choose one —\n• Each player draws X cards.\n• Each player mills X cards.",
+      "variants": [
+        "draw_x2_0",
+        "draw_x2_1",
+        "mill_x3_short_0",
+        "mill_x3_short_1",
+        "zero_draw_0",
+        "zero_draw_1",
+        "zero_mill_0",
+        "zero_mill_1"
+      ]
+    }
+  ]
+}

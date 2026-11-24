@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "csvid": 10674,
+  "card": "Spire Barrage",
+  "recipes": [
+    {
+      "family": "counted_damage_composition",
+      "version": 2,
+      "oracle_text": "Spire Barrage deals damage to any target equal to the number of Mountains you control.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "scope": "mountain",
+          "recipient": "any",
+          "draw": false,
+          "printed": [
+            4,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "instant": false,
+          "clauses": [
+            "Spire Barrage deals damage to any target equal to the number of Mountains you control."
+          ]
+        }
+      },
+      "variants": [
+        "zero_0",
+        "zero_1",
+        "own_mixed_0",
+        "own_mixed_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "other_zones_0",
+        "other_zones_1",
+        "no_legal_target_0",
+        "no_legal_target_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "unfunded_0",
+        "unfunded_1",
+        "gain_own_0",
+        "gain_own_1",
+        "gain_opponent_0",
+        "gain_opponent_1",
+        "lose_own_0",
+        "lose_own_1",
+        "lose_opponent_0",
+        "lose_opponent_1",
+        "replay_update_0",
+        "replay_update_1",
+        "target_bounced_0",
+        "target_bounced_1",
+        "countered_0",
+        "countered_1",
+        "walker_0",
+        "walker_1",
+        "own_walker_0",
+        "own_walker_1",
+        "walker_lethal_0",
+        "walker_lethal_1",
+        "self_player_0",
+        "self_player_1",
+        "own_creature_0",
+        "own_creature_1",
+        "creature_lethal_0",
+        "creature_lethal_1",
+        "target_hexproof_0",
+        "target_hexproof_1",
+        "enemy_creature_0",
+        "enemy_creature_1",
+        "gain_nonmatching_0",
+        "gain_nonmatching_1"
+      ]
+    }
+  ]
+}

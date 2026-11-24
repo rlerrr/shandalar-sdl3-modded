@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "csvid": 10946,
+  "card": "Hada Spy Patrol",
+  "recipes": [
+    {
+      "family": "level_keyword_combat",
+      "version": 2,
+      "oracle_text": "Level up {2}{U} ({2}{U}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 1-2\n2/2\nThis creature can't be blocked.\nLEVEL 3+\n3/3\nShroud (This creature can't be the target of spells or abilities.)\nThis creature can't be blocked.",
+      "params": {
+        "price": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "activation": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          1,
+          1
+        ],
+        "first": [
+          1,
+          2,
+          2
+        ],
+        "second": [
+          3,
+          3,
+          3
+        ],
+        "first_riders": [
+          "This creature can't be blocked."
+        ],
+        "second_riders": [
+          "Shroud (This creature can't be the target of spells or abilities.)",
+          "This creature can't be blocked."
+        ],
+        "rider": "shroud"
+      },
+      "variants": [
+        "thresholds_0",
+        "thresholds_1",
+        "short_payment_0",
+        "short_payment_1",
+        "offturn_0",
+        "offturn_1",
+        "pending_spell_0",
+        "pending_spell_1",
+        "base_block_0",
+        "base_block_1",
+        "first_block_0",
+        "first_block_1",
+        "second_block_0",
+        "second_block_1",
+        "target_gate_0",
+        "target_gate_1"
+      ]
+    }
+  ]
+}

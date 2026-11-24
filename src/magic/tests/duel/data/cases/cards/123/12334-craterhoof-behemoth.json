@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Craterhoof Behemoth",
+  "csvid": 12334,
+  "recipes": [
+    {
+      "family": "entry_rider_combat_modifiers",
+      "version": 2,
+      "params": {
+        "csvid": 12334,
+        "cost": "{5}{G}{G}{G}",
+        "choices": [
+          "self_only_0",
+          "self_only_1",
+          "team_0",
+          "team_1",
+          "response_loss_0",
+          "response_loss_1",
+          "late_creature_0",
+          "late_creature_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "Haste\nWhen this creature enters, creatures you control gain trample and get +X/+X until end of turn, where X is the number of creatures you control.",
+      "variants": [
+        "self_only_0",
+        "self_only_1",
+        "team_0",
+        "team_1",
+        "response_loss_0",
+        "response_loss_1",
+        "late_creature_0",
+        "late_creature_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

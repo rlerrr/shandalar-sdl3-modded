@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Kithkin Zephyrnaut",
+  "csvid": 9374,
+  "recipes": [
+    {
+      "family": "library_kinship_upkeep",
+      "version": 2,
+      "params": {
+        "csvid": 9374,
+        "printed_mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "rules": "Kinship — At the beginning of your upkeep, you may look at the top card of your library. If it shares a creature type with this creature, you may reveal it. If you do, this creature gets +2/+2 and gains flying and vigilance until end of turn."
+      },
+      "oracle_text": "Kinship — At the beginning of your upkeep, you may look at the top card of your library. If it shares a creature type with this creature, you may reveal it. If you do, this creature gets +2/+2 and gains flying and vigilance until end of turn.",
+      "variants": [
+        "match_combat_0",
+        "match_combat_1",
+        "nonmatch_0",
+        "nonmatch_1",
+        "decline_reveal_0"
+      ]
+    }
+  ]
+}

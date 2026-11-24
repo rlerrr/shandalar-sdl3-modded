@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "csvid": 3358,
+  "card": "Crovax the Cursed",
+  "recipes": [
+    {
+      "family": "upkeep_counters",
+      "version": 2,
+      "params": {
+        "csvid": 3358,
+        "printed_cost": "{2}{B}{B}"
+      },
+      "oracle_text": "Crovax enters with four +1/+1 counters on it.\nAt the beginning of your upkeep, you may sacrifice a creature. If you do, put a +1/+1 counter on Crovax. If you don't, remove a +1/+1 counter from Crovax.\n{B}: Crovax gains flying until end of turn.",
+      "variants": [
+        "paid_0",
+        "decline_0",
+        "flying_0",
+        "paid_1",
+        "decline_1",
+        "flying_1"
+      ]
+    }
+  ]
+}

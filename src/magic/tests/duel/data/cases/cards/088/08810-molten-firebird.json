@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Molten Firebird",
+  "csvid": 8810,
+  "recipes": [
+    {
+      "family": "draw_step_return_control_and_board",
+      "version": 2,
+      "params": {
+        "csvid": 8810,
+        "cost": [
+          4,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature dies, return it to the battlefield under its owner's control at the beginning of the next end step and you skip your next draw step.\n{4}{R}: Exile this creature.",
+      "variants": [
+        "death_return_0",
+        "death_return_1",
+        "stolen_death_0",
+        "stolen_death_1",
+        "self_exile_0",
+        "self_exile_1"
+      ]
+    }
+  ]
+}

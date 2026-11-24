@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 16308,
+  "card": "Canal Courier",
+  "recipes": [
+    {
+      "family": "remaining_entry_turn_and_choices",
+      "version": 2,
+      "params": {
+        "csvid": 16308,
+        "printed_cost": "{5}{U}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, you become the monarch.\nWhenever this creature and another creature attack different players, this creature can't be blocked this combat.",
+      "variants": [
+        "monarch_draw_0",
+        "same_defender_0",
+        "lost_0",
+        "monarch_draw_1",
+        "same_defender_1",
+        "lost_1"
+      ]
+    }
+  ]
+}

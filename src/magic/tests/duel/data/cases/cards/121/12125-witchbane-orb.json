@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Witchbane Orb",
+  "csvid": 12125,
+  "recipes": [
+    {
+      "family": "player_hexproof",
+      "version": 2,
+      "oracle_text": "When this artifact enters, destroy all Curses attached to you.\nYou have hexproof. (You can't be the target of spells or abilities your opponents control, including Aura spells.)",
+      "params": {
+        "mana": "{4}",
+        "branch": "curses",
+        "type_line": "Artifact",
+        "power": null,
+        "toughness": null
+      },
+      "variants": [
+        "unprotected_0",
+        "opponent_blocked_0",
+        "own_target_0",
+        "enemy_self_target_0",
+        "symmetric_damage_0",
+        "ability_blocked_0",
+        "ability_unprotected_0",
+        "removed_0",
+        "late_entry_0",
+        "snapshot_0",
+        "curse_scope_0",
+        "curse_both_owners_0",
+        "own_aura_0",
+        "unprotected_1",
+        "opponent_blocked_1",
+        "own_target_1",
+        "enemy_self_target_1",
+        "symmetric_damage_1",
+        "ability_blocked_1",
+        "ability_unprotected_1",
+        "removed_1",
+        "late_entry_1",
+        "snapshot_1",
+        "curse_scope_1",
+        "curse_both_owners_1",
+        "own_aura_1"
+      ]
+    }
+  ]
+}

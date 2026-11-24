@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 3721,
+  "card": "Child of Gaea",
+  "recipes": [
+    {
+      "family": "regeneration_self_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 3721,
+        "printed_cost": "{3}{G}{G}{G}"
+      },
+      "oracle_text": "Trample\nAt the beginning of your upkeep, sacrifice this creature unless you pay {G}{G}.\n{1}{G}: Regenerate this creature.",
+      "variants": [
+        "regenerate_0",
+        "short_0",
+        "terminate_0",
+        "proactive_0",
+        "pay_repeat_0",
+        "unfunded_0",
+        "trample_0",
+        "regenerate_1",
+        "short_1",
+        "terminate_1",
+        "proactive_1",
+        "pay_repeat_1",
+        "unfunded_1",
+        "trample_1"
+      ]
+    }
+  ]
+}

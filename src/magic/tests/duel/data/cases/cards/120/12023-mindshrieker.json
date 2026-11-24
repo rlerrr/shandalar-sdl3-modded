@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Mindshrieker",
+  "csvid": 12023,
+  "recipes": [
+    {
+      "family": "mill_paid_abilities",
+      "version": 2,
+      "params": {
+        "csvid": 12023,
+        "mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flying\n{2}: Target player mills a card. This creature gets +X/+X until end of turn, where X is the milled card's mana value.",
+      "variants": [
+        "buff_0",
+        "buff_1",
+        "own_land_0",
+        "own_land_1",
+        "stacked_tapped_0",
+        "stacked_tapped_1",
+        "short_cost_0",
+        "short_cost_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Artificer's Assistant",
+  "csvid": 18346,
+  "recipes": [
+    {
+      "family": "nonhand_cast_rewards",
+      "version": 2,
+      "oracle_text": "Flying\nWhenever you cast a historic spell, scry 1. (Artifacts, legendaries, and Sagas are historic. To scry 1, look at the top card of your library, then you may put that card on the bottom.)",
+      "params": {
+        "model": "scry",
+        "cost": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "artifact_0",
+        "legendary_0",
+        "saga_0",
+        "exile_artifact_0",
+        "countered_0",
+        "opponent_0",
+        "nonhistoric_0",
+        "flying_0",
+        "reach_0",
+        "replay_0",
+        "keep_0",
+        "next_turn_0",
+        "empty_0",
+        "artifact_1",
+        "legendary_1",
+        "saga_1",
+        "exile_artifact_1",
+        "countered_1",
+        "opponent_1",
+        "nonhistoric_1",
+        "flying_1",
+        "reach_1",
+        "replay_1",
+        "keep_1",
+        "next_turn_1",
+        "empty_1"
+      ]
+    }
+  ]
+}

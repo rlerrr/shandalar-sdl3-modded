@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Bomat Courier",
+  "csvid": 16300,
+  "recipes": [
+    {
+      "family": "attack_trigger_zones_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 16300,
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Haste\nWhenever this creature attacks, exile the top card of your library face down. (You can't look at it.)\n{R}, Discard your hand, Sacrifice this creature: Put all cards exiled with this creature into their owners' hands.",
+      "variants": [
+        "recover_0",
+        "recover_1",
+        "repeat_0",
+        "repeat_1",
+        "short_0",
+        "short_1",
+        "died_0",
+        "died_1",
+        "two_couriers_0",
+        "two_couriers_1"
+      ]
+    }
+  ]
+}

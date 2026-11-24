@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Drown in Filth",
+  "csvid": 13145,
+  "recipes": [
+    {
+      "family": "mill_recursion_and_zones",
+      "version": 2,
+      "params": {
+        "csvid": 13145,
+        "cost": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Choose target creature. Mill four cards, then that creature gets -1/-1 until end of turn for each land card in your graveyard.",
+      "variants": [
+        "mixed_lands_0",
+        "mixed_lands_1",
+        "no_own_land_0",
+        "no_own_land_1",
+        "lethal_0",
+        "lethal_1",
+        "own_target_short_0",
+        "own_target_short_1",
+        "target_lost_0",
+        "target_lost_1"
+      ]
+    }
+  ]
+}

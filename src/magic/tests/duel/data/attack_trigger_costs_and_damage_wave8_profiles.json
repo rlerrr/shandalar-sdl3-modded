@@ -1,0 +1,844 @@
+{
+  "sources": {
+    "Lesser Gargadon": {
+      "oracle": {
+        "oracle_id": "7e162cc1-9482-4812-8897-209ec2927ec0",
+        "name": "Lesser Gargadon",
+        "oracle_text": "Whenever this creature attacks or blocks, sacrifice a land.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Beast",
+        "power": "6",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/199/lesser-gargadon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1068,
+        "iid": 5541,
+        "name": "Lesser Gargadon",
+        "handler": "manalinkeh_card_lesser_gargadon",
+        "kind": "card"
+      }
+    },
+    "Hasran Ogress": {
+      "oracle": {
+        "oracle_id": "a57d4a9d-4ac5-4a68-adb9-a73754034d7c",
+        "name": "Hasran Ogress",
+        "oracle_text": "Whenever this creature attacks, it deals 3 damage to you unless you pay {2}.",
+        "mana_cost": "{B}{B}",
+        "type_line": "Creature — Ogre",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/86/hasran-ogress?utm_source=api"
+      },
+      "registry": {
+        "csvid": 424,
+        "iid": 4397,
+        "name": "Hasran Ogress",
+        "handler": "manalinkeh_card_hasran_ogress",
+        "kind": "card"
+      }
+    },
+    "Thornbow Archer": {
+      "oracle": {
+        "oracle_id": "a9b35457-0f1c-495c-a508-6f6693835051",
+        "name": "Thornbow Archer",
+        "oracle_text": "Whenever this creature attacks, each opponent who doesn't control an Elf loses 1 life.",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Elf Archer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ori/121/thornbow-archer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15235,
+        "iid": 15070,
+        "name": "Thornbow Archer",
+        "handler": "manalinkeh_card_thornbow_archer",
+        "kind": "card"
+      }
+    },
+    "Savage Ventmaw": {
+      "oracle": {
+        "oracle_id": "f743d85f-754e-4e70-9907-af54acb9e8d4",
+        "name": "Savage Ventmaw",
+        "oracle_text": "Flying\nWhenever this creature attacks, add {R}{R}{R}{G}{G}{G}. Until end of turn, you don't lose this mana as steps and phases end.",
+        "mana_cost": "{4}{R}{G}",
+        "type_line": "Creature — Dragon",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/665/savage-ventmaw?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15005,
+        "iid": 14414,
+        "name": "Savage Ventmaw",
+        "handler": "manalinkeh_card_savage_ventmaw",
+        "kind": "card"
+      }
+    },
+    "Rotting Giant": {
+      "oracle": {
+        "oracle_id": "09bf80cc-1112-4f4c-9431-92d741bf2230",
+        "name": "Rotting Giant",
+        "oracle_text": "Whenever this creature attacks or blocks, sacrifice it unless you exile a card from your graveyard.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Zombie Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ody/158/rotting-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5679,
+        "iid": 8079,
+        "name": "Rotting Giant",
+        "handler": "manalinkeh_card_rotting_giant",
+        "kind": "card"
+      }
+    },
+    "Morkrut Necropod": {
+      "oracle": {
+        "oracle_id": "ed3990cd-fa67-427b-bbe4-a2b1942e9be2",
+        "name": "Morkrut Necropod",
+        "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nWhenever this creature attacks or blocks, sacrifice another creature or land.",
+        "mana_cost": "{5}{B}",
+        "type_line": "Creature — Slug Horror",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [
+          "Menace"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/125/morkrut-necropod?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15895,
+        "iid": 15968,
+        "name": "Morkrut Necropod",
+        "handler": "manalinkeh_card_morkrut_necropod",
+        "kind": "card"
+      }
+    },
+    "Thing from the Deep": {
+      "oracle": {
+        "oracle_id": "9542bd7f-bb99-4b59-a4e3-b88ed9f798bf",
+        "name": "Thing from the Deep",
+        "oracle_text": "Whenever this creature attacks, sacrifice it unless you sacrifice an Island.",
+        "mana_cost": "{6}{U}{U}{U}",
+        "type_line": "Creature — Leviathan",
+        "power": "9",
+        "toughness": "9",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 9.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/68/thing-from-the-deep?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2859,
+        "iid": 9888,
+        "name": "Thing from the Deep",
+        "handler": "manalinkeh_card_thing_from_the_deep",
+        "kind": "card"
+      }
+    },
+    "Mardu Shadowspear": {
+      "oracle": {
+        "oracle_id": "b6e972ae-cc2d-4c7e-9f49-c0616dc82064",
+        "name": "Mardu Shadowspear",
+        "oracle_text": "Whenever this creature attacks, each opponent loses 1 life.\nDash {1}{B} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Human Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Dash"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frf/74/mardu-shadowspear?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14586,
+        "iid": 11322,
+        "name": "Mardu Shadowspear",
+        "handler": "manalinkeh_card_mardu_shadowspear",
+        "kind": "card"
+      }
+    },
+    "Harbor Guardian": {
+      "oracle": {
+        "oracle_id": "d72b69aa-fb61-441e-9b62-4534d7a32a69",
+        "name": "Harbor Guardian",
+        "oracle_text": "Reach (This creature can block creatures with flying.)\nWhenever this creature attacks, defending player may draw a card.",
+        "mana_cost": "{2}{W}{U}",
+        "type_line": "Creature — Gargoyle",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/266/harbor-guardian?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2503,
+        "iid": 12968,
+        "name": "Harbor Guardian",
+        "handler": "manalinkeh_card_sibilant_spirit",
+        "kind": "card"
+      }
+    },
+    "Sibilant Spirit": {
+      "oracle": {
+        "oracle_id": "9798d307-a44a-4f44-94c7-03e499b94962",
+        "name": "Sibilant Spirit",
+        "oracle_text": "Flying\nWhenever this creature attacks, defending player may draw a card.",
+        "mana_cost": "{5}{U}",
+        "type_line": "Creature — Spirit",
+        "power": "5",
+        "toughness": "6",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/67/sibilant-spirit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2093,
+        "iid": 14595,
+        "name": "Sibilant Spirit",
+        "handler": "manalinkeh_card_sibilant_spirit",
+        "kind": "card"
+      }
+    },
+    "Flameblast Dragon": {
+      "oracle": {
+        "oracle_id": "3180ee4f-66d7-4b73-bc10-9ee0c790ec18",
+        "name": "Flameblast Dragon",
+        "oracle_text": "Flying\nWhenever this creature attacks, you may pay {X}{R}. If you do, it deals X damage to any target.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c18/123/flameblast-dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9971,
+        "iid": 3468,
+        "name": "Flameblast Dragon",
+        "handler": "manalinkeh_card_flameblast_dragon",
+        "kind": "card"
+      }
+    },
+    "Wolf of Devil's Breach": {
+      "oracle": {
+        "oracle_id": "453e72bf-a682-4ec8-9cdd-799f2acb3862",
+        "name": "Wolf of Devil's Breach",
+        "oracle_text": "Whenever this creature attacks, you may pay {1}{R} and discard a card. If you do, this creature deals damage to target creature or planeswalker equal to the discarded card's mana value.",
+        "mana_cost": "{3}{R}{R}",
+        "type_line": "Creature — Elemental Wolf",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/192/wolf-of-devils-breach?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16026,
+        "iid": 16101,
+        "name": "Wolf of Devil's Breach",
+        "handler": "manalinkeh_card_wolf_of_devils_breach",
+        "kind": "card"
+      }
+    },
+    "Mtenda Lion": {
+      "oracle": {
+        "oracle_id": "af029853-cfb0-403b-af51-141ba02ae2e4",
+        "name": "Mtenda Lion",
+        "oracle_text": "Whenever this creature attacks, defending player may pay {U}. If that player does, prevent all combat damage that would be dealt by this creature this turn.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Cat",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/230/mtenda-lion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2551,
+        "iid": 6369,
+        "name": "Mtenda Lion",
+        "handler": "manalinkeh_card_mtenda_lion",
+        "kind": "card"
+      }
+    },
+    "Ogre Marauder": {
+      "oracle": {
+        "oracle_id": "d9dafa31-41ea-4f1c-bc63-ec84b01d57fa",
+        "name": "Ogre Marauder",
+        "oracle_text": "Whenever this creature attacks, it gains \"this creature can't be blocked\" until end of turn unless defending player sacrifices a creature of their choice.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Ogre Warrior",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bok/75/ogre-marauder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7526,
+        "iid": 6793,
+        "name": "Ogre Marauder",
+        "handler": "manalinkeh_card_ogre_marauder",
+        "kind": "card"
+      }
+    },
+    "Takenuma Bleeder": {
+      "oracle": {
+        "oracle_id": "ee397a87-6933-4d2d-aac6-8dc4e96d524b",
+        "name": "Takenuma Bleeder",
+        "oracle_text": "Whenever this creature attacks or blocks, you lose 1 life if you don't control a Demon.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Ogre Shaman",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bok/86/takenuma-bleeder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7571,
+        "iid": 9676,
+        "name": "Takenuma Bleeder",
+        "handler": "manalinkeh_card_takenuma_bleeder",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Air Elemental": {
+      "oracle": {
+        "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+        "name": "Air Elemental",
+        "oracle_text": "Flying",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/44/air-elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 0,
+        "iid": 298,
+        "name": "Air Elemental",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Ball Lightning": {
+      "oracle": {
+        "oracle_id": "7485cf25-eb41-4397-be13-7f0b8c10c70a",
+        "name": "Ball Lightning",
+        "oracle_text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nHaste (This creature can attack and {T} as soon as it comes under your control.)\nAt the beginning of the end step, sacrifice this creature.",
+        "mana_cost": "{R}{R}{R}",
+        "type_line": "Creature — Elemental",
+        "power": "6",
+        "toughness": "1",
+        "keywords": [
+          "Haste",
+          "Trample"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/618/ball-lightning?utm_source=api"
+      },
+      "registry": {
+        "csvid": 295,
+        "iid": 826,
+        "name": "Ball Lightning",
+        "handler": "manalinkeh_card_ball_lightning",
+        "kind": "card"
+      }
+    },
+    "Demon of Death's Gate": {
+      "oracle": {
+        "oracle_id": "be465805-1a37-4212-acf1-5dfec890b338",
+        "name": "Demon of Death's Gate",
+        "oracle_text": "You may pay 6 life and sacrifice three black creatures rather than pay this spell's mana cost.\nFlying, trample",
+        "mana_cost": "{6}{B}{B}{B}",
+        "type_line": "Creature — Demon",
+        "power": "9",
+        "toughness": "9",
+        "keywords": [
+          "Flying",
+          "Trample"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 9.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m11/92/demon-of-deaths-gate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11113,
+        "iid": 2423,
+        "name": "Demon of Death's Gate",
+        "handler": "manalinkeh_card_demon_of_deaths_gate",
+        "kind": "card"
+      }
+    },
+    "Elvish Warrior": {
+      "oracle": {
+        "oracle_id": "da587161-da7e-48ae-8af6-7f02ee71afd8",
+        "name": "Elvish Warrior",
+        "oracle_text": "",
+        "mana_cost": "{G}{G}",
+        "type_line": "Creature — Elf Warrior",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/evg/5/elvish-warrior?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1703,
+        "iid": 2993,
+        "name": "Elvish Warrior",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Energy Field": {
+      "oracle": {
+        "oracle_id": "fbf7a7f4-9915-4a53-84b3-e55e9f487323",
+        "name": "Energy Field",
+        "oracle_text": "Prevent all damage that would be dealt to you by sources you don't control.\nWhen a card is put into your graveyard from anywhere, sacrifice this enchantment.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/usg/73/energy-field?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3760,
+        "iid": 3049,
+        "name": "Energy Field",
+        "handler": "manalinkeh_card_energy_field",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Prowess of the Fair": {
+      "oracle": {
+        "oracle_id": "31324235-8a2b-4ce4-b0d4-6d947489b930",
+        "name": "Prowess of the Fair",
+        "oracle_text": "Whenever another nontoken Elf is put into your graveyard from the battlefield, you may create a 1/1 green Elf Warrior creature token.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Kindred Enchantment — Elf",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/khc/53/prowess-of-the-fair?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9240,
+        "iid": 7430,
+        "name": "Prowess of the Fair",
+        "handler": "manalinkeh_card_prowess_of_the_fair",
+        "kind": "card"
+      }
+    },
+    "Spellbook": {
+      "oracle": {
+        "oracle_id": "83133f51-bfbd-4db5-9be0-f660e3b66435",
+        "name": "Spellbook",
+        "oracle_text": "You have no maximum hand size.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact — Book",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/220/spellbook?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1154,
+        "iid": 9121,
+        "name": "Spellbook",
+        "handler": "manalinkeh_card_spellbook",
+        "kind": "card"
+      }
+    }
+  }
+}

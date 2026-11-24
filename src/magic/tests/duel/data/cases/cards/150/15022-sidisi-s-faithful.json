@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Sidisi's Faithful",
+  "csvid": 15022,
+  "recipes": [
+    {
+      "family": "exploit_entry_effects",
+      "version": 2,
+      "params": {
+        "reward": "bounce",
+        "mana": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "keywords": [],
+        "power": 0,
+        "toughness": 4
+      },
+      "oracle_text": "Exploit (When this creature enters, you may sacrifice a creature.)\nWhen this creature exploits a creature, return target creature to its owner's hand.",
+      "variants": [
+        "other_0",
+        "self_0",
+        "countered_0",
+        "wrong_color_0",
+        "snapshot_0",
+        "other_1",
+        "self_1",
+        "countered_1",
+        "wrong_color_1",
+        "snapshot_1",
+        "decline_0",
+        "return_owned_elsewhere_0"
+      ]
+    }
+  ]
+}

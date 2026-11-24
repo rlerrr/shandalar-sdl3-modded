@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "csvid": 5420,
+  "card": "Powerstone Minefield",
+  "recipes": [
+    {
+      "family": "attack_damage_triggers",
+      "version": 2,
+      "oracle_text": "Whenever a creature attacks or blocks, this enchantment deals 2 damage to it.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "kind": "minefield",
+          "printed": [
+            2,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "equip": 0,
+          "creature": false,
+          "clauses": [
+            "Whenever a creature attacks or blocks, this enchantment deals 2 damage to it."
+          ]
+        }
+      },
+      "variants": [
+        "cast_0",
+        "cast_1",
+        "short_cast_0",
+        "short_cast_1",
+        "hit_0",
+        "hit_1",
+        "idle_0",
+        "idle_1",
+        "opponent_attack_0",
+        "opponent_attack_1",
+        "replay_0",
+        "replay_1",
+        "lethal_0",
+        "lethal_1",
+        "multiple_0",
+        "multiple_1",
+        "defending_marked_0",
+        "defending_marked_1",
+        "both_marked_0",
+        "both_marked_1",
+        "both_lethal_0",
+        "both_lethal_1",
+        "wrong_color_0",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

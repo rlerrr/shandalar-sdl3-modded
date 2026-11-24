@@ -1,0 +1,782 @@
+{
+  "version": 1,
+  "sources": {
+    "Blighted Agent": {
+      "oracle": {
+        "oracle_id": "e48ea9ea-64bc-4f1c-a424-592d48569244",
+        "name": "Blighted Agent",
+        "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nThis creature can't be blocked.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Phyrexian Human Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Infect"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/29/blighted-agent?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11568,
+        "iid": 1073,
+        "name": "Blighted Agent",
+        "handler": "manalinkeh_card_latch_seeker",
+        "kind": "card"
+      }
+    },
+    "Chained Throatseeker": {
+      "oracle": {
+        "oracle_id": "f971a597-caa7-4289-ae8f-1efdc9abb593",
+        "name": "Chained Throatseeker",
+        "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nThis creature can't attack unless defending player is poisoned.",
+        "mana_cost": "{5}{U}",
+        "type_line": "Creature — Phyrexian Horror",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Infect"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/30/chained-throatseeker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11576,
+        "iid": 1622,
+        "name": "Chained Throatseeker",
+        "handler": "manalinkeh_card_chained_throatseeker",
+        "kind": "card"
+      }
+    },
+    "Ichor Rats": {
+      "oracle": {
+        "oracle_id": "f8148664-49c0-421f-93a5-cd59e4e9ea36",
+        "name": "Ichor Rats",
+        "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nWhen this creature enters, each player gets a poison counter.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Phyrexian Rat",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Infect"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/67/ichor-rats?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11281,
+        "iid": 4769,
+        "name": "Ichor Rats",
+        "handler": "manalinkeh_card_ichor_rats",
+        "kind": "card"
+      }
+    },
+    "Ichorclaw Myr": {
+      "oracle": {
+        "oracle_id": "8462a2fa-944b-4fff-a161-10345690b56f",
+        "name": "Ichorclaw Myr",
+        "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nWhenever this creature becomes blocked, it gets +2/+2 until end of turn.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Phyrexian Myr",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Infect"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/166/ichorclaw-myr?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11282,
+        "iid": 4772,
+        "name": "Ichorclaw Myr",
+        "handler": "manalinkeh_card_ichorclaw_myr",
+        "kind": "card"
+      }
+    },
+    "Septic Rats": {
+      "oracle": {
+        "oracle_id": "c7335845-ace9-402d-a5be-3bfe3fe9b089",
+        "name": "Septic Rats",
+        "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nWhenever this creature attacks, if defending player is poisoned, it gets +1/+1 until end of turn.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Phyrexian Rat",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Infect"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbs/55/septic-rats?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11520,
+        "iid": 8498,
+        "name": "Septic Rats",
+        "handler": "manalinkeh_card_septic_rats",
+        "kind": "card"
+      }
+    },
+    "Reaper of Sheoldred": {
+      "oracle": {
+        "oracle_id": "251cee41-30f5-4bba-93cd-31493a5ea051",
+        "name": "Reaper of Sheoldred",
+        "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nWhenever a source deals damage to this creature, that source's controller gets a poison counter.",
+        "mana_cost": "{4}{B}",
+        "type_line": "Creature — Phyrexian Horror",
+        "power": "2",
+        "toughness": "5",
+        "keywords": [
+          "Infect"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/72/reaper-of-sheoldred?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11670,
+        "iid": 7737,
+        "name": "Reaper of Sheoldred",
+        "handler": "manalinkeh_card_reaper_of_sheoldred",
+        "kind": "card"
+      }
+    },
+    "Spinebiter": {
+      "oracle": {
+        "oracle_id": "9b844a0c-590f-46c7-b53e-c99398e0d8c0",
+        "name": "Spinebiter",
+        "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nYou may have this creature assign its combat damage as though it weren't blocked.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Phyrexian Beast",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Infect"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/121/spinebiter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11689,
+        "iid": 9175,
+        "name": "Spinebiter",
+        "handler": "manalinkeh_card_thorn_elemental",
+        "kind": "card"
+      }
+    },
+    "Phyrexian Vatmother": {
+      "oracle": {
+        "oracle_id": "e9162478-0b10-422a-a11c-7b39b00f026e",
+        "name": "Phyrexian Vatmother",
+        "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nAt the beginning of your upkeep, you get a poison counter.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Creature — Phyrexian Horror",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Infect"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbs/52/phyrexian-vatmother?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11502,
+        "iid": 7189,
+        "name": "Phyrexian Vatmother",
+        "handler": "manalinkeh_card_phyrexian_vatmother",
+        "kind": "card"
+      }
+    },
+    "Rot Wolf": {
+      "oracle": {
+        "oracle_id": "7409906d-7111-48fa-bfea-8b95e0fdb7dc",
+        "name": "Rot Wolf",
+        "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nWhenever a creature dealt damage by Rot Wolf this turn dies, you may draw a card.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Phyrexian Wolf",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Infect"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/td2/54/rot-wolf?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11516,
+        "iid": 8072,
+        "name": "Rot Wolf",
+        "handler": "manalinkeh_card_rot_wolf",
+        "kind": "card"
+      }
+    },
+    "Blight Mamba": {
+      "oracle": {
+        "oracle_id": "e11a856c-31d3-4f4b-a517-8a5134b88517",
+        "name": "Blight Mamba",
+        "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\n{1}{G}: Regenerate this creature.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Phyrexian Snake",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate",
+          "Infect"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/112/blight-mamba?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11214,
+        "iid": 1070,
+        "name": "Blight Mamba",
+        "handler": "manalinkeh_card_gorilla_chieftain",
+        "kind": "card"
+      }
+    },
+    "Toxic Nim": {
+      "oracle": {
+        "oracle_id": "afc2a3a7-eb69-4fcb-b3a3-444dccb735d7",
+        "name": "Toxic Nim",
+        "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\n{B}: Regenerate this creature.",
+        "mana_cost": "{4}{B}{B}",
+        "type_line": "Creature — Phyrexian Zombie",
+        "power": "4",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate",
+          "Infect"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/75/toxic-nim?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11700,
+        "iid": 10127,
+        "name": "Toxic Nim",
+        "handler": "manalinkeh_card_drudge_skeletons",
+        "kind": "card"
+      }
+    },
+    "Hand of the Praetors": {
+      "oracle": {
+        "oracle_id": "f595c7f6-783f-4825-9c1a-e7f8edd380fd",
+        "name": "Hand of the Praetors",
+        "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nOther creatures you control with infect get +1/+1.\nWhenever you cast a creature spell with infect, target player gets a poison counter.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Phyrexian Zombie",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Infect"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/66/hand-of-the-praetors?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11277,
+        "iid": 4369,
+        "name": "Hand of the Praetors",
+        "handler": "manalinkeh_card_hand_of_the_praetors",
+        "kind": "card"
+      }
+    },
+    "Whispering Specter": {
+      "oracle": {
+        "oracle_id": "18d270bf-d0d3-4fac-a8d2-5f920e789bb5",
+        "name": "Whispering Specter",
+        "oracle_text": "Flying\nInfect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nWhenever this creature deals combat damage to a player, you may sacrifice it. If you do, that player discards a card for each poison counter they have.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Phyrexian Specter",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Infect"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/77/whispering-specter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11717,
+        "iid": 10935,
+        "name": "Whispering Specter",
+        "handler": "manalinkeh_card_whispering_specter",
+        "kind": "card"
+      }
+    },
+    "Phyrexian Swarmlord": {
+      "oracle": {
+        "oracle_id": "4fc2755c-ae7b-4147-a573-b33679a461e8",
+        "name": "Phyrexian Swarmlord",
+        "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nAt the beginning of your upkeep, create a 1/1 green Phyrexian Insect creature token with infect for each poison counter your opponents have.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Phyrexian Insect Horror",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Infect"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/119/phyrexian-swarmlord?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11657,
+        "iid": 7183,
+        "name": "Phyrexian Swarmlord",
+        "handler": "manalinkeh_card_phyrexian_swarmlord",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Dazzling Ramparts": {
+      "oracle": {
+        "oracle_id": "0527fc47-2bfc-4d02-90fa-5a1284f89a0a",
+        "name": "Dazzling Ramparts",
+        "oracle_text": "Defender\n{1}{W}, {T}: Tap target creature.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "7",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/6/dazzling-ramparts?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14247,
+        "iid": 2299,
+        "name": "Dazzling Ramparts",
+        "handler": "manalinkeh_card_dazzling_ramparts",
+        "kind": "card"
+      }
+    },
+    "Fog": {
+      "oracle": {
+        "oracle_id": "27e9db49-7af7-4bef-ad4c-bf5dfb92030d",
+        "name": "Fog",
+        "oracle_text": "Prevent all combat damage that would be dealt this turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/167/fog?utm_source=api"
+      },
+      "registry": {
+        "csvid": 88,
+        "iid": 3563,
+        "name": "Fog",
+        "handler": "manalinkeh_card_fog",
+        "kind": "card"
+      }
+    },
+    "Glistener Elf": {
+      "oracle": {
+        "oracle_id": "9d95d173-5c7f-4e0c-bcdc-9b90fcd7339b",
+        "name": "Glistener Elf",
+        "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Phyrexian Elf Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Infect"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/111/glistener-elf?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11608,
+        "iid": 3939,
+        "name": "Glistener Elf",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Insect": {
+      "oracle": {
+        "oracle_id": "ff591c1f-732b-432d-b458-4f19c8f707c5",
+        "name": "Insect",
+        "oracle_text": "Flying",
+        "mana_cost": "",
+        "type_line": "Token Creature — Insect",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tfdn/21/insect?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18770,
+        "iid": 4896,
+        "name": "Insect",
+        "handler": "manalinkeh_card_insect",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Wind Drake": {
+      "oracle": {
+        "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+        "name": "Wind Drake",
+        "oracle_text": "Flying",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/70/wind-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1197,
+        "iid": 10989,
+        "name": "Wind Drake",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    }
+  }
+}

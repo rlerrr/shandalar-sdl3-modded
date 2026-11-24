@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "card": "Surgespanner",
+  "csvid": 9278,
+  "recipes": [
+    {
+      "family": "becomes_tapped_trigger",
+      "version": 2,
+      "oracle_text": "Whenever this creature becomes tapped, you may pay {1}{U}. If you do, return target permanent to its owner's hand.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "effect": "paid_bounce",
+          "keyword": null,
+          "clauses": [
+            "Whenever this creature becomes tapped, you may pay {1}{U}. If you do, return target permanent to its owner's hand."
+          ],
+          "trigger_mana": [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "variants": [
+        "entry_0",
+        "spell_tap_0",
+        "other_taps_0",
+        "already_tapped_0",
+        "untap_retap_0",
+        "opponent_turn_0",
+        "attack_0",
+        "fresh_attack_0",
+        "cost_tap_0",
+        "cast_countered_0",
+        "ready_replay_0",
+        "pending_replay_0",
+        "bounce_land_0",
+        "bounce_artifact_0",
+        "bounce_enchantment_0",
+        "bounce_source_0",
+        "owned_by_other_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "entry_1",
+        "spell_tap_1",
+        "other_taps_1",
+        "already_tapped_1",
+        "untap_retap_1",
+        "opponent_turn_1",
+        "attack_1",
+        "fresh_attack_1",
+        "cost_tap_1",
+        "cast_countered_1",
+        "ready_replay_1",
+        "pending_replay_1",
+        "bounce_land_1",
+        "bounce_artifact_1",
+        "bounce_enchantment_1",
+        "bounce_source_1",
+        "owned_by_other_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Wail of the Nim",
+  "csvid": 6832,
+  "recipes": [
+    {
+      "family": "regeneration_spells_and_auras",
+      "version": 2,
+      "params": {
+        "csvid": 6832,
+        "printed_cost": "{2}{B}",
+        "choices": [
+          "shields_0",
+          "shields_1",
+          "damage_0",
+          "damage_1",
+          "entwine_0",
+          "entwine_1"
+        ]
+      },
+      "oracle_text": "Choose one —\n• Regenerate each creature you control.\n• Wail of the Nim deals 1 damage to each creature and each player.\nEntwine {B} (Choose both if you pay the entwine cost.)",
+      "variants": [
+        "shields_0",
+        "shields_1",
+        "damage_0",
+        "damage_1",
+        "entwine_0",
+        "entwine_1"
+      ]
+    }
+  ]
+}

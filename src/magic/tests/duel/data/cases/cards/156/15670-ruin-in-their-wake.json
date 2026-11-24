@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Ruin in Their Wake",
+  "csvid": 15670,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "devoid_zone_and_spell_choices",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\nSearch your library for a basic land card and reveal it. You may put that card onto the battlefield tapped if you control a land named Wastes. Otherwise, put that card into your hand. Then shuffle.",
+      "params": {
+        "model": "search",
+        "mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "kind": "sorcery"
+      },
+      "variants": [
+        "to_hand_0",
+        "to_hand_1",
+        "wastes_tapped_0",
+        "wastes_tapped_1",
+        "wastes_decline_0",
+        "wastes_decline_1",
+        "enemy_wastes_0",
+        "enemy_wastes_1",
+        "no_basic_0",
+        "no_basic_1",
+        "fail_find_0",
+        "fail_find_1",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

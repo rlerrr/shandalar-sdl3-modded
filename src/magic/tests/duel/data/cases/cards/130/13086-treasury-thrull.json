@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Treasury Thrull",
+  "csvid": 13086,
+  "recipes": [
+    {
+      "family": "attack_trigger_zones_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 13086,
+        "cost": [
+          4,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Extort (Whenever you cast a spell, you may pay {W/B}. If you do, each opponent loses 1 life and you gain that much life.)\nWhenever this creature attacks, you may return target artifact, creature, or enchantment card from your graveyard to your hand.",
+      "variants": [
+        "artifact_0",
+        "artifact_1",
+        "creature_0",
+        "creature_1",
+        "enchantment_0",
+        "enchantment_1",
+        "decline_0",
+        "decline_1",
+        "shroud_0",
+        "shroud_1",
+        "extort_black_0",
+        "extort_black_1",
+        "extort_white_0",
+        "extort_white_1",
+        "extort_short_0",
+        "extort_short_1"
+      ]
+    }
+  ]
+}

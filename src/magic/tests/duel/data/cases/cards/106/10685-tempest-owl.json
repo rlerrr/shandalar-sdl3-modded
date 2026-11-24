@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "csvid": 10685,
+  "card": "Tempest Owl",
+  "recipes": [
+    {
+      "family": "kicker_targeted_utility",
+      "version": 2,
+      "oracle_text": "Kicker {4}{U} (You may pay an additional {4}{U} as you cast this spell.)\nFlying\nWhen this creature enters, if it was kicked, tap up to three target permanents.",
+      "params": {
+        "effect": "tap",
+        "cast_price": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "fee": [
+          4,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "power": 1,
+        "toughness": 2,
+        "extras": [
+          "zero_targets",
+          "one_target",
+          "two_targets",
+          "releases"
+        ]
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "base_only_0",
+        "base_only_1",
+        "short_kicker_0",
+        "short_kicker_1",
+        "countered_paid_0",
+        "countered_paid_1",
+        "replay_0",
+        "replay_1",
+        "zero_targets_0",
+        "zero_targets_1",
+        "one_target_0",
+        "one_target_1",
+        "two_targets_0",
+        "two_targets_1",
+        "releases_0",
+        "releases_1"
+      ]
+    }
+  ]
+}

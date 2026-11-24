@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Foe-Razer Regent",
+  "csvid": 14916,
+  "recipes": [
+    {
+      "family": "fight_triggered_sources",
+      "version": 2,
+      "params": {
+        "csvid": 14916,
+        "mana": [
+          5,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "rules": "Flying\nWhen this creature enters, you may have it fight target creature you don't control.\nWhenever a creature you control fights, put two +1/+1 counters on it at the beginning of the next end step."
+      },
+      "oracle_text": "Flying\nWhen this creature enters, you may have it fight target creature you don't control.\nWhenever a creature you control fights, put two +1/+1 counters on it at the beginning of the next end step.",
+      "variants": [
+        "self_fight_0",
+        "self_fight_1",
+        "decline_0",
+        "decline_1",
+        "other_fight_0",
+        "other_fight_1",
+        "persists_after_source_0",
+        "persists_after_source_1"
+      ]
+    }
+  ]
+}

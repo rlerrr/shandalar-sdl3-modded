@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Crackdown",
+  "csvid": 4438,
+  "recipes": [
+    {
+      "family": "global_untap_restriction",
+      "version": 2,
+      "oracle_text": "Nonwhite creatures with power 3 or greater don't untap during their controllers' untap steps.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "scope": "nonwhite_high",
+          "entry": false,
+          "creature": false,
+          "clauses": [
+            "Nonwhite creatures with power 3 or greater don't untap during their controllers' untap steps."
+          ]
+        }
+      },
+      "variants": [
+        "lifecycle_0",
+        "untapped_entry_0",
+        "mixed_entry_0",
+        "insufficient_mana_0",
+        "countered_0",
+        "source_removed_0",
+        "manual_untap_0",
+        "two_sources_0",
+        "ready_replay_0",
+        "pending_replay_0",
+        "step_replay_0",
+        "wrong_color_0",
+        "power_change_0",
+        "lifecycle_1",
+        "untapped_entry_1",
+        "mixed_entry_1",
+        "insufficient_mana_1",
+        "countered_1",
+        "source_removed_1",
+        "manual_untap_1",
+        "two_sources_1",
+        "ready_replay_1",
+        "pending_replay_1",
+        "step_replay_1",
+        "wrong_color_1",
+        "power_change_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 12946,
+  "card": "Fortress Cyclops",
+  "recipes": [
+    {
+      "family": "attack_trigger_stat_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 12946,
+        "printed_cost": "{3}{R}{W}"
+      },
+      "oracle_text": "Whenever this creature attacks, it gets +3/+0 until end of turn.\nWhenever this creature blocks, it gets +0/+3 until end of turn.",
+      "variants": [
+        "solo_0",
+        "attacks_blocked_0",
+        "blocks_0",
+        "ally_blocks_0",
+        "repeat_0",
+        "solo_1",
+        "attacks_blocked_1",
+        "blocks_1",
+        "ally_blocks_1",
+        "repeat_1"
+      ]
+    }
+  ]
+}

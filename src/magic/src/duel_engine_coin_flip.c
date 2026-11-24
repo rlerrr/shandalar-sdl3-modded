@@ -214,7 +214,7 @@ int coin_flip(int player, char *dialog_title, int show_dialog_if_animation_is_of
     show_dialog = 0;
   }
 
-  if (show_dialog != 0)
+  if (show_dialog != 0 && !duel_host_is_headless())
   {
     strcpy(animation_context.title, dialog_title);
     GetPaletteEntries(global_cart_art_hpalette, 0, 0x100, palette_entries);

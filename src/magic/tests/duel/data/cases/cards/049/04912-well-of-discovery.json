@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Well of Discovery",
+  "csvid": 4912,
+  "recipes": [
+    {
+      "family": "own_end_step_state_trigger",
+      "version": 2,
+      "oracle_text": "At the beginning of your end step, if you control no untapped lands, draw a card.",
+      "params": {
+        "role": "well_draw",
+        "printed_mana": "{6}",
+        "has_colored_cost": false
+      },
+      "variants": [
+        "cast_payment_0",
+        "cast_unaffordable_0",
+        "cast_countered_0",
+        "own_end_step_0",
+        "opponent_end_step_0",
+        "no_early_trigger_0",
+        "source_removed_0",
+        "end_step_snapshot_0",
+        "cast_then_end_step_0",
+        "no_lands_0",
+        "tapped_pair_0",
+        "mixed_lands_0",
+        "enemy_untapped_0",
+        "enemy_tapped_0",
+        "tap_last_land_0",
+        "untap_last_land_0",
+        "turn_sequence_0",
+        "cast_payment_1",
+        "cast_unaffordable_1",
+        "cast_countered_1",
+        "own_end_step_1",
+        "opponent_end_step_1",
+        "no_early_trigger_1",
+        "source_removed_1",
+        "end_step_snapshot_1",
+        "cast_then_end_step_1",
+        "no_lands_1",
+        "tapped_pair_1",
+        "mixed_lands_1",
+        "enemy_untapped_1",
+        "enemy_tapped_1",
+        "tap_last_land_1",
+        "untap_last_land_1",
+        "turn_sequence_1"
+      ]
+    }
+  ]
+}

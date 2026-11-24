@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "card": "Angelic Arbiter",
+  "csvid": 11089,
+  "recipes": [
+    {
+      "family": "creature_cast_attack_gates",
+      "version": 2,
+      "oracle_text": "Flying\nEach opponent who cast a spell this turn can't attack with creatures.\nEach opponent who attacked with a creature this turn can't cast spells.",
+      "params": {
+        "effect": "arbiter",
+        "cast_mana": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "power": 5,
+        "toughness": 6
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "fresh_0",
+        "fresh_1",
+        "idle_0",
+        "idle_1",
+        "opponent_cast_0",
+        "opponent_cast_1",
+        "opponent_creature_0",
+        "opponent_creature_1",
+        "countered_cast_0",
+        "countered_cast_1",
+        "owner_cast_0",
+        "owner_cast_1",
+        "land_before_0",
+        "land_before_1",
+        "attack_then_instant_0",
+        "attack_then_instant_1",
+        "attack_then_land_0",
+        "attack_then_land_1",
+        "other_cast_after_attack_0",
+        "other_cast_after_attack_1",
+        "failed_attack_0",
+        "failed_attack_1",
+        "turn_reset_0",
+        "turn_reset_1",
+        "flying_0",
+        "flying_1",
+        "snapshot_0",
+        "snapshot_1"
+      ]
+    }
+  ]
+}

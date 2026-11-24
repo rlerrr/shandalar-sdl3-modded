@@ -1,0 +1,1196 @@
+{
+  "sources": {
+    "Fanatic of Xenagos": {
+      "oracle": {
+        "oracle_id": "f1072af9-9e6f-45ce-8c4b-8e678e7da8ce",
+        "name": "Fanatic of Xenagos",
+        "oracle_text": "Trample\nTribute 1 (As this creature enters, an opponent of your choice may put a +1/+1 counter on it.)\nWhen this creature enters, if tribute wasn't paid, it gets +1/+1 and gains haste until end of turn.",
+        "mana_cost": "{1}{R}{G}",
+        "type_line": "Creature — Centaur Warrior",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Trample",
+          "Tribute"
+        ],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/147/fanatic-of-xenagos?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13703,
+        "iid": 3278,
+        "name": "Fanatic of Xenagos",
+        "handler": "manalinkeh_card_fanatic_of_xenagos",
+        "kind": "card"
+      }
+    },
+    "Flame-Wreathed Phoenix": {
+      "oracle": {
+        "oracle_id": "24b9204f-ecc8-472e-9296-f999adf1ab1b",
+        "name": "Flame-Wreathed Phoenix",
+        "oracle_text": "Flying\nTribute 2 (As this creature enters, an opponent of your choice may put two +1/+1 counters on it.)\nWhen this creature enters, if tribute wasn't paid, it gains haste and \"When this creature dies, return it to its owner's hand.\"",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Phoenix",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Tribute"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/97/flame-wreathed-phoenix?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13713,
+        "iid": 3467,
+        "name": "Flame-Wreathed Phoenix",
+        "handler": "manalinkeh_card_flame_wreathed_phoenix",
+        "kind": "card"
+      }
+    },
+    "Inquisitor Exarch": {
+      "oracle": {
+        "oracle_id": "7deae378-9291-487e-9f0b-1deaf37218a8",
+        "name": "Inquisitor Exarch",
+        "oracle_text": "When this creature enters, choose one —\n• You gain 2 life.\n• Target opponent loses 2 life.",
+        "mana_cost": "{W}{W}",
+        "type_line": "Creature — Phyrexian Cleric",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/12/inquisitor-exarch?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11619,
+        "iid": 4892,
+        "name": "Inquisitor Exarch",
+        "handler": "manalinkeh_card_inquisitor_exarch",
+        "kind": "card"
+      }
+    },
+    "Ainok Guide": {
+      "oracle": {
+        "oracle_id": "e5f96482-4bae-4d1b-97b2-dcc09676eb6e",
+        "name": "Ainok Guide",
+        "oracle_text": "When this creature enters, choose one —\n• Put a +1/+1 counter on this creature.\n• Search your library for a basic land card, reveal it, then shuffle and put that card on top.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Dog Scout",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frf/121/ainok-guide?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14507,
+        "iid": 11244,
+        "name": "Ainok Guide",
+        "handler": "manalinkeh_card_ainok_guide",
+        "kind": "card"
+      }
+    },
+    "Oracle of Bones": {
+      "oracle": {
+        "oracle_id": "0503fc7e-6819-4979-b0df-7de23de4558b",
+        "name": "Oracle of Bones",
+        "oracle_text": "Haste\nTribute 2 (As this creature enters, an opponent of your choice may put two +1/+1 counters on it.)\nWhen this creature enters, if tribute wasn't paid, you may cast an instant or sorcery spell from your hand without paying its mana cost.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Minotaur Shaman",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Haste",
+          "Tribute"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/103/oracle-of-bones?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13772,
+        "iid": 6858,
+        "name": "Oracle of Bones",
+        "handler": "manalinkeh_card_oracle_of_bones",
+        "kind": "card"
+      }
+    },
+    "Thunder Brute": {
+      "oracle": {
+        "oracle_id": "ee1d97e9-847d-4295-a9c1-7ce8006fb0bd",
+        "name": "Thunder Brute",
+        "oracle_text": "Trample\nTribute 3 (As this creature enters, an opponent of your choice may put three +1/+1 counters on it.)\nWhen this creature enters, if tribute wasn't paid, it gains haste until end of turn.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature — Cyclops",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Trample",
+          "Tribute"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/113/thunder-brute?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13823,
+        "iid": 9975,
+        "name": "Thunder Brute",
+        "handler": "manalinkeh_card_thunder_brute",
+        "kind": "card"
+      }
+    },
+    "Tyrant of Valakut": {
+      "oracle": {
+        "oracle_id": "a4ddd9e2-ea59-4bba-bb2f-a655cabbb65c",
+        "name": "Tyrant of Valakut",
+        "oracle_text": "Surge {3}{R}{R} (You may cast this spell for its surge cost if you or a teammate has cast another spell this turn.)\nFlying\nWhen this creature enters, if its surge cost was paid, it deals 3 damage to any target.",
+        "mana_cost": "{5}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Surge"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/119/tyrant-of-valakut?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15703,
+        "iid": 15778,
+        "name": "Tyrant of Valakut",
+        "handler": "manalinkeh_card_tyrant_of_valakut",
+        "kind": "card"
+      }
+    },
+    "Sandsteppe Outcast": {
+      "oracle": {
+        "oracle_id": "fccd17b1-ca0f-4649-a002-5cbf9666b510",
+        "name": "Sandsteppe Outcast",
+        "oracle_text": "When this creature enters, choose one —\n• Put a +1/+1 counter on this creature.\n• Create a 1/1 white Spirit creature token with flying.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Warrior",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frf/25/sandsteppe-outcast?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14619,
+        "iid": 11354,
+        "name": "Sandsteppe Outcast",
+        "handler": "manalinkeh_card_sandsteppe_outcast",
+        "kind": "card"
+      }
+    },
+    "Llanowar Sentinel": {
+      "oracle": {
+        "oracle_id": "272ab5d5-7edb-4457-8a09-cabe2325c881",
+        "name": "Llanowar Sentinel",
+        "oracle_text": "When this creature enters, you may pay {1}{G}. If you do, search your library for a card named Llanowar Sentinel, put that card onto the battlefield, then shuffle.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Elf",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/275/llanowar-sentinel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3001,
+        "iid": 5660,
+        "name": "Llanowar Sentinel",
+        "handler": "manalinkeh_card_llanowar_sentinel",
+        "kind": "card"
+      }
+    },
+    "Taj-Nar Swordsmith": {
+      "oracle": {
+        "oracle_id": "dcbf8d72-3367-43e1-9a71-e674e0ed52d9",
+        "name": "Taj-Nar Swordsmith",
+        "oracle_text": "When this creature enters, you may pay {X}. If you do, search your library for an Equipment card with mana value X or less, put that card onto the battlefield, then shuffle.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Cat Soldier",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c17/77/taj-nar-swordsmith?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6798,
+        "iid": 9669,
+        "name": "Taj-Nar Swordsmith",
+        "handler": "manalinkeh_card_taj_nar_swordsmith",
+        "kind": "card"
+      }
+    },
+    "Jokulmorder": {
+      "oracle": {
+        "oracle_id": "fbf074b2-d650-43b2-b8b8-d7a778dfd27e",
+        "name": "Jokulmorder",
+        "oracle_text": "Trample\nThis creature enters tapped.\nWhen this creature enters, sacrifice it unless you sacrifice five lands.\nThis creature doesn't untap during your untap step.\nWhenever you play an Island, you may untap this creature.",
+        "mana_cost": "{4}{U}{U}{U}",
+        "type_line": "Creature — Leviathan",
+        "power": "12",
+        "toughness": "12",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/csp/37/jokulmorder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8391,
+        "iid": 5074,
+        "name": "Jokulmorder",
+        "handler": "manalinkeh_card_jokulmorder",
+        "kind": "card"
+      }
+    },
+    "Selkie Hedge-Mage": {
+      "oracle": {
+        "oracle_id": "1f1c369a-3209-405b-9880-0e10b86e5698",
+        "name": "Selkie Hedge-Mage",
+        "oracle_text": "When this creature enters, if you control two or more Forests, you may gain 3 life.\nWhen this creature enters, if you control two or more Islands, you may return target tapped creature to its owner's hand.",
+        "mana_cost": "{2}{G/U}",
+        "type_line": "Creature — Merfolk Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eve/158/selkie-hedge-mage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9866,
+        "iid": 8479,
+        "name": "Selkie Hedge-Mage",
+        "handler": "manalinkeh_card_selkie_hedge_mage",
+        "kind": "card"
+      }
+    },
+    "Peema Aether-Seer": {
+      "oracle": {
+        "oracle_id": "4a00f56e-e558-4239-bc75-fb0af7639042",
+        "name": "Peema Aether-Seer",
+        "oracle_text": "When this creature enters, you get an amount of {E} (energy counters) equal to the greatest power among creatures you control.\nPay {E}{E}{E}: Target creature blocks this turn if able.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/aer/119/peema-aether-seer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16765,
+        "iid": 16858,
+        "name": "Peema Aether-Seer",
+        "handler": "manalinkeh_card_peema_aether_seer",
+        "kind": "card"
+      }
+    },
+    "Consulate Surveillance": {
+      "oracle": {
+        "oracle_id": "06d62e22-df9c-488e-8d2d-793eaf4cd75c",
+        "name": "Consulate Surveillance",
+        "oracle_text": "When this enchantment enters, you get {E}{E}{E}{E} (four energy counters).\nPay {E}{E}: Prevent all damage that would be dealt to you this turn by a source of your choice.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/10/consulate-surveillance?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16326,
+        "iid": 16414,
+        "name": "Consulate Surveillance",
+        "handler": "manalinkeh_card_consulate_surveillance",
+        "kind": "card"
+      }
+    },
+    "Maulfist Revolutionary": {
+      "oracle": {
+        "oracle_id": "65d41af0-978e-4071-9f64-0e3b5826763a",
+        "name": "Maulfist Revolutionary",
+        "oracle_text": "Trample\nWhen this creature enters or dies, for each kind of counter on target permanent or player, give that permanent or player another counter of that kind.",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Creature — Human Warrior",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/aer/115/maulfist-revolutionary?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16747,
+        "iid": 16840,
+        "name": "Maulfist Revolutionary",
+        "handler": "manalinkeh_card_maulfist_revolutionary",
+        "kind": "card"
+      }
+    },
+    "Shield Mare": {
+      "oracle": {
+        "oracle_id": "e07b6988-9ee7-4f20-8aa5-7dfa87ff507b",
+        "name": "Shield Mare",
+        "oracle_text": "This creature can't be blocked by red creatures.\nWhen this creature enters or becomes the target of a spell or ability an opponent controls, you gain 3 life.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Creature — Horse",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/37/shield-mare?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19004,
+        "iid": 18937,
+        "name": "Shield Mare",
+        "handler": "manalinkeh_card_shield_mare",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Bone Saw": {
+      "oracle": {
+        "oracle_id": "16e555f2-5aa8-4100-a036-eed48db0e84a",
+        "name": "Bone Saw",
+        "oracle_text": "Equipped creature gets +1/+0.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/161/bone-saw?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10117,
+        "iid": 1217,
+        "name": "Bone Saw",
+        "handler": "manalinkeh_card_bone_saw",
+        "kind": "card"
+      }
+    },
+    "Bonesplitter": {
+      "oracle": {
+        "oracle_id": "452e3f5f-ce17-4682-966b-5cc100210aee",
+        "name": "Bonesplitter",
+        "oracle_text": "Equipped creature gets +2/+0.\nEquip {1}",
+        "mana_cost": "{1}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/458/bonesplitter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6627,
+        "iid": 1226,
+        "name": "Bonesplitter",
+        "handler": "manalinkeh_card_bonesplitter",
+        "kind": "card"
+      }
+    },
+    "Cloudshift": {
+      "oracle": {
+        "oracle_id": "6879f5ce-7a1b-4606-bad1-885779b0d456",
+        "name": "Cloudshift",
+        "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tle/152/cloudshift?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12330,
+        "iid": 1828,
+        "name": "Cloudshift",
+        "handler": "manalinkeh_card_cloudshift",
+        "kind": "card"
+      }
+    },
+    "Control Magic": {
+      "oracle": {
+        "oracle_id": "cd0d7141-46d2-4aa3-bc77-6b3b4513803e",
+        "name": "Control Magic",
+        "oracle_text": "Enchant creature\nYou control enchanted creature.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cma/34/control-magic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 44,
+        "iid": 1938,
+        "name": "Control Magic",
+        "handler": "manalinkeh_card_control_magic",
+        "kind": "card"
+      }
+    },
+    "Craw Wurm": {
+      "oracle": {
+        "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+        "name": "Craw Wurm",
+        "oracle_text": "",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "6",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/173/craw-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 49,
+        "iid": 2032,
+        "name": "Craw Wurm",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Eager Cadet": {
+      "oracle": {
+        "oracle_id": "39780477-01ba-40c6-8fe6-2178efb10b92",
+        "name": "Eager Cadet",
+        "oracle_text": "",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/S1/eager-cadet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4363,
+        "iid": 12406,
+        "name": "Eager Cadet",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Fog": {
+      "oracle": {
+        "oracle_id": "27e9db49-7af7-4bef-ad4c-bf5dfb92030d",
+        "name": "Fog",
+        "oracle_text": "Prevent all combat damage that would be dealt this turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/167/fog?utm_source=api"
+      },
+      "registry": {
+        "csvid": 88,
+        "iid": 3563,
+        "name": "Fog",
+        "handler": "manalinkeh_card_fog",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Goblin Piker": {
+      "oracle": {
+        "oracle_id": "50608184-90d3-43d2-a221-deb186c78323",
+        "name": "Goblin Piker",
+        "oracle_text": "",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m12/141/goblin-piker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10423,
+        "iid": 4027,
+        "name": "Goblin Piker",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hunger of the Howlpack": {
+      "oracle": {
+        "oracle_id": "296dee6b-6ec1-4ea4-8dc3-23080dd37646",
+        "name": "Hunger of the Howlpack",
+        "oracle_text": "Put a +1/+1 counter on target creature.\nMorbid — Put three +1/+1 counters on that creature instead if a creature died this turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Morbid"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/168/hunger-of-the-howlpack?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12212,
+        "iid": 4700,
+        "name": "Hunger of the Howlpack",
+        "handler": "manalinkeh_card_hunger_of_the_howlpack",
+        "kind": "card"
+      }
+    },
+    "Icy Manipulator": {
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 119,
+        "iid": 4775,
+        "name": "Icy Manipulator",
+        "handler": "manalinkeh_card_icy_manipulator",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Leyline of Sanctity": {
+      "oracle": {
+        "oracle_id": "492e0e6c-8c27-4376-938b-f8a8b6205810",
+        "name": "Leyline of Sanctity",
+        "oracle_text": "If this card is in your opening hand, you may begin the game with it on the battlefield.\nYou have hexproof. (You can't be the target of spells or abilities your opponents control.)",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/26/leyline-of-sanctity?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11141,
+        "iid": 5551,
+        "name": "Leyline of Sanctity",
+        "handler": "manalinkeh_card_leyline_of_sanctity",
+        "kind": "card"
+      }
+    },
+    "Memnite": {
+      "oracle": {
+        "oracle_id": "7663ac7c-1de3-4250-b96a-fae9dbd66a27",
+        "name": "Memnite",
+        "oracle_text": "",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/td2/2/memnite?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11303,
+        "iid": 6020,
+        "name": "Memnite",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Snow-Covered Forest": {
+      "oracle": {
+        "oracle_id": "5f0d3be8-e63e-4ade-ae58-6b0c14f2ce6d",
+        "name": "Snow-Covered Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Snow Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/khm/284/snow-covered-forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2100,
+        "iid": 11401,
+        "name": "Snow-Covered Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Spirit": {
+      "oracle": {
+        "oracle_id": "f39a3005-bc92-49bf-9e32-28e99c4de5c5",
+        "name": "Spirit",
+        "oracle_text": "Flying",
+        "mana_cost": "",
+        "type_line": "Token Creature — Spirit",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmoc/13/spirit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18829,
+        "iid": 9193,
+        "name": "Spirit",
+        "handler": "manalinkeh_card_spirit2",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Tropical Island": {
+      "oracle": {
+        "oracle_id": "74b7fe23-5d3a-4092-8d78-7c0eba8f6f73",
+        "name": "Tropical Island",
+        "oracle_text": "({T}: Add {G} or {U}.)",
+        "mana_cost": "",
+        "type_line": "Land — Forest Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/321/tropical-island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 252,
+        "iid": 11,
+        "name": "Tropical Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Vulshok Morningstar": {
+      "oracle": {
+        "oracle_id": "12a8adc4-927f-4314-b2ef-9c647ace68d5",
+        "name": "Vulshok Morningstar",
+        "oracle_text": "Equipped creature gets +2/+2.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+        "mana_cost": "{2}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddi/66/vulshok-morningstar?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6992,
+        "iid": 10729,
+        "name": "Vulshok Morningstar",
+        "handler": "manalinkeh_card_vulshok_morningstar",
+        "kind": "card"
+      }
+    },
+    "Woodweaver's Puzzleknot": {
+      "oracle": {
+        "oracle_id": "3334b218-01e3-47a3-8a28-5cc2decbedea",
+        "name": "Woodweaver's Puzzleknot",
+        "oracle_text": "When this artifact enters, you gain 3 life and get {E}{E}{E} (three energy counters).\n{2}{G}, Sacrifice this artifact: You gain 3 life and get {E}{E}{E}.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/240/woodweavers-puzzleknot?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16581,
+        "iid": 16667,
+        "name": "Woodweaver's Puzzleknot",
+        "handler": "manalinkeh_card_woodweavers_puzzleknot",
+        "kind": "card"
+      }
+    }
+  }
+}

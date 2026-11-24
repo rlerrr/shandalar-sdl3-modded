@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Ceta Sanctuary",
+  "csvid": 5343,
+  "recipes": [
+    {
+      "family": "upkeep_draw_and_discard",
+      "version": 2,
+      "params": {
+        "csvid": 5343,
+        "printed_mana": "{2}{U}",
+        "rules": "At the beginning of your upkeep, if you control a red or green permanent, draw a card, then discard a card. If you control a red permanent and a green permanent, instead draw two cards, then discard a card."
+      },
+      "oracle_text": "At the beginning of your upkeep, if you control a red or green permanent, draw a card, then discard a card. If you control a red permanent and a green permanent, instead draw two cards, then discard a card.",
+      "variants": [
+        "one_green_0",
+        "one_green_1",
+        "dual_colors_0",
+        "dual_colors_1",
+        "rival_colors_0",
+        "rival_colors_1",
+        "one_dual_permanent_0",
+        "one_dual_permanent_1"
+      ]
+    }
+  ]
+}

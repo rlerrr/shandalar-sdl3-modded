@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Emeria, the Sky Ruin",
+  "csvid": 10535,
+  "recipes": [
+    {
+      "family": "graveyard_recursion_triggers",
+      "version": 2,
+      "params": {
+        "model": "plains",
+        "destination": "battlefield",
+        "cost": null,
+        "power_toughness": null
+      },
+      "oracle_text": "This land enters tapped.\nAt the beginning of your upkeep, if you control seven or more Plains, you may return target creature card from your graveyard to the battlefield.\n{T}: Add {W}.",
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "empty_0",
+        "wrong_type_0",
+        "opponent_grave_0",
+        "shroud_0",
+        "cross_owned_0",
+        "replay_0",
+        "opponent_upkeep_0",
+        "repeat_0",
+        "decline_0",
+        "six_0",
+        "wrong_land_0",
+        "opponent_plains_0",
+        "subtyped_land_0",
+        "minus_plains_0",
+        "white_mana_0",
+        "effect_1",
+        "alternate_1",
+        "empty_1",
+        "wrong_type_1",
+        "opponent_grave_1",
+        "shroud_1",
+        "cross_owned_1",
+        "replay_1",
+        "opponent_upkeep_1",
+        "repeat_1",
+        "decline_1",
+        "six_1",
+        "wrong_land_1",
+        "opponent_plains_1",
+        "subtyped_land_1",
+        "minus_plains_1",
+        "white_mana_1"
+      ]
+    }
+  ]
+}

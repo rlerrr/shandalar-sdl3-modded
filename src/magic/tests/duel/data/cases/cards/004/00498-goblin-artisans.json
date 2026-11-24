@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Goblin Artisans",
+  "csvid": 498,
+  "recipes": [
+    {
+      "family": "coin_flip_conditional_activation",
+      "version": 2,
+      "params": {
+        "csvid": 498,
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "{T}: Flip a coin. If you win the flip, draw a card. If you lose the flip, counter target artifact spell you control that isn't the target of an ability from another creature named Goblin Artisans.",
+      "variants": [
+        "win_0",
+        "win_1",
+        "lose_0",
+        "lose_1",
+        "no_parent_0",
+        "no_parent_1",
+        "foe_artifact_0",
+        "foe_artifact_1",
+        "own_nonartifact_0",
+        "own_nonartifact_1"
+      ]
+    }
+  ]
+}

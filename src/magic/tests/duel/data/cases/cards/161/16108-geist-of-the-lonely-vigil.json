@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "csvid": 16108,
+  "card": "Geist of the Lonely Vigil",
+  "recipes": [
+    {
+      "family": "delirium_static_stats_and_mana",
+      "version": 2,
+      "oracle_text": "Defender, flying\nDelirium — This creature can attack as though it didn't have defender as long as there are four or more card types among cards in your graveyard.",
+      "params": {
+        "csvid": 16108,
+        "keyword": "defender",
+        "delirium_delta": [
+          0,
+          0
+        ],
+        "source_pt": [
+          2,
+          3
+        ],
+        "price": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "clauses": [
+          "Defender, flying",
+          "Delirium — This creature can attack as though it didn't have defender as long as there are four or more card types among cards in your graveyard."
+        ]
+      },
+      "variants": [
+        "three_duplicates_0",
+        "three_duplicates_1",
+        "four_types_0",
+        "four_types_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "defends_flying_0",
+        "defends_flying_1",
+        "crossing_0",
+        "crossing_1",
+        "lose_threshold_0",
+        "lose_threshold_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

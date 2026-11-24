@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Drownyard Behemoth",
+  "csvid": 16083,
+  "recipes": [
+    {
+      "family": "flash_remaining_alternate_costs_and_modes",
+      "version": 2,
+      "params": {
+        "csvid": 16083,
+        "mana": [
+          9,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nEmerge {7}{U} (You may cast this spell by sacrificing a creature and paying the emerge cost reduced by that creature's mana value.)\nThis creature has hexproof as long as it entered this turn.",
+      "variants": [
+        "normal_expiry_0",
+        "normal_expiry_1",
+        "emerge_0",
+        "emerge_1",
+        "high_mv_floor_0",
+        "high_mv_floor_1",
+        "colored_short_0",
+        "colored_short_1",
+        "combat_flash_0",
+        "combat_flash_1"
+      ]
+    }
+  ]
+}

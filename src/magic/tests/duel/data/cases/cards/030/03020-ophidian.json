@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Ophidian",
+  "csvid": 3020,
+  "recipes": [
+    {
+      "family": "attack_follow_on_unblocked_modes",
+      "version": 2,
+      "params": {
+        "csvid": 3020,
+        "cost": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks and isn't blocked, you may draw a card. If you do, this creature assigns no combat damage this turn.",
+      "variants": [
+        "take_0",
+        "take_1",
+        "decline_0",
+        "decline_1",
+        "blocked_0",
+        "blocked_1",
+        "repeat_0",
+        "repeat_1",
+        "other_attacks_0",
+        "other_attacks_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 5767,
+  "card": "Anurid Scavenger",
+  "recipes": [
+    {
+      "family": "upkeep_payment_and_sacrifice",
+      "version": 2,
+      "params": {
+        "csvid": 5767,
+        "printed_cost": "{2}{G}",
+        "keywords": [
+          "Protection"
+        ]
+      },
+      "oracle_text": "Protection from black\nAt the beginning of your upkeep, sacrifice this creature unless you put a card from your graveyard on the bottom of your library.",
+      "variants": [
+        "pay_protection_0",
+        "pay_protection_1",
+        "decline_payment_0",
+        "decline_payment_1",
+        "empty_graveyard_0",
+        "empty_graveyard_1"
+      ]
+    }
+  ]
+}

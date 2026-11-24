@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "card": "Parallel Evolution",
+  "csvid": 5852,
+  "recipes": [
+    {
+      "family": "flashback_spell_lifecycle",
+      "version": 2,
+      "oracle_text": "For each creature token on the battlefield, its controller creates a token that's a copy of that creature.\nFlashback {4}{G}{G}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "params": {
+        "effect": "copy_all_creature_tokens",
+        "mana": [
+          3,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "flashback_mana": [
+          4,
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        "instant": false
+      },
+      "variants": [
+        "hand_effect_0",
+        "grave_effect_0",
+        "same_card_recast_0",
+        "hand_countered_0",
+        "grave_countered_0",
+        "hand_insufficient_0",
+        "grave_insufficient_0",
+        "grave_wrong_color_0",
+        "grave_printed_cost_only_0",
+        "grave_off_turn_0",
+        "grave_shrouded_0",
+        "grave_absent_after_exile_0",
+        "hand_pending_replay_0",
+        "hand_no_tokens_0",
+        "grave_no_tokens_0",
+        "grave_nontoken_excluded_0",
+        "grave_noncreature_token_0",
+        "grave_several_tokens_0",
+        "hand_effect_1",
+        "grave_effect_1",
+        "same_card_recast_1",
+        "hand_countered_1",
+        "grave_countered_1",
+        "hand_insufficient_1",
+        "grave_insufficient_1",
+        "grave_wrong_color_1",
+        "grave_printed_cost_only_1",
+        "grave_off_turn_1",
+        "grave_shrouded_1",
+        "grave_absent_after_exile_1",
+        "hand_pending_replay_1",
+        "hand_no_tokens_1",
+        "grave_no_tokens_1",
+        "grave_nontoken_excluded_1",
+        "grave_noncreature_token_1",
+        "grave_several_tokens_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Riku of Two Reflections",
+  "csvid": 11760,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "cast_instant_or_sorcery_riders",
+      "version": 2,
+      "oracle_text": "Whenever you cast an instant or sorcery spell, you may pay {U}{R}. If you do, copy that spell. You may choose new targets for the copy.\nWhenever another nontoken creature you control enters, you may pay {G}{U}. If you do, create a token that's a copy of that creature.",
+      "params": {
+        "effect": "riku",
+        "mana": [
+          2,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "hybrid": [],
+        "stats": [
+          2,
+          2
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "instant_0",
+        "instant_1",
+        "sorcery_0",
+        "sorcery_1",
+        "own_creature_0",
+        "own_creature_1",
+        "enemy_instant_0",
+        "enemy_instant_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "fee_short_0",
+        "fee_short_1",
+        "retarget_0",
+        "retarget_1",
+        "copy_entry_0",
+        "copy_entry_1",
+        "entry_short_0",
+        "entry_short_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

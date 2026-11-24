@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "csvid": 7572,
+  "card": "Tallowisp",
+  "recipes": [
+    {
+      "family": "cast_spirit_or_arcane_riders",
+      "version": 2,
+      "oracle_text": "Whenever you cast a Spirit or Arcane spell, you may search your library for an Aura card with enchant creature, reveal it, put it into your hand, then shuffle.",
+      "params": {
+        "effect": "aura_search",
+        "price": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "flying": false,
+        "power": 1,
+        "toughness": 3,
+        "extra": [],
+        "human": [
+          "decline",
+          "fail_to_find"
+        ]
+      },
+      "variants": [
+        "own_spirit_0",
+        "own_spirit_1",
+        "own_arcane_0",
+        "own_arcane_1",
+        "own_other_creature_0",
+        "own_other_creature_1",
+        "own_other_instant_0",
+        "own_other_instant_1",
+        "enemy_spirit_0",
+        "enemy_spirit_1",
+        "enemy_arcane_0",
+        "enemy_arcane_1",
+        "decline_0",
+        "fail_to_find_0"
+      ]
+    }
+  ]
+}

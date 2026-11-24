@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "csvid": 19518,
+  "card": "Venerated Loxodon",
+  "recipes": [
+    {
+      "family": "convoke_entry_effects",
+      "version": 2,
+      "params": {
+        "csvid": 19518,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "stats": [
+          4,
+          4
+        ]
+      },
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nWhen this creature enters, put a +1/+1 counter on each creature that convoked it.",
+      "variants": [
+        "full_0",
+        "full_1",
+        "mixed_0",
+        "mixed_1",
+        "normal_0",
+        "normal_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

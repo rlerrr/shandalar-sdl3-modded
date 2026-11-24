@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "csvid": 19751,
+  "card": "Sphinx of Foresight",
+  "recipes": [
+    {
+      "family": "library_scry_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 19751,
+        "mana": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          4,
+          4
+        ]
+      },
+      "oracle_text": "You may reveal this card from your opening hand. If you do, scry 3 at the beginning of your first upkeep.\nFlying\nAt the beginning of your upkeep, scry 1.",
+      "variants": [
+        "upkeep_0",
+        "upkeep_1",
+        "flying_0",
+        "flying_1",
+        "opening_reveal_0",
+        "opening_reveal_1",
+        "opening_pass_0",
+        "opening_pass_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Maulfist Revolutionary",
+  "csvid": 16747,
+  "recipes": [
+    {
+      "family": "entry_interaction_choice_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 16747,
+        "mana_cost": "{1}{G}{G}"
+      },
+      "oracle_text": "Trample\nWhen this creature enters or dies, for each kind of counter on target permanent or player, give that permanent or player another counter of that kind.",
+      "variants": [
+        "permanent_on_entry_0",
+        "permanent_on_entry_1",
+        "permanent_on_death_0",
+        "permanent_on_death_1",
+        "player_energy_0",
+        "player_energy_1",
+        "trample_0",
+        "trample_1"
+      ]
+    }
+  ]
+}

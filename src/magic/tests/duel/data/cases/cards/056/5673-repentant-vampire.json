@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "csvid": 5673,
+  "card": "Repentant Vampire",
+  "recipes": [
+    {
+      "family": "threshold_combat_activated",
+      "version": 2,
+      "oracle_text": "Flying\nWhenever a creature dealt damage by this creature this turn dies, put a +1/+1 counter on this creature.\nThreshold — As long as there are seven or more cards in your graveyard, this creature is white and has \"{T}: Destroy target black creature.\"",
+      "params": {
+        "csvid": 5673,
+        "delta": 0,
+        "clauses": [
+          "Flying",
+          "Whenever a creature dealt damage by this creature this turn dies, put a +1/+1 counter on this creature.",
+          "Threshold — As long as there are seven or more cards in your graveyard, this creature is white and has \"{T}: Destroy target black creature.\""
+        ],
+        "price": [
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          3,
+          3
+        ]
+      },
+      "variants": [
+        "six_0",
+        "six_1",
+        "seven_0",
+        "seven_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "no_black_target_0",
+        "no_black_target_1",
+        "countered_0",
+        "countered_1",
+        "lose_threshold_0",
+        "lose_threshold_1",
+        "replay_0",
+        "replay_1",
+        "crossing_0",
+        "crossing_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "csvid": 6839,
+  "card": "Worldslayer",
+  "recipes": [
+    {
+      "family": "equipment_combat_damage_board_effects",
+      "version": 2,
+      "params": {
+        "csvid": 6839,
+        "mana": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "equip": 5,
+        "bonus": [
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever equipped creature deals combat damage to a player, destroy all permanents other than this Equipment.\nEquip {5} ({5}: Attach to target creature you control. Equip only as a sorcery.)",
+      "variants": [
+        "hit_0",
+        "hit_1",
+        "indestructible_0",
+        "indestructible_1",
+        "blocked_0",
+        "blocked_1",
+        "noncombat_0",
+        "noncombat_1",
+        "unattached_0",
+        "unattached_1"
+      ]
+    }
+  ]
+}

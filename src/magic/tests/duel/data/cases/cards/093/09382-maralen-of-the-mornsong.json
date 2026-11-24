@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Maralen of the Mornsong",
+  "csvid": 9382,
+  "recipes": [
+    {
+      "family": "draw_step_replacement_and_search",
+      "version": 2,
+      "params": {
+        "csvid": 9382,
+        "mana": [
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Players can't draw cards.\nAt the beginning of each player's draw step, that player loses 3 life, searches their library for a card, puts it into their hand, then shuffles.",
+      "variants": [
+        "both_search_0",
+        "both_search_1",
+        "spells_blocked_0",
+        "spells_blocked_1",
+        "empty_library_0",
+        "empty_library_1"
+      ]
+    }
+  ]
+}

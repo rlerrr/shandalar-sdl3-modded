@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Mist of Stagnation",
+  "csvid": 5977,
+  "recipes": [
+    {
+      "family": "upkeep_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 5977,
+        "cost": [
+          3,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Permanents don't untap during their controllers' untap steps.\nAt the beginning of each player's upkeep, that player chooses a permanent for each card in their graveyard, then untaps those permanents.",
+      "variants": [
+        "both_choose_0",
+        "both_choose_1",
+        "other_target_0",
+        "other_target_1",
+        "no_grave_cards_0",
+        "no_grave_cards_1"
+      ]
+    }
+  ]
+}

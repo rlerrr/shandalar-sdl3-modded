@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "card": "Sandsteppe Outcast",
+  "csvid": 14619,
+  "recipes": [
+    {
+      "family": "entry_interaction_choice_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 14619,
+        "mana_cost": "{2}{W}"
+      },
+      "oracle_text": "When this creature enters, choose one —\n• Put a +1/+1 counter on this creature.\n• Create a 1/1 white Spirit creature token with flying.",
+      "variants": [
+        "counter_0",
+        "counter_1",
+        "spirit_0",
+        "spirit_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Retreat to Hagra",
+  "csvid": 15413,
+  "recipes": [
+    {
+      "family": "landfall_modal_retreats",
+      "version": 2,
+      "params": {
+        "role": "hagra",
+        "mana": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Landfall — Whenever a land you control enters, choose one —\n• Target creature gets +1/+0 and gains deathtouch until end of turn.\n• Each opponent loses 1 life and you gain 1 life.",
+      "variants": [
+        "opponent_land_0",
+        "opponent_land_1",
+        "before_source_0",
+        "before_source_1",
+        "second_denied_0",
+        "second_denied_1",
+        "replay_0",
+        "replay_1",
+        "deathtouch_0",
+        "deathtouch_1",
+        "expiry_0",
+        "expiry_1",
+        "enemy_pump_0",
+        "enemy_pump_1",
+        "drain_0",
+        "drain_1"
+      ]
+    }
+  ]
+}

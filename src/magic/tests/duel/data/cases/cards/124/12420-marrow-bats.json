@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Marrow Bats",
+  "csvid": 12420,
+  "recipes": [
+    {
+      "family": "regeneration_conditional",
+      "version": 2,
+      "params": {
+        "csvid": 12420,
+        "printed_mana": [
+          4,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "rules": "Flying\nPay 4 life: Regenerate this creature."
+      },
+      "oracle_text": "Flying\nPay 4 life: Regenerate this creature.",
+      "variants": [
+        "pay_four_0",
+        "pay_four_1",
+        "life_short_0",
+        "life_short_1",
+        "five_life_0",
+        "five_life_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

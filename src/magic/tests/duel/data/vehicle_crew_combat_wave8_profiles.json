@@ -1,0 +1,207 @@
+{
+  "version": 1,
+  "sources": {
+    "Sleek Schooner": {
+      "oracle_record_sha256": "f2aabeada30b28b08c967584d77fb1c3658fdfdf9e4713b7525b41ade77567cf",
+      "registry": {
+        "csvid": 17538,
+        "iid": 17633,
+        "name": "Sleek Schooner",
+        "handler": "manalinkeh_card_sky_stiff",
+        "kind": "card"
+      }
+    },
+    "Irontread Crusher": {
+      "oracle_record_sha256": "679b799a24e4abf339a8f3285b8b65c0cf0d8fd4be37821d1c2016c7fee49e7b",
+      "registry": {
+        "csvid": 16737,
+        "iid": 16830,
+        "name": "Irontread Crusher",
+        "handler": "manalinkeh_card_irontread_crusher",
+        "kind": "card"
+      }
+    },
+    "Sky Skiff": {
+      "oracle_record_sha256": "acf0c28141efd1b819f1032cde4ef85f871fe3874d4f2a260ef1d797ca85fdc8",
+      "registry": {
+        "csvid": 16518,
+        "iid": 16604,
+        "name": "Sky Skiff",
+        "handler": "manalinkeh_card_sky_stiff",
+        "kind": "card"
+      }
+    },
+    "Aradara Express": {
+      "oracle_record_sha256": "fde2575e59801471b067c7d9082772a4e72cedb063d0ee75dd39bbf98779c690",
+      "registry": {
+        "csvid": 16284,
+        "iid": 16373,
+        "name": "Aradara Express",
+        "handler": "manalinkeh_card_aradara_express",
+        "kind": "card"
+      }
+    },
+    "Dusk Legion Dreadnought": {
+      "oracle_record_sha256": "758e3f2f290f07913a2fed80dee14fb7b68212ccd9397a0d8bd7c2fc3d0b0fee",
+      "registry": {
+        "csvid": 17401,
+        "iid": 17497,
+        "name": "Dusk Legion Dreadnought",
+        "handler": "manalinkeh_card_dusk_legion_dreadnought",
+        "kind": "card"
+      }
+    },
+    "Ovalchase Dragster": {
+      "oracle_record_sha256": "b3a079d1a0db53f8eba6eaeb0ec90fb1f1a843e44a5a493b7ab28f7edc19fa6d",
+      "registry": {
+        "csvid": 16469,
+        "iid": 16555,
+        "name": "Ovalchase Dragster",
+        "handler": "manalinkeh_card_ovalchase_dragster",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Mogg Fanatic": {
+      "oracle_record_sha256": "4697ab2882c3835839712e4aa7d53f163d546f55fc17fcf27a51721799cf0af5",
+      "registry": {
+        "csvid": 1354,
+        "iid": 6244,
+        "name": "Mogg Fanatic",
+        "handler": "manalinkeh_card_mogg_fanatic",
+        "kind": "card"
+      }
+    },
+    "Catapult Squad": {
+      "oracle_record_sha256": "d5899f929e51ebb6729e885b17400107935c0680e763fd849d4742eb246daa85",
+      "registry": {
+        "csvid": 6081,
+        "iid": 1540,
+        "name": "Catapult Squad",
+        "handler": "manalinkeh_card_catapult_squad",
+        "kind": "card"
+      }
+    },
+    "Unyielding Krumar": {
+      "oracle_record_sha256": "a7479b8c98d51d47b6a785aba8b823003566e97c75a328268946e04d48ce9837",
+      "registry": {
+        "csvid": 14419,
+        "iid": 10395,
+        "name": "Unyielding Krumar",
+        "handler": "manalinkeh_card_unyielding_krumar",
+        "kind": "card"
+      }
+    },
+    "Sengir Vampire": {
+      "oracle_record_sha256": "cc7982995c419366648c6f75c0597e97270a34088d7a97c71755af3ef0c703ac",
+      "registry": {
+        "csvid": 220,
+        "iid": 8488,
+        "name": "Sengir Vampire",
+        "handler": "manalinkeh_card_sengir_vampire",
+        "kind": "card"
+      }
+    },
+    "Golgari Rotwurm": {
+      "oracle_record_sha256": "fc4cae50178153421b7a2497472e8d531710cdd76a5067c7fd568036cd4a94ad",
+      "registry": {
+        "csvid": 7864,
+        "iid": 4110,
+        "name": "Golgari Rotwurm",
+        "handler": "manalinkeh_card_golgari_rotwurm",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle_record_sha256": "997776d5eba2bd863bd6a28f6e65ab4835474b079939b791554e6c43e156cb40",
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Welkin Tern": {
+      "oracle_record_sha256": "8925d6ca40cc266ce8f2740fa277c30b80499afedd409d28ee7e17f0fc686f58",
+      "registry": {
+        "csvid": 10709,
+        "iid": 10901,
+        "name": "Welkin Tern",
+        "handler": "manalinkeh_card_skywinder_drake",
+        "kind": "card"
+      }
+    },
+    "Nessian Asp": {
+      "oracle_record_sha256": "6df5008d13c99621adcb077db2f890b5a2e238ae518ff80b01aec0a8c1159d36",
+      "registry": {
+        "csvid": 13489,
+        "iid": 6556,
+        "name": "Nessian Asp",
+        "handler": "manalinkeh_card_nessian_asp",
+        "kind": "card"
+      }
+    },
+    "Wall of Tanglecord": {
+      "oracle_record_sha256": "aa1853067f8496837841e6ee7d8590508c194aa7d0b80fa2f4991d5927521e90",
+      "registry": {
+        "csvid": 11409,
+        "iid": 10785,
+        "name": "Wall of Tanglecord",
+        "handler": "manalinkeh_card_wall_of_tanglecord",
+        "kind": "card"
+      }
+    },
+    "Calcite Snapper": {
+      "oracle_record_sha256": "dcb88d40b11bdc9d1b7b01eb8c496a02d24f40fb87a456cc59916951054370f1",
+      "registry": {
+        "csvid": 10737,
+        "iid": 1441,
+        "name": "Calcite Snapper",
+        "handler": "manalinkeh_card_calcite_snapper",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle_record_sha256": "0c5bac8f5868ada1be85b5c6cabfbb406db13c0b449461f797d70df0855b25d0",
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Boomerang": {
+      "oracle_record_sha256": "1d4994e5ed51ded2e46cdb69fb0a72fcd95fbc9f9288d7580e3b113abbdfcbe3",
+      "registry": {
+        "csvid": 585,
+        "iid": 1233,
+        "name": "Boomerang",
+        "handler": "manalinkeh_card_boomerang",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle_record_sha256": "d0372afd907d74f42df7ab67e9bdfac498f5d97f2acfbabaf0aa40d7f215875b",
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle_record_sha256": "1e7c0c1e3ad096022fd4e7d0fd676ce37ff47f75f80221feff38fd459a619989",
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    }
+  }
+}

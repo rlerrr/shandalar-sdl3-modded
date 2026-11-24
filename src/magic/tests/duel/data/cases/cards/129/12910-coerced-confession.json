@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Coerced Confession",
+  "csvid": 12910,
+  "recipes": [
+    {
+      "family": "mill_library_spells",
+      "version": 2,
+      "params": {
+        "csvid": 12910,
+        "printed_cost": "{4}{U/B}",
+        "clauses": [
+          "Target player mills four cards. You draw a card for each creature card put into their graveyard this way."
+        ],
+        "modes": [
+          "mixed_blue",
+          "mixed_black",
+          "short_black",
+          "zero_creatures"
+        ],
+        "human_modes": [
+          "self_target"
+        ]
+      },
+      "oracle_text": "Target player mills four cards. You draw a card for each creature card put into their graveyard this way.",
+      "variants": [
+        "mixed_blue_0",
+        "mixed_blue_1",
+        "mixed_black_0",
+        "mixed_black_1",
+        "short_black_0",
+        "short_black_1",
+        "zero_creatures_0",
+        "zero_creatures_1",
+        "self_target_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "csvid": 3989,
+  "card": "Eviscerator",
+  "recipes": [
+    {
+      "family": "entry_trigger_life_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 3989,
+        "printed_cost": "{3}{B}{B}"
+      },
+      "oracle_text": "Protection from white\nWhen this creature enters, you lose 5 life.",
+      "variants": [
+        "life_0",
+        "protection_0",
+        "countered_0",
+        "life_1",
+        "protection_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

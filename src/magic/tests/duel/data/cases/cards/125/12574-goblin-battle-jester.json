@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "csvid": 12574,
+  "card": "Goblin Battle Jester",
+  "recipes": [
+    {
+      "family": "cast_spell_color_riders",
+      "version": 2,
+      "oracle_text": "Whenever you cast a red spell, target creature can't block this turn.",
+      "params": {
+        "effect": "jester",
+        "colors": [
+          "R"
+        ],
+        "price": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "other_price": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "hybrid": false,
+        "base": [
+          2,
+          2
+        ],
+        "clauses": [
+          "Whenever you cast a red spell, target creature can't block this turn."
+        ]
+      },
+      "variants": [
+        "first_0",
+        "first_1",
+        "opponent_0",
+        "opponent_1",
+        "unmatched_0",
+        "unmatched_1",
+        "colorless_0",
+        "colorless_1",
+        "replay_0",
+        "replay_1",
+        "expires_0",
+        "expires_1"
+      ]
+    }
+  ]
+}

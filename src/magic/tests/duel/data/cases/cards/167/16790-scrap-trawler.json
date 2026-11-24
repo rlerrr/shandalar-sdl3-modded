@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Scrap Trawler",
+  "csvid": 16790,
+  "recipes": [
+    {
+      "family": "departure_graveyard_and_return",
+      "version": 2,
+      "params": {
+        "csvid": 16790,
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever this creature dies or another artifact you control is put into a graveyard from the battlefield, return to your hand target artifact card in your graveyard with lesser mana value.",
+      "variants": [
+        "self_lower_0",
+        "self_lower_1",
+        "other_lower_0",
+        "other_lower_1",
+        "equal_only_0",
+        "equal_only_1",
+        "enemy_artifact_0",
+        "enemy_artifact_1"
+      ]
+    }
+  ]
+}

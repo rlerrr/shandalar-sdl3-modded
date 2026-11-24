@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 13926,
+  "card": "Launch the Fleet",
+  "recipes": [
+    {
+      "family": "attack_trigger_tokens_and_combat",
+      "version": 2,
+      "params": {
+        "csvid": 13926,
+        "printed_cost": "{W}",
+        "keywords": [
+          "Strive"
+        ]
+      },
+      "oracle_text": "Strive — This spell costs {1} more to cast for each target beyond the first.\nUntil end of turn, any number of target creatures each gain \"Whenever this creature attacks, create a 1/1 white Soldier creature token that's tapped and attacking.\"",
+      "variants": [
+        "two_0",
+        "zero_0",
+        "stop_one_0",
+        "other_only_0",
+        "expiry_0",
+        "two_1",
+        "zero_1",
+        "stop_one_1",
+        "other_only_1",
+        "expiry_1"
+      ]
+    }
+  ]
+}

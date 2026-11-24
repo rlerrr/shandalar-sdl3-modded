@@ -1,0 +1,1442 @@
+{
+  "version": 1,
+  "sources": {
+    "Ballyrush Banneret": {
+      "oracle": {
+        "oracle_id": "0ad27d0e-b6c3-4c3f-a389-285d889b6a65",
+        "name": "Ballyrush Banneret",
+        "oracle_text": "Kithkin spells and Soldier spells you cast cost {1} less to cast.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Kithkin Soldier",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/567/ballyrush-banneret?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9323,
+        "iid": 827,
+        "name": "Ballyrush Banneret",
+        "handler": "manalinkeh_card_bullyrush_banneret",
+        "kind": "card"
+      }
+    },
+    "Bosk Banneret": {
+      "oracle": {
+        "oracle_id": "b84dedfd-4020-444f-ac5a-54c65c0d0378",
+        "name": "Bosk Banneret",
+        "oracle_text": "Treefolk spells and Shaman spells you cast cost {1} less to cast.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Treefolk Shaman",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mor/114/bosk-banneret?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9328,
+        "iid": 1264,
+        "name": "Bosk Banneret",
+        "handler": "manalinkeh_card_bosk_banneret",
+        "kind": "card"
+      }
+    },
+    "Frogtosser Banneret": {
+      "oracle": {
+        "oracle_id": "91ebedb5-cb5f-4c58-ad30-6c6b0a106aa0",
+        "name": "Frogtosser Banneret",
+        "oracle_text": "Haste\nGoblin spells and Rogue spells you cast cost {1} less to cast.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Goblin Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/znc/43/frogtosser-banneret?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9360,
+        "iid": 3650,
+        "name": "Frogtosser Banneret",
+        "handler": "manalinkeh_card_frogtosser_banneret",
+        "kind": "card"
+      }
+    },
+    "Stonybrook Banneret": {
+      "oracle": {
+        "oracle_id": "0d6202c7-b19c-429a-85c4-332024381dd7",
+        "name": "Stonybrook Banneret",
+        "oracle_text": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)\nMerfolk spells and Wizard spells you cast cost {1} less to cast.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Merfolk Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Landwalk",
+          "Islandwalk"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lcc/173/stonybrook-banneret?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9441,
+        "iid": 9401,
+        "name": "Stonybrook Banneret",
+        "handler": "manalinkeh_card_stonybrook_banneret",
+        "kind": "card"
+      }
+    },
+    "Dragonspeaker Shaman": {
+      "oracle": {
+        "oracle_id": "6a29f36b-7911-4d84-a3ae-546b131d5159",
+        "name": "Dragonspeaker Shaman",
+        "oracle_text": "Dragon spells you cast cost {2} less to cast.",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Human Barbarian Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/afc/330/dragonspeaker-shaman?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6516,
+        "iid": 2700,
+        "name": "Dragonspeaker Shaman",
+        "handler": "manalinkeh_card_dragonspeaker_shaman",
+        "kind": "card"
+      }
+    },
+    "Dragonlord's Servant": {
+      "oracle": {
+        "oracle_id": "faf81ae0-0b35-45ef-a50d-6cecf0c0eeeb",
+        "name": "Dragonlord's Servant",
+        "oracle_text": "Dragon spells you cast cost {1} less to cast.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Shaman",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/210/dragonlords-servant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14900,
+        "iid": 12339,
+        "name": "Dragonlord's Servant",
+        "handler": "manalinkeh_card_dragonlords_servant",
+        "kind": "card"
+      }
+    },
+    "Stinkdrinker Daredevil": {
+      "oracle": {
+        "oracle_id": "25af5e13-ebe8-4bc4-b8fe-8b9aee59579c",
+        "name": "Stinkdrinker Daredevil",
+        "oracle_text": "Giant spells you cast cost {2} less to cast.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Goblin Rogue",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cm2/119/stinkdrinker-daredevil?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9272,
+        "iid": 9360,
+        "name": "Stinkdrinker Daredevil",
+        "handler": "manalinkeh_card_stinkdrinker_daredevil",
+        "kind": "card"
+      }
+    },
+    "Daru Warchief": {
+      "oracle": {
+        "oracle_id": "3fce53fb-6914-4f43-b46b-18ca32ab21b2",
+        "name": "Daru Warchief",
+        "oracle_text": "Soldier spells you cast cost {1} less to cast.\nSoldier creatures you control get +1/+2.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/scg/6/daru-warchief?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6498,
+        "iid": 2266,
+        "name": "Daru Warchief",
+        "handler": "manalinkeh_card_daru_warchief",
+        "kind": "card"
+      }
+    },
+    "Goblin Warchief": {
+      "oracle": {
+        "oracle_id": "39882df0-c20f-469d-94ba-1617224e71a1",
+        "name": "Goblin Warchief",
+        "oracle_text": "Goblin spells you cast cost {1} less to cast.\nGoblins you control have haste.",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dom/130/goblin-warchief?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6537,
+        "iid": 4065,
+        "name": "Goblin Warchief",
+        "handler": "manalinkeh_card_goblin_warchief",
+        "kind": "card"
+      }
+    },
+    "Undead Warchief": {
+      "oracle": {
+        "oracle_id": "e6af56bf-bd78-4801-8f6e-033cdd68de3d",
+        "name": "Undead Warchief",
+        "oracle_text": "Zombie spells you cast cost {1} less to cast.\nZombie creatures you control get +2/+1.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hop/44/undead-warchief?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6598,
+        "iid": 10342,
+        "name": "Undead Warchief",
+        "handler": "manalinkeh_card_undead_warchief",
+        "kind": "card"
+      }
+    },
+    "Edgewalker": {
+      "oracle": {
+        "oracle_id": "71a7f695-06b9-461d-9646-ffb975b375fc",
+        "name": "Edgewalker",
+        "oracle_text": "Cleric spells you cast cost {W}{B} less to cast. This effect reduces only the amount of colored mana you pay. (For example, if you cast a Cleric spell with mana cost {1}{W}, it costs {1} to cast.)",
+        "mana_cost": "{1}{W}{B}",
+        "type_line": "Creature — Human Cleric",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/scg/137/edgewalker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6520,
+        "iid": 2892,
+        "name": "Edgewalker",
+        "handler": "manalinkeh_card_edgewalker",
+        "kind": "card"
+      }
+    },
+    "Ragemonger": {
+      "oracle": {
+        "oracle_id": "0fcfc145-9371-40a8-9194-84e5fd700a8d",
+        "name": "Ragemonger",
+        "oracle_text": "Minotaur spells you cast cost {B}{R} less to cast. This effect reduces only the amount of colored mana you pay. (For example, if you cast a Minotaur spell with mana cost {2}{R}, it costs {2} to cast.)",
+        "mana_cost": "{1}{B}{R}",
+        "type_line": "Creature — Minotaur Shaman",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/153/ragemonger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13787,
+        "iid": 7589,
+        "name": "Ragemonger",
+        "handler": "manalinkeh_card_ragemonger",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Kithkin Healer": {
+      "oracle": {
+        "oracle_id": "e3bd74f3-1f38-4162-a0be-c76ad63e2d9b",
+        "name": "Kithkin Healer",
+        "oracle_text": "{T}: Prevent the next 1 damage that would be dealt to any target this turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Kithkin Cleric",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/27/kithkin-healer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9193,
+        "iid": 13280,
+        "name": "Kithkin Healer",
+        "handler": "manalinkeh_card_samite_healer",
+        "kind": "card"
+      }
+    },
+    "Standing Troops": {
+      "oracle": {
+        "oracle_id": "9e9d5242-424d-4f61-b625-806295dbb0c7",
+        "name": "Standing Troops",
+        "oracle_text": "Vigilance",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/w17/4/standing-troops?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3571,
+        "iid": 14854,
+        "name": "Standing Troops",
+        "handler": "manalinkeh_card_serra_angel",
+        "kind": "card"
+      }
+    },
+    "Preeminent Captain": {
+      "oracle": {
+        "oracle_id": "b6801429-3995-4571-92f9-ef211675c5d5",
+        "name": "Preeminent Captain",
+        "oracle_text": "First strike (This creature deals combat damage before creatures without first strike.)\nWhenever this creature attacks, you may put a Soldier creature card from your hand onto the battlefield tapped and attacking.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Kithkin Soldier",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "First strike"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/25/preeminent-captain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9406,
+        "iid": 7340,
+        "name": "Preeminent Captain",
+        "handler": "manalinkeh_card_preeminent_captain",
+        "kind": "card"
+      }
+    },
+    "Yew Spirit": {
+      "oracle": {
+        "oracle_id": "0333cb81-5f44-4f31-9ee7-725e4f6af7b3",
+        "name": "Yew Spirit",
+        "oracle_text": "{2}{G}{G}: This creature gets +X/+X until end of turn, where X is its power.",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Spirit Treefolk",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/207/yew-spirit?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12513,
+        "iid": 11177,
+        "name": "Yew Spirit",
+        "handler": "manalinkeh_card_yew_spirit",
+        "kind": "card"
+      }
+    },
+    "Bloodfire Mentor": {
+      "oracle": {
+        "oracle_id": "2c47319a-4062-4aec-b68a-e8e8f023cf86",
+        "name": "Bloodfire Mentor",
+        "oracle_text": "{2}{U}, {T}: Draw a card, then discard a card.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Efreet Shaman",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/102/bloodfire-mentor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14232,
+        "iid": 1138,
+        "name": "Bloodfire Mentor",
+        "handler": "manalinkeh_card_bloodfire_mentor",
+        "kind": "card"
+      }
+    },
+    "Fendeep Summoner": {
+      "oracle": {
+        "oracle_id": "7f207f0d-0834-45fc-aec3-534ec73cdc58",
+        "name": "Fendeep Summoner",
+        "oracle_text": "{T}: Up to two target Swamps each become 3/5 Treefolk Warrior creatures in addition to their other types until end of turn.",
+        "mana_cost": "{4}{B}",
+        "type_line": "Creature — Treefolk Shaman",
+        "power": "3",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mor/61/fendeep-summoner?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9352,
+        "iid": 12584,
+        "name": "Fendeep Summoner",
+        "handler": "manalinkeh_card_fendeep_summoner",
+        "kind": "card"
+      }
+    },
+    "Akki Drillmaster": {
+      "oracle": {
+        "oracle_id": "aa228a01-7de3-4539-9ebb-b3c546f72b41",
+        "name": "Akki Drillmaster",
+        "oracle_text": "{T}: Target creature gains haste until end of turn.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Goblin Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/92/akki-drillmaster?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7598,
+        "iid": 314,
+        "name": "Akki Drillmaster",
+        "handler": "manalinkeh_card_akki_drillmaster",
+        "kind": "card"
+      }
+    },
+    "Cephalid Looter": {
+      "oracle": {
+        "oracle_id": "412294bf-a25f-47c2-8043-12eb3e142b9e",
+        "name": "Cephalid Looter",
+        "oracle_text": "{T}: Target player draws a card, then discards a card.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Octopus Rogue",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ody/72/cephalid-looter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5509,
+        "iid": 1607,
+        "name": "Cephalid Looter",
+        "handler": "manalinkeh_card_cephalid_looter",
+        "kind": "card"
+      }
+    },
+    "Rummaging Goblin": {
+      "oracle": {
+        "oracle_id": "2055eb91-ee36-4752-a6dc-581eaef335c8",
+        "name": "Rummaging Goblin",
+        "oracle_text": "{T}, Discard a card: Draw a card.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Goblin Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/198/rummaging-goblin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12612,
+        "iid": 8111,
+        "name": "Rummaging Goblin",
+        "handler": "manalinkeh_card_rummaging_goblin",
+        "kind": "card"
+      }
+    },
+    "Rootwater Hunter": {
+      "oracle": {
+        "oracle_id": "8e42ed82-8b56-46ad-a1ca-e29689a9d030",
+        "name": "Rootwater Hunter",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Merfolk",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddt/16/rootwater-hunter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1687,
+        "iid": 8067,
+        "name": "Rootwater Hunter",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Archivist": {
+      "oracle": {
+        "oracle_id": "d137586f-83b0-40af-8100-443460b07ac0",
+        "name": "Archivist",
+        "oracle_text": "{T}: Draw a card.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Creature — Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/60/archivist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 974,
+        "iid": 561,
+        "name": "Archivist",
+        "handler": "manalinkeh_card_archivist",
+        "kind": "card"
+      }
+    },
+    "Vodalian Mage": {
+      "oracle": {
+        "oracle_id": "8dee4577-0315-4c9f-ab1c-0c68e2ab6a76",
+        "name": "Vodalian Mage",
+        "oracle_text": "{U}, {T}: Counter target spell unless its controller pays {1}.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Merfolk Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fem/30a/vodalian-mage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1841,
+        "iid": 10653,
+        "name": "Vodalian Mage",
+        "handler": "manalinkeh_card_vodalian_mage",
+        "kind": "card"
+      }
+    },
+    "Dragon Whelp": {
+      "oracle": {
+        "oracle_id": "705a1985-ed39-4a4b-812e-a677170b596e",
+        "name": "Dragon Whelp",
+        "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn. If this ability has been activated four or more times this turn, sacrifice this creature at the beginning of the next end step.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/plst/DMR-116/dragon-whelp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 67,
+        "iid": 2689,
+        "name": "Dragon Whelp",
+        "handler": "manalinkeh_card_dragon_whelp",
+        "kind": "card"
+      }
+    },
+    "Wayward Giant": {
+      "oracle": {
+        "oracle_id": "124cf15a-587a-4f1f-a943-f462072f2098",
+        "name": "Wayward Giant",
+        "oracle_text": "Menace",
+        "mana_cost": "{4}{R}",
+        "type_line": "Creature — Giant",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Menace"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/139/wayward-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16569,
+        "iid": 16655,
+        "name": "Wayward Giant",
+        "handler": "manalinkeh_card_ripscale_predators",
+        "kind": "card"
+      }
+    },
+    "Amoeboid Changeling": {
+      "oracle": {
+        "oracle_id": "68865793-daeb-4c55-80cb-12853f9f96c4",
+        "name": "Amoeboid Changeling",
+        "oracle_text": "Changeling (This card is every creature type.)\n{T}: Target creature gains all creature types until end of turn.\n{T}: Target creature loses all creature types until end of turn.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Shapeshifter",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Changeling"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/51/amoeboid-changeling?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9059,
+        "iid": 393,
+        "name": "Amoeboid Changeling",
+        "handler": "manalinkeh_card_amoeboid_changeling",
+        "kind": "card"
+      }
+    },
+    "Nameless Inversion": {
+      "oracle": {
+        "oracle_id": "d6911456-42cb-4b23-a560-dc98784530f5",
+        "name": "Nameless Inversion",
+        "oracle_text": "Changeling (This card is every creature type.)\nTarget creature gets +3/-3 and loses all creature types until end of turn.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Kindred Instant — Shapeshifter",
+        "keywords": [
+          "Changeling"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ecl/113/nameless-inversion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9218,
+        "iid": 6458,
+        "name": "Nameless Inversion",
+        "handler": "manalinkeh_card_nameless_inversion",
+        "kind": "card"
+      }
+    },
+    "Wall of Tanglecord": {
+      "oracle": {
+        "oracle_id": "423bebcc-8fa0-49c4-aa22-728bf51a535b",
+        "name": "Wall of Tanglecord",
+        "oracle_text": "Defender\n{G}: This creature gains reach until end of turn. (It can block creatures with flying.)",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Wall",
+        "power": "0",
+        "toughness": "6",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/222/wall-of-tanglecord?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11409,
+        "iid": 10785,
+        "name": "Wall of Tanglecord",
+        "handler": "manalinkeh_card_wall_of_tanglecord",
+        "kind": "card"
+      }
+    },
+    "Militia's Pride": {
+      "oracle": {
+        "oracle_id": "d311154b-4742-49e5-9b65-4de2d3e0d50b",
+        "name": "Militia's Pride",
+        "oracle_text": "Whenever a nontoken creature you control attacks, you may pay {W}. If you do, create a 1/1 white Kithkin Soldier creature token that's tapped and attacking.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Kindred Enchantment — Kithkin",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/30/militias-pride?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9211,
+        "iid": 6113,
+        "name": "Militia's Pride",
+        "handler": "manalinkeh_card_militias_pride",
+        "kind": "card"
+      }
+    },
+    "Boggart Shenanigans": {
+      "oracle": {
+        "oracle_id": "997d2f38-5a50-451e-bd48-e36dcb24d967",
+        "name": "Boggart Shenanigans",
+        "oracle_text": "Whenever another Goblin you control is put into a graveyard from the battlefield, you may have this enchantment deal 1 damage to target player or planeswalker.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Kindred Enchantment — Goblin",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/evg/54/boggart-shenanigans?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9083,
+        "iid": 1197,
+        "name": "Boggart Shenanigans",
+        "handler": "manalinkeh_card_boggart_shenanigans",
+        "kind": "card"
+      }
+    },
+    "Merrow Commerce": {
+      "oracle": {
+        "oracle_id": "a931b609-1486-447b-9479-61a45d64f2ef",
+        "name": "Merrow Commerce",
+        "oracle_text": "At the beginning of your end step, untap all Merfolk you control.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Kindred Enchantment — Merfolk",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/72/merrow-commerce?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9209,
+        "iid": 6065,
+        "name": "Merrow Commerce",
+        "handler": "manalinkeh_card_merrow_commerce",
+        "kind": "card"
+      }
+    },
+    "Giant's Ire": {
+      "oracle": {
+        "oracle_id": "73d175b3-f0dc-4599-8702-2967a8ead06a",
+        "name": "Giant's Ire",
+        "oracle_text": "Giant's Ire deals 4 damage to target player or planeswalker. If you control a Giant, draw a card.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Kindred Sorcery — Giant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/170/giants-ire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9151,
+        "iid": 3874,
+        "name": "Giant's Ire",
+        "handler": "manalinkeh_card_giants_ire",
+        "kind": "card"
+      }
+    },
+    "Unyielding Krumar": {
+      "oracle": {
+        "oracle_id": "00bcfbaf-cd31-4688-973e-4238749051b7",
+        "name": "Unyielding Krumar",
+        "oracle_text": "{1}{W}: This creature gains first strike until end of turn.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Orc Warrior",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/94/unyielding-krumar?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14419,
+        "iid": 10395,
+        "name": "Unyielding Krumar",
+        "handler": "manalinkeh_card_unyielding_krumar",
+        "kind": "card"
+      }
+    },
+    "Mind Stone": {
+      "oracle": {
+        "oracle_id": "c97361b5-af16-4a7b-af85-a429dbaf4ad2",
+        "name": "Mind Stone",
+        "oracle_text": "{T}: Add {C}.\n{1}, {T}, Sacrifice this artifact: Draw a card.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbc/76/mind-stone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3009,
+        "iid": 6137,
+        "name": "Mind Stone",
+        "handler": "manalinkeh_card_mind_stone",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Boomerang": {
+      "oracle": {
+        "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+        "name": "Boomerang",
+        "oracle_text": "Return target permanent to its owner's hand.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+      },
+      "registry": {
+        "csvid": 585,
+        "iid": 1233,
+        "name": "Boomerang",
+        "handler": "manalinkeh_card_boomerang",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Tattered Mummy": {
+      "oracle": {
+        "oracle_id": "066e7379-d439-41cb-a8c9-60964040b110",
+        "name": "Tattered Mummy",
+        "oracle_text": "When this creature dies, each opponent loses 2 life.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Zombie Jackal",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gn2/34/tattered-mummy?utm_source=api"
+      },
+      "registry": {
+        "csvid": 17043,
+        "iid": 17137,
+        "name": "Tattered Mummy",
+        "handler": "manalinkeh_card_blistergrub",
+        "kind": "card"
+      }
+    },
+    "Daru Spiritualist": {
+      "oracle": {
+        "oracle_id": "e58a5631-dd00-4b1b-a2aa-2558bb0ff62f",
+        "name": "Daru Spiritualist",
+        "oracle_text": "Whenever a Cleric creature you control becomes the target of a spell or ability, it gets +0/+2 until end of turn.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/scg/5/daru-spiritualist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6497,
+        "iid": 2265,
+        "name": "Daru Spiritualist",
+        "handler": "manalinkeh_card_daru_spiritualist",
+        "kind": "card"
+      }
+    },
+    "Disciple of Griselbrand": {
+      "oracle": {
+        "oracle_id": "2d92a035-dd7a-4426-a8c0-f04e0b836dad",
+        "name": "Disciple of Griselbrand",
+        "oracle_text": "{1}, Sacrifice a creature: You gain life equal to the sacrificed creature's toughness.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Human Cleric",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c13/74/disciple-of-griselbrand?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11932,
+        "iid": 2564,
+        "name": "Disciple of Griselbrand",
+        "handler": "manalinkeh_card_disciple_of_griselbrand",
+        "kind": "card"
+      }
+    },
+    "Drana's Emissary": {
+      "oracle": {
+        "oracle_id": "ef49b53d-e5b6-423a-88f0-51a7b2021c46",
+        "name": "Drana's Emissary",
+        "oracle_text": "Flying\nAt the beginning of your upkeep, each opponent loses 1 life and you gain 1 life.",
+        "mana_cost": "{1}{W}{B}",
+        "type_line": "Creature — Vampire Cleric Ally",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/210/dranas-emissary?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15311,
+        "iid": 12344,
+        "name": "Drana's Emissary",
+        "handler": "manalinkeh_card_dranas_emissary",
+        "kind": "card"
+      }
+    },
+    "Felhide Petrifier": {
+      "oracle": {
+        "oracle_id": "1ad604ed-c645-4f94-8c5f-8e0ce66a85ff",
+        "name": "Felhide Petrifier",
+        "oracle_text": "Deathtouch\nOther Minotaur creatures you control have deathtouch.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Minotaur Warrior",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Deathtouch"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/70/felhide-petrifier?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13885,
+        "iid": 3339,
+        "name": "Felhide Petrifier",
+        "handler": "manalinkeh_card_felhide_petrifier",
+        "kind": "card"
+      }
+    },
+    "Kragma Warcaller": {
+      "oracle": {
+        "oracle_id": "da04b438-aa49-4736-b0ed-131bbe70b566",
+        "name": "Kragma Warcaller",
+        "oracle_text": "Minotaur creatures you control have haste.\nWhenever a Minotaur you control attacks, it gets +2/+0 until end of turn.",
+        "mana_cost": "{3}{B}{R}",
+        "type_line": "Creature — Minotaur Warrior",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/195/kragma-warcaller?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13470,
+        "iid": 5376,
+        "name": "Kragma Warcaller",
+        "handler": "manalinkeh_card_kragma_warcaller",
+        "kind": "card"
+      }
+    },
+    "Labyrinth Minotaur": {
+      "oracle": {
+        "oracle_id": "1e7b075b-1c0f-4c44-a597-5c167a786cb1",
+        "name": "Labyrinth Minotaur",
+        "oracle_text": "Whenever this creature blocks a creature, that creature doesn't untap during its controller's next untap step.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Minotaur",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/39/labyrinth-minotaur?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2220,
+        "iid": 13347,
+        "name": "Labyrinth Minotaur",
+        "handler": "manalinkeh_card_wall_of_frost",
+        "kind": "card"
+      }
+    },
+    "Minotaur Sureshot": {
+      "oracle": {
+        "oracle_id": "cbb6c481-bcf1-459d-a6fb-bb46cc521368",
+        "name": "Minotaur Sureshot",
+        "oracle_text": "Reach (This creature can block creatures with flying.)\n{1}{R}: This creature gets +1/+0 until end of turn.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Minotaur Archer",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/350/minotaur-sureshot?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16970,
+        "iid": 17064,
+        "name": "Minotaur Sureshot",
+        "handler": "manalinkeh_card_wildfire_emissary",
+        "kind": "card"
+      }
+    },
+    "Order of Whiteclay": {
+      "oracle": {
+        "oracle_id": "16c46eaf-7a31-4957-ab7c-ff07fbbd9ddc",
+        "name": "Order of Whiteclay",
+        "oracle_text": "{1}{W}{W}, {Q}: Return target creature card with mana value 3 or less from your graveyard to the battlefield. ({Q} is the untap symbol.)",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Creature — Kithkin Cleric",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clb/703/order-of-whiteclay?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9621,
+        "iid": 6891,
+        "name": "Order of Whiteclay",
+        "handler": "manalinkeh_card_order_of_whiteclay",
+        "kind": "card"
+      }
+    },
+    "Scribe of the Mindful": {
+      "oracle": {
+        "oracle_id": "019a3229-dd1c-4f70-a8fb-e33dbc54df39",
+        "name": "Scribe of the Mindful",
+        "oracle_text": "{1}, {T}, Sacrifice this creature: Return target instant or sorcery card from your graveyard to your hand.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Cleric",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/akh/68/scribe-of-the-mindful?utm_source=api"
+      },
+      "registry": {
+        "csvid": 17017,
+        "iid": 17111,
+        "name": "Scribe of the Mindful",
+        "handler": "manalinkeh_card_scribe_of_the_mindful",
+        "kind": "card"
+      }
+    },
+    "Talruum Minotaur": {
+      "oracle": {
+        "oracle_id": "c5661500-c48f-4f6d-bbe7-c8bd7118d862",
+        "name": "Talruum Minotaur",
+        "oracle_text": "Haste",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Minotaur Berserker",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/6ed/210/talruum-minotaur?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1403,
+        "iid": 9691,
+        "name": "Talruum Minotaur",
+        "handler": "manalinkeh_card_ambush_party",
+        "kind": "card"
+      }
+    }
+  }
+}

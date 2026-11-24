@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Cultivator of Blades",
+  "csvid": 16331,
+  "recipes": [
+    {
+      "family": "attack_trigger_team_keywords",
+      "version": 2,
+      "params": {
+        "csvid": 16331,
+        "mana": [
+          3,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Fabricate 2 (When this creature enters, put two +1/+1 counters on it or create two 1/1 colorless Servo artifact creature tokens.)\nWhenever this creature attacks, you may have other attacking creatures get +X/+X until end of turn, where X is this creature's power.",
+      "variants": [
+        "counter_buff_0",
+        "counter_buff_1",
+        "servo_entry_0",
+        "servo_entry_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

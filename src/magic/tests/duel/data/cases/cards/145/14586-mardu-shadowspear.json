@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Mardu Shadowspear",
+  "csvid": 14586,
+  "recipes": [
+    {
+      "family": "attack_trigger_costs_and_damage",
+      "version": 2,
+      "params": {
+        "csvid": 14586,
+        "printed_mana": "{B}",
+        "rules": "Whenever this creature attacks, each opponent loses 1 life.\nDash {1}{B} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)"
+      },
+      "oracle_text": "Whenever this creature attacks, each opponent loses 1 life.\nDash {1}{B} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)",
+      "variants": [
+        "normal_attack_0",
+        "normal_attack_1",
+        "dash_attack_0",
+        "dash_attack_1",
+        "normal_fresh_0",
+        "normal_fresh_1"
+      ]
+    }
+  ]
+}

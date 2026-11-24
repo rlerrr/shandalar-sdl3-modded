@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Bringer of the Black Dawn",
+  "csvid": 7020,
+  "recipes": [
+    {
+      "family": "upkeep_life_tap",
+      "version": 2,
+      "params": {
+        "mode": "bringer",
+        "life": 2,
+        "mana": [
+          7,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": [
+          "Trample"
+        ]
+      },
+      "oracle_text": "You may pay {W}{U}{B}{R}{G} rather than pay this spell's mana cost.\nTrample\nAt the beginning of your upkeep, you may pay 2 life. If you do, search your library for a card, then shuffle and put that card on top.",
+      "variants": [
+        "pay_0",
+        "decline_0",
+        "opponent_upkeep_0",
+        "countered_0",
+        "wrong_mana_0",
+        "short_0",
+        "snapshot_0",
+        "rainbow_0",
+        "choose_rainbow_0",
+        "choose_normal_0",
+        "trample_0",
+        "search_policy_0",
+        "repeat_0",
+        "pay_1",
+        "decline_1",
+        "opponent_upkeep_1",
+        "countered_1",
+        "wrong_mana_1",
+        "short_1",
+        "snapshot_1",
+        "rainbow_1",
+        "choose_rainbow_1",
+        "choose_normal_1",
+        "trample_1",
+        "search_policy_1",
+        "repeat_1"
+      ]
+    }
+  ]
+}

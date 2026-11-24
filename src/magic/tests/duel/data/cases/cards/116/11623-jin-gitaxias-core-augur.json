@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Jin-Gitaxias, Core Augur",
+  "csvid": 11623,
+  "recipes": [
+    {
+      "family": "flash_remaining_rule_effects",
+      "version": 2,
+      "params": {
+        "csvid": 11623,
+        "printed_mana": [
+          8,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "rules": "Flash\nAt the beginning of your end step, draw seven cards.\nEach opponent's maximum hand size is reduced by seven."
+      },
+      "oracle_text": "Flash\nAt the beginning of your end step, draw seven cards.\nEach opponent's maximum hand size is reduced by seven.",
+      "variants": [
+        "own_end_0",
+        "own_end_1",
+        "source_removed_0",
+        "source_removed_1",
+        "unlimited_hand_0",
+        "unlimited_hand_1",
+        "hand_limit_0",
+        "normal_limit_after_removal_0"
+      ]
+    }
+  ]
+}

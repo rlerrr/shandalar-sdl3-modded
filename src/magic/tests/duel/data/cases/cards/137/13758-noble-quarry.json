@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "csvid": 13758,
+  "card": "Noble Quarry",
+  "recipes": [
+    {
+      "family": "must_block_creature_spell",
+      "version": 2,
+      "params": {
+        "composition": "bestow_lure",
+        "cost": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "bestow": [
+          5,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "bonus": [
+          1,
+          1
+        ]
+      },
+      "oracle_text": "Bestow {5}{G} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nAll creatures able to block this creature or enchanted creature do so.\nEnchanted creature gets +1/+1.",
+      "variants": [
+        "ordinary_0",
+        "bestow_0",
+        "bestow_foreign_0",
+        "bestow_persistent_0",
+        "detach_0",
+        "pending_lost_0",
+        "unfunded_0",
+        "no_host_regular_0",
+        "cancel_mode_0",
+        "aura_removed_0",
+        "ordinary_1",
+        "bestow_1",
+        "bestow_foreign_1",
+        "bestow_persistent_1",
+        "detach_1",
+        "pending_lost_1",
+        "unfunded_1",
+        "no_host_regular_1",
+        "cancel_mode_1",
+        "aura_removed_1"
+      ]
+    }
+  ]
+}

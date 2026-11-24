@@ -1,0 +1,526 @@
+{
+  "sources": {
+    "Aboroth": {
+      "oracle": {
+        "oracle_id": "28f70f86-19a9-4811-bc10-423a05842d39",
+        "name": "Aboroth",
+        "oracle_text": "Cumulative upkeep—Put a -1/-1 counter on this creature. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Elemental",
+        "power": "9",
+        "toughness": "9",
+        "keywords": [
+          "Cumulative upkeep"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/117/aboroth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2924,
+        "iid": 175,
+        "name": "Aboroth",
+        "handler": "manalinkeh_card_aboroth",
+        "kind": "card"
+      }
+    },
+    "Braid of Fire": {
+      "oracle": {
+        "oracle_id": "796009b3-73b5-42c0-a490-66f12be5a42e",
+        "name": "Braid of Fire",
+        "oracle_text": "Cumulative upkeep—Add {R}. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)",
+        "mana_cost": "{1}{R}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Cumulative upkeep"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/csp/78/braid-of-fire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8344,
+        "iid": 1280,
+        "name": "Braid of Fire",
+        "handler": "manalinkeh_card_braid_of_fire",
+        "kind": "card"
+      }
+    },
+    "Phyrexian Soulgorger": {
+      "oracle": {
+        "oracle_id": "b6e36e77-0cea-4b7a-b968-774b1e74a992",
+        "name": "Phyrexian Soulgorger",
+        "oracle_text": "Cumulative upkeep—Sacrifice a creature. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)",
+        "mana_cost": "{3}",
+        "type_line": "Snow Artifact Creature — Phyrexian Construct",
+        "power": "8",
+        "toughness": "8",
+        "keywords": [
+          "Cumulative upkeep"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/csp/141/phyrexian-soulgorger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8425,
+        "iid": 7182,
+        "name": "Phyrexian Soulgorger",
+        "handler": "manalinkeh_card_phyrexian_soulgorger",
+        "kind": "card"
+      }
+    },
+    "Vexing Sphinx": {
+      "oracle": {
+        "oracle_id": "c2affd47-2404-44b0-a571-e64e948130eb",
+        "name": "Vexing Sphinx",
+        "oracle_text": "Flying\nCumulative upkeep—Discard a card. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nWhen this creature dies, draw a card for each age counter on it.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Creature — Sphinx",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Cumulative upkeep",
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/73/vexing-sphinx?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8467,
+        "iid": 10562,
+        "name": "Vexing Sphinx",
+        "handler": "manalinkeh_card_vexing_sphinx",
+        "kind": "card"
+      }
+    },
+    "Glacial Chasm": {
+      "oracle": {
+        "oracle_id": "73e7a2ad-d11c-4867-b97d-f971809da778",
+        "name": "Glacial Chasm",
+        "oracle_text": "Cumulative upkeep—Pay 2 life. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nWhen this land enters, sacrifice a land.\nCreatures you control can't attack.\nPrevent all damage that would be dealt to you.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [
+          "Cumulative upkeep"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/229/glacial-chasm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1949,
+        "iid": 3906,
+        "name": "Glacial Chasm",
+        "handler": "manalinkeh_card_glacial_chasm",
+        "kind": "card"
+      }
+    },
+    "Polar Kraken": {
+      "oracle": {
+        "oracle_id": "d0ff30c8-ddb7-439d-b14d-c83fe3c8da87",
+        "name": "Polar Kraken",
+        "oracle_text": "Trample\nThis creature enters tapped.\nCumulative upkeep—Sacrifice a land. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)",
+        "mana_cost": "{8}{U}{U}{U}",
+        "type_line": "Creature — Kraken",
+        "power": "11",
+        "toughness": "11",
+        "keywords": [
+          "Trample",
+          "Cumulative upkeep"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 11.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me1/44/polar-kraken?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2067,
+        "iid": 7280,
+        "name": "Polar Kraken",
+        "handler": "manalinkeh_card_polar_kraken",
+        "kind": "card"
+      }
+    },
+    "Psychic Vortex": {
+      "oracle": {
+        "oracle_id": "451e35dd-e0b5-4157-8511-bacb315e19bd",
+        "name": "Psychic Vortex",
+        "oracle_text": "Cumulative upkeep—Draw a card. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nAt the beginning of your end step, sacrifice a land and discard your hand.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Cumulative upkeep"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/50/psychic-vortex?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3027,
+        "iid": 7450,
+        "name": "Psychic Vortex",
+        "handler": "manalinkeh_card_psychic_vortex",
+        "kind": "card"
+      }
+    },
+    "Wall of Shards": {
+      "oracle": {
+        "oracle_id": "8fab68ad-169d-46d3-93c4-5bdee4eea2ce",
+        "name": "Wall of Shards",
+        "oracle_text": "Defender, flying\nCumulative upkeep—An opponent gains 1 life. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)",
+        "mana_cost": "{1}{W}",
+        "type_line": "Snow Creature — Wall",
+        "power": "1",
+        "toughness": "8",
+        "keywords": [
+          "Cumulative upkeep",
+          "Flying",
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/csp/23/wall-of-shards?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8469,
+        "iid": 10780,
+        "name": "Wall of Shards",
+        "handler": "manalinkeh_card_wall_of_shards",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Air Elemental": {
+      "oracle": {
+        "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+        "name": "Air Elemental",
+        "oracle_text": "Flying",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/44/air-elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 0,
+        "iid": 298,
+        "name": "Air Elemental",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Carrion Ants": {
+      "oracle": {
+        "oracle_id": "87bc6be7-4734-4a11-806e-e9e4f5616fe0",
+        "name": "Carrion Ants",
+        "oracle_text": "{1}: This creature gets +1/+1 until end of turn.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Creature — Insect",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/60/carrion-ants?utm_source=api"
+      },
+      "registry": {
+        "csvid": 589,
+        "iid": 1513,
+        "name": "Carrion Ants",
+        "handler": "manalinkeh_card_carrion_ants",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Kruphix, God of Horizons": {
+      "oracle": {
+        "oracle_id": "b2cefcd6-4b81-479c-86ff-1695b836972c",
+        "name": "Kruphix, God of Horizons",
+        "oracle_text": "Indestructible\nAs long as your devotion to green and blue is less than seven, Kruphix isn't a creature.\nYou have no maximum hand size.\nIf you would lose unspent mana, that mana becomes colorless instead.",
+        "mana_cost": "{3}{G}{U}",
+        "type_line": "Legendary Enchantment Creature — God",
+        "power": "4",
+        "toughness": "7",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/152/kruphix-god-of-horizons?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13922,
+        "iid": 5416,
+        "name": "Kruphix, God of Horizons",
+        "handler": "manalinkeh_card_kruphix_god_of_horizons",
+        "kind": "card"
+      }
+    },
+    "Leyline of Punishment": {
+      "oracle": {
+        "oracle_id": "2608df54-dfbe-417d-aef5-49afbdfb03da",
+        "name": "Leyline of Punishment",
+        "oracle_text": "If this card is in your opening hand, you may begin the game with it on the battlefield.\nPlayers can't gain life.\nDamage can't be prevented.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m11/148/leyline-of-punishment?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11140,
+        "iid": 5550,
+        "name": "Leyline of Punishment",
+        "handler": "manalinkeh_card_leyline_of_punishment",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    }
+  }
+}

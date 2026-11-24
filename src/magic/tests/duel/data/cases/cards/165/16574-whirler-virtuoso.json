@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 16574,
+  "card": "Whirler Virtuoso",
+  "recipes": [
+    {
+      "family": "entry_rider_energy_and_mana",
+      "version": 2,
+      "params": {
+        "csvid": 16574,
+        "printed_cost": "{1}{U}{R}"
+      },
+      "oracle_text": "When this creature enters, you get {E}{E}{E} (three energy counters).\nPay {E}{E}{E}: Create a 1/1 colorless Thopter artifact creature token with flying.",
+      "variants": [
+        "make_0",
+        "repeat_0",
+        "flying_0",
+        "countered_0",
+        "make_1",
+        "repeat_1",
+        "flying_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

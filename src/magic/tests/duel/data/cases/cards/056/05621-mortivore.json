@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 5621,
+  "card": "Mortivore",
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_self_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 5621,
+        "printed_cost": "{2}{B}{B}"
+      },
+      "oracle_text": "Mortivore's power and toughness are each equal to the number of creature cards in all graveyards.\n{B}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "variants": [
+        "regenerate_0",
+        "short_0",
+        "terminate_0",
+        "proactive_0",
+        "growth_0",
+        "clear_foe_grave_0",
+        "empty_0",
+        "regenerate_1",
+        "short_1",
+        "terminate_1",
+        "proactive_1",
+        "growth_1",
+        "clear_foe_grave_1",
+        "empty_1"
+      ]
+    }
+  ]
+}

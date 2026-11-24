@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "csvid": 15149,
+  "card": "Herald of the Pantheon",
+  "recipes": [
+    {
+      "family": "multi_type_discounts",
+      "version": 2,
+      "params": {
+        "effect": "static_discount",
+        "cost": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "types": [
+          "Enchantment"
+        ],
+        "amount": 1,
+        "rider": "life"
+      },
+      "oracle_text": "Enchantment spells you cast cost {1} less to cast.\nWhenever you cast an enchantment spell, you gain 1 life.",
+      "variants": [
+        "payment_0",
+        "payment_1",
+        "one_short_0",
+        "one_short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "opposing_caster_0",
+        "opposing_caster_1",
+        "source_cast_0",
+        "source_cast_1",
+        "source_short_0",
+        "source_short_1",
+        "source_grave_0",
+        "source_grave_1",
+        "source_bounce_0",
+        "source_bounce_1",
+        "combined_0",
+        "combined_1",
+        "countered_0",
+        "countered_1",
+        "paid_replay_0",
+        "paid_replay_1",
+        "colored_floor_0",
+        "colored_floor_1",
+        "artifact_creature_0",
+        "artifact_creature_1",
+        "enchantment_creature_0",
+        "enchantment_creature_1",
+        "excluded_instant_0",
+        "excluded_instant_1",
+        "excluded_sorcery_0",
+        "excluded_sorcery_1",
+        "excluded_creature_0",
+        "excluded_creature_1",
+        "eligible_enchantment_0",
+        "eligible_enchantment_1",
+        "excluded_artifact_0",
+        "excluded_artifact_1"
+      ]
+    }
+  ]
+}

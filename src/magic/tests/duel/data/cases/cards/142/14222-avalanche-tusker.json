@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Avalanche Tusker",
+  "csvid": 14222,
+  "recipes": [
+    {
+      "family": "attack_trigger_block_and_target",
+      "version": 2,
+      "params": {
+        "csvid": 14222,
+        "cost": "{2}{G}{U}{R}",
+        "choices": [
+          "force_0",
+          "force_1",
+          "named_only_0",
+          "named_only_1",
+          "tapped_0",
+          "tapped_1",
+          "hexproof_0",
+          "hexproof_1",
+          "ally_attacks_0",
+          "ally_attacks_1"
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks, target creature defending player controls blocks it this combat if able.",
+      "variants": [
+        "force_0",
+        "force_1",
+        "named_only_0",
+        "named_only_1",
+        "tapped_0",
+        "tapped_1",
+        "hexproof_0",
+        "hexproof_1",
+        "ally_attacks_0",
+        "ally_attacks_1"
+      ]
+    }
+  ]
+}

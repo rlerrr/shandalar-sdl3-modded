@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Arachnogenesis",
+  "csvid": 15495,
+  "recipes": [
+    {
+      "family": "combat_wide_fog",
+      "version": 2,
+      "oracle_text": "Create X 1/2 green Spider creature tokens with reach, where X is the number of creatures attacking you. Prevent all combat damage that would be dealt this turn by non-Spider creatures.",
+      "params": {
+        "model": "spider_fog",
+        "cast_mana": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "activation_mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "defend_0",
+        "own_attack_0",
+        "no_effect_0",
+        "noncombat_0",
+        "insufficient_0",
+        "wrong_color_0",
+        "pending_snapshot_0",
+        "zero_attackers_0",
+        "after_turn_0",
+        "spider_exempt_0",
+        "reach_block_0",
+        "spider_block_0",
+        "defend_1",
+        "own_attack_1",
+        "no_effect_1",
+        "noncombat_1",
+        "insufficient_1",
+        "wrong_color_1",
+        "pending_snapshot_1",
+        "zero_attackers_1",
+        "after_turn_1",
+        "spider_exempt_1",
+        "reach_block_1",
+        "spider_block_1"
+      ]
+    }
+  ]
+}

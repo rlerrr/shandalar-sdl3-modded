@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "card": "Cryptic Cruiser",
+  "csvid": 15303,
+  "recipes": [
+    {
+      "family": "devoid_opponent_exile_costs",
+      "version": 2,
+      "params": {
+        "model": "tap",
+        "cost": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "fee": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "exile_cost": 1
+      },
+      "oracle_text": "Devoid (This card has no color.)\n{2}{U}, Put a card an opponent owns from exile into that player's graveyard: Tap target creature.",
+      "variants": [
+        "paid_0",
+        "own_exile_0",
+        "empty_0",
+        "mixed_0",
+        "replay_0",
+        "short_0",
+        "own_target_0",
+        "paid_1",
+        "own_exile_1",
+        "empty_1",
+        "mixed_1",
+        "replay_1",
+        "short_1",
+        "own_target_1"
+      ]
+    }
+  ]
+}

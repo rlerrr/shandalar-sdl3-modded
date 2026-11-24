@@ -1,0 +1,616 @@
+{
+  "version": 1,
+  "sources": {
+    "Alley Grifters": {
+      "oracle": {
+        "oracle_id": "399af8ea-7a6f-4f43-bd39-dc29a6e75e06",
+        "name": "Alley Grifters",
+        "oracle_text": "Whenever this creature becomes blocked, defending player discards a card.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Human Mercenary",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/115/alley-grifters?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4382,
+        "iid": 362,
+        "name": "Alley Grifters",
+        "handler": "manalinkeh_card_alley_grifters",
+        "kind": "card"
+      }
+    },
+    "Robber Fly": {
+      "oracle": {
+        "oracle_id": "0d44d4f3-9713-4d18-a985-9e7ff0df85d3",
+        "name": "Robber Fly",
+        "oracle_text": "Flying\nWhenever this creature becomes blocked, defending player discards all the cards in their hand, then draws that many cards.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Insect",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/209/robber-fly?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4579,
+        "iid": 8028,
+        "name": "Robber Fly",
+        "handler": "manalinkeh_card_robber_fly",
+        "kind": "card"
+      }
+    },
+    "Slate Street Ruffian": {
+      "oracle": {
+        "oracle_id": "c74d72ee-4795-41ca-b676-4d5a05bd12b7",
+        "name": "Slate Street Ruffian",
+        "oracle_text": "Whenever this creature becomes blocked, defending player discards a card.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Human Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/279/slate-street-ruffian?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13067,
+        "iid": 8893,
+        "name": "Slate Street Ruffian",
+        "handler": "manalinkeh_card_alley_grifters",
+        "kind": "card"
+      }
+    },
+    "Abyssal Nightstalker": {
+      "oracle": {
+        "oracle_id": "10733767-1c97-4e2e-b02b-54bf346f6583",
+        "name": "Abyssal Nightstalker",
+        "oracle_text": "Whenever this creature attacks and isn't blocked, defending player discards a card.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Nightstalker",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/p02/61/abyssal-nightstalker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3588,
+        "iid": 190,
+        "name": "Abyssal Nightstalker",
+        "handler": "manalinkeh_card_abyssal_nightstalker",
+        "kind": "card"
+      }
+    },
+    "Mindstab Thrull": {
+      "oracle": {
+        "oracle_id": "43abe1f3-7b92-411a-bf93-e158f949685c",
+        "name": "Mindstab Thrull",
+        "oracle_text": "Whenever this creature attacks and isn't blocked, you may sacrifice it. If you do, defending player discards three cards.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Thrull",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me1/76/mindstab-thrull?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1808,
+        "iid": 6159,
+        "name": "Mindstab Thrull",
+        "handler": "manalinkeh_card_mindstab_thrull",
+        "kind": "card"
+      }
+    },
+    "Dauthi Mindripper": {
+      "oracle": {
+        "oracle_id": "ecae5eba-8407-4c71-aeae-ab10fb1e5226",
+        "name": "Dauthi Mindripper",
+        "oracle_text": "Shadow (This creature can block or be blocked by only creatures with shadow.)\nWhenever this creature attacks and isn't blocked, you may sacrifice it. If you do, defending player discards three cards.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Dauthi Minion",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Shadow"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tmp/125/dauthi-mindripper?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3120,
+        "iid": 2278,
+        "name": "Dauthi Mindripper",
+        "handler": "manalinkeh_card_dauthi_mindripper",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Dark Ritual": {
+      "oracle": {
+        "oracle_id": "53f7c868-b03e-4fc2-8dcf-a75bbfa3272b",
+        "name": "Dark Ritual",
+        "oracle_text": "Add {B}{B}{B}.",
+        "mana_cost": "{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/793/dark-ritual?utm_source=api"
+      },
+      "registry": {
+        "csvid": 55,
+        "iid": 2232,
+        "name": "Dark Ritual",
+        "handler": "manalinkeh_card_dark_ritual",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Fortified Rampart": {
+      "oracle": {
+        "oracle_id": "a55202a9-bddb-40df-b93f-06678ae1e0ea",
+        "name": "Fortified Rampart",
+        "oracle_text": "Defender",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "6",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/27/fortified-rampart?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15329,
+        "iid": 12694,
+        "name": "Fortified Rampart",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": "Creature — Wall"
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": "Creature — Spider"
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": "Creature — Bear"
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Storm Crow": {
+      "oracle": {
+        "oracle_id": "38d87b87-0c67-47a5-8093-b49aa11f6196",
+        "name": "Storm Crow",
+        "oracle_text": "Flying",
+        "mana_cost": "",
+        "type_line": "Token Creature — Bird",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tblc/18/storm-crow?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1162,
+        "iid": 9403,
+        "name": "Storm Crow",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": "Token Creature — Bird"
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Wall of Stone": {
+      "oracle": {
+        "oracle_id": "cd4cadb4-3156-49bd-b36e-12ba5c85938b",
+        "name": "Wall of Stone",
+        "oracle_text": "Defender (This creature can't attack.)",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "8",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/232/wall-of-stone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 272,
+        "iid": 10783,
+        "name": "Wall of Stone",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": "Creature — Wall"
+    },
+    "Dauthi Marauder": {
+      "oracle": {
+        "oracle_id": "cb754749-a769-4c9c-b62b-4972dfc5069f",
+        "name": "Dauthi Marauder",
+        "oracle_text": "Shadow (This creature can block or be blocked by only creatures with shadow.)",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Dauthi Minion",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Shadow"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/96/dauthi-marauder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3118,
+        "iid": 2276,
+        "name": "Dauthi Marauder",
+        "handler": "manalinkeh_card_dauthi_marauder",
+        "kind": "card"
+      }
+    },
+    "Soltari Foot Soldier": {
+      "oracle": {
+        "oracle_id": "6ccb3ac8-0509-431b-a196-d3cbf4fa80ae",
+        "name": "Soltari Foot Soldier",
+        "oracle_text": "Shadow (This creature can block or be blocked by only creatures with shadow.)",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Soltari Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Shadow"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tmp/43/soltari-foot-soldier?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3287,
+        "iid": 8990,
+        "name": "Soltari Foot Soldier",
+        "handler": "manalinkeh_card_dauthi_marauder",
+        "kind": "card"
+      }
+    }
+  }
+}

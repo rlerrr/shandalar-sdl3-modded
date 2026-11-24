@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Vedalken Plotter",
+  "csvid": 8155,
+  "recipes": [
+    {
+      "family": "entry_rider_control",
+      "version": 2,
+      "params": {
+        "csvid": 8155,
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, exchange control of target land you control and target land an opponent controls.",
+      "variants": [
+        "land_exchange_0",
+        "land_exchange_1",
+        "no_enemy_land_0",
+        "no_enemy_land_1",
+        "no_own_land_0",
+        "no_own_land_1"
+      ]
+    }
+  ]
+}

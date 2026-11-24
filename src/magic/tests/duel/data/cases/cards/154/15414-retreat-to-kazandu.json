@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Retreat to Kazandu",
+  "csvid": 15414,
+  "recipes": [
+    {
+      "family": "landfall_modal_retreats",
+      "version": 2,
+      "params": {
+        "role": "kazandu",
+        "mana": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Landfall — Whenever a land you control enters, choose one —\n• Put a +1/+1 counter on target creature.\n• You gain 2 life.",
+      "variants": [
+        "opponent_land_0",
+        "opponent_land_1",
+        "before_source_0",
+        "before_source_1",
+        "second_denied_0",
+        "second_denied_1",
+        "replay_0",
+        "replay_1",
+        "own_counter_0",
+        "own_counter_1",
+        "foe_counter_0",
+        "foe_counter_1",
+        "counter_then_life_0",
+        "counter_then_life_1",
+        "life_0",
+        "life_1"
+      ]
+    }
+  ]
+}

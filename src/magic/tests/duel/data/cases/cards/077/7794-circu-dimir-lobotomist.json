@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "csvid": 7794,
+  "card": "Circu, Dimir Lobotomist",
+  "recipes": [
+    {
+      "family": "cast_spell_color_riders",
+      "version": 2,
+      "oracle_text": "Whenever you cast a blue spell, exile the top card of target player's library.\nWhenever you cast a black spell, exile the top card of target player's library.\nYour opponents can't cast spells with the same name as a card exiled with Circu.",
+      "params": {
+        "effect": "circu",
+        "colors": [
+          "U",
+          "B"
+        ],
+        "price": [
+          2,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "other_price": [
+          2,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "hybrid": false,
+        "base": [
+          2,
+          3
+        ],
+        "clauses": [
+          "Whenever you cast a blue spell, exile the top card of target player's library.",
+          "Whenever you cast a black spell, exile the top card of target player's library.",
+          "Your opponents can't cast spells with the same name as a card exiled with Circu."
+        ]
+      },
+      "variants": [
+        "first_0",
+        "first_1",
+        "opponent_0",
+        "opponent_1",
+        "unmatched_0",
+        "unmatched_1",
+        "colorless_0",
+        "colorless_1",
+        "replay_0",
+        "replay_1",
+        "second_0",
+        "second_1",
+        "both_0",
+        "both_1",
+        "own_library_0",
+        "own_library_1",
+        "linked_0",
+        "linked_1",
+        "unlinked_0",
+        "unlinked_1"
+      ]
+    }
+  ]
+}

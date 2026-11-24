@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Queen Marchesa",
+  "csvid": 16485,
+  "recipes": [
+    {
+      "family": "monarch_additional_riders",
+      "version": 2,
+      "params": {
+        "model": "queen",
+        "cost": [
+          1,
+          1,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "oracle_text": "Deathtouch, haste\nWhen Queen Marchesa enters, you become the monarch.\nAt the beginning of your upkeep, if an opponent is the monarch, create a 1/1 black Assassin creature token with deathtouch and haste.",
+      "variants": [
+        "entry_0",
+        "underpaid_0",
+        "countered_0",
+        "replay_0",
+        "haste_0",
+        "death_touch_0",
+        "own_upkeep_0",
+        "enemy_upkeep_0",
+        "assassin_haste_0",
+        "assassin_touch_0",
+        "entry_1",
+        "underpaid_1",
+        "countered_1",
+        "replay_1",
+        "haste_1",
+        "death_touch_1",
+        "own_upkeep_1",
+        "enemy_upkeep_1",
+        "assassin_haste_1",
+        "assassin_touch_1"
+      ]
+    }
+  ]
+}

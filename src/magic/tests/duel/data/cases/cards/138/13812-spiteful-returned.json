@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Spiteful Returned",
+  "csvid": 13812,
+  "recipes": [
+    {
+      "family": "bestow_attack_and_damage_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 13812,
+        "normal": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "bestowed": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "creature": [
+          1,
+          1
+        ],
+        "bonus": [
+          1,
+          1
+        ]
+      },
+      "oracle_text": "Bestow {3}{B} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nWhenever this creature or enchanted creature attacks, defending player loses 2 life.\nEnchanted creature gets +1/+1.",
+      "variants": [
+        "regular_attack_0",
+        "regular_attack_1",
+        "bestowed_attack_0",
+        "bestowed_attack_1",
+        "foreign_attack_0",
+        "foreign_attack_1",
+        "detach_attack_0",
+        "detach_attack_1",
+        "unrelated_attacker_0",
+        "unrelated_attacker_1"
+      ]
+    }
+  ]
+}

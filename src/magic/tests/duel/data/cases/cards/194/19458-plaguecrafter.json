@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 19458,
+  "card": "Plaguecrafter",
+  "recipes": [
+    {
+      "family": "entry_follow_on_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 19458,
+        "printed_cost": "{2}{B}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, each player sacrifices a creature or planeswalker of their choice. Each player who can't discards a card.",
+      "variants": [
+        "both_creatures_0",
+        "own_planeswalker_0",
+        "foe_planeswalker_0",
+        "foe_discards_0",
+        "self_only_0",
+        "both_creatures_1",
+        "foe_planeswalker_1",
+        "foe_discards_1",
+        "self_only_1"
+      ]
+    }
+  ]
+}

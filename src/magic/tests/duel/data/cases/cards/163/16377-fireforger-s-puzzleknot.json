@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 16377,
+  "card": "Fireforger's Puzzleknot",
+  "recipes": [
+    {
+      "family": "entry_rider_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 16377,
+        "printed_cost": "{2}",
+        "keywords": []
+      },
+      "oracle_text": "When this artifact enters, it deals 1 damage to any target.\n{2}{R}, Sacrifice this artifact: It deals 1 damage to any target.",
+      "variants": [
+        "two_player_hits_0",
+        "creatures_0",
+        "walker_0",
+        "short_0",
+        "wrong_color_0",
+        "own_player_0",
+        "two_player_hits_1",
+        "creatures_1",
+        "walker_1",
+        "short_1",
+        "wrong_color_1",
+        "own_player_1"
+      ]
+    }
+  ]
+}

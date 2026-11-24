@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Malignant Growth",
+  "csvid": 2532,
+  "recipes": [
+    {
+      "family": "cumulative_upkeep_phase_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 2532,
+        "cast_cost": [
+          3,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "upkeep": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Cumulative upkeep {1} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nAt the beginning of your upkeep, put a growth counter on this enchantment.\nAt the beginning of each opponent's draw step, that player draws an additional card for each growth counter on this enchantment, then this enchantment deals damage to the player equal to the number of cards they drew this way.",
+      "variants": [
+        "draw_ages_0",
+        "draw_ages_1",
+        "declined_draw_0",
+        "declined_draw_1"
+      ]
+    }
+  ]
+}

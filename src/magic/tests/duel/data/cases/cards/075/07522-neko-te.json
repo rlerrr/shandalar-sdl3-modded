@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "csvid": 7522,
+  "card": "Neko-Te",
+  "recipes": [
+    {
+      "family": "equipment_combat_damage_board_effects",
+      "version": 2,
+      "params": {
+        "csvid": 7522,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "equip": 2,
+        "bonus": [
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever equipped creature deals damage to a creature, tap that creature. That creature doesn't untap during its controller's untap step for as long as this Equipment remains on the battlefield.\nWhenever equipped creature deals damage to a player, that player loses 1 life.\nEquip {2}",
+      "variants": [
+        "combat_player_0",
+        "combat_player_1",
+        "noncombat_player_0",
+        "noncombat_player_1",
+        "combat_lock_0",
+        "combat_lock_1",
+        "reequip_lock_0",
+        "reequip_lock_1",
+        "remove_unlock_0",
+        "remove_unlock_1"
+      ]
+    }
+  ]
+}

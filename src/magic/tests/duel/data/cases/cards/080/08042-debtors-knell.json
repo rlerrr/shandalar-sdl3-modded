@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "card": "Debtors' Knell",
+  "csvid": 8042,
+  "recipes": [
+    {
+      "family": "graveyard_reanimation_permissions",
+      "version": 2,
+      "params": {
+        "model": "any_creature",
+        "cost": [
+          4,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hybrid_symbols": [
+          [
+            "W",
+            "B"
+          ],
+          [
+            "W",
+            "B"
+          ],
+          [
+            "W",
+            "B"
+          ]
+        ]
+      },
+      "oracle_text": "({W/B} can be paid with either {W} or {B}.)\nAt the beginning of your upkeep, put target creature card from a graveyard onto the battlefield under your control.",
+      "variants": [
+        "effect_0",
+        "opponent_upkeep_0",
+        "replay_0",
+        "repeat_0",
+        "underpaid_0",
+        "countered_0",
+        "own_grave_0",
+        "other_and_own_0",
+        "owner_death_0",
+        "empty_0",
+        "wrong_type_0",
+        "white_0",
+        "mixed_one_black_0",
+        "mixed_two_black_0",
+        "wrong_color_0",
+        "effect_1",
+        "opponent_upkeep_1",
+        "replay_1",
+        "repeat_1",
+        "underpaid_1",
+        "countered_1",
+        "own_grave_1",
+        "other_and_own_1",
+        "owner_death_1",
+        "empty_1",
+        "wrong_type_1",
+        "white_1",
+        "mixed_one_black_1",
+        "mixed_two_black_1",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

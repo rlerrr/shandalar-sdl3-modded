@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Krovikan Fetish",
+  "csvid": 2009,
+  "recipes": [
+    {
+      "family": "entry_follow_on_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 2009,
+        "printed_mana": "{2}{B}",
+        "rules": "Enchant creature\nWhen this Aura enters, draw a card at the beginning of the next turn's upkeep.\nEnchanted creature gets +1/+1."
+      },
+      "oracle_text": "Enchant creature\nWhen this Aura enters, draw a card at the beginning of the next turn's upkeep.\nEnchanted creature gets +1/+1.",
+      "variants": [
+        "delayed_bonus_0",
+        "delayed_bonus_1",
+        "removed_before_draw_0",
+        "removed_before_draw_1"
+      ]
+    }
+  ]
+}

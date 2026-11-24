@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "csvid": 10648,
+  "card": "Rite of Replication",
+  "recipes": [
+    {
+      "family": "kicker_tokens_and_copies",
+      "version": 2,
+      "oracle_text": "Kicker {5} (You may pay an additional {5} as you cast this spell.)\nCreate a token that's a copy of target creature. If this spell was kicked, create five of those tokens instead.",
+      "params": {
+        "effect": "copy",
+        "identity": "Welkin Tern",
+        "counts": [
+          1,
+          5
+        ],
+        "pt": [],
+        "color": null,
+        "subtypes": [],
+        "price": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "fee": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "clauses": [
+          "Kicker {5} (You may pay an additional {5} as you cast this spell.)",
+          "Create a token that's a copy of target creature. If this spell was kicked, create five of those tokens instead."
+        ],
+        "source_pt": []
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "target_bounced_0",
+        "target_bounced_1"
+      ]
+    }
+  ]
+}

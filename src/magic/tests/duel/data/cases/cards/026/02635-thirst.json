@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 2635,
+  "card": "Thirst",
+  "recipes": [
+    {
+      "family": "remaining_entry_turn_and_choices",
+      "version": 2,
+      "params": {
+        "csvid": 2635,
+        "printed_cost": "{2}{U}",
+        "keywords": [
+          "Enchant"
+        ]
+      },
+      "oracle_text": "Enchant creature\nWhen this Aura enters, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step.\nAt the beginning of your upkeep, sacrifice this Aura unless you pay {U}.",
+      "variants": [
+        "pay_0",
+        "short_0",
+        "decline_0",
+        "pay_1",
+        "short_1",
+        "decline_1"
+      ]
+    }
+  ]
+}

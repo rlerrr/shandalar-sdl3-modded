@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Angel of the Dawn",
+  "csvid": 18879,
+  "recipes": [
+    {
+      "family": "entry_rider_combat_modifiers",
+      "version": 2,
+      "params": {
+        "csvid": 18879,
+        "cost": "{4}{W}",
+        "choices": [
+          "vigilance_0",
+          "vigilance_1",
+          "flying_0",
+          "flying_1",
+          "flying_block_0",
+          "flying_block_1",
+          "late_creature_0",
+          "late_creature_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, creatures you control get +1/+1 and gain vigilance until end of turn.",
+      "variants": [
+        "vigilance_0",
+        "vigilance_1",
+        "flying_0",
+        "flying_1",
+        "flying_block_0",
+        "flying_block_1",
+        "late_creature_0",
+        "late_creature_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

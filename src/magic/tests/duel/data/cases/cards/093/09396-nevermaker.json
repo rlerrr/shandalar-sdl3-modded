@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Nevermaker",
+  "csvid": 9396,
+  "recipes": [
+    {
+      "family": "departure_linked_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 9396
+      },
+      "oracle_text": "Flying\nWhen this creature leaves the battlefield, put target nonland permanent on top of its owner's library.\nEvoke {3}{U} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+      "variants": [
+        "evoke_0",
+        "evoke_1",
+        "bounce_0",
+        "bounce_1",
+        "flying_0",
+        "flying_1",
+        "no_target_0",
+        "no_target_1"
+      ]
+    }
+  ]
+}

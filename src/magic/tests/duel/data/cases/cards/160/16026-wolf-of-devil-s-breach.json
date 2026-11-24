@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Wolf of Devil's Breach",
+  "csvid": 16026,
+  "recipes": [
+    {
+      "family": "attack_trigger_costs_and_damage",
+      "version": 2,
+      "params": {
+        "csvid": 16026,
+        "printed_mana": "{3}{R}{R}",
+        "rules": "Whenever this creature attacks, you may pay {1}{R} and discard a card. If you do, this creature deals damage to target creature or planeswalker equal to the discarded card's mana value."
+      },
+      "oracle_text": "Whenever this creature attacks, you may pay {1}{R} and discard a card. If you do, this creature deals damage to target creature or planeswalker equal to the discarded card's mana value.",
+      "variants": [
+        "pay_discard_0",
+        "pay_discard_1",
+        "discard_zero_0",
+        "discard_zero_1",
+        "no_card_0",
+        "no_card_1",
+        "no_mana_0",
+        "no_mana_1"
+      ]
+    }
+  ]
+}

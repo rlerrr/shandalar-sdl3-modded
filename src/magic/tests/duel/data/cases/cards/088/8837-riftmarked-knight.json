@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "csvid": 8837,
+  "card": "Riftmarked Knight",
+  "recipes": [
+    {
+      "family": "suspend_creature_combat",
+      "version": 2,
+      "oracle_text": "Protection from black; flanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)\nSuspend 3—{1}{W}{W}\nWhen the last time counter is removed from this card while it's exiled, create a 2/2 black Knight creature token with flanking, protection from white, and haste.",
+      "params": {
+        "csvid": 8837,
+        "duration": 3,
+        "fee": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "printed": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "pt": [
+          2,
+          2
+        ],
+        "clauses": [
+          "Protection from black; flanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)",
+          "Suspend 3—{1}{W}{W}",
+          "When the last time counter is removed from this card while it's exiled, create a 2/2 black Knight creature token with flanking, protection from white, and haste."
+        ]
+      },
+      "variants": [
+        "parked_0",
+        "parked_1",
+        "countdown_0",
+        "countdown_1",
+        "unfunded_0",
+        "unfunded_1",
+        "token_combat_0",
+        "token_combat_1",
+        "wrong_suspend_0",
+        "wrong_suspend_1",
+        "normal_0",
+        "normal_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

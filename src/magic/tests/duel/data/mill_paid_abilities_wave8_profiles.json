@@ -1,0 +1,623 @@
+{
+  "sources": {
+    "Codex Shredder": {
+      "oracle": {
+        "oracle_id": "ef7b11ab-24e7-4e7c-91a7-920bade6e60b",
+        "name": "Codex Shredder",
+        "oracle_text": "{T}: Target player mills a card. (They put the top card of their library into their graveyard.)\n{5}, {T}, Sacrifice this artifact: Return target card from your graveyard to your hand.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/304/codex-shredder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12685,
+        "iid": 1850,
+        "name": "Codex Shredder",
+        "handler": "manalinkeh_card_codex_shredder",
+        "kind": "card"
+      }
+    },
+    "Decimator Web": {
+      "oracle": {
+        "oracle_id": "eeabf42a-b1ac-4579-b82a-aabf9052ec20",
+        "name": "Decimator Web",
+        "oracle_text": "{4}, {T}: Target opponent loses 2 life, gets a poison counter, then mills six cards.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbs/105/decimator-web?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11438,
+        "iid": 2364,
+        "name": "Decimator Web",
+        "handler": "manalinkeh_card_decimator_web",
+        "kind": "card"
+      }
+    },
+    "Grindstone": {
+      "oracle": {
+        "oracle_id": "97560adc-814e-450c-9ca7-f9364e910a0b",
+        "name": "Grindstone",
+        "oracle_text": "{3}, {T}: Target player mills two cards. If two cards that share a color were milled this way, repeat this process.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/223/grindstone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3161,
+        "iid": 4242,
+        "name": "Grindstone",
+        "handler": "manalinkeh_card_grindstone",
+        "kind": "card"
+      }
+    },
+    "Mindshrieker": {
+      "oracle": {
+        "oracle_id": "f638ceaf-6b44-4d99-95f3-0aa97b1738fe",
+        "name": "Mindshrieker",
+        "oracle_text": "Flying\n{2}: Target player mills a card. This creature gets +X/+X until end of turn, where X is the milled card's mana value.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Spirit Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/isd/67/mindshrieker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12023,
+        "iid": 6156,
+        "name": "Mindshrieker",
+        "handler": "manalinkeh_card_mindshrieker",
+        "kind": "card"
+      }
+    },
+    "Minister of Inquiries": {
+      "oracle": {
+        "oracle_id": "99894900-771f-4fca-bebf-9f23ec4654c2",
+        "name": "Minister of Inquiries",
+        "oracle_text": "When this creature enters, you get {E}{E} (two energy counters).\n{T}, Pay {E}: Target player mills three cards.",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Vedalken Advisor",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/57/minister-of-inquiries?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16453,
+        "iid": 16540,
+        "name": "Minister of Inquiries",
+        "handler": "manalinkeh_card_minister_of_inquiries",
+        "kind": "card"
+      }
+    },
+    "Perpetual Timepiece": {
+      "oracle": {
+        "oracle_id": "17b4778b-82b1-4845-ad08-00f3ff66877b",
+        "name": "Perpetual Timepiece",
+        "oracle_text": "{T}: Mill two cards. (Put the top two cards of your library into your graveyard.)\n{2}, Exile this artifact: Shuffle any number of target cards from your graveyard into your library.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/354/perpetual-timepiece?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16478,
+        "iid": 16564,
+        "name": "Perpetual Timepiece",
+        "handler": "manalinkeh_card_perpetual_timepiece",
+        "kind": "card"
+      }
+    },
+    "Sequestered Stash": {
+      "oracle": {
+        "oracle_id": "b6fe779f-b20d-49cc-96dd-54f1ffb312e1",
+        "name": "Sequestered Stash",
+        "oracle_text": "{T}: Add {C}.\n{4}, {T}, Sacrifice this land: Mill five cards. Then you may put an artifact card from your graveyard on top of your library.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/248/sequestered-stash?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16512,
+        "iid": 16598,
+        "name": "Sequestered Stash",
+        "handler": "manalinkeh_card_sequestered_stash",
+        "kind": "card"
+      }
+    },
+    "Ipnu Rivulet": {
+      "oracle": {
+        "oracle_id": "c17d799f-adc9-4c41-87cf-b243b5ea3be1",
+        "name": "Ipnu Rivulet",
+        "oracle_text": "{T}: Add {C}.\n{T}, Pay 1 life: Add {U}.\n{1}{U}, {T}, Sacrifice a Desert: Target player mills four cards. (They put the top four cards of their library into their graveyard.)",
+        "mana_cost": "",
+        "type_line": "Land — Desert",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hou/180/ipnu-rivulet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 17162,
+        "iid": 17256,
+        "name": "Ipnu Rivulet",
+        "handler": "manalinkeh_card_ipnu_rivulet",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Dark Ritual": {
+      "oracle": {
+        "oracle_id": "53f7c868-b03e-4fc2-8dcf-a75bbfa3272b",
+        "name": "Dark Ritual",
+        "oracle_text": "Add {B}{B}{B}.",
+        "mana_cost": "{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/793/dark-ritual?utm_source=api"
+      },
+      "registry": {
+        "csvid": 55,
+        "iid": 2232,
+        "name": "Dark Ritual",
+        "handler": "manalinkeh_card_dark_ritual",
+        "kind": "card"
+      }
+    },
+    "Desert": {
+      "oracle": {
+        "oracle_id": "195107ad-879d-4b02-a44a-a3ba70fedf88",
+        "name": "Desert",
+        "oracle_text": "{T}: Add {C}.\n{T}: This land deals 1 damage to target attacking creature. Activate only during the end of combat step.",
+        "mana_cost": "",
+        "type_line": "Land — Desert",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/afc/233/desert?utm_source=api"
+      },
+      "registry": {
+        "csvid": 407,
+        "iid": 2462,
+        "name": "Desert",
+        "handler": "manalinkeh_card_desert2",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Ornithopter": {
+      "oracle": {
+        "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+        "name": "Ornithopter",
+        "oracle_text": "Flying",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Thopter",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 514,
+        "iid": 6907,
+        "name": "Ornithopter",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Sol Ring": {
+      "oracle": {
+        "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+        "name": "Sol Ring",
+        "oracle_text": "{T}: Add {C}{C}.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+      },
+      "registry": {
+        "csvid": 230,
+        "iid": 8968,
+        "name": "Sol Ring",
+        "handler": "manalinkeh_card_sol_ring",
+        "kind": "card"
+      }
+    },
+    "Squire": {
+      "oracle": {
+        "oracle_id": "aa6cdcc7-f5ea-47bf-9448-1c63e36b18d1",
+        "name": "Squire",
+        "oracle_text": "",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsb/15/squire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 948,
+        "iid": 9275,
+        "name": "Squire",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Watchwolf": {
+      "oracle": {
+        "oracle_id": "a35c2e20-eb90-4132-b65f-be1fcb569819",
+        "name": "Watchwolf",
+        "oracle_text": "",
+        "mana_cost": "{G}{W}",
+        "type_line": "Creature — Wolf",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/a25/220/watchwolf?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1297,
+        "iid": 10854,
+        "name": "Watchwolf",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Wind Drake": {
+      "oracle": {
+        "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+        "name": "Wind Drake",
+        "oracle_text": "Flying",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/70/wind-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1197,
+        "iid": 10989,
+        "name": "Wind Drake",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Witchbane Orb": {
+      "oracle": {
+        "oracle_id": "7411a8f4-b736-482f-886e-5fa671e94e0d",
+        "name": "Witchbane Orb",
+        "oracle_text": "When this artifact enters, destroy all Curses attached to you.\nYou have hexproof. (You can't be the target of spells or abilities your opponents control, including Aura spells.)",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/isd/236/witchbane-orb?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12125,
+        "iid": 11040,
+        "name": "Witchbane Orb",
+        "handler": "manalinkeh_card_witchbane_orb",
+        "kind": "card"
+      }
+    }
+  }
+}

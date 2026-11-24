@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "csvid": 1804,
+  "card": "Icatian Store",
+  "recipes": [
+    {
+      "family": "storage_counter_land",
+      "version": 2,
+      "oracle_text": "This land enters tapped.\nYou may choose not to untap this land during your untap step.\nAt the beginning of your upkeep, if this land is tapped, put a storage counter on it.\n{T}, Remove any number of storage counters from this land: Add {W} for each storage counter removed this way.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "color": "W",
+          "clauses": [
+            "This land enters tapped.",
+            "You may choose not to untap this land during your untap step.",
+            "At the beginning of your upkeep, if this land is tapped, put a storage counter on it.",
+            "{T}, Remove any number of storage counters from this land: Add {W} for each storage counter removed this way."
+          ]
+        }
+      },
+      "variants": [
+        "entry_0",
+        "offturn_play_0",
+        "land_quota_0",
+        "opponent_upkeep_0",
+        "own_upkeep_0",
+        "bank_three_0",
+        "untap_banked_0",
+        "cash_partial_0",
+        "cash_all_0",
+        "cash_zero_0",
+        "cash_cancel_0",
+        "spend_mana_0",
+        "offturn_mana_0",
+        "replay_upkeep_0",
+        "replay_untap_0",
+        "replay_cash_0",
+        "recharge_0",
+        "entry_1",
+        "offturn_play_1",
+        "land_quota_1",
+        "opponent_upkeep_1",
+        "own_upkeep_1",
+        "bank_three_1",
+        "untap_banked_1",
+        "cash_partial_1",
+        "cash_all_1",
+        "cash_zero_1",
+        "cash_cancel_1",
+        "spend_mana_1",
+        "offturn_mana_1",
+        "replay_upkeep_1",
+        "replay_untap_1",
+        "replay_cash_1",
+        "recharge_1",
+        "explicit_early_0",
+        "zero_empty_0"
+      ]
+    }
+  ]
+}

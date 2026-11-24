@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Spellbreaker Behemoth",
+  "csvid": 10352,
+  "recipes": [
+    {
+      "family": "uncounterable_spell_permissions",
+      "version": 2,
+      "oracle_text": "This spell can't be countered.\nCreature spells you control with power 5 or greater can't be countered.",
+      "params": {
+        "model": "power",
+        "cost": [
+          1,
+          0,
+          0,
+          2,
+          1,
+          0
+        ]
+      },
+      "variants": [
+        "intrinsic_0",
+        "intrinsic_replay_0",
+        "intrinsic_decree_0",
+        "source_absent_0",
+        "source_removed_0",
+        "source_entered_0",
+        "paid_power_five_0",
+        "paid_power_four_0",
+        "paid_power_six_0",
+        "paid_opposing_five_0",
+        "paid_instant_0",
+        "decree_power_five_0",
+        "decree_power_four_0",
+        "decree_power_six_0",
+        "decree_opposing_five_0",
+        "decree_instant_0",
+        "intrinsic_1",
+        "intrinsic_replay_1",
+        "intrinsic_decree_1",
+        "source_absent_1",
+        "source_removed_1",
+        "source_entered_1",
+        "paid_power_five_1",
+        "paid_power_four_1",
+        "paid_power_six_1",
+        "paid_opposing_five_1",
+        "paid_instant_1",
+        "decree_power_five_1",
+        "decree_power_four_1",
+        "decree_power_six_1",
+        "decree_opposing_five_1",
+        "decree_instant_1"
+      ]
+    }
+  ]
+}

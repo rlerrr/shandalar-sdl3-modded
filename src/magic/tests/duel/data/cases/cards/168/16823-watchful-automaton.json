@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Watchful Automaton",
+  "csvid": 16823,
+  "recipes": [
+    {
+      "family": "library_scry_activated_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 16823,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{2}{U}: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "variants": [
+        "tapped_scry_0",
+        "tapped_scry_1",
+        "fresh_0",
+        "fresh_1",
+        "short_blue_0",
+        "short_blue_1"
+      ]
+    }
+  ]
+}

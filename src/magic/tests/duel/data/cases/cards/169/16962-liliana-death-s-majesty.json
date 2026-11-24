@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 16962,
+  "card": "Liliana, Death's Majesty",
+  "recipes": [
+    {
+      "family": "mill_remaining_activated_and_loyalty",
+      "version": 2,
+      "params": {
+        "csvid": 16962,
+        "printed_cost": "{3}{B}{B}"
+      },
+      "oracle_text": "+1: Create a 2/2 black Zombie creature token. Mill two cards.\n−3: Return target creature card from your graveyard to the battlefield. That creature is a black Zombie in addition to its other colors and types.\n−7: Destroy all non-Zombie creatures.",
+      "variants": [
+        "token_0",
+        "short_mill_0",
+        "reanimate_0",
+        "wipe_0",
+        "token_1",
+        "short_mill_1",
+        "reanimate_1",
+        "wipe_1"
+      ]
+    }
+  ]
+}

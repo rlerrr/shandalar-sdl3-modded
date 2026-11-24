@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Kessig Malcontents",
+  "csvid": 12406,
+  "recipes": [
+    {
+      "family": "entry_follow_on_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 12406,
+        "cost": "{2}{R}",
+        "choices": [
+          "self_count_0",
+          "self_count_1",
+          "three_humans_0",
+          "three_humans_1",
+          "self_target_0",
+          "self_target_1",
+          "support_lost_0",
+          "support_lost_1",
+          "planeswalker_0",
+          "planeswalker_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, it deals damage to target player or planeswalker equal to the number of Humans you control.",
+      "variants": [
+        "self_count_0",
+        "self_count_1",
+        "three_humans_0",
+        "three_humans_1",
+        "self_target_0",
+        "self_target_1",
+        "support_lost_0",
+        "support_lost_1",
+        "planeswalker_0",
+        "planeswalker_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 10753,
+  "card": "Deathforge Shaman",
+  "recipes": [
+    {
+      "family": "kicker_variable_and_multikicker",
+      "version": 2,
+      "oracle_text": "Multikicker {R} (You may pay an additional {R} any number of times as you cast this spell.)\nWhen this creature enters, it deals damage to target player or planeswalker equal to twice the number of times it was kicked.",
+      "params": {
+        "effect": "damage",
+        "kicker_cost": "{R}",
+        "base_cost": "{4}{R}",
+        "csvid": 10753
+      },
+      "variants": [
+        "declined_0",
+        "paid_0",
+        "once_0",
+        "short_base_0",
+        "countered_0",
+        "replay_0",
+        "declined_1",
+        "paid_1",
+        "once_1",
+        "short_base_1",
+        "countered_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

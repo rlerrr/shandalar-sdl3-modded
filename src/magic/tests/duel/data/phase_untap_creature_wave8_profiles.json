@@ -1,0 +1,740 @@
+{
+  "version": 1,
+  "sources": {
+    "Breezekeeper": {
+      "oracle": {
+        "oracle_id": "138439ad-76c6-4d75-8025-e68b94f68fa3",
+        "name": "Breezekeeper",
+        "oracle_text": "Flying\nPhasing (This phases in or out before you untap during each of your untap steps. While it's phased out, it's treated as though it doesn't exist.)",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Djinn",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Phasing"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vis/27/breezekeeper?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2677,
+        "iid": 1321,
+        "name": "Breezekeeper",
+        "handler": "manalinkeh_card_breezekeeper",
+        "kind": "card"
+      }
+    },
+    "Teferi's Drake": {
+      "oracle": {
+        "oracle_id": "3605c5ac-3b35-41a5-9266-286fb1d11716",
+        "name": "Teferi's Drake",
+        "oracle_text": "Flying\nPhasing (This phases in or out before you untap during each of your untap steps. While it's phased out, it's treated as though it doesn't exist.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Drake",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Phasing"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/97/teferis-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2629,
+        "iid": 9735,
+        "name": "Teferi's Drake",
+        "handler": "manalinkeh_card_sandbar_crocodile",
+        "kind": "card"
+      }
+    },
+    "Tolarian Drake": {
+      "oracle": {
+        "oracle_id": "d999f2a3-5cb4-4f12-a79a-c5db0a300620",
+        "name": "Tolarian Drake",
+        "oracle_text": "Flying\nPhasing (This phases in or out before you untap during each of your untap steps. While it's phased out, it's treated as though it doesn't exist.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Phasing"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/55/tolarian-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3055,
+        "iid": 15124,
+        "name": "Tolarian Drake",
+        "handler": "manalinkeh_card_sandbar_crocodile",
+        "kind": "card"
+      }
+    },
+    "Sandbar Crocodile": {
+      "oracle": {
+        "oracle_id": "e11926bf-ca14-4e1e-aca5-9ffedb91868c",
+        "name": "Sandbar Crocodile",
+        "oracle_text": "Phasing (This phases in or out before you untap during each of your untap steps. While it's phased out, it's treated as though it doesn't exist.)",
+        "mana_cost": "{4}{U}",
+        "type_line": "Creature — Crocodile",
+        "power": "6",
+        "toughness": "5",
+        "keywords": [
+          "Phasing"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/88/sandbar-crocodile?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2592,
+        "iid": 8215,
+        "name": "Sandbar Crocodile",
+        "handler": "manalinkeh_card_sandbar_crocodile",
+        "kind": "card"
+      }
+    },
+    "Teferi's Imp": {
+      "oracle": {
+        "oracle_id": "e4826967-b2f9-4f32-8411-d243edf41082",
+        "name": "Teferi's Imp",
+        "oracle_text": "Flying\nPhasing (This phases in or out before you untap during each of your untap steps. While it's phased out, it's treated as though it doesn't exist.)\nWhenever this creature phases out, discard a card.\nWhenever this creature phases in, draw a card.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Imp",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Phasing"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/98/teferis-imp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2630,
+        "iid": 9738,
+        "name": "Teferi's Imp",
+        "handler": "manalinkeh_card_sandbar_crocodile",
+        "kind": "card"
+      }
+    },
+    "Merfolk Raiders": {
+      "oracle": {
+        "oracle_id": "19edc98c-edc2-47bf-b2da-00f536d7c158",
+        "name": "Merfolk Raiders",
+        "oracle_text": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)\nPhasing (This phases in or out before you untap during each of your untap steps. While it's phased out, it's treated as though it doesn't exist.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Merfolk Soldier",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Landwalk",
+          "Islandwalk",
+          "Phasing"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/75/merfolk-raiders?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2540,
+        "iid": 13579,
+        "name": "Merfolk Raiders",
+        "handler": "manalinkeh_card_sandbar_crocodile",
+        "kind": "card"
+      }
+    },
+    "Reality Ripple": {
+      "registry": {
+        "csvid": 2578,
+        "iid": 7725,
+        "name": "Reality Ripple",
+        "handler": "manalinkeh_card_reality_ripple",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "504d5c29-7c37-4c31-8549-2a49eeef74c8",
+        "name": "Reality Ripple",
+        "oracle_text": "Target artifact, creature, or land phases out. (While it's phased out, it's treated as though it doesn't exist. It phases in before its controller untaps during their next untap step.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/87/reality-ripple?utm_source=api"
+      }
+    },
+    "Vodalian Illusionist": {
+      "registry": {
+        "csvid": 3065,
+        "iid": 10651,
+        "name": "Vodalian Illusionist",
+        "handler": "manalinkeh_card_vodalian_illusionist",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "ac935639-ba30-4b04-86f6-363527e85a8b",
+        "name": "Vodalian Illusionist",
+        "oracle_text": "{U}{U}, {T}: Target creature phases out. (While it's phased out, it's treated as though it doesn't exist. It phases in before its controller untaps during their next untap step.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Merfolk Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/58/vodalian-illusionist?utm_source=api"
+      }
+    },
+    "Dream Fighter": {
+      "registry": {
+        "csvid": 2456,
+        "iid": 2734,
+        "name": "Dream Fighter",
+        "handler": "manalinkeh_card_dream_fighter",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "ea8d1c55-e045-4a3f-92f0-4ecd86362b97",
+        "name": "Dream Fighter",
+        "oracle_text": "Whenever this creature blocks or becomes blocked by a creature, this creature and that creature phase out. (While they're phased out, they're treated as though they don't exist. Each one phases in before its controller untaps during their next untap step.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/63/dream-fighter?utm_source=api"
+      }
+    },
+    "Teferi's Veil": {
+      "registry": {
+        "csvid": 3048,
+        "iid": 9744,
+        "name": "Teferi's Veil",
+        "handler": "manalinkeh_card_teferis_veil",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "c6db2ea4-954c-443b-9603-c41596555c31",
+        "name": "Teferi's Veil",
+        "oracle_text": "Whenever a creature you control attacks, it phases out at end of combat. (While it's phased out, it's treated as though it doesn't exist. It phases in before you untap during your next untap step.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/53/teferis-veil?utm_source=api"
+      }
+    }
+  },
+  "witnesses": {
+    "Burst of Strength": {
+      "oracle": {
+        "oracle_id": "1ab592fa-adfb-4879-af6c-0204eab323fb",
+        "name": "Burst of Strength",
+        "oracle_text": "Put a +1/+1 counter on target creature and untap it.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/115/burst-of-strength?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12904,
+        "iid": 1417,
+        "name": "Burst of Strength",
+        "handler": "manalinkeh_card_burst_of_strength",
+        "kind": "card"
+      }
+    },
+    "Icy Manipulator": {
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 119,
+        "iid": 4775,
+        "name": "Icy Manipulator",
+        "handler": "manalinkeh_card_icy_manipulator",
+        "kind": "card"
+      }
+    },
+    "Holy Strength": {
+      "oracle": {
+        "oracle_id": "9357de36-f8be-4f49-b2c8-9fe9eaf82b07",
+        "name": "Holy Strength",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +1/+2.",
+        "mana_cost": "{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m11/16/holy-strength?utm_source=api"
+      },
+      "registry": {
+        "csvid": 112,
+        "iid": 4610,
+        "name": "Holy Strength",
+        "handler": "manalinkeh_card_holy_strenght",
+        "kind": "card"
+      }
+    },
+    "Bonesplitter": {
+      "oracle": {
+        "oracle_id": "452e3f5f-ce17-4682-966b-5cc100210aee",
+        "name": "Bonesplitter",
+        "oracle_text": "Equipped creature gets +2/+0.\nEquip {1}",
+        "mana_cost": "{1}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/458/bonesplitter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6627,
+        "iid": 1226,
+        "name": "Bonesplitter",
+        "handler": "manalinkeh_card_bonesplitter",
+        "kind": "card"
+      }
+    },
+    "Soul Warden": {
+      "oracle": {
+        "oracle_id": "f3fad295-1af2-4ecc-8546-b121ad6be27b",
+        "name": "Soul Warden",
+        "oracle_text": "Whenever another creature enters, you gain 1 life.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm3/24/soul-warden?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1557,
+        "iid": 9049,
+        "name": "Soul Warden",
+        "handler": "manalinkeh_card_soul_warden",
+        "kind": "card"
+      }
+    },
+    "Dingus Staff": {
+      "oracle": {
+        "oracle_id": "7127fc35-600c-4397-8c01-5327d3c4944b",
+        "name": "Dingus Staff",
+        "oracle_text": "Whenever a creature dies, this artifact deals 2 damage to that creature's controller.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/149/dingus-staff?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2961,
+        "iid": 2550,
+        "name": "Dingus Staff",
+        "handler": "manalinkeh_card_dingus_staff",
+        "kind": "card"
+      }
+    },
+    "Naturalize": {
+      "oracle": {
+        "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+        "name": "Naturalize",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1096,
+        "iid": 6485,
+        "name": "Naturalize",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Stasis": {
+      "oracle": {
+        "oracle_id": "a8cf1379-0195-4e11-b994-481ef1284245",
+        "name": "Stasis",
+        "oracle_text": "Players skip their untap steps.\nAt the beginning of your upkeep, sacrifice this enchantment unless you pay {U}.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/64/stasis?utm_source=api"
+      },
+      "registry": {
+        "csvid": 233,
+        "iid": 9320,
+        "name": "Stasis",
+        "handler": "manalinkeh_card_stasis",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Mons's Goblin Raiders": {
+      "oracle": {
+        "oracle_id": "a37159df-f6d7-4db6-85de-0ea77f425993",
+        "name": "Mons's Goblin Raiders",
+        "oracle_text": "",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/s00/32/monss-goblin-raiders?utm_source=api"
+      },
+      "registry": {
+        "csvid": 163,
+        "iid": 6293,
+        "name": "Mons's Goblin Raiders",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    }
+  }
+}

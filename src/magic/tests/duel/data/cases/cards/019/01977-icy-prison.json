@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Icy Prison",
+  "csvid": 1977,
+  "recipes": [
+    {
+      "family": "entry_interaction_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 1977,
+        "cost": [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this enchantment enters, exile target creature.\nAt the beginning of your upkeep, sacrifice this enchantment unless any player pays {3}.\nWhen this enchantment leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+      "variants": [
+        "owner_pays_0",
+        "owner_pays_1",
+        "opponent_pays_0",
+        "opponent_pays_1",
+        "both_decline_0",
+        "both_decline_1",
+        "short_mana_0",
+        "short_mana_1",
+        "returned_owner_0",
+        "returned_owner_1",
+        "returned_etb_0",
+        "returned_etb_1"
+      ]
+    }
+  ]
+}

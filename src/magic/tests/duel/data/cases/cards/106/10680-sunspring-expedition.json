@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "card": "Sunspring Expedition",
+  "csvid": 10680,
+  "recipes": [
+    {
+      "family": "landfall_quest_expedition",
+      "version": 2,
+      "params": {
+        "schema": 8,
+        "quest_cost": 3,
+        "effect": {
+          "kind": "life",
+          "amount": 8
+        }
+      },
+      "oracle_text": "Landfall — Whenever a land you control enters, you may put a quest counter on this enchantment.\nRemove three quest counters from this enchantment and sacrifice it: You gain 8 life.",
+      "variants": [
+        "cast_0",
+        "unfunded_0",
+        "threshold_0",
+        "activate_0",
+        "extra_counter_0",
+        "pending_replay_0",
+        "opponent_land_0",
+        "removed_source_0",
+        "cleanup_0",
+        "offturn_0",
+        "low_life_0",
+        "cast_1",
+        "unfunded_1",
+        "threshold_1",
+        "activate_1",
+        "extra_counter_1",
+        "pending_replay_1",
+        "opponent_land_1",
+        "removed_source_1",
+        "cleanup_1",
+        "offturn_1",
+        "low_life_1",
+        "decline_0",
+        "decline_then_pay_0"
+      ]
+    }
+  ]
+}

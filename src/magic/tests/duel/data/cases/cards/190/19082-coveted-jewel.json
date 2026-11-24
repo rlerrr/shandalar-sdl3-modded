@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Coveted Jewel",
+  "csvid": 19082,
+  "recipes": [
+    {
+      "family": "entry_rider_control",
+      "version": 2,
+      "params": {
+        "csvid": 19082,
+        "mana": [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this artifact enters, draw three cards.\n{T}: Add three mana of any one color.\nWhenever one or more creatures an opponent controls attack you and aren't blocked, that player draws three cards and gains control of this artifact. Untap it.",
+      "variants": [
+        "draw_0",
+        "draw_1",
+        "mana_0",
+        "mana_1",
+        "blocked_0",
+        "blocked_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 16408,
+  "card": "Hightide Hermit",
+  "recipes": [
+    {
+      "family": "entry_rider_energy_and_mana",
+      "version": 2,
+      "params": {
+        "csvid": 16408,
+        "printed_cost": "{4}{U}"
+      },
+      "oracle_text": "Defender\nWhen this creature enters, you get {E}{E}{E}{E} (four energy counters).\nPay {E}{E}: This creature can attack this turn as though it didn't have defender.",
+      "variants": [
+        "defender_0",
+        "pay_0",
+        "expiry_0",
+        "countered_0",
+        "defender_1",
+        "pay_1",
+        "expiry_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

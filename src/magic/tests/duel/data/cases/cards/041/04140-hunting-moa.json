@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 4140,
+  "card": "Hunting Moa",
+  "recipes": [
+    {
+      "family": "entry_interaction_counters",
+      "version": 2,
+      "params": {
+        "csvid": 4140,
+        "printed_cost": "{2}{G}"
+      },
+      "oracle_text": "Echo {2}{G} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters or dies, put a +1/+1 counter on target creature.",
+      "variants": [
+        "own_entry_0",
+        "foe_entry_0",
+        "destroy_0",
+        "echo_pay_0",
+        "echo_decline_0",
+        "echo_short_0",
+        "countered_0",
+        "own_entry_1",
+        "foe_entry_1",
+        "destroy_1",
+        "echo_pay_1",
+        "echo_decline_1",
+        "echo_short_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

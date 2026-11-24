@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Frontier Siege",
+  "csvid": 14555,
+  "recipes": [
+    {
+      "family": "fight_triggered_sources",
+      "version": 2,
+      "params": {
+        "csvid": 14555,
+        "mana": [
+          3,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "rules": "As this enchantment enters, choose Khans or Dragons.\n• Khans — At the beginning of each of your main phases, add {G}{G}.\n• Dragons — Whenever a creature you control with flying enters, you may have it fight target creature you don't control."
+      },
+      "oracle_text": "As this enchantment enters, choose Khans or Dragons.\n• Khans — At the beginning of each of your main phases, add {G}{G}.\n• Dragons — Whenever a creature you control with flying enters, you may have it fight target creature you don't control.",
+      "variants": [
+        "dragon_entry_0",
+        "dragon_entry_1",
+        "dragon_decline_0",
+        "dragon_decline_1",
+        "khans_entry_0",
+        "khans_entry_1",
+        "enemy_flier_0",
+        "enemy_flier_1"
+      ]
+    }
+  ]
+}

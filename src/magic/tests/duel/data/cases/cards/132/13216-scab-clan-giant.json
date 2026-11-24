@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "csvid": 13216,
+  "card": "Scab-Clan Giant",
+  "recipes": [
+    {
+      "family": "fight_entry_fighters",
+      "version": 2,
+      "params": {
+        "csvid": 13216,
+        "mana": [
+          4,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "stats": [
+          4,
+          5
+        ]
+      },
+      "oracle_text": "When this creature enters, it fights target creature an opponent controls chosen at random.",
+      "variants": [
+        "single_durable_0",
+        "single_durable_1",
+        "displaced_slot_0",
+        "displaced_slot_1",
+        "backlash_0",
+        "backlash_1",
+        "no_eligible_0",
+        "no_eligible_1"
+      ]
+    }
+  ]
+}

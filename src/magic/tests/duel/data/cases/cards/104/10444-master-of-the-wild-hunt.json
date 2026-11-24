@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Master of the Wild Hunt",
+  "csvid": 10444,
+  "recipes": [
+    {
+      "family": "upkeep_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 10444,
+        "mana_cost": "{2}{G}{G}"
+      },
+      "oracle_text": "At the beginning of your upkeep, create a 2/2 green Wolf creature token.\n{T}: Tap all untapped Wolf creatures you control. Each Wolf tapped this way deals damage equal to its power to target creature. That creature deals damage equal to its power divided as its controller chooses among any number of those Wolves.",
+      "variants": [
+        "pack_0",
+        "pack_1",
+        "single_wolf_0",
+        "single_wolf_1",
+        "tapped_wolf_0",
+        "tapped_wolf_1"
+      ]
+    }
+  ]
+}

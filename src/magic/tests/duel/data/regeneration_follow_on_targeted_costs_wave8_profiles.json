@@ -1,0 +1,708 @@
+{
+  "sources": {
+    "Draconian Cylix": {
+      "oracle": {
+        "oracle_id": "0880b36a-6141-4955-b532-cf88daca0869",
+        "name": "Draconian Cylix",
+        "oracle_text": "{2}, {T}, Discard a card at random: Regenerate target creature.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fem/86/draconian-cylix?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1762,
+        "iid": 2665,
+        "name": "Draconian Cylix",
+        "handler": "manalinkeh_card_draconian_cylix",
+        "kind": "card"
+      }
+    },
+    "Goblin Chirurgeon": {
+      "oracle": {
+        "oracle_id": "ea55db87-a5c3-49f7-b968-77510cdeb469",
+        "name": "Goblin Chirurgeon",
+        "oracle_text": "Sacrifice a Goblin: Regenerate target creature.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin Shaman",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me1/94/goblin-chirurgeon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1781,
+        "iid": 3994,
+        "name": "Goblin Chirurgeon",
+        "handler": "manalinkeh_card_goblin_chirurgeon",
+        "kind": "card"
+      }
+    },
+    "Rushwood Herbalist": {
+      "oracle": {
+        "oracle_id": "2e35bcef-505a-4559-a1fe-f42f4543197f",
+        "name": "Rushwood Herbalist",
+        "oracle_text": "{G}, {T}, Discard a card: Regenerate target creature.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Human Spellshaper",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/265/rushwood-herbalist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4584,
+        "iid": 8137,
+        "name": "Rushwood Herbalist",
+        "handler": "manalinkeh_card_rushwood_herbalist",
+        "kind": "card"
+      }
+    },
+    "Tel-Jilad Lifebreather": {
+      "oracle": {
+        "oracle_id": "1ef49064-eb2a-49ae-917e-3d441ba14bf9",
+        "name": "Tel-Jilad Lifebreather",
+        "oracle_text": "{G}, {T}, Sacrifice a Forest: Regenerate target creature.",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Troll Shaman",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5dn/96/tel-jilad-lifebreather?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7139,
+        "iid": 15031,
+        "name": "Tel-Jilad Lifebreather",
+        "handler": "manalinkeh_card_village_elder",
+        "kind": "card"
+      }
+    },
+    "Village Elder": {
+      "oracle": {
+        "oracle_id": "adea6cb4-1e74-4137-9c80-1dde004a6b26",
+        "name": "Village Elder",
+        "oracle_text": "{G}, {T}, Sacrifice a Forest: Regenerate target creature.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Human Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/251/village-elder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2652,
+        "iid": 10597,
+        "name": "Village Elder",
+        "handler": "manalinkeh_card_village_elder",
+        "kind": "card"
+      }
+    },
+    "Baron Sengir": {
+      "oracle": {
+        "oracle_id": "fc728cd7-2b5b-45f3-896a-a45648bcb61d",
+        "name": "Baron Sengir",
+        "oracle_text": "Flying\nWhenever a creature dealt damage by Baron Sengir this turn dies, put a +2/+2 counter on Baron Sengir.\n{T}: Regenerate another target Vampire.",
+        "mana_cost": "{5}{B}{B}{B}",
+        "type_line": "Legendary Creature — Vampire Noble",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me1/58/baron-sengir?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1632,
+        "iid": 870,
+        "name": "Baron Sengir",
+        "handler": "manalinkeh_card_baron_sengir",
+        "kind": "card"
+      }
+    },
+    "Nurturing Licid": {
+      "oracle": {
+        "oracle_id": "537a7af1-2b7e-4828-b645-7e34e86058d5",
+        "name": "Nurturing Licid",
+        "oracle_text": "{G}, {T}: This creature loses this ability and becomes an Aura enchantment with enchant creature. Attach it to target creature. You may pay {G} to end this effect.\n{G}: Regenerate enchanted creature.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Licid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tmp/242/nurturing-licid?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3217,
+        "iid": 6719,
+        "name": "Nurturing Licid",
+        "handler": "manalinkeh_card_nurturing_licid",
+        "kind": "card"
+      }
+    },
+    "Delif's Cube": {
+      "oracle": {
+        "oracle_id": "3106ba15-08d7-474c-a384-6848b713ba8d",
+        "name": "Delif's Cube",
+        "oracle_text": "{2}, {T}: This turn, when target creature you control attacks and isn't blocked, it assigns no combat damage this turn and you put a cube counter on this artifact.\n{2}, Remove a cube counter from this artifact: Regenerate target creature.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fem/85/delifs-cube?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1760,
+        "iid": 2413,
+        "name": "Delif's Cube",
+        "handler": "manalinkeh_card_delifs_cube",
+        "kind": "card"
+      }
+    },
+    "Life Matrix": {
+      "oracle": {
+        "oracle_id": "0fd1ddc3-65cc-489f-81b9-6c144843fc67",
+        "name": "Life Matrix",
+        "oracle_text": "{4}, {T}: Put a matrix counter on target creature and that creature gains \"Remove a matrix counter from this creature: Regenerate this creature.\" Activate only during your upkeep.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/leg/284/life-matrix?utm_source=api"
+      },
+      "registry": {
+        "csvid": 714,
+        "iid": 5574,
+        "name": "Life Matrix",
+        "handler": "manalinkeh_card_life_matrix",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Angel of Jubilation": {
+      "oracle": {
+        "oracle_id": "36c2fc4c-7d8b-47c2-91c3-e356df60b219",
+        "name": "Angel of Jubilation",
+        "oracle_text": "Flying\nOther nonblack creatures you control get +1/+1.\nPlayers can't pay life or sacrifice creatures to cast spells or activate abilities.",
+        "mana_cost": "{1}{W}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/2/angel-of-jubilation?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12304,
+        "iid": 440,
+        "name": "Angel of Jubilation",
+        "handler": "manalinkeh_card_angel_of_jubilation",
+        "kind": "card"
+      }
+    },
+    "Child of Night": {
+      "oracle": {
+        "oracle_id": "c650a7bc-e350-44a0-a698-d4a233d66156",
+        "name": "Child of Night",
+        "oracle_text": "Lifelink",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Vampire",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Lifelink"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/218/child-of-night?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10398,
+        "iid": 1694,
+        "name": "Child of Night",
+        "handler": "manalinkeh_card_child_of_night",
+        "kind": "card"
+      }
+    },
+    "Chisei, Heart of Oceans": {
+      "oracle": {
+        "oracle_id": "f91407fe-3c3b-4ffc-81de-cb8c5b0fe526",
+        "name": "Chisei, Heart of Oceans",
+        "oracle_text": "Flying\nAt the beginning of your upkeep, sacrifice Chisei unless you remove a counter from a permanent you control.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Legendary Creature — Spirit",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bok/32/chisei-heart-of-oceans?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7451,
+        "iid": 1705,
+        "name": "Chisei, Heart of Oceans",
+        "handler": "manalinkeh_card_chisei_heart_of_oceans",
+        "kind": "card"
+      }
+    },
+    "Dazzling Ramparts": {
+      "oracle": {
+        "oracle_id": "0527fc47-2bfc-4d02-90fa-5a1284f89a0a",
+        "name": "Dazzling Ramparts",
+        "oracle_text": "Defender\n{1}{W}, {T}: Tap target creature.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "7",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/6/dazzling-ramparts?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14247,
+        "iid": 2299,
+        "name": "Dazzling Ramparts",
+        "handler": "manalinkeh_card_dazzling_ramparts",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Millstone": {
+      "oracle": {
+        "oracle_id": "3212e47a-5492-4c50-9d4a-6ea562f1a6e1",
+        "name": "Millstone",
+        "oracle_text": "{2}, {T}: Target player mills two cards.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/242/millstone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 507,
+        "iid": 6116,
+        "name": "Millstone",
+        "handler": "manalinkeh_card_millstone",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Naturalize": {
+      "oracle": {
+        "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+        "name": "Naturalize",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1096,
+        "iid": 6485,
+        "name": "Naturalize",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Rummaging Goblin": {
+      "oracle": {
+        "oracle_id": "2055eb91-ee36-4752-a6dc-581eaef335c8",
+        "name": "Rummaging Goblin",
+        "oracle_text": "{T}, Discard a card: Draw a card.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Goblin Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/198/rummaging-goblin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12612,
+        "iid": 8111,
+        "name": "Rummaging Goblin",
+        "handler": "manalinkeh_card_rummaging_goblin",
+        "kind": "card"
+      }
+    },
+    "Silklash Spider": {
+      "oracle": {
+        "oracle_id": "2d0c73da-ed8c-44fc-abd9-7c344b1f890d",
+        "name": "Silklash Spider",
+        "oracle_text": "Reach\n{X}{G}{G}: This creature deals X damage to each creature with flying.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "7",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cma/145/silklash-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6262,
+        "iid": 8743,
+        "name": "Silklash Spider",
+        "handler": "manalinkeh_card_silklash_spider",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Taiga": {
+      "oracle": {
+        "oracle_id": "22e3cf1d-3559-4ce1-954c-8dc815342979",
+        "name": "Taiga",
+        "oracle_text": "({T}: Add {R} or {G}.)",
+        "mana_cost": "",
+        "type_line": "Land — Mountain Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/317/taiga?utm_source=api"
+      },
+      "registry": {
+        "csvid": 241,
+        "iid": 10,
+        "name": "Taiga",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Wastes": {
+      "oracle": {
+        "oracle_id": "05d24b0c-904a-46b6-b42a-96a4d91a0dd4",
+        "name": "Wastes",
+        "oracle_text": "{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Basic Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/191/wastes?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15719,
+        "iid": 15794,
+        "name": "Wastes",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    }
+  }
+}

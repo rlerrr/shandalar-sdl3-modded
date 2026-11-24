@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Nightscape Battlemage",
+  "csvid": 5268,
+  "recipes": [
+    {
+      "family": "kicker_battlemages",
+      "version": 2,
+      "params": {
+        "base": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "kicker": [
+          [
+            2,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "effects": [
+          "bounce2",
+          "destroy_land"
+        ]
+      },
+      "oracle_text": "Kicker {2}{U} and/or {2}{R} (You may pay an additional {2}{U} and/or {2}{R} as you cast this spell.)\nWhen this creature enters, if it was kicked with its {2}{U} kicker, return up to two target nonblack creatures to their owners' hands.\nWhen this creature enters, if it was kicked with its {2}{R} kicker, destroy target land.",
+      "variants": [
+        "normal_0",
+        "normal_1",
+        "first_0",
+        "first_1",
+        "second_0",
+        "second_1",
+        "both_0",
+        "both_1",
+        "base_only_0",
+        "base_only_1",
+        "first_funded_0",
+        "first_funded_1",
+        "second_funded_0",
+        "second_funded_1",
+        "scope_0",
+        "scope_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

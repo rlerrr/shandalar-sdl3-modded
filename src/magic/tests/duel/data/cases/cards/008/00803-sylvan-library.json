@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Sylvan Library",
+  "csvid": 803,
+  "recipes": [
+    {
+      "family": "draw_step_replacement_and_search",
+      "version": 2,
+      "params": {
+        "csvid": 803,
+        "mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "At the beginning of your draw step, you may draw two additional cards. If you do, choose two cards in your hand drawn this turn. For each of those cards, pay 4 life or put the card on top of your library.",
+      "variants": [
+        "extra_draws_0",
+        "extra_draws_1",
+        "pass_draws_0",
+        "pass_draws_1"
+      ]
+    }
+  ]
+}

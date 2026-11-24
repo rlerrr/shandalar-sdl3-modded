@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 5495,
+  "card": "Braids, Cabal Minion",
+  "recipes": [
+    {
+      "family": "upkeep_payment_and_sacrifice",
+      "version": 2,
+      "params": {
+        "csvid": 5495,
+        "printed_cost": "{2}{B}{B}",
+        "keywords": []
+      },
+      "oracle_text": "At the beginning of each player's upkeep, that player sacrifices an artifact, creature, or land of their choice.",
+      "variants": [
+        "artifact_0",
+        "artifact_1",
+        "land_0",
+        "land_1",
+        "creature_0",
+        "creature_1",
+        "ineligible_0",
+        "ineligible_1"
+      ]
+    }
+  ]
+}

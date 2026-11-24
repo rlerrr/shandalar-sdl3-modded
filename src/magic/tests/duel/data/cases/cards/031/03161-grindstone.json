@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Grindstone",
+  "csvid": 3161,
+  "recipes": [
+    {
+      "family": "mill_paid_abilities",
+      "version": 2,
+      "params": {
+        "csvid": 3161,
+        "mana": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{3}, {T}: Target player mills two cards. If two cards that share a color were milled this way, repeat this process.",
+      "variants": [
+        "run_0",
+        "run_1",
+        "self_run_0",
+        "self_run_1",
+        "disjoint_0",
+        "disjoint_1",
+        "colorless_0",
+        "colorless_1",
+        "short_cost_0",
+        "short_cost_1",
+        "tapped_0",
+        "tapped_1"
+      ]
+    }
+  ]
+}

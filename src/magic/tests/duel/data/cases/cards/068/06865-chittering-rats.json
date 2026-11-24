@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Chittering Rats",
+  "csvid": 6865,
+  "recipes": [
+    {
+      "family": "entry_rider_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 6865,
+        "printed_mana": "{1}{B}{B}",
+        "rules": "When this creature enters, target opponent puts a card from their hand on top of their library."
+      },
+      "oracle_text": "When this creature enters, target opponent puts a card from their hand on top of their library.",
+      "variants": [
+        "selected_top_0",
+        "selected_top_1",
+        "empty_hand_0",
+        "empty_hand_1"
+      ]
+    }
+  ]
+}

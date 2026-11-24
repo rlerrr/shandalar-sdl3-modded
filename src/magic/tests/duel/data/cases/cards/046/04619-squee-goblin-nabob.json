@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Squee, Goblin Nabob",
+  "csvid": 4619,
+  "recipes": [
+    {
+      "family": "upkeep_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 4619,
+        "cost": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "At the beginning of your upkeep, you may return this card from your graveyard to your hand.",
+      "variants": [
+        "returns_0",
+        "returns_1",
+        "decline_0",
+        "foe_upkeep_0",
+        "foe_upkeep_1",
+        "actual_death_0",
+        "actual_death_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Decimator Web",
+  "csvid": 11438,
+  "recipes": [
+    {
+      "family": "mill_paid_abilities",
+      "version": 2,
+      "params": {
+        "csvid": 11438,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{4}, {T}: Target opponent loses 2 life, gets a poison counter, then mills six cards.",
+      "variants": [
+        "six_0",
+        "six_1",
+        "short_0",
+        "short_1",
+        "empty_0",
+        "empty_1",
+        "short_cost_0",
+        "short_cost_1",
+        "player_ward_0",
+        "player_ward_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 18958,
+  "card": "Liliana, Untouched by Death",
+  "recipes": [
+    {
+      "family": "mill_remaining_activated_and_loyalty",
+      "version": 2,
+      "params": {
+        "csvid": 18958,
+        "printed_cost": "{2}{B}{B}"
+      },
+      "oracle_text": "+1: Mill three cards. If at least one Zombie card is milled this way, each opponent loses 2 life and you gain 2 life.\n−2: Target creature gets -X/-X until end of turn, where X is the number of Zombies you control.\n−3: You may cast Zombie spells from your graveyard this turn.",
+      "variants": [
+        "drain_0",
+        "miss_0",
+        "shrink_0",
+        "permission_0",
+        "drain_1",
+        "miss_1",
+        "shrink_1",
+        "permission_1"
+      ]
+    }
+  ]
+}

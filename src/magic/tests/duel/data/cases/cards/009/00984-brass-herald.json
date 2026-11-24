@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Brass Herald",
+  "csvid": 984,
+  "recipes": [
+    {
+      "family": "entry_rider_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 984,
+        "printed_mana": "{6}",
+        "rules": "As this creature enters, choose a creature type.\nWhen this creature enters, reveal the top four cards of your library. Put all creature cards of the chosen type revealed this way into your hand and the rest on the bottom of your library in any order.\nCreatures of the chosen type get +1/+1."
+      },
+      "oracle_text": "As this creature enters, choose a creature type.\nWhen this creature enters, reveal the top four cards of your library. Put all creature cards of the chosen type revealed this way into your hand and the rest on the bottom of your library in any order.\nCreatures of the chosen type get +1/+1.",
+      "variants": [
+        "choose_bear_0",
+        "choose_bear_1",
+        "anthem_removed_0",
+        "anthem_removed_1"
+      ]
+    }
+  ]
+}

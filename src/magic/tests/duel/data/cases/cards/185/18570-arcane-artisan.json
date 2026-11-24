@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Arcane Artisan",
+  "csvid": 18570,
+  "recipes": [
+    {
+      "family": "departure_linked_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 18570
+      },
+      "oracle_text": "{2}{U}, {T}: Target player draws a card, then exiles a card from their hand. If a creature card is exiled this way, that player creates a token that's a copy of that card.\nWhen this creature leaves the battlefield, exile all tokens created with it at the beginning of the next end step.",
+      "variants": [
+        "delayed_own_0",
+        "delayed_own_1",
+        "delayed_foreign_0",
+        "delayed_foreign_1",
+        "noncreature_0",
+        "noncreature_1"
+      ]
+    }
+  ]
+}

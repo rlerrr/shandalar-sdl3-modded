@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Primordial Ooze",
+  "csvid": 747,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "mandatory_attack_lifecycle_riders",
+      "version": 2,
+      "oracle_text": "This creature attacks each combat if able.\nAt the beginning of your upkeep, put a +1/+1 counter on this creature. Then you may pay {X}, where X is the number of +1/+1 counters on it. If you don't, tap this creature and it deals X damage to you.",
+      "params": {
+        "mode": "ooze",
+        "costs": {
+          "printed": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        "power": 1,
+        "toughness": 1,
+        "keywords": [],
+        "quantity": 0
+      },
+      "variants": [
+        "omitted_0",
+        "omitted_1",
+        "tapped_0",
+        "tapped_1",
+        "sick_0",
+        "sick_1",
+        "pacified_0",
+        "pacified_1",
+        "opponent_turn_0",
+        "opponent_turn_1",
+        "paid_fresh_0",
+        "paid_fresh_1",
+        "unfunded_0",
+        "unfunded_1",
+        "replay_0",
+        "replay_1",
+        "upkeep_pay_0",
+        "upkeep_pay_1",
+        "upkeep_cancel_0",
+        "upkeep_scaled_0",
+        "upkeep_scaled_1",
+        "upkeep_opponent_0",
+        "upkeep_opponent_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Illusionary Terrain",
+  "csvid": 1980,
+  "recipes": [
+    {
+      "family": "cumulative_upkeep_continuous_and_activated",
+      "version": 2,
+      "params": {
+        "csvid": 1980,
+        "cast": [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "upkeep": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Cumulative upkeep {2} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nAs this enchantment enters, choose two basic land types.\nBasic lands of the first chosen type are the second chosen type.",
+      "variants": [
+        "terrain_conversion_0",
+        "terrain_conversion_1",
+        "terrain_expiry_0",
+        "terrain_expiry_1",
+        "terrain_identity_0",
+        "terrain_identity_1"
+      ]
+    }
+  ]
+}

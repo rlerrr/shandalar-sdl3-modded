@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Servant of Tymaret",
+  "csvid": 13800,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_grants_and_modes",
+      "version": 2,
+      "params": {
+        "csvid": 13800,
+        "mana": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Inspired — Whenever this creature becomes untapped, each opponent loses 1 life. You gain life equal to the life lost this way.\n{2}{B}: Regenerate this creature.",
+      "variants": [
+        "inspired_attack_0",
+        "inspired_attack_1",
+        "stayed_untapped_0",
+        "stayed_untapped_1",
+        "regen_then_untap_0",
+        "regen_then_untap_1",
+        "wrong_color_0",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

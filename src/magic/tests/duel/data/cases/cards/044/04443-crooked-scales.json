@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 4443,
+  "card": "Crooked Scales",
+  "recipes": [
+    {
+      "family": "coin_flip_activated_outcomes",
+      "version": 2,
+      "params": {
+        "csvid": 4443,
+        "printed_cost": "{4}"
+      },
+      "oracle_text": "{4}, {T}: Flip a coin. If you win the flip, destroy target creature an opponent controls. If you lose the flip, destroy target creature you control unless you pay {3} and repeat this process.",
+      "variants": [
+        "win_0",
+        "lose_0",
+        "pay_retry_0",
+        "decline_retry_0",
+        "short_0",
+        "replay_0",
+        "win_1",
+        "lose_1",
+        "pay_retry_1",
+        "decline_retry_1",
+        "short_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

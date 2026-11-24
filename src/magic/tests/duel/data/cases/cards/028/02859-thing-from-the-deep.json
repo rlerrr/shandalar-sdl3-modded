@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Thing from the Deep",
+  "csvid": 2859,
+  "recipes": [
+    {
+      "family": "attack_trigger_costs_and_damage",
+      "version": 2,
+      "params": {
+        "csvid": 2859,
+        "printed_mana": "{6}{U}{U}{U}",
+        "rules": "Whenever this creature attacks, sacrifice it unless you sacrifice an Island."
+      },
+      "oracle_text": "Whenever this creature attacks, sacrifice it unless you sacrifice an Island.",
+      "variants": [
+        "island_0",
+        "island_1",
+        "wrong_land_0",
+        "wrong_land_1",
+        "blocking_only_0",
+        "blocking_only_1"
+      ]
+    }
+  ]
+}

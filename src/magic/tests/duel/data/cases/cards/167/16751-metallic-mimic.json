@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Metallic Mimic",
+  "csvid": 16751,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "chosen_type_effects",
+      "version": 2,
+      "oracle_text": "As this creature enters, choose a creature type.\nThis creature is the chosen type in addition to its other types.\nEach other creature you control of the chosen type enters with an additional +1/+1 counter on it.",
+      "params": {
+        "mode": "mimic",
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "goblins_0",
+        "goblins_1",
+        "angels_0",
+        "angels_1",
+        "short_0",
+        "short_1",
+        "source_removed_0",
+        "source_removed_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "late_match_0",
+        "late_match_1",
+        "opposing_entry_0",
+        "opposing_entry_1",
+        "nonmatching_entry_0",
+        "nonmatching_entry_1",
+        "countered_match_0",
+        "countered_match_1",
+        "original_type_0",
+        "original_type_1"
+      ]
+    }
+  ]
+}

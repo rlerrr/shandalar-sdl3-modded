@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Desperate Sentry",
+  "csvid": 16075,
+  "recipes": [
+    {
+      "family": "delirium_tokens_and_board",
+      "version": 2,
+      "params": {
+        "csvid": 16075,
+        "branch": "sentry",
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "When this creature dies, create a 3/2 colorless Eldrazi Horror creature token.\nDelirium — This creature gets +3/+0 as long as there are four or more card types among cards in your graveyard.",
+      "variants": [
+        "three_duplicates_0",
+        "three_duplicates_1",
+        "four_types_0",
+        "four_types_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "exiled_0",
+        "exiled_1",
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "countered_0",
+        "countered_1",
+        "gain_fourth_0",
+        "gain_fourth_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

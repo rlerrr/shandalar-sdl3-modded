@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Wandering Graybeard",
+  "csvid": 9457,
+  "recipes": [
+    {
+      "family": "library_kinship_upkeep",
+      "version": 2,
+      "params": {
+        "csvid": 9457,
+        "printed_mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "rules": "Kinship — At the beginning of your upkeep, you may look at the top card of your library. If it shares a creature type with this creature, you may reveal it. If you do, you gain 4 life."
+      },
+      "oracle_text": "Kinship — At the beginning of your upkeep, you may look at the top card of your library. If it shares a creature type with this creature, you may reveal it. If you do, you gain 4 life.",
+      "variants": [
+        "gain_four_0",
+        "gain_four_1",
+        "nonmatch_0",
+        "nonmatch_1",
+        "decline_reveal_0"
+      ]
+    }
+  ]
+}

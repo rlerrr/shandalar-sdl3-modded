@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Equipoise",
+  "csvid": 2699,
+  "recipes": [
+    {
+      "family": "upkeep_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 2699,
+        "cost": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "At the beginning of your upkeep, for each land target player controls in excess of the number you control, choose a land that player controls, then the chosen permanents phase out. Repeat this process for artifacts and creatures. (While they're phased out, they're treated as though they don't exist. They phase in before that player untaps during their next untap step.)",
+      "variants": [
+        "three_types_0",
+        "three_types_1",
+        "phase_in_0",
+        "phase_in_1",
+        "equal_0",
+        "equal_1",
+        "indirect_aura_0",
+        "indirect_aura_1",
+        "foe_shroud_0",
+        "foe_shroud_1",
+        "foe_upkeep_0",
+        "foe_upkeep_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "csvid": 6893,
+  "card": "Furnace Dragon",
+  "recipes": [
+    {
+      "family": "artifact_discount_composition",
+      "version": 2,
+      "oracle_text": "Affinity for artifacts (This spell costs {1} less to cast for each artifact you control.)\nFlying\nWhen this creature enters, if you cast it from your hand, exile all artifacts.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "printed": [
+            6,
+            0,
+            0,
+            0,
+            3,
+            0
+          ],
+          "role": "hand_exile",
+          "clauses": [
+            "Affinity for artifacts (This spell costs {1} less to cast for each artifact you control.)",
+            "Flying",
+            "When this creature enters, if you cast it from your hand, exile all artifacts."
+          ],
+          "artifact": false,
+          "power": 5,
+          "toughness": 5
+        }
+      },
+      "variants": [
+        "full_price_0",
+        "full_price_1",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "paid_replay_0",
+        "paid_replay_1",
+        "own_exact_0",
+        "own_exact_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "nonartifact_only_0",
+        "nonartifact_only_1",
+        "off_battlefield_0",
+        "off_battlefield_1",
+        "artifact_land_0",
+        "artifact_land_1",
+        "zero_generic_0",
+        "zero_generic_1",
+        "mixed_exile_0",
+        "mixed_exile_1",
+        "wrong_colored_floor_0",
+        "wrong_colored_floor_1",
+        "reanimate_0",
+        "reanimate_1",
+        "blink_0",
+        "blink_1",
+        "cast_from_exile_0",
+        "cast_from_exile_1",
+        "exile_permission_replay_0",
+        "exile_permission_replay_1",
+        "flying_evasion_0",
+        "flying_evasion_1",
+        "flying_reach_0",
+        "flying_reach_1",
+        "blocks_flight_0",
+        "blocks_flight_1",
+        "exile_origin_surplus_0",
+        "exile_origin_surplus_1"
+      ]
+    }
+  ]
+}

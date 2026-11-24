@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "card": "Skylasher",
+  "csvid": 13224,
+  "recipes": [
+    {
+      "family": "uncounterable_creature_casts",
+      "version": 2,
+      "oracle_text": "Flash\nThis spell can't be countered.\nReach, protection from blue",
+      "params": {
+        "model": "flash_reach",
+        "cost": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "protection": [
+          "blue"
+        ],
+        "trample": false,
+        "flash": true
+      },
+      "variants": [
+        "cast_0",
+        "short_0",
+        "counter_0",
+        "exclude_0",
+        "ordinary_counter_0",
+        "ordinary_exclude_0",
+        "replay_0",
+        "target_blue_0",
+        "target_black_0",
+        "target_green_0",
+        "block_blue_0",
+        "block_black_0",
+        "block_green_0",
+        "damage_blue_0",
+        "damage_black_0",
+        "damage_green_0",
+        "aura_blue_0",
+        "aura_black_0",
+        "flash_response_0",
+        "flash_reach_0",
+        "reach_0",
+        "cast_1",
+        "short_1",
+        "counter_1",
+        "exclude_1",
+        "ordinary_counter_1",
+        "ordinary_exclude_1",
+        "replay_1",
+        "target_blue_1",
+        "target_black_1",
+        "target_green_1",
+        "block_blue_1",
+        "block_black_1",
+        "block_green_1",
+        "damage_blue_1",
+        "damage_black_1",
+        "damage_green_1",
+        "aura_blue_1",
+        "aura_black_1",
+        "flash_response_1",
+        "flash_reach_1",
+        "reach_1"
+      ]
+    }
+  ]
+}

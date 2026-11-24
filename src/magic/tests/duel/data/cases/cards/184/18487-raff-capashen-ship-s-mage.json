@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "csvid": 18487,
+  "card": "Raff Capashen, Ship's Mage",
+  "recipes": [
+    {
+      "family": "flash_remaining_casting_and_counterability",
+      "version": 2,
+      "params": {
+        "csvid": 18487,
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "stats": [
+          3,
+          3
+        ]
+      },
+      "oracle_text": "Flash\nFlying\nYou may cast historic spells as though they had flash. (Artifacts, legendaries, and Sagas are historic.)",
+      "variants": [
+        "artifact_0",
+        "artifact_1",
+        "legendary_0",
+        "legendary_1",
+        "saga_0",
+        "saga_1",
+        "wrong_type_0",
+        "wrong_type_1",
+        "foreign_hand_0",
+        "foreign_hand_1",
+        "removed_0",
+        "removed_1"
+      ]
+    }
+  ]
+}

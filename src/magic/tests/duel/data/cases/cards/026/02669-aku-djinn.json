@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 2669,
+  "card": "Aku Djinn",
+  "recipes": [
+    {
+      "family": "upkeep_counters",
+      "version": 2,
+      "params": {
+        "csvid": 2669,
+        "printed_cost": "{3}{B}{B}"
+      },
+      "oracle_text": "Trample\nAt the beginning of your upkeep, put a +1/+1 counter on each creature each opponent controls.",
+      "variants": [
+        "both_turns_0",
+        "repeated_0",
+        "empty_0",
+        "trample_0",
+        "removed_0",
+        "countered_0",
+        "both_turns_1",
+        "repeated_1",
+        "empty_1",
+        "trample_1",
+        "removed_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "card": "Portent",
+  "csvid": 2068,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "next_upkeep_cantrip_riders",
+      "version": 2,
+      "oracle_text": "Look at the top three cards of target player's library, then put them back in any order. You may have that player shuffle.\nDraw a card at the beginning of the next turn's upkeep.",
+      "params": {
+        "mode": "order",
+        "instant": false,
+        "cost": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "effect_0",
+        "effect_1",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "repeat_0",
+        "repeat_1",
+        "self_order_0",
+        "self_order_1",
+        "shuffle_0",
+        "shuffle_1",
+        "short_target_0",
+        "short_target_1",
+        "empty_target_0",
+        "empty_target_1"
+      ]
+    }
+  ]
+}

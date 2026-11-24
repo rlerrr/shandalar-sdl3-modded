@@ -1,0 +1,496 @@
+{
+  "sources": {
+    "Furnace Dragon": {
+      "csvid": 6893,
+      "handler": "manalinkeh_card_furnace_dragon",
+      "oracle": {
+        "oracle_id": "13d92af9-a6e2-4847-b2e9-179fe0cc840e",
+        "name": "Furnace Dragon",
+        "oracle_text": "Affinity for artifacts (This spell costs {1} less to cast for each artifact you control.)\nFlying\nWhen this creature enters, if you cast it from your hand, exile all artifacts.",
+        "mana_cost": "{6}{R}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Affinity"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 9.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dst/62/furnace-dragon?utm_source=api"
+      }
+    },
+    "Mycosynth Golem": {
+      "csvid": 7091,
+      "handler": "manalinkeh_card_mycosynth_golem",
+      "oracle": {
+        "oracle_id": "ebcd864a-b7dd-4330-89e1-80576a9437ec",
+        "name": "Mycosynth Golem",
+        "oracle_text": "Affinity for artifacts (This spell costs {1} less to cast for each artifact you control.)\nArtifact creature spells you cast have affinity for artifacts. (They cost {1} less to cast for each artifact you control.)",
+        "mana_cost": "{11}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Affinity"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 11.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5dn/137/mycosynth-golem?utm_source=api"
+      }
+    },
+    "Etherium Sculptor": {
+      "csvid": 9962,
+      "handler": "manalinkeh_card_etherium_sculptor",
+      "oracle": {
+        "oracle_id": "96b87445-6362-4a17-91b2-cbf203fd03fd",
+        "name": "Etherium Sculptor",
+        "oracle_text": "Artifact spells you cast cost {1} less to cast.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Artifact Creature — Vedalken Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/72/etherium-sculptor?utm_source=api"
+      }
+    },
+    "Foundry Inspector": {
+      "csvid": 16381,
+      "handler": "manalinkeh_card_foundry_inspector",
+      "oracle": {
+        "oracle_id": "18f22960-87ec-43cd-82ea-ec5cabf49ad3",
+        "name": "Foundry Inspector",
+        "oracle_text": "Artifact spells you cast cost {1} less to cast.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/385/foundry-inspector?utm_source=api"
+      }
+    }
+  },
+  "witnesses": {
+    "Act on Impulse": {
+      "csvid": 14063,
+      "handler": "manalinkeh_card_act_on_impulse",
+      "oracle": {
+        "oracle_id": "19ad338a-c89f-406d-ad1a-222c22044e1b",
+        "name": "Act on Impulse",
+        "oracle_text": "Exile the top three cards of your library. Until end of turn, you may play those cards. (If you cast a spell this way, you still pay its costs. You can play a land this way only if you have an available land play remaining.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/126/act-on-impulse?utm_source=api"
+      }
+    },
+    "Cloudshift": {
+      "csvid": 12330,
+      "handler": "manalinkeh_card_cloudshift",
+      "oracle": {
+        "oracle_id": "6879f5ce-7a1b-4606-bad1-885779b0d456",
+        "name": "Cloudshift",
+        "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tle/152/cloudshift?utm_source=api"
+      }
+    },
+    "Counterspell": {
+      "csvid": 48,
+      "handler": "manalinkeh_card_counterspell",
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      }
+    },
+    "Darksteel Citadel": {
+      "csvid": 6870,
+      "handler": "manalinkeh_card_darksteel_citadel",
+      "oracle": {
+        "oracle_id": "8dc067bf-f78f-4ac4-b6e7-b305c42cf0bc",
+        "name": "Darksteel Citadel",
+        "oracle_text": "Indestructible\n{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Artifact Land",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c21/285/darksteel-citadel?utm_source=api"
+      }
+    },
+    "Darksteel Relic": {
+      "csvid": 11586,
+      "handler": "manalinkeh_card_darksteel_myr",
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      }
+    },
+    "Elvish Mystic": {
+      "csvid": 13284,
+      "handler": "manalinkeh_card_elvish_mystic",
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      }
+    },
+    "Forest": {
+      "csvid": 91,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      }
+    },
+    "Golem Artisan": {
+      "csvid": 11269,
+      "handler": "manalinkeh_card_golem_artisan",
+      "oracle": {
+        "oracle_id": "8537fc2c-c027-4440-bff4-d046fc198428",
+        "name": "Golem Artisan",
+        "oracle_text": "{2}: Target artifact creature gets +1/+1 until end of turn.\n{2}: Target artifact creature gains your choice of flying, trample, or haste until end of turn.",
+        "mana_cost": "{5}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/311/golem-artisan?utm_source=api"
+      }
+    },
+    "Island": {
+      "csvid": 126,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      }
+    },
+    "Mind Stone": {
+      "csvid": 3009,
+      "handler": "manalinkeh_card_mind_stone",
+      "oracle": {
+        "oracle_id": "c97361b5-af16-4a7b-af85-a429dbaf4ad2",
+        "name": "Mind Stone",
+        "oracle_text": "{T}: Add {C}.\n{1}, {T}, Sacrifice this artifact: Draw a card.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbc/76/mind-stone?utm_source=api"
+      }
+    },
+    "Myr Enforcer": {
+      "csvid": 1625,
+      "handler": "manalinkeh_card_frogmite",
+      "oracle": {
+        "oracle_id": "2d8e1054-654f-42e8-8c29-12c3cf13a3eb",
+        "name": "Myr Enforcer",
+        "oracle_text": "Affinity for artifacts (This spell costs {1} less to cast for each artifact you control.)",
+        "mana_cost": "{7}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Affinity"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm2/224/myr-enforcer?utm_source=api"
+      }
+    },
+    "Myr Sire": {
+      "csvid": 11487,
+      "handler": "manalinkeh_card_myr_sire",
+      "oracle": {
+        "oracle_id": "25794033-bd17-4056-b116-68d3acf52569",
+        "name": "Myr Sire",
+        "oracle_text": "When this creature dies, create a 1/1 colorless Phyrexian Myr artifact creature token.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Phyrexian Myr",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/400/myr-sire?utm_source=api"
+      }
+    },
+    "Nessian Asp": {
+      "csvid": 13489,
+      "handler": "manalinkeh_card_nessian_asp",
+      "oracle": {
+        "oracle_id": "8b46e077-f667-432f-ab5b-8256a7378311",
+        "name": "Nessian Asp",
+        "oracle_text": "Reach\n{6}{G}: Monstrosity 4. (If this creature isn't monstrous, put four +1/+1 counters on it and it becomes monstrous.)",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Snake",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Reach",
+          "Monstrosity"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cn2/187/nessian-asp?utm_source=api"
+      }
+    },
+    "Renegade Map": {
+      "csvid": 16777,
+      "handler": "manalinkeh_card_renegade_map",
+      "oracle": {
+        "oracle_id": "f8506acb-3fc5-4fdf-8304-586843db6cfd",
+        "name": "Renegade Map",
+        "oracle_text": "This artifact enters tapped.\n{T}, Sacrifice this artifact: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/aer/173/renegade-map?utm_source=api"
+      }
+    },
+    "Sylvan Advocate": {
+      "csvid": 15695,
+      "handler": "manalinkeh_card_sylvan_advocate",
+      "oracle": {
+        "oracle_id": "beaf7a85-426a-4a33-80c8-33ad01614ad3",
+        "name": "Sylvan Advocate",
+        "oracle_text": "Vigilance\nAs long as you control six or more lands, this creature and land creatures you control get +2/+2.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Elf Druid Ally",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Vigilance"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/znc/84/sylvan-advocate?utm_source=api"
+      }
+    },
+    "Tidehollow Strix": {
+      "csvid": 1362,
+      "handler": "manalinkeh_card_deadly_recluse",
+      "oracle": {
+        "oracle_id": "19a39cc5-2134-4dee-932c-81389806c57b",
+        "name": "Tidehollow Strix",
+        "oracle_text": "Flying\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)",
+        "mana_cost": "{U}{B}",
+        "type_line": "Artifact Creature — Bird",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Deathtouch",
+          "Flying"
+        ],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c13/222/tidehollow-strix?utm_source=api"
+      }
+    },
+    "Unsummon": {
+      "csvid": 260,
+      "handler": "manalinkeh_card_unsummon",
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      }
+    },
+    "Welkin Tern": {
+      "csvid": 10709,
+      "handler": "manalinkeh_card_skywinder_drake",
+      "oracle": {
+        "oracle_id": "010c660a-a67b-48f0-a63a-15470eb89f69",
+        "name": "Welkin Tern",
+        "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nThis creature can block only creatures with flying.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Bird",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gs1/5/welkin-tern?utm_source=api"
+      }
+    },
+    "Zombify": {
+      "csvid": 1258,
+      "handler": "manalinkeh_card_breath_of_life",
+      "oracle": {
+        "oracle_id": "bb95db4d-5017-4121-bf79-d68476602d8c",
+        "name": "Zombify",
+        "oracle_text": "Return target creature card from your graveyard to the battlefield.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/187/zombify?utm_source=api"
+      }
+    }
+  }
+}

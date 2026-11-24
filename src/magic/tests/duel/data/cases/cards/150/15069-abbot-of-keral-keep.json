@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "card": "Abbot of Keral Keep",
+  "csvid": 15069,
+  "recipes": [
+    {
+      "family": "play_own_exile_effects",
+      "version": 2,
+      "params": {
+        "model": "prowess",
+        "count": 1,
+        "next_turn": false,
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhen this creature enters, exile the top card of your library. Until end of turn, you may play that card.",
+      "variants": [
+        "grant_0",
+        "empty_0",
+        "play_land_0",
+        "play_spell_0",
+        "wrong_spell_mana_0",
+        "wrong_seat_0",
+        "wrong_card_0",
+        "spent_land_drop_0",
+        "expiry_0",
+        "offturn_land_0",
+        "replay_0",
+        "source_wrong_mana_0",
+        "source_countered_0",
+        "own_cast_0",
+        "own_creature_0",
+        "enemy_cast_0",
+        "blink_0",
+        "grant_1",
+        "empty_1",
+        "play_land_1",
+        "play_spell_1",
+        "wrong_spell_mana_1",
+        "wrong_seat_1",
+        "wrong_card_1",
+        "spent_land_drop_1",
+        "expiry_1",
+        "offturn_land_1",
+        "replay_1",
+        "source_wrong_mana_1",
+        "source_countered_1",
+        "own_cast_1",
+        "own_creature_1",
+        "enemy_cast_1",
+        "blink_1"
+      ]
+    }
+  ]
+}

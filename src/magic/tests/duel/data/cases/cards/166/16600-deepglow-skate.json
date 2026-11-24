@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 16600,
+  "card": "Deepglow Skate",
+  "recipes": [
+    {
+      "family": "entry_interaction_counters",
+      "version": 2,
+      "params": {
+        "csvid": 16600,
+        "printed_cost": "{4}{U}"
+      },
+      "oracle_text": "When this creature enters, double the number of each kind of counter on any number of target permanents.",
+      "variants": [
+        "empty_0",
+        "mixed_0",
+        "multiple_0",
+        "decline_0",
+        "countered_0",
+        "empty_1",
+        "mixed_1",
+        "multiple_1",
+        "decline_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

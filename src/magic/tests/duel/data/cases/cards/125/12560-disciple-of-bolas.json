@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Disciple of Bolas",
+  "csvid": 12560,
+  "recipes": [
+    {
+      "family": "creature_entry_sacrifices",
+      "version": 2,
+      "params": {
+        "mode": "sacrifice_power",
+        "mana": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": [],
+        "power": 2,
+        "toughness": 1
+      },
+      "oracle_text": "When this creature enters, sacrifice another creature. You gain X life and draw X cards, where X is that creature's power.",
+      "variants": [
+        "paid_0",
+        "unavailable_0",
+        "zero_power_0",
+        "boosted_power_0",
+        "countered_0",
+        "wrong_color_0",
+        "snapshot_0",
+        "paid_1",
+        "unavailable_1",
+        "zero_power_1",
+        "boosted_power_1",
+        "countered_1",
+        "wrong_color_1",
+        "snapshot_1",
+        "choose_different_power_0"
+      ]
+    }
+  ]
+}

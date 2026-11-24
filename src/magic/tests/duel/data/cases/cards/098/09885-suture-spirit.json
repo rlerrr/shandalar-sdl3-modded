@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "csvid": 9885,
+  "card": "Suture Spirit",
+  "recipes": [
+    {
+      "family": "regeneration_targeted_abilities",
+      "version": 2,
+      "params": {
+        "csvid": 9885,
+        "mana": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "activation": "{W/B}{W/B}{W/B}",
+        "tap": false,
+        "stats": [
+          1,
+          1
+        ]
+      },
+      "oracle_text": "Flying\n{W/B}{W/B}{W/B}: Regenerate target creature.",
+      "variants": [
+        "white_0",
+        "white_1",
+        "black_0",
+        "black_1",
+        "mixed_0",
+        "mixed_1",
+        "hybrid_menu_0",
+        "foreign_0",
+        "foreign_1",
+        "short_0",
+        "short_1",
+        "proactive_0",
+        "proactive_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

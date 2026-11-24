@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Disinformation Campaign",
+  "csvid": 19340,
+  "recipes": [
+    {
+      "family": "entry_follow_on_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 19340,
+        "printed_mana": "{1}{U}{B}",
+        "rules": "When this enchantment enters, you draw a card and each opponent discards a card.\nWhenever you surveil, return this enchantment to its owner's hand."
+      },
+      "oracle_text": "When this enchantment enters, you draw a card and each opponent discards a card.\nWhenever you surveil, return this enchantment to its owner's hand.",
+      "variants": [
+        "enter_0",
+        "enter_1",
+        "surveil_and_recast_0",
+        "surveil_and_recast_1",
+        "opponent_surveil_0",
+        "opponent_surveil_1"
+      ]
+    }
+  ]
+}

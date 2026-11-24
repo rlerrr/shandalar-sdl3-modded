@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Broodbirth Viper",
+  "csvid": 15502,
+  "recipes": [
+    {
+      "family": "attack_trigger_follow_on_annihilator_and_myriad",
+      "version": 2,
+      "params": {
+        "csvid": 15502,
+        "printed_mana": "{4}{U}",
+        "rules": "Myriad (Whenever this creature attacks, for each opponent other than defending player, you may create a token copy that's tapped and attacking that player or a planeswalker they control. Exile the tokens at end of combat.)\nWhenever this creature deals combat damage to a player, you may draw a card."
+      },
+      "oracle_text": "Myriad (Whenever this creature attacks, for each opponent other than defending player, you may create a token copy that's tapped and attacking that player or a planeswalker they control. Exile the tokens at end of combat.)\nWhenever this creature deals combat damage to a player, you may draw a card.",
+      "variants": [
+        "draw_hit_0",
+        "draw_hit_1",
+        "decline_draw_0",
+        "blocked_0",
+        "blocked_1",
+        "other_attacker_0",
+        "other_attacker_1"
+      ]
+    }
+  ]
+}

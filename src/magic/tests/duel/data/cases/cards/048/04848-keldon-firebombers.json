@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 4848,
+  "card": "Keldon Firebombers",
+  "recipes": [
+    {
+      "family": "entry_rider_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 4848,
+        "printed_cost": "{3}{R}{R}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, each player sacrifices all lands they control except for three.",
+      "variants": [
+        "equal_0",
+        "below_0",
+        "both_choose_0",
+        "mixed_types_0",
+        "equal_1",
+        "below_1",
+        "both_choose_1",
+        "mixed_types_1"
+      ]
+    }
+  ]
+}

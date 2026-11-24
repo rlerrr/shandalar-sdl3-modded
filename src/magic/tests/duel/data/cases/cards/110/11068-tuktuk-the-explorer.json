@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "card": "Tuktuk the Explorer",
+  "csvid": 11068,
+  "recipes": [
+    {
+      "family": "death_fixed_token_creation",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "trigger": "self",
+        "kind": "Creature",
+        "keywords": [
+          "Haste"
+        ],
+        "mana_ability": false,
+        "token": {
+          "name": "Tuktuk the Returned",
+          "count": 1,
+          "power": 5,
+          "toughness": 5,
+          "color": 0,
+          "artifact": true,
+          "subtypes": [
+            "Goblin",
+            "Golem"
+          ],
+          "tapped": false,
+          "legendary": true
+        }
+      },
+      "oracle_text": "Haste\nWhen Tuktuk the Explorer dies, create Tuktuk the Returned, a legendary 5/5 colorless Goblin Golem artifact creature token.",
+      "variants": [
+        "effect_0",
+        "owned_elsewhere_0",
+        "bounce_0",
+        "exile_0",
+        "kill_created_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cast_only_0",
+        "unaffordable_0",
+        "countered_0",
+        "fresh_haste_0",
+        "legend_once_0",
+        "other_death_0",
+        "effect_1",
+        "owned_elsewhere_1",
+        "bounce_1",
+        "exile_1",
+        "kill_created_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cast_only_1",
+        "unaffordable_1",
+        "countered_1",
+        "fresh_haste_1",
+        "legend_once_1",
+        "other_death_1"
+      ]
+    }
+  ]
+}

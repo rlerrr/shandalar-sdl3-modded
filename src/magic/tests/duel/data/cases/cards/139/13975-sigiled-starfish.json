@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Sigiled Starfish",
+  "csvid": 13975,
+  "recipes": [
+    {
+      "family": "library_scry_activated_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 13975,
+        "mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{T}: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "variants": [
+        "bottom_0",
+        "bottom_1",
+        "keep_0",
+        "keep_1",
+        "fresh_sick_0",
+        "fresh_sick_1",
+        "aged_0",
+        "aged_1",
+        "tapped_0",
+        "tapped_1",
+        "empty_0",
+        "empty_1"
+      ]
+    }
+  ]
+}

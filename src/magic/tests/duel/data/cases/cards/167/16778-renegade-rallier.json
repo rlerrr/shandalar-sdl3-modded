@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "card": "Renegade Rallier",
+  "csvid": 16778,
+  "recipes": [
+    {
+      "family": "entry_reanimate_rewards",
+      "version": 2,
+      "params": {
+        "model": "revolt",
+        "cost": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "from_opponent": false,
+        "choice_for_opponent": false,
+        "optional": false,
+        "maximum_mana_value": 2
+      },
+      "oracle_text": "Revolt — When this creature enters, if a permanent left the battlefield under your control this turn, return target permanent card with mana value 2 or less from your graveyard to the battlefield.",
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "empty_0",
+        "wrong_side_0",
+        "wrong_type_0",
+        "shroud_0",
+        "underpaid_0",
+        "countered_0",
+        "replay_0",
+        "artifact_0",
+        "land_0",
+        "no_departure_0",
+        "opponent_departs_0",
+        "prior_turn_0",
+        "stolen_departure_0",
+        "mana_boundary_0",
+        "blink_0",
+        "effect_1",
+        "alternate_1",
+        "empty_1",
+        "wrong_side_1",
+        "wrong_type_1",
+        "shroud_1",
+        "underpaid_1",
+        "countered_1",
+        "replay_1",
+        "artifact_1",
+        "land_1",
+        "no_departure_1",
+        "opponent_departs_1",
+        "prior_turn_1",
+        "stolen_departure_1",
+        "mana_boundary_1",
+        "blink_1"
+      ]
+    }
+  ]
+}

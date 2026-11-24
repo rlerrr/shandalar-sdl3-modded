@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Byway Courier",
+  "csvid": 15761,
+  "recipes": [
+    {
+      "family": "departure_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 15761,
+        "mana_cost": "{2}{G}"
+      },
+      "oracle_text": "When this creature dies, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+      "variants": [
+        "investigate_0",
+        "investigate_1",
+        "crack_0",
+        "crack_1",
+        "bounce_0",
+        "bounce_1"
+      ]
+    }
+  ]
+}

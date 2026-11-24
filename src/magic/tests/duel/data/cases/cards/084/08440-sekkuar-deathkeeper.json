@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "card": "Sek'Kuar, Deathkeeper",
+  "csvid": 8440,
+  "recipes": [
+    {
+      "family": "death_fixed_token_creation",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "trigger": "controlled_another_nontoken",
+        "kind": "Creature",
+        "keywords": [],
+        "mana_ability": false,
+        "token": {
+          "name": "Graveborn",
+          "count": 1,
+          "power": 3,
+          "toughness": 1,
+          "color": 18,
+          "artifact": false,
+          "subtypes": [
+            "Graveborn"
+          ],
+          "tapped": false,
+          "legendary": false,
+          "haste": true
+        }
+      },
+      "oracle_text": "Whenever another nontoken creature you control dies, create a 3/1 black and red Graveborn creature token with haste.",
+      "variants": [
+        "effect_0",
+        "owned_elsewhere_0",
+        "bounce_0",
+        "exile_0",
+        "kill_created_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cast_only_0",
+        "unaffordable_0",
+        "countered_0",
+        "self_death_0",
+        "opponent_death_0",
+        "noncreature_death_0",
+        "source_departed_0",
+        "token_victim_0",
+        "stolen_victim_0",
+        "fresh_token_haste_0",
+        "source_simultaneous_0",
+        "repeated_deaths_0",
+        "effect_1",
+        "owned_elsewhere_1",
+        "bounce_1",
+        "exile_1",
+        "kill_created_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cast_only_1",
+        "unaffordable_1",
+        "countered_1",
+        "self_death_1",
+        "opponent_death_1",
+        "noncreature_death_1",
+        "source_departed_1",
+        "token_victim_1",
+        "stolen_victim_1",
+        "fresh_token_haste_1",
+        "source_simultaneous_1",
+        "repeated_deaths_1"
+      ]
+    }
+  ]
+}

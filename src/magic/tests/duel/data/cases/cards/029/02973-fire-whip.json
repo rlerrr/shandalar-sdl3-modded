@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "card": "Fire Whip",
+  "csvid": 2973,
+  "recipes": [
+    {
+      "family": "additional_damage_auras",
+      "version": 2,
+      "oracle_text": "Enchant creature you control\nEnchanted creature has \"{T}: This creature deals 1 damage to any target.\"\nSacrifice this Aura: It deals 1 damage to any target.",
+      "params": {
+        "effect": "sacrifice",
+        "cast_mana": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "no_creature_0",
+        "no_creature_1",
+        "foreign_gate_0",
+        "foreign_gate_1",
+        "replay_0",
+        "replay_1",
+        "pending_replay_0",
+        "pending_replay_1",
+        "aura_removed_pending_0",
+        "aura_removed_pending_1",
+        "player_0",
+        "player_1",
+        "self_player_0",
+        "self_player_1",
+        "creature_0",
+        "creature_1",
+        "walker_0",
+        "walker_1",
+        "host_lifelink_0",
+        "host_lifelink_1",
+        "source_colors_0",
+        "source_colors_1",
+        "lost_control_0",
+        "lost_control_1",
+        "sacrifice_ready_0",
+        "sacrifice_ready_1",
+        "sacrifice_tapped_0",
+        "sacrifice_tapped_1",
+        "sacrifice_fresh_0",
+        "sacrifice_fresh_1",
+        "sacrifice_after_tap_0",
+        "sacrifice_after_tap_1",
+        "sacrifice_walker_0",
+        "sacrifice_walker_1",
+        "sacrifice_target_leaves_0",
+        "sacrifice_target_leaves_1",
+        "repeat_0",
+        "repeat_1"
+      ]
+    }
+  ]
+}

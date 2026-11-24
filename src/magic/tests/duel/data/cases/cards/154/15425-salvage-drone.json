@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Salvage Drone",
+  "csvid": 15425,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "devoid_zone_and_spell_choices",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\nIngest (Whenever this creature deals combat damage to a player, that player exiles the top card of their library.)\nWhen this creature dies, you may draw a card. If you do, discard a card.",
+      "params": {
+        "model": "loot",
+        "mana": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "kind": "creature"
+      },
+      "variants": [
+        "unblocked_0",
+        "unblocked_1",
+        "blocked_0",
+        "blocked_1",
+        "death_loot_0",
+        "death_loot_1",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

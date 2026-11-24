@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Goblin Guide",
+  "csvid": 10547,
+  "recipes": [
+    {
+      "family": "attack_trigger_zones_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 10547,
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Haste\nWhenever this creature attacks, defending player reveals the top card of their library. If it's a land card, that player puts it into their hand.",
+      "variants": [
+        "land_0",
+        "land_1",
+        "nonland_0",
+        "nonland_1",
+        "empty_0",
+        "empty_1",
+        "repeat_0",
+        "repeat_1",
+        "other_attacks_0",
+        "other_attacks_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 8659,
+  "card": "Scryb Ranger",
+  "recipes": [
+    {
+      "family": "flash_remaining_combat_and_activated",
+      "version": 2,
+      "params": {
+        "csvid": 8659,
+        "printed_cost": "{1}{G}"
+      },
+      "oracle_text": "Flash\nFlying, protection from blue\nReturn a Forest you control to its owner's hand: Untap target creature. Activate only once each turn.",
+      "variants": [
+        "foreign_untap_0",
+        "same_turn_0",
+        "reset_0",
+        "protected_flight_0",
+        "wrong_land_0",
+        "foreign_untap_1",
+        "same_turn_1",
+        "reset_1",
+        "protected_flight_1",
+        "wrong_land_1"
+      ]
+    }
+  ]
+}

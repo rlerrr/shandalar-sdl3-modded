@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Trial of Solidarity",
+  "csvid": 17052,
+  "recipes": [
+    {
+      "family": "entry_interaction_combat",
+      "version": 2,
+      "params": {
+        "csvid": 17052,
+        "cost": "{2}{W}",
+        "choices": [
+          "vigilance_0",
+          "vigilance_1",
+          "own_cartouche_0",
+          "own_cartouche_1",
+          "foe_cartouche_0",
+          "foe_cartouche_1",
+          "late_0",
+          "late_1"
+        ]
+      },
+      "oracle_text": "When this enchantment enters, creatures you control get +2/+1 and gain vigilance until end of turn.\nWhen a Cartouche you control enters, return this enchantment to its owner's hand.",
+      "variants": [
+        "vigilance_0",
+        "vigilance_1",
+        "own_cartouche_0",
+        "own_cartouche_1",
+        "foe_cartouche_0",
+        "foe_cartouche_1",
+        "late_0",
+        "late_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,357 @@
+{
+  "sources": {
+    "Retreat to Coralhelm": {
+      "oracle": {
+        "oracle_id": "c450f6b7-bb2a-4b8c-aec7-d27555137b63",
+        "name": "Retreat to Coralhelm",
+        "oracle_text": "Landfall — Whenever a land you control enters, choose one —\n• You may tap or untap target creature.\n• Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Landfall",
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/126/retreat-to-coralhelm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15411,
+        "iid": 14222,
+        "name": "Retreat to Coralhelm",
+        "handler": "manalinkeh_card_retreat_to_coralhelm",
+        "kind": "card"
+      }
+    },
+    "Retreat to Emeria": {
+      "oracle": {
+        "oracle_id": "cc0cda37-9fea-48c6-897a-45f6b84e1eae",
+        "name": "Retreat to Emeria",
+        "oracle_text": "Landfall — Whenever a land you control enters, choose one —\n• Create a 1/1 white Kor Ally creature token.\n• Creatures you control get +1/+1 until end of turn.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/znc/20/retreat-to-emeria?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15412,
+        "iid": 14223,
+        "name": "Retreat to Emeria",
+        "handler": "manalinkeh_card_retreat_to_emeria",
+        "kind": "card"
+      }
+    },
+    "Retreat to Hagra": {
+      "oracle": {
+        "oracle_id": "73cbb4f0-90d6-4228-9341-791e3e9c4b48",
+        "name": "Retreat to Hagra",
+        "oracle_text": "Landfall — Whenever a land you control enters, choose one —\n• Target creature gets +1/+0 and gains deathtouch until end of turn.\n• Each opponent loses 1 life and you gain 1 life.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c18/116/retreat-to-hagra?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15413,
+        "iid": 14224,
+        "name": "Retreat to Hagra",
+        "handler": "manalinkeh_card_retreat_to_hagra",
+        "kind": "card"
+      }
+    },
+    "Retreat to Kazandu": {
+      "oracle": {
+        "oracle_id": "3f8e5ff1-af89-427e-924c-19a44f9a3788",
+        "name": "Retreat to Kazandu",
+        "oracle_text": "Landfall — Whenever a land you control enters, choose one —\n• Put a +1/+1 counter on target creature.\n• You gain 2 life.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/435/retreat-to-kazandu?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15414,
+        "iid": 14225,
+        "name": "Retreat to Kazandu",
+        "handler": "manalinkeh_card_retreat_to_kazandu",
+        "kind": "card"
+      }
+    },
+    "Retreat to Valakut": {
+      "oracle": {
+        "oracle_id": "91108ed7-5b24-4b51-b01d-85005998c69d",
+        "name": "Retreat to Valakut",
+        "oracle_text": "Landfall — Whenever a land you control enters, choose one —\n• Target creature gets +2/+0 until end of turn.\n• Target creature can't block this turn.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/153/retreat-to-valakut?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15415,
+        "iid": 14226,
+        "name": "Retreat to Valakut",
+        "handler": "manalinkeh_card_retreat_to_valakut",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Kor Ally": {
+      "oracle": {
+        "oracle_id": "df5630cc-9b85-4761-af90-4f5c9d902127",
+        "name": "Kor Ally",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Kor Ally",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tcmm/64/kor-ally?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18778,
+        "iid": 13309,
+        "name": "Kor Ally",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    }
+  }
+}

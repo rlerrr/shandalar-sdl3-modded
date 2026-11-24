@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 16967,
+  "card": "Manticore of the Gauntlet",
+  "recipes": [
+    {
+      "family": "entry_rider_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 16967,
+        "printed_cost": "{4}{R}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, put a -1/-1 counter on target creature you control. This creature deals 3 damage to target opponent or planeswalker.",
+      "variants": [
+        "opponent_0",
+        "self_0",
+        "lethal_counter_0",
+        "foe_walker_0",
+        "own_walker_0",
+        "prevented_0",
+        "opponent_1",
+        "self_1",
+        "lethal_counter_1",
+        "foe_walker_1",
+        "own_walker_1",
+        "prevented_1"
+      ]
+    }
+  ]
+}

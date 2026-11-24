@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Pillaging Horde",
+  "csvid": 2892,
+  "recipes": [
+    {
+      "family": "entry_discard_payment",
+      "version": 2,
+      "params": {
+        "amount": 1,
+        "random": true,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "hybrid": [],
+        "keywords": [],
+        "power": 5,
+        "toughness": 5
+      },
+      "oracle_text": "When this creature enters, sacrifice it unless you discard a card at random.",
+      "variants": [
+        "funded_0",
+        "empty_0",
+        "extra_0",
+        "countered_0",
+        "snapshot_0",
+        "wrong_mana_0",
+        "mana_short_0",
+        "indestructible_0",
+        "borrowed_paid_0",
+        "borrowed_empty_0",
+        "decline_0",
+        "mixed_random_0",
+        "funded_1",
+        "empty_1",
+        "extra_1",
+        "countered_1",
+        "snapshot_1",
+        "wrong_mana_1",
+        "mana_short_1",
+        "indestructible_1",
+        "borrowed_paid_1",
+        "borrowed_empty_1",
+        "decline_1",
+        "mixed_random_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Vedalken Humiliator",
+  "csvid": 19129,
+  "recipes": [
+    {
+      "family": "attack_trigger_block_and_target",
+      "version": 2,
+      "params": {
+        "csvid": 19129,
+        "cost": "{3}{U}",
+        "choices": [
+          "metalcraft_0",
+          "metalcraft_1",
+          "short_0",
+          "short_1",
+          "opposing_artifacts_0",
+          "opposing_artifacts_1"
+        ]
+      },
+      "oracle_text": "Metalcraft — Whenever this creature attacks, if you control three or more artifacts, creatures your opponents control lose all abilities and have base power and toughness 1/1 until end of turn.",
+      "variants": [
+        "metalcraft_0",
+        "metalcraft_1",
+        "short_0",
+        "short_1",
+        "opposing_artifacts_0",
+        "opposing_artifacts_1"
+      ]
+    }
+  ]
+}

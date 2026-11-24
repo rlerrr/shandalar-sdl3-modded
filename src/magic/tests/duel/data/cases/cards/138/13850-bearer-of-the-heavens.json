@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "csvid": 13850,
+  "card": "Bearer of the Heavens",
+  "recipes": [
+    {
+      "family": "departure_damage_and_removal",
+      "version": 2,
+      "params": {
+        "csvid": 13850,
+        "printed_cost": "{7}{R}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature dies, destroy all permanents at the beginning of the next end step.",
+      "variants": [
+        "next_end_step_0",
+        "indestructible_0",
+        "bounce_0",
+        "exile_0",
+        "next_end_step_1",
+        "indestructible_1",
+        "bounce_1",
+        "exile_1"
+      ]
+    }
+  ]
+}

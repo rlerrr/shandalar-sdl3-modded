@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Clairvoyance",
+  "csvid": 1891,
+  "recipes": [
+    {
+      "family": "next_upkeep_cantrip_additional_riders",
+      "version": 2,
+      "params": {
+        "mode": "view",
+        "instant": true,
+        "cost": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "oracle_text": "Look at target player's hand.\nDraw a card at the beginning of the next turn's upkeep.",
+      "variants": [
+        "effect_0",
+        "own_hand_0",
+        "empty_hand_0",
+        "offturn_0",
+        "replay_0",
+        "short_0",
+        "effect_1",
+        "own_hand_1",
+        "empty_hand_1",
+        "offturn_1",
+        "replay_1",
+        "short_1"
+      ]
+    }
+  ]
+}

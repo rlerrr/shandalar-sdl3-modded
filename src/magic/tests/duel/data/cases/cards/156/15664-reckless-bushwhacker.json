@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Reckless Bushwhacker",
+  "csvid": 15664,
+  "recipes": [
+    {
+      "family": "entry_interaction_combat",
+      "version": 2,
+      "params": {
+        "csvid": 15664,
+        "cost": "{2}{R}",
+        "choices": [
+          "normal_0",
+          "normal_1",
+          "surge_0",
+          "surge_1",
+          "normal_choice_0",
+          "normal_choice_1",
+          "no_prior_0",
+          "no_prior_1"
+        ]
+      },
+      "oracle_text": "Surge {1}{R} (You may cast this spell for its surge cost if you or a teammate has cast another spell this turn.)\nHaste\nWhen this creature enters, if its surge cost was paid, other creatures you control get +1/+0 and gain haste until end of turn.",
+      "variants": [
+        "normal_0",
+        "normal_1",
+        "surge_0",
+        "surge_1",
+        "normal_choice_0",
+        "normal_choice_1",
+        "no_prior_0",
+        "no_prior_1"
+      ]
+    }
+  ]
+}

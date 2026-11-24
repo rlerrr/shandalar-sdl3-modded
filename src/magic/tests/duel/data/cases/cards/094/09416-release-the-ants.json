@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Release the Ants",
+  "csvid": 9416,
+  "recipes": [
+    {
+      "family": "clash_whole_cards",
+      "version": 2,
+      "oracle_text": "Release the Ants deals 1 damage to any target. Clash with an opponent. If you win, return Release the Ants to its owner's hand. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",
+      "params": {
+        "effect": "ants",
+        "mana": "{1}{R}",
+        "type_line": "Instant",
+        "power": null,
+        "toughness": null
+      },
+      "variants": [
+        "win_0",
+        "tie_0",
+        "loss_0",
+        "human_bottom_0",
+        "snapshot_0",
+        "creature_0",
+        "walker_0",
+        "fizzle_0",
+        "recast_0",
+        "win_1",
+        "tie_1",
+        "loss_1",
+        "human_bottom_1",
+        "snapshot_1",
+        "creature_1",
+        "walker_1",
+        "fizzle_1",
+        "recast_1"
+      ]
+    }
+  ]
+}

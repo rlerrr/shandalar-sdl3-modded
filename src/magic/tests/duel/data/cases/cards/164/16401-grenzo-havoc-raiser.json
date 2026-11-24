@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Grenzo, Havoc Raiser",
+  "csvid": 16401,
+  "recipes": [
+    {
+      "family": "opponent_exile_permissions",
+      "version": 2,
+      "oracle_text": "Whenever a creature you control deals combat damage to a player, choose one —\n• Goad target creature that player controls.\n• Exile the top card of that player's library. Until end of turn, you may cast that card and you may spend mana as though it were mana of any color to cast that spell.",
+      "params": {
+        "model": "combat_modes",
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "payment": "any_mana",
+        "expiry": "turn"
+      },
+      "variants": [
+        "alternate_color_0",
+        "short_0",
+        "wrong_seat_0",
+        "expiry_0",
+        "land_0",
+        "empty_0",
+        "blocked_0",
+        "ally_0",
+        "goad_0",
+        "goad_expiry_0",
+        "replay_0",
+        "alternate_color_1",
+        "short_1",
+        "wrong_seat_1",
+        "expiry_1",
+        "land_1",
+        "empty_1",
+        "blocked_1",
+        "ally_1",
+        "goad_1",
+        "goad_expiry_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

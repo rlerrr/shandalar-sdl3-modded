@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Faceless Butcher",
+  "csvid": 5805,
+  "recipes": [
+    {
+      "family": "entry_follow_on_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 5805,
+        "cost": [
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, exile another target creature.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.",
+      "variants": [
+        "return_0",
+        "return_1",
+        "own_target_0",
+        "own_target_1",
+        "borrowed_0",
+        "borrowed_1",
+        "only_self_0",
+        "only_self_1"
+      ]
+    }
+  ]
+}

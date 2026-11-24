@@ -1,0 +1,1340 @@
+{
+  "sources": {
+    "Abu Ja'far": {
+      "oracle": {
+        "oracle_id": "a2404d88-0621-49ae-9908-052c23a96ac6",
+        "name": "Abu Ja'far",
+        "oracle_text": "When this creature dies, destroy all creatures blocking or blocked by it. They can't be regenerated.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chr/1/abu-jafar?utm_source=api"
+      },
+      "registry": {
+        "csvid": 391,
+        "iid": 182,
+        "name": "Abu Ja'far",
+        "handler": "manalinkeh_card_abu_jafar",
+        "kind": "card"
+      }
+    },
+    "Bearer of the Heavens": {
+      "oracle": {
+        "oracle_id": "54e86bc8-ff48-49be-902c-4923d59901a7",
+        "name": "Bearer of the Heavens",
+        "oracle_text": "When this creature dies, destroy all permanents at the beginning of the next end step.",
+        "mana_cost": "{7}{R}",
+        "type_line": "Creature — Giant",
+        "power": "10",
+        "toughness": "10",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/89/bearer-of-the-heavens?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13850,
+        "iid": 942,
+        "name": "Bearer of the Heavens",
+        "handler": "manalinkeh_card_bearer_of_the_heavens",
+        "kind": "card"
+      }
+    },
+    "Gang of Devils": {
+      "oracle": {
+        "oracle_id": "62110234-690b-4498-8076-26ba910f9f92",
+        "name": "Gang of Devils",
+        "oracle_text": "When this creature dies, it deals 3 damage divided as you choose among one, two, or three targets.",
+        "mana_cost": "{5}{R}",
+        "type_line": "Creature — Devil",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cn2/158/gang-of-devils?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12374,
+        "iid": 3729,
+        "name": "Gang of Devils",
+        "handler": "manalinkeh_card_gang_of_devils",
+        "kind": "card"
+      }
+    },
+    "Goblin Boom Keg": {
+      "oracle": {
+        "oracle_id": "8e819d68-3a6e-449a-8392-e072724b80f1",
+        "name": "Goblin Boom Keg",
+        "oracle_text": "At the beginning of your upkeep, sacrifice this artifact.\nWhen this artifact is put into a graveyard from the battlefield, it deals 3 damage to any target.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frf/159/goblin-boom-keg?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14559,
+        "iid": 11295,
+        "name": "Goblin Boom Keg",
+        "handler": "manalinkeh_card_goblin_boom_keg",
+        "kind": "card"
+      }
+    },
+    "Blazing Effigy": {
+      "oracle": {
+        "oracle_id": "7879b37c-5e2a-4945-9378-47744b715a6c",
+        "name": "Blazing Effigy",
+        "oracle_text": "When this creature dies, it deals X damage to target creature, where X is 3 plus the amount of damage dealt to this creature this turn by other sources named Blazing Effigy.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Elemental",
+        "power": "0",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/leg/134/blazing-effigy?utm_source=api"
+      },
+      "registry": {
+        "csvid": 581,
+        "iid": 1057,
+        "name": "Blazing Effigy",
+        "handler": "manalinkeh_card_blazing_effigy",
+        "kind": "card"
+      }
+    },
+    "Cathedral Membrane": {
+      "oracle": {
+        "oracle_id": "0297eeb2-47ec-4f9a-b1ad-4e7286994f00",
+        "name": "Cathedral Membrane",
+        "oracle_text": "({W/P} can be paid with either {W} or 2 life.)\nDefender\nWhen this creature dies during combat, it deals 6 damage to each creature it blocked this combat.",
+        "mana_cost": "{1}{W/P}",
+        "type_line": "Artifact Creature — Phyrexian Wall",
+        "power": "0",
+        "toughness": "3",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/5/cathedral-membrane?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11575,
+        "iid": 1552,
+        "name": "Cathedral Membrane",
+        "handler": "manalinkeh_card_cathedral_membrane",
+        "kind": "card"
+      }
+    },
+    "Floodgate": {
+      "oracle": {
+        "oracle_id": "f5a85674-fd09-42d8-bba7-5656be25fcea",
+        "name": "Floodgate",
+        "oracle_text": "Defender\nWhen this creature has flying, sacrifice it.\nWhen this creature leaves the battlefield, it deals damage to each nonblue creature without flying equal to half the number of Islands you control, rounded down.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/49/floodgate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2484,
+        "iid": 3536,
+        "name": "Floodgate",
+        "handler": "manalinkeh_card_floodgate",
+        "kind": "card"
+      }
+    },
+    "Havoc Demon": {
+      "oracle": {
+        "oracle_id": "246d7f6b-7ffa-46dc-b5cb-6959f47a7dc3",
+        "name": "Havoc Demon",
+        "oracle_text": "Flying\nWhen this creature dies, all creatures get -5/-5 until end of turn.",
+        "mana_cost": "{5}{B}{B}",
+        "type_line": "Creature — Demon",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/90/havoc-demon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6397,
+        "iid": 4417,
+        "name": "Havoc Demon",
+        "handler": "manalinkeh_card_havok_demon",
+        "kind": "card"
+      }
+    },
+    "Plague Spitter": {
+      "oracle": {
+        "oracle_id": "5feedfb0-30e6-400d-9e28-d541ea1aa14e",
+        "name": "Plague Spitter",
+        "oracle_text": "At the beginning of your upkeep, this creature deals 1 damage to each creature and each player.\nWhen this creature dies, it deals 1 damage to each creature and each player.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Phyrexian Horror",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clb/767/plague-spitter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5065,
+        "iid": 7240,
+        "name": "Plague Spitter",
+        "handler": "manalinkeh_card_plague_spitter",
+        "kind": "card"
+      }
+    },
+    "Spitebellows": {
+      "oracle": {
+        "oracle_id": "fee18f57-4ae5-4df8-af3b-f82ed2157ac3",
+        "name": "Spitebellows",
+        "oracle_text": "When this creature leaves the battlefield, it deals 6 damage to target creature.\nEvoke {1}{R}{R} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+        "mana_cost": "{5}{R}",
+        "type_line": "Creature — Elemental",
+        "power": "6",
+        "toughness": "1",
+        "keywords": [
+          "Evoke"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/257/spitebellows?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9434,
+        "iid": 9217,
+        "name": "Spitebellows",
+        "handler": "manalinkeh_card_spitebellows",
+        "kind": "card"
+      }
+    },
+    "Implement of Combustion": {
+      "oracle": {
+        "oracle_id": "f4bd26d5-4448-451f-9909-b6dea1551af7",
+        "name": "Implement of Combustion",
+        "oracle_text": "{R}, Sacrifice this artifact: It deals 1 damage to target player or planeswalker.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/aer/155/implement-of-combustion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16727,
+        "iid": 16820,
+        "name": "Implement of Combustion",
+        "handler": "manalinkeh_card_implement_of_combustion",
+        "kind": "card"
+      }
+    },
+    "Brine Hag": {
+      "oracle": {
+        "oracle_id": "e0165326-f1a6-4fc0-94c1-4b33f24d36f5",
+        "name": "Brine Hag",
+        "oracle_text": "When this creature dies, the base power and toughness of each creature that dealt damage to it this turn become 0/2. (This effect lasts indefinitely.)",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Creature — Hag",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/leg/49/brine-hag?utm_source=api"
+      },
+      "registry": {
+        "csvid": 587,
+        "iid": 1342,
+        "name": "Brine Hag",
+        "handler": "manalinkeh_card_brine_hag",
+        "kind": "card"
+      }
+    },
+    "Goblin Shrine": {
+      "oracle": {
+        "oracle_id": "5e35df8a-2404-4b3b-888a-25d663bd4383",
+        "name": "Goblin Shrine",
+        "oracle_text": "Enchant land\nAs long as enchanted land is a basic Mountain, Goblin creatures get +1/+0.\nWhen this Aura leaves the battlefield, it deals 1 damage to each Goblin creature.",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/122/goblin-shrine?utm_source=api"
+      },
+      "registry": {
+        "csvid": 938,
+        "iid": 4047,
+        "name": "Goblin Shrine",
+        "handler": "manalinkeh_card_goblin_shrine",
+        "kind": "card"
+      }
+    },
+    "Giant Albatross": {
+      "oracle": {
+        "oracle_id": "8b59cacb-46ff-4400-a7f6-b258c81a9b14",
+        "name": "Giant Albatross",
+        "oracle_text": "Flying\nWhen this creature dies, you may pay {1}{U}. If you do, for each creature that dealt damage to this creature this turn, destroy that creature unless its controller pays 2 life. A creature destroyed this way can't be regenerated.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hml/27a/giant-albatross?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2208,
+        "iid": 12774,
+        "name": "Giant Albatross",
+        "handler": "manalinkeh_card_giant_albatross",
+        "kind": "card"
+      }
+    },
+    "Loathsome Catoblepas": {
+      "oracle": {
+        "oracle_id": "c6f68e4b-af2b-43d5-8052-104defe7f3ec",
+        "name": "Loathsome Catoblepas",
+        "oracle_text": "{2}{G}: This creature must be blocked this turn if able.\nWhen this creature dies, target creature an opponent controls gets -3/-3 until end of turn.",
+        "mana_cost": "{5}{B}",
+        "type_line": "Creature — Beast",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/95/loathsome-catoblepas?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13478,
+        "iid": 5666,
+        "name": "Loathsome Catoblepas",
+        "handler": "manalinkeh_card_loathsome_catoblepas",
+        "kind": "card"
+      }
+    },
+    "False Prophet": {
+      "oracle": {
+        "oracle_id": "87c44c23-f209-494a-ab66-c9f5cf7bb4ea",
+        "name": "False Prophet",
+        "oracle_text": "When this creature dies, exile all creatures.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmd/13/false-prophet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4123,
+        "iid": 3272,
+        "name": "False Prophet",
+        "handler": "manalinkeh_card_false_prophet",
+        "kind": "card"
+      }
+    },
+    "Grief Tyrant": {
+      "oracle": {
+        "oracle_id": "ce855b35-4a31-4e42-9dbc-fea8d244fbe0",
+        "name": "Grief Tyrant",
+        "oracle_text": "This creature enters with four -1/-1 counters on it.\nWhen this creature dies, put a -1/-1 counter on target creature for each -1/-1 counter on this creature.",
+        "mana_cost": "{5}{B/R}",
+        "type_line": "Creature — Horror",
+        "power": "8",
+        "toughness": "8",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/shm/189/grief-tyrant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9556,
+        "iid": 4215,
+        "name": "Grief Tyrant",
+        "handler": "manalinkeh_card_grief_tyrant",
+        "kind": "card"
+      }
+    },
+    "Vindictive Lich": {
+      "oracle": {
+        "oracle_id": "6dc7f837-158f-4ccf-86a5-a07a20891ec5",
+        "name": "Vindictive Lich",
+        "oracle_text": "When this creature dies, choose one or more. Each mode must target a different player.\n• Target opponent sacrifices a creature of their choice.\n• Target opponent discards two cards.\n• Target opponent loses 5 life.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Zombie Wizard",
+        "power": "4",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/196/vindictive-lich?utm_source=api"
+      },
+      "registry": {
+        "csvid": 17335,
+        "iid": 17430,
+        "name": "Vindictive Lich",
+        "handler": "manalinkeh_card_vindictive_lich",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Bone Shaman": {
+      "oracle": {
+        "oracle_id": "690ba846-964e-44ba-8637-9a1ce62f5931",
+        "name": "Bone Shaman",
+        "oracle_text": "{B}: Until end of turn, this creature gains \"Creatures dealt damage by this creature this turn can't be regenerated this turn.\"",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Giant Shaman",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ice/176/bone-shaman?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1877,
+        "iid": 1218,
+        "name": "Bone Shaman",
+        "handler": "manalinkeh_card_bone_shaman",
+        "kind": "card"
+      }
+    },
+    "Boomerang": {
+      "oracle": {
+        "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+        "name": "Boomerang",
+        "oracle_text": "Return target permanent to its owner's hand.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+      },
+      "registry": {
+        "csvid": 585,
+        "iid": 1233,
+        "name": "Boomerang",
+        "handler": "manalinkeh_card_boomerang",
+        "kind": "card"
+      }
+    },
+    "Darksteel Myr": {
+      "oracle": {
+        "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+        "name": "Darksteel Myr",
+        "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11238,
+        "iid": 2255,
+        "name": "Darksteel Myr",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Dazzling Ramparts": {
+      "oracle": {
+        "oracle_id": "0527fc47-2bfc-4d02-90fa-5a1284f89a0a",
+        "name": "Dazzling Ramparts",
+        "oracle_text": "Defender\n{1}{W}, {T}: Tap target creature.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "7",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/6/dazzling-ramparts?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14247,
+        "iid": 2299,
+        "name": "Dazzling Ramparts",
+        "handler": "manalinkeh_card_dazzling_ramparts",
+        "kind": "card"
+      }
+    },
+    "Disenchant": {
+      "oracle": {
+        "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+        "name": "Disenchant",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 64,
+        "iid": 2574,
+        "name": "Disenchant",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Drift of Phantasms": {
+      "oracle": {
+        "oracle_id": "6ee51134-c4ad-4101-8ce2-23dde9359cd4",
+        "name": "Drift of Phantasms",
+        "oracle_text": "Defender (This creature can't attack.)\nFlying\nTransmute {1}{U}{U} ({1}{U}{U}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Spirit",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Defender",
+          "Transmute"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/42/drift-of-phantasms?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7828,
+        "iid": 2753,
+        "name": "Drift of Phantasms",
+        "handler": "manalinkeh_card_drift_of_phantasms",
+        "kind": "card"
+      }
+    },
+    "Drudge Skeletons": {
+      "oracle": {
+        "oracle_id": "c180ed02-07f4-4538-9bea-8c249234a8e2",
+        "name": "Drudge Skeletons",
+        "oracle_text": "{B}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Skeleton",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Heal",
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gvl/36/drudge-skeletons?utm_source=api"
+      },
+      "registry": {
+        "csvid": 70,
+        "iid": 2782,
+        "name": "Drudge Skeletons",
+        "handler": "manalinkeh_card_drudge_skeletons",
+        "kind": "card"
+      }
+    },
+    "Fervor": {
+      "oracle": {
+        "oracle_id": "8e0cea9c-3110-4728-9378-76849e33bb90",
+        "name": "Fervor",
+        "oracle_text": "Creatures you control have haste. (They can attack and {T} as soon as they come under your control.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/129/fervor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1604,
+        "iid": 3365,
+        "name": "Fervor",
+        "handler": "manalinkeh_card_fervor",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Goblin Balloon Brigade": {
+      "oracle": {
+        "oracle_id": "10bc98b0-3fdc-46d1-8d3b-6d160e9dd62f",
+        "name": "Goblin Balloon Brigade",
+        "oracle_text": "{R}: This creature gains flying until end of turn.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cn2/159/goblin-balloon-brigade?utm_source=api"
+      },
+      "registry": {
+        "csvid": 101,
+        "iid": 3980,
+        "name": "Goblin Balloon Brigade",
+        "handler": "manalinkeh_card_goblin_balloon_brigade",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Jace, Memory Adept": {
+      "oracle": {
+        "oracle_id": "4a4dc133-541f-456b-a95f-3d707e1c95e9",
+        "name": "Jace, Memory Adept",
+        "oracle_text": "+1: Draw a card. Target player mills a card.\n0: Target player mills ten cards.\n−7: Any number of target players each draw twenty cards.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "4",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/60/jace-memory-adept?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11821,
+        "iid": 4998,
+        "name": "Jace, Memory Adept",
+        "handler": "manalinkeh_card_jace_memory_adept",
+        "kind": "card"
+      }
+    },
+    "Jump": {
+      "oracle": {
+        "oracle_id": "f7518456-45ed-41d4-bd3c-5aacea28eb35",
+        "name": "Jump",
+        "oracle_text": "Target creature gains flying until end of turn.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/59/jump?utm_source=api"
+      },
+      "registry": {
+        "csvid": 133,
+        "iid": 5097,
+        "name": "Jump",
+        "handler": "manalinkeh_card_jump",
+        "kind": "card"
+      }
+    },
+    "Millstone": {
+      "oracle": {
+        "oracle_id": "3212e47a-5492-4c50-9d4a-6ea562f1a6e1",
+        "name": "Millstone",
+        "oracle_text": "{2}, {T}: Target player mills two cards.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/242/millstone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 507,
+        "iid": 6116,
+        "name": "Millstone",
+        "handler": "manalinkeh_card_millstone",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Platinum Emperion": {
+      "oracle": {
+        "oracle_id": "bcd2f70c-36c2-44b2-9d4b-1000e9bb62b6",
+        "name": "Platinum Emperion",
+        "oracle_text": "Your life total can't change. (You can't gain or lose life. You can't pay any amount of life except 0.)",
+        "mana_cost": "{8}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "8",
+        "toughness": "8",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/233/platinum-emperion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11336,
+        "iid": 7268,
+        "name": "Platinum Emperion",
+        "handler": "manalinkeh_card_platinum_emperion",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Revoke Existence": {
+      "oracle": {
+        "oracle_id": "289e1a7c-b301-4395-baf8-e9a1c6d38aab",
+        "name": "Revoke Existence",
+        "oracle_text": "Exile target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/28/revoke-existence?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11347,
+        "iid": 7910,
+        "name": "Revoke Existence",
+        "handler": "manalinkeh_card_revoke_existence",
+        "kind": "card"
+      }
+    },
+    "Shatter": {
+      "oracle": {
+        "oracle_id": "84d32e68-72b9-432d-a023-7bc6a26b8ad0",
+        "name": "Shatter",
+        "oracle_text": "Destroy target artifact.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rix/114/shatter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 223,
+        "iid": 8597,
+        "name": "Shatter",
+        "handler": "manalinkeh_card_shatter",
+        "kind": "card"
+      }
+    },
+    "Shivan Dragon": {
+      "oracle": {
+        "oracle_id": "711eea87-0fa3-46e0-a42b-fa5a86455f04",
+        "name": "Shivan Dragon",
+        "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/763/shivan-dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 224,
+        "iid": 8648,
+        "name": "Shivan Dragon",
+        "handler": "manalinkeh_card_furnace_whelp",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Snow-Covered Island": {
+      "oracle": {
+        "oracle_id": "5b2460a5-6ae5-4cad-ba94-1a9e98e6e4c0",
+        "name": "Snow-Covered Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Snow Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/khm/278/snow-covered-island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2101,
+        "iid": 11400,
+        "name": "Snow-Covered Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Swords to Plowshares": {
+      "oracle": {
+        "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+        "name": "Swords to Plowshares",
+        "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+      },
+      "registry": {
+        "csvid": 240,
+        "iid": 9616,
+        "name": "Swords to Plowshares",
+        "handler": "manalinkeh_card_swords_to_plowshares",
+        "kind": "card"
+      }
+    },
+    "Tropical Island": {
+      "oracle": {
+        "oracle_id": "74b7fe23-5d3a-4092-8d78-7c0eba8f6f73",
+        "name": "Tropical Island",
+        "oracle_text": "({T}: Add {G} or {U}.)",
+        "mana_cost": "",
+        "type_line": "Land — Forest Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/321/tropical-island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 252,
+        "iid": 11,
+        "name": "Tropical Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Vampire Hexmage": {
+      "oracle": {
+        "oracle_id": "fcb2a95b-cef0-4b29-8b2b-538f380aff2b",
+        "name": "Vampire Hexmage",
+        "oracle_text": "First strike\nSacrifice this creature: Remove all counters from target permanent.",
+        "mana_cost": "{B}{B}",
+        "type_line": "Creature — Vampire Shaman",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "First strike"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/112/vampire-hexmage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10701,
+        "iid": 10453,
+        "name": "Vampire Hexmage",
+        "handler": "manalinkeh_card_vampire_hexmage",
+        "kind": "card"
+      }
+    },
+    "Volcanic Island": {
+      "oracle": {
+        "oracle_id": "c718911c-c955-4eb9-9e16-be4bd49a4e4e",
+        "name": "Volcanic Island",
+        "oracle_text": "({T}: Add {U} or {R}.)",
+        "mana_cost": "",
+        "type_line": "Land — Island Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/324/volcanic-island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 266,
+        "iid": 14,
+        "name": "Volcanic Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Wall of Tears": {
+      "oracle": {
+        "oracle_id": "5825d718-6a32-4f4c-9b56-1a50051cfe28",
+        "name": "Wall of Tears",
+        "oracle_text": "Defender (This creature can't attack.)\nWhenever this creature blocks a creature, return that creature to its owner's hand at end of combat.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "4",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sth/50/wall-of-tears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3457,
+        "iid": 10786,
+        "name": "Wall of Tears",
+        "handler": "manalinkeh_card_wall_of_tears",
+        "kind": "card"
+      }
+    },
+    "Wrap in Vigor": {
+      "oracle": {
+        "oracle_id": "39da2aa8-f4d9-44f6-a446-488beaec821f",
+        "name": "Wrap in Vigor",
+        "oracle_text": "Regenerate each creature you control.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/183/wrap-in-vigor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9054,
+        "iid": 11120,
+        "name": "Wrap in Vigor",
+        "handler": "manalinkeh_card_wrap_in_vigor",
+        "kind": "card"
+      }
+    }
+  }
+}

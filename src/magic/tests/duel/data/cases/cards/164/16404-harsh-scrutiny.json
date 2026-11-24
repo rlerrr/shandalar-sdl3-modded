@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Harsh Scrutiny",
+  "csvid": 16404,
+  "recipes": [
+    {
+      "family": "library_scry_targeted_spells",
+      "version": 2,
+      "params": {
+        "csvid": 16404,
+        "cost": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scry": 1
+      },
+      "oracle_text": "Target opponent reveals their hand. You choose a creature card from it. That player discards that card. Scry 1.",
+      "variants": [
+        "multiple_creatures_0",
+        "multiple_creatures_1",
+        "no_creature_0",
+        "no_creature_1",
+        "empty_hand_0",
+        "empty_hand_1",
+        "shroud_response_0",
+        "shroud_response_1"
+      ]
+    }
+  ]
+}

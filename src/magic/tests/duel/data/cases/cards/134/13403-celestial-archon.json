@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Celestial Archon",
+  "csvid": 13403,
+  "recipes": [
+    {
+      "family": "bestow_combined_keywords",
+      "version": 2,
+      "params": {
+        "csvid": 13403,
+        "normal": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "bestowed": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "bonus": [
+          4,
+          4
+        ],
+        "creature": [
+          4,
+          4
+        ]
+      },
+      "oracle_text": "Bestow {5}{W}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nFlying, first strike\nEnchanted creature gets +4/+4 and has flying and first strike.",
+      "variants": [
+        "regular_combat_0",
+        "regular_combat_1",
+        "bestowed_combat_0",
+        "bestowed_combat_1",
+        "detach_combat_0",
+        "detach_combat_1",
+        "pending_host_lost_0",
+        "pending_host_lost_1",
+        "flight_0",
+        "flight_1"
+      ]
+    }
+  ]
+}

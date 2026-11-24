@@ -1,0 +1,1058 @@
+{
+  "version": 1,
+  "sources": {
+    "Blistercoil Weird": {
+      "oracle": {
+        "oracle_id": "bf9b24e1-60d4-4739-808a-535336e191c2",
+        "name": "Blistercoil Weird",
+        "oracle_text": "Whenever you cast an instant or sorcery spell, this creature gets +1/+1 until end of turn. Untap it.",
+        "mana_cost": "{U/R}",
+        "type_line": "Creature — Weird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rtr/211/blistercoil-weird?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12669,
+        "iid": 1096,
+        "name": "Blistercoil Weird",
+        "handler": "manalinkeh_card_blistercoil_weird",
+        "kind": "card"
+      }
+    },
+    "Eyes of the Watcher": {
+      "oracle": {
+        "oracle_id": "350b3c1c-b37e-4279-9b49-0fb93c5e7e33",
+        "name": "Eyes of the Watcher",
+        "oracle_text": "Whenever you cast an instant or sorcery spell, you may pay {1}. If you do, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5dn/30/eyes-of-the-watcher?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7050,
+        "iid": 3222,
+        "name": "Eyes of the Watcher",
+        "handler": "manalinkeh_card_eyes_of_the_watcher",
+        "kind": "card"
+      }
+    },
+    "Fluxcharger": {
+      "oracle": {
+        "oracle_id": "99bba323-b5a4-4ff3-8ad1-2a19ed119069",
+        "name": "Fluxcharger",
+        "oracle_text": "Flying\nWhenever you cast an instant or sorcery spell, you may switch this creature's power and toughness until end of turn.",
+        "mana_cost": "{2}{U}{R}",
+        "type_line": "Creature — Weird",
+        "power": "1",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dgm/71/fluxcharger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13149,
+        "iid": 3557,
+        "name": "Fluxcharger",
+        "handler": "manalinkeh_card_fluxcharger",
+        "kind": "card"
+      }
+    },
+    "Sphinx-Bone Wand": {
+      "oracle": {
+        "oracle_id": "4b9e529c-4fbd-4944-828d-7fbc8f26c991",
+        "name": "Sphinx-Bone Wand",
+        "oracle_text": "Whenever you cast an instant or sorcery spell, you may put a charge counter on this artifact. If you do, this artifact deals damage equal to the number of charge counters on it to any target.",
+        "mana_cost": "{7}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddj/29/sphinx-bone-wand?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11049,
+        "iid": 9144,
+        "name": "Sphinx-Bone Wand",
+        "handler": "manalinkeh_card_sphinx_bone_wand",
+        "kind": "card"
+      }
+    },
+    "Trail of Evidence": {
+      "oracle": {
+        "oracle_id": "e10065ba-fe24-4974-a500-d4151397a4d9",
+        "name": "Trail of Evidence",
+        "oracle_text": "Whenever you cast an instant or sorcery spell, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+        "mana_cost": "{2}{U}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Investigate"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/93/trail-of-evidence?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15997,
+        "iid": 16070,
+        "name": "Trail of Evidence",
+        "handler": "manalinkeh_card_trail_of_evidence",
+        "kind": "card"
+      }
+    },
+    "Charmbreaker Devils": {
+      "oracle": {
+        "oracle_id": "1b9df437-6988-4ddc-80c4-893e11076067",
+        "name": "Charmbreaker Devils",
+        "oracle_text": "At the beginning of your upkeep, return an instant or sorcery card at random from your graveyard to your hand.\nWhenever you cast an instant or sorcery spell, this creature gets +4/+0 until end of turn.",
+        "mana_cost": "{5}{R}",
+        "type_line": "Creature — Devil",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c21/162/charmbreaker-devils?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11902,
+        "iid": 1679,
+        "name": "Charmbreaker Devils",
+        "handler": "manalinkeh_card_charmbreaker_devils",
+        "kind": "card"
+      }
+    },
+    "Mirari": {
+      "oracle": {
+        "oracle_id": "8f6a2fce-719e-4745-80d3-aabce5c9bafa",
+        "name": "Mirari",
+        "oracle_text": "Whenever you cast an instant or sorcery spell, you may pay {3}. If you do, copy that spell. You may choose new targets for the copy.",
+        "mana_cost": "{5}",
+        "type_line": "Legendary Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c13/246/mirari?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5616,
+        "iid": 6182,
+        "name": "Mirari",
+        "handler": "manalinkeh_card_mirari2",
+        "kind": "card"
+      }
+    },
+    "Nivix Cyclops": {
+      "oracle": {
+        "oracle_id": "68b8bfac-63f7-4dbd-bb2e-4ad394c77335",
+        "name": "Nivix Cyclops",
+        "oracle_text": "Defender\nWhenever you cast an instant or sorcery spell, this creature gets +3/+0 until end of turn and can attack this turn as though it didn't have defender.",
+        "mana_cost": "{1}{U}{R}",
+        "type_line": "Creature — Cyclops",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/24/nivix-cyclops?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13185,
+        "iid": 6659,
+        "name": "Nivix Cyclops",
+        "handler": "manalinkeh_card_nivix_cyclops",
+        "kind": "card"
+      }
+    },
+    "Prescient Chimera": {
+      "oracle": {
+        "oracle_id": "af199b80-d5d8-417a-97d5-459a5bd48b22",
+        "name": "Prescient Chimera",
+        "oracle_text": "Flying\nWhenever you cast an instant or sorcery spell, scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature — Chimera",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Scry",
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/164/prescient-chimera?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13518,
+        "iid": 7344,
+        "name": "Prescient Chimera",
+        "handler": "manalinkeh_card_prescient_chimera",
+        "kind": "card"
+      }
+    },
+    "Riku of Two Reflections": {
+      "oracle": {
+        "oracle_id": "f697c78d-7e4f-4320-bfc6-2a25e6d7dc94",
+        "name": "Riku of Two Reflections",
+        "oracle_text": "Whenever you cast an instant or sorcery spell, you may pay {U}{R}. If you do, copy that spell. You may choose new targets for the copy.\nWhenever another nontoken creature you control enters, you may pay {G}{U}. If you do, create a token that's a copy of that creature.",
+        "mana_cost": "{2}{G}{U}{R}",
+        "type_line": "Legendary Creature — Human Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "R",
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/214/riku-of-two-reflections?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11760,
+        "iid": 7948,
+        "name": "Riku of Two Reflections",
+        "handler": "manalinkeh_card_riku_of_two_reflections",
+        "kind": "card"
+      }
+    },
+    "Surrakar Spellblade": {
+      "oracle": {
+        "oracle_id": "e87813a3-893d-4416-9263-2ea2e3140490",
+        "name": "Surrakar Spellblade",
+        "oracle_text": "Whenever you cast an instant or sorcery spell, you may put a charge counter on this creature.\nWhenever this creature deals combat damage to a player, you may draw X cards, where X is the number of charge counters on it.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Creature — Surrakar",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm2/60/surrakar-spellblade?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11058,
+        "iid": 9575,
+        "name": "Surrakar Spellblade",
+        "handler": "manalinkeh_card_surrakar_spellblade",
+        "kind": "card"
+      }
+    },
+    "Noyan Dar, Roil Shaper": {
+      "oracle": {
+        "oracle_id": "e4190320-5854-479e-be11-a5d5ef3db6a6",
+        "name": "Noyan Dar, Roil Shaper",
+        "oracle_text": "Whenever you cast an instant or sorcery spell, you may put three +1/+1 counters on target land you control. If you do, that land becomes a 0/0 Elemental creature with haste that's still a land.",
+        "mana_cost": "{3}{W}{U}",
+        "type_line": "Legendary Creature — Merfolk Ally",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/216/noyan-dar-roil-shaper?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15386,
+        "iid": 13813,
+        "name": "Noyan Dar, Roil Shaper",
+        "handler": "manalinkeh_card_noyan_dar_roil_shaper",
+        "kind": "card"
+      }
+    },
+    "Niblis of Frost": {
+      "oracle": {
+        "oracle_id": "ed2f3339-5c3e-473f-b08e-58288c4ad9c2",
+        "name": "Niblis of Frost",
+        "oracle_text": "Flying\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhenever you cast an instant or sorcery spell, tap target creature an opponent controls. That creature doesn't untap during its controller's next untap step.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Creature — Spirit",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Prowess"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c20/120/niblis-of-frost?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16163,
+        "iid": 16252,
+        "name": "Niblis of Frost",
+        "handler": "manalinkeh_card_niblis_of_frost",
+        "kind": "card"
+      }
+    },
+    "Dynavolt Tower": {
+      "oracle": {
+        "oracle_id": "59f56dd9-cc82-4f0d-a522-0d8ed274fa40",
+        "name": "Dynavolt Tower",
+        "oracle_text": "Whenever you cast an instant or sorcery spell, you get {E}{E} (two energy counters).\n{T}, Pay {E}{E}{E}{E}{E}: This artifact deals 3 damage to any target.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/208/dynavolt-tower?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16356,
+        "iid": 16443,
+        "name": "Dynavolt Tower",
+        "handler": "manalinkeh_card_dynavolt_tower",
+        "kind": "card"
+      }
+    },
+    "Metallurgic Summonings": {
+      "oracle": {
+        "oracle_id": "7d5149c6-0e7e-438c-a554-5235c85e2426",
+        "name": "Metallurgic Summonings",
+        "oracle_text": "Whenever you cast an instant or sorcery spell, create an X/X colorless Construct artifact creature token, where X is that spell's mana value.\n{3}{U}{U}, Exile this enchantment: Return all instant and sorcery cards from your graveyard to your hand. Activate only if you control six or more artifacts.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c21/122/metallurgic-summonings?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16449,
+        "iid": 16536,
+        "name": "Metallurgic Summonings",
+        "handler": "manalinkeh_card_metallurgic_summonings",
+        "kind": "card"
+      }
+    },
+    "Swarm Intelligence": {
+      "oracle": {
+        "oracle_id": "4a7a5ea9-b633-459f-bcd4-40de53afce0e",
+        "name": "Swarm Intelligence",
+        "oracle_text": "Whenever you cast an instant or sorcery spell, you may copy that spell. You may choose new targets for the copy.",
+        "mana_cost": "{6}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c21/130/swarm-intelligence?utm_source=api"
+      },
+      "registry": {
+        "csvid": 17235,
+        "iid": 17329,
+        "name": "Swarm Intelligence",
+        "handler": "manalinkeh_card_swarm_intelligence",
+        "kind": "card"
+      }
+    },
+    "Adeliz, the Cinder Wind": {
+      "oracle": {
+        "oracle_id": "850eb3c3-029b-49b0-91a9-6daeb1b3a9e8",
+        "name": "Adeliz, the Cinder Wind",
+        "oracle_text": "Flying, haste\nWhenever you cast an instant or sorcery spell, Wizards you control get +1/+1 until end of turn.",
+        "mana_cost": "{1}{U}{R}",
+        "type_line": "Legendary Creature — Human Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Haste"
+        ],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dom/190/adeliz-the-cinder-wind?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18340,
+        "iid": 18447,
+        "name": "Adeliz, the Cinder Wind",
+        "handler": "manalinkeh_card_adeliz_the_cinder_wind",
+        "kind": "card"
+      }
+    },
+    "Thousand-Year Storm": {
+      "oracle": {
+        "oracle_id": "dd4cf149-2fae-40e5-b50b-639f6bcec65e",
+        "name": "Thousand-Year Storm",
+        "oracle_text": "Whenever you cast an instant or sorcery spell, copy it for each other instant and sorcery spell you've cast before it this turn. You may choose new targets for the copies.",
+        "mana_cost": "{4}{U}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/248/thousand-year-storm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19506,
+        "iid": 19439,
+        "name": "Thousand-Year Storm",
+        "handler": "manalinkeh_card_thousand_year_storm",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Clue": {
+      "oracle": {
+        "oracle_id": "496e1083-c792-40a4-adf4-fec1d559cd5e",
+        "name": "Clue",
+        "oracle_text": "{2}, Sacrifice this token: Draw a card.",
+        "mana_cost": "",
+        "type_line": "Token Artifact — Clue",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tfdc/13/clue?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18711,
+        "iid": 16105,
+        "name": "Clue",
+        "handler": "manalinkeh_card_clue",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Divination": {
+      "oracle": {
+        "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+        "name": "Divination",
+        "oracle_text": "Draw two cards.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/51/divination?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10405,
+        "iid": 2609,
+        "name": "Divination",
+        "handler": "manalinkeh_card_divination",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Reach Through Mists": {
+      "oracle": {
+        "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+        "name": "Reach Through Mists",
+        "oracle_text": "Draw a card.",
+        "mana_cost": "{U}",
+        "type_line": "Instant — Arcane",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/7/reach-through-mists?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7353,
+        "iid": 7720,
+        "name": "Reach Through Mists",
+        "handler": "manalinkeh_card_reach_through_mists",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Twiddle": {
+      "oracle": {
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "name": "Twiddle",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 256,
+        "iid": 10281,
+        "name": "Twiddle",
+        "handler": "manalinkeh_card_twiddle",
+        "kind": "card"
+      }
+    },
+    "Wind Drake": {
+      "oracle": {
+        "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+        "name": "Wind Drake",
+        "oracle_text": "Flying",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Drake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/70/wind-drake?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1197,
+        "iid": 10989,
+        "name": "Wind Drake",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Construct": {
+      "oracle": {
+        "oracle_id": "f3dd381f-eafa-488e-bdb1-6de85923300d",
+        "name": "Construct",
+        "oracle_text": "Flying, haste",
+        "mana_cost": "",
+        "type_line": "Token Artifact Creature — Construct",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Haste"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmsc/14/construct?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18712,
+        "iid": 1919,
+        "name": "Construct",
+        "handler": "manalinkeh_card_construct",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Icy Manipulator": {
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      },
+      "registry": {
+        "csvid": 119,
+        "iid": 4775,
+        "name": "Icy Manipulator",
+        "handler": "manalinkeh_card_icy_manipulator",
+        "kind": "card"
+      }
+    },
+    "Incandescent Soulstoke": {
+      "oracle": {
+        "oracle_id": "934bd9f9-937b-4c6b-a849-012ae6bd3321",
+        "name": "Incandescent Soulstoke",
+        "oracle_text": "Other Elemental creatures you control get +1/+1.\n{1}{R}, {T}: You may put an Elemental creature card from your hand onto the battlefield. That creature gains haste until end of turn. Sacrifice it at the beginning of the next end step.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Elemental Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ecc/94/incandescent-soulstoke?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9179,
+        "iid": 4829,
+        "name": "Incandescent Soulstoke",
+        "handler": "manalinkeh_card_incandescent_soulstoke",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    }
+  }
+}

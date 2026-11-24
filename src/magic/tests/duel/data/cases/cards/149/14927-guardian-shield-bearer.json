@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "card": "Guardian Shield-Bearer",
+  "csvid": 14927,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "megamorph_target_effects",
+      "version": 2,
+      "oracle_text": "Megamorph {3}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its megamorph cost and put a +1/+1 counter on it.)\nWhen this creature is turned face up, put a +1/+1 counter on another target creature you control.",
+      "params": {
+        "mode": "counter",
+        "mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "morph": [
+          3,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 1,
+        "keywords": [],
+        "color": 8
+      },
+      "variants": [
+        "normal_cast_0",
+        "normal_cast_1",
+        "hidden_choice_0",
+        "hidden_choice_1",
+        "short_cast_0",
+        "short_cast_1",
+        "reveal_short_0",
+        "reveal_short_1",
+        "reveal_wrong_color_0",
+        "reveal_wrong_color_1",
+        "paid_reveal_0",
+        "paid_reveal_1",
+        "persist_replay_0",
+        "persist_replay_1",
+        "offturn_0",
+        "offturn_1",
+        "no_eligible_0",
+        "no_eligible_1",
+        "recipient_persists_0",
+        "recipient_persists_1"
+      ]
+    }
+  ]
+}

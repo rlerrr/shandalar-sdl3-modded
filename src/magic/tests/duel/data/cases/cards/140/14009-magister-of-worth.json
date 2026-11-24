@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "card": "Magister of Worth",
+  "csvid": 14009,
+  "recipes": [
+    {
+      "family": "reanimation_additional_riders",
+      "version": 2,
+      "params": {
+        "rider": "vote",
+        "cost": [
+          4,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "threshold": null
+      },
+      "oracle_text": "Flying\nWill of the council — When this creature enters, starting with you, each player votes for grace or condemnation. If grace gets more votes, each player returns each creature card from their graveyard to the battlefield. If condemnation gets more votes or the vote is tied, destroy all creatures other than this creature.",
+      "variants": [
+        "effect_0",
+        "underpaid_0",
+        "countered_0",
+        "replay_0",
+        "empty_0",
+        "wrong_type_0",
+        "condemn_0",
+        "tie_owner_grace_0",
+        "tie_enemy_grace_0",
+        "shroud_0",
+        "flight_ground_0",
+        "effect_1",
+        "underpaid_1",
+        "countered_1",
+        "replay_1",
+        "empty_1",
+        "wrong_type_1",
+        "condemn_1",
+        "tie_owner_grace_1",
+        "tie_enemy_grace_1",
+        "shroud_1",
+        "flight_ground_1"
+      ]
+    }
+  ]
+}

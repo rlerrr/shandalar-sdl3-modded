@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "csvid": 10492,
+  "card": "Adventuring Gear",
+  "recipes": [
+    {
+      "family": "landfall_combat_and_animation",
+      "version": 2,
+      "oracle_text": "Landfall — Whenever a land you control enters, equipped creature gets +2/+2 until end of turn.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "params": {
+        "effect": "gear",
+        "equip": 1,
+        "power": 2,
+        "toughness": 2
+      },
+      "variants": [
+        "opponent_land_0",
+        "cleanup_0",
+        "equip_land_0",
+        "unattached_land_0",
+        "two_entries_0",
+        "reattach_0",
+        "no_own_equip_0",
+        "short_equip_0",
+        "opponent_land_1",
+        "cleanup_1",
+        "equip_land_1",
+        "unattached_land_1",
+        "two_entries_1",
+        "reattach_1",
+        "no_own_equip_1",
+        "short_equip_1"
+      ]
+    }
+  ]
+}

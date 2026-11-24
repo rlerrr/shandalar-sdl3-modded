@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 14326,
+  "card": "Meandering Towershell",
+  "recipes": [
+    {
+      "family": "attack_trigger_tokens_and_combat",
+      "version": 2,
+      "params": {
+        "csvid": 14326,
+        "printed_cost": "{3}{G}{G}",
+        "keywords": [
+          "Landwalk",
+          "Islandwalk"
+        ]
+      },
+      "oracle_text": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)\nWhenever this creature attacks, exile it. Return it to the battlefield under your control tapped and attacking at the beginning of the declare attackers step on your next turn.",
+      "variants": [
+        "exiled_0",
+        "other_only_0",
+        "islandwalk_0",
+        "return_island_0",
+        "return_no_island_0",
+        "exiled_1",
+        "other_only_1",
+        "islandwalk_1",
+        "return_island_1",
+        "return_no_island_1"
+      ]
+    }
+  ]
+}

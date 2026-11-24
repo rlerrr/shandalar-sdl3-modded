@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Yule Ooze",
+  "csvid": 16253,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_conditional_costs",
+      "version": 2,
+      "params": {
+        "csvid": 16253,
+        "printed_mana": "{2}{R}{G}",
+        "rules": "At the beginning of your upkeep, destroy another nonland permanent chosen at random, then put a number of +1/+1 counters on Yule Ooze equal to that permanent's converted mana cost.\n{R}{G}, Eat some food: Regenerate Yule Ooze."
+      },
+      "oracle_text": "At the beginning of your upkeep, destroy another nonland permanent chosen at random, then put a number of +1/+1 counters on Yule Ooze equal to that permanent's converted mana cost.\n{R}{G}, Eat some food: Regenerate Yule Ooze.",
+      "variants": [
+        "opposing_creature_0",
+        "opposing_creature_1",
+        "allied_creature_0",
+        "allied_creature_1",
+        "indestructible_0",
+        "indestructible_1",
+        "lands_only_0",
+        "lands_only_1"
+      ]
+    }
+  ]
+}

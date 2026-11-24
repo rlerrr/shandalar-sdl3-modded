@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 8551,
+  "card": "Foriysian Interceptor",
+  "recipes": [
+    {
+      "family": "flash_remaining_combat_and_activated",
+      "version": 2,
+      "params": {
+        "csvid": 8551,
+        "printed_cost": "{3}{W}"
+      },
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nDefender\nThis creature can block an additional creature each combat.",
+      "variants": [
+        "double_0",
+        "lethal_0",
+        "flying_limit_0",
+        "defender_0",
+        "short_0",
+        "double_1",
+        "lethal_1",
+        "flying_limit_1",
+        "defender_1",
+        "short_1"
+      ]
+    }
+  ]
+}

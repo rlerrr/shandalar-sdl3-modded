@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 16980,
+  "card": "Nissa, Steward of Elements",
+  "recipes": [
+    {
+      "family": "library_scry_modes_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 16980,
+        "printed_cost": "{X}{G}{U}"
+      },
+      "oracle_text": "+2: Scry 2.\n0: Look at the top card of your library. If it's a land card or a creature card with mana value less than or equal to the number of loyalty counters on Nissa, you may put that card onto the battlefield.\n−6: Untap up to two target lands you control. They become 5/5 Elemental creatures with flying and haste until end of turn. They're still lands.",
+      "variants": [
+        "scry_0",
+        "top_land_0",
+        "top_creature_0",
+        "top_ineligible_0",
+        "animate_0",
+        "scry_1",
+        "top_land_1",
+        "top_creature_1",
+        "top_ineligible_1",
+        "animate_1"
+      ]
+    }
+  ]
+}

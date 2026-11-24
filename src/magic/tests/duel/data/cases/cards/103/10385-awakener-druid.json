@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 10385,
+  "card": "Awakener Druid",
+  "recipes": [
+    {
+      "family": "remaining_entry_turn_and_choices",
+      "version": 2,
+      "params": {
+        "csvid": 10385,
+        "printed_cost": "{2}{G}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, target Forest becomes a 4/5 green Treefolk creature for as long as this creature remains on the battlefield. It's still a land.",
+      "variants": [
+        "own_mana_0",
+        "foreign_nonbasic_0",
+        "attack_0",
+        "source_bounce_0",
+        "source_death_0",
+        "no_forest_0",
+        "own_mana_1",
+        "foreign_nonbasic_1",
+        "attack_1",
+        "source_bounce_1",
+        "source_death_1",
+        "no_forest_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Grasp of Fate",
+  "csvid": 15517,
+  "recipes": [
+    {
+      "family": "entry_interaction_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 15517,
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "When this enchantment enters, for each opponent, exile up to one target nonland permanent that player controls until this enchantment leaves the battlefield. (Those permanents return under their owners' control.)",
+      "variants": [
+        "artifact_0",
+        "artifact_1",
+        "enchantment_0",
+        "enchantment_1",
+        "decline_0",
+        "decline_1",
+        "no_enemy_nonland_0",
+        "no_enemy_nonland_1",
+        "returned_owner_0",
+        "returned_owner_1"
+      ]
+    }
+  ]
+}

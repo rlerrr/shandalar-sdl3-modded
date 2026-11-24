@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 16795,
+  "card": "Shielded Aether Thief",
+  "recipes": [
+    {
+      "family": "flash_remaining_combat_and_activated",
+      "version": 2,
+      "params": {
+        "csvid": 16795,
+        "printed_cost": "{1}{U}"
+      },
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhenever this creature blocks, you get {E} (an energy counter).\n{T}, Pay {E}{E}{E}: Draw a card.",
+      "variants": [
+        "charge_and_draw_0",
+        "underfunded_0",
+        "does_not_block_0",
+        "dies_blocking_0",
+        "charge_and_draw_1",
+        "underfunded_1",
+        "does_not_block_1",
+        "dies_blocking_1"
+      ]
+    }
+  ]
+}

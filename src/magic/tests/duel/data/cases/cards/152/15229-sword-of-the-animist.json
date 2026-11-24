@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Sword of the Animist",
+  "csvid": 15229,
+  "recipes": [
+    {
+      "family": "equipment_combat_attack_land_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 15229,
+        "spell_fee": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "equip_fee": 2,
+        "static_bonus": [
+          1,
+          1
+        ],
+        "rules": "Equipped creature gets +1/+1.\nWhenever equipped creature attacks, you may search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\nEquip {2}"
+      },
+      "oracle_text": "Equipped creature gets +1/+1.\nWhenever equipped creature attacks, you may search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\nEquip {2}",
+      "variants": [
+        "search_basic_0",
+        "search_basic_1",
+        "fail_to_find_0",
+        "fail_to_find_1",
+        "decline_search_0"
+      ]
+    }
+  ]
+}

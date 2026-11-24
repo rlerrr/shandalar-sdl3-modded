@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Greener Pastures",
+  "csvid": 3789,
+  "recipes": [
+    {
+      "family": "upkeep_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 3789,
+        "mana_cost": "{2}{G}"
+      },
+      "oracle_text": "At the beginning of each player's upkeep, if that player controls more lands than each other player, the player creates a 1/1 green Saproling creature token.",
+      "variants": [
+        "own_more_0",
+        "own_more_1",
+        "foe_more_0",
+        "foe_more_1",
+        "tie_0",
+        "tie_1",
+        "flip_lead_0",
+        "flip_lead_1"
+      ]
+    }
+  ]
+}

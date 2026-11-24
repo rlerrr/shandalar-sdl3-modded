@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Skull Collector",
+  "csvid": 7748,
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_grants_and_modes",
+      "version": 2,
+      "params": {
+        "csvid": 7748,
+        "mana": [
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "At the beginning of your upkeep, return a black creature you control to its owner's hand.\n{1}{B}: Regenerate this creature.",
+      "variants": [
+        "upkeep_self_0",
+        "upkeep_self_1",
+        "upkeep_other_0",
+        "upkeep_other_1",
+        "upkeep_foreign_0",
+        "upkeep_foreign_1",
+        "regen_0",
+        "regen_1",
+        "unfunded_0",
+        "unfunded_1"
+      ]
+    }
+  ]
+}

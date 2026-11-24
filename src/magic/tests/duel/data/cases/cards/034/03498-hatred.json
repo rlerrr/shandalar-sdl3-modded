@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Hatred",
+  "csvid": 3498,
+  "recipes": [
+    {
+      "family": "temporary_x_power_instants",
+      "version": 2,
+      "params": {
+        "model": "life",
+        "mana": [
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "instant": true,
+        "on_cast_x": false
+      },
+      "oracle_text": "As an additional cost to cast this spell, pay X life.\nTarget creature gets +X/+0 until end of turn.",
+      "variants": [
+        "exact_0",
+        "zero_0",
+        "wrong_color_0",
+        "short_0",
+        "no_legal_target_0",
+        "opponent_target_0",
+        "countered_0",
+        "lost_target_0",
+        "combat_0",
+        "blocked_0",
+        "expiry_0",
+        "snapshot_0",
+        "opponent_turn_0",
+        "exact_1",
+        "zero_1",
+        "wrong_color_1",
+        "short_1",
+        "no_legal_target_1",
+        "opponent_target_1",
+        "countered_1",
+        "lost_target_1",
+        "combat_1",
+        "blocked_1",
+        "expiry_1",
+        "snapshot_1",
+        "opponent_turn_1"
+      ]
+    }
+  ]
+}

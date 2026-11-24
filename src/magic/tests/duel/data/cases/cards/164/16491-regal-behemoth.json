@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Regal Behemoth",
+  "csvid": 16491,
+  "recipes": [
+    {
+      "family": "monarch_additional_riders",
+      "version": 2,
+      "params": {
+        "model": "regal",
+        "cost": [
+          4,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Trample\nWhen this creature enters, you become the monarch.\nWhenever you tap a land for mana while you're the monarch, add an additional one mana of any color.",
+      "variants": [
+        "entry_0",
+        "underpaid_0",
+        "countered_0",
+        "replay_0",
+        "white_0",
+        "blue_0",
+        "black_0",
+        "red_0",
+        "green_0",
+        "lost_0",
+        "opponent_land_0",
+        "nonland_0",
+        "nonmana_0",
+        "trample_0",
+        "entry_1",
+        "underpaid_1",
+        "countered_1",
+        "replay_1",
+        "white_1",
+        "blue_1",
+        "black_1",
+        "red_1",
+        "green_1",
+        "lost_1",
+        "opponent_land_1",
+        "nonland_1",
+        "nonmana_1",
+        "trample_1"
+      ]
+    }
+  ]
+}

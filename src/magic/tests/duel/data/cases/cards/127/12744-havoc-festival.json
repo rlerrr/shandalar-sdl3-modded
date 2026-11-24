@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Havoc Festival",
+  "csvid": 12744,
+  "recipes": [
+    {
+      "family": "upkeep_damage_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 12744
+      },
+      "oracle_text": "Players can't gain life.\nAt the beginning of each player's upkeep, that player loses half their life, rounded up.",
+      "variants": [
+        "odd_even_0",
+        "odd_even_1",
+        "deny_gain_0",
+        "deny_gain_1",
+        "repeat_0",
+        "repeat_1"
+      ]
+    }
+  ]
+}

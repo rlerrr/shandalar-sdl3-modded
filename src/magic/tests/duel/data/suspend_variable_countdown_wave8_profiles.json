@@ -1,0 +1,521 @@
+{
+  "sources": {
+    "Aeon Chronicler": {
+      "oracle": {
+        "oracle_id": "a1399cb8-f22a-487e-b539-2db47b09a790",
+        "name": "Aeon Chronicler",
+        "oracle_text": "Aeon Chronicler's power and toughness are each equal to the number of cards in your hand.\nSuspend X—{X}{3}{U}. X can't be 0.\nWhenever a time counter is removed from this card while it's exiled, draw a card.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature — Avatar",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [
+          "Suspend"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/51/aeon-chronicler?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8737,
+        "iid": 248,
+        "name": "Aeon Chronicler",
+        "handler": "manalinkeh_card_aeon_chronicler",
+        "kind": "card"
+      }
+    },
+    "Benalish Commander": {
+      "oracle": {
+        "oracle_id": "3a1e85fe-7064-4df7-bc3b-24131cd15d06",
+        "name": "Benalish Commander",
+        "oracle_text": "Benalish Commander's power and toughness are each equal to the number of Soldiers you control.\nSuspend X—{X}{W}{W}. X can't be 0.\nWhenever a time counter is removed from this card while it's exiled, create a 1/1 white Soldier creature token.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [
+          "Suspend"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/8/benalish-commander?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8744,
+        "iid": 975,
+        "name": "Benalish Commander",
+        "handler": "manalinkeh_card_benalish_commander",
+        "kind": "card"
+      }
+    },
+    "Detritivore": {
+      "oracle": {
+        "oracle_id": "ba5fa5ca-f72d-49dd-9f86-e6e1292f5bf0",
+        "name": "Detritivore",
+        "oracle_text": "Detritivore's power and toughness are each equal to the number of nonbasic land cards in your opponents' graveyards.\nSuspend X—{X}{3}{R}. X can't be 0. (Rather than cast this card from your hand, you may pay {X}{3}{R} and exile it with X time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost. It has haste.)\nWhenever a time counter is removed from this card while it's exiled, destroy target nonbasic land.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Lhurgoyf",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [
+          "Suspend"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/plc/96/detritivore?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8766,
+        "iid": 2486,
+        "name": "Detritivore",
+        "handler": "manalinkeh_card_detritivore",
+        "kind": "card"
+      }
+    },
+    "Fungal Behemoth": {
+      "oracle": {
+        "oracle_id": "844f1fb4-81d2-4a2a-9de7-20e6bf37d77b",
+        "name": "Fungal Behemoth",
+        "oracle_text": "Fungal Behemoth's power and toughness are each equal to the number of +1/+1 counters on creatures you control.\nSuspend X—{X}{G}{G}. X can't be 0. (Rather than cast this card from your hand, you may pay {X}{G}{G} and exile it with X time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost. It has haste.)\nWhenever a time counter is removed from this card while it's exiled, you may put a +1/+1 counter on target creature.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Fungus",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [
+          "Suspend"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/plc/128/fungal-behemoth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8783,
+        "iid": 3677,
+        "name": "Fungal Behemoth",
+        "handler": "manalinkeh_card_fungal_behemoth",
+        "kind": "card"
+      }
+    },
+    "Roiling Horror": {
+      "oracle": {
+        "oracle_id": "52be9dd0-72f4-408b-ae3b-17a0362c2681",
+        "name": "Roiling Horror",
+        "oracle_text": "Roiling Horror's power and toughness are each equal to your life total minus the life total of an opponent with the most life.\nSuspend X—{X}{B}{B}{B}. X can't be 0. (Rather than cast this card from your hand, you may pay {X}{B}{B}{B} and exile it with X time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost. It has haste.)\nWhenever a time counter is removed from this card while it's exiled, target player loses 1 life and you gain 1 life.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Creature — Horror",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [
+          "Suspend"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/plc/79/roiling-horror?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8839,
+        "iid": 8046,
+        "name": "Roiling Horror",
+        "handler": "manalinkeh_card_roiling_horror",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Arcbound Worker": {
+      "oracle": {
+        "oracle_id": "6d9af084-cd5d-4242-b0f0-24a36d0a75d4",
+        "name": "Arcbound Worker",
+        "oracle_text": "Modular 1 (This creature enters with a +1/+1 counter on it. When it dies, you may put its +1/+1 counters on target artifact creature.)",
+        "mana_cost": "{1}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [
+          "Modular"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mma/201/arcbound-worker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6854,
+        "iid": 546,
+        "name": "Arcbound Worker",
+        "handler": "manalinkeh_card_arcbound_worker",
+        "kind": "card"
+      }
+    },
+    "Cloudfin Raptor": {
+      "oracle": {
+        "oracle_id": "cb0e1afa-fd9e-4bf9-bcb1-6e8110d6e2ff",
+        "name": "Cloudfin Raptor",
+        "oracle_text": "Flying\nEvolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Bird Mutant",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Evolve"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/37/cloudfin-raptor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12909,
+        "iid": 1823,
+        "name": "Cloudfin Raptor",
+        "handler": "manalinkeh_card_cloudfin_raptor",
+        "kind": "card"
+      }
+    },
+    "Doomed Traveler": {
+      "oracle": {
+        "oracle_id": "a30907c0-fbde-4fd3-a8c7-f304305fcea7",
+        "name": "Doomed Traveler",
+        "oracle_text": "When this creature dies, create a 1/1 white Spirit creature token with flying.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/59/doomed-traveler?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11934,
+        "iid": 2641,
+        "name": "Doomed Traveler",
+        "handler": "manalinkeh_card_doomed_traveller",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plateau": {
+      "oracle": {
+        "oracle_id": "c7a15ca4-085f-4d92-8387-c3711c04c8fa",
+        "name": "Plateau",
+        "oracle_text": "({T}: Add {R} or {W}.)",
+        "mana_cost": "",
+        "type_line": "Land — Mountain Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/308/plateau?utm_source=api"
+      },
+      "registry": {
+        "csvid": 189,
+        "iid": 7,
+        "name": "Plateau",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Royal Assassin": {
+      "oracle": {
+        "oracle_id": "9ed6f28f-a3db-48c5-9ab0-b90a7fba5f57",
+        "name": "Royal Assassin",
+        "oracle_text": "{T}: Destroy target tapped creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Human Assassin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/101/royal-assassin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 209,
+        "iid": 8088,
+        "name": "Royal Assassin",
+        "handler": "manalinkeh_card_royal_assassin",
+        "kind": "card"
+      }
+    },
+    "Saltfield Recluse": {
+      "oracle": {
+        "oracle_id": "c87e056a-6067-49e6-b3f7-bba8234777de",
+        "name": "Saltfield Recluse",
+        "oracle_text": "{T}: Target creature gets -2/-0 until end of turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Rebel Cleric",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/40/saltfield-recluse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8842,
+        "iid": 8196,
+        "name": "Saltfield Recluse",
+        "handler": "manalinkeh_card_saltfield_recluse",
+        "kind": "card"
+      }
+    },
+    "Savannah": {
+      "oracle": {
+        "oracle_id": "703243f0-8cb3-420f-958f-5fd4bde30293",
+        "name": "Savannah",
+        "oracle_text": "({T}: Add {G} or {W}.)",
+        "mana_cost": "",
+        "type_line": "Land — Forest Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/311/savannah?utm_source=api"
+      },
+      "registry": {
+        "csvid": 212,
+        "iid": 8,
+        "name": "Savannah",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Soldier": {
+      "oracle": {
+        "oracle_id": "eac25f12-6459-438c-a09e-93e23d2cf80d",
+        "name": "Soldier",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tfrc/3/soldier?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18822,
+        "iid": 8976,
+        "name": "Soldier",
+        "handler": "manalinkeh_card_rhino_token",
+        "kind": "card"
+      }
+    },
+    "Taiga": {
+      "oracle": {
+        "oracle_id": "22e3cf1d-3559-4ce1-954c-8dc815342979",
+        "name": "Taiga",
+        "oracle_text": "({T}: Add {R} or {G}.)",
+        "mana_cost": "",
+        "type_line": "Land — Mountain Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/317/taiga?utm_source=api"
+      },
+      "registry": {
+        "csvid": 241,
+        "iid": 10,
+        "name": "Taiga",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Volcanic Island": {
+      "oracle": {
+        "oracle_id": "c718911c-c955-4eb9-9e16-be4bd49a4e4e",
+        "name": "Volcanic Island",
+        "oracle_text": "({T}: Add {U} or {R}.)",
+        "mana_cost": "",
+        "type_line": "Land — Island Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/324/volcanic-island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 266,
+        "iid": 14,
+        "name": "Volcanic Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    }
+  }
+}

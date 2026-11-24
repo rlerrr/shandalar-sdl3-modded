@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Nimble Obstructionist",
+  "csvid": 17183,
+  "recipes": [
+    {
+      "family": "flash_remaining_alternate_costs_and_modes",
+      "version": 2,
+      "params": {
+        "csvid": 17183,
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flash\nFlying\nCycling {2}{U} ({2}{U}, Discard this card: Draw a card.)\nWhen you cycle this card, counter target activated or triggered ability you don't control.",
+      "variants": [
+        "cycle_plain_0",
+        "cycle_plain_1",
+        "cycle_enemy_0",
+        "cycle_enemy_1",
+        "cycle_own_0",
+        "cycle_own_1",
+        "flying_0",
+        "flying_1",
+        "cycle_short_0",
+        "cycle_short_1"
+      ]
+    }
+  ]
+}

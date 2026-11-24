@@ -1,0 +1,827 @@
+{
+  "sources": {
+    "Fated Infatuation": {
+      "oracle": {
+        "oracle_id": "ae771e78-1d29-4b8c-8511-9da196a78dcf",
+        "name": "Fated Infatuation",
+        "oracle_text": "Create a token that's a copy of target creature you control. If it's your turn, scry 2.",
+        "mana_cost": "{U}{U}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/39/fated-infatuation?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13706,
+        "iid": 3305,
+        "name": "Fated Infatuation",
+        "handler": "manalinkeh_card_fated_infatuation",
+        "kind": "card"
+      }
+    },
+    "Fated Intervention": {
+      "oracle": {
+        "oracle_id": "6f85342b-b55b-461b-a3dc-17815e02d04d",
+        "name": "Fated Intervention",
+        "oracle_text": "Create two 3/3 green Centaur enchantment creature tokens. If it's your turn, scry 2.",
+        "mana_cost": "{2}{G}{G}{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/121/fated-intervention?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13707,
+        "iid": 3306,
+        "name": "Fated Intervention",
+        "handler": "manalinkeh_card_fated_intervention",
+        "kind": "card"
+      }
+    },
+    "Fated Retribution": {
+      "oracle": {
+        "oracle_id": "28cfafdb-5014-44e3-9133-4554129c1aee",
+        "name": "Fated Retribution",
+        "oracle_text": "Destroy all creatures and planeswalkers. If it's your turn, scry 2.",
+        "mana_cost": "{4}{W}{W}{W}",
+        "type_line": "Instant",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/11/fated-retribution?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13708,
+        "iid": 3307,
+        "name": "Fated Retribution",
+        "handler": "manalinkeh_card_fated_retribution",
+        "kind": "card"
+      }
+    },
+    "Rise of Eagles": {
+      "oracle": {
+        "oracle_id": "8fc154ff-f2a2-4089-a504-f483f545606e",
+        "name": "Rise of Eagles",
+        "oracle_text": "Create two 2/2 blue Bird enchantment creature tokens with flying. Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+        "mana_cost": "{4}{U}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/49/rise-of-eagles?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13962,
+        "iid": 7984,
+        "name": "Rise of Eagles",
+        "handler": "manalinkeh_card_rise_of_eagles",
+        "kind": "card"
+      }
+    },
+    "Oracle's Insight": {
+      "oracle": {
+        "oracle_id": "3f1f27ca-15e6-4ac6-8bd3-1e6b3ca00857",
+        "name": "Oracle's Insight",
+        "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: Scry 1, then draw a card.\" (To scry 1, look at the top card of your library, then you may put that card on the bottom.)",
+        "mana_cost": "{3}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant",
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bbd/127/oracles-insight?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13773,
+        "iid": 6861,
+        "name": "Oracle's Insight",
+        "handler": "manalinkeh_card_oracles_insight",
+        "kind": "card"
+      }
+    },
+    "Soldevi Excavations": {
+      "oracle": {
+        "oracle_id": "5baa7abe-5bdf-40ce-9a83-a93b7cae71a3",
+        "name": "Soldevi Excavations",
+        "oracle_text": "If this land would enter, sacrifice an untapped Island instead. If you do, put this land onto the battlefield. If you don't, put it into its owner's graveyard.\n{T}: Add {C}{U}.\n{1}, {T}: Scry 1.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/236/soldevi-excavations?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2350,
+        "iid": 8974,
+        "name": "Soldevi Excavations",
+        "handler": "manalinkeh_card_soldevi_excavations",
+        "kind": "card"
+      }
+    },
+    "Witches' Eye": {
+      "oracle": {
+        "oracle_id": "c8d479b8-b96c-4382-97d3-68d85cf371ba",
+        "name": "Witches' Eye",
+        "oracle_text": "Equipped creature has \"{1}, {T}: Scry 1.\" (To scry 1, look at the top card of your library, then you may put that card on the bottom.)\nEquip {1}",
+        "mana_cost": "{1}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip",
+          "Scry"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/222/witches-eye?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13601,
+        "iid": 11041,
+        "name": "Witches' Eye",
+        "handler": "manalinkeh_card_witches_eye",
+        "kind": "card"
+      }
+    },
+    "Hedron Alignment": {
+      "oracle": {
+        "oracle_id": "7cdc9df9-ac6c-49c7-a521-921588696b17",
+        "name": "Hedron Alignment",
+        "oracle_text": "Hexproof\nAt the beginning of your upkeep, you may reveal your hand. If you do, you win the game if you own a card named Hedron Alignment in exile, in your hand, in your graveyard, and on the battlefield.\n{1}{U}: Scry 1.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Hexproof",
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/57/hedron-alignment?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15611,
+        "iid": 15686,
+        "name": "Hedron Alignment",
+        "handler": "manalinkeh_card_hedron_alignment",
+        "kind": "card"
+      }
+    },
+    "Brain in a Jar": {
+      "oracle": {
+        "oracle_id": "321dbd10-1d48-49fc-ba6a-1df241a53338",
+        "name": "Brain in a Jar",
+        "oracle_text": "{1}, {T}: Put a charge counter on this artifact, then you may cast an instant or sorcery spell with mana value equal to the number of charge counters on this artifact from your hand without paying its mana cost.\n{3}, {T}, Remove X charge counters from this artifact: Scry X.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/252/brain-in-a-jar?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15754,
+        "iid": 15829,
+        "name": "Brain in a Jar",
+        "handler": "manalinkeh_card_brain_in_a_jar",
+        "kind": "card"
+      }
+    },
+    "Jace, Unraveler of Secrets": {
+      "oracle": {
+        "oracle_id": "ac29873e-28c3-4933-b427-61d34ff0afcd",
+        "name": "Jace, Unraveler of Secrets",
+        "oracle_text": "+1: Scry 1, then draw a card.\n−2: Return target creature to its owner's hand.\n−8: You get an emblem with \"Whenever an opponent casts their first spell each turn, counter that spell.\"",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "5",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/70/jace-unraveler-of-secrets?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15871,
+        "iid": 15942,
+        "name": "Jace, Unraveler of Secrets",
+        "handler": "manalinkeh_card_jace_unraveler_of_secrets",
+        "kind": "card"
+      }
+    },
+    "Saheeli Rai": {
+      "oracle": {
+        "oracle_id": "5f3fe679-aff1-41b3-8d75-c78c2c0636f0",
+        "name": "Saheeli Rai",
+        "oracle_text": "+1: Scry 1. Saheeli Rai deals 1 damage to each opponent.\n−2: Create a token that's a copy of target artifact or creature you control, except it's an artifact in addition to its other types. That token gains haste. Exile it at the beginning of the next end step.\n−7: Search your library for up to three artifact cards with different names, put them onto the battlefield, then shuffle.",
+        "mana_cost": "{1}{U}{R}",
+        "type_line": "Legendary Planeswalker — Saheeli",
+        "loyalty": "3",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/186/saheeli-rai?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16503,
+        "iid": 16589,
+        "name": "Saheeli Rai",
+        "handler": "manalinkeh_card_saheeli_rai",
+        "kind": "card"
+      }
+    },
+    "Nissa, Steward of Elements": {
+      "oracle": {
+        "oracle_id": "fdb96b5c-ecac-4db3-8b9a-24f824149f91",
+        "name": "Nissa, Steward of Elements",
+        "oracle_text": "+2: Scry 2.\n0: Look at the top card of your library. If it's a land card or a creature card with mana value less than or equal to the number of loyalty counters on Nissa, you may put that card onto the battlefield.\n−6: Untap up to two target lands you control. They become 5/5 Elemental creatures with flying and haste until end of turn. They're still lands.",
+        "mana_cost": "{X}{G}{U}",
+        "type_line": "Legendary Planeswalker — Nissa",
+        "loyalty": "X",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c20/224/nissa-steward-of-elements?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16980,
+        "iid": 17074,
+        "name": "Nissa, Steward of Elements",
+        "handler": "manalinkeh_card_nissa_steward_of_elements",
+        "kind": "card"
+      }
+    },
+    "Path of Ancestry": {
+      "oracle": {
+        "oracle_id": "b473e293-59e3-4e04-acf2-622604aeb25f",
+        "name": "Path of Ancestry",
+        "oracle_text": "This land enters tapped.\n{T}: Add one mana of any color in your commander's color identity. When that mana is spent to cast a creature spell that shares a creature type with your commander, scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbc/80/path-of-ancestry?utm_source=api"
+      },
+      "registry": {
+        "csvid": 17321,
+        "iid": 17416,
+        "name": "Path of Ancestry",
+        "handler": "manalinkeh_card_path_of_ancestry",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Bird": {
+      "oracle": {
+        "oracle_id": "f50b144c-021a-4025-9dc7-1639fdc65505",
+        "name": "Bird",
+        "oracle_text": "Flying\nThis creature can block only creatures with flying.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmid/3/bird?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18696,
+        "iid": 1006,
+        "name": "Bird",
+        "handler": "manalinkeh_card_bird_token",
+        "kind": "card"
+      }
+    },
+    "Centaur": {
+      "oracle": {
+        "oracle_id": "d3988ada-5df2-4055-be63-30db40ad3992",
+        "name": "Centaur",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Enchantment Creature — Centaur",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tbng/8/centaur?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18708,
+        "iid": 1592,
+        "name": "Centaur",
+        "handler": "manalinkeh_card_centaur_token",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Darksteel Myr": {
+      "oracle": {
+        "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+        "name": "Darksteel Myr",
+        "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11238,
+        "iid": 2255,
+        "name": "Darksteel Myr",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Millstone": {
+      "oracle": {
+        "oracle_id": "3212e47a-5492-4c50-9d4a-6ea562f1a6e1",
+        "name": "Millstone",
+        "oracle_text": "{2}, {T}: Target player mills two cards.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/242/millstone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 507,
+        "iid": 6116,
+        "name": "Millstone",
+        "handler": "manalinkeh_card_millstone",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Seal of Cleansing": {
+      "oracle": {
+        "oracle_id": "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
+        "name": "Seal of Cleansing",
+        "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mkc/80/seal-of-cleansing?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4755,
+        "iid": 8393,
+        "name": "Seal of Cleansing",
+        "handler": "manalinkeh_card_seal_of_primordium",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Rite of Flame": {
+      "oracle": {
+        "oracle_id": "8a2e53f9-8100-488f-8504-b59e9bd1cc29",
+        "name": "Rite of Flame",
+        "oracle_text": "Add {R}{R}, then add {R} for each card named Rite of Flame in each graveyard.",
+        "mana_cost": "{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/csp/96/rite-of-flame?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8434,
+        "iid": 7997,
+        "name": "Rite of Flame",
+        "handler": "manalinkeh_card_rite_of_flame",
+        "kind": "card"
+      }
+    },
+    "Rod of Ruin": {
+      "oracle": {
+        "oracle_id": "c29a04ab-4e14-45d8-a993-3fffd0e2f6eb",
+        "name": "Rod of Ruin",
+        "oracle_text": "{3}, {T}: This artifact deals 1 damage to any target.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/217/rod-of-ruin?utm_source=api"
+      },
+      "registry": {
+        "csvid": 208,
+        "iid": 8037,
+        "name": "Rod of Ruin",
+        "handler": "manalinkeh_card_rod_of_ruin",
+        "kind": "card"
+      }
+    },
+    "Traveler's Amulet": {
+      "oracle": {
+        "oracle_id": "48b561dd-f23d-409a-87c8-e49902b2477b",
+        "name": "Traveler's Amulet",
+        "oracle_text": "{1}, Sacrifice this artifact: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/273/travelers-amulet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12102,
+        "iid": 10166,
+        "name": "Traveler's Amulet",
+        "handler": "manalinkeh_card_travelers_amulet",
+        "kind": "card"
+      }
+    }
+  }
+}

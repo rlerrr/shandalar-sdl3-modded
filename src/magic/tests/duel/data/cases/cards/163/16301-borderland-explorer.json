@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Borderland Explorer",
+  "csvid": 16301,
+  "recipes": [
+    {
+      "family": "entry_rider_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 16301,
+        "printed_mana": "{1}{G}",
+        "rules": "When this creature enters, each player may discard a card. Each player who discarded a card this way may search their library for a basic land card, reveal it, put it into their hand, then shuffle."
+      },
+      "oracle_text": "When this creature enters, each player may discard a card. Each player who discarded a card this way may search their library for a basic land card, reveal it, put it into their hand, then shuffle.",
+      "variants": [
+        "both_search_0",
+        "both_search_1",
+        "only_foe_discards_0",
+        "only_foe_discards_1"
+      ]
+    }
+  ]
+}

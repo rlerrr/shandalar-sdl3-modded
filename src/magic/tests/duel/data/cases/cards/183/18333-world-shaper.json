@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 18333,
+  "card": "World Shaper",
+  "recipes": [
+    {
+      "family": "mill_combat_and_draw",
+      "version": 2,
+      "params": {
+        "csvid": 18333,
+        "printed_cost": "{3}{G}"
+      },
+      "oracle_text": "Whenever this creature attacks, you may mill three cards.\nWhen this creature dies, return all land cards from your graveyard to the battlefield tapped.",
+      "variants": [
+        "after_attack_0",
+        "death_only_0",
+        "no_lands_0",
+        "short_library_0",
+        "exiled_0",
+        "decline_0",
+        "after_attack_1",
+        "death_only_1",
+        "no_lands_1",
+        "short_library_1",
+        "exiled_1"
+      ]
+    }
+  ]
+}

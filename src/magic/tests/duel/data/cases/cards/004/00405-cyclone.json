@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "csvid": 405,
+  "card": "Cyclone",
+  "recipes": [
+    {
+      "family": "upkeep_counters",
+      "version": 2,
+      "params": {
+        "csvid": 405,
+        "printed_cost": "{2}{G}{G}"
+      },
+      "oracle_text": "At the beginning of your upkeep, put a wind counter on this enchantment, then sacrifice this enchantment unless you pay {G} for each wind counter on it. If you pay, this enchantment deals damage equal to the number of wind counters on it to each creature and each player.",
+      "variants": [
+        "unpaid_0",
+        "short_0",
+        "scale_0",
+        "unpaid_1",
+        "short_1",
+        "scale_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "csvid": 13981,
+  "card": "Spirespine",
+  "recipes": [
+    {
+      "family": "bestow_activated_and_tempo",
+      "version": 2,
+      "params": {
+        "csvid": 13981,
+        "normal_cost": "{2}{G}",
+        "bestow_cost": "{4}{G}",
+        "bonus": [
+          4,
+          1
+        ],
+        "creature": [
+          4,
+          1
+        ]
+      },
+      "oracle_text": "Bestow {4}{G} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nThis creature blocks each combat if able.\nEnchanted creature gets +4/+1 and blocks each combat if able.",
+      "variants": [
+        "creature_0",
+        "aura_own_0",
+        "aura_foreign_0",
+        "detach_0",
+        "flying_attacker_0",
+        "creature_1",
+        "aura_own_1",
+        "aura_foreign_1",
+        "detach_1",
+        "flying_attacker_1"
+      ]
+    }
+  ]
+}

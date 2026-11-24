@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 6488,
+  "card": "Call to the Grave",
+  "recipes": [
+    {
+      "family": "upkeep_payment_and_sacrifice",
+      "version": 2,
+      "params": {
+        "csvid": 6488,
+        "printed_cost": "{4}{B}",
+        "keywords": []
+      },
+      "oracle_text": "At the beginning of each player's upkeep, that player sacrifices a non-Zombie creature of their choice.\nAt the beginning of the end step, if no creatures are on the battlefield, sacrifice this enchantment.",
+      "variants": [
+        "both_pay_0",
+        "both_pay_1",
+        "empty_end_0",
+        "empty_end_1",
+        "zombie_end_0",
+        "zombie_end_1"
+      ]
+    }
+  ]
+}

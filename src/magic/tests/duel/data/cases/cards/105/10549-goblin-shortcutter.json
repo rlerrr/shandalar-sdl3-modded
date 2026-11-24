@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Goblin Shortcutter",
+  "csvid": 10549,
+  "recipes": [
+    {
+      "family": "entry_rider_combat_modifiers",
+      "version": 2,
+      "params": {
+        "csvid": 10549,
+        "cost": "{1}{R}",
+        "choices": [
+          "foe_0",
+          "foe_1",
+          "other_blocks_0",
+          "other_blocks_1",
+          "own_0",
+          "own_1",
+          "self_0",
+          "self_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, target creature can't block this turn.",
+      "variants": [
+        "foe_0",
+        "foe_1",
+        "other_blocks_0",
+        "other_blocks_1",
+        "own_0",
+        "own_1",
+        "self_0",
+        "self_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

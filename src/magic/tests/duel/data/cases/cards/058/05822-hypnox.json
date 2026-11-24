@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Hypnox",
+  "csvid": 5822,
+  "recipes": [
+    {
+      "family": "entry_interaction_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 5822,
+        "cost": [
+          8,
+          3,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, if you cast it from your hand, exile all cards from target opponent's hand.\nWhen this creature leaves the battlefield, return the exiled cards to their owner's hand.",
+      "variants": [
+        "paid_hand_0",
+        "paid_hand_1",
+        "from_grave_0",
+        "from_grave_1",
+        "empty_hand_0",
+        "empty_hand_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

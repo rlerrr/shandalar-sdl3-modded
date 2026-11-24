@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "card": "Dawnstrider",
+  "csvid": 4447,
+  "recipes": [
+    {
+      "family": "combat_wide_fog",
+      "version": 2,
+      "oracle_text": "{G}, {T}, Discard a card: Prevent all combat damage that would be dealt this turn.",
+      "params": {
+        "model": "tap_discard",
+        "cast_mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "activation_mana": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "defend_0",
+        "own_attack_0",
+        "no_effect_0",
+        "noncombat_0",
+        "insufficient_0",
+        "wrong_color_0",
+        "pending_snapshot_0",
+        "zero_attackers_0",
+        "after_turn_0",
+        "cast_permanent_0",
+        "fresh_source_0",
+        "tapped_source_0",
+        "no_discard_0",
+        "source_lost_pending_0",
+        "defend_1",
+        "own_attack_1",
+        "no_effect_1",
+        "noncombat_1",
+        "insufficient_1",
+        "wrong_color_1",
+        "pending_snapshot_1",
+        "zero_attackers_1",
+        "after_turn_1",
+        "cast_permanent_1",
+        "fresh_source_1",
+        "tapped_source_1",
+        "no_discard_1",
+        "source_lost_pending_1"
+      ]
+    }
+  ]
+}

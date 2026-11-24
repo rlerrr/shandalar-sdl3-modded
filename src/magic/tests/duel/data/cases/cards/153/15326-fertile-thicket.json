@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Fertile Thicket",
+  "csvid": 15326,
+  "recipes": [
+    {
+      "family": "entry_follow_on_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 15326,
+        "printed_mana": "",
+        "rules": "This land enters tapped.\nWhen this land enters, you may look at the top five cards of your library. If you do, reveal up to one basic land card from among them, then put that card on top of your library and the rest on the bottom in any order.\n{T}: Add {G}."
+      },
+      "oracle_text": "This land enters tapped.\nWhen this land enters, you may look at the top five cards of your library. If you do, reveal up to one basic land card from among them, then put that card on top of your library and the rest on the bottom in any order.\n{T}: Add {G}.",
+      "variants": [
+        "select_basic_0",
+        "select_basic_1",
+        "next_green_0",
+        "next_green_1",
+        "order_human_0",
+        "decline_look_0"
+      ]
+    }
+  ]
+}

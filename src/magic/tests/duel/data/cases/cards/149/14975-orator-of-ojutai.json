@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Orator of Ojutai",
+  "csvid": 14975,
+  "recipes": [
+    {
+      "family": "entry_follow_on_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 14975,
+        "printed_mana": "{1}{W}",
+        "rules": "As an additional cost to cast this spell, you may reveal a Dragon card from your hand.\nDefender, flying\nWhen this creature enters, if you revealed a Dragon card or controlled a Dragon as you cast this spell, draw a card."
+      },
+      "oracle_text": "As an additional cost to cast this spell, you may reveal a Dragon card from your hand.\nDefender, flying\nWhen this creature enters, if you revealed a Dragon card or controlled a Dragon as you cast this spell, draw a card.",
+      "variants": [
+        "controlled_dragon_0",
+        "controlled_dragon_1",
+        "revealed_dragon_0",
+        "revealed_dragon_1",
+        "defender_flight_0",
+        "defender_flight_1",
+        "dragon_removed_pending_0",
+        "dragon_removed_pending_1",
+        "decline_reveal_0"
+      ]
+    }
+  ]
+}

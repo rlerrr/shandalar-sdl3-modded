@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "csvid": 18168,
+  "card": "Brass's Bounty",
+  "recipes": [
+    {
+      "family": "treasure_entry",
+      "version": 2,
+      "params": {
+        "cost": [
+          6,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "composition": "lands"
+      },
+      "oracle_text": "For each land you control, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "variants": [
+        "zero_0",
+        "one_0",
+        "three_0",
+        "dual_land_0",
+        "tapped_land_0",
+        "opposing_land_0",
+        "nonland_0",
+        "played_land_0",
+        "response_land_loss_0",
+        "countered_0",
+        "short_cost_0",
+        "spend_blue_0",
+        "zero_1",
+        "one_1",
+        "three_1",
+        "dual_land_1",
+        "tapped_land_1",
+        "opposing_land_1",
+        "nonland_1",
+        "played_land_1",
+        "response_land_loss_1",
+        "countered_1",
+        "short_cost_1",
+        "spend_blue_1"
+      ]
+    }
+  ]
+}

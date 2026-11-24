@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Spontaneous Mutation",
+  "csvid": 16195,
+  "recipes": [
+    {
+      "family": "flash_remaining_auras_and_enchantments",
+      "version": 2,
+      "params": {
+        "csvid": 16195,
+        "cost": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "clauses": [
+          "Flash",
+          "Enchant creature",
+          "Enchanted creature gets -X/-0, where X is the number of cards in your graveyard."
+        ],
+        "modes": [
+          "live_graveyard",
+          "foe_graveyard_only",
+          "negative_combat",
+          "lost_target"
+        ]
+      },
+      "oracle_text": "Flash\nEnchant creature\nEnchanted creature gets -X/-0, where X is the number of cards in your graveyard.",
+      "variants": [
+        "live_graveyard_0",
+        "live_graveyard_1",
+        "foe_graveyard_only_0",
+        "foe_graveyard_only_1",
+        "negative_combat_0",
+        "negative_combat_1",
+        "lost_target_0",
+        "lost_target_1"
+      ]
+    }
+  ]
+}

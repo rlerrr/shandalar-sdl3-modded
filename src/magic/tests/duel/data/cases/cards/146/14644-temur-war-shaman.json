@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Temur War Shaman",
+  "csvid": 14644,
+  "recipes": [
+    {
+      "family": "fight_triggered_sources",
+      "version": 2,
+      "params": {
+        "csvid": 14644,
+        "mana": [
+          4,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "rules": "When this creature enters, manifest the top card of your library. (Put that card onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)\nWhenever a permanent you control is turned face up, if it's a creature, you may have it fight target creature you don't control."
+      },
+      "oracle_text": "When this creature enters, manifest the top card of your library. (Put that card onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)\nWhenever a permanent you control is turned face up, if it's a creature, you may have it fight target creature you don't control.",
+      "variants": [
+        "manifest_fight_0",
+        "manifest_fight_1",
+        "foe_faceup_0",
+        "foe_faceup_1",
+        "empty_library_0",
+        "empty_library_1",
+        "faceup_uses_revealed_pt_0",
+        "faceup_uses_revealed_pt_1",
+        "manifest_pass_0",
+        "manifest_pass_1"
+      ]
+    }
+  ]
+}

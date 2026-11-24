@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "csvid": 12208,
+  "card": "Hinterland Hermit",
+  "recipes": [
+    {
+      "family": "werewolf_combat_riders",
+      "version": 2,
+      "oracle_text": "At the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+      "params": {
+        "price": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "front": {
+          "name": "Hinterland Hermit",
+          "power": 2,
+          "toughness": 1,
+          "color": 16,
+          "clauses": [
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Hinterland Scourge",
+          "power": 3,
+          "toughness": 2,
+          "color": 16,
+          "clauses": [
+            "This creature must be blocked if able.",
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        },
+        "rider": "required_block"
+      },
+      "variants": [
+        "front_split_0",
+        "front_split_1",
+        "back_split_0",
+        "back_split_1",
+        "back_two_0",
+        "back_two_1",
+        "front_omission_0",
+        "front_omission_1",
+        "auto_block_0",
+        "auto_block_1",
+        "tapped_blocker_0",
+        "tapped_blocker_1",
+        "no_blocker_0",
+        "no_blocker_1"
+      ]
+    }
+  ]
+}

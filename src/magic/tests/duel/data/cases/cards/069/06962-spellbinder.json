@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "csvid": 6962,
+  "card": "Spellbinder",
+  "recipes": [
+    {
+      "family": "equipment_combat_damage_hand_and_cast",
+      "version": 2,
+      "params": {
+        "csvid": 6962,
+        "equip_generic": 4,
+        "printed_cost": "{3}"
+      },
+      "oracle_text": "Imprint — When this Equipment enters, you may exile an instant card from your hand.\nWhenever equipped creature deals combat damage to a player, you may copy the exiled card. If you do, you may cast the copy without paying its mana cost.\nEquip {4}",
+      "variants": [
+        "hit_0",
+        "noncombat_0",
+        "blocked_0",
+        "bare_0",
+        "short_equip_0",
+        "wrong_type_0",
+        "repeat_0",
+        "cast_trigger_0",
+        "decline_imprint_0",
+        "decline_copy_0",
+        "hit_1",
+        "noncombat_1",
+        "blocked_1",
+        "bare_1",
+        "short_equip_1",
+        "wrong_type_1",
+        "repeat_1",
+        "cast_trigger_1"
+      ]
+    }
+  ]
+}

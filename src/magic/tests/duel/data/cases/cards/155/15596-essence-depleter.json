@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "csvid": 15596,
+  "card": "Essence Depleter",
+  "recipes": [
+    {
+      "family": "devoid_colorless_activations",
+      "version": 2,
+      "params": {
+        "price": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          2,
+          3
+        ],
+        "generic": 1,
+        "colorless": 1,
+        "effect": "drain",
+        "once": false
+      },
+      "oracle_text": "Devoid (This card has no color.)\n{1}{C}: Target opponent loses 1 life and you gain 1 life. ({C} represents colorless mana.)",
+      "variants": [
+        "exact_0",
+        "exact_1",
+        "colored_only_0",
+        "colored_only_1",
+        "short_0",
+        "short_1",
+        "replay_0",
+        "replay_1",
+        "mixed_0",
+        "mixed_1",
+        "offturn_0",
+        "offturn_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "csvid": 12901,
+  "card": "Boros Keyrune",
+  "recipes": [
+    {
+      "family": "dual_mana_artifact_animation",
+      "version": 2,
+      "oracle_text": "{T}: Add {R} or {W}.\n{R}{W}: This artifact becomes a 1/1 red and white Soldier artifact creature with double strike until end of turn. (It deals both first-strike and regular combat damage.)",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "colors": [
+            "R",
+            "W"
+          ],
+          "fee": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "cast_mana": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "power": 1,
+          "toughness": 1,
+          "creature_type": "Soldier",
+          "extra": "double_strike",
+          "clauses": [
+            "{T}: Add {R} or {W}.",
+            "{R}{W}: This artifact becomes a 1/1 red and white Soldier artifact creature with double strike until end of turn. (It deals both first-strike and regular combat damage.)"
+          ]
+        }
+      },
+      "variants": [
+        "mana_first_0",
+        "mana_second_0",
+        "entry_mana_0",
+        "wrong_mana_output_0",
+        "cast_unfunded_0",
+        "cast_countered_0",
+        "animate_0",
+        "cleanup_0",
+        "offturn_0",
+        "tapped_animate_0",
+        "short_fee_0",
+        "wrong_fee_0",
+        "ready_replay_0",
+        "pending_replay_0",
+        "fresh_attack_0",
+        "attack_0",
+        "destroy_animated_0",
+        "keyword_combat_0",
+        "mana_first_1",
+        "mana_second_1",
+        "entry_mana_1",
+        "wrong_mana_output_1",
+        "cast_unfunded_1",
+        "cast_countered_1",
+        "animate_1",
+        "cleanup_1",
+        "offturn_1",
+        "tapped_animate_1",
+        "short_fee_1",
+        "wrong_fee_1",
+        "ready_replay_1",
+        "pending_replay_1",
+        "fresh_attack_1",
+        "attack_1",
+        "destroy_animated_1",
+        "keyword_combat_1"
+      ]
+    }
+  ]
+}

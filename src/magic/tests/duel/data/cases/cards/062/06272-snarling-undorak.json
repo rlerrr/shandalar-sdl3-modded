@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "card": "Snarling Undorak",
+  "csvid": 6272,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "morph_faceup_activated",
+      "version": 2,
+      "oracle_text": "{2}{G}: Target Beast creature gets +1/+1 until end of turn.\nMorph {1}{G}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+      "params": {
+        "mode": "pump",
+        "subtype": "Beast",
+        "bonus": [
+          1,
+          1
+        ],
+        "megamorph": false,
+        "mana": [
+          2,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "morph": [
+          1,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "activation": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "power": 3,
+        "toughness": 3,
+        "keywords": [],
+        "color": 8
+      },
+      "variants": [
+        "printed_0",
+        "printed_1",
+        "face_down_choice_0",
+        "face_down_choice_1",
+        "short_cast_0",
+        "short_cast_1",
+        "short_reveal_0",
+        "short_reveal_1",
+        "wrong_reveal_color_0",
+        "wrong_reveal_color_1",
+        "effect_0",
+        "effect_1",
+        "hidden_ability_0",
+        "hidden_ability_1",
+        "replay_0",
+        "replay_1",
+        "opposing_turn_0",
+        "opposing_turn_1",
+        "short_ability_0",
+        "short_ability_1",
+        "countered_0",
+        "countered_1",
+        "pump_enemy_0",
+        "pump_enemy_1",
+        "pump_self_0",
+        "pump_self_1",
+        "target_protection_0",
+        "target_protection_1",
+        "typed_target_0",
+        "typed_target_1",
+        "expiry_0",
+        "expiry_1",
+        "combat_power_0",
+        "combat_power_1",
+        "repeated_pump_0",
+        "repeated_pump_1"
+      ]
+    }
+  ]
+}

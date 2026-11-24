@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "csvid": 15892,
+  "card": "Moldgraf Scavenger",
+  "recipes": [
+    {
+      "family": "delirium_static_stats_and_mana",
+      "version": 2,
+      "oracle_text": "Delirium — This creature gets +3/+0 as long as there are four or more card types among cards in your graveyard.",
+      "params": {
+        "csvid": 15892,
+        "keyword": "stats",
+        "delirium_delta": [
+          3,
+          0
+        ],
+        "source_pt": [
+          0,
+          4
+        ],
+        "price": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "clauses": [
+          "Delirium — This creature gets +3/+0 as long as there are four or more card types among cards in your graveyard."
+        ]
+      },
+      "variants": [
+        "three_duplicates_0",
+        "three_duplicates_1",
+        "four_types_0",
+        "four_types_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "crossing_0",
+        "crossing_1",
+        "lose_threshold_0",
+        "lose_threshold_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

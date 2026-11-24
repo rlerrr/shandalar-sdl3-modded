@@ -1,0 +1,682 @@
+{
+  "sources": {
+    "Burning Vengeance": {
+      "oracle": {
+        "oracle_id": "ef1fb174-9a34-43d0-8caf-9c1938147a12",
+        "name": "Burning Vengeance",
+        "oracle_text": "Whenever you cast a spell from your graveyard, this enchantment deals 2 damage to any target.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/147/burning-vengeance?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11895,
+        "iid": 1408,
+        "name": "Burning Vengeance",
+        "handler": "manalinkeh_card_burning_vengeance",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/innistrad.c",
+        "sha256": "c47d29f9fac5619d74df08a83e2f323f9e1b5adde5a4a1f45663f29d8d548087",
+        "symbol": "card_burning_vengeance",
+        "line": 3475
+      }
+    },
+    "Secrets of the Dead": {
+      "oracle": {
+        "oracle_id": "b9720c63-5aa7-4fb8-8d71-8f55d8b1337b",
+        "name": "Secrets of the Dead",
+        "oracle_text": "Whenever you cast a spell from your graveyard, draw a card.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c19/95/secrets-of-the-dead?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12257,
+        "iid": 8427,
+        "name": "Secrets of the Dead",
+        "handler": "manalinkeh_card_secrets_of_the_dead",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/dark_ascension.c",
+        "sha256": "1b8d1b8f814d74d36ed900f77d19ab9048a234c1e31cb26b74dd69c5170e4242",
+        "symbol": "card_secrets_of_the_dead",
+        "line": 1223
+      }
+    },
+    "Harness the Storm": {
+      "oracle": {
+        "oracle_id": "38eaf0ea-8cdd-45f4-bfb9-0f8d0fcf863a",
+        "name": "Harness the Storm",
+        "oracle_text": "Whenever you cast an instant or sorcery spell from your hand, you may cast target card with the same name as that spell from your graveyard. (You still pay its costs.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/163/harness-the-storm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15843,
+        "iid": 15914,
+        "name": "Harness the Storm",
+        "handler": "manalinkeh_card_harness_the_storm",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/shadows_over_innistrad.c",
+        "sha256": "82e12d667575627cc3694110c1f2c98243d1d1ee7b9eeeed7e0925c01e2e8427",
+        "symbol": "card_harness_the_storm",
+        "line": 4650
+      }
+    },
+    "Teshar, Ancestor's Apostle": {
+      "oracle": {
+        "oracle_id": "d4193f50-33b5-4201-ba03-eb135eced7ff",
+        "name": "Teshar, Ancestor's Apostle",
+        "oracle_text": "Flying\nWhenever you cast a historic spell, return target creature card with mana value 3 or less from your graveyard to the battlefield. (Artifacts, legendaries, and Sagas are historic.)",
+        "mana_cost": "{3}{W}",
+        "type_line": "Legendary Creature — Bird Cleric",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/180/teshar-ancestors-apostle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18528,
+        "iid": 18635,
+        "name": "Teshar, Ancestor's Apostle",
+        "handler": "manalinkeh_card_teshar_ancestors_apostle",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/dominaria.c",
+        "sha256": "c157b18fbf3578e0aa95a82101ffdf492310e2f2392ca2583a388b09855f9b2b",
+        "symbol": "card_teshar_ancestors_apostle",
+        "line": 4913
+      }
+    },
+    "Artificer's Assistant": {
+      "oracle": {
+        "oracle_id": "6191a7eb-04b5-47e6-a31f-43f9aa91d4d7",
+        "name": "Artificer's Assistant",
+        "oracle_text": "Flying\nWhenever you cast a historic spell, scry 1. (Artifacts, legendaries, and Sagas are historic. To scry 1, look at the top card of your library, then you may put that card on the bottom.)",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Scry",
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dom/44/artificers-assistant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18346,
+        "iid": 18453,
+        "name": "Artificer's Assistant",
+        "handler": "manalinkeh_card_artificers_assistant",
+        "kind": "card"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/dominaria.c",
+        "sha256": "c157b18fbf3578e0aa95a82101ffdf492310e2f2392ca2583a388b09855f9b2b",
+        "symbol": "card_artificers_assistant",
+        "line": 360
+      }
+    }
+  },
+  "witnesses": {
+    "Act on Impulse": {
+      "oracle": {
+        "oracle_id": "19ad338a-c89f-406d-ad1a-222c22044e1b",
+        "name": "Act on Impulse",
+        "oracle_text": "Exile the top three cards of your library. Until end of turn, you may play those cards. (If you cast a spell this way, you still pay its costs. You can play a land this way only if you have an available land play remaining.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/126/act-on-impulse?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14063,
+        "iid": 225,
+        "name": "Act on Impulse",
+        "handler": "manalinkeh_card_act_on_impulse",
+        "kind": "card"
+      }
+    },
+    "Bird": {
+      "oracle": {
+        "oracle_id": "f50b144c-021a-4025-9dc7-1639fdc65505",
+        "name": "Bird",
+        "oracle_text": "Flying\nThis creature can block only creatures with flying.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmid/3/bird?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18696,
+        "iid": 1006,
+        "name": "Bird",
+        "handler": "manalinkeh_card_bird_token",
+        "kind": "card"
+      }
+    },
+    "Centaur Courser": {
+      "oracle": {
+        "oracle_id": "2f5bf099-2e01-4e1c-9ebf-0ce0ac66939e",
+        "name": "Centaur Courser",
+        "oracle_text": "",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Centaur Warrior",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/168/centaur-courser?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10397,
+        "iid": 1596,
+        "name": "Centaur Courser",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Dovescape": {
+      "oracle": {
+        "oracle_id": "d9f4af37-c85e-44ab-9fea-3c67e2f3cf27",
+        "name": "Dovescape",
+        "oracle_text": "({W/U} can be paid with either {W} or {U}.)\nWhenever a player casts a noncreature spell, counter that spell. That player creates X 1/1 white and blue Bird creature tokens with flying, where X is the spell's mana value.",
+        "mana_cost": "{3}{W/U}{W/U}{W/U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dis/143/dovescape?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8198,
+        "iid": 2659,
+        "name": "Dovescape",
+        "handler": "manalinkeh_card_dovescape",
+        "kind": "card"
+      }
+    },
+    "Elvish Visionary": {
+      "oracle": {
+        "oracle_id": "c6a3a882-a127-4590-93d7-679ef4313efe",
+        "name": "Elvish Visionary",
+        "oracle_text": "When this creature enters, draw a card.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Elf Shaman",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/206/elvish-visionary?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1363,
+        "iid": 2992,
+        "name": "Elvish Visionary",
+        "handler": "manalinkeh_card_carven_caryatid",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Isamaru, Hound of Konda": {
+      "oracle": {
+        "oracle_id": "cfb756dd-6fe1-430a-8f04-8b10cac62a86",
+        "name": "Isamaru, Hound of Konda",
+        "oracle_text": "",
+        "mana_cost": "{W}",
+        "type_line": "Legendary Creature — Dog",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/113/isamaru-hound-of-konda?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1239,
+        "iid": 4956,
+        "name": "Isamaru, Hound of Konda",
+        "handler": "manalinkeh_card_barktooth_warbeard",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Jace Beleren": {
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9185,
+        "iid": 4996,
+        "name": "Jace Beleren",
+        "handler": "manalinkeh_card_jace_beleren",
+        "kind": "card"
+      }
+    },
+    "Mind Stone": {
+      "oracle": {
+        "oracle_id": "c97361b5-af16-4a7b-af85-a429dbaf4ad2",
+        "name": "Mind Stone",
+        "oracle_text": "{T}: Add {C}.\n{1}, {T}, Sacrifice this artifact: Draw a card.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbc/76/mind-stone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3009,
+        "iid": 6137,
+        "name": "Mind Stone",
+        "handler": "manalinkeh_card_mind_stone",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "The Flame of Keld": {
+      "oracle": {
+        "oracle_id": "26b41c78-c5ee-4c50-93be-e3acc35ab355",
+        "name": "The Flame of Keld",
+        "oracle_text": "(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)\nI — Discard your hand.\nII — Draw two cards.\nIII — If a red source you control would deal damage to a permanent or player this turn, it deals that much damage plus 2 to that permanent or player instead.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Enchantment — Saga",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "saga",
+        "scryfall_uri": "https://scryfall.com/card/dom/123/the-flame-of-keld?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18535,
+        "iid": 18642,
+        "name": "The Flame of Keld",
+        "handler": "manalinkeh_card_the_flame_of_keld",
+        "kind": "card"
+      }
+    },
+    "Think Twice": {
+      "oracle": {
+        "oracle_id": "fa85c5a2-8e83-4624-a35a-a0bbf17ecbb4",
+        "name": "Think Twice",
+        "oracle_text": "Draw a card.\nFlashback {2}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/787/think-twice?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8702,
+        "iid": 9890,
+        "name": "Think Twice",
+        "handler": "manalinkeh_card_think_twice",
+        "kind": "card"
+      }
+    },
+    "Visions of Beyond": {
+      "oracle": {
+        "oracle_id": "c68964df-51ae-43b0-abea-74735016c13f",
+        "name": "Visions of Beyond",
+        "oracle_text": "Draw a card. If a graveyard has twenty or more cards in it, draw three cards instead.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/81/visions-of-beyond?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11865,
+        "iid": 10634,
+        "name": "Visions of Beyond",
+        "handler": "manalinkeh_card_visions_of_beyond",
+        "kind": "card"
+      }
+    }
+  }
+}

@@ -1,0 +1,551 @@
+{
+  "sources": {
+    "Scab-Clan Giant": {
+      "oracle": {
+        "oracle_id": "1c2c2329-fdae-4894-a43f-41fd91cfd2a8",
+        "name": "Scab-Clan Giant",
+        "oracle_text": "When this creature enters, it fights target creature an opponent controls chosen at random.",
+        "mana_cost": "{4}{R}{G}",
+        "type_line": "Creature — Giant Warrior",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Fight"
+        ],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/272/scab-clan-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13216,
+        "iid": 8278,
+        "name": "Scab-Clan Giant",
+        "handler": "manalinkeh_card_scab_clan_giant",
+        "kind": "card"
+      }
+    },
+    "Somberwald Stag": {
+      "oracle": {
+        "oracle_id": "b1b67851-23d3-4799-ab29-15bce7bb2c39",
+        "name": "Somberwald Stag",
+        "oracle_text": "When this creature enters, you may have it fight target creature you don't control.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Elk",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [
+          "Fight"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/431/somberwald-stag?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16189,
+        "iid": 16277,
+        "name": "Somberwald Stag",
+        "handler": "manalinkeh_card_somberwald_stag",
+        "kind": "card"
+      }
+    },
+    "Affectionate Indrik": {
+      "oracle": {
+        "oracle_id": "88aa032d-dc11-4cae-81f3-ce66353963e0",
+        "name": "Affectionate Indrik",
+        "oracle_text": "When this creature enters, you may have it fight target creature you don't control. (Each deals damage equal to its power to the other.)",
+        "mana_cost": "{5}{G}",
+        "type_line": "Creature — Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Fight"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/211/affectionate-indrik?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19278,
+        "iid": 19211,
+        "name": "Affectionate Indrik",
+        "handler": "manalinkeh_card_somberwald_stag",
+        "kind": "card"
+      }
+    },
+    "Kraul Harpooner": {
+      "oracle": {
+        "oracle_id": "332b6ed7-90de-46c0-85ad-1ad708b2c1e1",
+        "name": "Kraul Harpooner",
+        "oracle_text": "Reach\nUndergrowth — When this creature enters, choose up to one target creature you don't control with flying. This creature gets +X/+0 until end of turn, where X is the number of creature cards in your graveyard, then you may have this creature fight that creature.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Insect Warrior",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Reach",
+          "Fight",
+          "Undergrowth"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/167/kraul-harpooner?utm_source=api"
+      },
+      "registry": {
+        "csvid": 19414,
+        "iid": 19347,
+        "name": "Kraul Harpooner",
+        "handler": "manalinkeh_card_kraul_harpooner",
+        "kind": "card"
+      }
+    },
+    "Cartouche of Strength": {
+      "oracle": {
+        "oracle_id": "cba6563e-96e5-4cd3-bddf-0cf1368f9e15",
+        "name": "Cartouche of Strength",
+        "oracle_text": "Enchant creature you control\nWhen this Aura enters, you may have enchanted creature fight target creature an opponent controls. (Each deals damage equal to its power to the other.)\nEnchanted creature gets +1/+1 and has trample.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment — Aura Cartouche",
+        "keywords": [
+          "Fight",
+          "Enchant"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/akh/158/cartouche-of-strength?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16861,
+        "iid": 16955,
+        "name": "Cartouche of Strength",
+        "handler": "manalinkeh_card_cartouche_of_strength",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Dazzling Ramparts": {
+      "oracle": {
+        "oracle_id": "0527fc47-2bfc-4d02-90fa-5a1284f89a0a",
+        "name": "Dazzling Ramparts",
+        "oracle_text": "Defender\n{1}{W}, {T}: Tap target creature.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "7",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/6/dazzling-ramparts?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14247,
+        "iid": 2299,
+        "name": "Dazzling Ramparts",
+        "handler": "manalinkeh_card_dazzling_ramparts",
+        "kind": "card"
+      }
+    },
+    "Drift of Phantasms": {
+      "oracle": {
+        "oracle_id": "6ee51134-c4ad-4101-8ce2-23dde9359cd4",
+        "name": "Drift of Phantasms",
+        "oracle_text": "Defender (This creature can't attack.)\nFlying\nTransmute {1}{U}{U} ({1}{U}{U}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Spirit",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Defender",
+          "Transmute"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/42/drift-of-phantasms?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7828,
+        "iid": 2753,
+        "name": "Drift of Phantasms",
+        "handler": "manalinkeh_card_drift_of_phantasms",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Merfolk Mesmerist": {
+      "oracle": {
+        "oracle_id": "590d524f-278d-4cf4-ae3f-efcced4517b1",
+        "name": "Merfolk Mesmerist",
+        "oracle_text": "{U}, {T}: Target player mills two cards.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Merfolk Wizard",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m12/66/merfolk-mesmerist?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11828,
+        "iid": 6053,
+        "name": "Merfolk Mesmerist",
+        "handler": "manalinkeh_card_merfolk_mesmerist",
+        "kind": "card"
+      }
+    },
+    "Millstone": {
+      "oracle": {
+        "oracle_id": "3212e47a-5492-4c50-9d4a-6ea562f1a6e1",
+        "name": "Millstone",
+        "oracle_text": "{2}, {T}: Target player mills two cards.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/242/millstone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 507,
+        "iid": 6116,
+        "name": "Millstone",
+        "handler": "manalinkeh_card_millstone",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Orcish Artillery": {
+      "oracle": {
+        "oracle_id": "c000811e-bde7-4840-a3bb-9714d5c977eb",
+        "name": "Orcish Artillery",
+        "oracle_text": "{T}: This creature deals 2 damage to any target and 3 damage to you.",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Orc Warrior",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/220/orcish-artillery?utm_source=api"
+      },
+      "registry": {
+        "csvid": 177,
+        "iid": 6870,
+        "name": "Orcish Artillery",
+        "handler": "manalinkeh_card_orcish_artillery",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Prodigal Sorcerer": {
+      "oracle": {
+        "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+        "name": "Prodigal Sorcerer",
+        "oracle_text": "{T}: This creature deals 1 damage to any target.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard Sorcerer",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/67/prodigal-sorcerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 193,
+        "iid": 7403,
+        "name": "Prodigal Sorcerer",
+        "handler": "manalinkeh_card_prodigal_sorcerer",
+        "kind": "card"
+      }
+    },
+    "Shivan Dragon": {
+      "oracle": {
+        "oracle_id": "711eea87-0fa3-46e0-a42b-fa5a86455f04",
+        "name": "Shivan Dragon",
+        "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/763/shivan-dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 224,
+        "iid": 8648,
+        "name": "Shivan Dragon",
+        "handler": "manalinkeh_card_furnace_whelp",
+        "kind": "card"
+      }
+    },
+    "Slippery Bogle": {
+      "oracle": {
+        "oracle_id": "f64878c1-1fba-44f7-a24f-d24bef2e03ae",
+        "name": "Slippery Bogle",
+        "oracle_text": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)",
+        "mana_cost": "{G/U}",
+        "type_line": "Creature — Beast",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Hexproof"
+        ],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/223/slippery-bogle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9870,
+        "iid": 8911,
+        "name": "Slippery Bogle",
+        "handler": "manalinkeh_card_slippery_bogle",
+        "kind": "card"
+      }
+    },
+    "Thieving Magpie": {
+      "oracle": {
+        "oracle_id": "2f074636-6a36-46a3-b872-add79e19aa8b",
+        "name": "Thieving Magpie",
+        "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever this creature deals damage to an opponent, draw a card.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/68/thieving-magpie?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1172,
+        "iid": 9886,
+        "name": "Thieving Magpie",
+        "handler": "manalinkeh_card_thieving_magpie",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Warden of Evos Isle": {
+      "oracle": {
+        "oracle_id": "f424b5e9-8f02-4491-a7d8-c7e088611c6a",
+        "name": "Warden of Evos Isle",
+        "oracle_text": "Flying\nCreature spells with flying you cast cost {1} less to cast.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Bird Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/106/warden-of-evos-isle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13359,
+        "iid": 10820,
+        "name": "Warden of Evos Isle",
+        "handler": "manalinkeh_card_warden_of_evos_isle",
+        "kind": "card"
+      }
+    }
+  }
+}

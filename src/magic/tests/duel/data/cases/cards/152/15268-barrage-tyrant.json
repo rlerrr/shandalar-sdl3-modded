@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Barrage Tyrant",
+  "csvid": 15268,
+  "recipes": [
+    {
+      "family": "devoid_scions_and_sacrifice",
+      "version": 2,
+      "params": {
+        "role": "tyrant",
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Devoid (This card has no color.)\n{2}{R}, Sacrifice another colorless creature: This creature deals damage equal to the sacrificed creature's power to any target.",
+      "variants": [
+        "own_power_0",
+        "scion_power_0",
+        "colored_denied_0",
+        "creature_target_0",
+        "replay_0",
+        "own_power_1",
+        "scion_power_1",
+        "colored_denied_1",
+        "creature_target_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

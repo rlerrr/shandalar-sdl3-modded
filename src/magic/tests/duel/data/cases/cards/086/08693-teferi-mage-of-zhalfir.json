@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "csvid": 8693,
+  "card": "Teferi, Mage of Zhalfir",
+  "recipes": [
+    {
+      "family": "flash_remaining_casting_and_counterability",
+      "version": 2,
+      "params": {
+        "csvid": 8693,
+        "mana": [
+          2,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          3,
+          4
+        ]
+      },
+      "oracle_text": "Flash\nCreature cards you own that aren't on the battlefield have flash.\nEach opponent can cast spells only any time they could cast a sorcery.",
+      "variants": [
+        "friendly_creature_0",
+        "friendly_creature_1",
+        "foe_main_0",
+        "foe_main_1",
+        "foe_offturn_0",
+        "foe_offturn_1",
+        "foe_pending_0",
+        "foe_pending_1",
+        "foe_after_bounce_0",
+        "foe_after_bounce_1"
+      ]
+    }
+  ]
+}

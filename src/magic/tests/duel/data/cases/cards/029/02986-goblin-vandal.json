@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "csvid": 2986,
+  "card": "Goblin Vandal",
+  "recipes": [
+    {
+      "family": "attack_follow_on_sabotage_and_poison",
+      "version": 2,
+      "params": {
+        "csvid": 2986,
+        "printed_cost": "{R}",
+        "keywords": []
+      },
+      "oracle_text": "Whenever this creature attacks and isn't blocked, you may pay {R}. If you do, destroy target artifact defending player controls and this creature assigns no combat damage this turn.",
+      "variants": [
+        "paid_0",
+        "decline_0",
+        "wrong_color_0",
+        "own_artifact_0",
+        "blocked_0",
+        "indestructible_0",
+        "once_0",
+        "paid_1",
+        "decline_1",
+        "wrong_color_1",
+        "own_artifact_1",
+        "blocked_1",
+        "indestructible_1",
+        "once_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Golgari Charm",
+  "csvid": 12731,
+  "recipes": [
+    {
+      "family": "regeneration_spells_and_auras",
+      "version": 2,
+      "params": {
+        "csvid": 12731,
+        "printed_cost": "{B}{G}",
+        "choices": [
+          "weaken_0",
+          "weaken_1",
+          "enchantment_0",
+          "enchantment_1",
+          "regenerate_0",
+          "regenerate_1"
+        ]
+      },
+      "oracle_text": "Choose one —\n• All creatures get -1/-1 until end of turn.\n• Destroy target enchantment.\n• Regenerate each creature you control.",
+      "variants": [
+        "weaken_0",
+        "weaken_1",
+        "enchantment_0",
+        "enchantment_1",
+        "regenerate_0",
+        "regenerate_1"
+      ]
+    }
+  ]
+}

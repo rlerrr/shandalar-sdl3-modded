@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 6157,
+  "card": "Goblin Pyromancer",
+  "recipes": [
+    {
+      "family": "entry_interaction_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 6157,
+        "printed_cost": "{3}{R}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, Goblin creatures get +3/+0 until end of turn.\nAt the beginning of the end step, destroy all Goblins.",
+      "variants": [
+        "both_0",
+        "source_removed_0",
+        "kindred_0",
+        "both_1",
+        "source_removed_1",
+        "kindred_1"
+      ]
+    }
+  ]
+}

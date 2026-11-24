@@ -1,0 +1,445 @@
+{
+  "sources": {
+    "Gempalm Avenger": {
+      "oracle_id": "cb9e6860-591f-4758-aaa3-14efa0a775f5",
+      "name": "Gempalm Avenger",
+      "oracle_text": "Cycling {2}{W} ({2}{W}, Discard this card: Draw a card.)\nWhen you cycle this card, Soldier creatures get +1/+1 and gain first strike until end of turn.",
+      "mana_cost": "{5}{W}",
+      "type_line": "Creature — Human Soldier",
+      "power": "3",
+      "toughness": "5",
+      "keywords": [
+        "Cycling"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 6.0,
+      "layout": "normal"
+    },
+    "Gempalm Incinerator": {
+      "oracle_id": "467ea3e3-7767-405a-9d1a-8fa5de696376",
+      "name": "Gempalm Incinerator",
+      "oracle_text": "Cycling {1}{R} ({1}{R}, Discard this card: Draw a card.)\nWhen you cycle this card, you may have it deal X damage to target creature, where X is the number of Goblins on the battlefield.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Goblin",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [
+        "Cycling"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Gempalm Polluter": {
+      "oracle_id": "bd532f8d-789f-4ee1-a2f3-ae30e8282c76",
+      "name": "Gempalm Polluter",
+      "oracle_text": "Cycling {B}{B} ({B}{B}, Discard this card: Draw a card.)\nWhen you cycle this card, you may have target player lose life equal to the number of Zombies on the battlefield.",
+      "mana_cost": "{5}{B}",
+      "type_line": "Creature — Zombie",
+      "power": "4",
+      "toughness": "3",
+      "keywords": [
+        "Cycling"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 6.0,
+      "layout": "normal"
+    },
+    "Gempalm Sorcerer": {
+      "oracle_id": "c3162232-b713-44be-b2af-29d801279ab2",
+      "name": "Gempalm Sorcerer",
+      "oracle_text": "Cycling {2}{U} ({2}{U}, Discard this card: Draw a card.)\nWhen you cycle this card, Wizard creatures gain flying until end of turn.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Human Wizard Sorcerer",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Cycling"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Gempalm Strider": {
+      "oracle_id": "48792146-e20c-4d93-83af-f746069fc6f1",
+      "name": "Gempalm Strider",
+      "oracle_text": "Cycling {2}{G}{G} ({2}{G}{G}, Discard this card: Draw a card.)\nWhen you cycle this card, Elf creatures get +2/+2 until end of turn.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Elf",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Cycling"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    }
+  },
+  "witnesses": {
+    "Boggart Shenanigans": {
+      "oracle_id": "997d2f38-5a50-451e-bd48-e36dcb24d967",
+      "name": "Boggart Shenanigans",
+      "oracle_text": "Whenever another Goblin you control is put into a graveyard from the battlefield, you may have this enchantment deal 1 damage to target player or planeswalker.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Kindred Enchantment — Goblin",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Crafty Pathmage": {
+      "oracle_id": "c4020178-71d9-4363-a0bd-b9a7eecd5d02",
+      "name": "Crafty Pathmage",
+      "oracle_text": "{T}: Target creature with power 2 or less can't be blocked this turn.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Human Wizard",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Elite Vanguard": {
+      "oracle_id": "b3b9a87d-cb95-435c-90b6-037406cab32e",
+      "name": "Elite Vanguard",
+      "oracle_text": "",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Soldier",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Elvish Warrior": {
+      "oracle_id": "da587161-da7e-48ae-8af6-7f02ee71afd8",
+      "name": "Elvish Warrior",
+      "oracle_text": "",
+      "mana_cost": "{G}{G}",
+      "type_line": "Creature — Elf Warrior",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Expunge": {
+      "oracle_id": "4b1fee86-360d-41d8-9238-eff216376732",
+      "name": "Expunge",
+      "oracle_text": "Destroy target nonartifact, nonblack creature. It can't be regenerated.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "mana_cost": "{2}{B}",
+      "type_line": "Instant",
+      "keywords": [
+        "Cycling"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Giant Spider": {
+      "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+      "name": "Giant Spider",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Spider",
+      "power": "2",
+      "toughness": "4",
+      "keywords": [
+        "Reach"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Goblin Piker": {
+      "oracle_id": "50608184-90d3-43d2-a221-deb186c78323",
+      "name": "Goblin Piker",
+      "oracle_text": "",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Goblin Warrior",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Horizon Chimera": {
+      "oracle_id": "a1ed77f9-51ac-4cca-a9ce-d3874f3948ad",
+      "name": "Horizon Chimera",
+      "oracle_text": "Flash\nFlying, trample\nWhenever you draw a card, you gain 1 life.",
+      "mana_cost": "{2}{G}{U}",
+      "type_line": "Creature — Chimera",
+      "power": "3",
+      "toughness": "2",
+      "keywords": [
+        "Flying",
+        "Trample",
+        "Flash"
+      ],
+      "colors": [
+        "G",
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Mothdust Changeling": {
+      "oracle_id": "52237e6b-19f6-405c-a668-545c4ccb1b6d",
+      "name": "Mothdust Changeling",
+      "oracle_text": "Changeling (This card is every creature type.)\nTap an untapped creature you control: This creature gains flying until end of turn.",
+      "mana_cost": "{U}",
+      "type_line": "Creature — Shapeshifter",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Changeling"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Scathe Zombies": {
+      "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+      "name": "Scathe Zombies",
+      "oracle_text": "",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Zombie",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Tireless Tribe": {
+      "oracle_id": "5dfbcdb4-d2ad-477d-b37d-db4725410b27",
+      "name": "Tireless Tribe",
+      "oracle_text": "Discard a card: This creature gets +0/+4 until end of turn.",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Nomad",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature — Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal"
+    }
+  },
+  "handlers": {
+    "Boggart Shenanigans": "manalinkeh_card_boggart_shenanigans",
+    "Crafty Pathmage": "manalinkeh_card_dwarven_warriors",
+    "Elite Vanguard": "card_dummy",
+    "Elvish Warrior": "card_dummy",
+    "Expunge": "manalinkeh_card_expunge",
+    "Forest": "manalinkeh_plain_mana_producer",
+    "Gempalm Avenger": "manalinkeh_card_gempalm_avenger",
+    "Gempalm Incinerator": "manalinkeh_card_gempalm_incinerator",
+    "Gempalm Polluter": "manalinkeh_card_gempalm_polluter",
+    "Gempalm Sorcerer": "manalinkeh_card_gempalm_sorcerer",
+    "Gempalm Strider": "manalinkeh_card_gempalm_strider",
+    "Giant Spider": "card_dummy",
+    "Goblin Piker": "card_dummy",
+    "Grizzly Bears": "card_dummy",
+    "Hill Giant": "card_dummy",
+    "Horizon Chimera": "manalinkeh_card_horizon_chimera",
+    "Island": "manalinkeh_plain_mana_producer",
+    "Mothdust Changeling": "manalinkeh_card_mothdust_changeling",
+    "Mountain": "manalinkeh_plain_mana_producer",
+    "Plains": "manalinkeh_plain_mana_producer",
+    "Scathe Zombies": "card_scathe_zombies",
+    "Tireless Tribe": "manalinkeh_card_tireless_tribe",
+    "Ornithopter": "card_dummy"
+  }
+}

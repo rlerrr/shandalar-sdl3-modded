@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Vine Dryad",
+  "csvid": 4648,
+  "recipes": [
+    {
+      "family": "flash_remaining_alternate_costs_and_modes",
+      "version": 2,
+      "params": {
+        "csvid": 4648,
+        "mana": [
+          3,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "You may exile a green card from your hand rather than pay this spell's mana cost.\nFlash\nForestwalk (This creature can't be blocked as long as defending player controls a Forest.)",
+      "variants": [
+        "pitch_0",
+        "pitch_1",
+        "paid_over_pitch_0",
+        "paid_over_pitch_1",
+        "wrong_pitch_color_0",
+        "wrong_pitch_color_1",
+        "forestwalk_0",
+        "forestwalk_1",
+        "no_forest_0",
+        "no_forest_1"
+      ]
+    }
+  ]
+}

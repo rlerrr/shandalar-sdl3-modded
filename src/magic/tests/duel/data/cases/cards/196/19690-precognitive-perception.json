@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Precognitive Perception",
+  "csvid": 19690,
+  "recipes": [
+    {
+      "family": "library_scry_before_draw",
+      "version": 2,
+      "params": {
+        "csvid": 19690,
+        "printed_cost": "{3}{U}{U}",
+        "choices": [
+          "own_main_0",
+          "own_main_1",
+          "offturn_0",
+          "offturn_1",
+          "own_combat_0",
+          "own_combat_1"
+        ]
+      },
+      "oracle_text": "Draw three cards.\nAddendum — If you cast this spell during your main phase, instead scry 3, then draw three cards.",
+      "variants": [
+        "own_main_0",
+        "own_main_1",
+        "offturn_0",
+        "offturn_1",
+        "own_combat_0",
+        "own_combat_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Deathpact Angel",
+  "csvid": 12920,
+  "recipes": [
+    {
+      "family": "departure_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 12920,
+        "mana_cost": "{3}{W}{B}{B}"
+      },
+      "oracle_text": "Flying\nWhen this creature dies, create a 1/1 white and black Cleric creature token. It has \"{3}{W}{B}{B}, {T}, Sacrifice this token: Return a card named Deathpact Angel from your graveyard to the battlefield.\"",
+      "variants": [
+        "return_0",
+        "return_1",
+        "no_angel_0",
+        "no_angel_1",
+        "exile_0",
+        "exile_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

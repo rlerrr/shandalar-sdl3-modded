@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Wall of Shards",
+  "csvid": 8469,
+  "recipes": [
+    {
+      "family": "cumulative_upkeep_nonmana_payment",
+      "version": 2,
+      "params": {
+        "csvid": 8469,
+        "payment": "An opponent gains 1 life.",
+        "casting_cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Defender, flying\nCumulative upkeep—An opponent gains 1 life. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)",
+      "variants": [
+        "pay_twice_defend_0",
+        "pay_twice_defend_1",
+        "decline_after_one_0",
+        "decline_after_one_1",
+        "prevent_gain_0",
+        "prevent_gain_1"
+      ]
+    }
+  ]
+}

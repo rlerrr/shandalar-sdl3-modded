@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Cruel Finality",
+  "csvid": 16682,
+  "recipes": [
+    {
+      "family": "library_scry_targeted_spells",
+      "version": 2,
+      "params": {
+        "csvid": 16682,
+        "cost": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scry": 1
+      },
+      "oracle_text": "Target creature gets -2/-2 until end of turn. Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "variants": [
+        "survives_0",
+        "survives_1",
+        "lethal_0",
+        "lethal_1",
+        "target_lost_0",
+        "target_lost_1",
+        "empty_0",
+        "empty_1"
+      ]
+    }
+  ]
+}

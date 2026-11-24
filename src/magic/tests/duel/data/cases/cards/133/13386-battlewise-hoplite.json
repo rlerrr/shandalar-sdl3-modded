@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "csvid": 13386,
+  "card": "Battlewise Hoplite",
+  "recipes": [
+    {
+      "family": "heroic_counter_riders",
+      "version": 2,
+      "params": {
+        "effect": "counter_scry",
+        "clauses": [
+          "Heroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on this creature, then scry 1. (To scry 1, look at the top card of your library, then you may put that card on the bottom.)"
+        ],
+        "price": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "base": [
+          2,
+          2
+        ]
+      },
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on this creature, then scry 1. (To scry 1, look at the top card of your library, then you may put that card on the bottom.)",
+      "variants": [
+        "own_0",
+        "own_1",
+        "opponent_0",
+        "opponent_1",
+        "elsewhere_0",
+        "elsewhere_1",
+        "scry_bottom_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "False Memories",
+  "csvid": 5806,
+  "recipes": [
+    {
+      "family": "mill_recursion_and_zones",
+      "version": 2,
+      "params": {
+        "csvid": 5806,
+        "cost": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Mill seven cards. At the beginning of the next end step, exile seven cards from your graveyard.",
+      "variants": [
+        "fresh_seven_0",
+        "fresh_seven_1",
+        "old_and_source_0",
+        "old_and_source_1",
+        "short_all_0",
+        "short_all_1",
+        "opposing_end_0",
+        "opposing_end_1"
+      ]
+    }
+  ]
+}

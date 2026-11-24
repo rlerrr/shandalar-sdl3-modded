@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Ophiomancer",
+  "csvid": 13630,
+  "recipes": [
+    {
+      "family": "upkeep_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 13630,
+        "mana_cost": "{2}{B}"
+      },
+      "oracle_text": "At the beginning of each upkeep, if you control no Snakes, create a 1/1 black Snake creature token with deathtouch.",
+      "variants": [
+        "both_upkeeps_0",
+        "both_upkeeps_1",
+        "own_snake_0",
+        "own_snake_1",
+        "foe_snake_0",
+        "foe_snake_1",
+        "touch_0",
+        "touch_1"
+      ]
+    }
+  ]
+}

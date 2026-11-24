@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 16815,
+  "card": "Treasure Keeper",
+  "recipes": [
+    {
+      "family": "departure_counters_and_search",
+      "version": 2,
+      "params": {
+        "csvid": 16815,
+        "printed_cost": "{4}"
+      },
+      "oracle_text": "When this creature dies, reveal cards from the top of your library until you reveal a nonland card with mana value 3 or less. You may cast that card without paying its mana cost. Put all revealed cards not cast this way on the bottom of your library in a random order.",
+      "variants": [
+        "cast_0",
+        "decline_0",
+        "whiff_0",
+        "large_0",
+        "cast_1",
+        "whiff_1",
+        "large_1"
+      ]
+    }
+  ]
+}

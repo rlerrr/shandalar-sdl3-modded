@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "csvid": 11108,
+  "card": "Conundrum Sphinx",
+  "recipes": [
+    {
+      "family": "attack_trigger_zones_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 11108,
+        "cost": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flying\nWhenever this creature attacks, each player chooses a card name. Then each player reveals the top card of their library. If the card a player revealed has the name they chose, that player puts it into their hand. If it doesn't, that player puts it on the bottom of their library.",
+      "variants": [
+        "match_0",
+        "match_1",
+        "miss_0",
+        "miss_1",
+        "flight_0",
+        "flight_1",
+        "other_attacks_0",
+        "other_attacks_1",
+        "short_fee_0",
+        "short_fee_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "csvid": 15029,
+  "card": "Silumgar Monument",
+  "recipes": [
+    {
+      "family": "dual_mana_artifact_animation",
+      "version": 2,
+      "oracle_text": "{T}: Add {U} or {B}.\n{4}{U}{B}: This artifact becomes a 4/4 blue and black Dragon artifact creature with flying until end of turn.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "colors": [
+            "U",
+            "B"
+          ],
+          "fee": [
+            4,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "cast_mana": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "power": 4,
+          "toughness": 4,
+          "creature_type": "Dragon",
+          "extra": "flying",
+          "clauses": [
+            "{T}: Add {U} or {B}.",
+            "{4}{U}{B}: This artifact becomes a 4/4 blue and black Dragon artifact creature with flying until end of turn."
+          ]
+        }
+      },
+      "variants": [
+        "mana_first_0",
+        "mana_second_0",
+        "entry_mana_0",
+        "wrong_mana_output_0",
+        "cast_unfunded_0",
+        "cast_countered_0",
+        "animate_0",
+        "cleanup_0",
+        "offturn_0",
+        "tapped_animate_0",
+        "short_fee_0",
+        "wrong_fee_0",
+        "ready_replay_0",
+        "pending_replay_0",
+        "fresh_attack_0",
+        "attack_0",
+        "destroy_animated_0",
+        "keyword_combat_0",
+        "reach_block_0",
+        "mana_first_1",
+        "mana_second_1",
+        "entry_mana_1",
+        "wrong_mana_output_1",
+        "cast_unfunded_1",
+        "cast_countered_1",
+        "animate_1",
+        "cleanup_1",
+        "offturn_1",
+        "tapped_animate_1",
+        "short_fee_1",
+        "wrong_fee_1",
+        "ready_replay_1",
+        "pending_replay_1",
+        "fresh_attack_1",
+        "attack_1",
+        "destroy_animated_1",
+        "keyword_combat_1",
+        "reach_block_1"
+      ]
+    }
+  ]
+}

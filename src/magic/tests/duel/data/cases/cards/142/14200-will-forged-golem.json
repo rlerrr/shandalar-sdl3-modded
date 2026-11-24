@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Will-Forged Golem",
+  "csvid": 14200,
+  "recipes": [
+    {
+      "family": "convoke_fixed_basics",
+      "version": 2,
+      "params": {
+        "csvid": 14200,
+        "cost": [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          4,
+          4
+        ],
+        "flying": false,
+        "clauses": [
+          "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)"
+        ],
+        "modes": [
+          "normal",
+          "generic_fresh",
+          "tapped_denied",
+          "opposing_denied",
+          "noncreature_denied",
+          "convoke_only",
+          "pending_replay"
+        ]
+      },
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)",
+      "variants": [
+        "normal_0",
+        "normal_1",
+        "generic_fresh_0",
+        "generic_fresh_1",
+        "tapped_denied_0",
+        "tapped_denied_1",
+        "opposing_denied_0",
+        "opposing_denied_1",
+        "noncreature_denied_0",
+        "noncreature_denied_1",
+        "convoke_only_0",
+        "convoke_only_1",
+        "pending_replay_0",
+        "pending_replay_1"
+      ]
+    }
+  ]
+}

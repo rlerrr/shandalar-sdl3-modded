@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Childhood Horror",
+  "csvid": 5518,
+  "recipes": [
+    {
+      "family": "threshold_combat_static",
+      "version": 2,
+      "params": {
+        "csvid": 5518,
+        "mana": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power_delta": 2,
+        "toughness_delta": 2
+      },
+      "oracle_text": "Flying\nThreshold — As long as there are seven or more cards in your graveyard, this creature gets +2/+2 and can't block.",
+      "variants": [
+        "six_0",
+        "six_1",
+        "seven_0",
+        "seven_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "flying_attack_0",
+        "flying_attack_1",
+        "short_funding_0",
+        "short_funding_1",
+        "countered_0",
+        "countered_1",
+        "lose_threshold_0",
+        "lose_threshold_1",
+        "replay_0",
+        "replay_1",
+        "gain_threshold_0",
+        "gain_threshold_1"
+      ]
+    }
+  ]
+}

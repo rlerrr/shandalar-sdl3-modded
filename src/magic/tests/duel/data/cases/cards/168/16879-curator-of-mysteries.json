@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "csvid": 16879,
+  "card": "Curator of Mysteries",
+  "recipes": [
+    {
+      "family": "library_scry_triggers",
+      "version": 2,
+      "params": {
+        "csvid": 16879,
+        "mana": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "stats": [
+          4,
+          4
+        ]
+      },
+      "oracle_text": "Flying\nWhenever you cycle or discard another card, scry 1.\nCycling {U} ({U}, Discard this card: Draw a card.)",
+      "variants": [
+        "self_cycle_0",
+        "self_cycle_1",
+        "other_cycle_0",
+        "other_cycle_1",
+        "own_discard_0",
+        "own_discard_1",
+        "foe_discard_0",
+        "foe_discard_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

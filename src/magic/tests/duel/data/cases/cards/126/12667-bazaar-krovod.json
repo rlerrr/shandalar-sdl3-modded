@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Bazaar Krovod",
+  "csvid": 12667,
+  "recipes": [
+    {
+      "family": "attack_trigger_block_and_target",
+      "version": 2,
+      "params": {
+        "csvid": 12667,
+        "cost": "{4}{W}",
+        "choices": [
+          "pair_0",
+          "pair_1",
+          "solo_0",
+          "solo_1",
+          "ally_attacks_0",
+          "ally_attacks_1"
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks, another target attacking creature gets +0/+2 until end of turn. Untap that creature.",
+      "variants": [
+        "pair_0",
+        "pair_1",
+        "solo_0",
+        "solo_1",
+        "ally_attacks_0",
+        "ally_attacks_1"
+      ]
+    }
+  ]
+}

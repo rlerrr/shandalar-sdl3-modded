@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Swift Kick",
+  "csvid": 14398,
+  "recipes": [
+    {
+      "family": "fight_targeted_spells",
+      "version": 2,
+      "params": {
+        "csvid": 14398,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "timing": "Instant",
+        "boost": [
+          1,
+          0
+        ],
+        "clauses": [
+          "Target creature you control gets +1/+0 until end of turn. It fights target creature you don't control."
+        ],
+        "modes": [
+          "mutual",
+          "enemy_bounced",
+          "own_bounced",
+          "no_opposing_target",
+          "offturn_response",
+          "through_fog"
+        ]
+      },
+      "oracle_text": "Target creature you control gets +1/+0 until end of turn. It fights target creature you don't control.",
+      "variants": [
+        "mutual_0",
+        "mutual_1",
+        "enemy_bounced_0",
+        "enemy_bounced_1",
+        "own_bounced_0",
+        "own_bounced_1",
+        "no_opposing_target_0",
+        "no_opposing_target_1",
+        "offturn_response_0",
+        "offturn_response_1",
+        "through_fog_0",
+        "through_fog_1"
+      ]
+    }
+  ]
+}

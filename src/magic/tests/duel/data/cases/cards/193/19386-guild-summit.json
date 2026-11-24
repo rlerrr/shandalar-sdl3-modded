@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Guild Summit",
+  "csvid": 19386,
+  "recipes": [
+    {
+      "family": "entry_interaction_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 19386,
+        "printed_mana": "{2}{U}",
+        "rules": "When this enchantment enters, you may tap any number of untapped Gates you control. Draw a card for each Gate tapped this way.\nWhenever a Gate you control enters, draw a card."
+      },
+      "oracle_text": "When this enchantment enters, you may tap any number of untapped Gates you control. Draw a card for each Gate tapped this way.\nWhenever a Gate you control enters, draw a card.",
+      "variants": [
+        "tap_one_0",
+        "tap_one_1",
+        "tap_none_0",
+        "tap_none_1"
+      ]
+    }
+  ]
+}

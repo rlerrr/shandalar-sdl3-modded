@@ -1,0 +1,383 @@
+{
+  "sources": {
+    "Gruul Ragebeast": {
+      "oracle": {
+        "oracle_id": "e5fa93a3-0b2b-4477-ad3f-4fc1b325ca19",
+        "name": "Gruul Ragebeast",
+        "oracle_text": "Whenever this creature or another creature you control enters, that creature fights target creature an opponent controls.",
+        "mana_cost": "{5}{R}{G}",
+        "type_line": "Creature — Beast",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Fight"
+        ],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/170/gruul-ragebeast?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12966,
+        "iid": 4281,
+        "name": "Gruul Ragebeast",
+        "handler": "manalinkeh_card_gruul_ragebeast",
+        "kind": "card"
+      }
+    },
+    "Frontier Siege": {
+      "oracle": {
+        "oracle_id": "4cfaa5cf-cc3d-49a7-9544-38a8bb7e9ec1",
+        "name": "Frontier Siege",
+        "oracle_text": "As this enchantment enters, choose Khans or Dragons.\n• Khans — At the beginning of each of your main phases, add {G}{G}.\n• Dragons — Whenever a creature you control with flying enters, you may have it fight target creature you don't control.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Fight"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/256/frontier-siege?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14555,
+        "iid": 11291,
+        "name": "Frontier Siege",
+        "handler": "manalinkeh_card_frontier_siege",
+        "kind": "card"
+      }
+    },
+    "Temur War Shaman": {
+      "oracle": {
+        "oracle_id": "fb683e18-50b8-4821-9a1a-86c6dea63ac9",
+        "name": "Temur War Shaman",
+        "oracle_text": "When this creature enters, manifest the top card of your library. (Put that card onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)\nWhenever a permanent you control is turned face up, if it's a creature, you may have it fight target creature you don't control.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Human Shaman",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Manifest",
+          "Fight"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/200/temur-war-shaman?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14644,
+        "iid": 11379,
+        "name": "Temur War Shaman",
+        "handler": "manalinkeh_card_temur_war_shaman",
+        "kind": "card"
+      }
+    },
+    "Foe-Razer Regent": {
+      "oracle": {
+        "oracle_id": "e7dd3e2c-34a5-4097-b6d1-2ccd097fe57f",
+        "name": "Foe-Razer Regent",
+        "oracle_text": "Flying\nWhen this creature enters, you may have it fight target creature you don't control.\nWhenever a creature you control fights, put two +1/+1 counters on it at the beginning of the next end step.",
+        "mana_cost": "{5}{G}{G}",
+        "type_line": "Creature — Dragon",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Fight"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/187/foe-razer-regent?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14916,
+        "iid": 12670,
+        "name": "Foe-Razer Regent",
+        "handler": "manalinkeh_card_foe_razer_regent",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Air Elemental": {
+      "oracle": {
+        "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+        "name": "Air Elemental",
+        "oracle_text": "Flying",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/44/air-elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 0,
+        "iid": 298,
+        "name": "Air Elemental",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Craw Wurm": {
+      "oracle": {
+        "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+        "name": "Craw Wurm",
+        "oracle_text": "",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "6",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/173/craw-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 49,
+        "iid": 2032,
+        "name": "Craw Wurm",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Glacial Stalker": {
+      "oracle": {
+        "oracle_id": "49d06291-c8cb-4e22-b178-d0598582b2ee",
+        "name": "Glacial Stalker",
+        "oracle_text": "Morph {4}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+        "mana_cost": "{5}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/41/glacial-stalker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14275,
+        "iid": 3911,
+        "name": "Glacial Stalker",
+        "handler": "manalinkeh_card_glacial_stalker",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Prey Upon": {
+      "oracle": {
+        "oracle_id": "b3c12848-528d-4005-878f-4f950a07240a",
+        "name": "Prey Upon",
+        "oracle_text": "Target creature you control fights target creature you don't control. (Each deals damage equal to its power to the other.)",
+        "mana_cost": "{G}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Fight"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/178/prey-upon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12045,
+        "iid": 7347,
+        "name": "Prey Upon",
+        "handler": "manalinkeh_card_prey_upon",
+        "kind": "card"
+      }
+    }
+  },
+  "native_face_down_observer": {
+    "csvid": 13252,
+    "iid": 3230,
+    "name": "Face-Down Creature",
+    "handler": "manalinkeh_card_face_down_creature",
+    "kind": "card"
+  }
+}

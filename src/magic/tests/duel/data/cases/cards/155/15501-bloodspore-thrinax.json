@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Bloodspore Thrinax",
+  "csvid": 15501,
+  "recipes": [
+    {
+      "family": "devour_permanent_rewards",
+      "version": 2,
+      "params": {
+        "reward": "shared_counters",
+        "multiplier": 1,
+        "keywords": [],
+        "mana": [
+          2,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 2
+      },
+      "oracle_text": "Devour 1 (As this creature enters, you may sacrifice any number of creatures. It enters with that many +1/+1 counters on it.)\nEach other creature you control enters with an additional X +1/+1 counters on it, where X is the number of +1/+1 counters on this creature.",
+      "variants": [
+        "none_0",
+        "paid_one_0",
+        "wrong_color_0",
+        "countered_0",
+        "snapshot_0",
+        "friendly_entry_0",
+        "enemy_entry_0",
+        "growth_entry_0",
+        "zero_entry_0",
+        "none_1",
+        "paid_one_1",
+        "wrong_color_1",
+        "countered_1",
+        "snapshot_1",
+        "friendly_entry_1",
+        "enemy_entry_1",
+        "growth_entry_1",
+        "zero_entry_1",
+        "paid_two_0",
+        "partial_0",
+        "decline_0",
+        "noncast_entry_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Aven Mindcensor",
+  "csvid": 8889,
+  "recipes": [
+    {
+      "family": "flash_remaining_rule_effects",
+      "version": 2,
+      "params": {
+        "csvid": 8889,
+        "printed_mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "rules": "Flash\nFlying\nIf an opponent would search a library, that player searches the top four cards of that library instead."
+      },
+      "oracle_text": "Flash\nFlying\nIf an opponent would search a library, that player searches the top four cards of that library instead.",
+      "variants": [
+        "opposing_search_0",
+        "opposing_search_1",
+        "own_search_0",
+        "own_search_1"
+      ]
+    }
+  ]
+}

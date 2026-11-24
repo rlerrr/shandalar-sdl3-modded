@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Mana Vault",
+  "csvid": 157,
+  "recipes": [
+    {
+      "family": "draw_step_damage_and_upkeep",
+      "version": 2,
+      "params": {
+        "csvid": 157,
+        "printed_cost": "{1}"
+      },
+      "oracle_text": "This artifact doesn't untap during your untap step.\nAt the beginning of your upkeep, you may pay {4}. If you do, untap this artifact.\nAt the beginning of your draw step, if this artifact is tapped, it deals 1 damage to you.\n{T}: Add {C}{C}{C}.",
+      "variants": [
+        "tapped_0",
+        "untapped_0",
+        "short_0",
+        "pay_0",
+        "prevention_0",
+        "decline_0",
+        "tapped_1",
+        "untapped_1",
+        "short_1",
+        "pay_1",
+        "prevention_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Midnight Oil",
+  "csvid": 16452,
+  "recipes": [
+    {
+      "family": "draw_step_discard_and_hand_size",
+      "version": 2,
+      "params": {
+        "csvid": 16452
+      },
+      "oracle_text": "This enchantment enters with seven hour counters on it.\nAt the beginning of your draw step, draw an additional card and remove two hour counters from this enchantment.\nYour maximum hand size is equal to the number of hour counters on this enchantment.\nWhenever you discard a card, you lose 1 life.",
+      "variants": [
+        "scope_0",
+        "scope_1",
+        "removed_0",
+        "removed_1",
+        "discard_loss_0",
+        "discard_loss_1",
+        "discard_foe_0",
+        "discard_foe_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

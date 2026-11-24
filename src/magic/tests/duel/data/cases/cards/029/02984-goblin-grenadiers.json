@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 2984,
+  "card": "Goblin Grenadiers",
+  "recipes": [
+    {
+      "family": "attack_follow_on_sabotage_and_poison",
+      "version": 2,
+      "params": {
+        "csvid": 2984,
+        "printed_cost": "{3}{R}",
+        "keywords": []
+      },
+      "oracle_text": "Whenever this creature attacks and isn't blocked, you may sacrifice it. If you do, destroy target creature and target land.",
+      "variants": [
+        "foe_targets_0",
+        "own_targets_0",
+        "split_targets_0",
+        "missing_land_0",
+        "decline_0",
+        "blocked_0",
+        "foe_targets_1",
+        "own_targets_1",
+        "split_targets_1",
+        "missing_land_1",
+        "decline_1",
+        "blocked_1"
+      ]
+    }
+  ]
+}

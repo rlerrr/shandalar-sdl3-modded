@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Wanderwine Hub",
+  "csvid": 9304,
+  "recipes": [
+    {
+      "family": "hand_reveal_dual_land",
+      "version": 2,
+      "oracle_text": "As this land enters, you may reveal a Merfolk card from your hand. If you don't, this land enters tapped.\n{T}: Add {W} or {U}.",
+      "params": {
+        "reveal_kind": "creature_type",
+        "subtypes": [
+          "Merfolk"
+        ],
+        "outputs": [
+          "W",
+          "U"
+        ]
+      },
+      "variants": [
+        "reveal_0",
+        "reveal_alternate_0",
+        "decline_0",
+        "wrong_only_0",
+        "empty_hand_0",
+        "opponent_hand_only_0",
+        "battlefield_only_0",
+        "opposing_turn_0",
+        "atlas_decline_0",
+        "pending_snapshot_0",
+        "reenter_decline_0",
+        "reenter_reveal_0",
+        "mana_first_0",
+        "mana_second_0",
+        "spend_first_0",
+        "spend_second_0",
+        "repeat_denied_0",
+        "untap_after_decline_0",
+        "switch_colors_0",
+        "mana_snapshot_0",
+        "kindred_0",
+        "reveal_1",
+        "reveal_alternate_1",
+        "decline_1",
+        "wrong_only_1",
+        "empty_hand_1",
+        "opponent_hand_only_1",
+        "battlefield_only_1",
+        "opposing_turn_1",
+        "atlas_decline_1",
+        "pending_snapshot_1",
+        "reenter_decline_1",
+        "reenter_reveal_1",
+        "mana_first_1",
+        "mana_second_1",
+        "spend_first_1",
+        "spend_second_1",
+        "repeat_denied_1",
+        "untap_after_decline_1",
+        "switch_colors_1",
+        "mana_snapshot_1",
+        "kindred_1"
+      ]
+    }
+  ]
+}

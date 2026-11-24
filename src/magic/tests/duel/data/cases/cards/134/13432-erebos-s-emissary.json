@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "csvid": 13432,
+  "card": "Erebos's Emissary",
+  "recipes": [
+    {
+      "family": "bestow_activated_and_tempo",
+      "version": 2,
+      "params": {
+        "csvid": 13432,
+        "normal_cost": "{3}{B}",
+        "bestow_cost": "{5}{B}",
+        "bonus": [
+          3,
+          3
+        ],
+        "creature": [
+          3,
+          3
+        ]
+      },
+      "oracle_text": "Bestow {5}{B} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nDiscard a creature card: This creature gets +2/+2 until end of turn. If this permanent is an Aura, enchanted creature gets +2/+2 until end of turn instead.\nEnchanted creature gets +3/+3.",
+      "variants": [
+        "creature_ability_0",
+        "aura_own_ability_0",
+        "aura_foreign_ability_0",
+        "detach_ability_0",
+        "creature_ability_1",
+        "aura_own_ability_1",
+        "aura_foreign_ability_1",
+        "detach_ability_1"
+      ]
+    }
+  ]
+}

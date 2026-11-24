@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Kinsbaile Borderguard",
+  "csvid": 9372,
+  "recipes": [
+    {
+      "family": "departure_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 9372,
+        "mana_cost": "{1}{W}{W}"
+      },
+      "oracle_text": "This creature enters with a +1/+1 counter on it for each other Kithkin you control.\nWhen this creature dies, create a 1/1 white Kithkin Soldier creature token for each counter on it.",
+      "variants": [
+        "zero_0",
+        "zero_1",
+        "kithkin_0",
+        "kithkin_1",
+        "additional_counter_0",
+        "additional_counter_1",
+        "bounce_0",
+        "bounce_1"
+      ]
+    }
+  ]
+}

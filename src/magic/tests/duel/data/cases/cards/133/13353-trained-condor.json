@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Trained Condor",
+  "csvid": 13353,
+  "recipes": [
+    {
+      "family": "attack_trigger_team_keywords",
+      "version": 2,
+      "params": {
+        "csvid": 13353,
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flying\nWhenever this creature attacks, another target creature you control gains flying until end of turn.",
+      "variants": [
+        "companion_0",
+        "companion_1",
+        "resting_0",
+        "resting_1",
+        "no_other_0",
+        "no_other_1",
+        "expires_0",
+        "expires_1"
+      ]
+    }
+  ]
+}

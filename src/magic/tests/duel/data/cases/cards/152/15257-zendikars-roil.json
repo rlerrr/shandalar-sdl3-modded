@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "csvid": 15257,
+  "card": "Zendikar's Roil",
+  "recipes": [
+    {
+      "family": "landfall_tokens_and_mana",
+      "version": 2,
+      "oracle_text": "Landfall — Whenever a land you control enters, create a 2/2 green Elemental creature token.",
+      "params": {
+        "effect": "roil",
+        "price": [
+          3,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "clauses": [
+          "Landfall — Whenever a land you control enters, create a 2/2 green Elemental creature token."
+        ]
+      },
+      "variants": [
+        "own_0",
+        "own_1",
+        "opponent_0",
+        "opponent_1",
+        "repeat_0",
+        "repeat_1",
+        "late_source_0",
+        "late_source_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

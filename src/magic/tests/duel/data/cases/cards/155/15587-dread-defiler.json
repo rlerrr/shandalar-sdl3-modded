@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "csvid": 15587,
+  "card": "Dread Defiler",
+  "recipes": [
+    {
+      "family": "devoid_colorless_activations",
+      "version": 2,
+      "params": {
+        "price": [
+          6,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          6,
+          8
+        ],
+        "effect": "grave_drain",
+        "generic": 3,
+        "colorless": 1,
+        "once": false
+      },
+      "oracle_text": "Devoid (This card has no color.)\n{3}{C}, Exile a creature card from your graveyard: Target opponent loses life equal to the exiled card's power. ({C} represents colorless mana.)",
+      "variants": [
+        "exact_0",
+        "exact_1",
+        "colored_only_0",
+        "colored_only_1",
+        "short_0",
+        "short_1",
+        "replay_0",
+        "replay_1",
+        "mixed_0",
+        "mixed_1",
+        "smaller_cost_0",
+        "smaller_cost_1",
+        "opponent_grave_only_0",
+        "opponent_grave_only_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "version": 1,
+  "sources": {
+    "Carnophage": {
+      "oracle": {
+        "oracle_id": "9ac77cfd-7d78-4c8a-bffc-17649a852114",
+        "name": "Carnophage",
+        "oracle_text": "At the beginning of your upkeep, tap this creature unless you pay 1 life.",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/84/carnophage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 3465,
+        "iid": 1511,
+        "name": "Carnophage",
+        "handler": "manalinkeh_card_carnophage",
+        "kind": "card"
+      }
+    },
+    "Sangrophage": {
+      "oracle": {
+        "oracle_id": "5d03e6a7-81ea-47d3-add7-8dfdbbfec6d3",
+        "name": "Sangrophage",
+        "oracle_text": "At the beginning of your upkeep, tap this creature unless you pay 2 life.",
+        "mana_cost": "{B}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/135/sangrophage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8653,
+        "iid": 8224,
+        "name": "Sangrophage",
+        "handler": "manalinkeh_card_sangrophage",
+        "kind": "card"
+      }
+    },
+    "Vile Consumption": {
+      "oracle": {
+        "oracle_id": "b6a005db-e7e2-4b88-bc8a-c257bcc31cf5",
+        "name": "Vile Consumption",
+        "oracle_text": "All creatures have \"At the beginning of your upkeep, sacrifice this creature unless you pay 1 life.\"",
+        "mana_cost": "{1}{U}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inv/285/vile-consumption?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5179,
+        "iid": 10592,
+        "name": "Vile Consumption",
+        "handler": "manalinkeh_card_vile_consumption",
+        "kind": "card"
+      }
+    },
+    "Bringer of the Black Dawn": {
+      "oracle": {
+        "oracle_id": "a9f98ad5-e8d4-4142-a19f-3368b85d1c95",
+        "name": "Bringer of the Black Dawn",
+        "oracle_text": "You may pay {W}{U}{B}{R}{G} rather than pay this spell's mana cost.\nTrample\nAt the beginning of your upkeep, you may pay 2 life. If you do, search your library for a card, then shuffle and put that card on top.",
+        "mana_cost": "{7}{B}{B}",
+        "type_line": "Creature — Bringer",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B",
+          "G",
+          "R",
+          "U",
+          "W"
+        ],
+        "cmc": 9.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5dn/43/bringer-of-the-black-dawn?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7020,
+        "iid": 1346,
+        "name": "Bringer of the Black Dawn",
+        "handler": "manalinkeh_card_bringer_of_the_black_dawn",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Claustrophobia": {
+      "oracle": {
+        "oracle_id": "62d8c8c8-bc24-42f2-9e2e-9efd08e47bb1",
+        "name": "Claustrophobia",
+        "oracle_text": "Enchant creature\nWhen this Aura enters, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gn2/17/claustrophobia?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11905,
+        "iid": 1778,
+        "name": "Claustrophobia",
+        "handler": "manalinkeh_card_claustrophobia",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mons's Goblin Raiders": {
+      "oracle": {
+        "oracle_id": "a37159df-f6d7-4db6-85de-0ea77f425993",
+        "name": "Mons's Goblin Raiders",
+        "oracle_text": "",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/s00/32/monss-goblin-raiders?utm_source=api"
+      },
+      "registry": {
+        "csvid": 163,
+        "iid": 6293,
+        "name": "Mons's Goblin Raiders",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Platinum Emperion": {
+      "oracle": {
+        "oracle_id": "bcd2f70c-36c2-44b2-9d4b-1000e9bb62b6",
+        "name": "Platinum Emperion",
+        "oracle_text": "Your life total can't change. (You can't gain or lose life. You can't pay any amount of life except 0.)",
+        "mana_cost": "{8}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "8",
+        "toughness": "8",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/233/platinum-emperion?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11336,
+        "iid": 7268,
+        "name": "Platinum Emperion",
+        "handler": "manalinkeh_card_platinum_emperion",
+        "kind": "card"
+      }
+    }
+  }
+}

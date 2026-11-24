@@ -1,0 +1,895 @@
+{
+  "version": 1,
+  "sources": {
+    "Adaptive Snapjaw": {
+      "oracle": {
+        "oracle_id": "0a56e2ad-684d-45a7-9145-479d1505bba2",
+        "name": "Adaptive Snapjaw",
+        "oracle_text": "Evolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Lizard Beast",
+        "power": "6",
+        "toughness": "2",
+        "keywords": [
+          "Evolve"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/113/adaptive-snapjaw?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12875,
+        "iid": 230,
+        "name": "Adaptive Snapjaw",
+        "handler": "manalinkeh_card_cloudfin_raptor",
+        "kind": "card"
+      },
+      "entry_witnesses": {
+        "power": "Phytotitan",
+        "toughness": "Horned Turtle",
+        "both": "Scaled Wurm",
+        "weaker": "Mons's Goblin Raiders"
+      }
+    },
+    "Battering Krasis": {
+      "oracle": {
+        "oracle_id": "3d0c1301-4fa7-4245-a13f-f613188eb638",
+        "name": "Battering Krasis",
+        "oracle_text": "Trample\nEvolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Shark Beast",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Evolve",
+          "Trample"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dgm/41/battering-krasis?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13119,
+        "iid": 900,
+        "name": "Battering Krasis",
+        "handler": "manalinkeh_card_cloudfin_raptor",
+        "kind": "card"
+      },
+      "entry_witnesses": {
+        "power": "Oreskos Swiftclaw",
+        "toughness": "Grizzly Bears",
+        "both": "Hill Giant",
+        "weaker": "Mons's Goblin Raiders"
+      }
+    },
+    "Clinging Anemones": {
+      "oracle": {
+        "oracle_id": "7058e7c3-b704-47f6-85f8-ee584f76a1fe",
+        "name": "Clinging Anemones",
+        "oracle_text": "Defender\nEvolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Jellyfish",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Evolve",
+          "Defender"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/31/clinging-anemones?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12908,
+        "iid": 1797,
+        "name": "Clinging Anemones",
+        "handler": "manalinkeh_card_cloudfin_raptor",
+        "kind": "card"
+      },
+      "entry_witnesses": {
+        "power": "Grizzly Bears",
+        "toughness": "Ancient Crab",
+        "both": "Colossapede",
+        "weaker": "Ornithopter"
+      }
+    },
+    "Cloudfin Raptor": {
+      "oracle": {
+        "oracle_id": "cb0e1afa-fd9e-4bf9-bcb1-6e8110d6e2ff",
+        "name": "Cloudfin Raptor",
+        "oracle_text": "Flying\nEvolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Bird Mutant",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Evolve"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/37/cloudfin-raptor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12909,
+        "iid": 1823,
+        "name": "Cloudfin Raptor",
+        "handler": "manalinkeh_card_cloudfin_raptor",
+        "kind": "card"
+      },
+      "entry_witnesses": {
+        "power": "Mons's Goblin Raiders",
+        "toughness": "Ornithopter",
+        "both": "Grizzly Bears",
+        "weaker": null
+      }
+    },
+    "Crocanura": {
+      "oracle": {
+        "oracle_id": "2071f278-77ba-46f8-85a0-ccd761199f29",
+        "name": "Crocanura",
+        "oracle_text": "Reach (This creature can block creatures with flying.)\nEvolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Crocodile Frog",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [
+          "Reach",
+          "Evolve"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/135/crocanura?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12915,
+        "iid": 2059,
+        "name": "Crocanura",
+        "handler": "manalinkeh_card_cloudfin_raptor",
+        "kind": "card"
+      },
+      "entry_witnesses": {
+        "power": "Grizzly Bears",
+        "toughness": "Horned Turtle",
+        "both": "Giant Spider",
+        "weaker": "Ornithopter"
+      }
+    },
+    "Shambleshark": {
+      "oracle": {
+        "oracle_id": "0e235b96-9507-4f4b-9578-4fb8ed854cc2",
+        "name": "Shambleshark",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nEvolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)",
+        "mana_cost": "{G}{U}",
+        "type_line": "Creature — Shark Crab",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Evolve",
+          "Flash"
+        ],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/193/shambleshark?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13052,
+        "iid": 8573,
+        "name": "Shambleshark",
+        "handler": "manalinkeh_card_shambleshark",
+        "kind": "card"
+      },
+      "entry_witnesses": {
+        "power": "Oreskos Swiftclaw",
+        "toughness": "Grizzly Bears",
+        "both": "Hill Giant",
+        "weaker": "Mons's Goblin Raiders"
+      }
+    },
+    "Elusive Krasis": {
+      "oracle": {
+        "oracle_id": "b876101b-7b18-48d7-9c8c-aaa6b1b5c199",
+        "name": "Elusive Krasis",
+        "oracle_text": "This creature can't be blocked.\nEvolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)",
+        "mana_cost": "{1}{G}{U}",
+        "type_line": "Creature — Fish Mutant",
+        "power": "0",
+        "toughness": "4",
+        "keywords": [
+          "Evolve"
+        ],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/160/elusive-krasis?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12937,
+        "iid": 2961,
+        "name": "Elusive Krasis",
+        "handler": "manalinkeh_card_elusive_krasis",
+        "kind": "card"
+      },
+      "entry_witnesses": {
+        "power": "Mons's Goblin Raiders",
+        "toughness": "Wall of Stone",
+        "both": "Colossapede",
+        "weaker": null
+      }
+    },
+    "Renegade Krasis": {
+      "oracle": {
+        "oracle_id": "7b7e622c-815a-44a0-88ff-62bbe8dd5582",
+        "name": "Renegade Krasis",
+        "oracle_text": "Evolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)\nWhenever this creature evolves, put a +1/+1 counter on each other creature you control with a +1/+1 counter on it.",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Creature — Beast Mutant",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Evolve"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dgm/47/renegade-krasis?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13205,
+        "iid": 7831,
+        "name": "Renegade Krasis",
+        "handler": "manalinkeh_card_renegade_krasis",
+        "kind": "card"
+      },
+      "entry_witnesses": {
+        "power": "Alpine Grizzly",
+        "toughness": "Horned Turtle",
+        "both": "Colossapede",
+        "weaker": "Mons's Goblin Raiders"
+      }
+    }
+  },
+  "witnesses": {
+    "Ancient Crab": {
+      "oracle": {
+        "oracle_id": "6bab6d0a-cd06-45e3-b780-d5354ee2a032",
+        "name": "Ancient Crab",
+        "oracle_text": "",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Creature — Crab",
+        "power": "1",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/akh/40/ancient-crab?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15554,
+        "iid": 15629,
+        "name": "Ancient Crab",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Colossapede": {
+      "oracle": {
+        "oracle_id": "b2cede1a-3a76-4658-bd12-e9df464d61e5",
+        "name": "Colossapede",
+        "oracle_text": "",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Insect",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/akh/161/colossapede?utm_source=api"
+      },
+      "registry": {
+        "csvid": 16868,
+        "iid": 16962,
+        "name": "Colossapede",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Elvish Piper": {
+      "oracle": {
+        "oracle_id": "872ef617-7cdb-4a7a-85f5-efc9e12bece5",
+        "name": "Elvish Piper",
+        "oracle_text": "{G}, {T}: You may put a creature card from your hand onto the battlefield.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Elf Shaman",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/a25/168/elvish-piper?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1027,
+        "iid": 2984,
+        "name": "Elvish Piper",
+        "handler": "manalinkeh_card_elvish_piper",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "registry": {
+        "csvid": 98,
+        "iid": 3868,
+        "name": "Giant Spider",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Horned Turtle": {
+      "oracle": {
+        "oracle_id": "7a4ae76b-6241-4fa8-b239-5ec941a0e7df",
+        "name": "Horned Turtle",
+        "oracle_text": "",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Turtle",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/53/horned-turtle?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1057,
+        "iid": 4656,
+        "name": "Horned Turtle",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Mons's Goblin Raiders": {
+      "oracle": {
+        "oracle_id": "a37159df-f6d7-4db6-85de-0ea77f425993",
+        "name": "Mons's Goblin Raiders",
+        "oracle_text": "",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/s00/32/monss-goblin-raiders?utm_source=api"
+      },
+      "registry": {
+        "csvid": 163,
+        "iid": 6293,
+        "name": "Mons's Goblin Raiders",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Oreskos Swiftclaw": {
+      "oracle": {
+        "oracle_id": "014d00fc-434a-4b06-84b2-afd930677d61",
+        "name": "Oreskos Swiftclaw",
+        "oracle_text": "",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Cat Warrior",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/31/oreskos-swiftclaw?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13943,
+        "iid": 6896,
+        "name": "Oreskos Swiftclaw",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Ornithopter": {
+      "oracle": {
+        "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+        "name": "Ornithopter",
+        "oracle_text": "Flying",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Thopter",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 514,
+        "iid": 6907,
+        "name": "Ornithopter",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Phytotitan": {
+      "oracle": {
+        "oracle_id": "2541e0cd-2cc1-4e47-94e3-030c1cb1a6bd",
+        "name": "Phytotitan",
+        "oracle_text": "When this creature dies, return it to the battlefield tapped under its owner's control at the beginning of their next upkeep.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Plant Elemental",
+        "power": "7",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/191/phytotitan?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14153,
+        "iid": 7195,
+        "name": "Phytotitan",
+        "handler": "manalinkeh_card_phytotitan",
+        "kind": "card"
+      }
+    },
+    "Scaled Wurm": {
+      "oracle": {
+        "oracle_id": "009a8e38-74d0-4b4a-b8ca-62c9f3183531",
+        "name": "Scaled Wurm",
+        "oracle_text": "",
+        "mana_cost": "{7}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "7",
+        "toughness": "6",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/178/scaled-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2085,
+        "iid": 8287,
+        "name": "Scaled Wurm",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Sol Ring": {
+      "oracle": {
+        "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+        "name": "Sol Ring",
+        "oracle_text": "{T}: Add {C}{C}.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+      },
+      "registry": {
+        "csvid": 230,
+        "iid": 8968,
+        "name": "Sol Ring",
+        "handler": "manalinkeh_card_sol_ring",
+        "kind": "card"
+      }
+    },
+    "Storm Crow": {
+      "oracle": {
+        "oracle_id": "38d87b87-0c67-47a5-8093-b49aa11f6196",
+        "name": "Storm Crow",
+        "oracle_text": "Flying",
+        "mana_cost": "",
+        "type_line": "Token Creature — Bird",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tblc/18/storm-crow?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1162,
+        "iid": 9403,
+        "name": "Storm Crow",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Burst of Strength": {
+      "oracle": {
+        "oracle_id": "1ab592fa-adfb-4879-af6c-0204eab323fb",
+        "name": "Burst of Strength",
+        "oracle_text": "Put a +1/+1 counter on target creature and untap it.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/115/burst-of-strength?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12904,
+        "iid": 1417,
+        "name": "Burst of Strength",
+        "handler": "manalinkeh_card_burst_of_strength",
+        "kind": "card"
+      }
+    },
+    "Feed the Clan": {
+      "oracle": {
+        "oracle_id": "f70f1f2e-7277-4bc9-b0bb-b44a1da2c62f",
+        "name": "Feed the Clan",
+        "oracle_text": "You gain 5 life.\nFerocious — You gain 10 life instead if you control a creature with power 4 or greater.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Ferocious"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/132/feed-the-clan?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14269,
+        "iid": 3330,
+        "name": "Feed the Clan",
+        "handler": "manalinkeh_card_feed_the_clan",
+        "kind": "card"
+      }
+    },
+    "Wall of Stone": {
+      "oracle": {
+        "oracle_id": "cd4cadb4-3156-49bd-b36e-12ba5c85938b",
+        "name": "Wall of Stone",
+        "oracle_text": "Defender (This creature can't attack.)",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "8",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/232/wall-of-stone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 272,
+        "iid": 10783,
+        "name": "Wall of Stone",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    },
+    "Alpine Grizzly": {
+      "oracle": {
+        "oracle_id": "86e3c86c-d50e-4aa9-b080-f68b6afee87c",
+        "name": "Alpine Grizzly",
+        "oracle_text": "",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Bear",
+        "power": "4",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/127/alpine-grizzly?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14214,
+        "iid": 376,
+        "name": "Alpine Grizzly",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "reviewed_native_characteristics": true
+    }
+  }
+}

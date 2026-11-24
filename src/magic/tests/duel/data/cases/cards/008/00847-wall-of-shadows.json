@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Wall of Shadows",
+  "csvid": 847,
+  "recipes": [
+    {
+      "family": "conditional_combat_prevention",
+      "version": 2,
+      "oracle_text": "Defender (This creature can't attack.)\nPrevent all damage that would be dealt to this creature by creatures it's blocking.\nThis creature can't be the target of spells that can target only Walls or of abilities that can target only Walls.",
+      "params": {
+        "condition": "blocking",
+        "combat_only": false,
+        "defender": true,
+        "white_protection": false,
+        "wall_only_target_shield": true,
+        "mandatory_wall_block": false,
+        "cost": [
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "cast_0",
+        "insufficient_0",
+        "source_attack_0",
+        "combat_match_0",
+        "combat_other_0",
+        "unblocked_side_damage_0",
+        "spell_damage_0",
+        "blocked_snapshot_0",
+        "wrong_color_0",
+        "blocked_ping_0",
+        "unblocked_ping_0",
+        "wall_spell_denied_0",
+        "wall_spell_control_0",
+        "wall_ability_denied_0",
+        "wall_ability_control_0",
+        "cast_1",
+        "insufficient_1",
+        "source_attack_1",
+        "combat_match_1",
+        "combat_other_1",
+        "unblocked_side_damage_1",
+        "spell_damage_1",
+        "blocked_snapshot_1",
+        "wrong_color_1",
+        "blocked_ping_1",
+        "unblocked_ping_1",
+        "wall_spell_denied_1",
+        "wall_spell_control_1",
+        "wall_ability_denied_1",
+        "wall_ability_control_1"
+      ]
+    }
+  ]
+}

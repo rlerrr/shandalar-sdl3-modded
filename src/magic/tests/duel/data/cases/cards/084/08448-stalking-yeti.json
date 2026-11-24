@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "csvid": 8448,
+  "card": "Stalking Yeti",
+  "recipes": [
+    {
+      "family": "entry_rider_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 8448,
+        "printed_cost": "{2}{R}{R}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, if it's on the battlefield, it deals damage equal to its power to target creature an opponent controls and that creature deals damage equal to its power to this creature.\n{2}{S}: Return this creature to its owner's hand. Activate only as a sorcery. ({S} can be paid with one mana from a snow source.)",
+      "variants": [
+        "survive_0",
+        "mutual_death_0",
+        "own_only_0",
+        "snow_return_0",
+        "no_snow_0",
+        "offturn_0",
+        "survive_1",
+        "mutual_death_1",
+        "own_only_1",
+        "snow_return_1",
+        "no_snow_1",
+        "offturn_1"
+      ]
+    }
+  ]
+}

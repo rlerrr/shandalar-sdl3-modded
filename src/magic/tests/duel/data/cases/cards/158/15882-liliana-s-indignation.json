@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "card": "Liliana's Indignation",
+  "csvid": 15882,
+  "recipes": [
+    {
+      "family": "mill_remaining_spells_and_modes",
+      "version": 2,
+      "params": {
+        "csvid": 15882,
+        "printed_cost": "{X}{B}",
+        "clauses": [
+          "Mill X cards. Target player loses 2 life for each creature card put into your graveyard this way."
+        ],
+        "modes": [
+          "mixed",
+          "zero_x",
+          "short_library",
+          "no_creatures",
+          "through_purity"
+        ],
+        "human_modes": [
+          "self_target"
+        ]
+      },
+      "oracle_text": "Mill X cards. Target player loses 2 life for each creature card put into your graveyard this way.",
+      "variants": [
+        "mixed_0",
+        "mixed_1",
+        "zero_x_0",
+        "zero_x_1",
+        "short_library_0",
+        "short_library_1",
+        "no_creatures_0",
+        "no_creatures_1",
+        "through_purity_0",
+        "through_purity_1",
+        "self_target_0"
+      ]
+    }
+  ]
+}

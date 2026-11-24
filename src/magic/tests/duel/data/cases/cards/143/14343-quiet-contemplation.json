@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Quiet Contemplation",
+  "csvid": 14343,
+  "recipes": [
+    {
+      "family": "cast_noncreature_riders",
+      "version": 2,
+      "params": {
+        "role": "quiet",
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever you cast a noncreature spell, you may pay {1}. If you do, tap target creature an opponent controls and it doesn't untap during its controller's next untap step.",
+      "variants": [
+        "own_0",
+        "creature_0",
+        "opponent_0",
+        "countered_0",
+        "unfunded_0",
+        "two_untaps_0",
+        "replay_0",
+        "own_1",
+        "creature_1",
+        "opponent_1",
+        "countered_1",
+        "unfunded_1",
+        "two_untaps_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

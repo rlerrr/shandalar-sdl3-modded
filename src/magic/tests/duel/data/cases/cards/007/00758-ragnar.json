@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "csvid": 758,
+  "card": "Ragnar",
+  "recipes": [
+    {
+      "family": "regeneration_targeted_abilities",
+      "version": 2,
+      "params": {
+        "csvid": 758,
+        "mana": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        "activation": "{G}{W}{U}",
+        "tap": true,
+        "stats": [
+          2,
+          2
+        ]
+      },
+      "oracle_text": "{G}{W}{U}, {T}: Regenerate target creature.",
+      "variants": [
+        "own_0",
+        "own_1",
+        "foreign_0",
+        "foreign_1",
+        "sick_0",
+        "sick_1",
+        "tapped_0",
+        "tapped_1",
+        "short_0",
+        "short_1",
+        "proactive_0",
+        "proactive_1"
+      ]
+    }
+  ]
+}

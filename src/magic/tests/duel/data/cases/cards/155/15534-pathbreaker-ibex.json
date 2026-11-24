@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Pathbreaker Ibex",
+  "csvid": 15534,
+  "recipes": [
+    {
+      "family": "attack_trigger_team_keywords",
+      "version": 2,
+      "params": {
+        "csvid": 15534,
+        "mana": [
+          4,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks, creatures you control gain trample and get +X/+X until end of turn, where X is the greatest power among creatures you control.",
+      "variants": [
+        "highest_idle_0",
+        "highest_idle_1",
+        "excludes_enemy_0",
+        "excludes_enemy_1",
+        "late_0",
+        "late_1"
+      ]
+    }
+  ]
+}

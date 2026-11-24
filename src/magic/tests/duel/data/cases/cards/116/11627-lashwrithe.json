@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "csvid": 11627,
+  "card": "Lashwrithe",
+  "recipes": [
+    {
+      "family": "living_weapon_equipment",
+      "version": 2,
+      "params": {
+        "effect": "living_weapon",
+        "rider": "swamp",
+        "cast_mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "equip_generic": 0,
+        "power_delta": 0,
+        "toughness_delta": 0,
+        "keyword": ""
+      },
+      "oracle_text": "Living weapon (When this Equipment enters, create a 0/0 black Phyrexian Germ creature token, then attach this to it.)\nEquipped creature gets +1/+1 for each Swamp you control.\nEquip {B/P}{B/P} ({B/P} can be paid with either {B} or 2 life.)",
+      "variants": [
+        "enter_0",
+        "cast_short_0",
+        "countered_0",
+        "move_0",
+        "remove_source_0",
+        "bounce_germ_0",
+        "equip_target_leaves_0",
+        "replay_entry_0",
+        "replay_move_0",
+        "zero_count_0",
+        "own_nonbasic_0",
+        "swamp_grow_0",
+        "swamp_to_zero_0",
+        "equip_black_0",
+        "equip_mixed_0",
+        "equip_life_0",
+        "equip_insufficient_0",
+        "enter_1",
+        "cast_short_1",
+        "countered_1",
+        "move_1",
+        "remove_source_1",
+        "bounce_germ_1",
+        "equip_target_leaves_1",
+        "replay_entry_1",
+        "replay_move_1",
+        "zero_count_1",
+        "own_nonbasic_1",
+        "swamp_grow_1",
+        "swamp_to_zero_1",
+        "equip_black_1",
+        "equip_mixed_1",
+        "equip_life_1",
+        "equip_insufficient_1"
+      ]
+    }
+  ]
+}

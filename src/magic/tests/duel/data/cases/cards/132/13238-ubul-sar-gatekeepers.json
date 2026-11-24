@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Ubul Sar Gatekeepers",
+  "csvid": 13238,
+  "recipes": [
+    {
+      "family": "remaining_entry_combat",
+      "version": 2,
+      "params": {
+        "csvid": 13238,
+        "cost": "{3}{B}",
+        "choices": [
+          "two_0",
+          "two_1",
+          "one_0",
+          "one_1",
+          "foreign_0",
+          "foreign_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, if you control two or more Gates, target creature an opponent controls gets -2/-2 until end of turn.",
+      "variants": [
+        "two_0",
+        "two_1",
+        "one_0",
+        "one_1",
+        "foreign_0",
+        "foreign_1"
+      ]
+    }
+  ]
+}

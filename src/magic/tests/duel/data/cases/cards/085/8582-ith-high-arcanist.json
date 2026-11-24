@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "csvid": 8582,
+  "card": "Ith, High Arcanist",
+  "recipes": [
+    {
+      "family": "suspend_creature_combat",
+      "version": 2,
+      "oracle_text": "Vigilance\n{T}: Untap target attacking creature. Prevent all combat damage that would be dealt to and dealt by that creature this turn.\nSuspend 4—{W}{U}",
+      "params": {
+        "csvid": 8582,
+        "duration": 4,
+        "fee": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "printed": [
+          5,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "pt": [
+          3,
+          5
+        ],
+        "clauses": [
+          "Vigilance",
+          "{T}: Untap target attacking creature. Prevent all combat damage that would be dealt to and dealt by that creature this turn.",
+          "Suspend 4—{W}{U}"
+        ]
+      },
+      "variants": [
+        "parked_0",
+        "parked_1",
+        "countdown_0",
+        "countdown_1",
+        "unfunded_0",
+        "unfunded_1",
+        "wrong_suspend_0",
+        "wrong_suspend_1",
+        "normal_0",
+        "normal_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

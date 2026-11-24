@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Imperial Mask",
+  "csvid": 8947,
+  "recipes": [
+    {
+      "family": "player_hexproof",
+      "version": 2,
+      "oracle_text": "When this enchantment enters, if it's not a token, each of your teammates creates a token that's a copy of this enchantment.\nYou have hexproof. (You can't be the target of spells or abilities your opponents control.)",
+      "params": {
+        "mana": "{4}{W}",
+        "branch": "team",
+        "type_line": "Enchantment",
+        "power": null,
+        "toughness": null
+      },
+      "variants": [
+        "unprotected_0",
+        "opponent_blocked_0",
+        "own_target_0",
+        "enemy_self_target_0",
+        "symmetric_damage_0",
+        "ability_blocked_0",
+        "ability_unprotected_0",
+        "removed_0",
+        "late_entry_0",
+        "snapshot_0",
+        "no_teammates_0",
+        "unprotected_1",
+        "opponent_blocked_1",
+        "own_target_1",
+        "enemy_self_target_1",
+        "symmetric_damage_1",
+        "ability_blocked_1",
+        "ability_unprotected_1",
+        "removed_1",
+        "late_entry_1",
+        "snapshot_1",
+        "no_teammates_1"
+      ]
+    }
+  ]
+}

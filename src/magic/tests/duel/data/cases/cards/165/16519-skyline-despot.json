@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Skyline Despot",
+  "csvid": 16519,
+  "recipes": [
+    {
+      "family": "monarch_entry_riders",
+      "version": 2,
+      "params": {
+        "model": "despot",
+        "cost": [
+          5,
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, you become the monarch.\nAt the beginning of your upkeep, if you're the monarch, create a 5/5 red Dragon creature token with flying.",
+      "variants": [
+        "entry_0",
+        "transfer_0",
+        "noncombat_0",
+        "already_0",
+        "underpaid_0",
+        "countered_0",
+        "replay_0",
+        "tokens_0",
+        "no_upkeep_0",
+        "dragon_flying_0",
+        "source_flying_0",
+        "lost_0",
+        "entry_1",
+        "transfer_1",
+        "noncombat_1",
+        "already_1",
+        "underpaid_1",
+        "countered_1",
+        "replay_1",
+        "tokens_1",
+        "no_upkeep_1",
+        "dragon_flying_1",
+        "source_flying_1",
+        "lost_1"
+      ]
+    }
+  ]
+}

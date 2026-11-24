@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "csvid": 14277,
+  "card": "Grim Haruspex",
+  "recipes": [
+    {
+      "family": "morph_battlefield_riders",
+      "version": 2,
+      "oracle_text": "Morph {B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhenever another nontoken creature you control dies, draw a card.",
+      "params": {
+        "mode": "haruspex",
+        "mana": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "morph": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 3,
+        "toughness": 2,
+        "keywords": [],
+        "color": 2
+      },
+      "variants": [
+        "printed_cast_0",
+        "printed_cast_1",
+        "hidden_cast_0",
+        "hidden_cast_1",
+        "hidden_choice_0",
+        "hidden_choice_1",
+        "cast_short_0",
+        "cast_short_1",
+        "reveal_ready_0",
+        "reveal_ready_1",
+        "reveal_short_0",
+        "reveal_short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "offturn_reveal_0",
+        "offturn_reveal_1",
+        "reveal_replay_0",
+        "reveal_replay_1",
+        "printed_effect_0",
+        "printed_effect_1",
+        "own_death_0",
+        "own_death_1",
+        "hidden_death_0",
+        "hidden_death_1",
+        "foreign_death_0",
+        "foreign_death_1",
+        "token_death_0",
+        "token_death_1",
+        "self_death_0",
+        "self_death_1",
+        "self_and_other_0",
+        "self_and_other_1",
+        "artifact_death_0",
+        "artifact_death_1",
+        "bounced_0",
+        "bounced_1",
+        "exiled_0",
+        "exiled_1"
+      ]
+    }
+  ]
+}

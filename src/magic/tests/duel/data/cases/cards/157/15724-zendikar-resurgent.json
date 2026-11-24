@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "card": "Zendikar Resurgent",
+  "csvid": 15724,
+  "recipes": [
+    {
+      "family": "cast_creature_riders",
+      "version": 2,
+      "oracle_text": "Whenever you tap a land for mana, add one mana of any type that land produced. (The types of mana are white, blue, black, red, green, and colorless.)\nWhenever you cast a creature spell, draw a card.",
+      "params": {
+        "effect": "resurgent",
+        "price": [
+          5,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "fee": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "own_0",
+        "opponent_0",
+        "noncreature_0",
+        "countered_0",
+        "replay_0",
+        "land_0",
+        "foe_land_0",
+        "colorless_0",
+        "nonland_0",
+        "own_1",
+        "opponent_1",
+        "noncreature_1",
+        "countered_1",
+        "replay_1",
+        "land_1",
+        "foe_land_1",
+        "colorless_1",
+        "nonland_1"
+      ]
+    }
+  ]
+}

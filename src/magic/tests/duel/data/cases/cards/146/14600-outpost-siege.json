@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "card": "Outpost Siege",
+  "csvid": 14600,
+  "recipes": [
+    {
+      "family": "play_own_exile_effects",
+      "version": 2,
+      "params": {
+        "model": "siege",
+        "count": 1,
+        "next_turn": false,
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "As this enchantment enters, choose Khans or Dragons.\n• Khans — At the beginning of your upkeep, exile the top card of your library. Until end of turn, you may play that card.\n• Dragons — Whenever a creature you control leaves the battlefield, this enchantment deals 1 damage to any target.",
+      "variants": [
+        "grant_0",
+        "empty_0",
+        "play_land_0",
+        "play_spell_0",
+        "wrong_spell_mana_0",
+        "wrong_seat_0",
+        "wrong_card_0",
+        "spent_land_drop_0",
+        "expiry_0",
+        "offturn_land_0",
+        "replay_0",
+        "source_wrong_mana_0",
+        "source_countered_0",
+        "khans_scope_0",
+        "khans_departure_0",
+        "dragons_death_0",
+        "dragons_bounce_0",
+        "dragons_exile_0",
+        "dragons_creature_0",
+        "dragons_walker_0",
+        "dragons_enemy_0",
+        "dragons_noncreature_0",
+        "dragons_upkeep_0",
+        "grant_1",
+        "empty_1",
+        "play_land_1",
+        "play_spell_1",
+        "wrong_spell_mana_1",
+        "wrong_seat_1",
+        "wrong_card_1",
+        "spent_land_drop_1",
+        "expiry_1",
+        "offturn_land_1",
+        "replay_1",
+        "source_wrong_mana_1",
+        "source_countered_1",
+        "khans_scope_1",
+        "khans_departure_1",
+        "dragons_death_1",
+        "dragons_bounce_1",
+        "dragons_exile_1",
+        "dragons_creature_1",
+        "dragons_walker_1",
+        "dragons_enemy_1",
+        "dragons_noncreature_1",
+        "dragons_upkeep_1"
+      ]
+    }
+  ]
+}

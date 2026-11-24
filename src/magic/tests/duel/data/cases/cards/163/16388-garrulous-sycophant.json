@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Garrulous Sycophant",
+  "csvid": 16388,
+  "recipes": [
+    {
+      "family": "monarch_additional_riders",
+      "version": 2,
+      "params": {
+        "model": "siphon",
+        "cost": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "At the beginning of your end step, if you're the monarch, each opponent loses 1 life and you gain 1 life.",
+      "variants": [
+        "entry_0",
+        "underpaid_0",
+        "countered_0",
+        "replay_0",
+        "crowned_0",
+        "not_your_turn_0",
+        "lost_0",
+        "regain_0",
+        "entry_1",
+        "underpaid_1",
+        "countered_1",
+        "replay_1",
+        "crowned_1",
+        "not_your_turn_1",
+        "lost_1",
+        "regain_1"
+      ]
+    }
+  ]
+}

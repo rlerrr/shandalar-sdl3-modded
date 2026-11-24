@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "csvid": 12000,
+  "card": "Kruin Outlaw",
+  "recipes": [
+    {
+      "family": "werewolf_combat_riders",
+      "version": 2,
+      "oracle_text": "First strike\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature.",
+      "params": {
+        "price": [
+          1,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "front": {
+          "name": "Kruin Outlaw",
+          "power": 2,
+          "toughness": 2,
+          "color": 16,
+          "clauses": [
+            "First strike",
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Terror of Kruin Pass",
+          "power": 3,
+          "toughness": 3,
+          "color": 16,
+          "clauses": [
+            "Double strike",
+            "Werewolves you control have menace. (A creature with menace can't be blocked except by two or more creatures.)",
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        },
+        "rider": "tribal"
+      },
+      "variants": [
+        "front_split_0",
+        "front_split_1",
+        "back_split_0",
+        "back_split_1",
+        "back_two_0",
+        "back_two_1",
+        "front_first_0",
+        "front_first_1",
+        "back_double_0",
+        "back_double_1",
+        "tribal_single_0",
+        "tribal_single_1",
+        "tribal_pair_0",
+        "tribal_pair_1",
+        "other_creature_0",
+        "other_creature_1",
+        "opponent_wolf_0",
+        "opponent_wolf_1"
+      ]
+    }
+  ]
+}

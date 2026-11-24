@@ -2712,7 +2712,7 @@ int card_marchesa_the_black_rose(int player, int card, event_t event)
   if (event != EVENT_STATIC_EFFECTS)
   {
     store_attackers(player, card, event, DAT_TRACK | DAT_ATTACKS_PLAYER, player, -1, NULL);
-    dat_ability(player, card, event, DAT_RESOLVE_TRIGGER_MANDATORY, 0);
+    dat_ability(player, card, event, DAT_RESOLVE_TRIGGER_MANDATORY, 1);
     if (event == EVENT_DAT_ABILITY)
     {
       instance = get_card_instance(player, card);

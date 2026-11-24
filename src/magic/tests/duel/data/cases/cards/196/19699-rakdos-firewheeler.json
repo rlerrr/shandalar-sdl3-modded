@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Rakdos Firewheeler",
+  "csvid": 19699,
+  "recipes": [
+    {
+      "family": "entry_follow_on_damage_and_tap",
+      "version": 2,
+      "params": {
+        "csvid": 19699,
+        "cost": "{B}{B}{R}{R}",
+        "choices": [
+          "decline_0",
+          "decline_1",
+          "lethal_0",
+          "lethal_1",
+          "planeswalker_0",
+          "planeswalker_1",
+          "own_target_0",
+          "own_target_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, it deals 2 damage to target opponent and 2 damage to up to one target creature or planeswalker.",
+      "variants": [
+        "decline_0",
+        "decline_1",
+        "lethal_0",
+        "lethal_1",
+        "planeswalker_0",
+        "planeswalker_1",
+        "own_target_0",
+        "own_target_1"
+      ]
+    }
+  ]
+}

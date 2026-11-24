@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Throne Warden",
+  "csvid": 16553,
+  "recipes": [
+    {
+      "family": "monarch_additional_riders",
+      "version": 2,
+      "params": {
+        "model": "warden",
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "At the beginning of your end step, if you're the monarch, put a +1/+1 counter on this creature.",
+      "variants": [
+        "entry_0",
+        "underpaid_0",
+        "countered_0",
+        "replay_0",
+        "crowned_0",
+        "not_your_turn_0",
+        "lost_0",
+        "regain_0",
+        "entry_1",
+        "underpaid_1",
+        "countered_1",
+        "replay_1",
+        "crowned_1",
+        "not_your_turn_1",
+        "lost_1",
+        "regain_1"
+      ]
+    }
+  ]
+}

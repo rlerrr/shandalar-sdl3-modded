@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Talons of Falkenrath",
+  "csvid": 12274,
+  "recipes": [
+    {
+      "family": "flash_remaining_auras_and_enchantments",
+      "version": 2,
+      "params": {
+        "csvid": 12274,
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "clauses": [
+          "Flash (You may cast this spell any time you could cast an instant.)",
+          "Enchant creature",
+          "Enchanted creature has \"{1}{R}: This creature gets +2/+0 until end of turn.\""
+        ],
+        "modes": [
+          "paid_pump",
+          "foe_pump",
+          "short_pump",
+          "remove_after_pump",
+          "lost_target"
+        ]
+      },
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nEnchant creature\nEnchanted creature has \"{1}{R}: This creature gets +2/+0 until end of turn.\"",
+      "variants": [
+        "paid_pump_0",
+        "paid_pump_1",
+        "foe_pump_0",
+        "foe_pump_1",
+        "short_pump_0",
+        "short_pump_1",
+        "remove_after_pump_0",
+        "remove_after_pump_1",
+        "lost_target_0",
+        "lost_target_1"
+      ]
+    }
+  ]
+}

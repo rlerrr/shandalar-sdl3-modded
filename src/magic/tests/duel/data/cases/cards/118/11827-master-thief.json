@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Master Thief",
+  "csvid": 11827,
+  "recipes": [
+    {
+      "family": "entry_rider_control",
+      "version": 2,
+      "params": {
+        "csvid": 11827,
+        "mana": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, gain control of target artifact for as long as you control this creature.",
+      "variants": [
+        "persist_0",
+        "persist_1",
+        "dies_0",
+        "dies_1",
+        "stolen_source_0",
+        "stolen_source_1",
+        "nonartifact_0",
+        "nonartifact_1"
+      ]
+    }
+  ]
+}

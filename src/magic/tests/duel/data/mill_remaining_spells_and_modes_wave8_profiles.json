@@ -1,0 +1,656 @@
+{
+  "sources": {
+    "Book Burning": {
+      "oracle": {
+        "oracle_id": "644a8946-4890-4c2b-978f-02eedc95b5ad",
+        "name": "Book Burning",
+        "oracle_text": "Any player may have Book Burning deal 6 damage to them. If no one does, target player mills six cards.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jud/80/book-burning?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5913,
+        "iid": 1230,
+        "name": "Book Burning",
+        "handler": "manalinkeh_card_book_burning",
+        "kind": "card"
+      }
+    },
+    "Paranoid Delusions": {
+      "oracle": {
+        "oracle_id": "129cec2c-fc1b-4ce6-98f2-2123e4dbd1ae",
+        "name": "Paranoid Delusions",
+        "oracle_text": "Target player mills three cards.\nCipher (Then you may exile this spell card encoded on a creature you control. Whenever that creature deals combat damage to a player, its controller may cast a copy of the encoded card without paying its mana cost.)",
+        "mana_cost": "{U}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Mill",
+          "Cipher"
+        ],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/186/paranoid-delusions?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13027,
+        "iid": 7012,
+        "name": "Paranoid Delusions",
+        "handler": "manalinkeh_card_paranoid_delusion",
+        "kind": "card"
+      }
+    },
+    "Psychic Spiral": {
+      "oracle": {
+        "oracle_id": "5f928e54-3027-4f2f-9fef-d63b9ca416aa",
+        "name": "Psychic Spiral",
+        "oracle_text": "Shuffle all cards from your graveyard into your library. Target player mills that many cards.",
+        "mana_cost": "{4}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rtr/47/psychic-spiral?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12788,
+        "iid": 7446,
+        "name": "Psychic Spiral",
+        "handler": "manalinkeh_card_psychic_spiral",
+        "kind": "card"
+      }
+    },
+    "Sanity Grinding": {
+      "oracle": {
+        "oracle_id": "bfa0ec94-8851-4518-92e7-ab9f1f90a051",
+        "name": "Sanity Grinding",
+        "oracle_text": "Chroma — Reveal the top ten cards of your library. For each blue mana symbol in the mana costs of the revealed cards, target opponent mills a card. Then put the cards you revealed this way on the bottom of your library in any order.",
+        "mana_cost": "{U}{U}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Chroma",
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eve/29/sanity-grinding?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9861,
+        "iid": 8229,
+        "name": "Sanity Grinding",
+        "handler": "manalinkeh_card_sanity_grinding",
+        "kind": "card"
+      }
+    },
+    "Shared Trauma": {
+      "oracle": {
+        "oracle_id": "ef9b7588-9bf0-4632-ae5d-1dfebc4d88eb",
+        "name": "Shared Trauma",
+        "oracle_text": "Join forces — Starting with you, each player may pay any amount of mana. Each player mills X cards, where X is the total amount of mana paid this way.",
+        "mana_cost": "{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Mill",
+          "Join forces"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cm2/76/shared-trauma?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11735,
+        "iid": 8593,
+        "name": "Shared Trauma",
+        "handler": "manalinkeh_card_shared_trauma",
+        "kind": "card"
+      }
+    },
+    "Liliana's Indignation": {
+      "oracle": {
+        "oracle_id": "c724dd2e-c62d-4a20-a1b9-54264d0b811a",
+        "name": "Liliana's Indignation",
+        "oracle_text": "Mill X cards. Target player loses 2 life for each creature card put into your graveyard this way.",
+        "mana_cost": "{X}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/120/lilianas-indignation?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15882,
+        "iid": 15952,
+        "name": "Liliana's Indignation",
+        "handler": "manalinkeh_card_lilianas_indignation",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Brainstorm": {
+      "oracle": {
+        "oracle_id": "36cd2364-d113-47d1-b2c4-b088d9eb88dd",
+        "name": "Brainstorm",
+        "oracle_text": "Draw three cards, then put two cards from your hand on top of your library in any order.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/39/brainstorm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1547,
+        "iid": 1289,
+        "name": "Brainstorm",
+        "handler": "manalinkeh_card_brainstorm",
+        "kind": "card"
+      }
+    },
+    "Cancel": {
+      "oracle": {
+        "oracle_id": "7d00fb28-ea6c-49a9-b4af-ffb38860a9a7",
+        "name": "Cancel",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/505/cancel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1312,
+        "iid": 1465,
+        "name": "Cancel",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Darksteel Relic": {
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11586,
+        "iid": 2259,
+        "name": "Darksteel Relic",
+        "handler": "manalinkeh_card_darksteel_myr",
+        "kind": "card"
+      }
+    },
+    "Dimir Guildmage": {
+      "oracle": {
+        "oracle_id": "1b6c67e5-5913-4db9-85d9-8dae57da02ee",
+        "name": "Dimir Guildmage",
+        "oracle_text": "({U/B} can be paid with either {U} or {B}.)\n{3}{U}: Target player draws a card. Activate only as a sorcery.\n{3}{B}: Target player discards a card. Activate only as a sorcery.",
+        "mana_cost": "{U/B}{U/B}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/186/dimir-guildmage?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7816,
+        "iid": 2542,
+        "name": "Dimir Guildmage",
+        "handler": "manalinkeh_card_dimir_guildmage",
+        "kind": "card"
+      }
+    },
+    "Divination": {
+      "oracle": {
+        "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+        "name": "Divination",
+        "oracle_text": "Draw two cards.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/51/divination?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10405,
+        "iid": 2609,
+        "name": "Divination",
+        "handler": "manalinkeh_card_divination",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Goblin Balloon Brigade": {
+      "oracle": {
+        "oracle_id": "10bc98b0-3fdc-46d1-8d3b-6d160e9dd62f",
+        "name": "Goblin Balloon Brigade",
+        "oracle_text": "{R}: This creature gains flying until end of turn.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cn2/159/goblin-balloon-brigade?utm_source=api"
+      },
+      "registry": {
+        "csvid": 101,
+        "iid": 3980,
+        "name": "Goblin Balloon Brigade",
+        "handler": "manalinkeh_card_goblin_balloon_brigade",
+        "kind": "card"
+      }
+    },
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Paranoid Delusions": {
+      "oracle": {
+        "oracle_id": "129cec2c-fc1b-4ce6-98f2-2123e4dbd1ae",
+        "name": "Paranoid Delusions",
+        "oracle_text": "Target player mills three cards.\nCipher (Then you may exile this spell card encoded on a creature you control. Whenever that creature deals combat damage to a player, its controller may cast a copy of the encoded card without paying its mana cost.)",
+        "mana_cost": "{U}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Mill",
+          "Cipher"
+        ],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/186/paranoid-delusions?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13027,
+        "iid": 7012,
+        "name": "Paranoid Delusions",
+        "handler": "manalinkeh_card_paranoid_delusion",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Purity": {
+      "oracle": {
+        "oracle_id": "23ef92b0-2298-4e8d-bf64-46d096c84a9d",
+        "name": "Purity",
+        "oracle_text": "Flying\nIf noncombat damage would be dealt to you, prevent that damage. You gain life equal to the damage prevented this way.\nWhen Purity is put into a graveyard from anywhere, shuffle it into its owner's library.",
+        "mana_cost": "{3}{W}{W}{W}",
+        "type_line": "Creature — Elemental Incarnation",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/37/purity?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9241,
+        "iid": 7490,
+        "name": "Purity",
+        "handler": "manalinkeh_card_purity",
+        "kind": "card"
+      }
+    },
+    "Reach Through Mists": {
+      "oracle": {
+        "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+        "name": "Reach Through Mists",
+        "oracle_text": "Draw a card.",
+        "mana_cost": "{U}",
+        "type_line": "Instant — Arcane",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/7/reach-through-mists?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7353,
+        "iid": 7720,
+        "name": "Reach Through Mists",
+        "handler": "manalinkeh_card_reach_through_mists",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Sphinx of Magosi": {
+      "oracle": {
+        "oracle_id": "1c9cf20c-51e4-4a87-b9f8-231b6baf5d6b",
+        "name": "Sphinx of Magosi",
+        "oracle_text": "Flying\n{2}{U}: Draw a card, then put a +1/+1 counter on this creature.",
+        "mana_cost": "{3}{U}{U}{U}",
+        "type_line": "Creature — Sphinx",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/w17/12/sphinx-of-magosi?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11048,
+        "iid": 9138,
+        "name": "Sphinx of Magosi",
+        "handler": "manalinkeh_card_sphinx_of_magosi",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    }
+  }
+}

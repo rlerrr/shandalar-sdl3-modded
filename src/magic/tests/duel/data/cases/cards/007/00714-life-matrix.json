@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "csvid": 714,
+  "card": "Life Matrix",
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_targeted_costs",
+      "version": 2,
+      "params": {
+        "csvid": 714,
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "activation": "{4}",
+        "stats": null
+      },
+      "oracle_text": "{4}, {T}: Put a matrix counter on target creature and that creature gains \"Remove a matrix counter from this creature: Regenerate this creature.\" Activate only during your upkeep.",
+      "variants": [
+        "own_upkeep_0",
+        "own_upkeep_1",
+        "opponent_upkeep_0",
+        "opponent_upkeep_1",
+        "main_0",
+        "main_1"
+      ]
+    }
+  ]
+}

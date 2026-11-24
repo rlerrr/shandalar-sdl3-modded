@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Loaming Shaman",
+  "csvid": 8231,
+  "recipes": [
+    {
+      "family": "remaining_entry_library_and_hand",
+      "version": 2,
+      "params": {
+        "csvid": 8231,
+        "printed_mana": "{2}{G}",
+        "rules": "When this creature enters, target player shuffles any number of target cards from their graveyard into their library."
+      },
+      "oracle_text": "When this creature enters, target player shuffles any number of target cards from their graveyard into their library.",
+      "variants": [
+        "all_own_0",
+        "all_own_1",
+        "all_foe_0",
+        "all_foe_1",
+        "partial_foe_0",
+        "decline_own_0"
+      ]
+    }
+  ]
+}

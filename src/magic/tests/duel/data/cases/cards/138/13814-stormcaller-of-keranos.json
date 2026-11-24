@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Stormcaller of Keranos",
+  "csvid": 13814,
+  "recipes": [
+    {
+      "family": "library_scry_activated_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 13814,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Haste\n{1}{U}: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "variants": [
+        "bottom_0",
+        "bottom_1",
+        "keep_0",
+        "keep_1",
+        "short_blue_0",
+        "short_blue_1",
+        "short_generic_0",
+        "short_generic_1",
+        "stack_repeat_0",
+        "stack_repeat_1",
+        "fresh_haste_0",
+        "fresh_haste_1",
+        "tapped_scry_0",
+        "tapped_scry_1"
+      ]
+    }
+  ]
+}

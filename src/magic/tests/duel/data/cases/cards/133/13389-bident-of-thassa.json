@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Bident of Thassa",
+  "csvid": 13389,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "combat_damage_draw",
+      "version": 2,
+      "oracle_text": "Whenever a creature you control deals combat damage to a player, you may draw a card.\n{1}{U}, {T}: Creatures your opponents control attack this turn if able.",
+      "params": {
+        "mode": "bident",
+        "mana": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "morph": null
+      },
+      "variants": [
+        "hit_0",
+        "hit_1",
+        "prevented_0",
+        "prevented_1",
+        "blocked_0",
+        "blocked_1",
+        "noncombat_0",
+        "noncombat_1",
+        "other_controller_0",
+        "other_controller_1",
+        "source_removed_0",
+        "source_removed_1",
+        "unfunded_0",
+        "unfunded_1",
+        "replay_0",
+        "replay_1",
+        "two_packets_0",
+        "two_packets_1",
+        "two_steps_0",
+        "two_steps_1",
+        "force_attack_0",
+        "force_attack_1",
+        "force_short_0",
+        "force_short_1",
+        "force_owner_turn_0",
+        "force_owner_turn_1",
+        "force_expires_0",
+        "force_expires_1",
+        "force_only_ineligible_0",
+        "force_only_ineligible_1",
+        "decline_0",
+        "partial_packets_0"
+      ]
+    }
+  ]
+}

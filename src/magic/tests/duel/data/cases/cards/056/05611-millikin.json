@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Millikin",
+  "csvid": 5611,
+  "recipes": [
+    {
+      "family": "mill_remaining_costs_and_grants",
+      "version": 2,
+      "params": {
+        "csvid": 5611,
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{T}, Mill a card: Add {C}. (Activate only as an instant. To mill a card, put the top card of your library into your graveyard.)",
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "spent_0",
+        "spent_1",
+        "fresh_0",
+        "fresh_1",
+        "empty_0",
+        "empty_1",
+        "tapped_0",
+        "tapped_1"
+      ]
+    }
+  ]
+}

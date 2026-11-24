@@ -1,0 +1,256 @@
+{
+  "version": 1,
+  "sources": {
+    "Neurok Invisimancer": {
+      "oracle": {
+        "oracle_id": "e7425964-0028-4156-9037-b303b00e7e11",
+        "name": "Neurok Invisimancer",
+        "oracle_text": "This creature can't be blocked.\nWhen this creature enters, target creature can't be blocked this turn.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddi/8/neurok-invisimancer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11321,
+        "iid": 6577,
+        "name": "Neurok Invisimancer",
+        "handler": "manalinkeh_card_neurok_invisimancer",
+        "kind": "card"
+      }
+    },
+    "Subterranean Scout": {
+      "oracle": {
+        "oracle_id": "19f66bfa-bdfc-430a-ae39-4535f0b28324",
+        "name": "Subterranean Scout",
+        "oracle_text": "When this creature enters, target creature with power 2 or less can't be blocked this turn.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Scout",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/143/subterranean-scout?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15226,
+        "iid": 14933,
+        "name": "Subterranean Scout",
+        "handler": "manalinkeh_card_subterranean_scout",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Goblin Tinkerer": {
+      "oracle": {
+        "oracle_id": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+        "name": "Goblin Tinkerer",
+        "oracle_text": "{R}, {T}: Destroy target artifact. That artifact deals damage equal to its mana value to this creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/180/goblin-tinkerer?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2493,
+        "iid": 4056,
+        "name": "Goblin Tinkerer",
+        "handler": "manalinkeh_card_goblin_tinkerer",
+        "kind": "card"
+      }
+    },
+    "Catapult Squad": {
+      "oracle": {
+        "oracle_id": "f1ff7a67-1add-4de1-bc25-62f63626c43a",
+        "name": "Catapult Squad",
+        "oracle_text": "Tap two untapped Soldiers you control: This creature deals 2 damage to target attacking or blocking creature.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ons/11/catapult-squad?utm_source=api"
+      },
+      "registry": {
+        "csvid": 6081,
+        "iid": 1540,
+        "name": "Catapult Squad",
+        "handler": "manalinkeh_card_catapult_squad",
+        "kind": "card"
+      }
+    },
+    "Unyielding Krumar": {
+      "oracle": {
+        "oracle_id": "00bcfbaf-cd31-4688-973e-4238749051b7",
+        "name": "Unyielding Krumar",
+        "oracle_text": "{1}{W}: This creature gains first strike until end of turn.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Orc Warrior",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/94/unyielding-krumar?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14419,
+        "iid": 10395,
+        "name": "Unyielding Krumar",
+        "handler": "manalinkeh_card_unyielding_krumar",
+        "kind": "card"
+      }
+    },
+    "Giant Growth": {
+      "oracle": {
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "name": "Giant Growth",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 97,
+        "iid": 3862,
+        "name": "Giant Growth",
+        "handler": "manalinkeh_card_giant_growth",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Gladecover Scout": {
+      "oracle": {
+        "oracle_id": "385c1208-bfea-44e2-b236-4f38bc90db9f",
+        "name": "Gladecover Scout",
+        "oracle_text": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Scout",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Hexproof"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/176/gladecover-scout?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11810,
+        "iid": 3912,
+        "name": "Gladecover Scout",
+        "handler": "manalinkeh_card_aven_fleetwing",
+        "kind": "card"
+      }
+    }
+  }
+}

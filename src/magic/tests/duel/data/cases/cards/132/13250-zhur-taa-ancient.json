@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "card": "Zhur-Taa Ancient",
+  "csvid": 13250,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "global_land_mana_multiplier",
+      "version": 2,
+      "oracle_text": "Whenever a player taps a land for mana, that player adds one mana of any type that land produced.",
+      "params": {
+        "mode": "plain",
+        "creature": true,
+        "mana": [
+          3,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      "variants": [
+        "owner_land_0",
+        "owner_land_1",
+        "opponent_land_0",
+        "opponent_land_1",
+        "colorless_land_0",
+        "colorless_land_1",
+        "two_colorless_0",
+        "two_colorless_1",
+        "selected_white_0",
+        "selected_white_1",
+        "mixed_red_0",
+        "mixed_red_1",
+        "mixed_green_0",
+        "mixed_green_1",
+        "opponent_mixed_0",
+        "opponent_mixed_1",
+        "nonland_mana_0",
+        "nonland_mana_1",
+        "nonmana_tap_0",
+        "nonmana_tap_1",
+        "while_pending_0",
+        "while_pending_1",
+        "source_removed_0",
+        "source_removed_1",
+        "two_multipliers_0",
+        "two_multipliers_1",
+        "spend_pool_0",
+        "spend_pool_1",
+        "pay_during_0",
+        "pay_during_1",
+        "replay_0",
+        "replay_1",
+        "creature_combat_0",
+        "creature_combat_1"
+      ]
+    }
+  ]
+}

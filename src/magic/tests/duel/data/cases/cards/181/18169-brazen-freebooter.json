@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "card": "Brazen Freebooter",
+  "csvid": 18169,
+  "recipes": [
+    {
+      "family": "treasure_entry",
+      "version": 2,
+      "params": {
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "count": 1,
+        "power": 3,
+        "toughness": 3
+      },
+      "oracle_text": "When this creature enters, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "variants": [
+        "entry_0",
+        "board_no_entry_0",
+        "unrelated_entry_0",
+        "wrong_color_0",
+        "short_cost_0",
+        "countered_0",
+        "two_entries_0",
+        "both_players_0",
+        "bounce_recast_0",
+        "blink_0",
+        "source_removed_0",
+        "tap_untap_0",
+        "spend_blue_0",
+        "wrong_player_cannot_spend_0",
+        "mana_black_0",
+        "mana_blue_0",
+        "mana_green_0",
+        "mana_red_0",
+        "mana_white_0",
+        "entry_1",
+        "board_no_entry_1",
+        "unrelated_entry_1",
+        "wrong_color_1",
+        "short_cost_1",
+        "countered_1",
+        "two_entries_1",
+        "both_players_1",
+        "bounce_recast_1",
+        "blink_1",
+        "source_removed_1",
+        "tap_untap_1",
+        "spend_blue_1",
+        "wrong_player_cannot_spend_1",
+        "mana_black_1",
+        "mana_blue_1",
+        "mana_green_1",
+        "mana_red_1",
+        "mana_white_1"
+      ]
+    }
+  ]
+}

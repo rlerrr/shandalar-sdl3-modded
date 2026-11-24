@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Devout Lightcaster",
+  "csvid": 10529,
+  "recipes": [
+    {
+      "family": "entry_trigger_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 10529,
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ]
+      },
+      "oracle_text": "Protection from black\nWhen this creature enters, exile target black permanent.",
+      "variants": [
+        "black_artifact_0",
+        "black_artifact_1",
+        "own_black_0",
+        "own_black_1",
+        "no_black_0",
+        "no_black_1",
+        "borrowed_0",
+        "borrowed_1",
+        "protection_0",
+        "protection_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Mnemonic Betrayal",
+  "csvid": 19435,
+  "recipes": [
+    {
+      "family": "alternate_zone_cast_additional_riders",
+      "version": 2,
+      "params": {
+        "model": "betrayal",
+        "cost": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Exile all opponents' graveyards. You may cast spells from among those cards this turn, and mana of any type can be spent to cast them. At the beginning of the next end step, if any of those cards remain exiled, return them to their owners' graveyards.\nExile Mnemonic Betrayal.",
+      "variants": [
+        "short_source_0",
+        "alternate_pay_0",
+        "expiry_0",
+        "short_0",
+        "wrong_seat_0",
+        "empty_0",
+        "shroud_0",
+        "replay_0",
+        "short_source_1",
+        "alternate_pay_1",
+        "expiry_1",
+        "short_1",
+        "wrong_seat_1",
+        "empty_1",
+        "shroud_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Cavalry Master",
+  "csvid": 8497,
+  "recipes": [
+    {
+      "family": "combat_flanking_composition",
+      "version": 2,
+      "oracle_text": "Flanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)\nOther creatures you control with flanking have flanking. (Each instance of flanking triggers separately.)",
+      "params": {
+        "role": "cavalry",
+        "printed_mana": "{2}{W}{W}",
+        "intrinsic_flanking": true,
+        "grant_cost": "",
+        "grant_taps_source": false
+      },
+      "variants": [
+        "cast_payment_0",
+        "cast_unaffordable_0",
+        "countered_cast_0",
+        "normal_block_0",
+        "lethal_declaration_0",
+        "flanking_blocker_0",
+        "two_blockers_0",
+        "defending_0",
+        "unblocked_0",
+        "empty_attack_0",
+        "declared_snapshot_0",
+        "cleanup_0",
+        "friendly_native_0",
+        "enemy_native_0",
+        "ordinary_ally_0",
+        "second_master_0",
+        "two_master_self_0",
+        "grant_removed_0",
+        "cast_payment_1",
+        "cast_unaffordable_1",
+        "countered_cast_1",
+        "normal_block_1",
+        "lethal_declaration_1",
+        "flanking_blocker_1",
+        "two_blockers_1",
+        "defending_1",
+        "unblocked_1",
+        "empty_attack_1",
+        "declared_snapshot_1",
+        "cleanup_1",
+        "friendly_native_1",
+        "enemy_native_1",
+        "ordinary_ally_1",
+        "second_master_1",
+        "two_master_self_1",
+        "grant_removed_1"
+      ]
+    }
+  ]
+}

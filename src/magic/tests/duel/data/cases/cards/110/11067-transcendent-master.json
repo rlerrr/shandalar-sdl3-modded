@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "csvid": 11067,
+  "card": "Transcendent Master",
+  "recipes": [
+    {
+      "family": "level_upper_combat_riders",
+      "version": 2,
+      "params": {
+        "price": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "activation": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          3,
+          3
+        ],
+        "first": [
+          6,
+          6,
+          6
+        ],
+        "second": [
+          12,
+          9,
+          9
+        ],
+        "first_riders": [
+          "Lifelink"
+        ],
+        "second_riders": [
+          "Lifelink, indestructible"
+        ],
+        "effect": "life"
+      },
+      "oracle_text": "Level up {1} ({1}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 6-11\n6/6\nLifelink\nLEVEL 12+\n9/9\nLifelink, indestructible",
+      "variants": [
+        "paid_bands_0",
+        "paid_bands_1",
+        "offturn_denied_0",
+        "offturn_denied_1",
+        "pending_denied_0",
+        "pending_denied_1",
+        "plain_damage_0",
+        "plain_damage_1",
+        "lifelink_0",
+        "lifelink_1",
+        "destroy_before_0",
+        "destroy_before_1",
+        "destroy_upper_0",
+        "destroy_upper_1",
+        "exile_upper_0",
+        "exile_upper_1"
+      ]
+    }
+  ]
+}

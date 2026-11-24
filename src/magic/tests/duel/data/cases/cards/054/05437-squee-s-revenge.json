@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Squee's Revenge",
+  "csvid": 5437,
+  "recipes": [
+    {
+      "family": "coin_flip_repeated_flips",
+      "version": 2,
+      "params": {
+        "csvid": 5437,
+        "casting_cost": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "rules": "Choose a number. Flip a coin that many times or until you lose a flip, whichever comes first. If you win all the flips, draw two cards for each flip."
+      },
+      "oracle_text": "Choose a number. Flip a coin that many times or until you lose a flip, whichever comes first. If you win all the flips, draw two cards for each flip.",
+      "variants": [
+        "win_two_0",
+        "win_two_1",
+        "later_loss_0",
+        "later_loss_1",
+        "zero_0",
+        "zero_1",
+        "win_three_0",
+        "win_three_1"
+      ]
+    }
+  ]
+}

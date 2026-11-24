@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "card": "Ghostly Prison",
+  "csvid": 7214,
+  "recipes": [
+    {
+      "family": "global_attack_tax",
+      "version": 2,
+      "params": {
+        "cost": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "tax_formula": "fixed",
+        "amount": 2,
+        "protects_walker": false,
+        "flying": false
+      },
+      "oracle_text": "Creatures can't attack you unless their controller pays {2} for each creature they control that's attacking you.",
+      "variants": [
+        "pay_exact_0",
+        "decline_0",
+        "underfunded_0",
+        "empty_pool_0",
+        "two_paid_0",
+        "first_only_0",
+        "second_only_0",
+        "stack_sources_0",
+        "opposite_source_0",
+        "own_attacker_0",
+        "tapped_source_0",
+        "no_source_0",
+        "cast_source_0",
+        "removed_source_0",
+        "tapped_attacker_0",
+        "sick_attacker_0",
+        "walker_no_source_0",
+        "walker_short_0",
+        "pay_exact_1",
+        "decline_1",
+        "underfunded_1",
+        "empty_pool_1",
+        "two_paid_1",
+        "first_only_1",
+        "second_only_1",
+        "stack_sources_1",
+        "opposite_source_1",
+        "own_attacker_1",
+        "tapped_source_1",
+        "no_source_1",
+        "cast_source_1",
+        "removed_source_1",
+        "tapped_attacker_1",
+        "sick_attacker_1",
+        "walker_no_source_1",
+        "walker_short_1"
+      ]
+    }
+  ]
+}

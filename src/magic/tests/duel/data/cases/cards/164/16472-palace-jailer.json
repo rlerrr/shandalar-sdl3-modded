@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Palace Jailer",
+  "csvid": 16472,
+  "recipes": [
+    {
+      "family": "monarch_entry_riders",
+      "version": 2,
+      "params": {
+        "model": "jailer",
+        "cost": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "When this creature enters, you become the monarch.\nWhen this creature enters, exile target creature an opponent controls until an opponent becomes the monarch.",
+      "variants": [
+        "entry_0",
+        "transfer_0",
+        "noncombat_0",
+        "already_0",
+        "underpaid_0",
+        "countered_0",
+        "replay_0",
+        "alternate_0",
+        "no_target_0",
+        "source_gone_0",
+        "cross_owned_0",
+        "entry_1",
+        "transfer_1",
+        "noncombat_1",
+        "already_1",
+        "underpaid_1",
+        "countered_1",
+        "replay_1",
+        "alternate_1",
+        "no_target_1",
+        "source_gone_1",
+        "cross_owned_1"
+      ]
+    }
+  ]
+}

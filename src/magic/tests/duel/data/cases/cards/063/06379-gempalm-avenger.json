@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "card": "Gempalm Avenger",
+  "csvid": 6379,
+  "recipes": [
+    {
+      "family": "gempalm_tribal_cycling",
+      "version": 2,
+      "oracle_text": "Cycling {2}{W} ({2}{W}, Discard this card: Draw a card.)\nWhen you cycle this card, Soldier creatures get +1/+1 and gain first strike until end of turn.",
+      "params": {
+        "mana": [
+          5,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "cycling_mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "power": 3,
+        "toughness": 5,
+        "effect": "mass",
+        "tribe": "Soldier",
+        "delta": [
+          1,
+          1
+        ],
+        "keyword": "first strike"
+      },
+      "variants": [
+        "effect_0",
+        "off_turn_0",
+        "repeated_0",
+        "pending_replay_0",
+        "cancel_cycle_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "source_cast_0",
+        "source_cast_denied_0",
+        "plain_discard_0",
+        "unrelated_cycle_0",
+        "zero_tribe_0",
+        "changeling_0",
+        "opponent_only_0",
+        "own_only_0",
+        "cleanup_0",
+        "first_strike_0",
+        "enemy_first_strike_0",
+        "base_combat_0",
+        "expired_first_strike_0",
+        "effect_1",
+        "off_turn_1",
+        "repeated_1",
+        "pending_replay_1",
+        "cancel_cycle_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "source_cast_1",
+        "source_cast_denied_1",
+        "plain_discard_1",
+        "unrelated_cycle_1",
+        "zero_tribe_1",
+        "changeling_1",
+        "opponent_only_1",
+        "own_only_1",
+        "cleanup_1",
+        "first_strike_1",
+        "enemy_first_strike_1",
+        "base_combat_1",
+        "expired_first_strike_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "csvid": 744,
+  "card": "Planar Gate",
+  "recipes": [
+    {
+      "family": "multi_type_discounts",
+      "version": 2,
+      "params": {
+        "effect": "static_discount",
+        "cost": [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "types": [
+          "Creature"
+        ],
+        "amount": 2,
+        "rider": "none"
+      },
+      "oracle_text": "Creature spells you cast cost {2} less to cast.",
+      "variants": [
+        "payment_0",
+        "payment_1",
+        "one_short_0",
+        "one_short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "opposing_caster_0",
+        "opposing_caster_1",
+        "source_cast_0",
+        "source_cast_1",
+        "source_short_0",
+        "source_short_1",
+        "source_grave_0",
+        "source_grave_1",
+        "source_bounce_0",
+        "source_bounce_1",
+        "combined_0",
+        "combined_1",
+        "countered_0",
+        "countered_1",
+        "paid_replay_0",
+        "paid_replay_1",
+        "colored_floor_0",
+        "colored_floor_1",
+        "artifact_creature_0",
+        "artifact_creature_1",
+        "enchantment_creature_0",
+        "enchantment_creature_1",
+        "excluded_instant_0",
+        "excluded_instant_1",
+        "excluded_sorcery_0",
+        "excluded_sorcery_1",
+        "eligible_creature_0",
+        "eligible_creature_1",
+        "excluded_enchantment_0",
+        "excluded_enchantment_1",
+        "excluded_artifact_0",
+        "excluded_artifact_1",
+        "zero_total_0",
+        "zero_total_1"
+      ]
+    }
+  ]
+}

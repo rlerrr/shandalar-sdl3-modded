@@ -1,0 +1,813 @@
+{
+  "sources": {
+    "Brutalizer Exarch": {
+      "oracle": {
+        "oracle_id": "bdec14d1-1b38-4223-869e-a0ffc76b2b0c",
+        "name": "Brutalizer Exarch",
+        "oracle_text": "When this creature enters, choose one —\n• Search your library for a creature card, reveal it, then shuffle and put that card on top.\n• Put target noncreature permanent on the bottom of its owner's library.",
+        "mana_cost": "{5}{G}",
+        "type_line": "Creature — Phyrexian Cleric",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pca/61/brutalizer-exarch?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11572,
+        "iid": 1379,
+        "name": "Brutalizer Exarch",
+        "handler": "manalinkeh_card_brutalizer_exarch",
+        "kind": "card"
+      }
+    },
+    "Earwig Squad": {
+      "oracle": {
+        "oracle_id": "f8526509-2e14-4ac0-b1de-cf4ee7d4f875",
+        "name": "Earwig Squad",
+        "oracle_text": "Prowl {2}{B} (You may cast this for its prowl cost if you dealt combat damage to a player this turn with a Goblin or Rogue.)\nWhen this creature enters, if its prowl cost was paid, search target opponent's library for three cards and exile them. Then that player shuffles.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Creature — Goblin Rogue",
+        "power": "5",
+        "toughness": "3",
+        "keywords": [
+          "Prowl"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mma/82/earwig-squad?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9349,
+        "iid": 2867,
+        "name": "Earwig Squad",
+        "handler": "manalinkeh_card_earwig_squad",
+        "kind": "card"
+      }
+    },
+    "Grave Sifter": {
+      "oracle": {
+        "oracle_id": "07a26388-773e-4614-a3de-f133c6694d59",
+        "name": "Grave Sifter",
+        "oracle_text": "When this creature enters, each player chooses a creature type and returns any number of cards of that type from their graveyard to their hand.",
+        "mana_cost": "{5}{G}",
+        "type_line": "Creature — Elemental Beast",
+        "power": "5",
+        "toughness": "7",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cma/112/grave-sifter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14464,
+        "iid": 4159,
+        "name": "Grave Sifter",
+        "handler": "manalinkeh_card_grave_sifter",
+        "kind": "card"
+      }
+    },
+    "Loaming Shaman": {
+      "oracle": {
+        "oracle_id": "cf7352bf-3971-4bb7-88b9-65ab9a219289",
+        "name": "Loaming Shaman",
+        "oracle_text": "When this creature enters, target player shuffles any number of target cards from their graveyard into their library.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Centaur Shaman",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/149/loaming-shaman?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8231,
+        "iid": 5665,
+        "name": "Loaming Shaman",
+        "handler": "manalinkeh_card_loaming_shaman",
+        "kind": "card"
+      }
+    },
+    "Boldwyr Heavyweights": {
+      "oracle": {
+        "oracle_id": "6fb45c80-0b6a-4283-a8e6-185b8e4bc756",
+        "name": "Boldwyr Heavyweights",
+        "oracle_text": "Trample\nWhen this creature enters, each opponent may search their library for a creature card and put it onto the battlefield. Then each player who searched their library this way shuffles.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Giant Warrior",
+        "power": "8",
+        "toughness": "8",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mor/85/boldwyr-heavyweights?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9326,
+        "iid": 1203,
+        "name": "Boldwyr Heavyweights",
+        "handler": "manalinkeh_card_boldwyr_heavyweights",
+        "kind": "card"
+      }
+    },
+    "Endless Horizons": {
+      "oracle": {
+        "oracle_id": "ca945c1e-efa3-4bb2-bf5a-379b93409855",
+        "name": "Endless Horizons",
+        "oracle_text": "When this enchantment enters, search your library for any number of Plains cards, exile them, then shuffle.\nAt the beginning of your upkeep, you may put a card you own exiled with this enchantment into your hand.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eve/4/endless-horizons?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9777,
+        "iid": 3035,
+        "name": "Endless Horizons",
+        "handler": "manalinkeh_card_endless_horizons",
+        "kind": "card"
+      }
+    },
+    "Jester's Scepter": {
+      "oracle": {
+        "oracle_id": "396b943c-b45d-4e5b-a9c1-f70bc603ee9f",
+        "name": "Jester's Scepter",
+        "oracle_text": "When this artifact enters, exile the top five cards of target player's library face down. You may look at those cards for as long as they remain exiled.\n{2}, {T}, Put a card exiled with this artifact into its owner's graveyard: Counter target spell if it has the same name as that card.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/csp/137/jesters-scepter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8388,
+        "iid": 5051,
+        "name": "Jester's Scepter",
+        "handler": "manalinkeh_card_jesters_scepter",
+        "kind": "card"
+      }
+    },
+    "Search the City": {
+      "oracle": {
+        "oracle_id": "fe1b0b19-0994-4bc7-ab6c-d1419d274f40",
+        "name": "Search the City",
+        "oracle_text": "When this enchantment enters, exile the top five cards of your library.\nWhenever you play a card with the same name as one of the exiled cards, you may put one of those cards with that name into its owner's hand. Then if there are no cards exiled with this enchantment, sacrifice it. If you do, take an extra turn after this one.",
+        "mana_cost": "{4}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rtr/49/search-the-city?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12811,
+        "iid": 8403,
+        "name": "Search the City",
+        "handler": "manalinkeh_card_search_the_city",
+        "kind": "card"
+      }
+    },
+    "Nulltread Gargantuan": {
+      "oracle": {
+        "oracle_id": "acc74d59-f587-46a2-a90b-865f721d494d",
+        "name": "Nulltread Gargantuan",
+        "oracle_text": "When this creature enters, put a creature you control on top of its owner's library.",
+        "mana_cost": "{1}{G}{U}",
+        "type_line": "Creature — Beast",
+        "power": "5",
+        "toughness": "6",
+        "keywords": [],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/arb/102/nulltread-gargantuan?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10326,
+        "iid": 6715,
+        "name": "Nulltread Gargantuan",
+        "handler": "manalinkeh_card_nulltread_gargantuan",
+        "kind": "card"
+      }
+    },
+    "Thieving Sprite": {
+      "oracle": {
+        "oracle_id": "4c5b2be9-5d48-4e62-ae67-d61f3708bb4f",
+        "name": "Thieving Sprite",
+        "oracle_text": "Flying\nWhen this creature enters, target player reveals X cards from their hand, where X is the number of Faeries you control. You choose one of those cards. That player discards that card.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Faerie Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mma/101/thieving-sprite?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9283,
+        "iid": 9887,
+        "name": "Thieving Sprite",
+        "handler": "manalinkeh_card_thieving_sprites",
+        "kind": "card"
+      }
+    },
+    "Trench Gorger": {
+      "oracle": {
+        "oracle_id": "a5e37c6e-ae42-4c98-ba20-840ea3c4a6ab",
+        "name": "Trench Gorger",
+        "oracle_text": "Trample\nWhen this creature enters, you may search your library for any number of land cards, exile them, then shuffle. If you do, this creature has base power and base toughness each equal to the number of cards exiled this way.",
+        "mana_cost": "{6}{U}{U}",
+        "type_line": "Creature — Leviathan",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmd/65/trench-gorger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11764,
+        "iid": 10191,
+        "name": "Trench Gorger",
+        "handler": "manalinkeh_card_trench_gorger",
+        "kind": "card"
+      }
+    },
+    "Vedalken Dismisser": {
+      "oracle": {
+        "oracle_id": "e6ed8820-4276-4ead-ba82-4654a92c415d",
+        "name": "Vedalken Dismisser",
+        "oracle_text": "When this creature enters, put target creature on top of its owner's library.",
+        "mana_cost": "{5}{U}",
+        "type_line": "Creature — Vedalken Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mma/69/vedalken-dismisser?utm_source=api"
+      },
+      "registry": {
+        "csvid": 7997,
+        "iid": 10493,
+        "name": "Vedalken Dismisser",
+        "handler": "manalinkeh_card_vedalken_dismisser",
+        "kind": "card"
+      }
+    },
+    "Mortuary Mire": {
+      "oracle": {
+        "oracle_id": "1b3fb20a-e090-4286-9c03-6b71c27c45be",
+        "name": "Mortuary Mire",
+        "oracle_text": "This land enters tapped.\nWhen this land enters, you may put target creature card from your graveyard on top of your library.\n{T}: Add {B}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clb/900/mortuary-mire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15378,
+        "iid": 13697,
+        "name": "Mortuary Mire",
+        "handler": "manalinkeh_card_mortuary_mire",
+        "kind": "card"
+      }
+    },
+    "Shrieking Grotesque": {
+      "oracle": {
+        "oracle_id": "20c8b03c-303d-4e19-96ec-3fabae843352",
+        "name": "Shrieking Grotesque",
+        "oracle_text": "Flying\nWhen this creature enters, if {B} was spent to cast it, target player discards a card.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Gargoyle",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gpt/15/shrieking-grotesque?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1316,
+        "iid": 8678,
+        "name": "Shrieking Grotesque",
+        "handler": "manalinkeh_card_shrieking_grotesque",
+        "kind": "card"
+      }
+    },
+    "Fell Specter": {
+      "oracle": {
+        "oracle_id": "d655a1c9-b84d-4069-a2ca-3aa0dacab3e1",
+        "name": "Fell Specter",
+        "oracle_text": "Flying\nWhen this creature enters, target opponent discards a card.\nWhenever an opponent discards a card, that player loses 2 life.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Specter",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/233/fell-specter?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18919,
+        "iid": 18852,
+        "name": "Fell Specter",
+        "handler": "manalinkeh_card_fell_specter",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mind Rot": {
+      "oracle": {
+        "oracle_id": "ad44cf74-b717-48fb-9fa2-77512024d76a",
+        "name": "Mind Rot",
+        "oracle_text": "Target player discards two cards.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/115/mind-rot?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1087,
+        "iid": 6132,
+        "name": "Mind Rot",
+        "handler": "manalinkeh_card_mind_rot",
+        "kind": "card"
+      }
+    },
+    "Mons's Goblin Raiders": {
+      "oracle": {
+        "oracle_id": "a37159df-f6d7-4db6-85de-0ea77f425993",
+        "name": "Mons's Goblin Raiders",
+        "oracle_text": "",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/s00/32/monss-goblin-raiders?utm_source=api"
+      },
+      "registry": {
+        "csvid": 163,
+        "iid": 6293,
+        "name": "Mons's Goblin Raiders",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Nightshade Stinger": {
+      "oracle": {
+        "oracle_id": "c57edca9-b71e-4ec1-84d5-4b178969ccb7",
+        "name": "Nightshade Stinger",
+        "oracle_text": "Flying\nThis creature can't block.",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Faerie Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/258/nightshade-stinger?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9226,
+        "iid": 6622,
+        "name": "Nightshade Stinger",
+        "handler": "manalinkeh_card_nightshade_stinger",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Spellbook": {
+      "oracle": {
+        "oracle_id": "83133f51-bfbd-4db5-9be0-f660e3b66435",
+        "name": "Spellbook",
+        "oracle_text": "You have no maximum hand size.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact — Book",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/220/spellbook?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1154,
+        "iid": 9121,
+        "name": "Spellbook",
+        "handler": "manalinkeh_card_spellbook",
+        "kind": "card"
+      }
+    },
+    "Suntail Hawk": {
+      "oracle": {
+        "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+        "name": "Suntail Hawk",
+        "oracle_text": "Flying",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/40/suntail-hawk?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1195,
+        "iid": 9548,
+        "name": "Suntail Hawk",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "registry": {
+        "csvid": 239,
+        "iid": 0,
+        "name": "Swamp",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Tarfire": {
+      "oracle": {
+        "oracle_id": "f07b821c-bbc1-4def-b009-6c03689478d0",
+        "name": "Tarfire",
+        "oracle_text": "Tarfire deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Kindred Instant — Goblin",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddt/55/tarfire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9282,
+        "iid": 9709,
+        "name": "Tarfire",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Urza's Armor": {
+      "oracle": {
+        "oracle_id": "e5fa232a-c8f2-4532-88bf-60d1223181b0",
+        "name": "Urza's Armor",
+        "oracle_text": "If a source would deal damage to you, prevent 1 of that damage.",
+        "mana_cost": "{6}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/318/urzas-armor?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1179,
+        "iid": 10419,
+        "name": "Urza's Armor",
+        "handler": "manalinkeh_card_urzas_armor",
+        "kind": "card"
+      }
+    }
+  }
+}

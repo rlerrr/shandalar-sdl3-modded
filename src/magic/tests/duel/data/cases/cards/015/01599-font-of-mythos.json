@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Font of Mythos",
+  "csvid": 1599,
+  "recipes": [
+    {
+      "family": "draw_step_additional_draw",
+      "version": 2,
+      "params": {
+        "csvid": 1599,
+        "extra": 2,
+        "price": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "modes": [
+          "ordinary",
+          "limited_by_spirit",
+          "removed",
+          "tapped_unconditional"
+        ],
+        "clauses": [
+          "At the beginning of each player's draw step, that player draws two additional cards."
+        ]
+      },
+      "oracle_text": "At the beginning of each player's draw step, that player draws two additional cards.",
+      "variants": [
+        "ordinary_0",
+        "ordinary_1",
+        "limited_by_spirit_0",
+        "limited_by_spirit_1",
+        "removed_0",
+        "removed_1",
+        "tapped_unconditional_0",
+        "tapped_unconditional_1"
+      ]
+    }
+  ]
+}

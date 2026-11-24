@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Oracle of Bones",
+  "csvid": 13772,
+  "recipes": [
+    {
+      "family": "entry_interaction_choice_and_life",
+      "version": 2,
+      "params": {
+        "csvid": 13772,
+        "mana_cost": "{2}{R}{R}"
+      },
+      "oracle_text": "Haste\nTribute 2 (As this creature enters, an opponent of your choice may put two +1/+1 counters on it.)\nWhen this creature enters, if tribute wasn't paid, you may cast an instant or sorcery spell from your hand without paying its mana cost.",
+      "variants": [
+        "tribute_paid_0",
+        "tribute_paid_1",
+        "free_fog_0",
+        "free_fog_1",
+        "decline_spell_0",
+        "decline_spell_1"
+      ]
+    }
+  ]
+}

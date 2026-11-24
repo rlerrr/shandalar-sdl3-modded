@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Ring of Kalonia",
+  "csvid": 12607,
+  "recipes": [
+    {
+      "family": "ring_equipment_upkeep",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "color": "green",
+        "effect": "trample",
+        "equip": 1,
+        "active_cost": 0
+      },
+      "oracle_text": "Equipped creature has trample. (It can deal excess combat damage to the player or planeswalker it's attacking.)\nAt the beginning of your upkeep, put a +1/+1 counter on equipped creature if it's green.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "variants": [
+        "growth_twice_0",
+        "wrong_color_0",
+        "unattached_0",
+        "move_to_match_0",
+        "move_to_nonmatch_0",
+        "equip_unfunded_0",
+        "equip_wrong_controller_0",
+        "equip_wrong_type_0",
+        "equip_offturn_0",
+        "equip_target_leaves_0",
+        "equipment_removed_0",
+        "pending_equip_replay_0",
+        "trample_combat_0",
+        "trample_removed_0",
+        "growth_twice_1",
+        "wrong_color_1",
+        "unattached_1",
+        "move_to_match_1",
+        "move_to_nonmatch_1",
+        "equip_unfunded_1",
+        "equip_wrong_controller_1",
+        "equip_wrong_type_1",
+        "equip_offturn_1",
+        "equip_target_leaves_1",
+        "equipment_removed_1",
+        "pending_equip_replay_1",
+        "trample_combat_1",
+        "trample_removed_1"
+      ]
+    }
+  ]
+}

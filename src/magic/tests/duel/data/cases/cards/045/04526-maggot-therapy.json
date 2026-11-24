@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Maggot Therapy",
+  "csvid": 4526,
+  "recipes": [
+    {
+      "family": "flash_remaining_auras_and_enchantments",
+      "version": 2,
+      "params": {
+        "csvid": 4526,
+        "cost": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "clauses": [
+          "Flash",
+          "Enchant creature",
+          "Enchanted creature gets +2/-2."
+        ],
+        "modes": [
+          "lethal_attack",
+          "stat_delta",
+          "remove_aura",
+          "lost_target"
+        ]
+      },
+      "oracle_text": "Flash\nEnchant creature\nEnchanted creature gets +2/-2.",
+      "variants": [
+        "lethal_attack_0",
+        "lethal_attack_1",
+        "stat_delta_0",
+        "stat_delta_1",
+        "remove_aura_0",
+        "remove_aura_1",
+        "lost_target_0",
+        "lost_target_1"
+      ]
+    }
+  ]
+}

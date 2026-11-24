@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Moonsilver Spear",
+  "csvid": 12428,
+  "recipes": [
+    {
+      "family": "equipment_combat_attack_board_effects",
+      "version": 2,
+      "params": {
+        "csvid": 12428,
+        "cast_mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "equip_generic": 4,
+        "bonus": [
+          0,
+          0
+        ],
+        "clauses": [
+          "Equipped creature has first strike.",
+          "Whenever equipped creature attacks, create a 4/4 white Angel creature token with flying.",
+          "Equip {4}"
+        ],
+        "modes": [
+          "own_attack",
+          "other_attack",
+          "reequip_attack",
+          "unfunded",
+          "detached",
+          "angel_flight"
+        ]
+      },
+      "oracle_text": "Equipped creature has first strike.\nWhenever equipped creature attacks, create a 4/4 white Angel creature token with flying.\nEquip {4}",
+      "variants": [
+        "own_attack_0",
+        "own_attack_1",
+        "other_attack_0",
+        "other_attack_1",
+        "reequip_attack_0",
+        "reequip_attack_1",
+        "unfunded_0",
+        "unfunded_1",
+        "detached_0",
+        "detached_1",
+        "angel_flight_0",
+        "angel_flight_1"
+      ]
+    }
+  ]
+}

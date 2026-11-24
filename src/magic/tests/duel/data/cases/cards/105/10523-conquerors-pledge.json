@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "csvid": 10523,
+  "card": "Conqueror's Pledge",
+  "recipes": [
+    {
+      "family": "kicker_tokens_and_copies",
+      "version": 2,
+      "oracle_text": "Kicker {6} (You may pay an additional {6} as you cast this spell.)\nCreate six 1/1 white Kor Soldier creature tokens. If this spell was kicked, create twelve of those tokens instead.",
+      "params": {
+        "effect": "quantity",
+        "identity": "Kor Soldier",
+        "counts": [
+          6,
+          12
+        ],
+        "pt": [
+          1,
+          1
+        ],
+        "color": 32,
+        "subtypes": [
+          "Soldier"
+        ],
+        "price": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        "fee": [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "clauses": [
+          "Kicker {6} (You may pay an additional {6} as you cast this spell.)",
+          "Create six 1/1 white Kor Soldier creature tokens. If this spell was kicked, create twelve of those tokens instead."
+        ],
+        "source_pt": []
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

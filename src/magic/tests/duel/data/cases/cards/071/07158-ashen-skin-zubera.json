@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Ashen-Skin Zubera",
+  "csvid": 7158,
+  "recipes": [
+    {
+      "family": "departure_resources",
+      "version": 2,
+      "params": {
+        "csvid": 7158,
+        "printed_mana": "{1}{B}",
+        "rules": "When this creature dies, target opponent discards a card for each Zubera that died this turn."
+      },
+      "oracle_text": "When this creature dies, target opponent discards a card for each Zubera that died this turn.",
+      "variants": [
+        "single_0",
+        "single_1",
+        "simultaneous_global_0",
+        "simultaneous_global_1",
+        "same_turn_0",
+        "same_turn_1",
+        "later_turn_0",
+        "later_turn_1",
+        "exile_0",
+        "exile_1"
+      ]
+    }
+  ]
+}

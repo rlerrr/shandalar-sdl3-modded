@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 16781,
+  "card": "Reservoir Walker",
+  "recipes": [
+    {
+      "family": "entry_trigger_life_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 16781,
+        "printed_cost": "{5}"
+      },
+      "oracle_text": "When this creature enters, you gain 3 life and get {E}{E}{E} (three energy counters).",
+      "variants": [
+        "short_0",
+        "countered_0",
+        "entry_0",
+        "recast_0",
+        "snapshot_0",
+        "short_1",
+        "countered_1",
+        "entry_1",
+        "recast_1",
+        "snapshot_1"
+      ]
+    }
+  ]
+}

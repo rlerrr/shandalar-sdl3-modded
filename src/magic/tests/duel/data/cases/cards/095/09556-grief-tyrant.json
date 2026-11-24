@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 9556,
+  "card": "Grief Tyrant",
+  "recipes": [
+    {
+      "family": "departure_damage_and_removal",
+      "version": 2,
+      "params": {
+        "csvid": 9556,
+        "printed_cost": "{5}{B/R}",
+        "keywords": []
+      },
+      "oracle_text": "This creature enters with four -1/-1 counters on it.\nWhen this creature dies, put a -1/-1 counter on target creature for each -1/-1 counter on this creature.",
+      "variants": [
+        "death_0",
+        "zero_counters_0",
+        "bounce_0",
+        "death_1",
+        "zero_counters_1",
+        "bounce_1"
+      ]
+    }
+  ]
+}

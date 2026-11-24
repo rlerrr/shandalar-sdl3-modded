@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "card": "Sea Gate Wreckage",
+  "csvid": 15674,
+  "recipes": [
+    {
+      "family": "gated_tap_draw",
+      "version": 2,
+      "oracle_text": "{T}: Add {C}. ({C} represents colorless mana.)\n{2}{C}, {T}: Draw a card. Activate only if you have no cards in hand.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "card_type": "Land",
+          "cast_mana": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "generic": 2,
+          "colorless": 1,
+          "hand_size": 0,
+          "mana_mode": true,
+          "discard": false,
+          "clauses": [
+            "{T}: Add {C}. ({C} represents colorless mana.)",
+            "{2}{C}, {T}: Draw a card. Activate only if you have no cards in hand."
+          ]
+        }
+      },
+      "variants": [
+        "effect_0",
+        "entry_0",
+        "tapped_denied_0",
+        "repeat_denied_0",
+        "offturn_0",
+        "ready_replay_0",
+        "pending_replay_0",
+        "source_removed_0",
+        "hand_above_0",
+        "hand_enters_limit_0",
+        "opponent_hand_0",
+        "mana_at_limit_0",
+        "mana_outside_limit_0",
+        "insufficient_mana_0",
+        "exact_colorless_0",
+        "exact_mixed_0",
+        "wrong_color_0",
+        "effect_1",
+        "entry_1",
+        "tapped_denied_1",
+        "repeat_denied_1",
+        "offturn_1",
+        "ready_replay_1",
+        "pending_replay_1",
+        "source_removed_1",
+        "hand_above_1",
+        "hand_enters_limit_1",
+        "opponent_hand_1",
+        "mana_at_limit_1",
+        "mana_outside_limit_1",
+        "insufficient_mana_1",
+        "exact_colorless_1",
+        "exact_mixed_1",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

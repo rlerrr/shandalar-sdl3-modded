@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Dreampod Druid",
+  "csvid": 12520,
+  "recipes": [
+    {
+      "family": "upkeep_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 12520,
+        "mana_cost": "{1}{G}"
+      },
+      "oracle_text": "At the beginning of each upkeep, if this creature is enchanted, create a 1/1 green Saproling creature token.",
+      "variants": [
+        "bare_0",
+        "bare_1",
+        "enchanted_0",
+        "enchanted_1",
+        "remove_aura_0",
+        "remove_aura_1"
+      ]
+    }
+  ]
+}

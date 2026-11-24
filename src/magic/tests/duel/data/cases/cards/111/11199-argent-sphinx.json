@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "csvid": 11199,
+  "card": "Argent Sphinx",
+  "recipes": [
+    {
+      "family": "metalcraft_artifact",
+      "version": 2,
+      "params": {
+        "effect": "blink",
+        "flying": true,
+        "artifact": false,
+        "cast_mana": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "power": 4,
+        "toughness": 3
+      },
+      "oracle_text": "Flying\nMetalcraft — {U}: Exile this creature. Return it to the battlefield under your control at the beginning of the next end step. Activate only if you control three or more artifacts.",
+      "variants": [
+        "cast_below_0",
+        "cast_threshold_0",
+        "unfunded_0",
+        "enemy_scope_0",
+        "gain_0",
+        "drop_0",
+        "fee_short_0",
+        "offturn_0",
+        "fresh_0",
+        "source_lost_0",
+        "pending_drop_0",
+        "control_return_0",
+        "replay_0",
+        "wrong_color_0",
+        "flying_ground_0",
+        "flying_reach_0",
+        "cast_below_1",
+        "cast_threshold_1",
+        "unfunded_1",
+        "enemy_scope_1",
+        "gain_1",
+        "drop_1",
+        "fee_short_1",
+        "offturn_1",
+        "fresh_1",
+        "source_lost_1",
+        "pending_drop_1",
+        "control_return_1",
+        "replay_1",
+        "wrong_color_1",
+        "flying_ground_1",
+        "flying_reach_1"
+      ]
+    }
+  ]
+}

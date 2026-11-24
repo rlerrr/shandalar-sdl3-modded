@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "card": "Surrak Dragonclaw",
+  "csvid": 14395,
+  "recipes": [
+    {
+      "family": "uncounterable_spell_permissions",
+      "version": 2,
+      "oracle_text": "Flash\nThis spell can't be countered.\nCreature spells you control can't be countered.\nOther creatures you control have trample.",
+      "params": {
+        "model": "ally_flash",
+        "cost": [
+          2,
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "variants": [
+        "intrinsic_0",
+        "intrinsic_replay_0",
+        "intrinsic_decree_0",
+        "source_absent_0",
+        "source_removed_0",
+        "source_entered_0",
+        "flash_response_0",
+        "trample_own_0",
+        "trample_self_0",
+        "trample_enemy_0",
+        "paid_creature_0",
+        "paid_opposing_creature_0",
+        "paid_instant_0",
+        "paid_artifact_0",
+        "paid_flash_0",
+        "decree_creature_0",
+        "decree_opposing_creature_0",
+        "decree_instant_0",
+        "decree_artifact_0",
+        "decree_flash_0",
+        "intrinsic_1",
+        "intrinsic_replay_1",
+        "intrinsic_decree_1",
+        "source_absent_1",
+        "source_removed_1",
+        "source_entered_1",
+        "flash_response_1",
+        "trample_own_1",
+        "trample_self_1",
+        "trample_enemy_1",
+        "paid_creature_1",
+        "paid_opposing_creature_1",
+        "paid_instant_1",
+        "paid_artifact_1",
+        "paid_flash_1",
+        "decree_creature_1",
+        "decree_opposing_creature_1",
+        "decree_instant_1",
+        "decree_artifact_1",
+        "decree_flash_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "csvid": 15363,
+  "card": "Kozilek's Sentinel",
+  "recipes": [
+    {
+      "family": "devoid_cast_and_control",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\nWhenever you cast a colorless spell, this creature gets +1/+0 until end of turn.",
+      "params": {
+        "effect": "pump",
+        "price": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "power": 1,
+        "toughness": 4,
+        "fee": null
+      },
+      "variants": [
+        "own_devoid_0",
+        "own_devoid_1",
+        "own_artifact_0",
+        "own_artifact_1",
+        "own_colored_0",
+        "own_colored_1",
+        "enemy_devoid_0",
+        "enemy_devoid_1",
+        "enemy_artifact_0",
+        "enemy_artifact_1",
+        "own_repeat_0",
+        "own_repeat_1",
+        "countered_0",
+        "countered_1",
+        "token_entry_0",
+        "token_entry_1",
+        "expire_pump_0",
+        "expire_pump_1"
+      ]
+    }
+  ]
+}

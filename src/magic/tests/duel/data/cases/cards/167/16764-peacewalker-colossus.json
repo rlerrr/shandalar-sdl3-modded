@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "csvid": 16764,
+  "card": "Peacewalker Colossus",
+  "recipes": [
+    {
+      "family": "vehicle_crew_utility",
+      "version": 2,
+      "params": {
+        "effect": "animate_other",
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "threshold": 4,
+        "power": 6,
+        "toughness": 6,
+        "keywords": [],
+        "alternate_cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "{1}{W}: Another target Vehicle you control becomes an artifact creature until end of turn.\nCrew 4 (Tap any number of creatures you control with total power 4 or more: This Vehicle becomes an artifact creature until end of turn.)",
+      "variants": [
+        "cast_0",
+        "cast_1",
+        "cast_short_0",
+        "cast_short_1",
+        "ordered_exact_0",
+        "ordered_exact_1",
+        "underpowered_0",
+        "underpowered_1",
+        "partial_cancel_0",
+        "partial_cancel_1",
+        "expires_0",
+        "expires_1",
+        "pending_replay_0",
+        "pending_replay_1",
+        "other_value_0",
+        "other_value_1",
+        "other_combat_0",
+        "other_combat_1",
+        "other_fresh_0",
+        "other_fresh_1",
+        "other_expiry_0",
+        "other_expiry_1",
+        "other_replay_0",
+        "other_replay_1",
+        "both_other_0",
+        "both_other_1",
+        "other_short_0",
+        "other_short_1",
+        "other_wrong_color_0",
+        "other_wrong_color_1",
+        "other_enemy_0",
+        "other_enemy_1",
+        "other_nonvehicle_0",
+        "other_nonvehicle_1",
+        "other_self_only_0",
+        "other_self_only_1",
+        "other_target_lost_0",
+        "other_target_lost_1",
+        "other_source_lost_0",
+        "other_source_lost_1",
+        "both_crew_0",
+        "both_crew_1"
+      ]
+    }
+  ]
+}

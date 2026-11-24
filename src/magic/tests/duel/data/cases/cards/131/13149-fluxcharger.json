@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Fluxcharger",
+  "csvid": 13149,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "cast_instant_or_sorcery_riders",
+      "version": 2,
+      "oracle_text": "Flying\nWhenever you cast an instant or sorcery spell, you may switch this creature's power and toughness until end of turn.",
+      "params": {
+        "effect": "switch",
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "hybrid": [],
+        "stats": [
+          1,
+          5
+        ],
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "variants": [
+        "instant_0",
+        "instant_1",
+        "sorcery_0",
+        "sorcery_1",
+        "own_creature_0",
+        "own_creature_1",
+        "enemy_instant_0",
+        "enemy_instant_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "double_0",
+        "double_1",
+        "expiry_0",
+        "expiry_1",
+        "flying_0",
+        "flying_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

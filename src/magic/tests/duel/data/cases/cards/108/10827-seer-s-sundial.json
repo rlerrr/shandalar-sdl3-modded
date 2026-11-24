@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Seer's Sundial",
+  "csvid": 10827,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "landfall_targets_and_payment",
+      "version": 2,
+      "oracle_text": "Landfall — Whenever a land you control enters, you may pay {2}. If you do, draw a card.",
+      "params": {
+        "effect": "draw_paid",
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fee": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "stats": []
+      },
+      "variants": [
+        "own_0",
+        "own_1",
+        "enemy_0",
+        "enemy_1",
+        "offturn_0",
+        "offturn_1",
+        "repeat_0",
+        "repeat_1",
+        "replay_0",
+        "replay_1",
+        "removed_0",
+        "removed_1",
+        "fee_short_0",
+        "fee_short_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

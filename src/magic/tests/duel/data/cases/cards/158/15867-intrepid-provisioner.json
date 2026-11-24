@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Intrepid Provisioner",
+  "csvid": 15867,
+  "recipes": [
+    {
+      "family": "entry_interaction_combat",
+      "version": 2,
+      "params": {
+        "csvid": 15867,
+        "cost": "{3}{G}",
+        "choices": [
+          "human_0",
+          "human_1",
+          "opponent_only_0",
+          "opponent_only_1",
+          "non_human_0",
+          "non_human_1",
+          "trample_0",
+          "trample_1"
+        ]
+      },
+      "oracle_text": "Trample\nWhen this creature enters, another target Human you control gets +2/+2 until end of turn.",
+      "variants": [
+        "human_0",
+        "human_1",
+        "opponent_only_0",
+        "opponent_only_1",
+        "non_human_0",
+        "non_human_1",
+        "trample_0",
+        "trample_1"
+      ]
+    }
+  ]
+}

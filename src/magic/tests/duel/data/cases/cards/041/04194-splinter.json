@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Splinter",
+  "csvid": 4194,
+  "recipes": [
+    {
+      "family": "spell_named_exile",
+      "version": 2,
+      "params": {
+        "scope": "artifact",
+        "any_number": false,
+        "devoid": false,
+        "instant": false,
+        "cost": [
+          2,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Exile target artifact. Search its controller's graveyard, hand, and library for all cards with the same name as that artifact and exile them. Then that player shuffles.",
+      "variants": [
+        "whole_0",
+        "single_0",
+        "only_hand_0",
+        "only_graveyard_0",
+        "only_library_0",
+        "no_matches_0",
+        "empty_search_0",
+        "battlefield_copy_0",
+        "own_controller_0",
+        "cross_owned_0",
+        "alternate_type_0",
+        "wrong_target_0",
+        "countered_0",
+        "target_leaves_0",
+        "short_mana_0",
+        "wrong_mana_0",
+        "replay_0",
+        "whole_1",
+        "single_1",
+        "only_hand_1",
+        "only_graveyard_1",
+        "only_library_1",
+        "no_matches_1",
+        "empty_search_1",
+        "battlefield_copy_1",
+        "own_controller_1",
+        "cross_owned_1",
+        "alternate_type_1",
+        "wrong_target_1",
+        "countered_1",
+        "target_leaves_1",
+        "short_mana_1",
+        "wrong_mana_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

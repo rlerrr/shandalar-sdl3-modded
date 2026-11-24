@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Necromancer's Covenant",
+  "csvid": 10324,
+  "recipes": [
+    {
+      "family": "entry_follow_on_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 10324,
+        "mana_cost": "{3}{W}{B}{B}"
+      },
+      "oracle_text": "When this enchantment enters, exile all creature cards from target player's graveyard, then create a 2/2 black Zombie creature token for each card exiled this way.\nZombies you control have lifelink.",
+      "variants": [
+        "own_grave_0",
+        "own_grave_1",
+        "opponent_grave_0",
+        "opponent_grave_1",
+        "lifelink_0",
+        "lifelink_1"
+      ]
+    }
+  ]
+}

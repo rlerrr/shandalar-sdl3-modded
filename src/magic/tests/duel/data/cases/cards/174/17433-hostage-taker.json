@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Hostage Taker",
+  "csvid": 17433,
+  "recipes": [
+    {
+      "family": "opponent_exile_permissions",
+      "version": 2,
+      "oracle_text": "When this creature enters, exile another target creature or artifact until this creature leaves the battlefield. You may cast that card for as long as it remains exiled, and mana of any type can be spent to cast that spell.",
+      "params": {
+        "model": "entry_link",
+        "cost": [
+          2,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "payment": "any_mana",
+        "expiry": "while_exiled"
+      },
+      "variants": [
+        "alternate_color_0",
+        "short_0",
+        "wrong_seat_0",
+        "wrong_owner_0",
+        "artifact_0",
+        "own_target_0",
+        "no_target_0",
+        "return_0",
+        "spent_return_0",
+        "persistent_0",
+        "offturn_creature_0",
+        "replay_0",
+        "alternate_color_1",
+        "short_1",
+        "wrong_seat_1",
+        "wrong_owner_1",
+        "artifact_1",
+        "own_target_1",
+        "no_target_1",
+        "return_1",
+        "spent_return_1",
+        "persistent_1",
+        "offturn_creature_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

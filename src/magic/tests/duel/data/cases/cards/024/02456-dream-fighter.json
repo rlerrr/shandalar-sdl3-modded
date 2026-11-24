@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Dream Fighter",
+  "csvid": 2456,
+  "recipes": [
+    {
+      "family": "phase_untap_creature",
+      "version": 2,
+      "params": {
+        "mana": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "mechanism": "dream"
+      },
+      "oracle_text": "Whenever this creature blocks or becomes blocked by a creature, this creature and that creature phase out. (While they're phased out, they're treated as though they don't exist. Each one phases in before its controller untaps during their next untap step.)",
+      "variants": [
+        "blocks_0",
+        "blocked_0",
+        "two_blockers_0",
+        "unblocked_0",
+        "unrelated_fight_0",
+        "combat_replay_0",
+        "blocks_1",
+        "blocked_1",
+        "two_blockers_1",
+        "unblocked_1",
+        "unrelated_fight_1",
+        "combat_replay_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Dual Nature",
+  "csvid": 4818,
+  "recipes": [
+    {
+      "family": "departure_linked_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 4818
+      },
+      "oracle_text": "Whenever a nontoken creature enters, its controller creates a token that's a copy of that creature.\nWhenever a nontoken creature leaves the battlefield, exile all tokens with the same name as that creature.\nWhen this enchantment leaves the battlefield, exile all tokens created with this enchantment.",
+      "variants": [
+        "copy_foreign_0",
+        "copy_foreign_1",
+        "original_leaves_0",
+        "original_leaves_1",
+        "source_leaves_0",
+        "source_leaves_1"
+      ]
+    }
+  ]
+}

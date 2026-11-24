@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "csvid": 10570,
+  "card": "Into the Roil",
+  "recipes": [
+    {
+      "family": "kicker_targeted_utility",
+      "version": 2,
+      "oracle_text": "Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nReturn target nonland permanent to its owner's hand. If this spell was kicked, draw a card.",
+      "params": {
+        "effect": "spell_bounce",
+        "cast_price": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "fee": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "power": null,
+        "toughness": null,
+        "extras": [
+          "own_target",
+          "lost_target",
+          "land_only"
+        ]
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "base_only_0",
+        "base_only_1",
+        "short_kicker_0",
+        "short_kicker_1",
+        "countered_paid_0",
+        "countered_paid_1",
+        "replay_0",
+        "replay_1",
+        "own_target_0",
+        "own_target_1",
+        "lost_target_0",
+        "lost_target_1",
+        "land_only_0",
+        "land_only_1"
+      ]
+    }
+  ]
+}

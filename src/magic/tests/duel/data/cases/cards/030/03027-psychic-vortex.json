@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Psychic Vortex",
+  "csvid": 3027,
+  "recipes": [
+    {
+      "family": "cumulative_upkeep_nonmana_payment",
+      "version": 2,
+      "params": {
+        "csvid": 3027,
+        "payment": "Draw a card.",
+        "casting_cost": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Cumulative upkeep—Draw a card. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nAt the beginning of your end step, sacrifice a land and discard your hand.",
+      "variants": [
+        "pay_twice_end_step_0",
+        "pay_twice_end_step_1",
+        "decline_after_one_0",
+        "decline_after_one_1",
+        "short_two_0",
+        "short_two_1"
+      ]
+    }
+  ]
+}

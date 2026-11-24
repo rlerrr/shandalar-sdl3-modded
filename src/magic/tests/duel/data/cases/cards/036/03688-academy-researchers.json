@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Academy Researchers",
+  "csvid": 3688,
+  "recipes": [
+    {
+      "family": "remaining_entry_attachments",
+      "version": 2,
+      "params": {
+        "csvid": 3688,
+        "mana_cost": "{1}{U}{U}"
+      },
+      "oracle_text": "When this creature enters, you may put an Aura card from your hand onto the battlefield attached to this creature.",
+      "variants": [
+        "attach_0",
+        "attach_1",
+        "decline_0",
+        "decline_1",
+        "wrong_aura_0",
+        "wrong_aura_1",
+        "blink_0",
+        "blink_1"
+      ]
+    }
+  ]
+}

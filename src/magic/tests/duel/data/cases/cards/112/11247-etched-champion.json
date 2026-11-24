@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "csvid": 11247,
+  "card": "Etched Champion",
+  "recipes": [
+    {
+      "family": "metalcraft_artifact",
+      "version": 2,
+      "params": {
+        "effect": "protection",
+        "flying": false,
+        "artifact": true,
+        "cast_mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 2
+      },
+      "oracle_text": "Metalcraft — This creature has protection from each color as long as you control three or more artifacts.",
+      "variants": [
+        "cast_below_0",
+        "cast_threshold_0",
+        "unfunded_0",
+        "enemy_scope_0",
+        "gain_0",
+        "drop_0",
+        "unprotected_0",
+        "block_color_0",
+        "prevent_damage_0",
+        "colorless_0",
+        "replay_0",
+        "cast_below_1",
+        "cast_threshold_1",
+        "unfunded_1",
+        "enemy_scope_1",
+        "gain_1",
+        "drop_1",
+        "unprotected_1",
+        "block_color_1",
+        "prevent_damage_1",
+        "colorless_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

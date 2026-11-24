@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Gigantiform",
+  "csvid": 10545,
+  "recipes": [
+    {
+      "family": "kicker_card_flow",
+      "version": 2,
+      "oracle_text": "Kicker {4}\nEnchant creature\nEnchanted creature has base power and toughness 8/8 and has trample.\nWhen this Aura enters, if it was kicked, you may search your library for a card named Gigantiform, put it onto the battlefield, then shuffle.",
+      "params": {
+        "effect": "search",
+        "base_cost": [
+          3,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "kicker_cost": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "kicker_short_0",
+        "kicker_short_1",
+        "base_short_0",
+        "base_short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "search_declined_0",
+        "search_declined_1"
+      ]
+    }
+  ]
+}

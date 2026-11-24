@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "End-Raze Forerunners",
+  "csvid": 19614,
+  "recipes": [
+    {
+      "family": "entry_rider_combat_modifiers",
+      "version": 2,
+      "params": {
+        "csvid": 19614,
+        "cost": "{5}{G}{G}{G}",
+        "choices": [
+          "source_traits_0",
+          "source_traits_1",
+          "others_0",
+          "others_1",
+          "late_creature_0",
+          "late_creature_1",
+          "expire_0",
+          "expire_1",
+          "countered_0",
+          "countered_1"
+        ]
+      },
+      "oracle_text": "Vigilance, trample, haste\nWhen this creature enters, other creatures you control get +2/+2 and gain vigilance and trample until end of turn.",
+      "variants": [
+        "source_traits_0",
+        "source_traits_1",
+        "others_0",
+        "others_1",
+        "late_creature_0",
+        "late_creature_1",
+        "expire_0",
+        "expire_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

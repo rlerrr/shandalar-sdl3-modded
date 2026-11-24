@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "csvid": 12530,
+  "card": "Preyseizer Dragon",
+  "recipes": [
+    {
+      "family": "attack_damage_triggers",
+      "version": 2,
+      "oracle_text": "Flying\nDevour 2 (As this creature enters, you may sacrifice any number of creatures. It enters with twice that many +1/+1 counters on it.)\nWhenever this creature attacks, it deals damage to any target equal to the number of +1/+1 counters on this creature.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "kind": "preyseizer",
+          "printed": [
+            4,
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          "equip": 0,
+          "creature": true,
+          "clauses": [
+            "Flying",
+            "Devour 2 (As this creature enters, you may sacrifice any number of creatures. It enters with twice that many +1/+1 counters on it.)",
+            "Whenever this creature attacks, it deals damage to any target equal to the number of +1/+1 counters on this creature."
+          ]
+        }
+      },
+      "variants": [
+        "cast_0",
+        "cast_1",
+        "short_cast_0",
+        "short_cast_1",
+        "fresh_attack_0",
+        "fresh_attack_1",
+        "hit_0",
+        "hit_1",
+        "devour_one_0",
+        "devour_two_0",
+        "walker_target_0",
+        "walker_target_1",
+        "ground_block_0",
+        "ground_block_1",
+        "opponent_attack_0",
+        "opponent_attack_1",
+        "replay_0",
+        "replay_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "devour_pass_0"
+      ]
+    }
+  ]
+}

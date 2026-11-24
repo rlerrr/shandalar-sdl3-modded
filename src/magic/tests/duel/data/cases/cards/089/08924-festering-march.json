@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "card": "Festering March",
+  "csvid": 8924,
+  "recipes": [
+    {
+      "family": "suspend_time_and_recurring_exile",
+      "version": 2,
+      "oracle_text": "Creatures your opponents control get -1/-1 until end of turn. Exile Festering March with three time counters on it.\nSuspend 3—{2}{B} (Rather than cast this card from your hand, you may pay {2}{B} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost.)",
+      "params": {
+        "source": 8924,
+        "duration": 3,
+        "suspend_fee": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "recurring_0",
+        "recurring_1",
+        "normal_recur_0",
+        "normal_recur_1",
+        "unfunded_0",
+        "unfunded_1",
+        "replay_0",
+        "replay_1",
+        "countered_0",
+        "countered_1",
+        "exile_loss_0",
+        "exile_loss_1"
+      ]
+    }
+  ]
+}

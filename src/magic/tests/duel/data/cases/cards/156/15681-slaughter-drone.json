@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "csvid": 15681,
+  "card": "Slaughter Drone",
+  "recipes": [
+    {
+      "family": "devoid_colorless_activations",
+      "version": 2,
+      "params": {
+        "price": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          2,
+          2
+        ],
+        "effect": "deathtouch",
+        "generic": 0,
+        "colorless": 1,
+        "once": false
+      },
+      "oracle_text": "Devoid (This card has no color.)\n{C}: This creature gains deathtouch until end of turn. (Any amount of damage it deals to a creature is enough to destroy it. {C} represents colorless mana.)",
+      "variants": [
+        "exact_0",
+        "exact_1",
+        "colored_only_0",
+        "colored_only_1",
+        "short_0",
+        "short_1",
+        "replay_0",
+        "replay_1",
+        "fatal_block_0",
+        "fatal_block_1",
+        "deathtouch_expiry_0",
+        "deathtouch_expiry_1"
+      ]
+    }
+  ]
+}

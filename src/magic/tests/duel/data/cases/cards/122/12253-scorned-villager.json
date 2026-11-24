@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "csvid": 12253,
+  "card": "Scorned Villager",
+  "recipes": [
+    {
+      "family": "werewolf_face_ability_riders",
+      "version": 2,
+      "params": {
+        "effect": "mana",
+        "price": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "front": {
+          "name": "Scorned Villager",
+          "power": 1,
+          "toughness": 1,
+          "color": 8,
+          "keywords": [],
+          "clauses": [
+            "{T}: Add {G}.",
+            "At the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+          ]
+        },
+        "back": {
+          "name": "Moonscarred Werewolf",
+          "power": 2,
+          "toughness": 2,
+          "color": 8,
+          "keywords": [
+            "Vigilance"
+          ],
+          "clauses": [
+            "Vigilance",
+            "{T}: Add {G}{G}.",
+            "At the beginning of each upkeep, if a player cast two or more spells last turn, transform this creature."
+          ]
+        }
+      },
+      "variants": [
+        "paid_front_0",
+        "paid_front_1",
+        "front_ready_0",
+        "front_ready_1",
+        "back_ready_0",
+        "back_ready_1",
+        "revert_replay_0",
+        "revert_replay_1",
+        "fresh_denied_0",
+        "fresh_denied_1",
+        "front_mana_0",
+        "front_mana_1",
+        "back_mana_0",
+        "back_mana_1",
+        "back_vigilance_0",
+        "back_vigilance_1"
+      ],
+      "oracle_text": "{T}: Add {G}.\nAt the beginning of each upkeep, if no spells were cast last turn, transform this creature."
+    }
+  ]
+}

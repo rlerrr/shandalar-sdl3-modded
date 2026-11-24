@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 11732,
+  "card": "Dread Cacodemon",
+  "recipes": [
+    {
+      "family": "entry_follow_on_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 11732,
+        "printed_cost": "{7}{B}{B}{B}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, if you cast it from your hand, destroy all creatures your opponents control, then tap all other creatures you control.",
+      "variants": [
+        "from_hand_0",
+        "indestructible_0",
+        "reanimated_0",
+        "from_hand_1",
+        "indestructible_1",
+        "reanimated_1"
+      ]
+    }
+  ]
+}

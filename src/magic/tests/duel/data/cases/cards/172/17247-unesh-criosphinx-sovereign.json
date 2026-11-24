@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "card": "Unesh, Criosphinx Sovereign",
+  "csvid": 17247,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "cast_reducers_with_riders",
+      "version": 2,
+      "oracle_text": "Flying\nSphinx spells you cast cost {2} less to cast.\nWhenever Unesh or another Sphinx you control enters, reveal the top four cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+      "params": {
+        "subtype": "Sphinx",
+        "reduction": 2,
+        "mode": "piles",
+        "cost": [
+          4,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "keywords": [
+          "Flying"
+        ],
+        "regen_cost": []
+      },
+      "variants": [
+        "match_0",
+        "match_1",
+        "surplus_0",
+        "surplus_1",
+        "short_0",
+        "short_1",
+        "opponent_0",
+        "opponent_1",
+        "nonmatch_0",
+        "nonmatch_1",
+        "removed_0",
+        "removed_1",
+        "source_short_0",
+        "source_short_1",
+        "replay_0",
+        "replay_1",
+        "self_piles_0",
+        "self_piles_1",
+        "partial_piles_0",
+        "partial_piles_1",
+        "other_piles_0",
+        "other_piles_1",
+        "countered_0",
+        "countered_1",
+        "opposing_piles_0",
+        "opposing_piles_1",
+        "nonmatch_piles_0",
+        "nonmatch_piles_1",
+        "reanimate_piles_0",
+        "reanimate_piles_1",
+        "floor_0",
+        "floor_1",
+        "fly_ground_0",
+        "fly_ground_1",
+        "fly_reach_0",
+        "fly_reach_1"
+      ]
+    }
+  ]
+}

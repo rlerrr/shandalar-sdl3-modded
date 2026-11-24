@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Smothering Abomination",
+  "csvid": 15447,
+  "recipes": [
+    {
+      "family": "devoid_scions_and_sacrifice",
+      "version": 2,
+      "params": {
+        "role": "abomination",
+        "mana": [
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Devoid (This card has no color.)\nFlying\nAt the beginning of your upkeep, sacrifice a creature.\nWhenever you sacrifice a creature, draw a card.",
+      "variants": [
+        "own_upkeep_0",
+        "opponent_upkeep_0",
+        "sacrifice_mana_0",
+        "sacrifice_nonmana_0",
+        "enemy_sacrifice_0",
+        "flying_0",
+        "own_upkeep_1",
+        "opponent_upkeep_1",
+        "sacrifice_mana_1",
+        "sacrifice_nonmana_1",
+        "enemy_sacrifice_1",
+        "flying_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Steely Resolve",
+  "csvid": 6285,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "chosen_type_effects",
+      "version": 2,
+      "oracle_text": "As this enchantment enters, choose a creature type.\nCreatures of the chosen type have shroud. (They can't be the targets of spells or abilities.)",
+      "params": {
+        "mode": "shroud",
+        "mana": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "goblins_0",
+        "goblins_1",
+        "angels_0",
+        "angels_1",
+        "short_0",
+        "short_1",
+        "source_removed_0",
+        "source_removed_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "late_match_0",
+        "late_match_1",
+        "ability_scope_0",
+        "ability_scope_1",
+        "nontargeted_damage_0",
+        "nontargeted_damage_1"
+      ]
+    }
+  ]
+}

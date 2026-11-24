@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "csvid": 10704,
+  "card": "Vampire's Bite",
+  "recipes": [
+    {
+      "family": "kicker_combat_and_restrictions",
+      "version": 2,
+      "oracle_text": "Kicker {2}{B} (You may pay an additional {2}{B} as you cast this spell.)\nTarget creature gets +3/+0 until end of turn. If this spell was kicked, that creature gains lifelink until end of turn. (Damage dealt by the creature also causes its controller to gain that much life.)",
+      "params": {
+        "effect": 10704,
+        "cast_price": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fee": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "stats": null
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "base_only_0",
+        "base_only_1",
+        "wrong_kicker_color_0",
+        "wrong_kicker_color_1",
+        "countered_paid_0",
+        "countered_paid_1",
+        "replay_0",
+        "replay_1",
+        "lost_target_0",
+        "lost_target_1",
+        "expired_combat_0",
+        "expired_combat_1"
+      ]
+    }
+  ]
+}

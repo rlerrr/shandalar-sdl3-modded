@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "csvid": 16861,
+  "card": "Cartouche of Strength",
+  "recipes": [
+    {
+      "family": "fight_entry_fighters",
+      "version": 2,
+      "params": {
+        "csvid": 16861,
+        "mana": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Enchant creature you control\nWhen this Aura enters, you may have enchanted creature fight target creature an opponent controls. (Each deals damage equal to its power to the other.)\nEnchanted creature gets +1/+1 and has trample.",
+      "variants": [
+        "reciprocal_0",
+        "reciprocal_1",
+        "trample_0",
+        "trample_1",
+        "lost_host_0",
+        "lost_host_1",
+        "foreign_only_0",
+        "foreign_only_1",
+        "lethal_fight_0",
+        "lethal_fight_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

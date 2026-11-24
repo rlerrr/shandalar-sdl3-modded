@@ -1,0 +1,1633 @@
+{
+  "sources": {
+    "Chasm Skulker": {
+      "oracle": {
+        "oracle_id": "69facbc7-3859-4716-b627-5199571fb3cf",
+        "name": "Chasm Skulker",
+        "oracle_text": "Whenever you draw a card, put a +1/+1 counter on this creature.\nWhen this creature dies, create X 1/1 blue Squid creature tokens with islandwalk, where X is the number of +1/+1 counters on this creature. (They can't be blocked as long as defending player controls an Island.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Squid Horror",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/moc/218/chasm-skulker?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14083,
+        "iid": 1684,
+        "name": "Chasm Skulker",
+        "handler": "manalinkeh_card_chasm_skulker",
+        "kind": "card"
+      }
+    },
+    "Dragon Egg": {
+      "oracle": {
+        "oracle_id": "8f561498-66e7-4cbf-8cb9-e6fd4717993d",
+        "name": "Dragon Egg",
+        "oracle_text": "Defender\nWhen this creature dies, create a 2/2 red Dragon creature token with flying and \"{R}: This token gets +1/+0 until end of turn.\"",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Dragon Egg",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/173/dragon-egg?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13282,
+        "iid": 2674,
+        "name": "Dragon Egg",
+        "handler": "manalinkeh_card_dragon_egg",
+        "kind": "card"
+      }
+    },
+    "Reef Worm": {
+      "oracle": {
+        "oracle_id": "e3ad5cbc-4245-4e1e-8204-509381fa0c1c",
+        "name": "Reef Worm",
+        "oracle_text": "When this creature dies, create a 3/3 blue Fish creature token with \"When this token dies, create a 6/6 blue Whale creature token with 'When this token dies, create a 9/9 blue Kraken creature token.'\"",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Worm",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh3/271/reef-worm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14482,
+        "iid": 7780,
+        "name": "Reef Worm",
+        "handler": "manalinkeh_card_reef_worm",
+        "kind": "card"
+      }
+    },
+    "Mitotic Slime": {
+      "oracle": {
+        "oracle_id": "1162c7ff-c0cb-469a-ad3c-322b0981ae1d",
+        "name": "Mitotic Slime",
+        "oracle_text": "When this creature dies, create two 2/2 green Ooze creature tokens. They have \"When this token dies, create two 1/1 green Ooze creature tokens.\"",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Ooze",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ncc/302/mitotic-slime?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11150,
+        "iid": 6231,
+        "name": "Mitotic Slime",
+        "handler": "manalinkeh_card_mitotic_slime",
+        "kind": "card"
+      }
+    },
+    "Chronozoa": {
+      "oracle": {
+        "oracle_id": "29ccf76e-dfa3-4144-8ec2-6d56ae0bfa9e",
+        "name": "Chronozoa",
+        "oracle_text": "Flying\nVanishing 3 (This creature enters with three time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhen this creature dies, if it had no time counters on it, create two tokens that are copies of it.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Illusion",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Vanishing"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/plc/37/chronozoa?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8755,
+        "iid": 1741,
+        "name": "Chronozoa",
+        "handler": "manalinkeh_card_chronozoa",
+        "kind": "card"
+      }
+    },
+    "Flesh Carver": {
+      "oracle": {
+        "oracle_id": "8fcaaf1c-c99b-4f28-bf95-7115a11e803d",
+        "name": "Flesh Carver",
+        "oracle_text": "Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)\n{1}{B}, Sacrifice another creature: Put two +1/+1 counters on this creature.\nWhen this creature dies, create an X/X black Horror creature token, where X is this creature's power.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Intimidate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c14/22/flesh-carver?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14461,
+        "iid": 3508,
+        "name": "Flesh Carver",
+        "handler": "manalinkeh_card_flesh_carver",
+        "kind": "card"
+      }
+    },
+    "Grixis Slavedriver": {
+      "oracle": {
+        "oracle_id": "9087928a-4732-4661-b3ed-d0b1ea06edf6",
+        "name": "Grixis Slavedriver",
+        "oracle_text": "When this creature leaves the battlefield, create a 2/2 black Zombie creature token.\nUnearth {3}{B} ({3}{B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)",
+        "mana_cost": "{5}{B}",
+        "type_line": "Creature — Zombie Giant",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Unearth"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm3/74/grixis-slavedriver?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10153,
+        "iid": 4256,
+        "name": "Grixis Slavedriver",
+        "handler": "manalinkeh_card_grixis_slavedriver",
+        "kind": "card"
+      }
+    },
+    "Kinsbaile Borderguard": {
+      "oracle": {
+        "oracle_id": "b420d983-4edf-4cc1-b442-af2b67e49c76",
+        "name": "Kinsbaile Borderguard",
+        "oracle_text": "This creature enters with a +1/+1 counter on it for each other Kithkin you control.\nWhen this creature dies, create a 1/1 white Kithkin Soldier creature token for each counter on it.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Creature — Kithkin Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mor/14/kinsbaile-borderguard?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9372,
+        "iid": 5267,
+        "name": "Kinsbaile Borderguard",
+        "handler": "manalinkeh_card_kinsbaile_borderguard",
+        "kind": "card"
+      }
+    },
+    "Liege of the Hollows": {
+      "oracle": {
+        "oracle_id": "bef7441e-5a44-46bc-8141-8e02ecd06fce",
+        "name": "Liege of the Hollows",
+        "oracle_text": "When this creature dies, each player may pay any amount of mana. Then each player creates a number of 1/1 green Squirrel creature tokens equal to the amount of mana they paid this way.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Spirit",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/131/liege-of-the-hollows?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2999,
+        "iid": 5566,
+        "name": "Liege of the Hollows",
+        "handler": "manalinkeh_card_liege_of_hollows",
+        "kind": "card"
+      }
+    },
+    "Walker of the Grove": {
+      "oracle": {
+        "oracle_id": "02d69413-e040-46b1-8f58-69bde666329d",
+        "name": "Walker of the Grove",
+        "oracle_text": "When this creature leaves the battlefield, create a 4/4 green Elemental creature token.\nEvoke {4}{G} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+        "mana_cost": "{6}{G}{G}",
+        "type_line": "Creature — Elemental",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [
+          "Evoke"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/191/walker-of-the-grove?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9456,
+        "iid": 10745,
+        "name": "Walker of the Grove",
+        "handler": "manalinkeh_card_walker_of_the_grove",
+        "kind": "card"
+      }
+    },
+    "Worldspine Wurm": {
+      "oracle": {
+        "oracle_id": "254f87cc-e0c2-484d-b5e8-1ea8c366990c",
+        "name": "Worldspine Wurm",
+        "oracle_text": "Trample\nWhen this creature dies, create three 5/5 green Wurm creature tokens with trample.\nWhen Worldspine Wurm is put into a graveyard from anywhere, shuffle it into its owner's library.",
+        "mana_cost": "{8}{G}{G}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "15",
+        "toughness": "15",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 11.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/206/worldspine-wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12873,
+        "iid": 11108,
+        "name": "Worldspine Wurm",
+        "handler": "manalinkeh_card_worldspine_wurm",
+        "kind": "card"
+      }
+    },
+    "Wurmcoil Engine": {
+      "oracle": {
+        "oracle_id": "d1a60f44-7696-49ee-91fb-cab5b3102962",
+        "name": "Wurmcoil Engine",
+        "oracle_text": "Deathtouch, lifelink\nWhen this creature dies, create a 3/3 colorless Phyrexian Wurm artifact creature token with deathtouch and a 3/3 colorless Phyrexian Wurm artifact creature token with lifelink.",
+        "mana_cost": "{6}",
+        "type_line": "Artifact Creature — Phyrexian Wurm",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Lifelink",
+          "Deathtouch"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/308/wurmcoil-engine?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11413,
+        "iid": 11138,
+        "name": "Wurmcoil Engine",
+        "handler": "manalinkeh_card_wurmcoil_engine",
+        "kind": "card"
+      }
+    },
+    "Sultai Emissary": {
+      "oracle": {
+        "oracle_id": "0274f286-46a1-4028-878a-88c2146a895c",
+        "name": "Sultai Emissary",
+        "oracle_text": "When this creature dies, manifest the top card of your library. (Put that card onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Zombie Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Manifest"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frf/85/sultai-emissary?utm_source=api"
+      },
+      "registry": {
+        "csvid": 14634,
+        "iid": 11369,
+        "name": "Sultai Emissary",
+        "handler": "manalinkeh_card_sultai_emissary",
+        "kind": "card"
+      }
+    },
+    "Cyclone Sire": {
+      "oracle": {
+        "oracle_id": "4b1c5278-76a9-4c96-b13a-0737aefb79d9",
+        "name": "Cyclone Sire",
+        "oracle_text": "Flying\nWhen this creature dies, you may put three +1/+1 counters on target land you control. If you do, that land becomes a 0/0 Elemental creature with haste that's still a land.",
+        "mana_cost": "{4}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/54/cyclone-sire?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15580,
+        "iid": 15655,
+        "name": "Cyclone Sire",
+        "handler": "manalinkeh_card_cyclone_sire",
+        "kind": "card"
+      }
+    },
+    "Seed Guardian": {
+      "oracle": {
+        "oracle_id": "728045bf-0959-44ff-8de9-16ec35fd248f",
+        "name": "Seed Guardian",
+        "oracle_text": "Reach\nWhen this creature dies, create an X/X green Elemental creature token, where X is the number of creature cards in your graveyard.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Elemental",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/143/seed-guardian?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15676,
+        "iid": 15751,
+        "name": "Seed Guardian",
+        "handler": "manalinkeh_card_seed_guardian",
+        "kind": "card"
+      }
+    },
+    "Byway Courier": {
+      "oracle": {
+        "oracle_id": "e186cc6f-8c11-4475-a704-0b4c3a9eade9",
+        "name": "Byway Courier",
+        "oracle_text": "When this creature dies, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Human Scout",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Investigate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/196/byway-courier?utm_source=api"
+      },
+      "registry": {
+        "csvid": 15761,
+        "iid": 15836,
+        "name": "Byway Courier",
+        "handler": "manalinkeh_card_byway_courier",
+        "kind": "card"
+      }
+    },
+    "Deathpact Angel": {
+      "oracle": {
+        "oracle_id": "ad0f50d5-7b40-4fd8-8d13-4a0493398f53",
+        "name": "Deathpact Angel",
+        "oracle_text": "Flying\nWhen this creature dies, create a 1/1 white and black Cleric creature token. It has \"{3}{W}{B}{B}, {T}, Sacrifice this token: Return a card named Deathpact Angel from your graveyard to the battlefield.\"",
+        "mana_cost": "{3}{W}{B}{B}",
+        "type_line": "Creature — Angel",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/153/deathpact-angel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12920,
+        "iid": 2352,
+        "name": "Deathpact Angel",
+        "handler": "manalinkeh_card_deathpact_angel",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Arbor Armament": {
+      "oracle": {
+        "oracle_id": "504f21e8-82ac-4433-b5e9-640989480f58",
+        "name": "Arbor Armament",
+        "oracle_text": "Put a +1/+1 counter on target creature. That creature gains reach until end of turn. (It can block creatures with flying.)",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/376/arbor-armament?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18344,
+        "iid": 18451,
+        "name": "Arbor Armament",
+        "handler": "manalinkeh_card_arbor_armament",
+        "kind": "card"
+      }
+    },
+    "Cleric": {
+      "oracle": {
+        "oracle_id": "e12d9459-1520-423f-aa33-231df05e61bb",
+        "name": "Cleric",
+        "oracle_text": "{3}{W}{B}{B}, {T}, Sacrifice this creature: Return a card named Deathpact Angel from your graveyard to the battlefield.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Cleric",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tgk2/4/cleric?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18710,
+        "iid": 1791,
+        "name": "Cleric",
+        "handler": "manalinkeh_card_cleric_token",
+        "kind": "card"
+      }
+    },
+    "Clue": {
+      "oracle": {
+        "oracle_id": "496e1083-c792-40a4-adf4-fec1d559cd5e",
+        "name": "Clue",
+        "oracle_text": "{2}, Sacrifice this token: Draw a card.",
+        "mana_cost": "",
+        "type_line": "Token Artifact — Clue",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tfdc/13/clue?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18711,
+        "iid": 16105,
+        "name": "Clue",
+        "handler": "manalinkeh_card_clue",
+        "kind": "card"
+      }
+    },
+    "Coat of Arms": {
+      "oracle": {
+        "oracle_id": "5f7f133e-58ea-41ab-b1be-be4b400fac4c",
+        "name": "Coat of Arms",
+        "oracle_text": "Each creature gets +1/+1 for each other creature on the battlefield that shares at least one creature type with it. (For example, if two Goblin Warriors and a Goblin Shaman are on the battlefield, each gets +2/+2.)",
+        "mana_cost": "{5}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/58/coat-of-arms?utm_source=api"
+      },
+      "registry": {
+        "csvid": 996,
+        "iid": 1844,
+        "name": "Coat of Arms",
+        "handler": "manalinkeh_card_coat_of_arms",
+        "kind": "card"
+      }
+    },
+    "Coral Eel": {
+      "oracle": {
+        "oracle_id": "10706fd1-7847-4316-be8d-59b56143ce45",
+        "name": "Coral Eel",
+        "oracle_text": "",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Fish",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/S3/coral-eel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1001,
+        "iid": 1960,
+        "name": "Coral Eel",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Divination": {
+      "oracle": {
+        "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+        "name": "Divination",
+        "oracle_text": "Draw two cards.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/51/divination?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10405,
+        "iid": 2609,
+        "name": "Divination",
+        "handler": "manalinkeh_card_divination",
+        "kind": "card"
+      }
+    },
+    "Dragon": {
+      "oracle": {
+        "oracle_id": "ec6df381-5ea7-4c68-8416-093b107f0784",
+        "name": "Dragon",
+        "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Dragon",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/totc/11/dragon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18719,
+        "iid": 2669,
+        "name": "Dragon",
+        "handler": "manalinkeh_card_dragon_token",
+        "kind": "card"
+      }
+    },
+    "Eager Cadet": {
+      "oracle": {
+        "oracle_id": "39780477-01ba-40c6-8fe6-2178efb10b92",
+        "name": "Eager Cadet",
+        "oracle_text": "",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/S1/eager-cadet?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4363,
+        "iid": 12406,
+        "name": "Eager Cadet",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Elemental": {
+      "oracle": {
+        "oracle_id": "ff9ee841-1174-4c4c-b9d3-56d79122acbb",
+        "name": "Elemental",
+        "oracle_text": "Whenever this creature becomes tapped, it deals 1 damage to target player.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Elemental",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmoc/22/elemental?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18726,
+        "iid": 2926,
+        "name": "Elemental",
+        "handler": "manalinkeh_card_elemental_token",
+        "kind": "card"
+      }
+    },
+    "Face-Down Creature": {
+      "oracle": null,
+      "registry": {
+        "csvid": 13252,
+        "iid": 3230,
+        "name": "Face-Down Creature",
+        "handler": "manalinkeh_card_face_down_creature",
+        "kind": "card"
+      }
+    },
+    "Fish": {
+      "oracle": {
+        "oracle_id": "bdb03306-355c-41e5-96bc-f60483e59b2a",
+        "name": "Fish",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Fish",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tfdn/10/fish?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18738,
+        "iid": 3447,
+        "name": "Fish",
+        "handler": "manalinkeh_card_fish_token",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Horror": {
+      "oracle": {
+        "oracle_id": "a9085214-f501-4c11-98ba-4846c519558a",
+        "name": "Horror",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Enchantment Creature — Horror",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tdsk/10/horror?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18761,
+        "iid": 4664,
+        "name": "Horror",
+        "handler": "manalinkeh_card_horror_token",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Kithkin Soldier": {
+      "oracle": {
+        "oracle_id": "caf4a0d2-64de-42df-a88e-bb0d3f34e207",
+        "name": "Kithkin Soldier",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Kithkin Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tkhc/2/kithkin-soldier?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18775,
+        "iid": 5290,
+        "name": "Kithkin Soldier",
+        "handler": "manalinkeh_card_rhino_token",
+        "kind": "card"
+      }
+    },
+    "Kraken": {
+      "oracle": {
+        "oracle_id": "fcd2cb28-287f-4159-8d77-853293372438",
+        "name": "Kraken",
+        "oracle_text": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)",
+        "mana_cost": "",
+        "type_line": "Token Creature — Kraken",
+        "power": "8",
+        "toughness": "8",
+        "keywords": [
+          "Hexproof"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tthb/4/kraken?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18780,
+        "iid": 5377,
+        "name": "Kraken",
+        "handler": "manalinkeh_card_rhino_token",
+        "kind": "card"
+      }
+    },
+    "Kraken Hatchling": {
+      "oracle": {
+        "oracle_id": "08e6c786-d553-4c23-9137-cfad84146739",
+        "name": "Kraken Hatchling",
+        "oracle_text": "",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Kraken",
+        "power": "0",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bbd/121/kraken-hatchling?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10591,
+        "iid": 5378,
+        "name": "Kraken Hatchling",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Narwhal": {
+      "oracle": {
+        "oracle_id": "3552eea9-aee9-4555-b3cb-8e4fc5b728cc",
+        "name": "Narwhal",
+        "oracle_text": "First strike, protection from red",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Creature — Whale",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "First strike",
+          "Protection"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/57/narwhal?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1644,
+        "iid": 6478,
+        "name": "Narwhal",
+        "handler": "manalinkeh_card_galinas_knight",
+        "kind": "card"
+      }
+    },
+    "Ooze": {
+      "oracle": {
+        "oracle_id": "ee54f59e-a334-4f0d-8bc6-44fb97c948ac",
+        "name": "Ooze",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Ooze",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tpca/16/ooze?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18796,
+        "iid": 6826,
+        "name": "Ooze",
+        "handler": "manalinkeh_card_ooze",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Pyroclasm": {
+      "oracle": {
+        "oracle_id": "e4bcd4ea-e7cd-4471-8f3b-18bb51d3d70c",
+        "name": "Pyroclasm",
+        "oracle_text": "Pyroclasm deals 2 damage to each creature.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/149/pyroclasm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1121,
+        "iid": 7515,
+        "name": "Pyroclasm",
+        "handler": "manalinkeh_card_pyroclasm",
+        "kind": "card"
+      }
+    },
+    "Sand Squid": {
+      "oracle": {
+        "oracle_id": "40578245-2cb8-4a6a-aeff-2252719c2d1c",
+        "name": "Sand Squid",
+        "oracle_text": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)\nYou may choose not to untap this creature during your untap step.\n{T}: Tap target creature. That creature doesn't untap during its controller's untap step for as long as this creature remains tapped.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Squid Beast",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Landwalk",
+          "Islandwalk"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/96/sand-squid?utm_source=api"
+      },
+      "registry": {
+        "csvid": 4589,
+        "iid": 8212,
+        "name": "Sand Squid",
+        "handler": "manalinkeh_card_sand_squid",
+        "kind": "card"
+      }
+    },
+    "Scavenging Ooze": {
+      "oracle": {
+        "oracle_id": "1ff25f67-36a7-4cfa-a2b1-2135b5b6fb67",
+        "name": "Scavenging Ooze",
+        "oracle_text": "{G}: Exile target card from a graveyard. If it was a creature card, put a +1/+1 counter on this creature and you gain 1 life.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Ooze",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/232/scavenging-ooze?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11748,
+        "iid": 8310,
+        "name": "Scavenging Ooze",
+        "handler": "manalinkeh_card_scavenging_ooze",
+        "kind": "card"
+      }
+    },
+    "Serra Angel": {
+      "oracle": {
+        "oracle_id": "4b7ac066-e5c7-43e6-9e7e-2739b24a905d",
+        "name": "Serra Angel",
+        "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying",
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/740/serra-angel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 221,
+        "iid": 8519,
+        "name": "Serra Angel",
+        "handler": "manalinkeh_card_serra_angel",
+        "kind": "card"
+      }
+    },
+    "Shock": {
+      "oracle": {
+        "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+        "name": "Shock",
+        "oracle_text": "Shock deals 2 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1147,
+        "iid": 8661,
+        "name": "Shock",
+        "handler": "manalinkeh_card_shock2",
+        "kind": "card"
+      }
+    },
+    "Squid": {
+      "oracle": {
+        "oracle_id": "dd85fcd6-9bfd-4deb-a56a-77c6bca8eb97",
+        "name": "Squid",
+        "oracle_text": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)",
+        "mana_cost": "",
+        "type_line": "Token Creature — Squid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Landwalk",
+          "Islandwalk"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tfic/5/squid?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18832,
+        "iid": 9274,
+        "name": "Squid",
+        "handler": "manalinkeh_card_rhino_token",
+        "kind": "card"
+      }
+    },
+    "Squirrel": {
+      "oracle": {
+        "oracle_id": "67f21c0c-2083-4eda-9dc3-cc8aee42289f",
+        "name": "Squirrel",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Squirrel",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tblb/23/squirrel?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18833,
+        "iid": 9276,
+        "name": "Squirrel",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Steel Wall": {
+      "oracle": {
+        "oracle_id": "5ccb57e1-ca94-4b5a-8e5f-b8b5e692cfb9",
+        "name": "Steel Wall",
+        "oracle_text": "Defender (This creature can't attack.)",
+        "mana_cost": "{1}",
+        "type_line": "Artifact Creature — Wall",
+        "power": "0",
+        "toughness": "4",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/td2/3/steel-wall?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1300,
+        "iid": 9342,
+        "name": "Steel Wall",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Stone Rain": {
+      "oracle": {
+        "oracle_id": "6e880df6-fc00-43d2-a9c8-f575f40b78c6",
+        "name": "Stone Rain",
+        "oracle_text": "Destroy target land.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/221/stone-rain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 236,
+        "iid": 9381,
+        "name": "Stone Rain",
+        "handler": "manalinkeh_card_ice_storm",
+        "kind": "card"
+      }
+    },
+    "Swords to Plowshares": {
+      "oracle": {
+        "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+        "name": "Swords to Plowshares",
+        "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+      },
+      "registry": {
+        "csvid": 240,
+        "iid": 9616,
+        "name": "Swords to Plowshares",
+        "handler": "manalinkeh_card_swords_to_plowshares",
+        "kind": "card"
+      }
+    },
+    "Tormod's Crypt": {
+      "oracle": {
+        "oracle_id": "1573f7f9-672c-421a-b1ac-3d0d8aea59ca",
+        "name": "Tormod's Crypt",
+        "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/235/tormods-crypt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 368,
+        "iid": 10094,
+        "name": "Tormod's Crypt",
+        "handler": "manalinkeh_card_tormods_crypt",
+        "kind": "card"
+      }
+    },
+    "Tropical Island": {
+      "oracle": {
+        "oracle_id": "74b7fe23-5d3a-4092-8d78-7c0eba8f6f73",
+        "name": "Tropical Island",
+        "oracle_text": "({T}: Add {G} or {U}.)",
+        "mana_cost": "",
+        "type_line": "Land — Forest Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/321/tropical-island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 252,
+        "iid": 11,
+        "name": "Tropical Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Wall of Bone": {
+      "oracle": {
+        "oracle_id": "8ffe4986-9e09-4421-ad26-296a4c0df9e4",
+        "name": "Wall of Bone",
+        "oracle_text": "Defender (This creature can't attack.)\n{B}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Skeleton Wall",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Heal",
+          "Regenerate",
+          "Defender"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gvl/41/wall-of-bone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 268,
+        "iid": 10753,
+        "name": "Wall of Bone",
+        "handler": "manalinkeh_card_drudge_skeletons",
+        "kind": "card"
+      }
+    },
+    "Wall of Stone": {
+      "oracle": {
+        "oracle_id": "cd4cadb4-3156-49bd-b36e-12ba5c85938b",
+        "name": "Wall of Stone",
+        "oracle_text": "Defender (This creature can't attack.)",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Wall",
+        "power": "0",
+        "toughness": "8",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/232/wall-of-stone?utm_source=api"
+      },
+      "registry": {
+        "csvid": 272,
+        "iid": 10783,
+        "name": "Wall of Stone",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Whale": {
+      "oracle": {
+        "oracle_id": "55ba83ae-9158-4c92-8bca-6dd96b517836",
+        "name": "Whale",
+        "oracle_text": "When this creature dies, create a 9/9 blue Kraken creature token.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Whale",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmh3/14/whale?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18854,
+        "iid": 10911,
+        "name": "Whale",
+        "handler": "manalinkeh_card_whale_token",
+        "kind": "card"
+      }
+    },
+    "Wurm": {
+      "oracle": {
+        "oracle_id": "5e3f41f7-9b42-437a-a9f9-f09250b083db",
+        "name": "Wurm",
+        "oracle_text": "Deathtouch",
+        "mana_cost": "",
+        "type_line": "Token Artifact Creature — Wurm",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Deathtouch"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/t2xm/29/wurm?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18859,
+        "iid": 11135,
+        "name": "Wurm",
+        "handler": "manalinkeh_card_wurm_token",
+        "kind": "card"
+      }
+    },
+    "Zombie": {
+      "oracle": {
+        "oracle_id": "ec6e76e8-e80e-4534-990a-03c3bbeda53a",
+        "name": "Zombie",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Zombie",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tinr/12/zombie?utm_source=api"
+      },
+      "registry": {
+        "csvid": 18860,
+        "iid": 11220,
+        "name": "Zombie",
+        "handler": "manalinkeh_card_zombie",
+        "kind": "card"
+      }
+    },
+    "Kithkin Greatheart": {
+      "oracle": {
+        "oracle_id": "6034e7c1-b3ec-4927-b517-f8e3ca87252e",
+        "name": "Kithkin Greatheart",
+        "oracle_text": "As long as you control a Giant, this creature gets +1/+1 and has first strike.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Kithkin Soldier",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mma/21/kithkin-greatheart?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9191,
+        "iid": 5286,
+        "name": "Kithkin Greatheart",
+        "handler": "manalinkeh_card_kithkin_greatheart",
+        "kind": "card"
+      }
+    }
+  }
+}

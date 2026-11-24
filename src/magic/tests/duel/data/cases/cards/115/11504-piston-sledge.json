@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Piston Sledge",
+  "csvid": 11504,
+  "recipes": [
+    {
+      "family": "remaining_entry_attachments",
+      "version": 2,
+      "params": {
+        "csvid": 11504,
+        "mana_cost": "{3}"
+      },
+      "oracle_text": "When this Equipment enters, attach it to target creature you control.\nEquipped creature gets +3/+1.\nEquip—Sacrifice an artifact.",
+      "variants": [
+        "entry_combat_0",
+        "entry_combat_1",
+        "sacrifice_reattach_0",
+        "sacrifice_reattach_1",
+        "offturn_0",
+        "offturn_1",
+        "foreign_creature_0",
+        "foreign_creature_1"
+      ]
+    }
+  ]
+}

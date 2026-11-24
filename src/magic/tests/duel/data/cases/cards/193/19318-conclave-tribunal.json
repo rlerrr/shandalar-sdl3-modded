@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "csvid": 19318,
+  "card": "Conclave Tribunal",
+  "recipes": [
+    {
+      "family": "convoke_entry_effects",
+      "version": 2,
+      "params": {
+        "csvid": 19318,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "stats": null
+      },
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nWhen this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield.",
+      "variants": [
+        "mixed_0",
+        "mixed_1",
+        "artifact_return_0",
+        "artifact_return_1",
+        "only_land_0",
+        "only_land_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "csvid": 5118,
+  "card": "Skizzik",
+  "recipes": [
+    {
+      "family": "kicker_combat_and_restrictions",
+      "version": 2,
+      "oracle_text": "Kicker {R} (You may pay an additional {R} as you cast this spell.)\nTrample, haste\nAt the beginning of the end step, if this creature wasn't kicked, sacrifice it.",
+      "params": {
+        "effect": 5118,
+        "cast_price": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "fee": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "stats": [
+          5,
+          3
+        ]
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "base_only_0",
+        "base_only_1",
+        "wrong_kicker_color_0",
+        "wrong_kicker_color_1",
+        "countered_paid_0",
+        "countered_paid_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

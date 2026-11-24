@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Cavalry Pegasus",
+  "csvid": 13400,
+  "recipes": [
+    {
+      "family": "attack_trigger_team_keywords",
+      "version": 2,
+      "params": {
+        "csvid": 13400,
+        "mana": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "oracle_text": "Flying\nWhenever this creature attacks, each attacking Human gains flying until end of turn.",
+      "variants": [
+        "mixed_0",
+        "mixed_1",
+        "resting_0",
+        "resting_1",
+        "late_0",
+        "late_1",
+        "other_attack_0",
+        "other_attack_1",
+        "expires_0",
+        "expires_1"
+      ]
+    }
+  ]
+}

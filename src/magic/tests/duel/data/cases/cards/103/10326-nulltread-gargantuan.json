@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Nulltread Gargantuan",
+  "csvid": 10326,
+  "recipes": [
+    {
+      "family": "remaining_entry_library_and_hand",
+      "version": 2,
+      "params": {
+        "csvid": 10326,
+        "printed_mana": "{1}{G}{U}",
+        "rules": "When this creature enters, put a creature you control on top of its owner's library."
+      },
+      "oracle_text": "When this creature enters, put a creature you control on top of its owner's library.",
+      "variants": [
+        "borrowed_creature_0",
+        "borrowed_creature_1",
+        "self_top_0",
+        "self_top_1"
+      ]
+    }
+  ]
+}

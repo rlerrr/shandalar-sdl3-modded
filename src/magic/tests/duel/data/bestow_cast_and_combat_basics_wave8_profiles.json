@@ -1,0 +1,326 @@
+{
+  "sources": {
+    "Baleful Eidolon": {
+      "oracle": {
+        "oracle_id": "0930a976-f69e-44a8-8b19-72095f20ed13",
+        "name": "Baleful Eidolon",
+        "oracle_text": "Bestow {4}{B} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\nEnchanted creature gets +1/+1 and has deathtouch.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Enchantment Creature — Spirit",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Bestow",
+          "Deathtouch"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/78/baleful-eidolon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13384,
+        "iid": 822,
+        "name": "Baleful Eidolon",
+        "handler": "manalinkeh_card_baleful_eidolon",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13385,
+        "iid": 823,
+        "name": "Baleful Eidolon Bestowed",
+        "handler": "manalinkeh_card_baleful_eidolon",
+        "kind": "card"
+      }
+    },
+    "Nimbus Naiad": {
+      "oracle": {
+        "oracle_id": "1b3b14b9-088d-48df-8d21-54ee68989ac0",
+        "name": "Nimbus Naiad",
+        "oracle_text": "Bestow {4}{U} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nFlying\nEnchanted creature gets +2/+2 and has flying.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Enchantment Creature — Nymph",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Bestow"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/56/nimbus-naiad?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13492,
+        "iid": 6643,
+        "name": "Nimbus Naiad",
+        "handler": "manalinkeh_card_nimbus_naiad",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13493,
+        "iid": 6644,
+        "name": "Nimbus Naiad Bestowed",
+        "handler": "manalinkeh_card_nimbus_naiad",
+        "kind": "card"
+      }
+    },
+    "Nylea's Emissary": {
+      "oracle": {
+        "oracle_id": "ec30e221-ffc8-4867-ba9c-f39712b3aa93",
+        "name": "Nylea's Emissary",
+        "oracle_text": "Bestow {5}{G} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nTrample\nEnchanted creature gets +3/+3 and has trample.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Enchantment Creature — Cat",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Trample",
+          "Bestow"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/168/nyleas-emissary?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13498,
+        "iid": 6725,
+        "name": "Nylea's Emissary",
+        "handler": "manalinkeh_card_nyleas_emissary",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13499,
+        "iid": 6726,
+        "name": "Nylea's Emissary Bestowed",
+        "handler": "manalinkeh_card_nyleas_emissary",
+        "kind": "card"
+      }
+    },
+    "Observant Alseid": {
+      "oracle": {
+        "oracle_id": "0eb0c9d2-bc5a-4ba3-bd83-57af1da51c3b",
+        "name": "Observant Alseid",
+        "oracle_text": "Bestow {4}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nVigilance\nEnchanted creature gets +2/+2 and has vigilance.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Enchantment Creature — Nymph",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Vigilance",
+          "Bestow"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/24/observant-alseid?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13501,
+        "iid": 6772,
+        "name": "Observant Alseid",
+        "handler": "manalinkeh_card_observant_alseid",
+        "kind": "card"
+      },
+      "engine_aura_face": {
+        "csvid": 13502,
+        "iid": 6773,
+        "name": "Observant Alseid Bestowed",
+        "handler": "manalinkeh_card_observant_alseid",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Elvish Mystic": {
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13284,
+        "iid": 2982,
+        "name": "Elvish Mystic",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Judge's Familiar": {
+      "oracle": {
+        "oracle_id": "22b7975c-37a5-4895-b209-bdeeec0c6aea",
+        "name": "Judge's Familiar",
+        "oracle_text": "Flying\nSacrifice this creature: Counter target instant or sorcery spell unless its controller pays {1}.",
+        "mana_cost": "{W/U}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/192/judges-familiar?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12760,
+        "iid": 5092,
+        "name": "Judge's Familiar",
+        "handler": "manalinkeh_card_judges_familiar",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Naturalize": {
+      "oracle": {
+        "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+        "name": "Naturalize",
+        "oracle_text": "Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1096,
+        "iid": 6485,
+        "name": "Naturalize",
+        "handler": "manalinkeh_card_disenchant",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Wall of Roots": {
+      "oracle": {
+        "oracle_id": "3a21a6ae-b2f2-4f0c-acfd-5f3e8d63fd2f",
+        "name": "Wall of Roots",
+        "oracle_text": "Defender\nPut a -0/-1 counter on this creature: Add {G}. Activate only once each turn.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Plant Wall",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/278/wall-of-roots?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2656,
+        "iid": 10778,
+        "name": "Wall of Roots",
+        "handler": "manalinkeh_card_wall_of_roots",
+        "kind": "card"
+      }
+    }
+  }
+}

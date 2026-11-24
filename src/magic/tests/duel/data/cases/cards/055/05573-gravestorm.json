@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Gravestorm",
+  "csvid": 5573,
+  "recipes": [
+    {
+      "family": "upkeep_draw_and_discard",
+      "version": 2,
+      "params": {
+        "csvid": 5573,
+        "printed_mana": "{B}{B}{B}",
+        "rules": "At the beginning of your upkeep, target opponent may exile a card from their graveyard. If that player doesn't, you may draw a card."
+      },
+      "oracle_text": "At the beginning of your upkeep, target opponent may exile a card from their graveyard. If that player doesn't, you may draw a card.",
+      "variants": [
+        "no_card_0",
+        "no_card_1",
+        "exile_instead_0",
+        "exile_instead_1"
+      ]
+    }
+  ]
+}

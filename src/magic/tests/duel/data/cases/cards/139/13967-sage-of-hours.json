@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "csvid": 13967,
+  "card": "Sage of Hours",
+  "recipes": [
+    {
+      "family": "heroic_counter_riders",
+      "version": 2,
+      "params": {
+        "effect": "turns",
+        "clauses": [
+          "Heroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on it.",
+          "Remove all +1/+1 counters from this creature: For each five counters removed this way, take an extra turn after this one."
+        ],
+        "price": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          1,
+          1
+        ]
+      },
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on it.\nRemove all +1/+1 counters from this creature: For each five counters removed this way, take an extra turn after this one.",
+      "variants": [
+        "own_0",
+        "own_1",
+        "opponent_0",
+        "opponent_1",
+        "elsewhere_0",
+        "elsewhere_1",
+        "turn_four_0",
+        "turn_four_1",
+        "turn_five_0",
+        "turn_five_1",
+        "turn_six_0",
+        "turn_six_1",
+        "turn_ten_0",
+        "turn_ten_1"
+      ]
+    }
+  ]
+}

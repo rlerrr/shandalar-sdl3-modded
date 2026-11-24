@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "csvid": 3442,
+  "card": "Thalakos Deceiver",
+  "recipes": [
+    {
+      "family": "attack_follow_on_sabotage_and_poison",
+      "version": 2,
+      "params": {
+        "csvid": 3442,
+        "printed_cost": "{3}{U}",
+        "keywords": [
+          "Shadow"
+        ]
+      },
+      "oracle_text": "Shadow (This creature can block or be blocked by only creatures with shadow.)\nWhenever this creature attacks and isn't blocked, you may sacrifice it. If you do, gain control of target creature. (This effect lasts indefinitely.)",
+      "variants": [
+        "gain_0",
+        "owner_return_0",
+        "indefinite_0",
+        "own_only_0",
+        "nonshadow_0",
+        "shadow_block_0",
+        "shadow_defend_0",
+        "normal_defend_denied_0",
+        "gain_1",
+        "owner_return_1",
+        "indefinite_1",
+        "own_only_1",
+        "nonshadow_1",
+        "shadow_block_1",
+        "shadow_defend_1",
+        "normal_defend_denied_1"
+      ]
+    }
+  ]
+}

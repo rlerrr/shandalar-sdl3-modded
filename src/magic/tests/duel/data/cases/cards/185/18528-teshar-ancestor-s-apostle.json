@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Teshar, Ancestor's Apostle",
+  "csvid": 18528,
+  "recipes": [
+    {
+      "family": "nonhand_cast_rewards",
+      "version": 2,
+      "oracle_text": "Flying\nWhenever you cast a historic spell, return target creature card with mana value 3 or less from your graveyard to the battlefield. (Artifacts, legendaries, and Sagas are historic.)",
+      "params": {
+        "model": "return",
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "variants": [
+        "artifact_0",
+        "legendary_0",
+        "saga_0",
+        "exile_artifact_0",
+        "countered_0",
+        "opponent_0",
+        "nonhistoric_0",
+        "flying_0",
+        "reach_0",
+        "replay_0",
+        "boundary_0",
+        "no_eligible_0",
+        "return_etb_0",
+        "empty_0",
+        "artifact_1",
+        "legendary_1",
+        "saga_1",
+        "exile_artifact_1",
+        "countered_1",
+        "opponent_1",
+        "nonhistoric_1",
+        "flying_1",
+        "reach_1",
+        "replay_1",
+        "boundary_1",
+        "no_eligible_1",
+        "return_etb_1",
+        "empty_1"
+      ]
+    }
+  ]
+}

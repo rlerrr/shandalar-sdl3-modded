@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Kitesail Freebooter",
+  "csvid": 17451,
+  "recipes": [
+    {
+      "family": "entry_follow_on_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 17451,
+        "cost": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, target opponent reveals their hand. You choose a noncreature, nonland card from it. Exile that card until this creature leaves the battlefield.",
+      "variants": [
+        "spell_0",
+        "spell_1",
+        "creature_only_0",
+        "creature_only_1",
+        "empty_0",
+        "empty_1",
+        "flight_0",
+        "flight_1"
+      ]
+    }
+  ]
+}

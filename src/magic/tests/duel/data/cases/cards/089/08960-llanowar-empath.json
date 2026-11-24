@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Llanowar Empath",
+  "csvid": 8960,
+  "recipes": [
+    {
+      "family": "library_scry_before_draw",
+      "version": 2,
+      "params": {
+        "csvid": 8960,
+        "printed_cost": "{3}{G}",
+        "choices": [
+          "creature_0",
+          "creature_1",
+          "noncreature_0",
+          "noncreature_1",
+          "short_0",
+          "short_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, scry 2, then reveal the top card of your library. If it's a creature card, put it into your hand. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+      "variants": [
+        "creature_0",
+        "creature_1",
+        "noncreature_0",
+        "noncreature_1",
+        "short_0",
+        "short_1"
+      ]
+    }
+  ]
+}

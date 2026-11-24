@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "card": "Brave the Elements",
+  "csvid": 10514,
+  "recipes": [
+    {
+      "family": "chosen_color_protection",
+      "version": 2,
+      "oracle_text": "Choose a color. White creatures you control gain protection from the chosen color until end of turn.",
+      "params": {
+        "action": "instant",
+        "scope": "white_team",
+        "scry": 0,
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "variants": [
+        "effect_0",
+        "without_effect_0",
+        "probe_red_0",
+        "probe_blue_0",
+        "aura_drop_0",
+        "after_turn_0",
+        "pending_snapshot_0",
+        "wrong_cast_color_0",
+        "insufficient_cast_mana_0",
+        "block_other_0",
+        "block_black_0",
+        "block_blue_0",
+        "block_green_0",
+        "block_red_0",
+        "block_white_0",
+        "defend_red_0",
+        "bolt_response_0",
+        "no_white_creatures_0",
+        "effect_1",
+        "without_effect_1",
+        "probe_red_1",
+        "probe_blue_1",
+        "aura_drop_1",
+        "after_turn_1",
+        "pending_snapshot_1",
+        "wrong_cast_color_1",
+        "insufficient_cast_mana_1",
+        "block_other_1",
+        "block_black_1",
+        "block_blue_1",
+        "block_green_1",
+        "block_red_1",
+        "block_white_1",
+        "defend_red_1",
+        "bolt_response_1",
+        "no_white_creatures_1"
+      ]
+    }
+  ]
+}

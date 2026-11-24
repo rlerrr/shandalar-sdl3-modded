@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Grixis Slavedriver",
+  "csvid": 10153,
+  "recipes": [
+    {
+      "family": "departure_tokens",
+      "version": 2,
+      "params": {
+        "csvid": 10153,
+        "mana_cost": "{5}{B}"
+      },
+      "oracle_text": "When this creature leaves the battlefield, create a 2/2 black Zombie creature token.\nUnearth {3}{B} ({3}{B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)",
+      "variants": [
+        "destroy_0",
+        "destroy_1",
+        "bounce_0",
+        "bounce_1",
+        "exile_0",
+        "exile_1",
+        "unearth_end_0",
+        "unearth_end_1",
+        "unearth_bounce_0",
+        "unearth_bounce_1"
+      ]
+    }
+  ]
+}

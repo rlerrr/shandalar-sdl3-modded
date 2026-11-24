@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Sabertooth Outrider",
+  "csvid": 14996,
+  "recipes": [
+    {
+      "family": "attack_trigger_team_keywords",
+      "version": 2,
+      "params": {
+        "csvid": 14996,
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "oracle_text": "Trample\nFormidable — Whenever this creature attacks, if creatures you control have total power 8 or greater, this creature gains first strike until end of turn.",
+      "variants": [
+        "exactly_0",
+        "exactly_1",
+        "below_0",
+        "below_1",
+        "late_threshold_0",
+        "late_threshold_1"
+      ]
+    }
+  ]
+}

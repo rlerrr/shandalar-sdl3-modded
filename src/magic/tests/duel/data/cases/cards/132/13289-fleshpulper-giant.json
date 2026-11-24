@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "csvid": 13289,
+  "card": "Fleshpulper Giant",
+  "recipes": [
+    {
+      "family": "entry_trigger_destruction",
+      "version": 2,
+      "params": {
+        "csvid": 13289,
+        "printed_cost": "{5}{R}{R}",
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, you may destroy target creature with toughness 2 or less.",
+      "variants": [
+        "foe_boundary_0",
+        "own_creature_0",
+        "decline_0",
+        "too_tough_0",
+        "indestructible_0",
+        "foe_boundary_1",
+        "own_creature_1",
+        "decline_1",
+        "too_tough_1",
+        "indestructible_1"
+      ]
+    }
+  ]
+}

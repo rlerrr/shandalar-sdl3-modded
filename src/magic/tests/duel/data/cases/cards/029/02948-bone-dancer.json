@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Bone Dancer",
+  "csvid": 2948,
+  "recipes": [
+    {
+      "family": "attack_follow_on_unblocked_modes",
+      "version": 2,
+      "params": {
+        "csvid": 2948,
+        "cost": [
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Whenever this creature attacks and isn't blocked, you may put the top creature card of defending player's graveyard onto the battlefield under your control. If you do, this creature assigns no combat damage this turn.",
+      "variants": [
+        "take_0",
+        "take_1",
+        "borrow_owner_0",
+        "borrow_owner_1",
+        "shroud_0",
+        "shroud_1",
+        "wrong_grave_0",
+        "wrong_grave_1",
+        "blocked_0",
+        "blocked_1",
+        "decline_0",
+        "decline_1"
+      ]
+    }
+  ]
+}

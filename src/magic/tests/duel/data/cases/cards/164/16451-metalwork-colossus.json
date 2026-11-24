@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Metalwork Colossus",
+  "csvid": 16451,
+  "recipes": [
+    {
+      "family": "activated_graveyard_returns_to_hand",
+      "version": 2,
+      "oracle_text": "This spell costs {X} less to cast, where X is the total mana value of noncreature artifacts you control.\nSacrifice two artifacts: Return this card from your graveyard to your hand.",
+      "params": {
+        "model": "artifacts",
+        "fee": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "printed": [
+          11,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "variants": [
+        "paid_0",
+        "opponent_turn_0",
+        "replay_0",
+        "short_0",
+        "artifact_creature_0",
+        "discount_0",
+        "discount_short_0",
+        "recast_0",
+        "paid_1",
+        "opponent_turn_1",
+        "replay_1",
+        "short_1",
+        "artifact_creature_1",
+        "discount_1",
+        "discount_short_1",
+        "recast_1"
+      ]
+    }
+  ]
+}

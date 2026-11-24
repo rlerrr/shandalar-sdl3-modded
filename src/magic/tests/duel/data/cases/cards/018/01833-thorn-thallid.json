@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "card": "Thorn Thallid",
+  "csvid": 1833,
+  "recipes": [
+    {
+      "family": "spore_synergy_riders",
+      "version": 2,
+      "params": {
+        "shape": "damage",
+        "mana": [
+          1,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "keywords": [],
+        "power": 2,
+        "toughness": 2
+      },
+      "oracle_text": "At the beginning of your upkeep, put a spore counter on this creature.\nRemove three spore counters from this creature: It deals 1 damage to any target.",
+      "variants": [
+        "player_0",
+        "creature_0",
+        "planeswalker_0",
+        "missing_target_0",
+        "damage_replay_0",
+        "player_1",
+        "creature_1",
+        "planeswalker_1",
+        "missing_target_1",
+        "damage_replay_1"
+      ]
+    }
+  ]
+}

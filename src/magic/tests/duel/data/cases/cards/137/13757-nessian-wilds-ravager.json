@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Nessian Wilds Ravager",
+  "csvid": 13757,
+  "recipes": [
+    {
+      "family": "fight_conditional_and_multiple",
+      "version": 2,
+      "params": {
+        "csvid": 13757,
+        "cost": [
+          4,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Tribute 6 (As this creature enters, an opponent of your choice may put six +1/+1 counters on it.)\nWhen this creature enters, if tribute wasn't paid, you may have this creature fight another target creature. (Each deals damage equal to its power to the other.)",
+      "variants": [
+        "tribute_paid_0",
+        "tribute_paid_1",
+        "enemy_fight_0",
+        "enemy_fight_1",
+        "own_fight_0",
+        "own_fight_1",
+        "decline_0",
+        "decline_1",
+        "no_other_creature_0",
+        "no_other_creature_1",
+        "reciprocal_0",
+        "reciprocal_1"
+      ]
+    }
+  ]
+}

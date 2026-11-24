@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "csvid": 10689,
+  "card": "Torch Slinger",
+  "recipes": [
+    {
+      "family": "kicker_targeted_utility",
+      "version": 2,
+      "oracle_text": "Kicker {1}{R} (You may pay an additional {1}{R} as you cast this spell.)\nWhen this creature enters, if it was kicked, it deals 2 damage to target creature.",
+      "params": {
+        "effect": "damage",
+        "cast_price": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "fee": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "power": 2,
+        "toughness": 2,
+        "extras": [
+          "survivor",
+          "own_target"
+        ]
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "base_only_0",
+        "base_only_1",
+        "short_kicker_0",
+        "short_kicker_1",
+        "countered_paid_0",
+        "countered_paid_1",
+        "replay_0",
+        "replay_1",
+        "survivor_0",
+        "survivor_1",
+        "own_target_0",
+        "own_target_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Mindreaver",
+  "csvid": 13750,
+  "recipes": [
+    {
+      "family": "heroic_composition_riders",
+      "version": 2,
+      "params": {
+        "model": "linked",
+        "cost": [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, exile the top three cards of target player's library.\n{U}{U}, Sacrifice this creature: Counter target spell with the same name as a card exiled with this creature.",
+      "variants": [
+        "own_0",
+        "enemy_0",
+        "other_target_0",
+        "replay_0",
+        "own_library_0",
+        "short_library_0",
+        "counter_0",
+        "nonmatch_0",
+        "short_payment_0",
+        "unlinked_0",
+        "own_1",
+        "enemy_1",
+        "other_target_1",
+        "replay_1",
+        "own_library_1",
+        "short_library_1",
+        "counter_1",
+        "nonmatch_1",
+        "short_payment_1",
+        "unlinked_1"
+      ]
+    }
+  ]
+}

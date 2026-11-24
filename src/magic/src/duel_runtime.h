@@ -4,6 +4,8 @@
 #include <windows.h>
 
 DWORD WINAPI start_duel_thread(LPVOID unused);
+/* Run one headless operation and report an explicit duel exit, if it occurs. */
+BOOL capture_headless_duel_exit(void (*operation)(void), DWORD *result);
 #if defined(_MSC_VER)
 __declspec(noreturn)
 #else

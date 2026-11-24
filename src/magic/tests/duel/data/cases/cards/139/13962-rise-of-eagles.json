@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "csvid": 13962,
+  "card": "Rise of Eagles",
+  "recipes": [
+    {
+      "family": "library_scry_modes_and_riders",
+      "version": 2,
+      "params": {
+        "csvid": 13962,
+        "printed_cost": "{4}{U}{U}"
+      },
+      "oracle_text": "Create two 2/2 blue Bird enchantment creature tokens with flying. Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "variants": [
+        "own_0",
+        "countered_0",
+        "enchantment_0",
+        "flight_0",
+        "one_card_0",
+        "own_1",
+        "countered_1",
+        "enchantment_1",
+        "flight_1",
+        "one_card_1"
+      ]
+    }
+  ]
+}

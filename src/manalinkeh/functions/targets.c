@@ -1664,9 +1664,15 @@ static int select_target_maybe_force(
       return 0;
     int target_card;
     int target_player = duel_host_choose_target(who_chooses, prompt, allow_cancel, &target_card);
-    /* Both Cancel (1) and Done (2) end this target selection. The caller
-       decides whether an empty result cancels the action or stops an optional
-       target list, exactly as it does for the normal selector. */
+    /* Match the interactive Done button's target sentinel so callers can
+     * complete an optional target list without cancelling the action. */
+    if (target_player == -1 && target_card == -2) {
+      if (!(allow_cancel & 2))
+        duel_host_fail("scripted Done is unavailable for this target selection");
+      ret_tgt->player = -1;
+      ret_tgt->card = -2;
+      return 0;
+    }
     if (target_player == -1 && (allow_cancel & 3)) return 0;
     if (target_player < 0 || target_player > 1 || target_card < -1 || target_card >= 150 ||
         !validate_target_impl(player, card, target_player, target_card, NULL,

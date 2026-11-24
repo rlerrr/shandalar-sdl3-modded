@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Bontu's Monument",
+  "csvid": 16854,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "monument_cast_rewards",
+      "version": 2,
+      "oracle_text": "Black creature spells you cast cost {1} less to cast.\nWhenever you cast a creature spell, each opponent loses 1 life and you gain 1 life.",
+      "params": {
+        "color": "B",
+        "mode": "drain",
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "reduction": 1,
+        "keywords": []
+      },
+      "variants": [
+        "matching_0",
+        "matching_1",
+        "printed_budget_0",
+        "printed_budget_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "wrong_spell_color_0",
+        "wrong_spell_color_1",
+        "mixed_color_0",
+        "mixed_color_1",
+        "floor_0",
+        "floor_1",
+        "noncreature_0",
+        "noncreature_1",
+        "opposing_match_0",
+        "opposing_match_1",
+        "countered_0",
+        "countered_1",
+        "short_source_0",
+        "short_source_1",
+        "source_removed_0",
+        "source_removed_1",
+        "replay_0",
+        "replay_1",
+        "repeat_0",
+        "repeat_1",
+        "through_prevention_0",
+        "through_prevention_1"
+      ]
+    }
+  ]
+}

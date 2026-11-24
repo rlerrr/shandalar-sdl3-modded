@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Minister of Pain",
+  "csvid": 14959,
+  "recipes": [
+    {
+      "family": "exploit_entry_effects",
+      "version": 2,
+      "params": {
+        "reward": "sweep",
+        "mana": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "keywords": [],
+        "power": 2,
+        "toughness": 3
+      },
+      "oracle_text": "Exploit (When this creature enters, you may sacrifice a creature.)\nWhen this creature exploits a creature, creatures your opponents control get -1/-1 until end of turn.",
+      "variants": [
+        "other_0",
+        "self_0",
+        "countered_0",
+        "wrong_color_0",
+        "snapshot_0",
+        "sweep_expiry_0",
+        "other_1",
+        "self_1",
+        "countered_1",
+        "wrong_color_1",
+        "snapshot_1",
+        "sweep_expiry_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "card": "Nyxborn Triton",
+  "csvid": 13767,
+  "recipes": [
+    {
+      "family": "bestow_stat_aura",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "normal_cost": "{2}{U}",
+        "bestow_cost": "{4}{U}",
+        "bonus": [
+          2,
+          3
+        ],
+        "creature": [
+          2,
+          3
+        ]
+      },
+      "oracle_text": "Bestow {4}{U} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nEnchanted creature gets +2/+3.",
+      "variants": [
+        "regular_exact_0",
+        "regular_from_menu_0",
+        "no_host_regular_0",
+        "unfunded_0",
+        "bestow_own_0",
+        "bestow_foreign_0",
+        "bestow_persistent_0",
+        "cancel_mode_0",
+        "cancel_target_0",
+        "pending_host_lost_0",
+        "detach_bounce_0",
+        "detach_death_0",
+        "aura_destroyed_0",
+        "aura_bounce_regular_0",
+        "pending_replay_0",
+        "counter_bestowed_0",
+        "counter_regular_0",
+        "aged_detach_attack_0",
+        "regular_exact_1",
+        "regular_from_menu_1",
+        "no_host_regular_1",
+        "unfunded_1",
+        "bestow_own_1",
+        "bestow_foreign_1",
+        "bestow_persistent_1",
+        "cancel_mode_1",
+        "cancel_target_1",
+        "pending_host_lost_1",
+        "detach_bounce_1",
+        "detach_death_1",
+        "aura_destroyed_1",
+        "aura_bounce_regular_1",
+        "pending_replay_1",
+        "counter_bestowed_1",
+        "counter_regular_1",
+        "aged_detach_attack_1"
+      ]
+    }
+  ]
+}

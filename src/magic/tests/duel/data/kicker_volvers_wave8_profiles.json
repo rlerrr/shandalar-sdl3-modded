@@ -1,0 +1,304 @@
+{
+  "sources": {
+    "Anavolver": {
+      "oracle": {
+        "oracle_id": "03a4cbe2-cf35-4c2c-b035-666f994ffd09",
+        "name": "Anavolver",
+        "oracle_text": "Kicker {1}{U} and/or {B} (You may pay an additional {1}{U} and/or {B} as you cast this spell.)\nIf this creature was kicked with its {1}{U} kicker, it enters with two +1/+1 counters on it and with flying.\nIf this creature was kicked with its {B} kicker, it enters with a +1/+1 counter on it and with \"Pay 3 life: Regenerate this creature.\"",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Volver",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Regenerate",
+          "Kicker"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/apc/75/anavolver?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5331,
+        "iid": 413,
+        "name": "Anavolver",
+        "handler": "manalinkeh_card_anavolver",
+        "kind": "card"
+      }
+    },
+    "Cetavolver": {
+      "oracle": {
+        "oracle_id": "3ae86510-f828-48f8-adab-759df4b5544e",
+        "name": "Cetavolver",
+        "oracle_text": "Kicker {1}{R} and/or {G} (You may pay an additional {1}{R} and/or {G} as you cast this spell.)\nIf this creature was kicked with its {1}{R} kicker, it enters with two +1/+1 counters on it and with first strike.\nIf this creature was kicked with its {G} kicker, it enters with a +1/+1 counter on it and with trample.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Volver",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "R",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/apc/21/cetavolver?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5344,
+        "iid": 1618,
+        "name": "Cetavolver",
+        "handler": "manalinkeh_card_cetavolver",
+        "kind": "card"
+      }
+    },
+    "Degavolver": {
+      "oracle": {
+        "oracle_id": "9431c81f-7b71-4c5d-a63c-1b5aba03601b",
+        "name": "Degavolver",
+        "oracle_text": "Kicker {1}{B} and/or {R} (You may pay an additional {1}{B} and/or {R} as you cast this spell.)\nIf this creature was kicked with its {1}{B} kicker, it enters with two +1/+1 counters on it and with \"Pay 3 life: Regenerate this creature.\"\nIf this creature was kicked with its {R} kicker, it enters with a +1/+1 counter on it and with first strike.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Volver",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate",
+          "Kicker"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "R",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/apc/6/degavolver?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5354,
+        "iid": 2404,
+        "name": "Degavolver",
+        "handler": "manalinkeh_card_degavolver",
+        "kind": "card"
+      }
+    },
+    "Necravolver": {
+      "oracle": {
+        "oracle_id": "639d16ed-daa4-4c8d-8550-5c9a29f4d9fe",
+        "name": "Necravolver",
+        "oracle_text": "Kicker {1}{G} and/or {W} (You may pay an additional {1}{G} and/or {W} as you cast this spell.)\nIf this creature was kicked with its {1}{G} kicker, it enters with two +1/+1 counters on it and with trample.\nIf this creature was kicked with its {W} kicker, it enters with a +1/+1 counter on it and with \"Whenever this creature deals damage, you gain that much life.\"",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Volver",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B",
+          "G",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/apc/46/necravolver?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5408,
+        "iid": 6508,
+        "name": "Necravolver",
+        "handler": "manalinkeh_card_necravolver",
+        "kind": "card"
+      }
+    },
+    "Rakavolver": {
+      "oracle": {
+        "oracle_id": "c00adb98-81dc-490f-9e0f-7f8546ef22ce",
+        "name": "Rakavolver",
+        "oracle_text": "Kicker {1}{W} and/or {U} (You may pay an additional {1}{W} and/or {U} as you cast this spell.)\nIf this creature was kicked with its {1}{W} kicker, it enters with two +1/+1 counters on it and with \"Whenever this creature deals damage, you gain that much life.\"\nIf this creature was kicked with its {U} kicker, it enters with a +1/+1 counter on it and with flying.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Volver",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R",
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/apc/68/rakavolver?utm_source=api"
+      },
+      "registry": {
+        "csvid": 5427,
+        "iid": 7619,
+        "name": "Rakavolver",
+        "handler": "manalinkeh_card_rakavolver",
+        "kind": "card"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      },
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      }
+    },
+    "Elvish Mystic": {
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13284,
+        "iid": 2982,
+        "name": "Elvish Mystic",
+        "handler": "manalinkeh_card_elvish_mystic",
+        "kind": "card"
+      }
+    },
+    "Murder": {
+      "oracle": {
+        "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+        "name": "Murder",
+        "oracle_text": "Destroy target creature.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12594,
+        "iid": 6382,
+        "name": "Murder",
+        "handler": "manalinkeh_card_murder2",
+        "kind": "card"
+      }
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      }
+    },
+    "Wall of Roots": {
+      "oracle": {
+        "oracle_id": "3a21a6ae-b2f2-4f0c-acfd-5f3e8d63fd2f",
+        "name": "Wall of Roots",
+        "oracle_text": "Defender\nPut a -0/-1 counter on this creature: Add {G}. Activate only once each turn.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Plant Wall",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/278/wall-of-roots?utm_source=api"
+      },
+      "registry": {
+        "csvid": 2656,
+        "iid": 10778,
+        "name": "Wall of Roots",
+        "handler": "manalinkeh_card_wall_of_roots",
+        "kind": "card"
+      }
+    }
+  }
+}

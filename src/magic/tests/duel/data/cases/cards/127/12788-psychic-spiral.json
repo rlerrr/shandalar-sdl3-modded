@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Psychic Spiral",
+  "csvid": 12788,
+  "recipes": [
+    {
+      "family": "mill_remaining_spells_and_modes",
+      "version": 2,
+      "params": {
+        "csvid": 12788,
+        "printed_cost": "{4}{U}",
+        "clauses": [
+          "Shuffle all cards from your graveyard into your library. Target player mills that many cards."
+        ],
+        "modes": [
+          "opposing",
+          "short_target",
+          "live_grave"
+        ],
+        "human_modes": [
+          "self_target"
+        ]
+      },
+      "oracle_text": "Shuffle all cards from your graveyard into your library. Target player mills that many cards.",
+      "variants": [
+        "opposing_0",
+        "opposing_1",
+        "short_target_0",
+        "short_target_1",
+        "live_grave_0",
+        "live_grave_1",
+        "self_target_0"
+      ]
+    }
+  ]
+}

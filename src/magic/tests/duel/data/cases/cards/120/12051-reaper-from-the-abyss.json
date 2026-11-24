@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Reaper from the Abyss",
+  "csvid": 12051,
+  "recipes": [
+    {
+      "family": "each_end_step_history_trigger",
+      "version": 2,
+      "oracle_text": "Flying\nMorbid — At the beginning of each end step, if a creature died this turn, destroy target non-Demon creature.",
+      "params": {
+        "role": "destroy",
+        "printed_mana": "{3}{B}{B}{B}",
+        "flying": true
+      },
+      "variants": [
+        "cast_payment_0",
+        "cast_unaffordable_0",
+        "cast_wrong_color_0",
+        "cast_countered_0",
+        "no_history_0",
+        "own_history_0",
+        "opponent_history_0",
+        "before_end_0",
+        "removed_before_end_0",
+        "end_snapshot_0",
+        "enemy_death_0",
+        "target_own_0",
+        "demon_only_0",
+        "indestructible_0",
+        "exile_only_0",
+        "bounce_only_0",
+        "artifact_death_0",
+        "flying_ground_0",
+        "flying_reach_0",
+        "cast_payment_1",
+        "cast_unaffordable_1",
+        "cast_wrong_color_1",
+        "cast_countered_1",
+        "no_history_1",
+        "own_history_1",
+        "opponent_history_1",
+        "before_end_1",
+        "removed_before_end_1",
+        "end_snapshot_1",
+        "enemy_death_1",
+        "target_own_1",
+        "demon_only_1",
+        "indestructible_1",
+        "exile_only_1",
+        "bounce_only_1",
+        "artifact_death_1",
+        "flying_ground_1",
+        "flying_reach_1"
+      ]
+    }
+  ]
+}

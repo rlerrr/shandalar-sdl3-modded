@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Harbor Guardian",
+  "csvid": 2503,
+  "recipes": [
+    {
+      "family": "attack_trigger_costs_and_damage",
+      "version": 2,
+      "params": {
+        "csvid": 2503,
+        "printed_mana": "{2}{W}{U}",
+        "rules": "Reach (This creature can block creatures with flying.)\nWhenever this creature attacks, defending player may draw a card."
+      },
+      "oracle_text": "Reach (This creature can block creatures with flying.)\nWhenever this creature attacks, defending player may draw a card.",
+      "variants": [
+        "draw_accept_0",
+        "draw_accept_1",
+        "draw_decline_0",
+        "draw_decline_1",
+        "reach_block_0",
+        "reach_block_1"
+      ]
+    }
+  ]
+}

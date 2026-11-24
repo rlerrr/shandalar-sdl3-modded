@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Thorn-Thrash Viashino",
+  "csvid": 10085,
+  "recipes": [
+    {
+      "family": "devour_permanent_rewards",
+      "version": 2,
+      "params": {
+        "reward": "activation",
+        "multiplier": 2,
+        "keywords": [],
+        "mana": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "power": 2,
+        "toughness": 2
+      },
+      "oracle_text": "Devour 2 (As this creature enters, you may sacrifice any number of creatures. It enters with twice that many +1/+1 counters on it.)\n{G}: This creature gains trample until end of turn.",
+      "variants": [
+        "none_0",
+        "paid_one_0",
+        "wrong_color_0",
+        "countered_0",
+        "snapshot_0",
+        "activate_trample_0",
+        "no_activation_0",
+        "wrong_activation_0",
+        "expired_trample_0",
+        "none_1",
+        "paid_one_1",
+        "wrong_color_1",
+        "countered_1",
+        "snapshot_1",
+        "activate_trample_1",
+        "no_activation_1",
+        "wrong_activation_1",
+        "expired_trample_1",
+        "paid_two_0",
+        "partial_0",
+        "decline_0"
+      ]
+    }
+  ]
+}

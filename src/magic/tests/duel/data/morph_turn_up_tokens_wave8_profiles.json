@@ -1,0 +1,339 @@
+{
+  "sources": {
+    "Thelonite Hermit": {
+      "csvid": 8700,
+      "handler": "manalinkeh_card_thelonite_hermit",
+      "oracle": {
+        "oracle_id": "69d2e5f3-2f4d-4a36-bcd5-181164ecd894",
+        "name": "Thelonite Hermit",
+        "oracle_text": "All Saprolings get +1/+1.\nMorph {3}{G}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, create four 1/1 green Saproling creature tokens.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Elf Shaman",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mkc/188/thelonite-hermit?utm_source=api"
+      }
+    },
+    "Warbreak Trumpeter": {
+      "csvid": 6460,
+      "handler": "manalinkeh_card_warbreak_trumpeter",
+      "oracle": {
+        "oracle_id": "40e5c7fe-4d7a-41c0-8b90-ea0b46a01c9d",
+        "name": "Warbreak Trumpeter",
+        "oracle_text": "Morph {X}{X}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, create X 1/1 red Goblin creature tokens.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lgn/116/warbreak-trumpeter?utm_source=api"
+      }
+    },
+    "Ponyback Brigade": {
+      "csvid": 14342,
+      "handler": "manalinkeh_card_ponyback_brigade",
+      "oracle": {
+        "oracle_id": "8cfb5181-8ab7-484b-8821-a62c561f762f",
+        "name": "Ponyback Brigade",
+        "oracle_text": "When this creature enters or is turned face up, create three 1/1 red Goblin creature tokens.\nMorph {2}{R}{W}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+        "mana_cost": "{3}{R}{W}{B}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "B",
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "R",
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/191/ponyback-brigade?utm_source=api"
+      }
+    },
+    "Hooded Hydra": {
+      "csvid": 14286,
+      "handler": "manalinkeh_card_hooded_hydra",
+      "oracle": {
+        "oracle_id": "637ddd65-112d-40f7-9bab-a61724d9165c",
+        "name": "Hooded Hydra",
+        "oracle_text": "This creature enters with X +1/+1 counters on it.\nWhen this creature dies, create a 1/1 green Snake creature token for each +1/+1 counter on it.\nMorph {3}{G}{G}\nAs this creature is turned face up, put five +1/+1 counters on it.",
+        "mana_cost": "{X}{G}{G}",
+        "type_line": "Creature — Snake Hydra",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [
+          "Morph"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mkc/171/hooded-hydra?utm_source=api"
+      }
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "csvid": 48,
+      "handler": "manalinkeh_card_counterspell",
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      }
+    },
+    "Forest": {
+      "csvid": 91,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      }
+    },
+    "Goblin": {
+      "csvid": 18746,
+      "handler": "manalinkeh_card_goblin_token",
+      "oracle": {
+        "oracle_id": "fa8ea5cd-b390-41a1-9a2a-11af1bc6bfd0",
+        "name": "Goblin",
+        "oracle_text": "Haste",
+        "mana_cost": "",
+        "type_line": "Token Creature — Goblin",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/trvr/9/goblin?utm_source=api"
+      }
+    },
+    "Hunger of the Howlpack": {
+      "csvid": 12212,
+      "handler": "manalinkeh_card_hunger_of_the_howlpack",
+      "oracle": {
+        "oracle_id": "296dee6b-6ec1-4ea4-8dc3-23080dd37646",
+        "name": "Hunger of the Howlpack",
+        "oracle_text": "Put a +1/+1 counter on target creature.\nMorbid — Put three +1/+1 counters on that creature instead if a creature died this turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Morbid"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/168/hunger-of-the-howlpack?utm_source=api"
+      }
+    },
+    "Mountain": {
+      "csvid": 164,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      }
+    },
+    "Saproling": {
+      "csvid": 18813,
+      "handler": "manalinkeh_card_saproling",
+      "oracle": {
+        "oracle_id": "2b7dba01-b08c-4218-9fc1-da55559d9155",
+        "name": "Saproling",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Saproling",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tsoc/18/saproling?utm_source=api"
+      }
+    },
+    "Snake": {
+      "csvid": 18821,
+      "handler": "manalinkeh_card_snake_token",
+      "oracle": {
+        "oracle_id": "e3863ec2-e8ce-43d2-ab7e-ec99dfa381b6",
+        "name": "Snake",
+        "oracle_text": "Deathtouch",
+        "mana_cost": "",
+        "type_line": "Token Creature — Snake",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Deathtouch"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tecc/8/snake?utm_source=api"
+      }
+    },
+    "Sylvan Advocate": {
+      "csvid": 15695,
+      "handler": "manalinkeh_card_sylvan_advocate",
+      "oracle": {
+        "oracle_id": "beaf7a85-426a-4a33-80c8-33ad01614ad3",
+        "name": "Sylvan Advocate",
+        "oracle_text": "Vigilance\nAs long as you control six or more lands, this creature and land creatures you control get +2/+2.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Elf Druid Ally",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Vigilance"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/znc/84/sylvan-advocate?utm_source=api"
+      }
+    },
+    "Terminate": {
+      "csvid": 1471,
+      "handler": "manalinkeh_card_terminate",
+      "oracle": {
+        "oracle_id": "6257c2fd-005f-41e3-8a72-af76df1eb134",
+        "name": "Terminate",
+        "oracle_text": "Destroy target creature. It can't be regenerated.",
+        "mana_cost": "{B}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/189/terminate?utm_source=api"
+      }
+    },
+    "Unsummon": {
+      "csvid": 260,
+      "handler": "manalinkeh_card_unsummon",
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      }
+    }
+  },
+  "hidden_observer": {
+    "name": "Face-Down Creature",
+    "csvid": 13252,
+    "handler": "manalinkeh_card_face_down_creature"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "card": "Fasting",
+  "csvid": 317,
+  "recipes": [
+    {
+      "family": "draw_step_skip_and_trigger",
+      "version": 2,
+      "params": {
+        "csvid": 317,
+        "casting_cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "clauses": [
+          "At the beginning of your upkeep, put a hunger counter on this enchantment. Then destroy this enchantment if it has five or more hunger counters on it.",
+          "If you would begin your draw step, you may skip that step instead. If you do, you gain 2 life.",
+          "When you draw a card, destroy this enchantment."
+        ]
+      },
+      "oracle_text": "At the beginning of your upkeep, put a hunger counter on this enchantment. Then destroy this enchantment if it has five or more hunger counters on it.\nIf you would begin your draw step, you may skip that step instead. If you do, you gain 2 life.\nWhen you draw a card, destroy this enchantment.",
+      "variants": [
+        "skip_once_0",
+        "skip_once_1",
+        "decline_0",
+        "decline_1",
+        "hunger_five_0",
+        "hunger_five_1",
+        "outside_draw_0",
+        "outside_draw_1"
+      ]
+    }
+  ]
+}

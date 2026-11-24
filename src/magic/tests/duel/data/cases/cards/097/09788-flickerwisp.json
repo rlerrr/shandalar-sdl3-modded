@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Flickerwisp",
+  "csvid": 9788,
+  "recipes": [
+    {
+      "family": "entry_follow_on_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 9788,
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, exile another target permanent. Return that card to the battlefield under its owner's control at the beginning of the next end step.",
+      "variants": [
+        "land_0",
+        "land_1",
+        "borrowed_0",
+        "borrowed_1",
+        "returned_etb_0",
+        "returned_etb_1",
+        "only_self_0",
+        "only_self_1",
+        "source_leaves_0",
+        "source_leaves_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

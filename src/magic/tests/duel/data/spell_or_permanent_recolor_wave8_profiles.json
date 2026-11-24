@@ -1,0 +1,816 @@
+{
+  "version": 1,
+  "sources": {
+    "Deathlace": {
+      "registry": {
+        "csvid": 59,
+        "iid": 2349,
+        "name": "Deathlace",
+        "handler": "manalinkeh_card_deathlace",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "fb80aaba-352a-4b58-8db2-1e02d542819c",
+        "name": "Deathlace",
+        "oracle_text": "Target spell or permanent becomes black. (Mana symbols on that permanent remain unchanged.)",
+        "mana_cost": "{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/4ed/131/deathlace?utm_source=api"
+      },
+      "params": {
+        "color": "B",
+        "mask": 2,
+        "printed_mana": "{B}",
+        "targets": [
+          "spell",
+          "permanent"
+        ],
+        "changes_mana_symbols": false
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/unlimited.c",
+        "symbol": "card_deathlace",
+        "line": 1621,
+        "sha256": "b34b0614a1cdd978fbcf606165da0fe163743cd884d34d3c4659bc58b29e1f7a"
+      }
+    },
+    "Lifelace": {
+      "registry": {
+        "csvid": 143,
+        "iid": 5582,
+        "name": "Lifelace",
+        "handler": "manalinkeh_card_lifelace",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "eec1de80-4b3d-481d-a235-c299e0381830",
+        "name": "Lifelace",
+        "oracle_text": "Target spell or permanent becomes green. (Mana symbols on that permanent remain unchanged.)",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/4ed/258/lifelace?utm_source=api"
+      },
+      "params": {
+        "color": "G",
+        "mask": 8,
+        "printed_mana": "{G}",
+        "targets": [
+          "spell",
+          "permanent"
+        ],
+        "changes_mana_symbols": false
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/unlimited.c",
+        "symbol": "card_lifelace",
+        "line": 4217,
+        "sha256": "b34b0614a1cdd978fbcf606165da0fe163743cd884d34d3c4659bc58b29e1f7a"
+      }
+    },
+    "Purelace": {
+      "registry": {
+        "csvid": 196,
+        "iid": 7483,
+        "name": "Purelace",
+        "handler": "manalinkeh_card_purelace",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "3773001a-8868-49ec-a406-298cf72359c2",
+        "name": "Purelace",
+        "oracle_text": "Target spell or permanent becomes white. (Mana symbols on that permanent remain unchanged.)",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/4ed/43/purelace?utm_source=api"
+      },
+      "params": {
+        "color": "W",
+        "mask": 32,
+        "printed_mana": "{W}",
+        "targets": [
+          "spell",
+          "permanent"
+        ],
+        "changes_mana_symbols": false
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/unlimited.c",
+        "symbol": "card_purelace",
+        "line": 5495,
+        "sha256": "b34b0614a1cdd978fbcf606165da0fe163743cd884d34d3c4659bc58b29e1f7a"
+      }
+    },
+    "Thoughtlace": {
+      "registry": {
+        "csvid": 245,
+        "iid": 9924,
+        "name": "Thoughtlace",
+        "handler": "manalinkeh_card_thoughtlace",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "6452b6a6-6235-46a3-a712-a26592450438",
+        "name": "Thoughtlace",
+        "oracle_text": "Target spell or permanent becomes blue. (Mana symbols on that permanent remain unchanged.)",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/4ed/107/thoughtlace?utm_source=api"
+      },
+      "params": {
+        "color": "U",
+        "mask": 4,
+        "printed_mana": "{U}",
+        "targets": [
+          "spell",
+          "permanent"
+        ],
+        "changes_mana_symbols": false
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/unlimited.c",
+        "symbol": "card_thoughtlace",
+        "line": 6667,
+        "sha256": "b34b0614a1cdd978fbcf606165da0fe163743cd884d34d3c4659bc58b29e1f7a"
+      }
+    }
+  },
+  "witnesses": {
+    "Alaborn Cavalier": {
+      "registry": {
+        "csvid": 3661,
+        "iid": 11478,
+        "name": "Alaborn Cavalier",
+        "handler": "manalinkeh_card_seasoned_marshal",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "f8273146-f2e5-40ec-ba96-c0a4192caec8",
+        "name": "Alaborn Cavalier",
+        "oracle_text": "Whenever this creature attacks, you may tap target creature.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Creature — Human Knight",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddg/18/alaborn-cavalier?utm_source=api"
+      }
+    },
+    "Black Knight": {
+      "registry": {
+        "csvid": 16,
+        "iid": 1020,
+        "name": "Black Knight",
+        "handler": "manalinkeh_card_black_knight",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "9456c5b6-946d-403a-8ed0-dff9f921d98c",
+        "name": "Black Knight",
+        "oracle_text": "First strike (This creature deals combat damage before creatures without first strike.)\nProtection from white (This creature can't be blocked, targeted, dealt damage, or enchanted by anything white.)",
+        "mana_cost": "{B}{B}",
+        "type_line": "Creature — Human Knight",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "First strike",
+          "Protection"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/71/black-knight?utm_source=api"
+      }
+    },
+    "Counterspell": {
+      "registry": {
+        "csvid": 48,
+        "iid": 1996,
+        "name": "Counterspell",
+        "handler": "manalinkeh_card_counterspell",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      }
+    },
+    "Fanatic of Mogis": {
+      "registry": {
+        "csvid": 13437,
+        "iid": 3277,
+        "name": "Fanatic of Mogis",
+        "handler": "manalinkeh_card_fanatic_of_mogis",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "f19d06af-6caf-41d8-8d0a-d5d50bd67900",
+        "name": "Fanatic of Mogis",
+        "oracle_text": "When this creature enters, it deals damage to each opponent equal to your devotion to red. (Each {R} in the mana costs of permanents you control counts toward your devotion to red.)",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Minotaur Shaman",
+        "power": "4",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/121/fanatic-of-mogis?utm_source=api"
+      }
+    },
+    "Fangren Marauder": {
+      "registry": {
+        "csvid": 11441,
+        "iid": 3282,
+        "name": "Fangren Marauder",
+        "handler": "manalinkeh_card_fangren_marauder",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "e154e612-4041-4fb7-903f-917588dbe58e",
+        "name": "Fangren Marauder",
+        "oracle_text": "Whenever an artifact is put into a graveyard from the battlefield, you may gain 5 life.",
+        "mana_cost": "{5}{G}",
+        "type_line": "Creature — Beast",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbs/79/fangren-marauder?utm_source=api"
+      }
+    },
+    "Fervor": {
+      "registry": {
+        "csvid": 1604,
+        "iid": 3365,
+        "name": "Fervor",
+        "handler": "manalinkeh_card_fervor",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "8e0cea9c-3110-4728-9378-76849e33bb90",
+        "name": "Fervor",
+        "oracle_text": "Creatures you control have haste. (They can attack and {T} as soon as they come under your control.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/129/fervor?utm_source=api"
+      }
+    },
+    "Forest": {
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      }
+    },
+    "Furnace Whelp": {
+      "registry": {
+        "csvid": 7059,
+        "iid": 3688,
+        "name": "Furnace Whelp",
+        "handler": "manalinkeh_card_furnace_whelp",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "8422f1e0-00ca-4ffb-a6b2-e2c9f96d7f23",
+        "name": "Furnace Whelp",
+        "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Dragon",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/323/furnace-whelp?utm_source=api"
+      }
+    },
+    "Ghor-Clan Rampager": {
+      "registry": {
+        "csvid": 12953,
+        "iid": 3829,
+        "name": "Ghor-Clan Rampager",
+        "handler": "manalinkeh_card_ghor_clan_rampager",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "ec7a9e7f-742b-4344-983e-73372c6a1760",
+        "name": "Ghor-Clan Rampager",
+        "oracle_text": "Trample\nBloodrush — {R}{G}, Discard this card: Target attacking creature gets +4/+4 and gains trample until end of turn.",
+        "mana_cost": "{2}{R}{G}",
+        "type_line": "Creature — Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Bloodrush",
+          "Trample"
+        ],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/198/ghor-clan-rampager?utm_source=api"
+      }
+    },
+    "Glasses of Urza": {
+      "registry": {
+        "csvid": 99,
+        "iid": 3916,
+        "name": "Glasses of Urza",
+        "handler": "manalinkeh_card_glasses_of_urza",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "af7fabf4-8d55-4b06-9c21-472f4a5775b4",
+        "name": "Glasses of Urza",
+        "oracle_text": "{T}: Look at target player's hand.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/203/glasses-of-urza?utm_source=api"
+      }
+    },
+    "Goblin Piledriver": {
+      "registry": {
+        "csvid": 6156,
+        "iid": 4028,
+        "name": "Goblin Piledriver",
+        "handler": "manalinkeh_card_goblin_piledriver",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "4d74d12b-1ffb-482f-8bac-635a8d4d32e9",
+        "name": "Goblin Piledriver",
+        "oracle_text": "Protection from blue (This creature can't be blocked, targeted, dealt damage, or enchanted by anything blue.)\nWhenever this creature attacks, it gets +2/+0 until end of turn for each other attacking Goblin.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Protection"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ori/151/goblin-piledriver?utm_source=api"
+      }
+    },
+    "Grizzly Bears": {
+      "registry": {
+        "csvid": 106,
+        "iid": 4259,
+        "name": "Grizzly Bears",
+        "handler": "card_dummy",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      }
+    },
+    "Island": {
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      }
+    },
+    "Lightning Bolt": {
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      }
+    },
+    "Mountain": {
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      }
+    },
+    "Plains": {
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      }
+    },
+    "Ranger's Guile": {
+      "registry": {
+        "csvid": 12050,
+        "iid": 7665,
+        "name": "Ranger's Guile",
+        "handler": "manalinkeh_card_rangers_guile",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "694cb93a-bcc5-44b0-a76c-19ae4a4e5e0f",
+        "name": "Ranger's Guile",
+        "oracle_text": "Target creature you control gets +1/+1 and gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/199/rangers-guile?utm_source=api"
+      }
+    },
+    "Scroll Thief": {
+      "registry": {
+        "csvid": 11171,
+        "iid": 8370,
+        "name": "Scroll Thief",
+        "handler": "manalinkeh_card_thieving_magpie",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "637c5583-4683-4ae4-8b4e-f5da42a772c7",
+        "name": "Scroll Thief",
+        "oracle_text": "Whenever this creature deals combat damage to a player, draw a card.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Merfolk Rogue",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddt/17/scroll-thief?utm_source=api"
+      }
+    },
+    "Sengir Vampire": {
+      "registry": {
+        "csvid": 220,
+        "iid": 8488,
+        "name": "Sengir Vampire",
+        "handler": "manalinkeh_card_sengir_vampire",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "749141aa-f6c4-4ad8-b146-406e68ae9b0b",
+        "name": "Sengir Vampire",
+        "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever a creature dealt damage by this creature this turn dies, put a +1/+1 counter on this creature.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Creature — Vampire",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/275/sengir-vampire?utm_source=api"
+      }
+    },
+    "Skyknight Legionnaire": {
+      "registry": {
+        "csvid": 1235,
+        "iid": 8865,
+        "name": "Skyknight Legionnaire",
+        "handler": "manalinkeh_card_ambush_party",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "61178a6c-70b7-447d-87ee-a8d9369c3d15",
+        "name": "Skyknight Legionnaire",
+        "oracle_text": "Flying, haste",
+        "mana_cost": "{1}{R}{W}",
+        "type_line": "Creature — Human Knight",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Haste"
+        ],
+        "colors": [
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/225/skyknight-legionnaire?utm_source=api"
+      }
+    },
+    "Spectral Lynx": {
+      "registry": {
+        "csvid": 1310,
+        "iid": 9108,
+        "name": "Spectral Lynx",
+        "handler": "manalinkeh_card_drudge_skeletons",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "b5187725-9a39-433c-ae09-eccd6111574c",
+        "name": "Spectral Lynx",
+        "oracle_text": "Protection from green\n{B}: Regenerate this creature.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Cat Spirit",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate",
+          "Protection"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/28/spectral-lynx?utm_source=api"
+      }
+    },
+    "Unsummon": {
+      "registry": {
+        "csvid": 260,
+        "iid": 10388,
+        "name": "Unsummon",
+        "handler": "manalinkeh_card_unsummon",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      }
+    },
+    "White Knight": {
+      "registry": {
+        "csvid": 283,
+        "iid": 10939,
+        "name": "White Knight",
+        "handler": "manalinkeh_card_white_knight",
+        "kind": "card"
+      },
+      "oracle": {
+        "oracle_id": "ddb021df-ae4a-4ac1-8353-d0b375761714",
+        "name": "White Knight",
+        "oracle_text": "First strike (This creature deals combat damage before creatures without first strike.)\nProtection from black (This creature can't be blocked, targeted, dealt damage, or enchanted by anything black.)",
+        "mana_cost": "{W}{W}",
+        "type_line": "Creature — Human Knight",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "First strike",
+          "Protection"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddg/9/white-knight?utm_source=api"
+      }
+    }
+  },
+  "native_characteristics_only_witnesses": [
+    "Grizzly Bears"
+  ]
+}

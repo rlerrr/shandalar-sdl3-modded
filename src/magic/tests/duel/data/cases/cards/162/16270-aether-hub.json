@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "csvid": 16270,
+  "card": "Aether Hub",
+  "recipes": [
+    {
+      "family": "land_entry_payment",
+      "version": 2,
+      "oracle_text": "When this land enters, you get {E} (an energy counter).\n{T}: Add {C}.\n{T}, Pay {E}: Add one mana of any color.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "kind": "energy",
+          "enter_tapped": false,
+          "entry_energy": 1,
+          "energy_fee": 1,
+          "tap_colors": "CBUGRW"
+        }
+      },
+      "variants": [
+        "entry_0",
+        "free_colorless_0",
+        "spent_then_colorless_0",
+        "colored_cast_0",
+        "reenter_0",
+        "opposing_energy_0",
+        "own_reserve_0",
+        "scout_entry_0",
+        "off_turn_0",
+        "ready_replay_0",
+        "color_b_0",
+        "color_u_0",
+        "color_g_0",
+        "color_r_0",
+        "color_w_0",
+        "entry_1",
+        "free_colorless_1",
+        "spent_then_colorless_1",
+        "colored_cast_1",
+        "reenter_1",
+        "opposing_energy_1",
+        "own_reserve_1",
+        "scout_entry_1",
+        "off_turn_1",
+        "ready_replay_1",
+        "color_b_1",
+        "color_u_1",
+        "color_g_1",
+        "color_r_1",
+        "color_w_1"
+      ]
+    }
+  ]
+}

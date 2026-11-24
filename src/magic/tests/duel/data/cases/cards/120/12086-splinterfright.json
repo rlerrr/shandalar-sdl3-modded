@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Splinterfright",
+  "csvid": 12086,
+  "recipes": [
+    {
+      "family": "mill_upkeep_and_untap",
+      "version": 2,
+      "params": {
+        "csvid": 12086,
+        "printed_mana": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "rules": "Trample\nSplinterfright's power and toughness are each equal to the number of creature cards in your graveyard.\nAt the beginning of your upkeep, mill two cards. (Put the top two cards of your library into your graveyard.)"
+      },
+      "oracle_text": "Trample\nSplinterfright's power and toughness are each equal to the number of creature cards in your graveyard.\nAt the beginning of your upkeep, mill two cards. (Put the top two cards of your library into your graveyard.)",
+      "variants": [
+        "growth_trample_0",
+        "growth_trample_1",
+        "mixed_prefix_0",
+        "mixed_prefix_1"
+      ]
+    }
+  ]
+}

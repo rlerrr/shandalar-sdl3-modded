@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Dictate of Kruphix",
+  "csvid": 13874,
+  "recipes": [
+    {
+      "family": "draw_step_additional_draw",
+      "version": 2,
+      "params": {
+        "csvid": 13874,
+        "extra": 1,
+        "price": [
+          1,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "modes": [
+          "ordinary",
+          "limited_by_spirit",
+          "removed",
+          "flash_response"
+        ],
+        "clauses": [
+          "Flash (You may cast this spell any time you could cast an instant.)",
+          "At the beginning of each player's draw step, that player draws an additional card."
+        ]
+      },
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nAt the beginning of each player's draw step, that player draws an additional card.",
+      "variants": [
+        "ordinary_0",
+        "ordinary_1",
+        "limited_by_spirit_0",
+        "limited_by_spirit_1",
+        "removed_0",
+        "removed_1",
+        "flash_response_0",
+        "flash_response_1"
+      ]
+    }
+  ]
+}

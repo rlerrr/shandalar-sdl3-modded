@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Howlpack Resurgence",
+  "csvid": 15856,
+  "recipes": [
+    {
+      "family": "flash_remaining_auras_and_enchantments",
+      "version": 2,
+      "params": {
+        "csvid": 15856,
+        "cost": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "clauses": [
+          "Flash",
+          "Each creature you control that's a Wolf or a Werewolf gets +1/+1 and has trample."
+        ],
+        "modes": [
+          "team_scope",
+          "team_entry",
+          "team_trample",
+          "team_remove"
+        ]
+      },
+      "oracle_text": "Flash\nEach creature you control that's a Wolf or a Werewolf gets +1/+1 and has trample.",
+      "variants": [
+        "team_scope_0",
+        "team_scope_1",
+        "team_entry_0",
+        "team_entry_1",
+        "team_trample_0",
+        "team_trample_1",
+        "team_remove_0",
+        "team_remove_1"
+      ]
+    }
+  ]
+}

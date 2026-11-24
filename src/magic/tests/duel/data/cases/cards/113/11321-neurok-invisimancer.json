@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "csvid": 11321,
+  "card": "Neurok Invisimancer",
+  "recipes": [
+    {
+      "family": "entry_target_unblockability",
+      "version": 2,
+      "params": {
+        "effect": "entry_target",
+        "cast_mana": [
+          1,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "intrinsic": true,
+        "power_limit": null,
+        "power": 2,
+        "toughness": 1
+      },
+      "oracle_text": "This creature can't be blocked.\nWhen this creature enters, target creature can't be blocked this turn.",
+      "variants": [
+        "effect_0",
+        "effect_1",
+        "no_cast_0",
+        "no_cast_1",
+        "short_0",
+        "short_1",
+        "wrong_color_0",
+        "wrong_color_1",
+        "countered_0",
+        "countered_1",
+        "self_only_0",
+        "self_only_1",
+        "enemy_target_0",
+        "enemy_target_1",
+        "source_leaves_0",
+        "source_leaves_1",
+        "expiry_0",
+        "expiry_1",
+        "bounce_recast_0",
+        "bounce_recast_1",
+        "pending_replay_0",
+        "pending_replay_1",
+        "intrinsic_0",
+        "intrinsic_1",
+        "intrinsic_replay_0",
+        "intrinsic_replay_1"
+      ]
+    }
+  ]
+}

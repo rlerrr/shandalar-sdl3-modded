@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "csvid": 5690,
+  "card": "Seton's Desire",
+  "recipes": [
+    {
+      "family": "must_block_creature_spell",
+      "version": 2,
+      "params": {
+        "composition": "threshold_aura",
+        "threshold": 7,
+        "cost": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "bonus": [
+          2,
+          2
+        ]
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature gets +2/+2.\nThreshold — As long as there are seven or more cards in your graveyard, all creatures able to block enchanted creature do so.",
+      "variants": [
+        "threshold_six_0",
+        "threshold_seven_0",
+        "enemy_seven_0",
+        "foreign_host_0",
+        "foreign_enemy_seven_0",
+        "aura_removed_0",
+        "no_host_0",
+        "unfunded_0",
+        "threshold_six_1",
+        "threshold_seven_1",
+        "enemy_seven_1",
+        "foreign_host_1",
+        "foreign_enemy_seven_1",
+        "aura_removed_1",
+        "no_host_1",
+        "unfunded_1"
+      ]
+    }
+  ]
+}

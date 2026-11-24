@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Realm Razer",
+  "csvid": 10040,
+  "recipes": [
+    {
+      "family": "entry_interaction_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 10040,
+        "cost": [
+          3,
+          0,
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      "oracle_text": "When this creature enters, exile all lands.\nWhen this creature leaves the battlefield, return the exiled cards to the battlefield tapped under their owners' control.",
+      "variants": [
+        "all_lands_0",
+        "all_lands_1",
+        "no_lands_0",
+        "no_lands_1",
+        "borrowed_land_0",
+        "borrowed_land_1",
+        "bounce_source_0",
+        "bounce_source_1",
+        "land_token_0",
+        "land_token_1"
+      ]
+    }
+  ]
+}

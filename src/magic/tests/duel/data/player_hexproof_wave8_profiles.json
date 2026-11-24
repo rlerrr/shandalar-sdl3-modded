@@ -1,0 +1,568 @@
+{
+  "version": 1,
+  "sources": {
+    "Aegis of the Gods": {
+      "oracle": {
+        "oracle_id": "c5bfc1b9-a55d-4608-a6f7-bb62cb8dc3c6",
+        "name": "Aegis of the Gods",
+        "oracle_text": "You have hexproof. (You can't be the target of spells or abilities your opponents control.)",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment Creature — Human Soldier",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/1/aegis-of-the-gods?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13835,
+        "iid": 245,
+        "name": "Aegis of the Gods",
+        "handler": "manalinkeh_card_leyline_of_sanctity",
+        "kind": "card"
+      },
+      "params": {
+        "mana": "{1}{W}",
+        "branch": "static",
+        "type_line": "Enchantment Creature — Human Soldier",
+        "power": 2,
+        "toughness": 1
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/m11.c",
+        "sha256": "6d86990c1f954ae4e7d65332b8e7c35bce2147982774717127314ddd93cfe04c",
+        "symbol": "card_leyline_of_sanctity",
+        "line": 260
+      }
+    },
+    "Imperial Mask": {
+      "oracle": {
+        "oracle_id": "e4c92768-00a1-450f-8fca-81b28b353bb6",
+        "name": "Imperial Mask",
+        "oracle_text": "When this enchantment enters, if it's not a token, each of your teammates creates a token that's a copy of this enchantment.\nYou have hexproof. (You can't be the target of spells or abilities your opponents control.)",
+        "mana_cost": "{4}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fut/23/imperial-mask?utm_source=api"
+      },
+      "registry": {
+        "csvid": 8947,
+        "iid": 4812,
+        "name": "Imperial Mask",
+        "handler": "manalinkeh_card_imperial_mask",
+        "kind": "card"
+      },
+      "params": {
+        "mana": "{4}{W}",
+        "branch": "team",
+        "type_line": "Enchantment",
+        "power": null,
+        "toughness": null
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/future_sight.c",
+        "sha256": "d76adbe700ed52b79d6b19a03d34710d346496fe19f6a104c906fa1293762fc6",
+        "symbol": "card_imperial_mask",
+        "line": 1618
+      }
+    },
+    "Leyline of Sanctity": {
+      "oracle": {
+        "oracle_id": "492e0e6c-8c27-4376-938b-f8a8b6205810",
+        "name": "Leyline of Sanctity",
+        "oracle_text": "If this card is in your opening hand, you may begin the game with it on the battlefield.\nYou have hexproof. (You can't be the target of spells or abilities your opponents control.)",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/26/leyline-of-sanctity?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11141,
+        "iid": 5551,
+        "name": "Leyline of Sanctity",
+        "handler": "manalinkeh_card_leyline_of_sanctity",
+        "kind": "card"
+      },
+      "params": {
+        "mana": "{2}{W}{W}",
+        "branch": "opening",
+        "type_line": "Enchantment",
+        "power": null,
+        "toughness": null
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/m11.c",
+        "sha256": "6d86990c1f954ae4e7d65332b8e7c35bce2147982774717127314ddd93cfe04c",
+        "symbol": "card_leyline_of_sanctity",
+        "line": 260
+      }
+    },
+    "Spirit of the Hearth": {
+      "oracle": {
+        "oracle_id": "30cd69a8-7893-4075-94ca-04450ff821d3",
+        "name": "Spirit of the Hearth",
+        "oracle_text": "Flying\nYou have hexproof. (You can't be the target of spells or abilities your opponents control.)",
+        "mana_cost": "{4}{W}{W}",
+        "type_line": "Creature — Cat Spirit",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c17/73/spirit-of-the-hearth?utm_source=api"
+      },
+      "registry": {
+        "csvid": 9876,
+        "iid": 9203,
+        "name": "Spirit of the Hearth",
+        "handler": "manalinkeh_card_spirit_of_the_hearth",
+        "kind": "card"
+      },
+      "params": {
+        "mana": "{4}{W}{W}",
+        "branch": "flying",
+        "type_line": "Creature — Cat Spirit",
+        "power": 4,
+        "toughness": 5
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/eventide.c",
+        "sha256": "45b1c5e0026fa40c4675e652863a420310dc93747f39815ab061b2f648daed1e",
+        "symbol": "card_spirit_of_the_hearth",
+        "line": 3997
+      }
+    },
+    "Witchbane Orb": {
+      "oracle": {
+        "oracle_id": "7411a8f4-b736-482f-886e-5fa671e94e0d",
+        "name": "Witchbane Orb",
+        "oracle_text": "When this artifact enters, destroy all Curses attached to you.\nYou have hexproof. (You can't be the target of spells or abilities your opponents control, including Aura spells.)",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/isd/236/witchbane-orb?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12125,
+        "iid": 11040,
+        "name": "Witchbane Orb",
+        "handler": "manalinkeh_card_witchbane_orb",
+        "kind": "card"
+      },
+      "params": {
+        "mana": "{4}",
+        "branch": "curses",
+        "type_line": "Artifact",
+        "power": null,
+        "toughness": null
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/innistrad.c",
+        "sha256": "c47d29f9fac5619d74df08a83e2f323f9e1b5adde5a4a1f45663f29d8d548087",
+        "symbol": "card_witchbane_orb",
+        "line": 7149
+      }
+    }
+  },
+  "witnesses": {
+    "Bump in the Night": {
+      "oracle": {
+        "oracle_id": "d9f2c571-b357-4d4d-94c5-fd47551bb842",
+        "name": "Bump in the Night",
+        "oracle_text": "Target opponent loses 3 life.\nFlashback {5}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddk/57/bump-in-the-night?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11894,
+        "iid": 1392,
+        "name": "Bump in the Night",
+        "handler": "manalinkeh_card_bump_in_the_night",
+        "kind": "card"
+      }
+    },
+    "Curse of the Pierced Heart": {
+      "oracle": {
+        "oracle_id": "f22c3624-6bd5-4761-b8ad-ac301ad9351c",
+        "name": "Curse of the Pierced Heart",
+        "oracle_text": "Enchant player\nAt the beginning of enchanted player's upkeep, this Aura deals 1 damage to that player or a planeswalker that player controls.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Enchantment — Aura Curse",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/isd/138/curse-of-the-pierced-heart?utm_source=api"
+      },
+      "registry": {
+        "csvid": 11919,
+        "iid": 2163,
+        "name": "Curse of the Pierced Heart",
+        "handler": "manalinkeh_card_curse_of_the_pierced_heart",
+        "kind": "card"
+      }
+    },
+    "Faith's Reward": {
+      "oracle": {
+        "oracle_id": "2fbb6703-3517-4117-9ca4-45e90a6216ce",
+        "name": "Faith's Reward",
+        "oracle_text": "Return to the battlefield all permanent cards in your graveyard that were put there from the battlefield this turn.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cn2/84/faiths-reward?utm_source=api"
+      },
+      "registry": {
+        "csvid": 12568,
+        "iid": 3251,
+        "name": "Faith's Reward",
+        "handler": "manalinkeh_card_faiths_reward",
+        "kind": "card"
+      }
+    },
+    "Flame Rift": {
+      "oracle": {
+        "oracle_id": "28479aa8-d1cd-421a-8bbb-0594bb4dd410",
+        "name": "Flame Rift",
+        "oracle_text": "Flame Rift deals 4 damage to each player.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh2/278/flame-rift?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1535,
+        "iid": 3461,
+        "name": "Flame Rift",
+        "handler": "manalinkeh_card_flame_rift",
+        "kind": "card"
+      }
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "registry": {
+        "csvid": 91,
+        "iid": 2,
+        "name": "Forest",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "registry": {
+        "csvid": 110,
+        "iid": 4570,
+        "name": "Hill Giant",
+        "handler": "card_dummy",
+        "kind": "card"
+      }
+    },
+    "Howling Mine": {
+      "oracle": {
+        "oracle_id": "d26b27db-a567-4631-b4b6-7294222fbdd1",
+        "name": "Howling Mine",
+        "oracle_text": "At the beginning of each player's draw step, if this artifact is untapped, that player draws an additional card.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c16/257/howling-mine?utm_source=api"
+      },
+      "registry": {
+        "csvid": 114,
+        "iid": 4683,
+        "name": "Howling Mine",
+        "handler": "manalinkeh_card_howling_mine",
+        "kind": "card"
+      }
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "registry": {
+        "csvid": 126,
+        "iid": 1,
+        "name": "Island",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "registry": {
+        "csvid": 145,
+        "iid": 5596,
+        "name": "Lightning Bolt",
+        "handler": "manalinkeh_card_lightning_bolt",
+        "kind": "card"
+      }
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "registry": {
+        "csvid": 164,
+        "iid": 3,
+        "name": "Mountain",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "registry": {
+        "csvid": 188,
+        "iid": 4,
+        "name": "Plains",
+        "handler": "manalinkeh_plain_mana_producer",
+        "kind": "card"
+      }
+    },
+    "Razortip Whip": {
+      "oracle": {
+        "oracle_id": "44cf7fd5-721f-41f4-ae78-cf93afeff5f1",
+        "name": "Razortip Whip",
+        "oracle_text": "{1}, {T}: This artifact deals 1 damage to target opponent or planeswalker.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/235/razortip-whip?utm_source=api"
+      },
+      "registry": {
+        "csvid": 13035,
+        "iid": 7717,
+        "name": "Razortip Whip",
+        "handler": "manalinkeh_card_razortip_whip",
+        "kind": "card"
+      }
+    },
+    "Vindicate": {
+      "oracle": {
+        "oracle_id": "63c1ac21-e3d8-40c2-8c09-3f31c52992ef",
+        "name": "Vindicate",
+        "oracle_text": "Destroy target permanent.",
+        "mana_cost": "{1}{W}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh2/294/vindicate?utm_source=api"
+      },
+      "registry": {
+        "csvid": 1302,
+        "iid": 10603,
+        "name": "Vindicate",
+        "handler": "manalinkeh_card_desert_twister",
+        "kind": "card"
+      }
+    },
+    "Welkin Tern": {
+      "oracle": {
+        "oracle_id": "010c660a-a67b-48f0-a63a-15470eb89f69",
+        "name": "Welkin Tern",
+        "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nThis creature can block only creatures with flying.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Bird",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gs1/5/welkin-tern?utm_source=api"
+      },
+      "registry": {
+        "csvid": 10709,
+        "iid": 10901,
+        "name": "Welkin Tern",
+        "handler": "manalinkeh_card_skywinder_drake",
+        "kind": "card"
+      }
+    }
+  },
+  "static_characteristics_only_witnesses": [
+    "Hill Giant"
+  ]
+}

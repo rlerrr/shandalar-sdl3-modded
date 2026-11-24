@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Aerial Volley",
+  "csvid": 15071,
+  "recipes": [
+    {
+      "family": "divided_damage_spell",
+      "version": 2,
+      "oracle_text": "Aerial Volley deals 3 damage divided as you choose among one, two, or three target creatures with flying.",
+      "params": {
+        "damage": 3,
+        "target_cap": 3,
+        "printed_mana": "{G}",
+        "any_number": false,
+        "instant": true,
+        "target_scope": "flying",
+        "hybrid": false
+      },
+      "variants": [
+        "all_to_creature_0",
+        "split_0",
+        "max_distinct_0",
+        "late_bounce_0",
+        "late_hexproof_0",
+        "countered_0",
+        "pending_replay_0",
+        "cancel_first_0",
+        "unfunded_0",
+        "wrong_color_0",
+        "none_eligible_0",
+        "wrong_types_only_0",
+        "ground_no_fly_0",
+        "flight_grant_0",
+        "late_flying_loss_0",
+        "all_to_creature_1",
+        "split_1",
+        "max_distinct_1",
+        "late_bounce_1",
+        "late_hexproof_1",
+        "countered_1",
+        "pending_replay_1",
+        "cancel_first_1",
+        "unfunded_1",
+        "wrong_color_1",
+        "none_eligible_1",
+        "wrong_types_only_1",
+        "ground_no_fly_1",
+        "flight_grant_1",
+        "late_flying_loss_1"
+      ]
+    }
+  ]
+}

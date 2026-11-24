@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Crookclaw Transmuter",
+  "csvid": 8511,
+  "recipes": [
+    {
+      "family": "flash_entry_untap_and_temporary_stats",
+      "version": 2,
+      "params": {
+        "csvid": 8511,
+        "mana": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Flash\nFlying\nWhen this creature enters, switch target creature's power and toughness until end of turn.",
+      "variants": [
+        "switch_own_0",
+        "switch_own_1",
+        "switch_foe_0",
+        "switch_foe_1",
+        "response_switch_0",
+        "response_switch_1",
+        "flying_block_0",
+        "flying_block_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

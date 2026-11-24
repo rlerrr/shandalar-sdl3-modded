@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Cold Snap",
+  "csvid": 1893,
+  "recipes": [
+    {
+      "family": "cumulative_upkeep_phase_and_library",
+      "version": 2,
+      "params": {
+        "csvid": 1893,
+        "cast_cost": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "upkeep": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Cumulative upkeep {2} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nAt the beginning of each player's upkeep, this enchantment deals damage to that player equal to the number of snow lands they control.",
+      "variants": [
+        "paid_twice_0",
+        "paid_twice_1",
+        "declined_first_0",
+        "declined_first_1",
+        "no_snow_0",
+        "no_snow_1"
+      ]
+    }
+  ]
+}

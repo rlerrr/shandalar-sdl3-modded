@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Charmbreaker Devils",
+  "csvid": 11902,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "cast_instant_or_sorcery_riders",
+      "version": 2,
+      "oracle_text": "At the beginning of your upkeep, return an instant or sorcery card at random from your graveyard to your hand.\nWhenever you cast an instant or sorcery spell, this creature gets +4/+0 until end of turn.",
+      "params": {
+        "effect": "devil",
+        "mana": [
+          5,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "hybrid": [],
+        "stats": [
+          4,
+          4
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "instant_0",
+        "instant_1",
+        "sorcery_0",
+        "sorcery_1",
+        "own_creature_0",
+        "own_creature_1",
+        "enemy_instant_0",
+        "enemy_instant_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "upkeep_0",
+        "upkeep_1",
+        "upkeep_wrong_type_0",
+        "upkeep_wrong_type_1",
+        "expiry_0",
+        "expiry_1"
+      ]
+    }
+  ]
+}

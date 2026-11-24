@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "csvid": 11640,
+  "card": "Mortis Dogs",
+  "recipes": [
+    {
+      "family": "attack_trigger_stat_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 11640,
+        "printed_cost": "{3}{B}"
+      },
+      "oracle_text": "Whenever this creature attacks, it gets +2/+0 until end of turn.\nWhen this creature dies, target player loses life equal to its power.",
+      "variants": [
+        "face_0",
+        "combat_death_0",
+        "unpowered_death_0",
+        "self_target_0",
+        "face_1",
+        "combat_death_1",
+        "unpowered_death_1"
+      ]
+    }
+  ]
+}

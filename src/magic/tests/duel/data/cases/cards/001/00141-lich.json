@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Lich",
+  "csvid": 141,
+  "recipes": [
+    {
+      "family": "departure_linked_permanents",
+      "version": 2,
+      "params": {
+        "csvid": 141
+      },
+      "oracle_text": "As this enchantment enters, you lose life equal to your life total.\nYou don't lose the game for having 0 or less life.\nIf you would gain life, draw that many cards instead.\nWhenever you're dealt damage, sacrifice that many nontoken permanents. If you can't, you lose the game.\nWhen this enchantment is put into a graveyard from the battlefield, you lose the game.",
+      "variants": [
+        "draw_0",
+        "draw_1",
+        "damage_0",
+        "damage_1",
+        "graveyard_0",
+        "graveyard_1"
+      ]
+    }
+  ]
+}

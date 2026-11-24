@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "csvid": 18437,
+  "card": "Josu Vess, Lich Knight",
+  "recipes": [
+    {
+      "family": "kicker_tokens_and_copies",
+      "version": 2,
+      "oracle_text": "Kicker {5}{B} (You may pay an additional {5}{B} as you cast this spell.)\nMenace\nWhen Josu Vess enters, if he was kicked, create eight 2/2 black Zombie Knight creature tokens with menace.",
+      "params": {
+        "effect": "menace_entry",
+        "identity": "Zombie Knight",
+        "counts": [
+          0,
+          8
+        ],
+        "pt": [
+          2,
+          2
+        ],
+        "color": 2,
+        "subtypes": [
+          "Zombie",
+          "Knight"
+        ],
+        "price": [
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fee": [
+          5,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "clauses": [
+          "Kicker {5}{B} (You may pay an additional {5}{B} as you cast this spell.)",
+          "Menace",
+          "When Josu Vess enters, if he was kicked, create eight 2/2 black Zombie Knight creature tokens with menace."
+        ],
+        "source_pt": [
+          4,
+          5
+        ]
+      },
+      "variants": [
+        "paid_0",
+        "paid_1",
+        "declined_0",
+        "declined_1",
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1"
+      ]
+    }
+  ]
+}

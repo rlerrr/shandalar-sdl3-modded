@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Decimator Beetle",
+  "csvid": 16882,
+  "recipes": [
+    {
+      "family": "attack_trigger_block_and_target",
+      "version": 2,
+      "params": {
+        "csvid": 16882,
+        "cost": "{3}{B}{G}",
+        "choices": [
+          "transfer_0",
+          "transfer_1",
+          "lethal_0",
+          "lethal_1",
+          "only_own_0",
+          "only_own_1"
+        ]
+      },
+      "oracle_text": "When this creature enters, put a -1/-1 counter on target creature you control.\nWhenever this creature attacks, remove a -1/-1 counter from target creature you control and put a -1/-1 counter on up to one target creature defending player controls.",
+      "variants": [
+        "transfer_0",
+        "transfer_1",
+        "lethal_0",
+        "lethal_1",
+        "only_own_0",
+        "only_own_1"
+      ]
+    }
+  ]
+}

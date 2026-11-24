@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "card": "Dunes of the Dead",
+  "csvid": 17126,
+  "recipes": [
+    {
+      "family": "death_fixed_token_creation",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "trigger": "self_land",
+        "kind": "Land",
+        "keywords": [],
+        "mana_ability": true,
+        "token": {
+          "name": "Zombie",
+          "count": 1,
+          "power": 2,
+          "toughness": 2,
+          "color": 2,
+          "artifact": false,
+          "subtypes": [
+            "Zombie"
+          ],
+          "tapped": false,
+          "legendary": false
+        }
+      },
+      "oracle_text": "{T}: Add {C}.\nWhen this land is put into a graveyard from the battlefield, create a 2/2 black Zombie creature token.",
+      "variants": [
+        "effect_0",
+        "owned_elsewhere_0",
+        "bounce_0",
+        "exile_0",
+        "kill_created_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "land_mana_0",
+        "land_entry_0",
+        "death_after_mana_0",
+        "other_death_0",
+        "effect_1",
+        "owned_elsewhere_1",
+        "bounce_1",
+        "exile_1",
+        "kill_created_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "land_mana_1",
+        "land_entry_1",
+        "death_after_mana_1",
+        "other_death_1"
+      ]
+    }
+  ]
+}

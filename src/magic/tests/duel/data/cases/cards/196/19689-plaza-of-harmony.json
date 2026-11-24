@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Plaza of Harmony",
+  "csvid": 19689,
+  "recipes": [
+    {
+      "family": "remaining_entry_zone_and_permissions",
+      "version": 2,
+      "params": {
+        "csvid": 19689,
+        "cost": null
+      },
+      "oracle_text": "When this land enters, if you control two or more Gates, you gain 3 life.\n{T}: Add {C}.\n{T}: Add one mana of any type that a Gate you control could produce.",
+      "variants": [
+        "no_own_gates_0",
+        "no_own_gates_1",
+        "one_gate_0",
+        "one_gate_1",
+        "two_gates_0",
+        "two_gates_1",
+        "second_gate_color_0",
+        "second_gate_color_1"
+      ]
+    }
+  ]
+}

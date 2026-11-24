@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "card": "Elvish Scout",
+  "csvid": 1775,
+  "recipes": [
+    {
+      "family": "targeted_damage_defense",
+      "version": 2,
+      "oracle_text": "{G}, {T}: Untap target attacking creature you control. Prevent all combat damage that would be dealt to and dealt by it this turn.",
+      "params": {
+        "kind": "creature",
+        "activation_mana": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "mana_ability": false,
+        "combat_only": true,
+        "incoming": true,
+        "attacking_target": true,
+        "own_target": true,
+        "untap": true,
+        "toughness_by_mana_value": false
+      },
+      "variants": [
+        "unblocked_0",
+        "blocked_0",
+        "unprotected_0",
+        "noncombat_incoming_0",
+        "noncombat_outgoing_0",
+        "no_eligible_target_0",
+        "target_lost_pending_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "bare_zones_0",
+        "cast_0",
+        "cast_insufficient_0",
+        "source_lost_pending_0",
+        "cast_wrong_color_0",
+        "fresh_source_0",
+        "foreign_attacker_0",
+        "tapped_source_0",
+        "insufficient_payment_0",
+        "wrong_color_0",
+        "unblocked_1",
+        "blocked_1",
+        "unprotected_1",
+        "noncombat_incoming_1",
+        "noncombat_outgoing_1",
+        "no_eligible_target_1",
+        "target_lost_pending_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "bare_zones_1",
+        "cast_1",
+        "cast_insufficient_1",
+        "source_lost_pending_1",
+        "cast_wrong_color_1",
+        "fresh_source_1",
+        "foreign_attacker_1",
+        "tapped_source_1",
+        "insufficient_payment_1",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

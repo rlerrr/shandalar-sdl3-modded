@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "csvid": 1632,
+  "card": "Baron Sengir",
+  "recipes": [
+    {
+      "family": "regeneration_follow_on_targeted_costs",
+      "version": 2,
+      "params": {
+        "csvid": 1632,
+        "mana": [
+          5,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        "activation": null,
+        "stats": [
+          5,
+          5
+        ]
+      },
+      "oracle_text": "Flying\nWhenever a creature dealt damage by Baron Sengir this turn dies, put a +2/+2 counter on Baron Sengir.\n{T}: Regenerate another target Vampire.",
+      "variants": [
+        "vampire_0",
+        "vampire_1",
+        "foreign_0",
+        "foreign_1",
+        "self_0",
+        "self_1",
+        "wrong_type_0",
+        "wrong_type_1",
+        "proactive_0",
+        "proactive_1",
+        "grow_0",
+        "grow_1",
+        "after_turn_0",
+        "after_turn_1"
+      ]
+    }
+  ]
+}

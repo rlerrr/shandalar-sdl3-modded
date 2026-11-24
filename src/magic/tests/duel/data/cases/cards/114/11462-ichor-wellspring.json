@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Ichor Wellspring",
+  "csvid": 11462,
+  "recipes": [
+    {
+      "family": "entry_trigger_cards_and_selection",
+      "version": 2,
+      "params": {
+        "csvid": 11462,
+        "printed_mana": "{2}",
+        "rules": "When this artifact enters or is put into a graveyard from the battlefield, draw a card."
+      },
+      "oracle_text": "When this artifact enters or is put into a graveyard from the battlefield, draw a card.",
+      "variants": [
+        "entry_to_death_0",
+        "entry_to_death_1",
+        "exile_0",
+        "exile_1",
+        "bounce_recast_0",
+        "bounce_recast_1",
+        "countered_0",
+        "countered_1",
+        "stolen_death_0",
+        "stolen_death_1"
+      ]
+    }
+  ]
+}

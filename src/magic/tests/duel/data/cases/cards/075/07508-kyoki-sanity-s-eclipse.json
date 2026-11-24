@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "csvid": 7508,
+  "card": "Kyoki, Sanity's Eclipse",
+  "recipes": [
+    {
+      "family": "cast_spirit_or_arcane_riders",
+      "version": 2,
+      "oracle_text": "Whenever you cast a Spirit or Arcane spell, target opponent exiles a card from their hand.",
+      "params": {
+        "effect": "hand_exile",
+        "price": [
+          4,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "flying": false,
+        "power": 6,
+        "toughness": 4,
+        "extra": [
+          "empty_hand",
+          "protected_opponent"
+        ],
+        "human": []
+      },
+      "variants": [
+        "own_spirit_0",
+        "own_spirit_1",
+        "own_arcane_0",
+        "own_arcane_1",
+        "own_other_creature_0",
+        "own_other_creature_1",
+        "own_other_instant_0",
+        "own_other_instant_1",
+        "enemy_spirit_0",
+        "enemy_spirit_1",
+        "enemy_arcane_0",
+        "enemy_arcane_1",
+        "empty_hand_0",
+        "empty_hand_1",
+        "protected_opponent_0",
+        "protected_opponent_1"
+      ]
+    }
+  ]
+}

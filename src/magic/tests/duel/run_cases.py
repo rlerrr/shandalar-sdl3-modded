@@ -64,12 +64,13 @@ def classify_outcome(name, kind, assertion_count, text, baseline, unimplemented=
         ):
             raise ValueError(f"Expectation {name} needs a reason, matching patterns, and a positive count for assertion failures")
         counts = expectation_pattern_counts(name, expected)
+        expected_count = expected.get("assertion_count")
+        matches_count = kind not in ("assertion", "crash") or expected_count is None or assertion_count == expected_count
         if kind == "passed":
             status = "unexpected_pass"
-        elif kind == expected["kind"] and kind != "harness" and all(
+        elif kind == expected["kind"] and kind != "harness" and matches_count and all(
             re.search(pattern, text) if counts is None else sum(1 for _ in re.finditer(pattern, text)) == counts[index]
-            for index, pattern in enumerate(expected["patterns"])) and (
-            kind != "assertion" or assertion_count == expected["assertion_count"]
+            for index, pattern in enumerate(expected["patterns"])
         ):
             status = "unimplemented" if missing else "known_failure"
     return status
@@ -123,8 +124,11 @@ def validate_expectation_signature(name, record):
             raise ValueError(f"Expectation {name} has invalid platform signatures")
         for platform, signature in signatures.items():
             if (not isinstance(signature, dict) or not set(signature) <= allowed
-                    or signature.get("kind") != "assertion"):
+                    or signature.get("kind") not in ("assertion", "crash")):
                 raise ValueError(f"Expectation {name} has an invalid {platform} signature")
+            if signature["kind"] == "crash" and (type(signature.get("assertion_count")) is not int
+                                                 or signature["assertion_count"] != 0):
+                raise ValueError(f"Expectation {name} has an invalid {platform} crash count")
             validate_expectation_signature(name + "[" + platform + "]", signature)
     try:
         for pattern in record["patterns"]:

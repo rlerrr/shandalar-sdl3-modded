@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Torrent Elemental",
+  "csvid": 14645,
+  "recipes": [
+    {
+      "family": "attack_trigger_block_and_target",
+      "version": 2,
+      "params": {
+        "csvid": 14645,
+        "cost": "{4}{U}",
+        "choices": [
+          "sweep_0",
+          "sweep_1",
+          "ally_attacks_0",
+          "ally_attacks_1"
+        ]
+      },
+      "oracle_text": "Flying\nWhenever this creature attacks, tap all creatures defending player controls.\n{3}{B/G}{B/G}: Put this card from exile onto the battlefield tapped. Activate only as a sorcery.",
+      "variants": [
+        "sweep_0",
+        "sweep_1",
+        "ally_attacks_0",
+        "ally_attacks_1"
+      ]
+    }
+  ]
+}

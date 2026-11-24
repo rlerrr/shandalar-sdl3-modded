@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Barbarian Ring",
+  "csvid": 5483,
+  "recipes": [
+    {
+      "family": "threshold_pain_land",
+      "version": 2,
+      "oracle_text": "{T}: Add {R}. This land deals 1 damage to you.\nThreshold — {R}, {T}, Sacrifice this land: It deals 2 damage to any target. Activate only if there are seven or more cards in your graveyard.",
+      "params": {
+        "color": 4,
+        "effect": "damage"
+      },
+      "variants": [
+        "mana_empty_grave_0",
+        "own_six_opposing_eight_0",
+        "at_seven_0",
+        "above_seven_0",
+        "payment_0",
+        "off_turn_0",
+        "tapped_0",
+        "unfunded_0",
+        "wrong_color_0",
+        "seventh_card_dies_0",
+        "grave_exiled_0",
+        "pending_replay_0",
+        "mana_repeat_denied_0",
+        "own_player_0",
+        "creature_0",
+        "lethal_creature_0",
+        "planeswalker_0",
+        "target_destroyed_0",
+        "mana_empty_grave_1",
+        "own_six_opposing_eight_1",
+        "at_seven_1",
+        "above_seven_1",
+        "payment_1",
+        "off_turn_1",
+        "tapped_1",
+        "unfunded_1",
+        "wrong_color_1",
+        "seventh_card_dies_1",
+        "grave_exiled_1",
+        "pending_replay_1",
+        "mana_repeat_denied_1",
+        "own_player_1",
+        "creature_1",
+        "lethal_creature_1",
+        "planeswalker_1",
+        "target_destroyed_1",
+        "mana_with_alternative_0"
+      ]
+    }
+  ]
+}

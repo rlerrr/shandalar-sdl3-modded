@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Bogardan Phoenix",
+  "csvid": 2674,
+  "recipes": [
+    {
+      "family": "departure_graveyard_and_return",
+      "version": 2,
+      "params": {
+        "csvid": 2674,
+        "cost": [
+          2,
+          0,
+          0,
+          0,
+          3,
+          0
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature dies, exile it if it had a death counter on it. Otherwise, return it to the battlefield under your control and put a death counter on it.",
+      "variants": [
+        "two_deaths_0",
+        "two_deaths_1",
+        "bounce_resets_0",
+        "bounce_resets_1",
+        "flying_0",
+        "flying_1"
+      ]
+    }
+  ]
+}

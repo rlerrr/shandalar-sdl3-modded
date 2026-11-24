@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "csvid": 8883,
+  "card": "Angel of Salvation",
+  "recipes": [
+    {
+      "family": "convoke_prevention_and_vigilance",
+      "version": 2,
+      "params": {
+        "csvid": 8883,
+        "printed_cost": "{6}{W}{W}"
+      },
+      "oracle_text": "Flash; convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nFlying\nWhen this creature enters, prevent the next 5 damage that would be dealt this turn to any number of targets, divided as you choose.",
+      "variants": [
+        "split_0",
+        "creature_0",
+        "flying_expiry_0",
+        "mixed_0",
+        "short_0",
+        "depletion_0",
+        "split_1",
+        "creature_1",
+        "flying_expiry_1",
+        "mixed_1",
+        "short_1",
+        "depletion_1"
+      ]
+    }
+  ]
+}

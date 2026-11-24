@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Greenwarden of Murasa",
+  "csvid": 15337,
+  "recipes": [
+    {
+      "family": "entry_rider_zone_movement",
+      "version": 2,
+      "params": {
+        "csvid": 15337,
+        "cost": [
+          4,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "When this creature enters, you may return target card from your graveyard to your hand.\nWhen this creature dies, you may exile it. If you do, return target card from your graveyard to your hand.",
+      "variants": [
+        "entry_and_death_0",
+        "entry_and_death_1",
+        "death_declined_0",
+        "death_declined_1",
+        "entry_declined_0",
+        "entry_declined_1",
+        "opponent_only_0",
+        "opponent_only_1"
+      ]
+    }
+  ]
+}

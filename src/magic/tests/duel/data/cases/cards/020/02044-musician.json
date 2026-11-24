@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Musician",
+  "csvid": 2044,
+  "recipes": [
+    {
+      "family": "cumulative_upkeep_continuous_and_activated",
+      "version": 2,
+      "params": {
+        "csvid": 2044,
+        "cast": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "upkeep": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oracle_text": "Cumulative upkeep {1} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\n{T}: Put a music counter on target creature. If it doesn't have \"At the beginning of your upkeep, destroy this creature unless you pay {1} for each music counter on it,\" it gains that ability.",
+      "variants": [
+        "music_unpaid_0",
+        "music_unpaid_1",
+        "music_indestructible_0",
+        "music_indestructible_1",
+        "music_paid_after_source_removed_0",
+        "music_paid_after_source_removed_1"
+      ]
+    }
+  ]
+}

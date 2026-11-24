@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Bearer of Silence",
+  "csvid": 15558,
+  "recipes": [
+    {
+      "family": "devoid_cast_payments_and_targets",
+      "version": 2,
+      "oracle_text": "Devoid (This card has no color.)\nWhen you cast this spell, you may pay {1}{C}. If you do, target opponent sacrifices a creature. ({C} represents colorless mana.)\nFlying\nThis creature can't block.",
+      "params": {
+        "effect": "sacrifice",
+        "price": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "power": 2,
+        "toughness": 1
+      },
+      "variants": [
+        "wrong_base_0",
+        "paid_0",
+        "decline_0",
+        "colored_only_0",
+        "empty_foe_0",
+        "countered_0",
+        "flight_0",
+        "cant_block_0",
+        "replay_0",
+        "wrong_base_1",
+        "paid_1",
+        "decline_1",
+        "colored_only_1",
+        "empty_foe_1",
+        "countered_1",
+        "flight_1",
+        "cant_block_1",
+        "replay_1"
+      ]
+    }
+  ]
+}

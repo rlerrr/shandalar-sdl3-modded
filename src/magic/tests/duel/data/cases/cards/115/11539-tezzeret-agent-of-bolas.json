@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Tezzeret, Agent of Bolas",
+  "csvid": 11539,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "loyalty_library_effects",
+      "version": 2,
+      "oracle_text": "+1: Look at the top five cards of your library. You may reveal an artifact card from among them and put it into your hand. Put the rest on the bottom of your library in any order.\n−1: Target artifact becomes an artifact creature with base power and toughness 5/5.\n−4: Target player loses X life and you gain X life, where X is twice the number of artifacts you control.",
+      "params": {
+        "mode": "artifacts",
+        "mana": [
+          2,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "start": 3,
+        "costs": [
+          1,
+          -1,
+          -4
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "short_0",
+        "short_1",
+        "countered_0",
+        "countered_1",
+        "replay_0",
+        "replay_1",
+        "once_per_turn_0",
+        "once_per_turn_1",
+        "opposing_turn_0",
+        "opposing_turn_1",
+        "look_five_0",
+        "look_five_1",
+        "decline_artifact_0",
+        "decline_artifact_1",
+        "no_artifact_0",
+        "no_artifact_1",
+        "animate_own_0",
+        "animate_own_1",
+        "animate_foe_0",
+        "animate_foe_1",
+        "drain_0",
+        "drain_1",
+        "no_artifacts_0",
+        "no_artifacts_1"
+      ]
+    }
+  ]
+}

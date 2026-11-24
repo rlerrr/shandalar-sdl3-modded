@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "csvid": 16785,
+  "card": "Ridgescale Tusker",
+  "recipes": [
+    {
+      "family": "entry_trigger_life_and_counters",
+      "version": 2,
+      "params": {
+        "csvid": 16785,
+        "printed_cost": "{3}{G}{G}"
+      },
+      "oracle_text": "When this creature enters, put a +1/+1 counter on each other creature you control.",
+      "variants": [
+        "team_0",
+        "solo_0",
+        "recast_0",
+        "countered_0",
+        "team_1",
+        "solo_1",
+        "recast_1",
+        "countered_1"
+      ]
+    }
+  ]
+}

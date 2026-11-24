@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "csvid": 2463,
+  "card": "Emberwilde Caliph",
+  "recipes": [
+    {
+      "family": "required_attack_combat_riders",
+      "version": 2,
+      "oracle_text": "Flying, trample\nThis creature attacks each combat if able.\nWhenever this creature deals damage, you lose that much life.",
+      "params": {
+        "mode": "caliph",
+        "costs": {
+          "printed": [
+            2,
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        "power": 4,
+        "toughness": 4,
+        "keywords": [
+          "Flying",
+          "Trample"
+        ]
+      },
+      "variants": [
+        "omitted_0",
+        "omitted_1",
+        "tapped_0",
+        "tapped_1",
+        "sick_0",
+        "sick_1",
+        "pacified_0",
+        "pacified_1",
+        "opponent_turn_0",
+        "opponent_turn_1",
+        "competing_selected_0",
+        "competing_selected_1",
+        "two_required_0",
+        "two_required_1",
+        "paid_fresh_0",
+        "paid_fresh_1",
+        "paid_next_turn_0",
+        "paid_next_turn_1",
+        "unfunded_0",
+        "unfunded_1",
+        "proposed_replay_0",
+        "proposed_replay_1",
+        "trample_split_0",
+        "trample_split_1",
+        "flying_ground_0",
+        "flying_ground_1",
+        "walker_damage_0",
+        "walker_damage_1",
+        "noncombat_0",
+        "noncombat_1",
+        "fogged_0",
+        "fogged_1",
+        "wrong_color_0",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}
